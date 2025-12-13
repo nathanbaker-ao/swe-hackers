@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post System Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --accent: #58a6ff;
+            --accent-secondary: #f78166;
+            --accent-tertiary: #7ee787;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --border: #30363d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border-radius: 16px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, #a371f7 50%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: var(--bg-tertiary);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .zoom-badge {
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .zoom-badge.l2 { background: var(--accent-tertiary); }
+        .zoom-badge.l3 { background: var(--accent-secondary); }
+        .zoom-badge.data { background: #a371f7; }
+        .zoom-badge.failure { background: #f85149; }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .mermaid {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1000px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-tertiary);
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        tr:hover {
+            background: var(--bg-tertiary);
+        }
+
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .insight-card {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-tertiary);
+        }
+
+        .insight-card h4 {
+            color: var(--accent-tertiary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .insight-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📸 Instagram Post System Architecture</h1>
+            <p>A systems-thinking breakdown of how an Instagram post flows through the platform</p>
+        </header>
+
+        <!-- Zoom Level 1 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge">L1</span>
+                <h2>🔭 Organization View</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    How users and major product areas interact at the highest level
+                </div>
+                <div class="mermaid">
+flowchart TB
+    subgraph Users["👥 Users"]
+        Creator["Content Creator"]
+        Viewer["Feed Viewer"]
+        Advertiser["Advertiser"]
+    end
+    
+    subgraph Products["📱 Product Areas"]
+        Feed["Feed Experience"]
+        Stories["Stories"]
+        Reels["Reels"]
+        DM["Direct Messages"]
+        Explore["Explore/Discovery"]
+    end
+    
+    subgraph Revenue["💰 Revenue"]
+        Ads["Ad Platform"]
+        Shopping["Instagram Shopping"]
+    end
+    
+    Creator -->|creates content| Feed
+    Creator -->|creates content| Stories
+    Creator -->|creates content| Reels
+    Viewer -->|consumes| Feed
+    Viewer -->|consumes| Stories
+    Viewer -->|consumes| Reels
+    Viewer -->|discovers| Explore
+    Advertiser -->|promotes| Ads
+    Ads -->|surfaces in| Feed
+    Ads -->|surfaces in| Stories
+    Feed <-->|share to| DM
+                </div>
+            </div>
+        </section>
+
+        <!-- Zoom Level 2 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge l2">L2</span>
+                <h2>🔍 System/Service Architecture</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    How services communicate when a user creates and views a post
+                </div>
+                <div class="mermaid">
+flowchart TB
+    subgraph Client["📱 Client Layer"]
+        App["Instagram App"]
+    end
+    
+    subgraph Edge["🌐 Edge Layer"]
+        CDN["CDN<br/>(Media Delivery)"]
+        Gateway["API Gateway"]
+        LB["Load Balancer"]
+    end
+    
+    subgraph Services["⚙️ Core Services"]
+        Auth["Auth Service"]
+        Post["Post Service"]
+        Media["Media Service"]
+        User["User Service"]
+        Feed["Feed Service"]
+        Social["Social Graph Service"]
+        Notify["Notification Service"]
+        Search["Search & Discovery"]
+    end
+    
+    subgraph Data["💾 Data Layer"]
+        PostDB[(Post Database)]
+        UserDB[(User Database)]
+        GraphDB[(Social Graph DB)]
+        Cache[(Redis Cache)]
+        Queue[[Message Queue]]
+        ObjectStore[(Object Storage<br/>S3/Blob)]
+    end
+    
+    App --> CDN
+    App --> Gateway
+    Gateway --> LB
+    LB --> Auth
+    LB --> Post
+    LB --> Feed
+    LB --> User
+    
+    Post --> Media
+    Post --> PostDB
+    Post --> Queue
+    Media --> ObjectStore
+    Media --> CDN
+    
+    Feed --> Cache
+    Feed --> Social
+    Feed --> PostDB
+    
+    Social --> GraphDB
+    User --> UserDB
+    
+    Queue --> Notify
+    Queue --> Feed
+    Queue --> Search
+    
+    Notify --> App
+                </div>
+            </div>
+        </section>
+
+        <!-- Creating a Post -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge data">DATA</span>
+                <h2>📤 Creating a Post: Data Flow</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    What happens step-by-step when you tap "Share"
+                </div>
+                <div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 📱 User
+    participant App as Instagram App
+    participant GW as API Gateway
+    participant Auth as Auth Service
+    participant Media as Media Service
+    participant S3 as Object Storage
+    participant Post as Post Service
+    participant DB as Post Database
+    participant Queue as Message Queue
+    participant Feed as Feed Service
+    participant Notify as Notification Service
+    participant CDN as CDN
+    
+    U->>App: Tap "Share" with photo + caption
+    App->>GW: POST /api/posts (image + metadata)
+    GW->>Auth: Validate JWT token
+    Auth-->>GW: ✓ User authenticated
+    
+    rect rgb(70, 130, 180)
+        Note over GW,S3: Media Upload Pipeline
+        GW->>Media: Upload image blob
+        Media->>Media: Process image (resize, compress, filters)
+        Media->>S3: Store multiple resolutions
+        S3-->>Media: media_id + URLs
+        Media->>CDN: Warm cache edges
+        Media-->>GW: media_urls[]
+    end
+    
+    rect rgb(60, 179, 113)
+        Note over GW,Queue: Post Creation
+        GW->>Post: Create post record
+        Post->>DB: INSERT post (user_id, media_urls, caption)
+        DB-->>Post: post_id
+        Post->>Queue: Emit "post.created" event
+        Post-->>GW: 201 Created
+    end
+    
+    GW-->>App: ✓ Post published!
+    App-->>U: Show success + post preview
+    
+    rect rgb(255, 165, 0)
+        Note over Queue,Notify: Async Fan-out
+        Queue->>Feed: Update follower feeds
+        Feed->>Feed: Fan-out to all followers
+        Queue->>Notify: Notify mentioned users
+        Notify->>Notify: Push notifications
+    end
+                </div>
+            </div>
+        </section>
+
+        <!-- Viewing Feed -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge data">DATA</span>
+                <h2>📥 Viewing the Feed: Data Flow</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    What happens when you open Instagram and scroll your feed
+                </div>
+                <div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 📱 User
+    participant App as Instagram App
+    participant CDN as CDN
+    participant GW as API Gateway
+    participant Feed as Feed Service
+    participant Cache as Redis Cache
+    participant Social as Social Graph
+    participant Post as Post Service
+    participant ML as Ranking ML Model
+    
+    U->>App: Open Instagram
+    App->>GW: GET /api/feed?cursor=0
+    GW->>Feed: Fetch personalized feed
+    
+    alt Cache Hit
+        Feed->>Cache: Get cached feed
+        Cache-->>Feed: Cached post IDs
+    else Cache Miss
+        Feed->>Social: Get following list
+        Social-->>Feed: user_ids[]
+        Feed->>Post: Get recent posts from users
+        Post-->>Feed: Raw posts[]
+    end
+    
+    Feed->>ML: Rank posts for user
+    Note over ML: Considers: engagement history, recency, relationship strength
+    ML-->>Feed: Ranked post_ids[]
+    
+    Feed-->>GW: Feed response (post metadata)
+    GW-->>App: JSON feed data
+    
+    loop For each visible post
+        App->>CDN: GET image/video
+        CDN-->>App: Media bytes
+    end
+    
+    App-->>U: Render beautiful feed ✨
+                </div>
+            </div>
+        </section>
+
+        <!-- Failure Modes -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge failure">FAILURES</span>
+                <h2>💔 When Things Break: Failure Modes</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    Every system fails. Great systems fail gracefully. Here's what happens when each box breaks.
+                </div>
+                <div class="mermaid">
+flowchart TB
+    subgraph Failures["🔥 What Can Fail?"]
+        F1["CDN Down"]
+        F2["Media Service Down"]
+        F3["Database Overloaded"]
+        F4["Feed Service Slow"]
+        F5["Notification Service Down"]
+    end
+    
+    subgraph Impact["💥 User Impact"]
+        I1["Images won't load<br/>(skeleton placeholders)"]
+        I2["Can't upload new posts<br/>(queue for later)"]
+        I3["Posts disappear temporarily<br/>(serve from cache)"]
+        I4["Feed loads slowly<br/>(show cached/stale)"]
+        I5["No push notifications<br/>(silent failure OK)"]
+    end
+    
+    subgraph Mitigation["🛡️ How It's Handled"]
+        M1["Multiple CDN providers<br/>Edge failover"]
+        M2["Retry queue<br/>Client-side retry"]
+        M3["Read replicas<br/>Aggressive caching"]
+        M4["Precomputed feeds<br/>Fallback to chronological"]
+        M5["Fire-and-forget<br/>Not critical path"]
+    end
+    
+    F1 --> I1 --> M1
+    F2 --> I2 --> M2
+    F3 --> I3 --> M3
+    F4 --> I4 --> M4
+    F5 --> I5 --> M5
+                </div>
+            </div>
+        </section>
+
+        <!-- Zoom Level 3 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge l3">L3</span>
+                <h2>🔬 Inside the Post Service</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    Component-level architecture - zooming into a single service
+                </div>
+                <div class="mermaid">
+flowchart TB
+    subgraph PostService["Post Service"]
+        subgraph API["API Layer"]
+            Create["POST /posts"]
+            Read["GET /posts/:id"]
+            Delete["DELETE /posts/:id"]
+            Like["POST /posts/:id/like"]
+        end
+        
+        subgraph Business["Business Logic"]
+            Validate["Validator<br/>(caption length, media type)"]
+            Moderate["Content Moderation<br/>(ML model check)"]
+            Enrich["Enricher<br/>(extract hashtags, mentions)"]
+            Persist["Persistence Manager"]
+        end
+        
+        subgraph Outbound["Outbound"]
+            Events["Event Publisher"]
+            Metrics["Metrics Emitter"]
+        end
+    end
+    
+    subgraph External["External Dependencies"]
+        MediaSvc["Media Service"]
+        UserSvc["User Service"]
+        DB[(PostgreSQL)]
+        MQ[[Kafka]]
+        Datadog["Datadog"]
+    end
+    
+    Create --> Validate
+    Validate -->|valid| Moderate
+    Validate -->|invalid| Create
+    Moderate -->|approved| Enrich
+    Moderate -->|flagged| Create
+    Enrich --> Persist
+    Persist --> DB
+    Persist --> Events
+    Events --> MQ
+    
+    Read --> DB
+    Like --> Persist
+    Delete --> Persist
+    
+    Validate --> MediaSvc
+    Enrich --> UserSvc
+    Metrics --> Datadog
+                </div>
+            </div>
+        </section>
+
+        <!-- Entity Relationship -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge data">DATA</span>
+                <h2>📊 Data Model: Entity Relationships</h2>
+            </div>
+            <div class="section-content">
+                <div class="description">
+                    The core data objects and how they relate to each other
+                </div>
+                <div class="mermaid">
+erDiagram
+    USER ||--o{ POST : creates
+    USER ||--o{ FOLLOW : follows
+    USER ||--o{ LIKE : likes
+    POST ||--o{ MEDIA : contains
+    POST ||--o{ LIKE : receives
+    POST ||--o{ COMMENT : has
+    
+    USER {
+        uuid user_id PK
+        string username
+        string display_name
+        string profile_pic_url
+        timestamp created_at
+    }
+    
+    POST {
+        uuid post_id PK
+        uuid user_id FK
+        string caption
+        string[] hashtags
+        uuid[] mentioned_users
+        timestamp created_at
+        int like_count
+        int comment_count
+    }
+    
+    MEDIA {
+        uuid media_id PK
+        uuid post_id FK
+        string type
+        string url_thumbnail
+        string url_standard
+        string url_full
+        int width
+        int height
+    }
+    
+    FOLLOW {
+        uuid follower_id FK
+        uuid following_id FK
+        timestamp created_at
+    }
+    
+    LIKE {
+        uuid user_id FK
+        uuid post_id FK
+        timestamp created_at
+    }
+    
+    COMMENT {
+        uuid comment_id PK
+        uuid post_id FK
+        uuid user_id FK
+        string text
+        timestamp created_at
+    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Insights -->
+        <section class="section">
+            <div class="section-header">
+                <span class="zoom-badge">💡</span>
+                <h2>Key Insights & Design Principles</h2>
+            </div>
+            <div class="section-content">
+                <h3 style="margin-bottom: 1rem; color: var(--accent);">Inputs, Outputs & Side Effects</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Inputs</th>
+                            <th>Outputs</th>
+                            <th>Side Effects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Media Service</code></td>
+                            <td>Raw image/video bytes</td>
+                            <td>Processed media URLs</td>
+                            <td>Writes to Object Storage, warms CDN</td>
+                        </tr>
+                        <tr>
+                            <td><code>Post Service</code></td>
+                            <td>User ID, caption, media refs</td>
+                            <td>Post ID, confirmation</td>
+                            <td>Writes to DB, emits events</td>
+                        </tr>
+                        <tr>
+                            <td><code>Feed Service</code></td>
+                            <td>User ID, cursor</td>
+                            <td>Ranked post list</td>
+                            <td>Cache updates</td>
+                        </tr>
+                        <tr>
+                            <td><code>Notification Service</code></td>
+                            <td>Event (post.created)</td>
+                            <td>Push notification</td>
+                            <td>External API calls (APNs/FCM)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="margin: 2rem 0 1rem; color: var(--accent);">Design Principles Observed</h3>
+                <div class="insights">
+                    <div class="insight-card">
+                        <h4>🚀 Async Where Possible</h4>
+                        <p>Post creation returns fast, fan-out happens in background via message queue</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>💾 Cache Aggressively</h4>
+                        <p>Feed pre-computation, CDN for media, Redis for hot data</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>🛡️ Graceful Degradation</h4>
+                        <p>Notifications failing doesn't break posting - non-critical paths can fail silently</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>📨 Event-Driven</h4>
+                        <p>Services communicate via events, not direct synchronous calls</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>📖 Read/Write Separation</h4>
+                        <p>Optimized paths for each use case - writes go through one flow, reads another</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Created as part of Systems Thinking challenge • SWE Hackers 🏗️</p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#58a6ff',
+                primaryTextColor: '#e6edf3',
+                primaryBorderColor: '#30363d',
+                lineColor: '#8b949e',
+                secondaryColor: '#21262d',
+                tertiaryColor: '#161b22',
+                background: '#0d1117',
+                mainBkg: '#21262d',
+                secondBkg: '#161b22',
+                nodeBorder: '#30363d',
+                clusterBkg: '#161b22',
+                clusterBorder: '#30363d',
+                titleColor: '#e6edf3',
+                edgeLabelBackground: '#21262d',
+                actorBkg: '#21262d',
+                actorBorder: '#58a6ff',
+                actorTextColor: '#e6edf3',
+                actorLineColor: '#8b949e',
+                signalColor: '#e6edf3',
+                signalTextColor: '#e6edf3',
+                labelBoxBkgColor: '#21262d',
+                labelBoxBorderColor: '#30363d',
+                labelTextColor: '#e6edf3',
+                loopTextColor: '#e6edf3',
+                noteBorderColor: '#30363d',
+                noteBkgColor: '#21262d',
+                noteTextColor: '#e6edf3',
+                activationBorderColor: '#58a6ff',
+                activationBkgColor: '#21262d',
+                sequenceNumberColor: '#0d1117'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            sequence: {
+                useMaxWidth: true,
+                mirrorActors: false,
+                bottomMarginAdj: 10
+            }
+        });
+    </script>
+</body>
+</html>
+
