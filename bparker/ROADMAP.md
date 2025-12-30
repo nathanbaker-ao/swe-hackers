@@ -1,690 +1,597 @@
-# Roadmap: From Developer to Systems Architect 🗺️
+# The Architect's Return 🌌
 
-A structured, **project-driven** path to ramp back into tech as an **AI-augmented systems thinker**.
-
----
-
-## Your Background
-
-You're not starting from zero. You bring real experience:
-
-- **CS Degree** from Davenport University
-- **Languages**: C#, HTML, CSS, JavaScript
-- **AI/ML Experience**: Decision trees, classification algorithms
-- **Project Experience**: Biometrics app — fingerprint recognition across 5 material types using iPhone sensor data
-
-This roadmap builds on that foundation. You've built real projects before. You'll build real projects again — just with modern tools and an architectural mindset.
+*A 6-week journey to reclaim your power and master the new world of code.*
 
 ---
 
-## How Each Module Works
+## Prologue: The Awakening
 
-Every module follows this structure:
+You were once a builder.
+
+Years ago, you walked through the digital realm with confidence. You understood the ancient languages — the structured elegance of C#, the visual poetry of HTML and CSS, the dynamic pulse of JavaScript. You built things that *worked*. A fingerprint scanner that could read identity from five different surfaces. Decision trees that learned from data and made choices like a mind learning to think.
+
+Then life pulled you away. The realm continued without you. New powers emerged. New tools. New ways of building.
+
+Now you're back.
+
+But the world has changed. There are **AI spirits** now — entities that can write code, explain systems, generate entire applications from a whisper of intent. Some builders have become lazy, letting the spirits do all the work. Others have learned to *direct* them, becoming more powerful than ever before.
+
+You're not here to start over. You're here to **reclaim what you knew** and **master what's new**.
+
+This is your story.
+
+---
+
+## The Three Forces
+
+In the realm of systems, three fundamental forces shape everything:
 
 ```mermaid
-flowchart LR
-    A[📚 Learn] --> B[📊 Diagram]
-    B --> C[📝 Quiz]
-    C --> D[🔨 Build]
-    D --> E[🚀 Ship]
+graph TD
+    subgraph FORCES["⚡ The Three Forces"]
+        STONE["🪨 STONE<br/>Persistence & Memory"]
+        LIGHTNING["⚡ LIGHTNING<br/>Flow & Transformation"]
+        MAGNET["🧲 MAGNETISM<br/>Connection & Interface"]
+    end
     
-    style A fill:#e3f2fd
-    style B fill:#f3e5f5
-    style C fill:#fff8e1
-    style D fill:#e8f5e9
-    style E fill:#ffebee
+    STONE --> |"Data at rest"| LIGHTNING
+    LIGHTNING --> |"Data in motion"| MAGNET
+    MAGNET --> |"Systems united"| STONE
+    
+    style STONE fill:#8d6e63,color:#fff
+    style LIGHTNING fill:#ffd54f,color:#000
+    style MAGNET fill:#7986cb,color:#fff
 ```
 
-| Step | What You Do |
-|------|-------------|
-| **📚 Learn** | Read the lesson markdown, watch linked resources |
-| **📊 Diagram** | Create Mermaid diagrams explaining the concepts |
-| **📝 Quiz** | Answer comprehension questions (in the lesson file) |
-| **🔨 Build** | Complete a mini-project applying what you learned |
-| **🚀 Ship** | Push to your folder, open PR, get review, merge |
+**🪨 Stone** — The force of persistence. Variables that hold memory. Databases that remember. State that endures. Like the bedrock beneath a mountain, Stone is what remains when the lightning fades.
 
-**All work lives in**: `bparker/<module-folder>/`
+**⚡ Lightning** — The force of transformation. Data flowing through functions. Events triggering actions. APIs crackling with requests and responses. Lightning is energy — it moves, it changes, it *does*.
+
+**🧲 Magnetism** — The force of connection. Interfaces that pull systems together. Contracts that bind components. The invisible attraction between a client and a server, a user and an application. Magnetism is how separate things become one.
+
+Every system you'll ever build — every line of code, every architecture decision — is an interplay of these three forces.
+
+Your journey will teach you to wield them all.
 
 ---
 
-## The Big Picture
+## Your Quest Map
 
 ```mermaid
 graph LR
-    A[Foundation Refresh] --> B[Modern Tooling]
-    B --> C[Reading & Reviewing Code]
-    C --> D[Systems Thinking]
-    D --> E[AI-Augmented Development]
-    E --> F[Architecture & Design]
+    A[🏔️ Chapter 1<br/>The Stone Remembers] --> B[⚡ Chapter 2<br/>Lightning Paths]
+    B --> C[🧲 Chapter 3<br/>The Pull Between]
+    C --> D[🌀 Chapter 4<br/>Reading the Ruins]
+    D --> E[🔥 Capstone I<br/>The Living Archive]
+    E --> F[🌟 Capstone II<br/>The Oracle Engine]
     
-    style A fill:#e1f5fe
-    style B fill:#e8f5e9
-    style C fill:#fff3e0
-    style D fill:#fce4ec
-    style E fill:#f3e5f5
-    style F fill:#e8eaf6
+    style A fill:#8d6e63,color:#fff
+    style B fill:#ffd54f,color:#000
+    style C fill:#7986cb,color:#fff
+    style D fill:#90a4ae,color:#000
+    style E fill:#ef5350,color:#fff
+    style F fill:#ab47bc,color:#fff
 ```
 
-Each phase ends with a **milestone project** that combines everything you learned.
+| Week | Chapter | Force | Mini-Project |
+|------|---------|-------|--------------|
+| 1 | The Stone Remembers | 🪨 Stone | Memory Keeper |
+| 2 | Lightning Paths | ⚡ Lightning | Flow Tracker |
+| 3 | The Pull Between | 🧲 Magnetism | Interface Bridge |
+| 4 | Reading the Ruins | 🔮 All Three | Codebase Cartographer |
+| 5 | **Capstone I** | 🔥 Integration | The Living Archive |
+| 6 | **Capstone II** | 🌟 AI Mastery | The Oracle Engine |
 
 ---
 
-## Phase 1: Foundation Refresh 🧱
+## Chapter 1: The Stone Remembers 🪨
 
-**Goal**: Reconnect with core concepts through a new lens — and build something immediately.
+*Week 1*
 
-### 1.1 Mental Models: Variables & Memory
+> *"Before lightning can strike, before magnets can pull, there must be something solid to hold onto. The stone remembers what the storm forgets."*
 
-> A variable is like a labeled box in your mind. When you learn someone's name, you're storing it in a "variable."
+You wake in a place you once knew. The syntax feels familiar, but dusty. Your first task is to remember — and to prove that you still understand the fundamentals.
 
-**📚 Concepts**:
-- Variables as named memory locations
-- Value types vs reference types (owning vs pointing)
-- Scope as context
+### The Lesson
 
-**📊 Diagram Deliverable**:
-- Mermaid diagram: memory allocation for value vs reference types
+Stone is about **persistence** — things that stay. In code, this means:
 
-**📝 Quiz**: 5 questions on memory, scope, and references
+- **Variables** — named containers that hold values across time
+- **Data structures** — organized ways to store related information  
+- **State** — the current "truth" of a system at any moment
+- **Databases** — long-term memory that survives restarts
 
-**🔨 Mini-Project**: **Memory Visualizer**
-- Build a simple console app that demonstrates value vs reference behavior
-- Print memory addresses or hash codes to show the difference
-- Include comments explaining what's happening
+```mermaid
+flowchart LR
+    subgraph STONE_REALM["🪨 The Stone Realm"]
+        VAR["Variables<br/><i>short-term memory</i>"]
+        STRUCT["Structures<br/><i>organized memory</i>"]
+        STATE["State<br/><i>current truth</i>"]
+        DB["Database<br/><i>eternal memory</i>"]
+    end
+    
+    VAR --> STRUCT --> STATE --> DB
+```
 
----
+**Concepts to master:**
+- Value types vs reference types (owning the stone vs pointing to it)
+- Scope (where your memory can be seen)
+- Immutability (stones that cannot be changed)
+- Serialization (turning memory into something that can be stored)
 
-### 1.2 Functions as Habits & Procedures
+### 📝 The Trial
 
-> A function is a habit your code has learned. Define it once, trigger it whenever needed.
+Answer these questions in your notes:
 
-**📚 Concepts**:
-- Functions as reusable procedures
-- Parameters as inputs, return values as outputs
-- Side effects (things that change outside the function)
-- Pure functions vs impure functions
+1. What's the difference between a value living on the stack vs the heap?
+2. If you copy a reference type, what happens to the original?
+3. Why would you ever want data to be immutable?
+4. How does JSON relate to the concept of "stone"?
 
-**📊 Diagram Deliverable**:
-- Flowchart of a function's execution path
+### 🔨 Mini-Project: The Memory Keeper
 
-**📝 Quiz**: 5 questions on function design and side effects
+**Your quest:** Build a **Personal Vault** — a console application that stores secrets.
 
-**🔨 Mini-Project**: **Recipe Calculator**
-- Build a program that scales recipe ingredients
-- Input: recipe ingredients + servings, desired servings
-- Output: scaled ingredient amounts
-- Must use pure functions with clear inputs/outputs
+Requirements:
+- Store key-value pairs (secret name → secret value)
+- Save to a JSON file (persistence across runs)
+- Support: add, retrieve, list, delete operations
+- Encrypt values before storing (simple encoding is fine)
 
----
+```
+> vault add github_token "abc123secret"
+✓ Secret 'github_token' stored securely.
 
-### 1.3 Objects & Identity
+> vault get github_token
+→ abc123secret
 
-> A class is a blueprint for identity. You are an instance of "Human" with properties and behaviors.
+> vault list
+→ github_token
+→ aws_key
+→ db_password
+```
 
-**📚 Concepts**:
-- Classes as templates, objects as instances
-- Encapsulation (what you show vs hide)
-- Methods as behaviors
-- Inheritance vs composition
-
-**📊 Diagram Deliverable**:
-- Class diagram for a domain you choose
-
-**📝 Quiz**: 5 questions on OOP principles
-
-**🔨 Mini-Project**: **Contact Book**
-- Build a contact management system
-- Classes: Contact, ContactBook
-- Features: add, search, list, delete contacts
-- Demonstrate encapsulation (private fields, public methods)
-
----
-
-### 1.4 Data Flow: From Input to Output
-
-> Every program is a journey. Data enters, transforms, exits. Like food → digestion → energy.
-
-**📚 Concepts**:
-- Input/Process/Output model
-- Tracing data through a system
-- Debugging as following the flow
-
-**📊 Diagram Deliverable**:
-- Sequence diagram tracing data through a program
-
-**📝 Quiz**: 5 questions on data flow and debugging
-
-**🔨 Mini-Project**: **Data Pipeline**
-- Build a program that reads a CSV, transforms data, outputs JSON
-- Log each transformation step
-- Include error handling for bad data
+**Deliverables:**
+- Working code in `bparker/ch1-stone/`
+- README with Mermaid diagram of your data flow
+- Reflection: How does this project embody "Stone"?
 
 ---
 
-### 🏆 Phase 1 Milestone: **Decision Engine**
+## Chapter 2: Lightning Paths ⚡
 
-*Leverage your decision tree experience!*
+*Week 2*
 
-Build a simple **decision tree classifier** from scratch:
-- Input: a dataset (provided or create your own)
-- Process: implement a basic decision tree algorithm
-- Output: predictions on new data + visualization of the tree
+> *"Lightning doesn't wait. It finds the path of least resistance and strikes. Your code must learn to flow the same way — transforming data as it moves, never holding on too long."*
 
-**Deliverables**:
-- Working code in `bparker/phase-1-milestone/`
-- README explaining your approach
-- Mermaid diagram of your decision tree structure
-- 3-slide summary: Problem → Approach → Results
+The stone holds memory, but memory alone is useless. Data must *move*. It must be transformed, filtered, mapped, reduced. This is the way of Lightning.
 
----
+### The Lesson
 
-## Phase 2: Modern Tooling ⚙️
+Lightning is about **flow** — data in motion:
 
-**Goal**: Master the tools that define modern development workflows.
+- **Functions** — transformation machines (input → process → output)
+- **Pipelines** — chains of transformations
+- **Events** — triggers that start the lightning
+- **APIs** — the channels through which lightning travels between systems
 
-### 2.1 Git & GitHub Fluency
+```mermaid
+flowchart LR
+    INPUT["📥 Input"] --> F1["⚡ Transform"]
+    F1 --> F2["⚡ Filter"]
+    F2 --> F3["⚡ Map"]
+    F3 --> OUTPUT["📤 Output"]
+    
+    style F1 fill:#ffd54f,color:#000
+    style F2 fill:#ffd54f,color:#000
+    style F3 fill:#ffd54f,color:#000
+```
 
-> Git is a time machine for code. Commits are checkpoints. Branches are parallel timelines.
+**Concepts to master:**
+- Pure functions (same input always gives same output)
+- Higher-order functions (functions that take/return functions)
+- Async/await (lightning that waits for other lightning)
+- Error handling (what happens when lightning strikes wrong)
 
-**📚 Concepts**:
-- Commits, branches, merges
-- Pull requests as conversations
-- Merge conflicts as reconciliation
-- Git log and history exploration
+### 📝 The Trial
 
-**📊 Diagram Deliverable**:
-- Mermaid gitGraph showing a feature branch workflow
+Answer these questions:
 
-**📝 Quiz**: 5 questions on Git workflows
+1. What makes a function "pure"? Why does it matter?
+2. How is `map` different from `forEach`?
+3. What problem does `async/await` solve?
+4. When should you throw an error vs return a failure value?
 
-**🔨 Mini-Project**: **Git Time Travel**
-- Create a repo with intentional history
-- Practice: branch, commit, merge, resolve conflict
-- Document your commands in a cheat sheet
+### 🔨 Mini-Project: The Flow Tracker
 
----
+**Your quest:** Build a **Data Pipeline** that transforms messy data into clean insights.
 
-### 2.2 Markdown & Documentation
+Requirements:
+- Read data from a CSV or JSON file
+- Apply at least 3 transformations (filter, map, aggregate)
+- Output results to a new file AND to console
+- Log each step of the transformation
 
-> Code tells computers what to do. Documentation tells humans why and how.
+Example: Take a list of transactions, filter to last 30 days, categorize by type, sum totals per category.
 
-**📚 Concepts**:
-- Markdown syntax mastery
-- READMEs as first impressions
-- Technical writing principles
-- Inline vs external documentation
+```
+📥 Loading transactions.csv (1,247 records)
+⚡ Filtering to last 30 days... (328 records)
+⚡ Categorizing by type...
+⚡ Aggregating totals...
+📤 Results:
+   Food:      $847.23
+   Transport: $234.50
+   Entertainment: $156.00
+```
 
-**📊 Diagram Deliverable**:
-- Documentation structure diagram for a project
-
-**📝 Quiz**: 5 questions on documentation best practices
-
-**🔨 Mini-Project**: **Project Template**
-- Create a reusable project template with:
-  - README.md (with badges, sections, examples)
-  - CONTRIBUTING.md
-  - Architecture overview with Mermaid diagram
-
----
-
-### 2.3 Mermaid Diagrams
-
-> A diagram is worth a thousand lines of documentation.
-
-**📚 Concepts**:
-- Flowcharts for logic
-- Sequence diagrams for interactions
-- Class diagrams for structure
-- ERD for data relationships
-- State diagrams for workflows
-
-**📊 Diagram Deliverable**:
-- Create ALL five diagram types for one system
-
-**📝 Quiz**: 5 questions on choosing the right diagram type
-
-**🔨 Mini-Project**: **System Illustrated**
-- Pick an app you use daily (Instagram, Spotify, etc.)
-- Create a complete diagram set:
-  - User flow (flowchart)
-  - API interaction (sequence)
-  - Data model (ERD)
-  - Core classes (class diagram)
-  - User state (state diagram)
+**Deliverables:**
+- Working code in `bparker/ch2-lightning/`
+- Mermaid flowchart of your pipeline
+- Reflection: How did thinking in "transformations" change your approach?
 
 ---
 
-### 2.4 Terminal & Command Line
+## Chapter 3: The Pull Between 🧲
 
-> The terminal is a direct conversation with your computer.
+*Week 3*
 
-**📚 Concepts**:
-- Navigation and file operations
-- Pipes and redirection
-- Environment variables
-- Shell scripting basics
+> *"No system exists alone. The most powerful architectures are those that know how to reach out — and how to be reached. This is Magnetism: the invisible contracts that bind separate things into one."*
 
-**📊 Diagram Deliverable**:
-- Flowchart of a shell pipeline
+Stone holds. Lightning moves. But neither matters if systems can't *connect*. Magnetism is about interfaces — the promises systems make to each other.
 
-**📝 Quiz**: 5 questions on terminal commands
+### The Lesson
 
-**🔨 Mini-Project**: **Automation Script**
-- Write a shell script that automates a repetitive task
-- Examples: project setup, file organization, backup
-- Include help text and error handling
+Magnetism is about **connection**:
 
----
+- **Interfaces** — contracts that define what something can do
+- **APIs** — the language systems use to talk to each other
+- **Protocols** — agreed-upon rules for communication
+- **Integration** — making separate systems work as one
 
-### 🏆 Phase 2 Milestone: **Developer Portfolio Site**
+```mermaid
+flowchart TB
+    subgraph SYSTEM_A["System A"]
+        A_IMPL["Implementation"]
+    end
+    
+    subgraph SYSTEM_B["System B"]
+        B_IMPL["Implementation"]
+    end
+    
+    INTERFACE["🧲 Interface Contract"]
+    
+    A_IMPL --> |"exposes"| INTERFACE
+    INTERFACE --> |"consumed by"| B_IMPL
+    
+    style INTERFACE fill:#7986cb,color:#fff
+```
 
-Build and deploy a personal portfolio site:
-- Static HTML/CSS/JS (or use a generator)
-- Hosted on GitHub Pages
-- Includes: About, Projects, Contact
-- Fully documented with README
-- All diagrams embedded
+**Concepts to master:**
+- Interface design (what do you promise?)
+- REST APIs (the common tongue)
+- Authentication (proving who you are)
+- Rate limiting (not pulling too hard)
 
----
+### 📝 The Trial
 
-## Phase 3: Reading & Reviewing Code 📖
+Answer these questions:
 
-**Goal**: Shift from writing code to *understanding* existing code.
+1. What's the difference between an interface and an implementation?
+2. Why do we use HTTP status codes?
+3. What is an API key and why does it exist?
+4. What happens when two systems disagree about a contract?
 
-### 3.1 Codebase Archaeology
+### 🔨 Mini-Project: The Interface Bridge
 
-> Every codebase is a historical artifact. Structure reveals values. Comments reveal fears.
+**Your quest:** Build a **Weather Dashboard** that pulls data from a real API and displays it meaningfully.
 
-**📚 Concepts**:
-- Project structure patterns
-- Entry points and execution flow
-- Dependency mapping
-- README-first exploration
+Requirements:
+- Connect to a free weather API (OpenWeatherMap, WeatherAPI, etc.)
+- Handle authentication (API key management)
+- Transform the API response into your own data structure
+- Display current weather + 3-day forecast
+- Handle errors gracefully (API down, invalid city, rate limited)
 
-**📊 Diagram Deliverable**:
-- Codebase map of an open-source project
+```
+🌤️ Weather for Grand Rapids, MI
 
-**📝 Quiz**: 5 questions on code exploration strategies
+Current: 42°F, Partly Cloudy
+Humidity: 65%
 
-**🔨 Mini-Project**: **Codebase Report**
-- Pick a small open-source project (< 5k lines)
-- Produce a report:
-  - Purpose and architecture
-  - Key files and their roles
-  - Dependency diagram
-  - "If I had to change X, I'd start here"
+📅 3-Day Forecast:
+   Tomorrow:  45°F ⛅
+   Wednesday: 38°F 🌧️
+   Thursday:  41°F ☀️
+```
 
----
-
-### 3.2 Code Review Fundamentals
-
-> Code review is about sharing knowledge, not finding bugs.
-
-**📚 Concepts**:
-- What to look for: clarity, correctness, consistency
-- Constructive feedback techniques
-- The "why" behind style guides
-- Review etiquette
-
-**📊 Diagram Deliverable**:
-- Flowchart of your code review process
-
-**📝 Quiz**: 5 questions on code review best practices
-
-**🔨 Mini-Project**: **Review Practice**
-- Review 3 sample PRs (provided)
-- Write detailed, constructive feedback
-- Identify one thing you learned from each
+**Deliverables:**
+- Working code in `bparker/ch3-magnetism/`
+- Sequence diagram showing your app ↔ API interaction
+- Reflection: What did you learn about depending on external systems?
 
 ---
 
-### 3.3 Tracing Execution
+## Chapter 4: Reading the Ruins 🔮
 
-> Reading code is like a choose-your-own-adventure. Follow the data.
+*Week 4*
 
-**📚 Concepts**:
-- Call stacks and function chains
-- Conditional branches and loops
-- Async/await patterns
-- Debugging tools and techniques
+> *"Before you build new temples, you must learn to read the old ones. Every codebase is a ruin left by those who came before — full of wisdom, warnings, and forgotten intentions."*
 
-**📊 Diagram Deliverable**:
-- Sequence diagram of code execution
+Now comes a different challenge. You've built small things. But real architects don't always build from scratch — they inherit. They read. They understand systems created by others.
 
-**📝 Quiz**: 5 questions on execution tracing
+### The Lesson
 
-**🔨 Mini-Project**: **Execution Tracer**
-- Take provided code with a bug
-- Trace execution to find the bug
-- Document your debugging process
-- Fix and explain the solution
+This chapter combines all three forces in the context of **understanding existing systems**:
 
----
+- 🪨 **Stone**: What data does this system persist? Where does state live?
+- ⚡ **Lightning**: How does data flow through this system?
+- 🧲 **Magnetism**: What interfaces does it expose? What does it depend on?
 
-### 🏆 Phase 3 Milestone: **Open Source Contribution**
+```mermaid
+flowchart TD
+    ENTRY["🚪 Entry Point"] --> TRACE["Follow the flow"]
+    TRACE --> DATA["Where does data live?"]
+    TRACE --> INTERFACES["What are the contracts?"]
+    DATA --> MAP["📍 Create the Map"]
+    INTERFACES --> MAP
+```
 
-Make a real contribution to an open-source project:
-- Find a "good first issue"
-- Understand the codebase (document your exploration)
-- Submit a PR
-- Respond to feedback
+**Skills to develop:**
+- Finding entry points (where does execution start?)
+- Tracing data flow (following the lightning)
+- Identifying state (finding the stone)
+- Mapping dependencies (understanding the magnetism)
 
-**Deliverables**:
-- Link to your merged PR (or detailed attempt)
-- Codebase analysis document
-- Reflection: what you learned
+### 📝 The Trial
 
----
+Choose a small open-source project (under 3,000 lines). Answer:
 
-## Phase 4: Systems Thinking 🌐
+1. What is this project's purpose in one sentence?
+2. Where does execution begin?
+3. What external dependencies does it have?
+4. Draw the data flow for one key feature.
+5. What would you change and why?
 
-**Goal**: Zoom out. See the forest, not just the trees.
+### 🔨 Mini-Project: The Codebase Cartographer
 
-### 4.1 Components & Boundaries
+**Your quest:** Produce a **complete analysis** of a real open-source project.
 
-> Every system has parts with boundaries. Software has services. Your body has organs.
+Choose one:
+- A CLI tool you use
+- A small web framework
+- A utility library
+- (Or propose your own — get approval first)
 
-**📚 Concepts**:
-- Decomposition strategies
-- Interfaces as contracts
-- Coupling and cohesion
-- API boundaries
+Produce:
+1. **Architecture Overview** (1-2 pages)
+   - Purpose and users
+   - High-level structure
+   - Key design decisions
 
-**📊 Diagram Deliverable**:
-- Component diagram with clear boundaries
+2. **Diagrams** (Mermaid)
+   - Component diagram (Stone: where things live)
+   - Sequence diagram (Lightning: how a key flow works)
+   - Dependency diagram (Magnetism: what it connects to)
 
-**📝 Quiz**: 5 questions on system decomposition
+3. **Critique** (1 page)
+   - What's done well?
+   - What would you improve?
+   - One proposed enhancement with ADR-style reasoning
 
-**🔨 Mini-Project**: **System Breakdown**
-- Decompose a complex app into components
-- Define interfaces between components
-- Identify coupling risks
-
----
-
-### 4.2 Data & State
-
-> State is the system's "now." Data is information in motion.
-
-**📚 Concepts**:
-- Stateless vs stateful services
-- Databases as long-term memory
-- Caches as short-term memory
-- Event-driven architecture
-
-**📊 Diagram Deliverable**:
-- State diagram for a user journey
-
-**📝 Quiz**: 5 questions on state management
-
-**🔨 Mini-Project**: **State Machine**
-- Build a finite state machine for a real process
-- Examples: order fulfillment, user authentication, game logic
-- Visualize with Mermaid state diagram
+**Deliverables:**
+- Full analysis in `bparker/ch4-ruins/`
+- All diagrams embedded in markdown
+- Presentation-ready format (could be slides)
 
 ---
 
-### 4.3 Failure Modes & Resilience
+## Capstone I: The Living Archive 🔥
 
-> Every system fails. The question is how gracefully.
+*Week 5*
 
-**📚 Concepts**:
-- Error handling strategies
-- Retries, timeouts, circuit breakers
-- Graceful degradation
-- Monitoring and alerting
+> *"The forces converge. Stone to hold. Lightning to move. Magnetism to connect. Now you build something that lives — something that persists, transforms, and reaches out to the world."*
 
-**📊 Diagram Deliverable**:
-- Failure mode analysis diagram
+Your first capstone. This is not a toy. This is a **real system** that combines everything you've learned.
 
-**📝 Quiz**: 5 questions on resilience patterns
+### The Quest
 
-**🔨 Mini-Project**: **Resilience Audit**
-- Analyze a system for failure points
-- Propose mitigation strategies
-- Implement one resilience pattern in code
+Build a **Personal Knowledge Base** — a system that:
 
----
+1. **Stores** information you want to remember (Stone)
+2. **Processes** and organizes that information (Lightning)
+3. **Integrates** with external services (Magnetism)
 
-### 🏆 Phase 4 Milestone: **Biometrics System Design**
+```mermaid
+flowchart TB
+    subgraph INPUT["📥 Input Sources"]
+        WEB["Web Clipper"]
+        MANUAL["Manual Entry"]
+        API_IN["API Import"]
+    end
+    
+    subgraph CORE["🔥 The Living Archive"]
+        PROCESS["⚡ Process & Tag"]
+        STORE["🪨 Persistent Storage"]
+        SEARCH["🔍 Search & Retrieve"]
+    end
+    
+    subgraph OUTPUT["📤 Output"]
+        CLI["Command Line"]
+        API_OUT["REST API"]
+        EXPORT["Export (JSON/MD)"]
+    end
+    
+    INPUT --> CORE
+    CORE --> OUTPUT
+    
+    style CORE fill:#ef5350,color:#fff
+```
 
-*Leverage your fingerprint project experience!*
+### Requirements
 
-Design a modern biometrics authentication system:
-- Component diagram (sensor, processor, storage, API)
-- Data flow for authentication
-- Security considerations
-- Failure modes and mitigations
-- 5-slide presentation of your design
+**Stone (Persistence):**
+- Store entries with: title, content, tags, source URL, created/updated dates
+- Use a real database (SQLite is fine) or structured JSON files
+- Support full-text search
 
----
+**Lightning (Transformation):**
+- Auto-generate tags from content (simple keyword extraction)
+- Support markdown formatting
+- Transform entries for different outputs (JSON, Markdown, summary)
 
-## Phase 5: AI-Augmented Development 🤖
+**Magnetism (Integration):**
+- REST API to add/retrieve entries programmatically
+- Import from at least one external source (bookmarks, notes app, or API)
+- Webhook or notification when new entries are added (optional but impressive)
 
-**Goal**: Work *with* AI as your pair programmer and force multiplier.
+### Deliverables
 
-### 5.1 Prompt Engineering for Code
+```
+bparker/capstone-1-archive/
+├── README.md           # Setup instructions + screenshots
+├── docs/
+│   ├── ARCHITECTURE.md # System design with diagrams
+│   └── ADR-001.md      # Key design decision documented
+├── src/                # Your implementation
+└── demo.md             # Walkthrough of features
+```
 
-> AI is your junior dev with infinite patience. Quality in = quality out.
-
-**📚 Concepts**:
-- Context and constraints in prompts
-- Iterative refinement
-- Verification strategies
-- When AI helps vs hurts
-
-**📊 Diagram Deliverable**:
-- Flowchart of your prompt iteration process
-
-**📝 Quiz**: 5 questions on effective prompting
-
-**🔨 Mini-Project**: **Prompt Journal**
-- Complete 5 coding tasks using only AI
-- Document each prompt and iteration
-- Rate effectiveness and lessons learned
-
----
-
-### 5.2 Agentic Workflows
-
-> You're the architect. AI is the builder. You specify, review, guide.
-
-**📚 Concepts**:
-- Task decomposition for AI
-- Review-before-commit discipline
-- AI for refactoring and documentation
-- Knowing when to take over
-
-**📊 Diagram Deliverable**:
-- Workflow diagram: human + AI collaboration
-
-**📝 Quiz**: 5 questions on agentic development
-
-**🔨 Mini-Project**: **AI-Built Feature**
-- Use Cursor/Copilot to build a complete feature
-- Document every decision point
-- Track: what AI did well, what you corrected
+**Present:** 5-slide summary + live demo
 
 ---
 
-### 5.3 AI for Understanding
+## Capstone II: The Oracle Engine 🌟
 
-> Use AI to explain, diagram, summarize, teach — not just write.
+*Week 6*
 
-**📚 Concepts**:
-- Code explanation strategies
-- AI-generated diagrams
-- Summarizing complex systems
-- Learning new tech with AI
+> *"There is a new force in the realm — one that didn't exist when you first walked these paths. The AI spirits. They can read, write, explain, generate. Some fear them. The wise learn to direct them. You will build an Oracle — a system that channels this power for a real purpose."*
 
-**📊 Diagram Deliverable**:
-- AI-assisted system diagram (document your prompts)
+Your final capstone. Here you integrate **AI** as a core capability — not a gimmick, but a genuine enhancement to a real-world system.
 
-**📝 Quiz**: 5 questions on AI for learning
+### The Quest
 
-**🔨 Mini-Project**: **Codebase Decoder**
-- Take an unfamiliar codebase
-- Use AI to understand it completely
-- Produce: summary doc, architecture diagram, key insights
+Build an **AI-Powered Assistant** for a specific domain. Choose your domain:
 
----
+**Option A: Code Companion**
+- Explain code snippets in plain English
+- Generate documentation from code
+- Suggest improvements or identify issues
+- Learn from feedback
 
-### 🏆 Phase 5 Milestone: **AI-Powered Tool**
+**Option B: Learning Guide**
+- Take a topic and generate a learning path
+- Quiz the user and adapt to their level
+- Summarize articles or documentation
+- Track progress and suggest next steps
 
-Build a tool that uses AI as a core feature:
-- Examples: code explainer, documentation generator, diagram creator
-- Must include: clear UI, AI integration, useful output
-- Document your AI prompts and iterations
+**Option C: Data Analyst**
+- Accept CSV/JSON data uploads
+- Generate insights and summaries using AI
+- Create visualizations based on natural language requests
+- Answer questions about the data
 
----
+**Option D: Your Proposal**
+- Propose your own domain (get approval)
+- Must involve: data input, AI processing, meaningful output
+- Must solve a real problem you care about
 
-## Phase 6: Architecture & Design 🏛️
+### Requirements
 
-**Goal**: Think like a senior architect. Make decisions. Justify tradeoffs.
+**Stone:**
+- Persist user sessions/history
+- Store AI responses for review
+- Cache frequent queries (don't waste API calls)
 
-### 6.1 Design Patterns
+**Lightning:**
+- Clean data flow from input → AI → output
+- Handle streaming responses if applicable
+- Transform AI output into useful formats
 
-> Patterns are proven solutions. Recognize the problem, apply the pattern.
+**Magnetism:**
+- Integrate with an AI provider (OpenAI, Anthropic, local model)
+- Clean interface between your app and the AI
+- Handle rate limits, errors, and timeouts gracefully
 
-**📚 Concepts**:
-- Factory, Observer, Strategy, Repository
-- When to use each pattern
-- Anti-patterns to avoid
+### The AI Integration
 
-**📊 Diagram Deliverable**:
-- Class diagrams for 3 patterns
+```mermaid
+flowchart LR
+    USER["👤 User Input"] --> APP["🌟 Your App"]
+    APP --> PROMPT["⚡ Build Prompt"]
+    PROMPT --> AI["🤖 AI Provider"]
+    AI --> PARSE["⚡ Parse Response"]
+    PARSE --> STORE["🪨 Store/Cache"]
+    STORE --> OUTPUT["📤 Present to User"]
+    
+    style AI fill:#ab47bc,color:#fff
+    style APP fill:#ab47bc,color:#fff
+```
 
-**📝 Quiz**: 5 questions on pattern recognition
+### Deliverables
 
-**🔨 Mini-Project**: **Pattern Refactor**
-- Take messy code (provided)
-- Identify applicable patterns
-- Refactor and document improvements
+```
+bparker/capstone-2-oracle/
+├── README.md           # What it does, how to run it
+├── docs/
+│   ├── ARCHITECTURE.md # Full system design
+│   ├── AI-INTEGRATION.md # How you use AI, prompt strategies
+│   └── ADR-001.md      # Key decisions
+├── src/
+└── prompts/            # Your prompt templates (documented)
+```
 
----
-
-### 6.2 Architecture Decision Records (ADRs)
-
-> Document *why* you chose A over B. Future you will thank present you.
-
-**📚 Concepts**:
-- ADR structure: Context, Decision, Consequences
-- Tradeoff analysis
-- Living documentation
-
-**📊 Diagram Deliverable**:
-- Decision tree for a technical choice
-
-**📝 Quiz**: 5 questions on decision documentation
-
-**🔨 Mini-Project**: **ADR Portfolio**
-- Write 3 ADRs for decisions in your past projects
-- Include alternatives considered
-- Reflect on what you'd change now
-
----
-
-### 6.3 System Design Fundamentals
-
-> How do large systems scale? How do teams work on them?
-
-**📚 Concepts**:
-- Client-server architecture
-- APIs as contracts
-- Microservices vs monoliths
-- Scaling strategies
-
-**📊 Diagram Deliverable**:
-- Full system architecture diagram
-
-**📝 Quiz**: 5 questions on system design
-
-**🔨 Mini-Project**: **System Design Doc**
-- Design a system: URL shortener, chat app, or your choice
-- Include: architecture, data model, API design, scaling plan
-- Present in 5 slides
+**Present:** 
+- 10-slide deck telling the story of your Oracle
+- Live demo with real AI interactions
+- Reflection: What did you learn about working with AI?
 
 ---
 
-### 🏆 Phase 6 Capstone: **Full System Analysis & Proposal**
+## Epilogue: The Architect Awakened
 
-**The Final Project**: Analyze and propose improvements for a real system.
+You came back to a changed world. 
 
-1. **Choose** a product you use daily
-2. **Analyze**:
-   - Component diagram
-   - Data flow diagram
-   - Sequence diagram for key user action
-   - Failure mode analysis
-3. **Propose**:
-   - One major improvement
-   - Full ADR for the change
-   - Implementation roadmap
-4. **Present**:
-   - 10-slide deck
-   - 5-minute video walkthrough
+You relearned the ancient forces — Stone, Lightning, Magnetism. You built systems that persist, transform, and connect. You read the ruins of others' code and found wisdom in their designs.
+
+And you learned to work with the new power — the AI spirits that can amplify everything you do.
+
+You are no longer just a coder. You are an **Architect**.
+
+The realm needs builders who understand systems deeply. Who can see the whole while crafting the parts. Who can direct AI to build faster while knowing enough to guide it true.
+
+Your journey doesn't end here. It begins here.
+
+*Welcome back.*
 
 ---
 
-## Progress Tracking
+## Progress Tracker
 
-| Phase | Module | Status | Project | Card |
-|-------|--------|--------|---------|------|
-| 1 | Variables & Memory | ⬜ | Memory Visualizer | |
-| 1 | Functions & Procedures | ⬜ | Recipe Calculator | |
-| 1 | Objects & Identity | ⬜ | Contact Book | |
-| 1 | Data Flow | ⬜ | Data Pipeline | |
-| 1 | **Milestone** | ⬜ | Decision Engine | |
-| 2 | Git & GitHub | ⬜ | Git Time Travel | |
-| 2 | Markdown & Docs | ⬜ | Project Template | |
-| 2 | Mermaid Diagrams | ⬜ | System Illustrated | |
-| 2 | Terminal & CLI | ⬜ | Automation Script | |
-| 2 | **Milestone** | ⬜ | Portfolio Site | |
-| 3 | Codebase Archaeology | ⬜ | Codebase Report | |
-| 3 | Code Review | ⬜ | Review Practice | |
-| 3 | Tracing Execution | ⬜ | Execution Tracer | |
-| 3 | **Milestone** | ⬜ | OSS Contribution | |
-| 4 | Components & Boundaries | ⬜ | System Breakdown | |
-| 4 | Data & State | ⬜ | State Machine | |
-| 4 | Failure & Resilience | ⬜ | Resilience Audit | |
-| 4 | **Milestone** | ⬜ | Biometrics Design | |
-| 5 | Prompt Engineering | ⬜ | Prompt Journal | |
-| 5 | Agentic Workflows | ⬜ | AI-Built Feature | |
-| 5 | AI for Understanding | ⬜ | Codebase Decoder | |
-| 5 | **Milestone** | ⬜ | AI-Powered Tool | |
-| 6 | Design Patterns | ⬜ | Pattern Refactor | |
-| 6 | ADRs | ⬜ | ADR Portfolio | |
-| 6 | System Design | ⬜ | System Design Doc | |
-| 6 | **Capstone** | ⬜ | Full System Analysis | |
+| Week | Chapter | Force | Project | Status |
+|------|---------|-------|---------|--------|
+| 1 | The Stone Remembers | 🪨 | Memory Keeper | ⬜ |
+| 2 | Lightning Paths | ⚡ | Flow Tracker | ⬜ |
+| 3 | The Pull Between | 🧲 | Interface Bridge | ⬜ |
+| 4 | Reading the Ruins | 🔮 | Codebase Cartographer | ⬜ |
+| 5 | **Capstone I** | 🔥 | The Living Archive | ⬜ |
+| 6 | **Capstone II** | 🌟 | The Oracle Engine | ⬜ |
 
 ---
 
-## Estimated Timeline
+## Timeline
 
-| Phase | Focus | Duration | Projects |
-|-------|-------|----------|----------|
-| 1 | Foundation Refresh | 3-4 weeks | 4 mini + 1 milestone |
-| 2 | Modern Tooling | 3-4 weeks | 4 mini + 1 milestone |
-| 3 | Reading Code | 2-3 weeks | 3 mini + 1 milestone |
-| 4 | Systems Thinking | 3-4 weeks | 3 mini + 1 milestone |
-| 5 | AI-Augmented Dev | 2-3 weeks | 3 mini + 1 milestone |
-| 6 | Architecture | 3-4 weeks | 3 mini + 1 capstone |
+| Week | Focus | Deliverable |
+|------|-------|-------------|
+| 1 | Persistence & Memory | Memory Keeper app |
+| 2 | Data Flow & Transformation | Flow Tracker pipeline |
+| 3 | APIs & Integration | Weather Dashboard |
+| 4 | Code Reading & Analysis | Codebase Analysis |
+| 5 | Full-Stack Integration | Living Archive system |
+| 6 | AI Integration | Oracle Engine |
 
-**Total**: ~16-22 weeks at moderate pace
-
----
-
-## What Success Looks Like
-
-By the end of this roadmap, you will:
-
-- ✅ Have a portfolio of **20+ projects** in your GitHub
-- ✅ Create **professional diagrams** for any system
-- ✅ **Review code** like a senior engineer
-- ✅ **Design systems** with clear tradeoffs documented
-- ✅ **Direct AI** to build what you envision
-- ✅ Think like a **systems architect**, not just a coder
+**Total:** 6 weeks, 6 projects, 3 forces mastered, 1 architect awakened.
 
 ---
 
-*You've built fingerprint scanners and decision trees. Now let's build the mindset of an architect who can design anything.*
+*The stone remembers. The lightning transforms. The magnetism connects. And the architect... the architect sees it all.*
