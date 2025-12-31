@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/auth.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div class="auth-page">
+    
+    <!-- Animated Background -->
+    <div class="auth-background">
+      <div class="bg-gradient bg-gradient-1"></div>
+      <div class="bg-gradient bg-gradient-2"></div>
+      <div class="bg-gradient bg-gradient-3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Auth Container -->
+    <div class="auth-container">
+      <div class="auth-card" id="register-card">
+        
+        <!-- Header -->
+        <header class="auth-header">
+          <a href="../index.html" class="auth-logo">
+            <div class="logo-icon">🏛️</div>
+            <span class="logo-text">AutoNateAI</span>
+          </a>
+          
+          <div class="three-forces-mini">
+            <div class="force-mini">
+              <div class="force-mini-icon">🪨</div>
+              <div>Stone</div>
+            </div>
+            <div class="force-mini">
+              <div class="force-mini-icon">⚡</div>
+              <div>Lightning</div>
+            </div>
+            <div class="force-mini">
+              <div class="force-mini-icon">🧲</div>
+              <div>Magnetism</div>
+            </div>
+          </div>
+          
+          <h1 class="auth-title">Begin Your Journey</h1>
+          <p class="auth-subtitle">Join the community of AI-augmented architects</p>
+        </header>
+        
+        <!-- Error Message -->
+        <div class="form-error hidden" id="error-message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span id="error-text">Error message here</span>
+        </div>
+        
+        <!-- Register Form -->
+        <form class="auth-form" id="register-form">
+          <div class="form-group">
+            <label class="form-label" for="display-name">Display Name</label>
+            <input 
+              type="text" 
+              id="display-name" 
+              class="form-input" 
+              placeholder="What should we call you?"
+              required
+              autocomplete="name"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-input" 
+              placeholder="your.email@example.com"
+              required
+              autocomplete="email"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="password-wrapper">
+              <input 
+                type="password" 
+                id="password" 
+                class="form-input" 
+                placeholder="Create a strong password"
+                required
+                autocomplete="new-password"
+                minlength="6"
+              >
+              <button type="button" class="password-toggle" id="toggle-password" aria-label="Toggle password visibility">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eye-icon-1">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <div class="password-strength" id="password-strength">
+              <div class="strength-bar" id="strength-1"></div>
+              <div class="strength-bar" id="strength-2"></div>
+              <div class="strength-bar" id="strength-3"></div>
+              <div class="strength-bar" id="strength-4"></div>
+            </div>
+            <p class="strength-text" id="strength-text"></p>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <div class="password-wrapper">
+              <input 
+                type="password" 
+                id="confirm-password" 
+                class="form-input" 
+                placeholder="Confirm your password"
+                required
+                autocomplete="new-password"
+              >
+              <button type="button" class="password-toggle" id="toggle-confirm" aria-label="Toggle password visibility">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eye-icon-2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="register-btn">
+            Create Account
+          </button>
+        </form>
+        
+        <div class="auth-divider">or continue with</div>
+        
+        <!-- Google Sign-In -->
+        <button type="button" class="btn btn-google" id="google-btn" style="width: 100%;">
+          <svg viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          Sign up with Google
+        </button>
+        
+        <p class="auth-links">
+          Already have an account? <a href="login.html">Sign in</a>
+        </p>
+        
+      </div>
+      
+      <!-- Success Message (hidden initially) -->
+      <div class="auth-card success-message" id="success-card" style="display: none;">
+        <div class="success-icon">✨</div>
+        <h2>Welcome, Architect!</h2>
+        <p>Your account has been created successfully. Redirecting you to your dashboard...</p>
+        <div class="three-forces-mini" style="margin-top: 2rem;">
+          <div class="force-mini">
+            <div class="force-mini-icon">🪨</div>
+            <div>Stone</div>
+          </div>
+          <div class="force-mini">
+            <div class="force-mini-icon">⚡</div>
+            <div>Lightning</div>
+          </div>
+          <div class="force-mini">
+            <div class="force-mini-icon">🧲</div>
+            <div>Magnetism</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  
+  <script>
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Create particles
+      createParticles();
+      
+      // Initialize Firebase
+      if (window.FirebaseApp.init()) {
+        window.AuthService.init();
+        
+        // Check if already logged in
+        window.AuthService.onAuthStateChanged((user) => {
+          if (user && !showingSuccess) {
+            window.location.href = '../dashboard/index.html';
+          }
+        });
+      }
+      
+      // Animate form elements
+      animateFormElements();
+    });
+    
+    let showingSuccess = false;
+    
+    // Create floating particles
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 15) + 's';
+        container.appendChild(particle);
+      }
+    }
+    
+    // Animate form elements with anime.js
+    function animateFormElements() {
+      anime({
+        targets: '.auth-card .form-group, .auth-card .btn, .auth-card .auth-divider, .auth-card .auth-links',
+        translateY: [20, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(80, { start: 300 }),
+        easing: 'easeOutCubic',
+        duration: 600
+      });
+    }
+    
+    // Form handling
+    const registerForm = document.getElementById('register-form');
+    const registerBtn = document.getElementById('register-btn');
+    const googleBtn = document.getElementById('google-btn');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    
+    // Show error
+    function showError(message) {
+      errorText.textContent = message;
+      errorMessage.classList.remove('hidden');
+      anime({
+        targets: errorMessage,
+        translateX: [10, -10, 5, -5, 0],
+        duration: 400,
+        easing: 'easeOutCubic'
+      });
+    }
+    
+    // Hide error
+    function hideError() {
+      errorMessage.classList.add('hidden');
+    }
+    
+    // Password strength checker
+    function checkPasswordStrength(password) {
+      let strength = 0;
+      if (password.length >= 6) strength++;
+      if (password.length >= 10) strength++;
+      if (/[A-Z]/.test(password) && /[a-z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[^A-Za-z0-9]/.test(password)) strength++;
+      
+      return Math.min(strength, 4);
+    }
+    
+    // Update strength indicator
+    function updateStrengthIndicator(strength) {
+      const bars = ['strength-1', 'strength-2', 'strength-3', 'strength-4'];
+      const strengthText = document.getElementById('strength-text');
+      
+      const labels = ['', 'Weak', 'Fair', 'Good', 'Strong'];
+      const classes = ['', 'weak', 'weak', 'medium', 'strong'];
+      
+      bars.forEach((barId, index) => {
+        const bar = document.getElementById(barId);
+        bar.classList.remove('active', 'weak', 'medium', 'strong');
+        
+        if (index < strength) {
+          bar.classList.add('active', classes[strength]);
+        }
+      });
+      
+      strengthText.textContent = labels[strength];
+      strengthText.className = 'strength-text ' + classes[strength];
+    }
+    
+    passwordInput.addEventListener('input', () => {
+      const strength = checkPasswordStrength(passwordInput.value);
+      updateStrengthIndicator(strength);
+    });
+    
+    // Show success message
+    function showSuccess() {
+      showingSuccess = true;
+      const registerCard = document.getElementById('register-card');
+      const successCard = document.getElementById('success-card');
+      
+      anime({
+        targets: registerCard,
+        opacity: 0,
+        translateY: -20,
+        duration: 400,
+        easing: 'easeInCubic',
+        complete: () => {
+          registerCard.style.display = 'none';
+          successCard.style.display = 'block';
+          
+          anime({
+            targets: successCard,
+            opacity: [0, 1],
+            translateY: [20, 0],
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+          
+          // Redirect after 2 seconds
+          setTimeout(() => {
+            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/index.html';
+            window.location.href = redirect;
+          }, 2000);
+        }
+      });
+    }
+    
+    // Register form submit
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideError();
+      
+      const displayName = document.getElementById('display-name').value;
+      const email = document.getElementById('email').value;
+      const password = passwordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+      
+      // Validation
+      if (password !== confirmPassword) {
+        showError('Passwords do not match');
+        confirmPasswordInput.classList.add('error');
+        return;
+      }
+      
+      if (password.length < 6) {
+        showError('Password must be at least 6 characters');
+        return;
+      }
+      
+      confirmPasswordInput.classList.remove('error');
+      registerBtn.classList.add('loading');
+      registerBtn.disabled = true;
+      
+      const result = await window.AuthService.register(email, password, displayName);
+      
+      registerBtn.classList.remove('loading');
+      registerBtn.disabled = false;
+      
+      if (result.success) {
+        showSuccess();
+      } else {
+        showError(result.error);
+      }
+    });
+    
+    // Google sign-up
+    googleBtn.addEventListener('click', async () => {
+      hideError();
+      googleBtn.classList.add('loading');
+      googleBtn.disabled = true;
+      
+      const result = await window.AuthService.loginWithGoogle();
+      
+      googleBtn.classList.remove('loading');
+      googleBtn.disabled = false;
+      
+      if (result.success) {
+        showSuccess();
+      } else {
+        showError(result.error);
+      }
+    });
+    
+    // Password visibility toggles
+    function setupPasswordToggle(toggleId, inputId, iconId) {
+      const toggle = document.getElementById(toggleId);
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      
+      toggle.addEventListener('click', () => {
+        const type = input.type === 'password' ? 'text' : 'password';
+        input.type = type;
+        
+        if (type === 'text') {
+          icon.innerHTML = `
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+            <line x1="1" y1="1" x2="23" y2="23"></line>
+          `;
+        } else {
+          icon.innerHTML = `
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          `;
+        }
+      });
+    }
+    
+    setupPasswordToggle('toggle-password', 'password', 'eye-icon-1');
+    setupPasswordToggle('toggle-confirm', 'confirm-password', 'eye-icon-2');
+  </script>
+</body>
+</html>
+

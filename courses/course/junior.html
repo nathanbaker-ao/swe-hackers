@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Junior Accelerator | AutoNateAI Learning Hub</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/course-detail.css">
+  
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  
+  <section class="course-hero junior">
+    <div class="hero-content">
+      <nav class="hero-nav">
+        <a href="../index.html" class="back-link">← Back to Courses</a>
+        <div class="auth-buttons" id="auth-buttons">
+          <a href="../auth/login.html" class="auth-btn login">Sign In</a>
+          <a href="../auth/register.html" class="auth-btn register">Get Started</a>
+        </div>
+      </nav>
+      
+      <div class="hero-main">
+        <div class="hero-text">
+          <span class="course-badge">For Junior Engineers</span>
+          <span class="course-icon-large">🚀</span>
+          <h1 class="course-title">The Junior Accelerator</h1>
+          <p class="course-tagline">
+            They say it takes 5-10 years to become a senior engineer. That was before AI. 
+            Learn the systems thinking and AI-augmented workflows that compress years into months.
+          </p>
+          
+          <div class="course-meta-row">
+            <span class="meta-item"><span class="icon">📅</span> 6 weeks</span>
+            <span class="meta-item"><span class="icon">📖</span> 6 chapters</span>
+            <span class="meta-item"><span class="icon">🔨</span> 6 projects</span>
+            <span class="meta-item"><span class="icon">🐍</span> Python</span>
+          </div>
+          
+          <div class="three-forces-preview">
+            <div class="force-preview">
+              <div class="icon">🪨</div>
+              <div class="name">Stone</div>
+              <div class="desc">Codebase Mastery</div>
+            </div>
+            <div class="force-preview">
+              <div class="icon">⚡</div>
+              <div class="name">Lightning</div>
+              <div class="desc">Flow Mapping</div>
+            </div>
+            <div class="force-preview">
+              <div class="icon">🧲</div>
+              <div class="name">Magnetism</div>
+              <div class="desc">Integration Skills</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="enrollment-card">
+          <div class="enrollment-price">
+            <div class="price-tag">Free</div>
+            <div class="price-note">Accelerate your career</div>
+          </div>
+          
+          <button class="enroll-btn" id="enroll-btn">Start Learning →</button>
+          
+          <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+            Join 200+ juniors fast-tracking their careers
+          </p>
+          
+          <ul class="enrollment-features">
+            <li><span class="check">✓</span> Senior-level thinking patterns</li>
+            <li><span class="check">✓</span> Codebase navigation mastery</li>
+            <li><span class="check">✓</span> AI-augmented debugging</li>
+            <li><span class="check">✓</span> Design-first development</li>
+            <li><span class="check">✓</span> Feature ownership skills</li>
+            <li><span class="check">✓</span> Career acceleration framework</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="course-content">
+    
+    <section class="content-section">
+      <h2 class="section-title">What You'll Learn</h2>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <div class="icon">🗺️</div>
+          <div><h4>Codebase Navigation</h4><p>Understand any codebase in hours, not weeks</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🔍</div>
+          <div><h4>Debug Like a Senior</h4><p>Trace data flows and find root causes fast</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🔌</div>
+          <div><h4>Integration Excellence</h4><p>Connect systems without breaking things</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">📐</div>
+          <div><h4>Design First</h4><p>Think before you code, diagram before you build</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">👑</div>
+          <div><h4>Own Features</h4><p>Take a feature from idea to production</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🤖</div>
+          <div><h4>AI Collaboration</h4><p>Pair with AI to multiply your output</p></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-title">The Junior Trap vs. The Fast Track</h2>
+      <div class="learn-grid">
+        <div class="learn-item" style="border-left: 3px solid var(--accent-error);">
+          <div class="icon">🐌</div>
+          <div>
+            <h4>The Junior Trap</h4>
+            <p>Wait for tasks, fix bugs, stay in your lane, hope to level up in 5 years</p>
+          </div>
+        </div>
+        <div class="learn-item" style="border-left: 3px solid var(--accent-success);">
+          <div class="icon">🚀</div>
+          <div>
+            <h4>The Fast Track</h4>
+            <p>Understand systems, own outcomes, use AI strategically, level up in 1-2 years</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-title">Curriculum</h2>
+      <div class="curriculum-list">
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">1</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🪨 Codebase Mastery</div>
+              <div class="chapter-subtitle">Navigate Any Codebase in Hours</div>
+            </div>
+            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Codebase Audit</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Building mental models of code</li>
+              <li>Finding entry points and key abstractions</li>
+              <li>Using AI to explain unfamiliar patterns</li>
+              <li>Documentation archaeology</li>
+              <li>Project: Audit a Real Codebase</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">2</div>
+            <div class="chapter-info">
+              <div class="chapter-title">⚡ Flow Mapping</div>
+              <div class="chapter-subtitle">Debug Like a Senior</div>
+            </div>
+            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Flow Diagram</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Tracing data through systems</li>
+              <li>Understanding async flows</li>
+              <li>Finding bottlenecks and failure points</li>
+              <li>Using AI to analyze stack traces</li>
+              <li>Project: Map a Complex Data Flow</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">3</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🧲 Integration Excellence</div>
+              <div class="chapter-subtitle">Connect Without Breaking</div>
+            </div>
+            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Integration Audit</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Integration patterns that don't break</li>
+              <li>Error handling at boundaries</li>
+              <li>Testing integrations properly</li>
+              <li>Documenting integration contracts</li>
+              <li>Project: Audit an Integration</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">4</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🏛️ Design First</div>
+              <div class="chapter-subtitle">Think Before You Code</div>
+            </div>
+            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Design Doc</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Why juniors jump to code too fast</li>
+              <li>The design-first workflow</li>
+              <li>Using AI to explore design options</li>
+              <li>Getting design feedback effectively</li>
+              <li>Project: Write a Design Document</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">5</div>
+            <div class="chapter-info">
+              <div class="chapter-title">👑 Capstone I: Lead a Feature</div>
+              <div class="chapter-subtitle">End-to-End Ownership</div>
+            </div>
+            <div class="chapter-meta"><span>📖 4 hours</span><span>🔨 Feature Ship</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Taking ownership of a feature</li>
+              <li>Planning and estimation</li>
+              <li>Communication and stakeholder management</li>
+              <li>Shipping with confidence</li>
+              <li>Project: Lead a Feature to Production</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">6</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🤖 Capstone II: AI-Paired Development</div>
+              <div class="chapter-subtitle">Your Personal AI Workflow</div>
+            </div>
+            <div class="chapter-meta"><span>📖 4 hours</span><span>🔨 AI Workflow</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Designing your AI-augmented workflow</li>
+              <li>When to use AI vs. when to think</li>
+              <li>Prompt engineering for engineers</li>
+              <li>Documenting your AI workflow</li>
+              <li>Project: Build Your AI Development Playbook</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-title">This Course Is Perfect For</h2>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <div class="icon">🆕</div>
+          <div><h4>New Engineers</h4><p>0-2 years of professional experience</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🎯</div>
+          <div><h4>Ambitious Juniors</h4><p>Want to level up faster than your peers</p></div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🔄</div>
+          <div><h4>Career Changers</h4><p>Got the job, now need to excel at it</p></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I really level up in 1-2 years instead of 5?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, but it requires intentional practice. The traditional 5-year timeline assumes passive learning. 
+            This course teaches you to actively accelerate by focusing on the skills that actually matter for 
+            leveling up, and leveraging AI to multiply your learning speed.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>I'm overwhelmed at work. Will this add to my stress?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Actually, the opposite. This course teaches you to work smarter, not harder. The skills you'll 
+            learn—codebase navigation, debugging, design-first thinking—will make your daily work easier and less stressful.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What if my company doesn't use the same tools?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            The skills taught here are transferable. We focus on thinking patterns and approaches, not specific 
+            tools. Whether you use Python, Java, or TypeScript, the underlying principles are the same.
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Accelerate?</h2>
+    <p class="cta-subtitle">
+      Stop waiting for experience to accumulate. Start building the skills that actually matter for leveling up.
+    </p>
+    <a href="#" class="cta-btn" id="cta-enroll-btn">Start Learning Free →</a>
+  </section>
+  
+  <footer class="course-footer">
+    <p>Built with 🧠 by <a href="https://github.com/nathanbaker-ao" target="_blank">Nathan Baker</a> • AutoNateAI</p>
+  </footer>
+  
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  
+  <script>
+    const COURSE_ID = 'junior';
+    const COURSE_DATA = { name: "The Junior Accelerator", icon: "🚀", subtitle: "For Junior Engineers" };
+    
+    function toggleChapter(h) { h.closest('.chapter-item').classList.toggle('open'); }
+    function toggleFaq(q) { q.closest('.faq-item').classList.toggle('open'); }
+    
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (!window.FirebaseApp.init()) return;
+      window.AuthService.init();
+      
+      window.AuthService.onAuthStateChanged(async (user) => {
+        document.getElementById('auth-buttons').innerHTML = user 
+          ? '<a href="../dashboard/index.html" class="auth-btn register">My Dashboard</a>'
+          : '<a href="../auth/login.html" class="auth-btn login">Sign In</a><a href="../auth/register.html" class="auth-btn register">Get Started</a>';
+        if (user) {
+          const p = await window.DataService.getCourseProgress(COURSE_ID);
+          if (p) {
+            document.getElementById('enroll-btn').textContent = 'Continue Learning →';
+            document.getElementById('cta-enroll-btn').textContent = 'Continue Learning →';
+          }
+        }
+      });
+      
+      const handleEnroll = async (e) => {
+        e.preventDefault();
+        const user = window.AuthService.getUser();
+        if (!user) { window.AuthService.setRedirectUrl(location.href); location.href = '../auth/register.html'; return; }
+        const p = await window.DataService.getCourseProgress(COURSE_ID);
+        if (p) { location.href = `../${COURSE_ID}/ch1-stone/`; return; }
+        e.target.disabled = true; e.target.textContent = 'Enrolling...';
+        const r = await window.DataService.enrollInCourse(COURSE_ID, COURSE_DATA);
+        if (r.success) location.href = `../${COURSE_ID}/ch1-stone/`;
+        else { e.target.disabled = false; e.target.textContent = 'Start Learning →'; }
+      };
+      
+      document.getElementById('enroll-btn').addEventListener('click', handleEnroll);
+      document.getElementById('cta-enroll-btn').addEventListener('click', handleEnroll);
+      
+      anime({ targets: '.hero-text > *', opacity: [0,1], translateY: [30,0], delay: anime.stagger(100, {start:200}), easing: 'easeOutCubic', duration: 800 });
+      anime({ targets: '.enrollment-card', opacity: [0,1], translateX: [30,0], delay: 500, easing: 'easeOutCubic', duration: 800 });
+    });
+  </script>
+</body>
+</html>
+

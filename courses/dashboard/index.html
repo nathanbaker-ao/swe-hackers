@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  
+  <div class="dashboard">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="sidebar-logo">
+        <div class="logo-icon">🏛️</div>
+        <span class="logo-text">AutoNateAI</span>
+      </a>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Main</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Course Library</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenges.html" class="nav-link">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Daily Challenges</span>
+                <span class="nav-badge">3</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Learning</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-text">Achievements</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="notes.html" class="nav-link">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Community</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
+                <span class="nav-icon">💬</span>
+                <span class="nav-text">Discord</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leaderboard.html" class="nav-link">
+                <span class="nav-icon">🏅</span>
+                <span class="nav-text">Leaderboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Account</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="settings.html" class="nav-link">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="logout-link">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-card" id="user-card">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-streak">
+              <span>🔥</span>
+              <span id="user-streak">0</span> day streak
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="sidebar-toggle" id="sidebar-toggle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+    </aside>
+    
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h1 class="page-title">Dashboard</h1>
+        </div>
+        
+        <div class="header-right">
+          <div class="header-search">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+            <input type="text" class="search-input" placeholder="Search courses, lessons...">
+          </div>
+          
+          <div class="header-actions">
+            <button class="action-btn" title="Notifications">
+              🔔
+              <span class="notification-dot"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Content -->
+      <div class="content-area">
+        
+        <!-- Welcome Message -->
+        <div class="welcome-message" id="welcome-message" style="margin-bottom: 2rem;">
+          <h2 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 0.5rem;">
+            Welcome back, <span id="welcome-name">Architect</span>! 👋
+          </h2>
+          <p style="color: var(--text-secondary);">Ready to continue your journey with the Three Forces?</p>
+        </div>
+        
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card animate-in animate-delay-1" style="opacity: 0;">
+            <div class="stat-header">
+              <div class="stat-icon streak">🔥</div>
+              <span class="stat-change positive" id="streak-change">+1</span>
+            </div>
+            <div class="stat-value" id="stat-streak">0</div>
+            <div class="stat-label">Day Streak</div>
+          </div>
+          
+          <div class="stat-card animate-in animate-delay-2" style="opacity: 0;">
+            <div class="stat-header">
+              <div class="stat-icon courses">📚</div>
+            </div>
+            <div class="stat-value" id="stat-courses">0</div>
+            <div class="stat-label">Courses Enrolled</div>
+          </div>
+          
+          <div class="stat-card animate-in animate-delay-3" style="opacity: 0;">
+            <div class="stat-header">
+              <div class="stat-icon lessons">✅</div>
+            </div>
+            <div class="stat-value" id="stat-lessons">0</div>
+            <div class="stat-label">Lessons Completed</div>
+          </div>
+          
+          <div class="stat-card animate-in animate-delay-4" style="opacity: 0;">
+            <div class="stat-header">
+              <div class="stat-icon time">⏱️</div>
+            </div>
+            <div class="stat-value" id="stat-time">0h</div>
+            <div class="stat-label">Time Learning</div>
+          </div>
+        </div>
+        
+        <!-- Continue Learning Section -->
+        <div class="section-header">
+          <h3 class="section-title">Continue Learning</h3>
+          <a href="courses.html" class="section-action">
+            View All Courses →
+          </a>
+        </div>
+        
+        <div class="courses-grid" id="courses-grid">
+          <!-- Courses will be loaded dynamically -->
+          <div class="empty-state" id="empty-courses">
+            <div class="empty-icon">📚</div>
+            <h3 class="empty-title">No courses yet</h3>
+            <p class="empty-desc">Start your architect journey by enrolling in a course!</p>
+            <a href="courses.html" class="empty-action">
+              <span>Browse Courses</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Daily Challenges Section -->
+        <section class="challenges-section">
+          <div class="section-header" style="margin-bottom: 1rem;">
+            <h3 class="section-title">Today's Challenges</h3>
+            <a href="challenges.html" class="section-action">View All →</a>
+          </div>
+          
+          <div class="challenge-card">
+            <div class="challenge-icon">🧠</div>
+            <div class="challenge-info">
+              <div class="challenge-title">Variable Memory Quiz</div>
+              <div class="challenge-desc">Test your understanding of how variables store data</div>
+            </div>
+            <span class="challenge-xp">+50 XP</span>
+          </div>
+          
+          <div class="challenge-card">
+            <div class="challenge-icon">📊</div>
+            <div class="challenge-info">
+              <div class="challenge-title">Draw a Flowchart</div>
+              <div class="challenge-desc">Create a flowchart for a login process</div>
+            </div>
+            <span class="challenge-xp">+100 XP</span>
+          </div>
+          
+          <div class="challenge-card">
+            <div class="challenge-icon">💡</div>
+            <div class="challenge-info">
+              <div class="challenge-title">Code Review Practice</div>
+              <div class="challenge-desc">Find 3 improvements in a sample function</div>
+            </div>
+            <span class="challenge-xp">+75 XP</span>
+          </div>
+        </section>
+        
+      </div>
+    </main>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  
+  <script>
+    // Course data
+    const COURSES = {
+      apprentice: {
+        name: "The Apprentice's Path",
+        icon: "🌟",
+        subtitle: "For Complete Beginners",
+        link: "../apprentice/ch1-stone/"
+      },
+      undergrad: {
+        name: "The Bridge to Industry",
+        icon: "🎓",
+        subtitle: "For CS Students",
+        link: "../undergrad/ch1-stone/"
+      },
+      junior: {
+        name: "The Junior Accelerator",
+        icon: "🚀",
+        subtitle: "For Junior Engineers",
+        link: "../junior/ch1-stone/"
+      },
+      senior: {
+        name: "The Senior Amplifier",
+        icon: "🎯",
+        subtitle: "For Mid-to-Senior Engineers",
+        link: "../senior/ch1-stone/"
+      }
+    };
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize Firebase
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        return;
+      }
+      
+      window.AuthService.init();
+      
+      // Check authentication
+      window.AuthService.onAuthStateChanged(async (user) => {
+        if (!user) {
+          // Not logged in, redirect to login
+          window.AuthService.setRedirectUrl(window.location.href);
+          window.location.href = '../auth/login.html';
+          return;
+        }
+        
+        // User is logged in, load dashboard
+        loadUserInfo(user);
+        await loadUserStats();
+        await loadEnrolledCourses();
+      });
+      
+      // Setup UI interactions
+      setupSidebar();
+      setupLogout();
+      
+      // Animate stats cards
+      anime({
+        targets: '.animate-in',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        delay: anime.stagger(100, { start: 200 }),
+        easing: 'easeOutCubic',
+        duration: 600
+      });
+    });
+    
+    // Load user info
+    function loadUserInfo(user) {
+      const displayName = user.displayName || user.email.split('@')[0];
+      
+      document.getElementById('user-name').textContent = displayName;
+      document.getElementById('welcome-name').textContent = displayName.split(' ')[0];
+      
+      const avatar = document.getElementById('user-avatar');
+      if (user.photoURL) {
+        avatar.innerHTML = `<img src="${user.photoURL}" alt="Avatar">`;
+      } else {
+        avatar.textContent = displayName.charAt(0).toUpperCase();
+      }
+    }
+    
+    // Load user stats
+    async function loadUserStats() {
+      try {
+        const stats = await window.DataService.getUserStats();
+        
+        if (stats) {
+          document.getElementById('stat-streak').textContent = stats.currentStreak || 0;
+          document.getElementById('user-streak').textContent = stats.currentStreak || 0;
+          document.getElementById('stat-courses').textContent = stats.enrolledCourses || 0;
+          document.getElementById('stat-lessons').textContent = stats.completedLessons || 0;
+          
+          // Format time
+          const hours = Math.floor((stats.totalTimeSpent || 0) / 3600);
+          const minutes = Math.floor(((stats.totalTimeSpent || 0) % 3600) / 60);
+          document.getElementById('stat-time').textContent = hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`;
+        }
+      } catch (error) {
+        console.error('Error loading stats:', error);
+      }
+    }
+    
+    // Load enrolled courses
+    async function loadEnrolledCourses() {
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        const grid = document.getElementById('courses-grid');
+        const emptyState = document.getElementById('empty-courses');
+        
+        if (courses.length === 0) {
+          emptyState.style.display = 'block';
+          return;
+        }
+        
+        emptyState.style.display = 'none';
+        grid.innerHTML = '';
+        
+        courses.forEach(course => {
+          const courseInfo = COURSES[course.courseId] || course;
+          const card = createCourseCard(course, courseInfo);
+          grid.appendChild(card);
+        });
+        
+        // Animate cards
+        anime({
+          targets: '.course-progress-card',
+          opacity: [0, 1],
+          translateY: [30, 0],
+          delay: anime.stagger(100),
+          easing: 'easeOutCubic',
+          duration: 600
+        });
+        
+      } catch (error) {
+        console.error('Error loading courses:', error);
+      }
+    }
+    
+    // Create course progress card
+    function createCourseCard(progress, courseInfo) {
+      const card = document.createElement('div');
+      card.className = `course-progress-card ${progress.courseId}`;
+      
+      const completedLessons = progress.completedLessons || 0;
+      const progressPercent = progress.progressPercent || 0;
+      
+      // Find next lesson
+      let nextLesson = 1;
+      if (progress.lessons) {
+        for (let i = 1; i <= 6; i++) {
+          if (!progress.lessons[`ch${i}`]?.completed) {
+            nextLesson = i;
+            break;
+          }
+        }
+      }
+      
+      const chapterNames = ['Stone', 'Lightning', 'Magnetism', 'Architect', 'Capstone I', 'Capstone II'];
+      const nextChapterLink = getChapterLink(progress.courseId, nextLesson);
+      
+      card.innerHTML = `
+        <div class="course-banner"></div>
+        <div class="course-content">
+          <div class="course-header">
+            <div class="course-icon">${courseInfo.icon}</div>
+            <div class="course-meta">
+              <div class="course-name">${courseInfo.name}</div>
+              <div class="course-subtitle">${courseInfo.subtitle}</div>
+            </div>
+          </div>
+          
+          <div class="progress-section">
+            <div class="progress-header">
+              <span class="progress-label">${completedLessons}/6 Chapters Complete</span>
+              <span class="progress-percent">${progressPercent}%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
+          
+          <div class="course-stats">
+            <div class="course-stat">
+              <div class="course-stat-value">${completedLessons}</div>
+              <div class="course-stat-label">Completed</div>
+            </div>
+            <div class="course-stat">
+              <div class="course-stat-value">${6 - completedLessons}</div>
+              <div class="course-stat-label">Remaining</div>
+            </div>
+            <div class="course-stat">
+              <div class="course-stat-value">${formatTime(progress.totalTimeSpent || 0)}</div>
+              <div class="course-stat-label">Time Spent</div>
+            </div>
+          </div>
+          
+          <a href="${nextChapterLink}" class="course-action">
+            ${completedLessons === 6 ? 'Review Course' : `Continue: ${chapterNames[nextLesson - 1]} →`}
+          </a>
+        </div>
+      `;
+      
+      return card;
+    }
+    
+    // Get chapter link
+    function getChapterLink(courseId, chapter) {
+      const chapterFolders = ['ch1-stone', 'ch2-lightning', 'ch3-magnetism', 'ch4-architect', 'ch5-capstone1', 'ch6-capstone2'];
+      return `../${courseId}/${chapterFolders[chapter - 1]}/`;
+    }
+    
+    // Format time
+    function formatTime(seconds) {
+      if (seconds < 60) return '< 1m';
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      if (hours > 0) return `${hours}h`;
+      return `${minutes}m`;
+    }
+    
+    // Setup sidebar
+    function setupSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.getElementById('sidebar-toggle');
+      const overlay = document.getElementById('sidebar-overlay');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      
+      // Desktop toggle
+      toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      // Restore sidebar state
+      if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+      }
+      
+      // Mobile menu
+      mobileBtn.addEventListener('click', () => {
+        sidebar.classList.add('open');
+      });
+      
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+      });
+    }
+    
+    // Setup logout
+    function setupLogout() {
+      document.getElementById('logout-link').addEventListener('click', async (e) => {
+        e.preventDefault();
+        await window.AuthService.logout();
+        window.location.href = '../index.html';
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -10,6 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
   <style>
     :root {
       --bg-primary: #0a0a0f;
@@ -57,10 +62,95 @@
       padding: 2rem;
     }
     
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    
+    .nav-logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--accent-magnetism), var(--accent-architect));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    
+    .nav-auth {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .nav-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    
+    .nav-btn.login {
+      color: var(--text-secondary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-btn.login:hover {
+      color: var(--text-primary);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-btn.register {
+      background: linear-gradient(135deg, var(--accent-magnetism), var(--accent-architect));
+      color: white;
+    }
+    
+    .nav-btn.register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(121, 134, 203, 0.4);
+    }
+    
+    .nav-btn.dashboard {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-btn.dashboard:hover {
+      background: var(--bg-card);
+    }
+    
     /* Hero */
     .hero {
       text-align: center;
-      padding: 6rem 2rem 4rem;
+      padding: 4rem 2rem 4rem;
       background: 
         radial-gradient(ellipse at 20% 50%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 50%, rgba(77, 182, 172, 0.1) 0%, transparent 50%),
@@ -371,6 +461,18 @@
 </head>
 <body>
   
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">🏛️</div>
+      <span class="nav-logo-text">AutoNateAI</span>
+    </a>
+    <div class="nav-auth" id="nav-auth">
+      <a href="auth/login.html" class="nav-btn login">Sign In</a>
+      <a href="auth/register.html" class="nav-btn register">Get Started</a>
+    </div>
+  </nav>
+  
   <header class="hero">
     <h1>AutoNateAI Learning Hub</h1>
     <p>
@@ -403,7 +505,7 @@
     
     <div class="courses-grid">
       
-      <a href="apprentice/ch1-stone/index.html" class="course-card apprentice">
+      <a href="course/apprentice.html" class="course-card apprentice">
         <div class="course-icon">🌟</div>
         <h3>The Apprentice's Path</h3>
         <div class="course-audience">For Complete Beginners</div>
@@ -418,7 +520,7 @@
         </div>
       </a>
       
-      <a href="undergrad/ch1-stone/index.html" class="course-card undergrad">
+      <a href="course/undergrad.html" class="course-card undergrad">
         <div class="course-icon">🎓</div>
         <h3>The Bridge to Industry</h3>
         <div class="course-audience">For CS Students</div>
@@ -433,7 +535,7 @@
         </div>
       </a>
       
-      <a href="junior/ch1-stone/index.html" class="course-card junior">
+      <a href="course/junior.html" class="course-card junior">
         <div class="course-icon">🚀</div>
         <h3>The Junior Accelerator</h3>
         <div class="course-audience">For Junior Engineers</div>
@@ -448,7 +550,7 @@
         </div>
       </a>
       
-      <a href="senior/ch1-stone/index.html" class="course-card senior">
+      <a href="course/senior.html" class="course-card senior">
         <div class="course-icon">🎯</div>
         <h3>The Senior Amplifier</h3>
         <div class="course-audience">For Mid-to-Senior Engineers</div>
@@ -542,7 +644,36 @@
     </p>
   </footer>
   
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+  
   <script>
+    // Initialize Firebase and auth
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.FirebaseApp.init()) {
+        window.AuthService.init();
+        
+        // Update nav based on auth state
+        window.AuthService.onAuthStateChanged((user) => {
+          const navAuth = document.getElementById('nav-auth');
+          if (user) {
+            const displayName = user.displayName || user.email.split('@')[0];
+            navAuth.innerHTML = `
+              <a href="dashboard/index.html" class="nav-btn dashboard">
+                <span>👤</span>
+                ${displayName.split(' ')[0]}
+              </a>
+            `;
+          } else {
+            navAuth.innerHTML = `
+              <a href="auth/login.html" class="nav-btn login">Sign In</a>
+              <a href="auth/register.html" class="nav-btn register">Get Started</a>
+            `;
+          }
+        });
+      }
+    });
+    
     // Animate cards on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {

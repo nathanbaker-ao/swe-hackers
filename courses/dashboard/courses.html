@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Library | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  
+  <style>
+    .course-library-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .library-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .library-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    
+    .library-card.enrolled {
+      border-color: var(--accent-primary);
+    }
+    
+    .card-banner {
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    }
+    
+    .card-banner.apprentice { background: linear-gradient(135deg, #ab47bc, #7986cb); }
+    .card-banner.undergrad { background: linear-gradient(135deg, #7986cb, #4db6ac); }
+    .card-banner.junior { background: linear-gradient(135deg, #ffd54f, #ff7043); }
+    .card-banner.senior { background: linear-gradient(135deg, #4db6ac, #26a69a); }
+    
+    .card-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      z-index: 1;
+    }
+    
+    .enrolled-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--accent-success);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    .card-audience {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(121, 134, 203, 0.15);
+      color: var(--accent-primary);
+      font-size: 0.75rem;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+    }
+    
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .card-description {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    
+    .card-meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    
+    .card-chapters {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .chapter-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bg-tertiary);
+    }
+    
+    .chapter-dot.completed {
+      background: var(--accent-success);
+    }
+    
+    .chapter-dot.current {
+      background: var(--accent-primary);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+    
+    .card-action {
+      display: block;
+      width: 100%;
+      padding: 0.875rem;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+    }
+    
+    .card-action.enroll {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+    }
+    
+    .card-action.continue {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .card-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+    
+    @media (max-width: 480px) {
+      .course-library-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  
+  <div class="dashboard">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="sidebar-logo">
+        <div class="logo-icon">🏛️</div>
+        <span class="logo-text">AutoNateAI</span>
+      </a>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Main</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link active">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Course Library</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenges.html" class="nav-link">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Daily Challenges</span>
+                <span class="nav-badge">3</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Learning</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-text">Achievements</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="notes.html" class="nav-link">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Community</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
+                <span class="nav-icon">💬</span>
+                <span class="nav-text">Discord</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leaderboard.html" class="nav-link">
+                <span class="nav-icon">🏅</span>
+                <span class="nav-text">Leaderboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Account</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="settings.html" class="nav-link">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="logout-link">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-card" id="user-card">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-streak">
+              <span>🔥</span>
+              <span id="user-streak">0</span> day streak
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="sidebar-toggle" id="sidebar-toggle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+    </aside>
+    
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h1 class="page-title">Course Library</h1>
+        </div>
+        
+        <div class="header-right">
+          <div class="header-search">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+            <input type="text" class="search-input" placeholder="Search courses..." id="search-input">
+          </div>
+        </div>
+      </header>
+      
+      <!-- Content -->
+      <div class="content-area">
+        
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+          Choose your path and master the Three Forces of software architecture: Stone, Lightning, and Magnetism.
+        </p>
+        
+        <!-- Filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All Courses</button>
+          <button class="filter-btn" data-filter="enrolled">My Courses</button>
+          <button class="filter-btn" data-filter="beginner">Beginner</button>
+          <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+          <button class="filter-btn" data-filter="advanced">Advanced</button>
+        </div>
+        
+        <!-- Course Grid -->
+        <div class="course-library-grid" id="course-grid">
+          <!-- Courses loaded dynamically -->
+        </div>
+        
+      </div>
+    </main>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  
+  <script>
+    // Course catalog
+    const COURSES = [
+      {
+        id: 'apprentice',
+        name: "The Apprentice's Path",
+        icon: "🌟",
+        audience: "For Complete Beginners",
+        level: "beginner",
+        description: "Start your coding journey from scratch. Learn Python fundamentals through adventure and discovery. Perfect for students or career changers with no prior experience.",
+        duration: "6 weeks",
+        chapters: 6,
+        projects: 6
+      },
+      {
+        id: 'undergrad',
+        name: "The Bridge to Industry",
+        icon: "🎓",
+        audience: "For CS Students",
+        level: "intermediate",
+        description: "Bridge the gap between academic theory and industry practice. Prepare for interviews, internships, and your first engineering role with real-world projects.",
+        duration: "6 weeks",
+        chapters: 6,
+        projects: 6
+      },
+      {
+        id: 'junior',
+        name: "The Junior Accelerator",
+        icon: "🚀",
+        audience: "For Junior Engineers",
+        level: "intermediate",
+        description: "Skip years of slow progression. Fast-track from junior to mid/senior level in 1-2 years by leveraging AI and systems thinking.",
+        duration: "6 weeks",
+        chapters: 6,
+        projects: 6
+      },
+      {
+        id: 'senior',
+        name: "The Senior Amplifier",
+        icon: "🎯",
+        audience: "For Mid-to-Senior Engineers",
+        level: "advanced",
+        description: "Multiply your impact with AI. Take on bigger projects, lead initiatives, and future-proof your career as an amplified engineer.",
+        duration: "6 weeks",
+        chapters: 6,
+        projects: 6
+      }
+    ];
+    
+    let enrolledCourses = {};
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        return;
+      }
+      
+      window.AuthService.init();
+      
+      window.AuthService.onAuthStateChanged(async (user) => {
+        if (!user) {
+          window.AuthService.setRedirectUrl(window.location.href);
+          window.location.href = '../auth/login.html';
+          return;
+        }
+        
+        loadUserInfo(user);
+        await loadEnrollmentStatus();
+        renderCourses();
+      });
+      
+      setupSidebar();
+      setupFilters();
+      setupLogout();
+    });
+    
+    // Load user info
+    function loadUserInfo(user) {
+      const displayName = user.displayName || user.email.split('@')[0];
+      document.getElementById('user-name').textContent = displayName;
+      
+      const avatar = document.getElementById('user-avatar');
+      if (user.photoURL) {
+        avatar.innerHTML = `<img src="${user.photoURL}" alt="Avatar">`;
+      } else {
+        avatar.textContent = displayName.charAt(0).toUpperCase();
+      }
+    }
+    
+    // Load enrollment status
+    async function loadEnrollmentStatus() {
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        courses.forEach(course => {
+          enrolledCourses[course.courseId] = course;
+        });
+      } catch (error) {
+        console.error('Error loading enrollment status:', error);
+      }
+    }
+    
+    // Render courses
+    function renderCourses(filter = 'all') {
+      const grid = document.getElementById('course-grid');
+      grid.innerHTML = '';
+      
+      const filteredCourses = COURSES.filter(course => {
+        if (filter === 'all') return true;
+        if (filter === 'enrolled') return enrolledCourses[course.id];
+        return course.level === filter;
+      });
+      
+      filteredCourses.forEach((course, index) => {
+        const card = createCourseCard(course);
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        grid.appendChild(card);
+      });
+      
+      // Animate in
+      anime({
+        targets: '.library-card',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        delay: anime.stagger(100),
+        easing: 'easeOutCubic',
+        duration: 600
+      });
+    }
+    
+    // Create course card
+    function createCourseCard(course) {
+      const isEnrolled = enrolledCourses[course.id];
+      const progress = isEnrolled || {};
+      
+      const card = document.createElement('div');
+      card.className = `library-card ${isEnrolled ? 'enrolled' : ''}`;
+      card.dataset.level = course.level;
+      
+      // Build chapter dots
+      let chapterDots = '';
+      for (let i = 1; i <= 6; i++) {
+        const completed = progress.lessons?.[`ch${i}`]?.completed;
+        const isCurrent = !completed && (i === 1 || progress.lessons?.[`ch${i-1}`]?.completed);
+        chapterDots += `<div class="chapter-dot ${completed ? 'completed' : ''} ${isCurrent ? 'current' : ''}"></div>`;
+      }
+      
+      card.innerHTML = `
+        <div class="card-banner ${course.id}">
+          <div class="card-icon">${course.icon}</div>
+          ${isEnrolled ? '<span class="enrolled-badge">Enrolled</span>' : ''}
+        </div>
+        <div class="card-body">
+          <span class="card-audience">${course.audience}</span>
+          <h3 class="card-title">${course.name}</h3>
+          <p class="card-description">${course.description}</p>
+          
+          <div class="card-meta">
+            <span class="meta-item">📅 ${course.duration}</span>
+            <span class="meta-item">📖 ${course.chapters} chapters</span>
+            <span class="meta-item">🔨 ${course.projects} projects</span>
+          </div>
+          
+          ${isEnrolled ? `
+            <div class="card-chapters">
+              ${chapterDots}
+            </div>
+          ` : ''}
+          
+          <a href="../course/${course.id}.html" class="card-action ${isEnrolled ? 'continue' : 'enroll'}">
+            ${isEnrolled ? 'Continue Learning →' : 'View Course Details'}
+          </a>
+        </div>
+      `;
+      
+      return card;
+    }
+    
+    // Setup filters
+    function setupFilters() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderCourses(btn.dataset.filter);
+        });
+      });
+      
+      // Search
+      const searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.library-card');
+        
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+    }
+    
+    // Setup sidebar
+    function setupSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.getElementById('sidebar-toggle');
+      const overlay = document.getElementById('sidebar-overlay');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      
+      toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+      }
+      
+      mobileBtn.addEventListener('click', () => {
+        sidebar.classList.add('open');
+      });
+      
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+      });
+    }
+    
+    // Setup logout
+    function setupLogout() {
+      document.getElementById('logout-link').addEventListener('click', async (e) => {
+        e.preventDefault();
+        await window.AuthService.logout();
+        window.location.href = '../index.html';
+      });
+    }
+  </script>
+</body>
+</html>
+

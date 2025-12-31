@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Apprentice's Path | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/course-detail.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  
+  <!-- Hero Section -->
+  <section class="course-hero apprentice">
+    <div class="hero-content">
+      
+      <nav class="hero-nav">
+        <a href="../index.html" class="back-link">
+          ← Back to Courses
+        </a>
+        <div class="auth-buttons" id="auth-buttons">
+          <a href="../auth/login.html" class="auth-btn login">Sign In</a>
+          <a href="../auth/register.html" class="auth-btn register">Get Started</a>
+        </div>
+      </nav>
+      
+      <div class="hero-main">
+        <div class="hero-text">
+          <span class="course-badge">For Complete Beginners</span>
+          <span class="course-icon-large">🌟</span>
+          <h1 class="course-title">The Apprentice's Path</h1>
+          <p class="course-tagline">
+            Begin your journey into the world of code. Learn Python fundamentals through 
+            adventure, discover the Three Forces that power all software, and build your 
+            first real projects.
+          </p>
+          
+          <div class="course-meta-row">
+            <span class="meta-item">
+              <span class="icon">📅</span> 6 weeks
+            </span>
+            <span class="meta-item">
+              <span class="icon">📖</span> 6 chapters
+            </span>
+            <span class="meta-item">
+              <span class="icon">🔨</span> 6 projects
+            </span>
+            <span class="meta-item">
+              <span class="icon">🐍</span> Python
+            </span>
+          </div>
+          
+          <div class="three-forces-preview">
+            <div class="force-preview">
+              <div class="icon">🪨</div>
+              <div class="name">Stone</div>
+              <div class="desc">Memory & Data</div>
+            </div>
+            <div class="force-preview">
+              <div class="icon">⚡</div>
+              <div class="name">Lightning</div>
+              <div class="desc">Flow & Logic</div>
+            </div>
+            <div class="force-preview">
+              <div class="icon">🧲</div>
+              <div class="name">Magnetism</div>
+              <div class="desc">Connection</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="enrollment-card">
+          <div class="enrollment-price">
+            <div class="price-tag">Free</div>
+            <div class="price-note">Start learning today</div>
+          </div>
+          
+          <button class="enroll-btn" id="enroll-btn">
+            Start Learning →
+          </button>
+          
+          <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+            Join 500+ learners on this path
+          </p>
+          
+          <ul class="enrollment-features">
+            <li><span class="check">✓</span> 6 interactive chapters</li>
+            <li><span class="check">✓</span> Hands-on Python projects</li>
+            <li><span class="check">✓</span> Mermaid diagram exercises</li>
+            <li><span class="check">✓</span> Progress tracking</li>
+            <li><span class="check">✓</span> Discord community access</li>
+            <li><span class="check">✓</span> Certificate on completion</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- Course Content -->
+  <div class="course-content">
+    
+    <!-- What You'll Learn -->
+    <section class="content-section">
+      <h2 class="section-title">What You'll Learn</h2>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <div class="icon">🧠</div>
+          <div>
+            <h4>Variables & Memory</h4>
+            <p>Understand how computers store and remember information</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🔀</div>
+          <div>
+            <h4>Control Flow</h4>
+            <p>Make decisions with if/else and repeat with loops</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">📦</div>
+          <div>
+            <h4>Functions</h4>
+            <p>Create reusable blocks of code that do specific tasks</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">📊</div>
+          <div>
+            <h4>Data Structures</h4>
+            <p>Work with lists, dictionaries, and collections</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">📐</div>
+          <div>
+            <h4>System Thinking</h4>
+            <p>Learn to design solutions before writing code</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🤖</div>
+          <div>
+            <h4>AI Basics</h4>
+            <p>Build your first AI-powered project using APIs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Curriculum -->
+    <section class="content-section">
+      <h2 class="section-title">Curriculum</h2>
+      <div class="curriculum-list">
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">1</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🪨 The Force of Stone</div>
+              <div class="chapter-subtitle">Memory, Variables & Data</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 1 hour</span>
+              <span>🔨 Secret Encoder</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>What is a variable? (Memory boxes)</li>
+              <li>Numbers, strings, and booleans</li>
+              <li>Naming things that matter</li>
+              <li>User input and output</li>
+              <li>Project: Build a Secret Encoder</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">2</div>
+            <div class="chapter-info">
+              <div class="chapter-title">⚡ The Force of Lightning</div>
+              <div class="chapter-subtitle">Flow & Decision Making</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 1 hour</span>
+              <span>🔨 Number Guesser</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Making decisions with if/elif/else</li>
+              <li>Comparison operators</li>
+              <li>Loops: for and while</li>
+              <li>Breaking and continuing</li>
+              <li>Project: Build a Number Guessing Game</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">3</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🧲 The Force of Magnetism</div>
+              <div class="chapter-subtitle">Functions & Connection</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 1 hour</span>
+              <span>🔨 Quiz Game</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>What is a function?</li>
+              <li>Parameters and arguments</li>
+              <li>Return values</li>
+              <li>Connecting functions together</li>
+              <li>Project: Build a Quiz Game</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">4</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🏛️ The Age of Architects</div>
+              <div class="chapter-subtitle">Thinking in Systems</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 1 hour</span>
+              <span>🔨 System Canvas</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>From coder to architect</li>
+              <li>Introduction to diagrams</li>
+              <li>Flowcharts for thinking</li>
+              <li>Using AI as your building partner</li>
+              <li>Project: Design & Build with AI</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">5</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🗺️ Capstone I: The Adventure Game</div>
+              <div class="chapter-subtitle">Your First Complete Application</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 2 hours</span>
+              <span>🔨 Text Adventure</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Designing your game world</li>
+              <li>Combining all three forces</li>
+              <li>State management</li>
+              <li>User experience design</li>
+              <li>Project: Build a Text Adventure Game</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">6</div>
+            <div class="chapter-info">
+              <div class="chapter-title">🌟 Capstone II: The AI Helper</div>
+              <div class="chapter-subtitle">Building with Intelligence</div>
+            </div>
+            <div class="chapter-meta">
+              <span>📖 2 hours</span>
+              <span>🔨 AI Assistant</span>
+            </div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>Introduction to APIs</li>
+              <li>Working with AI services</li>
+              <li>Prompt engineering basics</li>
+              <li>Building conversational apps</li>
+              <li>Project: Build Your AI Assistant</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- Perfect For -->
+    <section class="content-section">
+      <h2 class="section-title">This Course Is Perfect For</h2>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <div class="icon">🎒</div>
+          <div>
+            <h4>Students</h4>
+            <p>6th grade and up, no prior coding experience needed</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🔄</div>
+          <div>
+            <h4>Career Changers</h4>
+            <p>Looking to break into tech from another field</p>
+          </div>
+        </div>
+        <div class="learn-item">
+          <div class="icon">🌱</div>
+          <div>
+            <h4>Curious Minds</h4>
+            <p>Anyone who wants to understand how software works</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="content-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do I need any prior coding experience?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Not at all! This course is designed for complete beginners. We start from 
+            the very basics and build up your knowledge step by step.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What do I need to get started?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Just a computer with internet access! We'll guide you through setting up 
+            Python and any other tools you need. Works on Windows, Mac, or Linux.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How long does the course take?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            The course is designed for 6 weeks at a comfortable pace (about 3-5 hours 
+            per week). However, you can go faster or slower based on your schedule.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Will I get help if I'm stuck?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Absolutely! You'll have access to our Discord community where you can ask 
+            questions, share your progress, and get help from mentors and fellow learners.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Is this really free?</span>
+            <span class="toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes! The Apprentice's Path is completely free. We believe everyone should 
+            have access to quality coding education. Join our community and start learning today.
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+  </div>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Begin Your Journey?</h2>
+    <p class="cta-subtitle">
+      Join hundreds of learners who have started their path to becoming software architects.
+      No experience required, just curiosity and determination.
+    </p>
+    <a href="#" class="cta-btn" id="cta-enroll-btn">
+      Start Learning Free →
+    </a>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="course-footer">
+    <p>Built with 🧠 by <a href="https://github.com/nathanbaker-ao" target="_blank">Nathan Baker</a> • AutoNateAI</p>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  
+  <script>
+    const COURSE_ID = 'apprentice';
+    const COURSE_DATA = {
+      name: "The Apprentice's Path",
+      icon: "🌟",
+      subtitle: "For Complete Beginners"
+    };
+    
+    // Toggle chapter accordion
+    function toggleChapter(header) {
+      const item = header.closest('.chapter-item');
+      item.classList.toggle('open');
+    }
+    
+    // Toggle FAQ accordion
+    function toggleFaq(question) {
+      const item = question.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        return;
+      }
+      
+      window.AuthService.init();
+      
+      // Check auth state
+      window.AuthService.onAuthStateChanged(async (user) => {
+        updateAuthUI(user);
+        
+        if (user) {
+          await checkEnrollmentStatus();
+        }
+      });
+      
+      // Enroll button handlers
+      document.getElementById('enroll-btn').addEventListener('click', handleEnroll);
+      document.getElementById('cta-enroll-btn').addEventListener('click', handleEnroll);
+      
+      // Animate elements
+      animateOnScroll();
+    });
+    
+    // Update auth UI
+    function updateAuthUI(user) {
+      const authButtons = document.getElementById('auth-buttons');
+      
+      if (user) {
+        authButtons.innerHTML = `
+          <a href="../dashboard/index.html" class="auth-btn register">My Dashboard</a>
+        `;
+      }
+    }
+    
+    // Check enrollment status
+    async function checkEnrollmentStatus() {
+      try {
+        const progress = await window.DataService.getCourseProgress(COURSE_ID);
+        
+        if (progress) {
+          // User is enrolled, update button
+          const enrollBtn = document.getElementById('enroll-btn');
+          const ctaBtn = document.getElementById('cta-enroll-btn');
+          
+          enrollBtn.textContent = 'Continue Learning →';
+          ctaBtn.textContent = 'Continue Learning →';
+        }
+      } catch (error) {
+        console.error('Error checking enrollment:', error);
+      }
+    }
+    
+    // Handle enrollment
+    async function handleEnroll(e) {
+      e.preventDefault();
+      
+      const user = window.AuthService.getUser();
+      
+      if (!user) {
+        // Not logged in, redirect to register with return URL
+        window.AuthService.setRedirectUrl(`../course/${COURSE_ID}.html`);
+        window.location.href = '../auth/register.html';
+        return;
+      }
+      
+      // Check if already enrolled
+      const progress = await window.DataService.getCourseProgress(COURSE_ID);
+      
+      if (progress) {
+        // Already enrolled, go to course
+        window.location.href = `../${COURSE_ID}/ch1-stone/`;
+        return;
+      }
+      
+      // Enroll user
+      const btn = e.target;
+      btn.disabled = true;
+      btn.textContent = 'Enrolling...';
+      
+      const result = await window.DataService.enrollInCourse(COURSE_ID, COURSE_DATA);
+      
+      if (result.success) {
+        // Redirect to first lesson
+        window.location.href = `../${COURSE_ID}/ch1-stone/`;
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Start Learning →';
+        alert('Failed to enroll. Please try again.');
+      }
+    }
+    
+    // Animate elements on scroll
+    function animateOnScroll() {
+      anime({
+        targets: '.hero-text > *',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(100, { start: 200 }),
+        easing: 'easeOutCubic',
+        duration: 800
+      });
+      
+      anime({
+        targets: '.enrollment-card',
+        opacity: [0, 1],
+        translateX: [30, 0],
+        delay: 500,
+        easing: 'easeOutCubic',
+        duration: 800
+      });
+      
+      // Observe sections
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: entry.target.querySelectorAll('.learn-item, .chapter-item, .faq-item'),
+              opacity: [0, 1],
+              translateY: [20, 0],
+              delay: anime.stagger(80),
+              easing: 'easeOutCubic',
+              duration: 600
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.opacity = 0;
+        section.querySelectorAll('.learn-item, .chapter-item, .faq-item').forEach(item => {
+          item.style.opacity = 0;
+        });
+        section.style.opacity = 1;
+        observer.observe(section);
+      });
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/auth.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <div class="auth-page">
+    
+    <!-- Animated Background -->
+    <div class="auth-background">
+      <div class="bg-gradient bg-gradient-1"></div>
+      <div class="bg-gradient bg-gradient-2"></div>
+      <div class="bg-gradient bg-gradient-3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    
+    <!-- Auth Container -->
+    <div class="auth-container">
+      <div class="auth-card">
+        
+        <!-- Header -->
+        <header class="auth-header">
+          <a href="../index.html" class="auth-logo">
+            <div class="logo-icon">🏛️</div>
+            <span class="logo-text">AutoNateAI</span>
+          </a>
+          
+          <div class="three-forces-mini">
+            <div class="force-mini">
+              <div class="force-mini-icon">🪨</div>
+              <div>Stone</div>
+            </div>
+            <div class="force-mini">
+              <div class="force-mini-icon">⚡</div>
+              <div>Lightning</div>
+            </div>
+            <div class="force-mini">
+              <div class="force-mini-icon">🧲</div>
+              <div>Magnetism</div>
+            </div>
+          </div>
+          
+          <h1 class="auth-title">Welcome Back</h1>
+          <p class="auth-subtitle">Continue your journey as an architect</p>
+        </header>
+        
+        <!-- Error Message -->
+        <div class="form-error hidden" id="error-message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span id="error-text">Error message here</span>
+        </div>
+        
+        <!-- Login Form -->
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="form-input" 
+              placeholder="your.email@example.com"
+              required
+              autocomplete="email"
+            >
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="password-wrapper">
+              <input 
+                type="password" 
+                id="password" 
+                class="form-input" 
+                placeholder="Enter your password"
+                required
+                autocomplete="current-password"
+              >
+              <button type="button" class="password-toggle" id="toggle-password" aria-label="Toggle password visibility">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eye-icon">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <a href="#" class="forgot-password" id="forgot-password-link">Forgot password?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="login-btn">
+            Sign In
+          </button>
+        </form>
+        
+        <div class="auth-divider">or continue with</div>
+        
+        <!-- Google Sign-In -->
+        <button type="button" class="btn btn-google" id="google-btn" style="width: 100%;">
+          <svg viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          Sign in with Google
+        </button>
+        
+        <p class="auth-links">
+          Don't have an account? <a href="register.html">Create one</a>
+        </p>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  
+  <script>
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Create particles
+      createParticles();
+      
+      // Initialize Firebase
+      if (window.FirebaseApp.init()) {
+        window.AuthService.init();
+        
+        // Check if already logged in
+        window.AuthService.onAuthStateChanged((user) => {
+          if (user) {
+            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/index.html';
+            window.location.href = redirect;
+          }
+        });
+      }
+      
+      // Animate form elements
+      animateFormElements();
+    });
+    
+    // Create floating particles
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 15) + 's';
+        container.appendChild(particle);
+      }
+    }
+    
+    // Animate form elements with anime.js
+    function animateFormElements() {
+      anime({
+        targets: '.auth-card .form-group, .auth-card .btn, .auth-card .auth-divider, .auth-card .auth-links',
+        translateY: [20, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(100, { start: 300 }),
+        easing: 'easeOutCubic',
+        duration: 600
+      });
+    }
+    
+    // Form handling
+    const loginForm = document.getElementById('login-form');
+    const loginBtn = document.getElementById('login-btn');
+    const googleBtn = document.getElementById('google-btn');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+    
+    // Show error
+    function showError(message) {
+      errorText.textContent = message;
+      errorMessage.classList.remove('hidden');
+      anime({
+        targets: errorMessage,
+        translateX: [10, -10, 5, -5, 0],
+        duration: 400,
+        easing: 'easeOutCubic'
+      });
+    }
+    
+    // Hide error
+    function hideError() {
+      errorMessage.classList.add('hidden');
+    }
+    
+    // Login form submit
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideError();
+      
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      loginBtn.classList.add('loading');
+      loginBtn.disabled = true;
+      
+      const result = await window.AuthService.loginWithEmail(email, password);
+      
+      loginBtn.classList.remove('loading');
+      loginBtn.disabled = false;
+      
+      if (!result.success) {
+        showError(result.error);
+      }
+      // Success is handled by auth state listener
+    });
+    
+    // Google sign-in
+    googleBtn.addEventListener('click', async () => {
+      hideError();
+      googleBtn.classList.add('loading');
+      googleBtn.disabled = true;
+      
+      const result = await window.AuthService.loginWithGoogle();
+      
+      googleBtn.classList.remove('loading');
+      googleBtn.disabled = false;
+      
+      if (!result.success) {
+        showError(result.error);
+      }
+    });
+    
+    // Password visibility toggle
+    const togglePassword = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password');
+    
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+      
+      const eyeIcon = document.getElementById('eye-icon');
+      if (type === 'text') {
+        eyeIcon.innerHTML = `
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+          <line x1="1" y1="1" x2="23" y2="23"></line>
+        `;
+      } else {
+        eyeIcon.innerHTML = `
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        `;
+      }
+    });
+    
+    // Forgot password
+    document.getElementById('forgot-password-link').addEventListener('click', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      
+      if (!email) {
+        showError('Please enter your email address first');
+        return;
+      }
+      
+      const result = await window.AuthService.resetPassword(email);
+      
+      if (result.success) {
+        anime({
+          targets: '.auth-card',
+          scale: [1, 0.95, 1],
+          duration: 400
+        });
+        alert('Password reset email sent! Check your inbox.');
+      } else {
+        showError(result.error);
+      }
+    });
+  </script>
+</body>
+</html>
+
