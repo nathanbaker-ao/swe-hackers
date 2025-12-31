@@ -8,6 +8,7 @@ const AuthService = {
   currentUser: null,
   authStateListeners: [],
   redirectAfterLogin: null,
+  authStateResolved: false, // Track if we've received the first auth state
 
   /**
    * Initialize auth service and set up auth state listener
@@ -22,6 +23,7 @@ const AuthService = {
     // Listen for auth state changes
     auth.onAuthStateChanged((user) => {
       this.currentUser = user;
+      this.authStateResolved = true;
       this.notifyListeners(user);
       
       if (user) {
@@ -30,6 +32,39 @@ const AuthService = {
       } else {
         console.log('👤 User signed out');
       }
+    });
+  },
+
+  /**
+   * Wait for auth state to be resolved
+   * Returns a promise that resolves with the user (or null)
+   */
+  waitForAuthState() {
+    // If auth state is already resolved, return immediately
+    if (this.authStateResolved) {
+      return Promise.resolve(this.currentUser);
+    }
+    
+    // Otherwise wait for the first auth state change
+    return new Promise((resolve) => {
+      let resolved = false;
+      const checkAuth = (user) => {
+        if (!resolved) {
+          resolved = true;
+          resolve(user);
+        }
+      };
+      
+      // Add a one-time listener
+      this.authStateListeners.push(checkAuth);
+      
+      // Also set a timeout fallback
+      setTimeout(() => {
+        if (!resolved) {
+          resolved = true;
+          resolve(this.currentUser);
+        }
+      }, 2000);
     });
   },
 

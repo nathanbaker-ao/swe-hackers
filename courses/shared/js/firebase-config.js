@@ -1,6 +1,6 @@
 /**
  * Firebase Configuration for AutoNateAI Learning Hub
- * 
+ *
  * SETUP INSTRUCTIONS:
  * 1. Go to Firebase Console: https://console.firebase.google.com/
  * 2. Create a new project or use existing one
@@ -18,14 +18,14 @@ const firebaseConfig = {
   storageBucket: "autonateai-learning-hub.firebasestorage.app",
   messagingSenderId: "650162209338",
   appId: "1:650162209338:web:cb9626f2e6f9ac3eff6b03",
-  measurementId: "G-D7553DEM0Y"
+  measurementId: "G-D7553DEM0Y",
 };
 
 // Initialize Firebase
 let app, auth, db;
 
 function initFirebase() {
-  if (typeof firebase !== 'undefined') {
+  if (typeof firebase !== "undefined") {
     // Check if already initialized
     if (!firebase.apps.length) {
       app = firebase.initializeApp(firebaseConfig);
@@ -34,11 +34,11 @@ function initFirebase() {
     }
     auth = firebase.auth();
     db = firebase.firestore();
-    
-    console.log('🔥 Firebase initialized');
+
+    console.log("🔥 Firebase initialized");
     return true;
   } else {
-    console.warn('Firebase SDK not loaded');
+    console.warn("Firebase SDK not loaded");
     return false;
   }
 }
@@ -48,6 +48,5 @@ window.FirebaseApp = {
   init: initFirebase,
   getAuth: () => auth,
   getDb: () => db,
-  getApp: () => app
+  getApp: () => app,
 };
-

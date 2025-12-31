@@ -26,7 +26,54 @@
 </head>
 <body>
   
-  <div class="dashboard">
+  <!-- Loading Screen (shown while checking auth) -->
+  <div class="auth-loading" id="auth-loading">
+    <div class="loading-content">
+      <div class="loading-icon">🏛️</div>
+      <div class="loading-spinner"></div>
+      <p>Loading your dashboard...</p>
+    </div>
+  </div>
+  
+  <style>
+    .auth-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--bg-primary, #0a0a0f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .loading-content {
+      text-align: center;
+      color: #e8e8f0;
+    }
+    .loading-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(121, 134, 203, 0.3);
+      border-top-color: #7986cb;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .auth-loading.hidden {
+      display: none;
+    }
+  </style>
+  
+  <div class="dashboard" style="display: none;" id="dashboard-content">
     
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
@@ -323,28 +370,35 @@
     
     // Initialize
     document.addEventListener('DOMContentLoaded', async () => {
+      const loadingScreen = document.getElementById('auth-loading');
+      const dashboardContent = document.getElementById('dashboard-content');
+      
       // Initialize Firebase
       if (!window.FirebaseApp.init()) {
         console.error('Firebase initialization failed');
+        loadingScreen.innerHTML = '<div class="loading-content"><p>Error loading. Please refresh.</p></div>';
         return;
       }
       
       window.AuthService.init();
       
-      // Check authentication
-      window.AuthService.onAuthStateChanged(async (user) => {
-        if (!user) {
-          // Not logged in, redirect to login
-          window.AuthService.setRedirectUrl(window.location.href);
-          window.location.href = '../auth/login.html';
-          return;
-        }
-        
-        // User is logged in, load dashboard
-        loadUserInfo(user);
-        await loadUserStats();
-        await loadEnrolledCourses();
-      });
+      // Wait for auth state to be determined (handles session restoration)
+      const user = await window.AuthService.waitForAuthState();
+      
+      if (!user) {
+        // Not logged in, redirect to login
+        window.AuthService.setRedirectUrl(window.location.href);
+        window.location.href = '../auth/login.html';
+        return;
+      }
+      
+      // User is logged in, show dashboard
+      loadingScreen.classList.add('hidden');
+      dashboardContent.style.display = 'flex';
+      
+      loadUserInfo(user);
+      await loadUserStats();
+      await loadEnrolledCourses();
       
       // Setup UI interactions
       setupSidebar();
@@ -358,6 +412,13 @@
         delay: anime.stagger(100, { start: 200 }),
         easing: 'easeOutCubic',
         duration: 600
+      });
+      
+      // Listen for subsequent auth changes (logout, etc)
+      window.AuthService.onAuthStateChanged((user) => {
+        if (!user) {
+          window.location.href = '../auth/login.html';
+        }
       });
     });
     
