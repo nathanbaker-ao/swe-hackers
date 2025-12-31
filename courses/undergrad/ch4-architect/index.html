@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 4: The Age of Architects | AutoNateAI Bridge</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: var(--accent-architect);
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(77, 182, 172, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(0, 150, 136, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .story-block {
+        border-left-color: var(--accent-architect);
+      }
+
+      .framework-step {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-left: 4px solid var(--accent-architect);
+        counter-increment: step;
+        position: relative;
+      }
+
+      .framework-step::before {
+        content: counter(step);
+        position: absolute;
+        left: -2rem;
+        top: 1.5rem;
+        width: 36px;
+        height: 36px;
+        background: var(--accent-architect);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+
+      .framework-step h4 {
+        color: var(--accent-architect);
+        margin-bottom: 0.5rem;
+      }
+
+      .pattern-card {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .pattern-card h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .interview-challenge {
+        background: linear-gradient(135deg, rgba(77, 182, 172, 0.1), rgba(0, 150, 136, 0.05));
+        border: 1px solid rgba(77, 182, 172, 0.3);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .interview-challenge h4 {
+        color: var(--accent-architect);
+        margin-bottom: 1rem;
+      }
+
+      .estimate-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.875rem;
+      }
+
+      .estimate-table th,
+      .estimate-table td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .estimate-table th {
+        background: var(--bg-tertiary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="reality" title="Reality"></div>
+      <div class="progress-dot" data-section="framework" title="Framework"></div>
+      <div class="progress-dot" data-section="patterns" title="Patterns"></div>
+      <div class="progress-dot" data-section="example" title="Example"></div>
+      <div class="progress-dot" data-section="trial" title="Trial"></div>
+      <div class="progress-dot" data-section="project" title="Project"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Chapter 4 • Week 4</span>
+          <div class="hero-icon">🏛️</div>
+          <h1>The Age of Architects</h1>
+          <p class="hero-subtitle">
+            You've written code for four years. But can you <strong>design a system
+            from scratch</strong>? Can you draw the box diagram that a team will build?
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Think in systems</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- REALITY -->
+      <section class="section" data-section="reality">
+        <div class="section-content">
+          <h2 class="fade-in">💼 The Interview Truth</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              <strong>Every FAANG interview has a system design round.</strong> They
+              don't want to see you code — they want to see you <em>think</em>. Can
+              you design Twitter? Uber? A URL shortener? Most CS programs never teach this.
+            </p>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>🎯 What Interviewers Look For</h3>
+            <ul style="text-align: left; margin: 0;">
+              <li>Can you <strong>clarify requirements</strong> before diving in?</li>
+              <li>Do you <strong>estimate scale</strong> (users, data, requests)?</li>
+              <li>Can you draw a <strong>high-level architecture</strong>?</li>
+              <li>Can you <strong>deep dive</strong> into a critical component?</li>
+              <li>Do you identify <strong>bottlenecks and tradeoffs</strong>?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRAMEWORK -->
+      <section class="section" data-section="framework">
+        <div class="section-content">
+          <h2 class="fade-in">📋 The System Design Framework</h2>
+
+          <p class="fade-in">
+            When faced with any design problem, follow this framework:
+          </p>
+
+          <div style="counter-reset: step;">
+            <div class="framework-step fade-in" style="margin-left: 2rem;">
+              <h4>CLARIFY</h4>
+              <p>What are the requirements? What's the scale? What are the constraints?
+              <em>Never assume — always ask.</em></p>
+            </div>
+
+            <div class="framework-step fade-in" style="margin-left: 2rem;">
+              <h4>ESTIMATE</h4>
+              <p>How many users? How much data? What's the read/write ratio?
+              <em>Back-of-envelope math shows you can reason about scale.</em></p>
+            </div>
+
+            <div class="framework-step fade-in" style="margin-left: 2rem;">
+              <h4>DESIGN HIGH-LEVEL</h4>
+              <p>What are the major components? How do they communicate?
+              <em>Draw the boxes and arrows.</em></p>
+            </div>
+
+            <div class="framework-step fade-in" style="margin-left: 2rem;">
+              <h4>DEEP DIVE</h4>
+              <p>Pick a critical component. How exactly does it work?
+              <em>Show depth of knowledge.</em></p>
+            </div>
+
+            <div class="framework-step fade-in" style="margin-left: 2rem;">
+              <h4>IDENTIFY BOTTLENECKS</h4>
+              <p>Where will it break? How do you scale? What's the failure mode?
+              <em>Anticipate problems before they're asked.</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PATTERNS -->
+      <section class="section" data-section="patterns">
+        <div class="section-content">
+          <h2 class="fade-in">🧱 Common System Design Patterns</h2>
+
+          <div class="pattern-card fade-in">
+            <h4>⚖️ Load Balancing</h4>
+            <div class="mermaid">
+              flowchart TD
+                CLIENT[Clients] --> LB[Load Balancer]
+                LB --> S1[Server 1]
+                LB --> S2[Server 2]
+                LB --> S3[Server 3]
+
+                style LB fill:#4db6ac,color:#fff
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-muted);">
+              Distribute traffic across multiple servers. Round-robin, least connections,
+              or weighted algorithms.
+            </p>
+          </div>
+
+          <div class="pattern-card fade-in">
+            <h4>🗃️ Database Sharding</h4>
+            <div class="mermaid">
+              flowchart LR
+                HASH[Hash Function] --> |User 1-1M| SHARD_A[(Shard A)]
+                HASH --> |User 1M-2M| SHARD_B[(Shard B)]
+                HASH --> |User 2M-3M| SHARD_C[(Shard C)]
+
+                style HASH fill:#7986cb,color:#fff
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-muted);">
+              Split data across multiple databases. Scale horizontally beyond a single machine.
+            </p>
+          </div>
+
+          <div class="pattern-card fade-in">
+            <h4>📦 Caching Layer</h4>
+            <div class="mermaid">
+              flowchart LR
+                REQ[Request] --> CACHE{Cache Hit?}
+                CACHE -->|Yes| RETURN[Return Cached]
+                CACHE -->|No| DB[(Database)]
+                DB --> STORE[Store in Cache]
+                STORE --> RETURN
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-muted);">
+              Cache frequently accessed data. Cache-aside, write-through, or write-behind patterns.
+            </p>
+          </div>
+
+          <div class="pattern-card fade-in">
+            <h4>📨 Pub/Sub Messaging</h4>
+            <div class="mermaid">
+              flowchart LR
+                PUB[Publisher] --> TOPIC[(Topic)]
+                TOPIC --> SUB_A[Subscriber A]
+                TOPIC --> SUB_B[Subscriber B]
+                TOPIC --> SUB_C[Subscriber C]
+
+                style TOPIC fill:#ffd54f,color:#000
+            </div>
+            <p style="margin-top: 1rem; color: var(--text-muted);">
+              Decouple services. Publishers don't know about subscribers. Easy to add new consumers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXAMPLE -->
+      <section class="section" data-section="example">
+        <div class="section-content">
+          <h2 class="fade-in">🎯 Example: Design a URL Shortener</h2>
+
+          <div class="interview-challenge fade-in">
+            <h4>💼 Common Interview Question</h4>
+            <p>"Design a URL shortener like bit.ly"</p>
+          </div>
+
+          <h3 class="fade-in">Step 1: Clarify Requirements</h3>
+          <ul class="fade-in">
+            <li>How many URLs per day? → 100 million writes/day</li>
+            <li>How many redirects? → 10 billion reads/day (100:1 read/write)</li>
+            <li>How long to keep URLs? → Forever</li>
+            <li>Custom aliases? → Yes, optional</li>
+          </ul>
+
+          <h3 class="fade-in">Step 2: Estimate Scale</h3>
+          <table class="estimate-table fade-in">
+            <tr>
+              <th>Metric</th>
+              <th>Calculation</th>
+              <th>Result</th>
+            </tr>
+            <tr>
+              <td>URLs per second</td>
+              <td>100M / 86400</td>
+              <td>~1,200 writes/s</td>
+            </tr>
+            <tr>
+              <td>Redirects per second</td>
+              <td>10B / 86400</td>
+              <td>~120,000 reads/s</td>
+            </tr>
+            <tr>
+              <td>Storage (5 years)</td>
+              <td>100M × 365 × 5 × 500B</td>
+              <td>~90 TB</td>
+            </tr>
+          </table>
+
+          <h3 class="fade-in">Step 3: High-Level Design</h3>
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">URL Shortener Architecture</div>
+            <div class="mermaid">
+              flowchart TD
+                CLIENT[Client] --> LB[Load Balancer]
+                LB --> APP[Application Servers]
+                APP --> CACHE[(Redis Cache)]
+                APP --> DB[(Database)]
+                APP --> KEYGEN[Key Generator Service]
+
+                subgraph DATABASES
+                  DB --> DB_READ[(Read Replicas)]
+                end
+
+                style CACHE fill:#4db6ac,color:#fff
+                style KEYGEN fill:#ffd54f,color:#000
+            </div>
+          </div>
+
+          <h3 class="fade-in">Step 4: Deep Dive - Key Generation</h3>
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Key Generation Strategy</span>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># Base62 encoding: [a-zA-Z0-9]</span>
+<span class="comment"># 7 characters = 62^7 = 3.5 trillion unique URLs</span>
+
+<span class="comment"># Option 1: Counter-based (requires coordination)</span>
+<span class="variable">counter</span> = get_next_from_sequence()  <span class="comment"># 1, 2, 3...</span>
+<span class="variable">short_key</span> = base62_encode(counter)   <span class="comment"># "abc123z"</span>
+
+<span class="comment"># Option 2: Random generation (risk of collision)</span>
+<span class="variable">short_key</span> = random_base62(<span class="number">7</span>)
+<span class="keyword">while</span> exists_in_db(short_key):
+    short_key = random_base62(<span class="number">7</span>)
+
+<span class="comment"># Option 3: Pre-generated key pool (scalable)</span>
+<span class="variable">short_key</span> = key_generation_service.get_key()  <span class="comment"># From pre-generated pool</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRIAL -->
+      <section class="section" data-section="trial">
+        <div class="section-content">
+          <h2 class="fade-in">📝 The Trial</h2>
+
+          <div class="quiz-container fade-in" data-answer="B">
+            <div class="quiz-header">
+              <span class="quiz-icon">💼</span>
+              <h3 class="quiz-title">Interview Question</h3>
+            </div>
+
+            <p class="quiz-question">
+              You're designing Twitter's home feed. Users follow many people,
+              celebrities have millions of followers. What's the best approach?
+            </p>
+
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="A">
+                <span class="quiz-option-letter">A</span>
+                <span>Pull model: Query all followed users on each load</span>
+              </div>
+              <div class="quiz-option" data-value="B">
+                <span class="quiz-option-letter">B</span>
+                <span>Hybrid: Push for regular users, pull for celebrities</span>
+              </div>
+              <div class="quiz-option" data-value="C">
+                <span class="quiz-option-letter">C</span>
+                <span>Push model: Fan out every tweet to all followers</span>
+              </div>
+              <div class="quiz-option" data-value="D">
+                <span class="quiz-option-letter">D</span>
+                <span>Cache everything in Redis</span>
+              </div>
+            </div>
+
+            <div
+              class="quiz-feedback"
+              data-correct-msg="Correct! Push is fast for reads but expensive for celebrities (millions of writes per tweet). Hybrid combines the best of both."
+              data-incorrect-msg="Think about what happens when a celebrity with 50M followers tweets. Push model = 50M writes. That's expensive!"
+            ></div>
+
+            <button class="quiz-btn" disabled>Check Answer</button>
+          </div>
+
+          <h3 class="fade-in">Practice These Designs</h3>
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">💬</div>
+              <h4>Real-time Chat</h4>
+              <p>Message delivery, presence, millions of users</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">📁</div>
+              <h4>File Storage</h4>
+              <p>Like Dropbox. Sync, sharing, deduplication</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🎬</div>
+              <h4>Video Streaming</h4>
+              <p>Like Netflix. CDN, encoding, adaptive bitrate</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🔔</div>
+              <h4>Notification System</h4>
+              <p>Push, email, SMS. Rate limiting, preferences</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section class="section" data-section="project">
+        <div class="section-content">
+          <h2 class="fade-in">🔨 Mini-Project: System Design Portfolio</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Create a portfolio of system designs you can reference in interviews.
+              Design <strong>three complete systems</strong>.
+            </p>
+          </div>
+
+          <h3 class="fade-in">Required Systems</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-architect);">
+              <div class="concept-card-icon">🔗</div>
+              <h4>1. URL Shortener</h4>
+              <p>Requirements, architecture, database, API, scale estimates</p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-architect);">
+              <div class="concept-card-icon">💬</div>
+              <h4>2. Chat Application</h4>
+              <p>Real-time messaging, presence, delivery guarantees</p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-architect);">
+              <div class="concept-card-icon">🎯</div>
+              <h4>3. Your Choice</h4>
+              <p>File storage, video streaming, e-commerce, social feed...</p>
+            </div>
+          </div>
+
+          <h3 class="fade-in">For Each Design, Include:</h3>
+
+          <ol class="fade-in" style="line-height: 2;">
+            <li><strong>Requirements Document</strong> — Functional + non-functional</li>
+            <li><strong>Architecture Diagram</strong> — Components + data flow</li>
+            <li><strong>Database Design</strong> — Schema + indexing strategy</li>
+            <li><strong>API Design</strong> — Endpoints + request/response</li>
+            <li><strong>Deep Dives</strong> — Critical components explained</li>
+            <li><strong>Tradeoffs</strong> — What you chose and why</li>
+          </ol>
+
+          <div class="cta-box fade-in">
+            <h3>📦 Deliverables</h3>
+            <div class="code-block" style="text-align: left; margin: 1rem 0">
+              <div class="code-content">
+                <pre><code>your-folder/ch4-architects/
+├── url-shortener/
+│   ├── REQUIREMENTS.md
+│   ├── ARCHITECTURE.md   <span class="comment"># With diagrams</span>
+│   ├── DATABASE.md
+│   ├── API.md
+│   └── TRADEOFFS.md
+├── chat-app/
+│   └── (same structure)
+├── your-choice/
+│   └── (same structure)
+└── README.md             <span class="comment"># Overview of all three</span></code></pre>
+              </div>
+            </div>
+            <a href="../ch5-capstone1/index.html" class="cta-btn">
+              <span>Continue to Capstone I</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch3-magnetism/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Chapter 3
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../ch5-capstone1/index.html'">
+        Capstone I
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+  </body>
+</html>
+

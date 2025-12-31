@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone I: Full-Stack Application | AutoNateAI Bridge</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: #e91e63;
+        --accent-capstone: #e91e63;
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(233, 30, 99, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(156, 39, 176, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .story-block {
+        border-left-color: var(--accent-capstone);
+      }
+
+      .option-card {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid var(--accent-capstone);
+        transition: all 0.3s ease;
+      }
+
+      .option-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2);
+      }
+
+      .option-card h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        color: var(--accent-capstone);
+      }
+
+      .option-card .examples {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+      }
+
+      .requirement-section {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      .requirement-section h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .requirement-section ul {
+        list-style: none;
+      }
+
+      .requirement-section li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .requirement-section li:last-child {
+        border-bottom: none;
+      }
+
+      .requirement-section li::before {
+        content: "☐";
+        color: var(--accent-capstone);
+      }
+
+      .production-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(233, 30, 99, 0.2);
+        color: var(--accent-capstone);
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="challenge" title="Challenge"></div>
+      <div class="progress-dot" data-section="options" title="Options"></div>
+      <div class="progress-dot" data-section="requirements" title="Requirements"></div>
+      <div class="progress-dot" data-section="quality" title="Quality"></div>
+      <div class="progress-dot" data-section="deliverables" title="Deliverables"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Capstone I • Week 5</span>
+          <div class="hero-icon">🔥</div>
+          <h1>Ship Something Real</h1>
+          <p class="hero-subtitle">
+            Theory is worthless without execution. Build and deploy a
+            <strong>complete application</strong> you'd be proud to show in an interview.
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Start building</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- CHALLENGE -->
+      <section class="section" data-section="challenge">
+        <div class="section-content">
+          <h2 class="fade-in">🎯 The Quest</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              This isn't a school project. This is a <strong>product</strong>. Something
+              that works, that's deployed, that you can demo to a recruiter and say:
+              "I built this. Here's how. Here's why."
+            </p>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>What Makes This Different</h3>
+            <ul style="text-align: left; margin: 0;">
+              <li>✅ <strong>Deployed</strong> — Live on the internet, not localhost</li>
+              <li>✅ <strong>Tested</strong> — Unit + integration tests that run in CI</li>
+              <li>✅ <strong>Documented</strong> — README, API docs, architecture</li>
+              <li>✅ <strong>Professional</strong> — Code quality, error handling, logging</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTIONS -->
+      <section class="section" data-section="options">
+        <div class="section-content">
+          <h2 class="fade-in">🛠️ Choose Your Path</h2>
+
+          <div class="option-card fade-in">
+            <h3>🔧 Option A: Developer Tool</h3>
+            <p>A CLI or web tool that solves a real developer problem.</p>
+            <p class="examples">
+              <em>Examples:</em> Dependency analyzer, code snippet manager, git helper,
+              API mock generator
+            </p>
+          </div>
+
+          <div class="option-card fade-in">
+            <h3>☁️ Option B: SaaS Product</h3>
+            <p>A web application with authentication, data storage, and real features.</p>
+            <p class="examples">
+              <em>Examples:</em> Habit tracker, bookmark manager, study group coordinator,
+              expense tracker
+            </p>
+          </div>
+
+          <div class="option-card fade-in">
+            <h3>🔌 Option C: API Platform</h3>
+            <p>A production-ready API that other developers could use.</p>
+            <p class="examples">
+              <em>Examples:</em> Mock data generator, file conversion service, webhook
+              forwarder, aggregation API
+            </p>
+          </div>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">Typical Architecture</div>
+            <div class="mermaid">
+              flowchart TD
+                CLIENT[Frontend/CLI] --> API[FastAPI Backend]
+                API --> AUTH[Auth Service]
+                API --> DB[(PostgreSQL)]
+                API --> CACHE[(Redis)]
+
+                subgraph INFRA["Infrastructure"]
+                  CI[GitHub Actions] --> DEPLOY[Railway/Vercel]
+                end
+
+                API --> INFRA
+
+                style API fill:#e91e63,color:#fff
+                style DB fill:#4db6ac,color:#fff
+                style CI fill:#7986cb,color:#fff
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REQUIREMENTS -->
+      <section class="section" data-section="requirements">
+        <div class="section-content">
+          <h2 class="fade-in">✅ Must-Have Requirements</h2>
+
+          <div class="requirement-section fade-in">
+            <h4>📝 Code Quality</h4>
+            <ul>
+              <li>Clean, documented code (someone else could contribute)</li>
+              <li>Comprehensive tests (unit + integration)</li>
+              <li>Type hints throughout</li>
+              <li>Code formatting (Black, isort)</li>
+            </ul>
+          </div>
+
+          <div class="requirement-section fade-in">
+            <h4>🗄️ Data Layer</h4>
+            <ul>
+              <li>Database with proper migrations</li>
+              <li>Repository pattern for data access</li>
+              <li>Caching where appropriate</li>
+            </ul>
+          </div>
+
+          <div class="requirement-section fade-in">
+            <h4>🔌 API Layer</h4>
+            <ul>
+              <li>RESTful API design</li>
+              <li>OpenAPI/Swagger documentation</li>
+              <li>Authentication (even if simple)</li>
+              <li>Proper error handling</li>
+            </ul>
+          </div>
+
+          <div class="requirement-section fade-in">
+            <h4>🚀 Deployment</h4>
+            <ul>
+              <li>CI/CD pipeline (GitHub Actions)</li>
+              <li>Deployed to production (Heroku, Railway, Vercel, etc.)</li>
+              <li>Environment-based config (dev/staging/prod)</li>
+              <li>Health checks / monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUALITY -->
+      <section class="section" data-section="quality">
+        <div class="section-content">
+          <h2 class="fade-in">💎 Production Quality Standards</h2>
+
+          <p class="fade-in">
+            The difference between a "school project" and a "portfolio piece":
+          </p>
+
+          <table class="comparison-table fade-in">
+            <thead>
+              <tr>
+                <th>School Project</th>
+                <th>Production Quality <span class="production-badge">YOU</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>"Works on my machine"</td>
+                <td>Deployed + CI/CD + Docker</td>
+              </tr>
+              <tr>
+                <td>print("debug")</td>
+                <td>Structured logging with levels</td>
+              </tr>
+              <tr>
+                <td>if error: pass</td>
+                <td>Proper error handling + user messages</td>
+              </tr>
+              <tr>
+                <td>No tests</td>
+                <td>80%+ coverage, runs in CI</td>
+              </tr>
+              <tr>
+                <td>README: "Run main.py"</td>
+                <td>Setup guide, architecture docs, API spec</td>
+              </tr>
+              <tr>
+                <td>Hardcoded credentials</td>
+                <td>Environment variables, secrets management</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Example: GitHub Actions CI</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># .github/workflows/ci.yml</span>
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run linting
+        run: |
+          black --check .
+          isort --check .
+
+      - name: Run tests
+        run: pytest --cov=src tests/
+
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERABLES -->
+      <section class="section" data-section="deliverables">
+        <div class="section-content">
+          <h2 class="fade-in">📦 Deliverables</h2>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Project Structure</span>
+            </div>
+            <div class="code-content">
+              <pre><code>your-folder/capstone-1/
+├── src/                    <span class="comment"># Your application code</span>
+│   ├── api/
+│   ├── models/
+│   ├── services/
+│   └── core/
+├── tests/
+│   ├── unit/
+│   └── integration/
+├── docs/
+│   ├── ARCHITECTURE.md     <span class="comment"># System design</span>
+│   ├── API.md              <span class="comment"># API documentation</span>
+│   └── DEPLOYMENT.md       <span class="comment"># How to deploy</span>
+├── .github/workflows/      <span class="comment"># CI/CD pipelines</span>
+├── docker-compose.yml      <span class="comment"># Local dev environment</span>
+├── README.md               <span class="comment"># Project overview</span>
+├── DEMO.md                 <span class="comment"># Screenshots/video</span>
+└── REFLECTION.md           <span class="comment"># What you learned</span></code></pre>
+            </div>
+          </div>
+
+          <h3 class="fade-in">Presentation Requirements</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-capstone);">
+              <div class="concept-card-icon">🎬</div>
+              <h4>Live Demo</h4>
+              <p>Show it working in production. Not localhost.</p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-capstone);">
+              <div class="concept-card-icon">🏗️</div>
+              <h4>Architecture Tour</h4>
+              <p>Walk through the system design decisions.</p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: var(--accent-capstone);">
+              <div class="concept-card-icon">💬</div>
+              <h4>Technical Discussion</h4>
+              <p>Explain tradeoffs. What would you do differently?</p>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>🎯 Interview-Ready Portfolio Piece</h3>
+            <p>
+              When a recruiter asks "Tell me about a project you've built," this is
+              your answer. Architecture diagrams, deployed URL, GitHub link, test
+              coverage. Everything a senior engineer would have.
+            </p>
+            <a href="../ch6-capstone2/index.html" class="cta-btn">
+              <span>Continue to Capstone II</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch4-architect/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Chapter 4
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../ch6-capstone2/index.html'">
+        Capstone II
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+  </body>
+</html>
+

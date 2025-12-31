@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 3: The Pull Between | AutoNateAI Bridge</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: var(--accent-magnetism);
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(121, 134, 203, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(63, 81, 181, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .story-block {
+        border-left-color: var(--accent-magnetism);
+      }
+
+      .http-status {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: var(--radius-sm);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .http-status.success { background: #1b5e20; color: #a5d6a7; }
+      .http-status.client { background: #e65100; color: #ffcc80; }
+      .http-status.server { background: #b71c1c; color: #ef9a9a; }
+
+      .api-endpoint {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+        margin: 0.5rem 0;
+        font-family: var(--font-mono);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .api-method {
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-sm);
+        font-weight: 600;
+        font-size: 0.75rem;
+      }
+
+      .api-method.get { background: #1565c0; }
+      .api-method.post { background: #2e7d32; }
+      .api-method.put { background: #f57c00; }
+      .api-method.delete { background: #c62828; }
+
+      .auth-box {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-left: 4px solid var(--accent-magnetism);
+      }
+
+      .auth-box h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--accent-magnetism);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="reality" title="Reality"></div>
+      <div class="progress-dot" data-section="design" title="API Design"></div>
+      <div class="progress-dot" data-section="auth" title="Authentication"></div>
+      <div class="progress-dot" data-section="errors" title="Error Handling"></div>
+      <div class="progress-dot" data-section="trial" title="Trial"></div>
+      <div class="progress-dot" data-section="project" title="Project"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Chapter 3 • Week 3</span>
+          <div class="hero-icon">🧲</div>
+          <h1>The Pull Between</h1>
+          <p class="hero-subtitle">
+            You've called APIs in class projects. But have you <strong>designed</strong>
+            one? Have you dealt with authentication, rate limiting, versioning, and
+            backwards compatibility?
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Connect the systems</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- REALITY -->
+      <section class="section" data-section="reality">
+        <div class="section-content">
+          <h2 class="fade-in">🎓 → 💼 The Reality Gap</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              That <code>requests.get(url)</code> you wrote? Behind it is a
+              <strong>contract</strong> — documented, versioned, authenticated,
+              rate-limited. Breaking that contract breaks everyone who depends on it.
+            </p>
+          </div>
+
+          <table class="comparison-table fade-in">
+            <thead>
+              <tr>
+                <th>Your Class Project</th>
+                <th>Production System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>requests.get(url)</code></td>
+                <td>API clients with retry, auth, rate limit handling, validation</td>
+              </tr>
+              <tr>
+                <td><code>return json_data</code></td>
+                <td>Versioned contracts, consistent errors, pagination, HATEOAS</td>
+              </tr>
+              <tr>
+                <td><code>if error: raise Exception()</code></td>
+                <td>Structured errors, error codes, retry-after, circuit breakers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- API DESIGN -->
+      <section class="section" data-section="design">
+        <div class="section-content">
+          <h2 class="fade-in">📐 RESTful API Design</h2>
+
+          <h3 class="fade-in">Bad vs. Good API Design</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Bad API Design</span>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># ❌ Inconsistent, verb-based, unclear</span>
+GET /getUsers
+POST /createNewUser
+GET /user_data?user=123
+POST /deleteUser</code></pre>
+            </div>
+          </div>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Good API Design (RESTful)</span>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># ✅ Resource-based, predictable, consistent</span>
+GET /users              <span class="comment"># List users</span>
+POST /users             <span class="comment"># Create user</span>
+GET /users/123          <span class="comment"># Get user 123</span>
+PUT /users/123          <span class="comment"># Update user 123</span>
+DELETE /users/123       <span class="comment"># Delete user 123</span>
+GET /users/123/orders   <span class="comment"># Get orders for user 123</span></code></pre>
+            </div>
+          </div>
+
+          <h3 class="fade-in">CRUD → HTTP Methods</h3>
+
+          <div class="api-endpoint fade-in">
+            <span class="api-method get">GET</span>
+            <span>/users</span>
+            <span style="color: var(--text-muted); margin-left: auto;">Read - List all users</span>
+          </div>
+
+          <div class="api-endpoint fade-in">
+            <span class="api-method post">POST</span>
+            <span>/users</span>
+            <span style="color: var(--text-muted); margin-left: auto;">Create - Add new user</span>
+          </div>
+
+          <div class="api-endpoint fade-in">
+            <span class="api-method put">PUT</span>
+            <span>/users/123</span>
+            <span style="color: var(--text-muted); margin-left: auto;">Update - Replace user 123</span>
+          </div>
+
+          <div class="api-endpoint fade-in">
+            <span class="api-method delete">DELETE</span>
+            <span>/users/123</span>
+            <span style="color: var(--text-muted); margin-left: auto;">Delete - Remove user 123</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUTHENTICATION -->
+      <section class="section" data-section="auth">
+        <div class="section-content">
+          <h2 class="fade-in">🔐 Authentication Patterns</h2>
+
+          <div class="auth-box fade-in">
+            <h4>🔑 API Key</h4>
+            <p>Simple, but less secure. Good for server-to-server. Sent in header or query param.</p>
+            <code style="font-size: 0.875rem;">Authorization: ApiKey sk-abc123...</code>
+          </div>
+
+          <div class="auth-box fade-in">
+            <h4>🎫 OAuth 2.0</h4>
+            <p>Industry standard. Supports scopes, refresh tokens, third-party auth. Complex but robust.</p>
+            <code style="font-size: 0.875rem;">Authorization: Bearer eyJhbGciOi...</code>
+          </div>
+
+          <div class="auth-box fade-in">
+            <h4>📜 JWT (JSON Web Token)</h4>
+            <p>Self-contained tokens. No server-side session needed. Watch for token size and expiration.</p>
+            <code style="font-size: 0.875rem;">{ "sub": "123", "exp": 1699999999, "role": "admin" }</code>
+          </div>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">OAuth 2.0 Flow</div>
+            <div class="mermaid">
+              sequenceDiagram
+                participant User
+                participant App
+                participant AuthServer as Auth Server
+                participant API
+
+                User->>App: Login
+                App->>AuthServer: Redirect to auth
+                AuthServer->>User: Login form
+                User->>AuthServer: Credentials
+                AuthServer->>App: Auth code
+                App->>AuthServer: Exchange for tokens
+                AuthServer->>App: Access + Refresh tokens
+                App->>API: Request + Access token
+                API->>App: Protected data
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ERROR HANDLING -->
+      <section class="section" data-section="errors">
+        <div class="section-content">
+          <h2 class="fade-in">⚠️ Error Handling Contract</h2>
+
+          <h3 class="fade-in">HTTP Status Codes You Must Know</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item" style="border-top-color: #4caf50;">
+              <div class="concept-card-icon">2️⃣</div>
+              <h4>2xx Success</h4>
+              <p>
+                <span class="http-status success">200</span> OK<br>
+                <span class="http-status success">201</span> Created<br>
+                <span class="http-status success">204</span> No Content
+              </p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: #ff9800;">
+              <div class="concept-card-icon">4️⃣</div>
+              <h4>4xx Client Error</h4>
+              <p>
+                <span class="http-status client">400</span> Bad Request<br>
+                <span class="http-status client">401</span> Unauthorized<br>
+                <span class="http-status client">403</span> Forbidden<br>
+                <span class="http-status client">404</span> Not Found<br>
+                <span class="http-status client">429</span> Too Many Requests
+              </p>
+            </div>
+            <div class="concept-card stagger-item" style="border-top-color: #ef5350;">
+              <div class="concept-card-icon">5️⃣</div>
+              <h4>5xx Server Error</h4>
+              <p>
+                <span class="http-status server">500</span> Internal Error<br>
+                <span class="http-status server">502</span> Bad Gateway<br>
+                <span class="http-status server">503</span> Unavailable
+              </p>
+            </div>
+          </div>
+
+          <h3 class="fade-in">Consistent Error Response Format</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">JSON - Error Response</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code>{
+  <span class="string">"error"</span>: {
+    <span class="string">"code"</span>: <span class="string">"VALIDATION_ERROR"</span>,
+    <span class="string">"message"</span>: <span class="string">"Invalid request parameters"</span>,
+    <span class="string">"details"</span>: [
+      {<span class="string">"field"</span>: <span class="string">"email"</span>, <span class="string">"message"</span>: <span class="string">"Invalid email format"</span>},
+      {<span class="string">"field"</span>: <span class="string">"age"</span>, <span class="string">"message"</span>: <span class="string">"Must be positive"</span>}
+    ],
+    <span class="string">"request_id"</span>: <span class="string">"abc-123"</span>,
+    <span class="string">"docs_url"</span>: <span class="string">"https://api.example.com/docs/errors#VALIDATION_ERROR"</span>
+  }
+}</code></pre>
+            </div>
+            <div class="code-caption">
+              <p>
+                <span class="icon">💡</span>
+                Always include: error code (machine-readable), message (human-readable),
+                request_id (for debugging), and link to docs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRIAL -->
+      <section class="section" data-section="trial">
+        <div class="section-content">
+          <h2 class="fade-in">📝 The Trial</h2>
+
+          <div class="quiz-container fade-in" data-answer="C">
+            <div class="quiz-header">
+              <span class="quiz-icon">💼</span>
+              <h3 class="quiz-title">Interview Question</h3>
+            </div>
+
+            <p class="quiz-question">
+              You're designing a REST API. A client sends a DELETE request to
+              <code>/users/999</code> but user 999 doesn't exist. What should you return?
+            </p>
+
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="A">
+                <span class="quiz-option-letter">A</span>
+                <span>200 OK with empty body</span>
+              </div>
+              <div class="quiz-option" data-value="B">
+                <span class="quiz-option-letter">B</span>
+                <span>204 No Content</span>
+              </div>
+              <div class="quiz-option" data-value="C">
+                <span class="quiz-option-letter">C</span>
+                <span>404 Not Found</span>
+              </div>
+              <div class="quiz-option" data-value="D">
+                <span class="quiz-option-letter">D</span>
+                <span>400 Bad Request</span>
+              </div>
+            </div>
+
+            <div
+              class="quiz-feedback"
+              data-correct-msg="Correct! 404 clearly indicates the resource doesn't exist. Some argue for 204 (idempotency), but 404 is more accurate."
+              data-incorrect-msg="404 is the standard response for a resource that doesn't exist. The request is valid (not 400), but the resource isn't there."
+            ></div>
+
+            <button class="quiz-btn" disabled>Check Answer</button>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>More Interview Questions</h3>
+            <ol style="text-align: left; margin: 0;">
+              <li>What's the difference between authentication and authorization?</li>
+              <li>How would you version an API without breaking existing clients?</li>
+              <li>Design the API for a URL shortener (endpoints, request/response).</li>
+              <li>What's the purpose of rate limiting? How would you implement it?</li>
+              <li>How do you handle an external API that's unreliable?</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section class="section" data-section="project">
+        <div class="section-content">
+          <h2 class="fade-in">🔨 Mini-Project: API Integration Suite</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Build a "Developer Dashboard" API that aggregates data from multiple
+              external APIs (GitHub, Weather, News) and exposes a unified interface.
+            </p>
+          </div>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">Your Unified API Architecture</div>
+            <div class="mermaid">
+              flowchart TD
+                CLIENT[Client] --> YOUR_API[Your Unified API]
+                YOUR_API --> GITHUB[GitHub API]
+                YOUR_API --> WEATHER[Weather API]
+                YOUR_API --> NEWS[News API]
+
+                CACHE[(Redis Cache)] <-.-> YOUR_API
+
+                YOUR_API --> |"If GitHub down"| FALLBACK[Graceful Fallback]
+
+                style YOUR_API fill:#7986cb,color:#fff
+                style CACHE fill:#4db6ac,color:#fff
+            </div>
+          </div>
+
+          <h3 class="fade-in">Requirements</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card magnetism stagger-item">
+              <div class="concept-card-icon">🔌</div>
+              <h4>FastAPI App</h4>
+              <p>GET /dashboard/{username} aggregates all data sources</p>
+            </div>
+            <div class="concept-card magnetism stagger-item">
+              <div class="concept-card-icon">🌐</div>
+              <h4>External APIs</h4>
+              <p>GitHub + Weather + News. Handle each failing independently.</p>
+            </div>
+            <div class="concept-card magnetism stagger-item">
+              <div class="concept-card-icon">🛡️</div>
+              <h4>Production Patterns</h4>
+              <p>Caching, rate limiting, circuit breaker, timeouts</p>
+            </div>
+            <div class="concept-card magnetism stagger-item">
+              <div class="concept-card-icon">📖</div>
+              <h4>Documentation</h4>
+              <p>OpenAPI/Swagger spec with examples</p>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>📦 Deliverables</h3>
+            <div class="code-block" style="text-align: left; margin: 1rem 0">
+              <div class="code-content">
+                <pre><code>your-folder/ch3-magnetism/
+├── api/
+│   ├── main.py          <span class="comment"># FastAPI app</span>
+│   ├── routes/          <span class="comment"># Route handlers</span>
+│   └── schemas.py       <span class="comment"># Pydantic models</span>
+├── integrations/        <span class="comment"># External API clients</span>
+│   ├── github.py
+│   ├── weather.py
+│   └── news.py
+├── core/
+│   ├── cache.py
+│   └── circuit_breaker.py
+├── tests/
+├── README.md
+└── API_SPEC.md          <span class="comment"># Your API documentation</span></code></pre>
+              </div>
+            </div>
+            <a href="../ch4-architect/index.html" class="cta-btn">
+              <span>Continue to Chapter 4</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch2-lightning/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Chapter 2
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../ch4-architect/index.html'">
+        Chapter 4: System Design
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+  </body>
+</html>
+
