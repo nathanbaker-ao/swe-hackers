@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The Stone Remembers | Senior Force Multiplier</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/lesson.css">
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <style>
+    :root {
+      --chapter-color: var(--accent-fire);
+    }
+    
+    .hero::before {
+      background: 
+        radial-gradient(ellipse at 30% 50%, rgba(239, 83, 80, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(255, 143, 0, 0.15) 0%, transparent 50%);
+    }
+    
+    .story-block {
+      border-left-color: var(--accent-fire);
+    }
+    
+    .story-block::before {
+      color: var(--accent-fire);
+    }
+
+    .multiplier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, var(--accent-fire), var(--accent-star));
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: white;
+      margin: 1rem 0;
+    }
+
+    .impact-meter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+    }
+
+    .impact-bar {
+      flex: 1;
+      height: 24px;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .impact-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-stone), var(--accent-lightning), var(--accent-fire));
+      border-radius: 12px;
+      transition: width 1s ease;
+    }
+
+    .impact-label {
+      font-weight: 600;
+      min-width: 100px;
+    }
+
+    .multiplier-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .multiplier-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .multiplier-card {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      border-top: 3px solid var(--accent-fire);
+    }
+
+    .multiplier-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-fire);
+    }
+
+    .multiplier-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Progress Tracker (Side) -->
+  <nav class="progress-tracker">
+    <div class="progress-dot active" data-section="hero" title="Start"></div>
+    <div class="progress-dot" data-section="opportunity" title="The Opportunity"></div>
+    <div class="progress-dot" data-section="multipliers" title="Force Multipliers"></div>
+    <div class="progress-dot" data-section="leadership" title="Technical Leadership"></div>
+    <div class="progress-dot" data-section="quiz" title="Quiz"></div>
+    <div class="progress-dot" data-section="project" title="Project"></div>
+  </nav>
+
+  <main class="lesson-container">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="hero section" data-section="hero">
+      <div class="hero-content">
+        <span class="hero-chapter">Chapter 1 • Week 1</span>
+        <div class="hero-icon">⚔️</div>
+        <h1>The Senior Force Multiplier</h1>
+        <p class="hero-subtitle">
+          You're already good. The question isn't if you can code — it's how much 
+          <strong>impact</strong> you can have. AI makes your experience exponentially 
+          more powerful.
+        </p>
+        <div class="multiplier-badge">
+          ⚔️ Force Multiplier Mode
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Amplify your impact</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         THE OPPORTUNITY
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="opportunity">
+      <div class="section-content">
+        <h2 class="fade-in">🎯 The Senior Opportunity</h2>
+        
+        <div class="story-block fade-in">
+          <p>
+            You've spent years building expertise. You know the patterns, the pitfalls, 
+            the right way to build systems. But here's the paradox: as you became senior, 
+            you started spending more time in meetings, reviews, and documentation — 
+            and less time in <em>flow</em>.
+          </p>
+        </div>
+
+        <p class="fade-in">
+          AI tools flip this equation. They handle the tedious parts — boilerplate, 
+          documentation, test scaffolding — while you focus on <strong>architecture, 
+          design decisions, and mentoring</strong>. Your expertise becomes a force multiplier.
+        </p>
+
+        <div class="multiplier-grid fade-in">
+          <div class="multiplier-card">
+            <div class="multiplier-value">3x</div>
+            <div class="multiplier-label">Faster code generation</div>
+          </div>
+          <div class="multiplier-card">
+            <div class="multiplier-value">5x</div>
+            <div class="multiplier-label">More projects at once</div>
+          </div>
+          <div class="multiplier-card">
+            <div class="multiplier-value">10x</div>
+            <div class="multiplier-label">Impact per hour</div>
+          </div>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>💡 The Senior Advantage</h3>
+          <p>
+            Juniors use AI to learn. Seniors use AI to <strong>amplify</strong>. 
+            Your experience lets you direct AI better, catch its mistakes faster, 
+            and apply its output to bigger problems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         FORCE MULTIPLIERS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="multipliers">
+      <div class="section-content">
+        <h2 class="fade-in">⚡ Your Force Multipliers</h2>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">The Senior AI Workflow</div>
+          <div class="mermaid">
+            flowchart LR
+              subgraph YOU["🧠 Your Expertise"]
+                ARCH["Architecture<br/>Decisions"]
+                PATTERNS["Pattern<br/>Recognition"]
+                QUALITY["Quality<br/>Standards"]
+              end
+              
+              subgraph AI["🤖 AI Handles"]
+                CODE["Code<br/>Generation"]
+                DOCS["Documentation"]
+                TESTS["Test<br/>Scaffolding"]
+                REVIEW["Initial<br/>Review"]
+              end
+              
+              subgraph OUTPUT["💎 Output"]
+                SHIP["Ship<br/>Faster"]
+                BIGGER["Take on<br/>Bigger Projects"]
+                MENTOR["Mentor<br/>More People"]
+              end
+              
+              YOU --> AI
+              AI --> OUTPUT
+              OUTPUT --> |Feedback| YOU
+              
+              style YOU fill:#2d1a2d,stroke:#ef5350
+              style AI fill:#1a2d2d,stroke:#4db6ac
+              style OUTPUT fill:#2d2d1a,stroke:#ffd54f
+          </div>
+        </div>
+
+        <h3 class="fade-in">Practical AI Applications for Seniors</h3>
+
+        <div class="concept-grid fade-in">
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">📊</div>
+            <h4>Architecture Docs</h4>
+            <p>"Generate a C4 diagram for this microservices system based on the codebase"</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">🔍</div>
+            <h4>Code Review Prep</h4>
+            <p>"Review this PR for security issues, performance problems, and code smells"</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">📝</div>
+            <h4>RFC Generation</h4>
+            <p>"Draft an RFC for migrating from monolith to microservices based on our constraints"</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">🧪</div>
+            <h4>Test Strategy</h4>
+            <p>"Generate integration tests for this API based on the OpenAPI spec"</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">🎓</div>
+            <h4>Mentoring at Scale</h4>
+            <p>"Create a learning path for a junior engineer joining this team"</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-fire);">
+            <div class="concept-card-icon">🚨</div>
+            <h4>Incident Response</h4>
+            <p>"Analyze these logs and suggest potential root causes"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         TECHNICAL LEADERSHIP
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="leadership">
+      <div class="section-content">
+        <h2 class="fade-in">🏛️ Technical Leadership at Scale</h2>
+
+        <p class="fade-in">
+          Senior engineers don't just write code — they shape systems, guide teams, 
+          and make decisions that echo for years. AI amplifies this leadership.
+        </p>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Architecture Decision Record (ADR)</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># ADR-0001: Use Event-Driven Architecture for Order Processing</span>
+
+<span class="keyword">## Status</span>
+Proposed
+
+<span class="keyword">## Context</span>
+Our monolithic order processing system is becoming a bottleneck. 
+Peak load during sales causes timeouts and failed orders.
+
+<span class="keyword">## Decision</span>
+We will adopt an event-driven architecture using:
+- Apache Kafka for event streaming
+- Event sourcing for order state
+- CQRS for read/write separation
+
+<span class="keyword">## Consequences</span>
+<span class="string">Positive:</span>
+- Horizontal scalability
+- Better failure isolation
+- Audit trail via event log
+
+<span class="string">Negative:</span>
+- Increased operational complexity
+- Eventual consistency requires handling
+- Team needs Kafka training</code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>AI Prompt:</strong> "Help me write an ADR for [your decision]. 
+              Include context, alternatives considered, and tradeoffs."
+            </p>
+          </div>
+        </div>
+
+        <div class="story-block fade-in">
+          <p>
+            The senior who documents decisions well, diagrams systems clearly, 
+            and communicates tradeoffs effectively will always be more valuable 
+            than one who just writes code. AI helps you do all of this at scale.
+          </p>
+        </div>
+
+        <h3 class="fade-in">Your Impact Meter</h3>
+
+        <div class="impact-meter fade-in">
+          <span class="impact-label">Code Output</span>
+          <div class="impact-bar">
+            <div class="impact-fill" style="width: 40%;"></div>
+          </div>
+        </div>
+        
+        <div class="impact-meter fade-in">
+          <span class="impact-label">Design Influence</span>
+          <div class="impact-bar">
+            <div class="impact-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+        
+        <div class="impact-meter fade-in">
+          <span class="impact-label">Team Multiplier</span>
+          <div class="impact-bar">
+            <div class="impact-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         QUIZ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="quiz">
+      <div class="section-content">
+        <div class="quiz-container" data-answer="B">
+          <div class="quiz-header">
+            <span class="quiz-icon">🧠</span>
+            <h3 class="quiz-title">Knowledge Check</h3>
+          </div>
+
+          <p class="quiz-question">
+            What makes a senior engineer a "force multiplier" when using AI tools?
+          </p>
+
+          <div class="quiz-options">
+            <div class="quiz-option" data-value="A">
+              <span class="quiz-option-letter">A</span>
+              <span>They can type prompts faster than juniors</span>
+            </div>
+            <div class="quiz-option" data-value="B">
+              <span class="quiz-option-letter">B</span>
+              <span>Their experience lets them direct AI better and validate its output faster</span>
+            </div>
+            <div class="quiz-option" data-value="C">
+              <span class="quiz-option-letter">C</span>
+              <span>They have access to more expensive AI models</span>
+            </div>
+            <div class="quiz-option" data-value="D">
+              <span class="quiz-option-letter">D</span>
+              <span>They don't need AI because they already know everything</span>
+            </div>
+          </div>
+
+          <div class="quiz-feedback" 
+               data-correct-msg="Exactly! Your years of experience are the secret sauce. You know what good looks like." 
+               data-incorrect-msg="The key is that senior expertise makes AI more effective, not the other way around.">
+          </div>
+
+          <button class="quiz-btn" disabled>Check Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="project">
+      <div class="section-content">
+        <h2 class="fade-in">🔨 Chapter Project: The Architect's Toolkit</h2>
+
+        <div class="story-block fade-in">
+          <p>
+            Build a personal toolkit of AI prompts and workflows that amplify your 
+            specific senior responsibilities. This becomes your reusable arsenal.
+          </p>
+        </div>
+
+        <div class="try-it-box fade-in">
+          <div class="try-it-header">
+            <span class="try-it-icon">🧰</span>
+            <h3 class="try-it-title">Build Your Toolkit</h3>
+          </div>
+
+          <ol class="try-it-steps">
+            <li>
+              <strong>ADR Template</strong><br>
+              Create a prompt that generates well-structured Architecture Decision Records.
+            </li>
+            <li>
+              <strong>Code Review Checklist</strong><br>
+              Build a prompt that analyzes PRs for your team's specific standards.
+            </li>
+            <li>
+              <strong>System Diagram Generator</strong><br>
+              Create a workflow to turn code into Mermaid diagrams automatically.
+            </li>
+            <li>
+              <strong>Incident Analysis</strong><br>
+              Build a prompt that helps analyze logs and suggest root causes.
+            </li>
+            <li>
+              <strong>Onboarding Generator</strong><br>
+              Create a prompt that generates learning paths for new team members.
+            </li>
+          </ol>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>📦 Deliverables</h3>
+          <p>
+            Create <code>senior/ch1-stone/toolkit.md</code> with at least 3 polished, 
+            tested prompts that you'll actually use in your daily work.
+          </p>
+          <a href="../ch2-lightning/index.html" class="cta-btn">
+            <span>Continue to Chapter 2: Scaling Flow</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="lesson-nav">
+    <button class="nav-btn" onclick="location.href='../../index.html'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Course Home
+    </button>
+    <button class="nav-btn primary" onclick="location.href='../ch2-lightning/index.html'">
+      Chapter 2: Lightning
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="../../shared/js/lesson.js"></script>
+  
+  <script>
+    // Animate impact meters
+    const meterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const fill = entry.target.querySelector('.impact-fill');
+          const targetWidth = fill.style.width;
+          fill.style.width = '0%';
+          setTimeout(() => {
+            fill.style.width = targetWidth;
+          }, 200);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.impact-meter').forEach(meter => meterObserver.observe(meter));
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The Stone Remembers | AutoNateAI Apprentice</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/lesson.css">
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <style>
+    /* Chapter-specific theme overrides */
+    :root {
+      --chapter-color: var(--accent-stone);
+      --chapter-gradient: var(--gradient-stone);
+    }
+    
+    .hero::before {
+      background: 
+        radial-gradient(ellipse at 30% 50%, rgba(141, 110, 99, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(109, 76, 65, 0.15) 0%, transparent 50%);
+    }
+    
+    .story-block {
+      border-left-color: var(--accent-stone);
+    }
+    
+    .story-block::before {
+      color: var(--accent-stone);
+    }
+
+    /* Memory visualization */
+    .memory-viz {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .memory-box {
+      width: 150px;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--accent-stone);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-medium);
+    }
+
+    .memory-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(141, 110, 99, 0.3);
+    }
+
+    .memory-box .label {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--accent-stone);
+      margin-bottom: 0.5rem;
+    }
+
+    .memory-box .value {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      padding: 0.5rem;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-sm);
+    }
+
+    .memory-box .type {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Interactive terminal */
+    .terminal {
+      background: #0d1117;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin: 2rem 0;
+      font-family: var(--font-mono);
+    }
+
+    .terminal-header {
+      background: #161b22;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .terminal-dot.red { background: #ff5f56; }
+    .terminal-dot.yellow { background: #ffbd2e; }
+    .terminal-dot.green { background: #27c93f; }
+
+    .terminal-body {
+      padding: 1.5rem;
+      min-height: 200px;
+    }
+
+    .terminal-line {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+
+    .terminal-prompt {
+      color: #58a6ff;
+      margin-right: 0.5rem;
+    }
+
+    .terminal-input {
+      color: #c9d1d9;
+    }
+
+    .terminal-output {
+      color: #8b949e;
+      margin-left: 1.5rem;
+    }
+
+    .terminal-output.success {
+      color: #3fb950;
+    }
+
+    /* Animated equation */
+    .equation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.5rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .equation-part {
+      padding: 1rem 1.5rem;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-md);
+      opacity: 0;
+    }
+
+    .equation-operator {
+      color: var(--accent-stone);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Progress Tracker (Side) -->
+  <nav class="progress-tracker">
+    <div class="progress-dot active" data-section="hero" title="Start"></div>
+    <div class="progress-dot" data-section="story" title="The Story"></div>
+    <div class="progress-dot" data-section="concepts" title="Concepts"></div>
+    <div class="progress-dot" data-section="variables" title="Variables"></div>
+    <div class="progress-dot" data-section="types" title="Data Types"></div>
+    <div class="progress-dot" data-section="quiz1" title="Quiz"></div>
+    <div class="progress-dot" data-section="input" title="Input"></div>
+    <div class="progress-dot" data-section="tryit" title="Try It"></div>
+    <div class="progress-dot" data-section="project" title="Project"></div>
+  </nav>
+
+  <main class="lesson-container">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="hero section" data-section="hero">
+      <div class="hero-content">
+        <span class="hero-chapter">Chapter 1 • Week 1</span>
+        <div class="hero-icon">🪨</div>
+        <h1>The Stone Remembers</h1>
+        <p class="hero-subtitle">
+          Before you can do anything powerful with code, you must learn to give your program <strong>memory</strong>. 
+          The stone never forgets.
+        </p>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Scroll to begin</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         THE STORY
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="story">
+      <div class="section-content">
+        <h2 class="fade-in">🌌 The Story</h2>
+        
+        <div class="story-block fade-in">
+          <p>
+            Imagine your brain had no memory. Every second, you'd forget everything — your name, 
+            where you are, what you were doing. You couldn't think at all!
+          </p>
+        </div>
+
+        <p class="fade-in">
+          Computers are the same. Before they can do anything useful, they need a way to 
+          <strong>remember things</strong>. In Python, we use <strong>variables</strong> 
+          to give the computer memory.
+        </p>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">How Memory Works</div>
+          <div class="mermaid">
+            flowchart LR
+              subgraph BRAIN["🧠 Your Brain"]
+                NAME["Your Name"]
+                AGE["Your Age"]
+                FAV["Favorite Color"]
+              end
+              
+              subgraph COMPUTER["💻 Computer Memory"]
+                VAR1["player_name"]
+                VAR2["score"]
+                VAR3["is_playing"]
+              end
+              
+              BRAIN -.->|"Same concept!"| COMPUTER
+              
+              style BRAIN fill:#2d2d44,stroke:#8d6e63
+              style COMPUTER fill:#2d2d44,stroke:#7986cb
+          </div>
+        </div>
+
+        <p class="fade-in">
+          A variable is like a <strong>labeled box</strong>. You put something in the box, 
+          give it a name, and later you can ask "Hey, what's in the box called <code>score</code>?" 
+          and the computer remembers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CORE CONCEPTS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="concepts">
+      <div class="section-content">
+        <h2 class="fade-in">📦 The Core Concepts</h2>
+
+        <div class="concept-grid">
+          <div class="concept-card stone stagger-item">
+            <div class="concept-card-icon">📦</div>
+            <h4>Variables</h4>
+            <p>Named containers that hold values. Like labeled boxes where you store things.</p>
+          </div>
+          
+          <div class="concept-card stone stagger-item">
+            <div class="concept-card-icon">🏷️</div>
+            <h4>Data Types</h4>
+            <p>Different kinds of values: text, numbers, true/false. Each fits in different "boxes".</p>
+          </div>
+          
+          <div class="concept-card stone stagger-item">
+            <div class="concept-card-icon">📥</div>
+            <h4>Input</h4>
+            <p>Getting information from the user. The program asks a question and waits for an answer.</p>
+          </div>
+          
+          <div class="concept-card stone stagger-item">
+            <div class="concept-card-icon">📤</div>
+            <h4>Output</h4>
+            <p>Showing information to the user. The program displays text on the screen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         VARIABLES DEEP DIVE
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="variables">
+      <div class="section-content">
+        <h2 class="fade-in">📦 Variables: Your Computer's Memory</h2>
+
+        <p class="fade-in">
+          Creating a variable is like putting something in a labeled box:
+        </p>
+
+        <div class="equation">
+          <div class="equation-part">
+            <code>name</code>
+            <br><small>The label</small>
+          </div>
+          <div class="equation-part equation-operator">=</div>
+          <div class="equation-part">
+            <code>"value"</code>
+            <br><small>What's inside</small>
+          </div>
+        </div>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># Creating variables (putting things in boxes)</span>
+<span class="variable">player_name</span> = <span class="string">"Alex"</span>
+<span class="variable">score</span> = <span class="number">0</span>
+<span class="variable">is_playing</span> = <span class="keyword">True</span>
+
+<span class="comment"># Using variables (looking in the boxes)</span>
+<span class="function">print</span>(<span class="string">"Welcome, "</span> + <span class="variable">player_name</span>)
+<span class="function">print</span>(<span class="string">"Your score is"</span>, <span class="variable">score</span>)</code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>Line 2:</strong> We create a box labeled <code>player_name</code> and put the text "Alex" inside. 
+              <strong>Line 7:</strong> We look inside the box and print what we find!
+            </p>
+          </div>
+        </div>
+
+        <h3 class="fade-in">See It In Action</h3>
+        
+        <p class="fade-in">Click on any box to see what's stored inside:</p>
+
+        <div class="memory-viz">
+          <div class="memory-box" onclick="this.querySelector('.value').style.background='var(--accent-stone)'">
+            <div class="label">player_name</div>
+            <div class="value">"Alex"</div>
+            <div class="type">string (text)</div>
+          </div>
+          
+          <div class="memory-box" onclick="this.querySelector('.value').style.background='var(--accent-stone)'">
+            <div class="label">score</div>
+            <div class="value">0</div>
+            <div class="type">integer (number)</div>
+          </div>
+          
+          <div class="memory-box" onclick="this.querySelector('.value').style.background='var(--accent-stone)'">
+            <div class="label">is_playing</div>
+            <div class="value">True</div>
+            <div class="type">boolean (yes/no)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         DATA TYPES
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="types">
+      <div class="section-content">
+        <h2 class="fade-in">🏷️ Data Types: What Can You Store?</h2>
+
+        <p class="fade-in">
+          Not everything fits in the same type of box. Python has different <strong>data types</strong> 
+          for different kinds of information:
+        </p>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">The Four Basic Types</div>
+          <div class="mermaid">
+            flowchart TB
+              subgraph TYPES["Python Data Types"]
+                STR["📝 str<br/><i>Text/Words</i><br/>'Hello World'"]
+                INT["🔢 int<br/><i>Whole Numbers</i><br/>42"]
+                FLOAT["📊 float<br/><i>Decimal Numbers</i><br/>3.14"]
+                BOOL["✓✗ bool<br/><i>True or False</i><br/>True"]
+              end
+              
+              style STR fill:#4caf50,color:#fff
+              style INT fill:#2196f3,color:#fff
+              style FLOAT fill:#ff9800,color:#fff
+              style BOOL fill:#9c27b0,color:#fff
+          </div>
+        </div>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># String (str) - Text wrapped in quotes</span>
+<span class="variable">name</span> = <span class="string">"Alex"</span>
+<span class="variable">message</span> = <span class="string">"Hello, World!"</span>
+
+<span class="comment"># Integer (int) - Whole numbers, no decimals</span>
+<span class="variable">age</span> = <span class="number">12</span>
+<span class="variable">score</span> = <span class="number">100</span>
+
+<span class="comment"># Float - Numbers with decimals</span>
+<span class="variable">price</span> = <span class="number">9.99</span>
+<span class="variable">temperature</span> = <span class="number">98.6</span>
+
+<span class="comment"># Boolean (bool) - Only True or False</span>
+<span class="variable">is_student</span> = <span class="keyword">True</span>
+<span class="variable">is_raining</span> = <span class="keyword">False</span></code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>Important:</strong> Notice how strings have quotes around them (<code>"Alex"</code>) 
+              but numbers don't (<code>12</code>). This is how Python knows the difference!
+            </p>
+          </div>
+        </div>
+
+        <!-- Drag and Drop Activity -->
+        <h3 class="fade-in">🎮 Your Turn: Match the Types!</h3>
+        <p class="fade-in">Drag each value to its correct data type:</p>
+
+        <div class="drag-drop-container">
+          <div class="drag-items">
+            <div class="drag-item" data-value="42" draggable="true">42</div>
+            <div class="drag-item" data-value="hello" draggable="true">"Hello"</div>
+            <div class="drag-item" data-value="true" draggable="true">True</div>
+            <div class="drag-item" data-value="3.14" draggable="true">3.14</div>
+            <div class="drag-item" data-value="name" draggable="true">"Alex"</div>
+            <div class="drag-item" data-value="false" draggable="true">False</div>
+          </div>
+
+          <div class="drop-zones">
+            <div class="drop-zone" data-accepts="hello,name">
+              <div class="drop-zone-title">📝 String (text)</div>
+              <div class="drop-zone-content"></div>
+            </div>
+            <div class="drop-zone" data-accepts="42">
+              <div class="drop-zone-title">🔢 Integer (whole number)</div>
+              <div class="drop-zone-content"></div>
+            </div>
+            <div class="drop-zone" data-accepts="3.14">
+              <div class="drop-zone-title">📊 Float (decimal)</div>
+              <div class="drop-zone-content"></div>
+            </div>
+            <div class="drop-zone" data-accepts="true,false">
+              <div class="drop-zone-title">✓✗ Boolean (true/false)</div>
+              <div class="drop-zone-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         QUIZ 1
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="quiz1">
+      <div class="section-content">
+        <div class="quiz-container" data-answer="B">
+          <div class="quiz-header">
+            <span class="quiz-icon">🧠</span>
+            <h3 class="quiz-title">Knowledge Check</h3>
+          </div>
+
+          <div class="quiz-progress">
+            <div class="quiz-progress-dot active"></div>
+            <div class="quiz-progress-dot"></div>
+            <div class="quiz-progress-dot"></div>
+          </div>
+
+          <p class="quiz-question">
+            What's the difference between <code>"42"</code> and <code>42</code> in Python?
+          </p>
+
+          <div class="quiz-options">
+            <div class="quiz-option" data-value="A">
+              <span class="quiz-option-letter">A</span>
+              <span>They're exactly the same thing</span>
+            </div>
+            <div class="quiz-option" data-value="B">
+              <span class="quiz-option-letter">B</span>
+              <span><code>"42"</code> is text (string), <code>42</code> is a number (integer)</span>
+            </div>
+            <div class="quiz-option" data-value="C">
+              <span class="quiz-option-letter">C</span>
+              <span><code>"42"</code> is a number, <code>42</code> is text</span>
+            </div>
+            <div class="quiz-option" data-value="D">
+              <span class="quiz-option-letter">D</span>
+              <span>The quotes are just for decoration</span>
+            </div>
+          </div>
+
+          <div class="quiz-feedback" data-correct-msg="The quotes make it text! You can do math with 42, but '42' is just characters." data-incorrect-msg="Remember: quotes make it a string (text). Without quotes, it's a number."></div>
+
+          <button class="quiz-btn" disabled>Check Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         INPUT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="input">
+      <div class="section-content">
+        <h2 class="fade-in">📥 Getting Input from Users</h2>
+
+        <p class="fade-in">
+          Variables are great, but what if you want the <em>user</em> to fill in the value? 
+          That's where <code>input()</code> comes in!
+        </p>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># Ask the user a question and store their answer</span>
+<span class="variable">name</span> = <span class="function">input</span>(<span class="string">"What is your name? "</span>)
+
+<span class="comment"># Now use what they typed</span>
+<span class="function">print</span>(<span class="string">"Hello, "</span> + <span class="variable">name</span> + <span class="string">"!"</span>)</code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>How it works:</strong> The program pauses at <code>input()</code>, 
+              shows the question, waits for the user to type something and press Enter, 
+              then stores their answer in the variable.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="fade-in">What It Looks Like When Running</h3>
+
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-input">python greeting.py</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">What is your name? </span>
+              <span class="terminal-input" style="color: #ffd54f;">Alex</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output success">Hello, Alex!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>⚠️ Important: Input is Always Text!</h3>
+          <p>
+            When you use <code>input()</code>, Python always gives you a <strong>string</strong>, 
+            even if the user types a number. If you need a number, you have to convert it:
+          </p>
+          <div class="code-block" style="text-align: left;">
+            <div class="code-content">
+              <pre><code><span class="comment"># This gives you a string "12", not the number 12</span>
+<span class="variable">age_text</span> = <span class="function">input</span>(<span class="string">"How old are you? "</span>)
+
+<span class="comment"># Convert it to a number with int()</span>
+<span class="variable">age</span> = <span class="function">int</span>(<span class="variable">age_text</span>)</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         TRY IT YOURSELF
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="tryit">
+      <div class="section-content">
+        <div class="try-it-box">
+          <div class="try-it-header">
+            <span class="try-it-icon">⚡</span>
+            <h3 class="try-it-title">Try It Yourself!</h3>
+          </div>
+          
+          <p>Let's write your first program! Follow these steps:</p>
+
+          <ol class="try-it-steps">
+            <li>
+              <strong>Open Cursor</strong><br>
+              Launch the Cursor app on your computer. This is where you'll write and run code.
+            </li>
+            <li>
+              <strong>Create a new file</strong><br>
+              Click <kbd>File</kbd> → <kbd>New File</kbd>, then save it as <code>greeting.py</code>
+            </li>
+            <li>
+              <strong>Type this code</strong><br>
+              <div class="code-block" style="margin-top: 0.5rem;">
+                <div class="code-content">
+                  <pre><code><span class="variable">name</span> = <span class="function">input</span>(<span class="string">"What is your name? "</span>)
+<span class="variable">color</span> = <span class="function">input</span>(<span class="string">"What's your favorite color? "</span>)
+
+<span class="function">print</span>(<span class="string">"Nice to meet you, "</span> + <span class="variable">name</span> + <span class="string">"!"</span>)
+<span class="function">print</span>(<span class="string">"I like "</span> + <span class="variable">color</span> + <span class="string">" too!"</span>)</code></pre>
+                </div>
+              </div>
+            </li>
+            <li>
+              <strong>Run your program</strong><br>
+              Open the terminal in Cursor (<kbd>View</kbd> → <kbd>Terminal</kbd>), then type:<br>
+              <code style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 4px;">python greeting.py</code>
+            </li>
+            <li>
+              <strong>Answer the questions!</strong><br>
+              Your program will ask you questions. Type your answers and see what happens!
+            </li>
+          </ol>
+
+          <div class="cta-box" style="margin-top: 2rem; border-color: var(--success);">
+            <h3>🎉 You just wrote your first Python program!</h3>
+            <p>
+              You created variables, got user input, and displayed output. 
+              The stone is learning to remember!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CHAPTER PROJECT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="project">
+      <div class="section-content">
+        <h2 class="fade-in">🔨 Chapter Project: The Secret Encoder</h2>
+
+        <div class="story-block fade-in">
+          <p>
+            Your mission: Build a program that can encode secret messages! 
+            When you run it, you'll be able to turn any message into a secret code 
+            that only people who know the decoder can read.
+          </p>
+        </div>
+
+        <div class="terminal fade-in">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-input">python encoder.py</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">╔═══════════════════════════════════╗</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">║      🔐 SECRET ENCODER 🔐         ║</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">╚═══════════════════════════════════╝</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output">Enter your message: </span>
+              <span class="terminal-input" style="color: #ffd54f;">hello</span>
+            </div>
+            <div class="terminal-line">
+              <span class="terminal-output success">Your secret code is: khoor</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="fade-in">How It Works: The Caesar Cipher</h3>
+        
+        <p class="fade-in">
+          This is called a <strong>Caesar Cipher</strong> — Julius Caesar used it to send 
+          secret messages to his generals! Each letter shifts forward by 3:
+        </p>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">A → D, B → E, C → F...</div>
+          <div class="mermaid">
+            flowchart LR
+              A["A"] --> D["D"]
+              B["B"] --> E["E"]
+              C["C"] --> F["F"]
+              H["H"] --> K["K"]
+              E2["E"] --> H2["H"]
+              L["L"] --> O["O"]
+              
+              style A fill:#4caf50,color:#fff
+              style D fill:#7986cb,color:#fff
+              style B fill:#4caf50,color:#fff
+              style E fill:#7986cb,color:#fff
+              style C fill:#4caf50,color:#fff
+              style F fill:#7986cb,color:#fff
+          </div>
+        </div>
+
+        <h3 class="fade-in">Starter Code</h3>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python - encoder.py</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># Secret Encoder - Your First Real Project!</span>
+
+<span class="keyword">def</span> <span class="function">encode_message</span>(message):
+    <span class="string">"""Shift each letter forward by 3"""</span>
+    encoded = <span class="string">""</span>
+    
+    <span class="keyword">for</span> letter <span class="keyword">in</span> message:
+        <span class="keyword">if</span> letter.isalpha():  <span class="comment"># if it's a letter</span>
+            <span class="comment"># Get the letter's code number</span>
+            code = <span class="function">ord</span>(letter)
+            <span class="comment"># Shift by 3</span>
+            code = code + <span class="number">3</span>
+            <span class="comment"># Convert back to a letter</span>
+            encoded = encoded + <span class="function">chr</span>(code)
+        <span class="keyword">else</span>:
+            encoded = encoded + letter  <span class="comment"># keep spaces</span>
+    
+    <span class="keyword">return</span> encoded
+
+<span class="comment"># Main program</span>
+<span class="function">print</span>(<span class="string">"🔐 SECRET ENCODER 🔐"</span>)
+message = <span class="function">input</span>(<span class="string">"Enter your message: "</span>)
+secret = encode_message(message)
+<span class="function">print</span>(<span class="string">"Your secret code is: "</span> + secret)</code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>Challenge:</strong> Can you add a <code>decode_message</code> function 
+              that shifts letters <em>backward</em> by 3 to reveal the original message?
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>📦 Save Your Work!</h3>
+          <p>Create this folder structure for your project:</p>
+          <div class="code-block" style="text-align: left; margin: 1rem 0;">
+            <div class="code-content">
+              <pre><code>your-folder/ch1-stone/
+├── encoder.py        <span class="comment"># Your code</span>
+└── README.md         <span class="comment"># Explain how it works</span></code></pre>
+            </div>
+          </div>
+          <a href="#" class="cta-btn">
+            <span>Continue to Chapter 2</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="lesson-nav">
+    <button class="nav-btn" onclick="history.back()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Previous
+    </button>
+    <button class="nav-btn primary" onclick="location.href='../ch2-lightning/index.html'">
+      Chapter 2: Lightning
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="../../shared/js/lesson.js"></script>
+  
+  <script>
+    // Animate the equation on scroll
+    const eqObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: '.equation-part',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(200),
+            duration: 600,
+            easing: 'easeOutExpo'
+          });
+          eqObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.equation').forEach(eq => eqObserver.observe(eq));
+
+    // Memory box click animation
+    document.querySelectorAll('.memory-box').forEach(box => {
+      box.addEventListener('click', () => {
+        anime({
+          targets: box,
+          scale: [1, 1.05, 1],
+          duration: 300,
+          easing: 'easeOutElastic(1, .5)'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

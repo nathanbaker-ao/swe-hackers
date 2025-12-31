@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The Stone Remembers | Junior Accelerator</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/lesson.css">
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <style>
+    :root {
+      --chapter-color: var(--accent-lightning);
+    }
+    
+    .hero::before {
+      background: 
+        radial-gradient(ellipse at 30% 50%, rgba(255, 213, 79, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(255, 143, 0, 0.15) 0%, transparent 50%);
+    }
+    
+    .story-block {
+      border-left-color: var(--accent-lightning);
+    }
+    
+    .story-block::before {
+      color: var(--accent-lightning);
+    }
+
+    .acceleration-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, var(--accent-lightning), var(--accent-fire));
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--bg-primary);
+      margin: 1rem 0;
+    }
+
+    .career-path {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .career-node {
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+      padding: 1rem;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      position: relative;
+    }
+
+    .career-node.current {
+      border: 2px solid var(--accent-lightning);
+      box-shadow: 0 0 20px rgba(255, 213, 79, 0.2);
+    }
+
+    .career-node.target {
+      border: 2px solid var(--success);
+    }
+
+    .career-arrow {
+      color: var(--text-muted);
+      font-size: 1.5rem;
+    }
+
+    .career-time {
+      font-size: 0.75rem;
+      color: var(--accent-lightning);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Progress Tracker (Side) -->
+  <nav class="progress-tracker">
+    <div class="progress-dot active" data-section="hero" title="Start"></div>
+    <div class="progress-dot" data-section="reality" title="The Reality"></div>
+    <div class="progress-dot" data-section="acceleration" title="Acceleration"></div>
+    <div class="progress-dot" data-section="foundations" title="Foundations"></div>
+    <div class="progress-dot" data-section="quiz" title="Quiz"></div>
+    <div class="progress-dot" data-section="project" title="Project"></div>
+  </nav>
+
+  <main class="lesson-container">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="hero section" data-section="hero">
+      <div class="hero-content">
+        <span class="hero-chapter">Chapter 1 • Week 1</span>
+        <div class="hero-icon">🚀</div>
+        <h1>The Junior Accelerator</h1>
+        <p class="hero-subtitle">
+          The old path from junior to senior took 5-10 years. With AI-augmented development, 
+          you can compress that journey into 1-2 years. Let's begin.
+        </p>
+        <div class="acceleration-badge">
+          ⚡ Fast-Track Mode Active
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Accelerate your growth</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         THE REALITY CHECK
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="reality">
+      <div class="section-content">
+        <h2 class="fade-in">🎯 The Reality Check</h2>
+        
+        <div class="story-block fade-in">
+          <p>
+            You're a junior engineer at a company. You're eager, you're learning, but 
+            there's a brutal truth: traditional career progression is <strong>slow</strong>. 
+            Most juniors spend 3-5 years before being considered "mid-level" and another 
+            2-5 years to reach senior.
+          </p>
+        </div>
+
+        <p class="fade-in">
+          But the rules have changed. AI tools like Cursor, Claude, and GitHub Copilot 
+          are force multipliers. With the right approach, you can:
+        </p>
+
+        <div class="concept-grid fade-in">
+          <div class="concept-card" style="border-top: 3px solid var(--accent-lightning);">
+            <div class="concept-card-icon">📚</div>
+            <h4>Learn 10x Faster</h4>
+            <p>AI explains code, patterns, and concepts on demand.</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-lightning);">
+            <div class="concept-card-icon">🏗️</div>
+            <h4>Build 5x More</h4>
+            <p>Ship features at a pace that impresses senior engineers.</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-lightning);">
+            <div class="concept-card-icon">🧠</div>
+            <h4>Think Like Seniors</h4>
+            <p>Focus on systems, not just tasks. See the bigger picture.</p>
+          </div>
+        </div>
+
+        <h3 class="fade-in">The Accelerated Career Path</h3>
+
+        <div class="career-path fade-in">
+          <div class="career-node current">
+            <div>👶 Junior</div>
+            <div class="career-time">Now</div>
+          </div>
+          <div class="career-arrow">→</div>
+          <div class="career-node">
+            <div>🧑‍💻 Mid-Level</div>
+            <div class="career-time">6-12 months</div>
+          </div>
+          <div class="career-arrow">→</div>
+          <div class="career-node target">
+            <div>🏆 Senior</div>
+            <div class="career-time">18-24 months</div>
+          </div>
+        </div>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">Traditional vs. Accelerated Path</div>
+          <div class="mermaid">
+            gantt
+                title Career Progression Comparison
+                dateFormat YYYY
+                section Traditional
+                Junior        :a1, 2024, 3y
+                Mid-Level     :a2, after a1, 3y
+                Senior        :a3, after a2, 2y
+                section Accelerated (AI-Augmented)
+                Junior        :b1, 2024, 1y
+                Mid-Level     :b2, after b1, 1y
+                Senior        :b3, after b2, 1y
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         ACCELERATION PRINCIPLES
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="acceleration">
+      <div class="section-content">
+        <h2 class="fade-in">⚡ The Acceleration Principles</h2>
+
+        <div class="story-block fade-in">
+          <p>
+            The difference between a 10-year journey and a 2-year journey isn't just 
+            about working harder. It's about working <strong>differently</strong>.
+          </p>
+        </div>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">The Junior Accelerator Framework</div>
+          <div class="mermaid">
+            mindmap
+              root((Accelerator))
+                Think Like an Architect
+                  Understand systems
+                  See patterns
+                  Design before build
+                Use AI Strategically
+                  Code generation
+                  Explanation on demand
+                  Review assistance
+                Build Visible Impact
+                  Ship features
+                  Fix production bugs
+                  Document systems
+                Learn Deliberately
+                  Read senior code
+                  Ask "why" not "how"
+                  Seek feedback
+          </div>
+        </div>
+
+        <h3 class="fade-in">What Seniors Actually Do (That Juniors Miss)</h3>
+
+        <table class="comparison-table fade-in" style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
+          <thead>
+            <tr style="background: var(--bg-tertiary);">
+              <th style="padding: 1rem; text-align: left;">Junior Behavior</th>
+              <th style="padding: 1rem; text-align: left;">Senior Behavior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asks "how do I implement this?"</td>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Asks "why are we building this? What problem does it solve?"</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Writes code immediately</td>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Diagrams the solution first, then codes</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Finishes the task assigned</td>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Considers edge cases, docs, tests, deployment</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Waits for code review feedback</td>
+              <td style="padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1);">Self-reviews with AI, catches issues before PR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         FOUNDATIONS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="foundations">
+      <div class="section-content">
+        <h2 class="fade-in">🪨 The Stone: Data Foundations at Scale</h2>
+
+        <p class="fade-in">
+          You know variables, types, and basic data structures. But do you understand 
+          them at <strong>production scale</strong>? Let's level up.
+        </p>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python - Production Patterns</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># Junior code: works but fragile</span>
+<span class="keyword">def</span> <span class="function">get_user</span>(user_id):
+    user = db.query(<span class="string">f"SELECT * FROM users WHERE id = </span>{user_id}<span class="string">"</span>)
+    <span class="keyword">return</span> user
+
+<span class="comment"># Senior code: secure, typed, documented</span>
+<span class="keyword">from</span> typing <span class="keyword">import</span> Optional
+<span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass
+
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> <span class="function">User</span>:
+    <span class="string">"""Represents a user in the system."""</span>
+    id: <span class="variable">int</span>
+    name: <span class="variable">str</span>
+    email: <span class="variable">str</span>
+    is_active: <span class="variable">bool</span> = <span class="keyword">True</span>
+
+<span class="keyword">def</span> <span class="function">get_user</span>(user_id: <span class="variable">int</span>) -> Optional[User]:
+    <span class="string">"""
+    Retrieve a user by ID.
+    
+    Args:
+        user_id: The unique identifier of the user.
+        
+    Returns:
+        User object if found, None otherwise.
+        
+    Raises:
+        ValueError: If user_id is negative.
+    """</span>
+    <span class="keyword">if</span> user_id < <span class="number">0</span>:
+        <span class="keyword">raise</span> <span class="function">ValueError</span>(<span class="string">"user_id must be positive"</span>)
+    
+    <span class="comment"># Parameterized query prevents SQL injection</span>
+    result = db.query(<span class="string">"SELECT * FROM users WHERE id = %s"</span>, (user_id,))
+    <span class="keyword">return</span> User(**result) <span class="keyword">if</span> result <span class="keyword">else</span> <span class="keyword">None</span></code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>Key Differences:</strong> Type hints, dataclasses, docstrings, 
+              input validation, SQL injection prevention. This is what code review catches.
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>🤖 How AI Helps Here</h3>
+          <p>
+            Ask Cursor: <em>"Convert this function to production quality with type hints, 
+            docstrings, and error handling"</em> — and watch it transform junior code 
+            into senior code instantly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         QUIZ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="quiz">
+      <div class="section-content">
+        <div class="quiz-container" data-answer="C">
+          <div class="quiz-header">
+            <span class="quiz-icon">🧠</span>
+            <h3 class="quiz-title">Knowledge Check</h3>
+          </div>
+
+          <p class="quiz-question">
+            What's the MOST important behavior change for accelerating from junior to senior?
+          </p>
+
+          <div class="quiz-options">
+            <div class="quiz-option" data-value="A">
+              <span class="quiz-option-letter">A</span>
+              <span>Writing code faster</span>
+            </div>
+            <div class="quiz-option" data-value="B">
+              <span class="quiz-option-letter">B</span>
+              <span>Memorizing more syntax and APIs</span>
+            </div>
+            <div class="quiz-option" data-value="C">
+              <span class="quiz-option-letter">C</span>
+              <span>Thinking about systems and asking "why" before "how"</span>
+            </div>
+            <div class="quiz-option" data-value="D">
+              <span class="quiz-option-letter">D</span>
+              <span>Working longer hours</span>
+            </div>
+          </div>
+
+          <div class="quiz-feedback" 
+               data-correct-msg="Systems thinking is the key differentiator. AI can write code fast, but you provide the 'why'." 
+               data-incorrect-msg="Speed and knowledge help, but senior engineers are defined by how they THINK, not how fast they type.">
+          </div>
+
+          <button class="quiz-btn" disabled>Check Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="project">
+      <div class="section-content">
+        <h2 class="fade-in">🔨 Chapter Project: The Codebase Audit</h2>
+
+        <div class="story-block fade-in">
+          <p>
+            Pick a codebase you work on (or an open-source project). Analyze one module 
+            through the lens of a senior engineer. Document what you find and propose 
+            improvements.
+          </p>
+        </div>
+
+        <div class="try-it-box fade-in">
+          <div class="try-it-header">
+            <span class="try-it-icon">🔍</span>
+            <h3 class="try-it-title">Audit Checklist</h3>
+          </div>
+
+          <ol class="try-it-steps">
+            <li>
+              <strong>Map the system</strong><br>
+              Create a component diagram of the module you're analyzing.
+            </li>
+            <li>
+              <strong>Identify data flows</strong><br>
+              What data goes in? What comes out? Create a sequence diagram.
+            </li>
+            <li>
+              <strong>Spot code smells</strong><br>
+              Ask Cursor: "Review this code for potential improvements"
+            </li>
+            <li>
+              <strong>Propose one improvement</strong><br>
+              Don't fix everything — focus on the highest-impact change.
+            </li>
+            <li>
+              <strong>Document your findings</strong><br>
+              Write a brief technical memo as if presenting to your team.
+            </li>
+          </ol>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>📦 Deliverables</h3>
+          <p>
+            Create <code>junior/ch1-stone/audit.md</code> with your component diagram, 
+            sequence diagram, findings, and improvement proposal.
+          </p>
+          <a href="../ch2-lightning/index.html" class="cta-btn">
+            <span>Continue to Chapter 2: Flow at Scale</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="lesson-nav">
+    <button class="nav-btn" onclick="location.href='../../index.html'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Course Home
+    </button>
+    <button class="nav-btn primary" onclick="location.href='../ch2-lightning/index.html'">
+      Chapter 2: Lightning
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="../../shared/js/lesson.js"></script>
+</body>
+</html>
+

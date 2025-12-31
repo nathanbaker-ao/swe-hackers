@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-tertiary: #1a1a2e;
+      --bg-card: #16162a;
+      
+      --text-primary: #e8e8f0;
+      --text-secondary: #a0a0b8;
+      --text-muted: #6a6a80;
+      
+      --accent-stone: #8d6e63;
+      --accent-lightning: #ffd54f;
+      --accent-magnetism: #7986cb;
+      --accent-architect: #4db6ac;
+      --accent-fire: #ef5350;
+      --accent-star: #ab47bc;
+      
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(77, 182, 172, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(255, 213, 79, 0.05) 0%, transparent 50%);
+    }
+    
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-magnetism) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    
+    .three-forces {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .force {
+      text-align: center;
+    }
+    
+    .force-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .force-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    .force-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    
+    /* Courses Grid */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--bg-tertiary), transparent);
+    }
+    
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    .course-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .course-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-magnetism);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .course-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .course-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    
+    .course-audience {
+      font-size: 0.875rem;
+      color: var(--accent-magnetism);
+      margin-bottom: 1rem;
+    }
+    
+    .course-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .course-meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .course-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: var(--bg-tertiary);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    
+    /* Color themes for cards */
+    .course-card.apprentice { border-top: 3px solid var(--accent-star); }
+    .course-card.bparker { border-top: 3px solid var(--accent-architect); }
+    .course-card.undergrad { border-top: 3px solid var(--accent-magnetism); }
+    .course-card.junior { border-top: 3px solid var(--accent-lightning); }
+    .course-card.senior { border-top: 3px solid var(--accent-fire); }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    footer a {
+      color: var(--accent-magnetism);
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      color: var(--accent-lightning);
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="hero">
+    <h1>AutoNateAI Learning Hub</h1>
+    <p>
+      Master the art of AI-augmented software development. Think like an architect, 
+      build like a pro, and harness AI as your force multiplier.
+    </p>
+    
+    <div class="three-forces">
+      <div class="force">
+        <div class="force-icon">🪨</div>
+        <div class="force-name">Stone</div>
+        <div class="force-desc">Memory & Persistence</div>
+      </div>
+      <div class="force">
+        <div class="force-icon">⚡</div>
+        <div class="force-name">Lightning</div>
+        <div class="force-desc">Flow & Logic</div>
+      </div>
+      <div class="force">
+        <div class="force-icon">🧲</div>
+        <div class="force-name">Magnetism</div>
+        <div class="force-desc">Connection & Integration</div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    
+    <h2 class="section-title">Choose Your Path</h2>
+    
+    <div class="courses-grid">
+      
+      <a href="apprentice/ch1-stone/index.html" class="course-card apprentice">
+        <div class="course-icon">🌟</div>
+        <h3>The Apprentice's Path</h3>
+        <div class="course-audience">For Complete Beginners</div>
+        <p>
+          Start your coding journey from scratch. Learn Python fundamentals through 
+          adventure and discovery. Perfect for students or career changers.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">6 weeks</span>
+          <span class="course-tag">Python</span>
+          <span class="course-tag">6 Projects</span>
+        </div>
+      </a>
+      
+      <a href="bparker/ch1-stone/index.html" class="course-card bparker">
+        <div class="course-icon">🏛️</div>
+        <h3>The Architect's Return</h3>
+        <div class="course-audience">For Career Returners</div>
+        <p>
+          You knew these lands. Reconnect with programming through modern AI tools 
+          and systems thinking. Transition from coder to architect.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">6 weeks</span>
+          <span class="course-tag">Python</span>
+          <span class="course-tag">AI-Augmented</span>
+        </div>
+      </a>
+      
+      <a href="undergrad/ch1-stone/index.html" class="course-card undergrad">
+        <div class="course-icon">🎓</div>
+        <h3>The Bridge to Industry</h3>
+        <div class="course-audience">For CS Students</div>
+        <p>
+          Bridge the gap between academic theory and industry practice. Prepare for 
+          interviews, internships, and your first engineering role.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">6 weeks</span>
+          <span class="course-tag">Python</span>
+          <span class="course-tag">Interview Prep</span>
+        </div>
+      </a>
+      
+      <a href="junior/ch1-stone/index.html" class="course-card junior">
+        <div class="course-icon">🚀</div>
+        <h3>The Junior Accelerator</h3>
+        <div class="course-audience">For Junior Engineers</div>
+        <p>
+          Skip years of slow progression. Fast-track from junior to mid/senior level 
+          in 1-2 years by leveraging AI and systems thinking.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">6 weeks</span>
+          <span class="course-tag">Python</span>
+          <span class="course-tag">Career Growth</span>
+        </div>
+      </a>
+      
+      <a href="senior/ch1-stone/index.html" class="course-card senior">
+        <div class="course-icon">⚔️</div>
+        <h3>The Senior Force Multiplier</h3>
+        <div class="course-audience">For Mid-to-Senior Engineers</div>
+        <p>
+          Multiply your impact with AI. Take on bigger projects, lead with diagrams, 
+          and extend your career longevity through efficiency.
+        </p>
+        <div class="course-meta">
+          <span class="course-tag">6 weeks</span>
+          <span class="course-tag">Python</span>
+          <span class="course-tag">Leadership</span>
+        </div>
+      </a>
+      
+    </div>
+    
+  </main>
+  
+  <footer>
+    <p>Built with 🧠 by <a href="https://github.com/nathanbaker-ao" target="_blank">Nathan Baker</a> • AutoNateAI</p>
+    <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+      <a href="https://github.com/nathanbaker-ao/swe-hackers" target="_blank">GitHub Repository</a>
+    </p>
+  </footer>
+  
+  <script>
+    // Animate cards on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.course-card').forEach((card, index) => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
+

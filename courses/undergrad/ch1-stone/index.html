@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: The Stone Remembers | Bridge to Industry</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/lesson.css">
+  
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <style>
+    :root {
+      --chapter-color: var(--accent-magnetism);
+    }
+    
+    .hero::before {
+      background: 
+        radial-gradient(ellipse at 30% 50%, rgba(121, 134, 203, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(63, 81, 181, 0.15) 0%, transparent 50%);
+    }
+    
+    .story-block {
+      border-left-color: var(--accent-magnetism);
+    }
+    
+    .story-block::before {
+      color: var(--accent-magnetism);
+    }
+
+    .did-you-know {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-left: 4px solid var(--accent-magnetism);
+    }
+
+    .did-you-know h4 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-magnetism);
+      margin-bottom: 0.75rem;
+    }
+
+    .did-you-know p {
+      margin-bottom: 0;
+    }
+
+    .classroom-vs-industry {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .classroom-vs-industry {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comparison-panel {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+
+    .comparison-panel.classroom {
+      border-top: 3px solid var(--text-muted);
+    }
+
+    .comparison-panel.industry {
+      border-top: 3px solid var(--accent-magnetism);
+    }
+
+    .comparison-panel h4 {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .interview-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      background: var(--accent-magnetism);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Progress Tracker (Side) -->
+  <nav class="progress-tracker">
+    <div class="progress-dot active" data-section="hero" title="Start"></div>
+    <div class="progress-dot" data-section="bridge" title="The Bridge"></div>
+    <div class="progress-dot" data-section="translation" title="Translation"></div>
+    <div class="progress-dot" data-section="industry" title="Industry Patterns"></div>
+    <div class="progress-dot" data-section="quiz" title="Quiz"></div>
+    <div class="progress-dot" data-section="project" title="Project"></div>
+  </nav>
+
+  <main class="lesson-container">
+    
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO SECTION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="hero section" data-section="hero">
+      <div class="hero-content">
+        <span class="hero-chapter">Chapter 1 • Week 1</span>
+        <div class="hero-icon">🎓</div>
+        <h1>The Bridge to Industry</h1>
+        <p class="hero-subtitle">
+          You've learned algorithms, data structures, and theory. Now let's connect 
+          that knowledge to how software is actually built in the real world.
+        </p>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Cross the bridge</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         THE BRIDGE
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="bridge">
+      <div class="section-content">
+        <h2 class="fade-in">🌉 The Bridge</h2>
+        
+        <div class="story-block fade-in">
+          <p>
+            Here's a secret your professors won't tell you: the gap between classroom 
+            CS and industry engineering is <strong>massive</strong>. But it doesn't 
+            have to be. Your academic foundation is solid — you just need a translation layer.
+          </p>
+        </div>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">Your Journey</div>
+          <div class="mermaid">
+            flowchart LR
+              subgraph CLASSROOM["🎓 Classroom"]
+                ALGO["Algorithms"]
+                DS["Data Structures"]
+                THEORY["Theory"]
+              end
+              
+              subgraph BRIDGE["🌉 This Course"]
+                PATTERNS["Design Patterns"]
+                TOOLS["Modern Tools"]
+                AI["AI-Augmented Dev"]
+              end
+              
+              subgraph INDUSTRY["💼 Industry"]
+                INTERN["Internship"]
+                JOB["Full-Time Role"]
+                GROWTH["Career Growth"]
+              end
+              
+              CLASSROOM --> BRIDGE
+              BRIDGE --> INDUSTRY
+              
+              style CLASSROOM fill:#2d2d44,stroke:#6a6a80
+              style BRIDGE fill:#2d2d44,stroke:#7986cb
+              style INDUSTRY fill:#2d2d44,stroke:#4caf50
+          </div>
+        </div>
+
+        <div class="did-you-know fade-in">
+          <h4>💡 Did You Know?</h4>
+          <p>
+            That binary search tree you implemented in Data Structures? Industry uses 
+            self-balancing variants (Red-Black, AVL) — but the <em>concept</em> is identical. 
+            Your knowledge transfers; you just need to see the connection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         TRANSLATION
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="translation">
+      <div class="section-content">
+        <h2 class="fade-in">🔄 The Translation Layer</h2>
+
+        <p class="fade-in">
+          Everything you learned in class maps to something in industry. Let's decode it:
+        </p>
+
+        <div class="classroom-vs-industry fade-in">
+          <div class="comparison-panel classroom">
+            <h4>🎓 In Your Courses</h4>
+            <ul class="skill-list" style="list-style: none;">
+              <li>• Linked lists, arrays, trees</li>
+              <li>• Big-O analysis</li>
+              <li>• Database normalization</li>
+              <li>• UML diagrams</li>
+              <li>• Software design principles</li>
+            </ul>
+          </div>
+          <div class="comparison-panel industry">
+            <h4>💼 In Industry</h4>
+            <ul class="skill-list" style="list-style: none;">
+              <li>• Choosing the right data store</li>
+              <li>• Performance optimization at scale</li>
+              <li>• Schema design for real products</li>
+              <li>• Architecture documentation</li>
+              <li>• Code review standards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python - Classroom vs. Industry</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="comment"># 🎓 Classroom: Implement a hash table from scratch</span>
+<span class="keyword">class</span> <span class="function">HashTable</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self, size=<span class="number">100</span>):
+        self.table = [[] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="function">range</span>(size)]
+    
+    <span class="keyword">def</span> <span class="function">_hash</span>(self, key):
+        <span class="keyword">return</span> <span class="function">hash</span>(key) % <span class="function">len</span>(self.table)
+    
+    <span class="keyword">def</span> <span class="function">put</span>(self, key, value):
+        bucket = self.table[self._hash(key)]
+        <span class="comment"># ... collision handling ...</span>
+
+<span class="comment"># 💼 Industry: Use the right tool for the job</span>
+<span class="keyword">from</span> typing <span class="keyword">import</span> Dict, Any
+
+<span class="comment"># Simple case: built-in dict (your hash table!)</span>
+cache: Dict[<span class="variable">str</span>, Any] = {}
+
+<span class="comment"># Distributed case: Redis</span>
+<span class="keyword">import</span> redis
+cache = redis.Redis(host=<span class="string">'localhost'</span>, port=<span class="number">6379</span>)
+cache.<span class="function">set</span>(<span class="string">'key'</span>, <span class="string">'value'</span>)
+
+<span class="comment"># Your hash table knowledge helps you understand WHY these work</span></code></pre>
+          </div>
+          <div class="code-caption">
+            <p>
+              <span class="icon">💡</span>
+              <strong>The Insight:</strong> You learned the fundamentals so you can 
+              understand and debug the abstractions. Interviewers test the fundamentals; 
+              industry uses the abstractions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         INDUSTRY PATTERNS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="industry">
+      <div class="section-content">
+        <h2 class="fade-in">🏭 Industry Patterns</h2>
+
+        <p class="fade-in">
+          These patterns appear in every production codebase. Learn them once, 
+          recognize them everywhere.
+        </p>
+
+        <div class="concept-grid fade-in">
+          <div class="concept-card" style="border-top: 3px solid var(--accent-magnetism);">
+            <div class="concept-card-icon">🔄</div>
+            <h4>Repository Pattern</h4>
+            <p>Abstract data access. Your code doesn't care if it's SQL, NoSQL, or an API.</p>
+            <span class="interview-badge">Common Interview Topic</span>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-magnetism);">
+            <div class="concept-card-icon">🏭</div>
+            <h4>Factory Pattern</h4>
+            <p>Create objects without exposing creation logic. Seen in every framework.</p>
+            <span class="interview-badge">Common Interview Topic</span>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-magnetism);">
+            <div class="concept-card-icon">👀</div>
+            <h4>Observer Pattern</h4>
+            <p>React to changes. Foundation of event-driven systems and reactive UIs.</p>
+          </div>
+          
+          <div class="concept-card" style="border-top: 3px solid var(--accent-magnetism);">
+            <div class="concept-card-icon">🎯</div>
+            <h4>Dependency Injection</h4>
+            <p>Pass dependencies in, don't create them internally. Enables testing.</p>
+            <span class="interview-badge">Common Interview Topic</span>
+          </div>
+        </div>
+
+        <div class="diagram-container scale-in">
+          <div class="diagram-title">Repository Pattern Example</div>
+          <div class="mermaid">
+            classDiagram
+                class UserService {
+                    -repository: UserRepository
+                    +get_user(id): User
+                    +create_user(data): User
+                }
+                
+                class UserRepository {
+                    <<interface>>
+                    +find_by_id(id): User
+                    +save(user): User
+                }
+                
+                class PostgresUserRepo {
+                    +find_by_id(id): User
+                    +save(user): User
+                }
+                
+                class MongoUserRepo {
+                    +find_by_id(id): User
+                    +save(user): User
+                }
+                
+                class MockUserRepo {
+                    +find_by_id(id): User
+                    +save(user): User
+                }
+                
+                UserService --> UserRepository
+                PostgresUserRepo ..|> UserRepository
+                MongoUserRepo ..|> UserRepository
+                MockUserRepo ..|> UserRepository
+          </div>
+        </div>
+
+        <div class="did-you-know fade-in">
+          <h4>💡 Did You Know?</h4>
+          <p>
+            The Liskov Substitution Principle from your OOP class? That's exactly what 
+            makes the Repository Pattern work — any implementation can be swapped in 
+            without changing the service code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         QUIZ
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="quiz">
+      <div class="section-content">
+        <div class="quiz-container" data-answer="C">
+          <div class="quiz-header">
+            <span class="quiz-icon">🧠</span>
+            <h3 class="quiz-title">Knowledge Check</h3>
+          </div>
+
+          <p class="quiz-question">
+            Why does industry prefer the Repository Pattern over direct database calls?
+          </p>
+
+          <div class="quiz-options">
+            <div class="quiz-option" data-value="A">
+              <span class="quiz-option-letter">A</span>
+              <span>It's faster at runtime</span>
+            </div>
+            <div class="quiz-option" data-value="B">
+              <span class="quiz-option-letter">B</span>
+              <span>It uses less memory</span>
+            </div>
+            <div class="quiz-option" data-value="C">
+              <span class="quiz-option-letter">C</span>
+              <span>It enables testing with mocks and swapping databases without changing business logic</span>
+            </div>
+            <div class="quiz-option" data-value="D">
+              <span class="quiz-option-letter">D</span>
+              <span>It's required by Python</span>
+            </div>
+          </div>
+
+          <div class="quiz-feedback" 
+               data-correct-msg="This is the key insight: abstraction enables testability and flexibility. This is the 'D' in SOLID (Dependency Inversion)." 
+               data-incorrect-msg="The Repository Pattern is about abstraction, not performance. It lets you test without a real database.">
+          </div>
+
+          <button class="quiz-btn" disabled>Check Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="section" data-section="project">
+      <div class="section-content">
+        <h2 class="fade-in">🔨 Chapter Project: The Production Data Layer</h2>
+
+        <div class="story-block fade-in">
+          <p>
+            Build a data access layer using the Repository Pattern. You'll create 
+            an interface, multiple implementations (in-memory for testing, file-based 
+            for persistence), and demonstrate the flexibility.
+          </p>
+        </div>
+
+        <div class="try-it-box fade-in">
+          <div class="try-it-header">
+            <span class="try-it-icon">🏗️</span>
+            <h3 class="try-it-title">Requirements</h3>
+          </div>
+
+          <ol class="try-it-steps">
+            <li>
+              <strong>Define the Interface</strong><br>
+              Create an abstract base class <code>UserRepository</code> with CRUD methods.
+            </li>
+            <li>
+              <strong>In-Memory Implementation</strong><br>
+              Build <code>InMemoryUserRepo</code> using a dict. Perfect for tests.
+            </li>
+            <li>
+              <strong>JSON File Implementation</strong><br>
+              Build <code>JsonFileUserRepo</code> that persists to a JSON file.
+            </li>
+            <li>
+              <strong>Service Layer</strong><br>
+              Create <code>UserService</code> that accepts any repository implementation.
+            </li>
+            <li>
+              <strong>Write Tests</strong><br>
+              Test UserService using InMemoryUserRepo — no file I/O needed!
+            </li>
+          </ol>
+        </div>
+
+        <div class="code-block scale-in">
+          <div class="code-header">
+            <span class="code-language">Python - Starter Structure</span>
+            <button class="code-copy">Copy</button>
+          </div>
+          <div class="code-content">
+            <pre><code><span class="keyword">from</span> abc <span class="keyword">import</span> ABC, abstractmethod
+<span class="keyword">from</span> dataclasses <span class="keyword">import</span> dataclass
+<span class="keyword">from</span> typing <span class="keyword">import</span> Optional, List
+
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> <span class="function">User</span>:
+    id: <span class="variable">int</span>
+    name: <span class="variable">str</span>
+    email: <span class="variable">str</span>
+
+<span class="keyword">class</span> <span class="function">UserRepository</span>(ABC):
+    <span class="string">"""Abstract interface for user data access."""</span>
+    
+    <span class="keyword">@abstractmethod</span>
+    <span class="keyword">def</span> <span class="function">find_by_id</span>(self, user_id: <span class="variable">int</span>) -> Optional[User]:
+        <span class="keyword">pass</span>
+    
+    <span class="keyword">@abstractmethod</span>
+    <span class="keyword">def</span> <span class="function">save</span>(self, user: User) -> User:
+        <span class="keyword">pass</span>
+    
+    <span class="keyword">@abstractmethod</span>
+    <span class="keyword">def</span> <span class="function">delete</span>(self, user_id: <span class="variable">int</span>) -> <span class="variable">bool</span>:
+        <span class="keyword">pass</span>
+    
+    <span class="keyword">@abstractmethod</span>
+    <span class="keyword">def</span> <span class="function">find_all</span>(self) -> List[User]:
+        <span class="keyword">pass</span>
+
+<span class="comment"># TODO: Implement InMemoryUserRepo</span>
+<span class="comment"># TODO: Implement JsonFileUserRepo</span>
+<span class="comment"># TODO: Implement UserService</span></code></pre>
+          </div>
+        </div>
+
+        <div class="cta-box fade-in">
+          <h3>📦 Deliverables</h3>
+          <p>
+            Create <code>undergrad/ch1-stone/</code> with:
+            <br>• <code>models.py</code> — User dataclass
+            <br>• <code>repository.py</code> — Abstract class + implementations
+            <br>• <code>service.py</code> — UserService
+            <br>• <code>test_service.py</code> — Tests using InMemoryUserRepo
+          </p>
+          <a href="../ch2-lightning/index.html" class="cta-btn">
+            <span>Continue to Chapter 2: Control Flow at Scale</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="lesson-nav">
+    <button class="nav-btn" onclick="location.href='../../index.html'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Course Home
+    </button>
+    <button class="nav-btn primary" onclick="location.href='../ch2-lightning/index.html'">
+      Chapter 2: Lightning
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="../../shared/js/lesson.js"></script>
+</body>
+</html>
+
