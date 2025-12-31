@@ -129,12 +129,18 @@
       background: linear-gradient(90deg, var(--bg-tertiary), transparent);
     }
     
-    /* Courses Grid */
+    /* Courses Grid - 2x2 on desktop, 1 column on mobile */
     .courses-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       margin-bottom: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
     }
     
     .course-card {
