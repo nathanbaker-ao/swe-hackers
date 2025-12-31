@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 4: The Age of Architects | AutoNateAI Apprentice</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: var(--accent-architect);
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(77, 182, 172, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(0, 150, 136, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .story-block {
+        border-left-color: var(--accent-architect);
+      }
+
+      .story-block::before {
+        color: var(--accent-architect);
+      }
+
+      /* Evolution timeline */
+      .timeline-simple {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+      }
+
+      .timeline-item-simple {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-md);
+        min-width: 120px;
+        transition: all 0.3s ease;
+      }
+
+      .timeline-item-simple:hover {
+        transform: translateY(-5px);
+        background: var(--bg-tertiary);
+      }
+
+      .timeline-item-simple.current {
+        border: 2px solid var(--accent-architect);
+        background: rgba(77, 182, 172, 0.1);
+      }
+
+      .timeline-emoji {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: center;
+      }
+
+      /* Skills comparison */
+      .skills-vs {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1rem;
+        align-items: start;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 768px) {
+        .skills-vs {
+          grid-template-columns: 1fr;
+        }
+        .vs-divider {
+          transform: rotate(90deg);
+        }
+      }
+
+      .skills-column {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+      }
+
+      .skills-column.old {
+        border-top: 3px solid var(--accent-fire);
+      }
+
+      .skills-column.new {
+        border-top: 3px solid var(--accent-architect);
+      }
+
+      .skills-column h4 {
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .skills-column ul {
+        list-style: none;
+      }
+
+      .skills-column li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .vs-divider {
+        font-size: 2rem;
+        color: var(--text-muted);
+        align-self: center;
+      }
+
+      /* Diagram examples */
+      .diagram-example {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        margin: 1.5rem 0;
+        overflow: hidden;
+      }
+
+      .diagram-example-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: var(--bg-tertiary);
+      }
+
+      .diagram-example-title {
+        font-weight: 600;
+        color: var(--accent-architect);
+      }
+
+      .diagram-example-use {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      .diagram-example-body {
+        padding: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Progress Tracker (Side) -->
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="story" title="The Story"></div>
+      <div class="progress-dot" data-section="evolution" title="Evolution"></div>
+      <div class="progress-dot" data-section="skills" title="New Skills"></div>
+      <div class="progress-dot" data-section="diagrams" title="Diagrams"></div>
+      <div class="progress-dot" data-section="quiz" title="Quiz"></div>
+      <div class="progress-dot" data-section="project" title="Project"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO SECTION -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Chapter 4 • Week 4</span>
+          <div class="hero-icon">🏛️</div>
+          <h1>The Age of Architects</h1>
+          <p class="hero-subtitle">
+            The world of coding has changed. Now you can work <strong>with</strong>
+            AI to build things faster than ever before.
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Enter the new age</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- THE STORY -->
+      <section class="section" data-section="story">
+        <div class="section-content">
+          <h2 class="fade-in">🌅 The Story</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Imagine you're building a house. In the old days, you had to make
+              every brick by hand, one by one. It took forever! Then machines
+              came along that could make bricks faster. But you still had to
+              stack them yourself.
+            </p>
+          </div>
+
+          <p class="fade-in">
+            Now, imagine you have a super-smart robot helper. You tell it:
+            "Build me a wall here, make it 10 feet tall, paint it blue." And it
+            does it! You're no longer just a brick-stacker — you're an <strong>architect</strong>
+            who designs and directs.
+          </p>
+
+          <p class="fade-in">
+            That's what AI coding tools like <strong>Cursor</strong> do for programmers.
+            You don't have to type every single line of code. You can describe what
+            you want, and AI helps you build it!
+          </p>
+
+          <div class="cta-box fade-in">
+            <h3>💡 The Big Idea</h3>
+            <p>
+              Your job isn't to type as fast as possible. Your job is to <strong>think
+              clearly</strong> and <strong>communicate well</strong>. The AI does the typing.
+              You do the thinking.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVOLUTION -->
+      <section class="section" data-section="evolution">
+        <div class="section-content">
+          <h2 class="fade-in">📜 How Coding Has Changed</h2>
+
+          <p class="fade-in">
+            Coding has gone through different "ages" — each one making it easier
+            to build things:
+          </p>
+
+          <div class="timeline-simple fade-in">
+            <div class="timeline-item-simple">
+              <div class="timeline-emoji">🪨</div>
+              <div class="timeline-label">Stone Age<br />Punch cards</div>
+            </div>
+            <div class="timeline-item-simple">
+              <div class="timeline-emoji">⚒️</div>
+              <div class="timeline-label">Bronze Age<br />Real keyboards</div>
+            </div>
+            <div class="timeline-item-simple">
+              <div class="timeline-emoji">🔩</div>
+              <div class="timeline-label">Iron Age<br />Frameworks</div>
+            </div>
+            <div class="timeline-item-simple current">
+              <div class="timeline-emoji">🏛️</div>
+              <div class="timeline-label">Architects<br />AI helpers</div>
+            </div>
+          </div>
+
+          <div class="story-block fade-in">
+            <p>
+              Right now, we're entering the <strong>Age of Architects</strong>. This is an
+              exciting time! Programmers who learn to work with AI will be able to
+              build amazing things faster than ever before.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW SKILLS -->
+      <section class="section" data-section="skills">
+        <div class="section-content">
+          <h2 class="fade-in">🔄 Old Skills vs. New Skills</h2>
+
+          <p class="fade-in">
+            Some skills are less important now. Others are MORE important. Here's
+            what's changed:
+          </p>
+
+          <div class="skills-vs fade-in">
+            <div class="skills-column old">
+              <h4>❌ Less Important Now</h4>
+              <ul>
+                <li>📝 Memorizing every command</li>
+                <li>⌨️ Typing super fast</li>
+                <li>💻 Writing every line by hand</li>
+                <li>🔍 Remembering tiny details</li>
+              </ul>
+            </div>
+
+            <div class="vs-divider">→</div>
+
+            <div class="skills-column new">
+              <h4>✅ More Important Now</h4>
+              <ul>
+                <li>🧠 Understanding how things work</li>
+                <li>💬 Explaining clearly what you want</li>
+                <li>👀 Reading and checking code</li>
+                <li>📊 Drawing diagrams to plan</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>🎯 Your Superpower</h3>
+            <p>
+              The best programmers aren't the fastest typists. They're the best
+              <strong>thinkers</strong> and <strong>communicators</strong>. If you can explain
+              what you want clearly, AI can help you build it!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DIAGRAMS -->
+      <section class="section" data-section="diagrams">
+        <div class="section-content">
+          <h2 class="fade-in">📊 Drawing Your Ideas</h2>
+
+          <p class="fade-in">
+            Before you build something, it helps to <strong>draw it out</strong>. Diagrams
+            help you (and AI!) understand what you're trying to create.
+          </p>
+
+          <p class="fade-in">
+            Here are some simple diagram types you can use:
+          </p>
+
+          <div class="diagram-example fade-in">
+            <div class="diagram-example-header">
+              <span class="diagram-example-title">📊 Flowchart</span>
+              <span class="diagram-example-use">Shows steps and decisions</span>
+            </div>
+            <div class="diagram-example-body">
+              <div class="mermaid">
+                flowchart TD
+                  START([Start Game]) --> ASK{Ask Question}
+                  ASK --> CHECK{Right Answer?}
+                  CHECK -->|Yes| ADD[Add Point]
+                  CHECK -->|No| WRONG[Show Correct Answer]
+                  ADD --> MORE{More Questions?}
+                  WRONG --> MORE
+                  MORE -->|Yes| ASK
+                  MORE -->|No| END([Show Score])
+
+                  style START fill:#4db6ac,color:#fff
+                  style END fill:#4db6ac,color:#fff
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-example fade-in">
+            <div class="diagram-example-header">
+              <span class="diagram-example-title">🔄 Sequence Diagram</span>
+              <span class="diagram-example-use">Shows who talks to who</span>
+            </div>
+            <div class="diagram-example-body">
+              <div class="mermaid">
+                sequenceDiagram
+                  participant Player
+                  participant Game
+                  participant Score
+
+                  Player->>Game: Start
+                  Game->>Player: Show question
+                  Player->>Game: Answer
+                  Game->>Score: Update points
+                  Score-->>Game: New score
+                  Game-->>Player: Right or wrong!
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-example fade-in">
+            <div class="diagram-example-header">
+              <span class="diagram-example-title">📦 Box Diagram</span>
+              <span class="diagram-example-use">Shows the parts of your program</span>
+            </div>
+            <div class="diagram-example-body">
+              <div class="mermaid">
+                graph TD
+                  subgraph GAME["🎮 Quiz Game"]
+                    QUESTIONS["Questions List"]
+                    SCORE["Score Counter"]
+                    UI["User Interface"]
+                  end
+
+                  UI --> QUESTIONS
+                  QUESTIONS --> SCORE
+                  SCORE --> UI
+
+                  style GAME fill:#2d2d44,stroke:#4db6ac
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>🖊️ Pro Tip: Sketch First!</h3>
+            <p>
+              Before you ask AI to help you code something, try drawing a simple
+              diagram on paper or in your notes. It helps you think through the
+              problem!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIZ -->
+      <section class="section" data-section="quiz">
+        <div class="section-content">
+          <div class="quiz-container" data-answer="C">
+            <div class="quiz-header">
+              <span class="quiz-icon">🧠</span>
+              <h3 class="quiz-title">Knowledge Check</h3>
+            </div>
+
+            <p class="quiz-question">
+              In the Age of Architects, what's the MOST important skill for a programmer?
+            </p>
+
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="A">
+                <span class="quiz-option-letter">A</span>
+                <span>Typing really fast</span>
+              </div>
+              <div class="quiz-option" data-value="B">
+                <span class="quiz-option-letter">B</span>
+                <span>Memorizing every command</span>
+              </div>
+              <div class="quiz-option" data-value="C">
+                <span class="quiz-option-letter">C</span>
+                <span>Thinking clearly and explaining what you want</span>
+              </div>
+              <div class="quiz-option" data-value="D">
+                <span class="quiz-option-letter">D</span>
+                <span>Writing code without any help</span>
+              </div>
+            </div>
+
+            <div
+              class="quiz-feedback"
+              data-correct-msg="Exactly! AI can type the code, but YOU need to think and communicate clearly!"
+              data-incorrect-msg="Remember: AI helps with typing. YOUR job is thinking and communicating!"
+            ></div>
+
+            <button class="quiz-btn" disabled>Check Answer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section class="section" data-section="project">
+        <div class="section-content">
+          <h2 class="fade-in">🔨 Chapter Project: System Canvas</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Pick an app you use every day (a game, social media, anything!).
+              Your job is to <strong>think like an architect</strong> and draw diagrams
+              showing how it might work.
+            </p>
+          </div>
+
+          <h3 class="fade-in">Your Mission</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card" style="border-top: 3px solid var(--accent-architect);">
+              <div class="concept-card-icon">📊</div>
+              <h4>Flowchart</h4>
+              <p>Draw the steps a user takes to do one thing (like posting a photo)</p>
+            </div>
+
+            <div class="concept-card" style="border-top: 3px solid var(--accent-architect);">
+              <div class="concept-card-icon">🔄</div>
+              <h4>Sequence</h4>
+              <p>Show who "talks" to who (user → app → server)</p>
+            </div>
+
+            <div class="concept-card" style="border-top: 3px solid var(--accent-architect);">
+              <div class="concept-card-icon">📦</div>
+              <h4>Box Diagram</h4>
+              <p>Draw the main parts of the app (like boxes)</p>
+            </div>
+          </div>
+
+          <h3 class="fade-in">Then: Build Something Small!</h3>
+
+          <div class="try-it-box fade-in">
+            <div class="try-it-header">
+              <span class="try-it-icon">🤖</span>
+              <h3 class="try-it-title">Work with Cursor</h3>
+            </div>
+
+            <ol class="try-it-steps">
+              <li>
+                <strong>Pick one tiny feature</strong><br />
+                Like "a function that checks if a username is valid"
+              </li>
+              <li>
+                <strong>Write a clear description</strong><br />
+                "I need a function that takes a username and returns True if it's
+                3-20 characters with only letters and numbers"
+              </li>
+              <li>
+                <strong>Ask Cursor to help</strong><br />
+                Press Cmd+K (or Ctrl+K on Windows) and type your description
+              </li>
+              <li>
+                <strong>Read and understand the code</strong><br />
+                Don't just copy — make sure you understand every line!
+              </li>
+            </ol>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>📦 Save Your Work!</h3>
+            <div class="code-block" style="text-align: left; margin: 1rem 0">
+              <div class="code-content">
+                <pre><code>your-folder/ch4-architect/
+├── diagrams.md       <span class="comment"># Your 3 diagrams</span>
+├── feature.py        <span class="comment"># Code you built with AI</span>
+└── README.md         <span class="comment"># What you learned</span></code></pre>
+              </div>
+            </div>
+            <a href="../ch5-capstone1/index.html" class="cta-btn">
+              <span>Continue to Capstone I</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch3-magnetism/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Chapter 3
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../ch5-capstone1/index.html'">
+        Capstone I
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+  </body>
+</html>
+

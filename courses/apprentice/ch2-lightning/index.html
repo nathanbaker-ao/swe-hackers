@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 2: Lightning Strikes | AutoNateAI Apprentice</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: var(--accent-lightning);
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(255, 213, 79, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(255, 143, 0, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .story-block {
+        border-left-color: var(--accent-lightning);
+      }
+
+      .story-block::before {
+        color: var(--accent-lightning);
+      }
+
+      /* Decision tree visualization */
+      .decision-viz {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        padding: 2rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+      }
+
+      .decision-node {
+        padding: 1rem 2rem;
+        background: var(--accent-lightning);
+        color: var(--bg-primary);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .decision-node:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(255, 213, 79, 0.3);
+      }
+
+      .decision-branches {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .branch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .branch-label {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      .branch-result {
+        padding: 0.75rem 1.5rem;
+        background: var(--bg-tertiary);
+        border-radius: var(--radius-md);
+        border: 2px solid transparent;
+      }
+
+      .branch-result.yes {
+        border-color: var(--success);
+      }
+
+      .branch-result.no {
+        border-color: var(--accent-fire);
+      }
+
+      /* Loop visualization */
+      .loop-viz {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .loop-item {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-tertiary);
+        border: 2px solid var(--accent-lightning);
+        border-radius: var(--radius-md);
+        font-family: var(--font-mono);
+        font-weight: 600;
+        opacity: 0;
+        transform: scale(0);
+      }
+
+      .loop-item.active {
+        background: var(--accent-lightning);
+        color: var(--bg-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Progress Tracker (Side) -->
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="story" title="The Story"></div>
+      <div class="progress-dot" data-section="decisions" title="Decisions"></div>
+      <div class="progress-dot" data-section="if-else" title="If/Else"></div>
+      <div class="progress-dot" data-section="loops" title="Loops"></div>
+      <div class="progress-dot" data-section="quiz" title="Quiz"></div>
+      <div class="progress-dot" data-section="tryit" title="Try It"></div>
+      <div class="progress-dot" data-section="project" title="Project"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO SECTION -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Chapter 2 • Week 2</span>
+          <div class="hero-icon">⚡</div>
+          <h1>Lightning Strikes</h1>
+          <p class="hero-subtitle">
+            The stone remembers, but lightning <strong>decides</strong>. Learn
+            to make your programs think, choose, and repeat actions.
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Scroll to learn</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- THE STORY -->
+      <section class="section" data-section="story">
+        <div class="section-content">
+          <h2 class="fade-in">⚡ The Story</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Imagine you're playing a video game. When you reach a crossroads,
+              the game doesn't just randomly pick a path — it <strong>decides</strong>
+              based on your choices. "Did the player press left? Go left. Did they
+              press right? Go right."
+            </p>
+          </div>
+
+          <p class="fade-in">
+            This is <strong>control flow</strong> — the lightning that guides your
+            program's path. Without it, programs would just run straight through
+            like a train on tracks. With it, they can think, react, and repeat.
+          </p>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">Linear vs. Branching Programs</div>
+            <div class="mermaid">
+              flowchart LR
+                subgraph LINEAR["🚂 Without Control Flow"]
+                  A1[Step 1] --> A2[Step 2] --> A3[Step 3]
+                end
+
+                subgraph BRANCHING["⚡ With Control Flow"]
+                  B1[Start] --> B2{Decision?}
+                  B2 -->|Yes| B3[Path A]
+                  B2 -->|No| B4[Path B]
+                  B3 --> B5[Continue]
+                  B4 --> B5
+                end
+
+                style LINEAR fill:#2d2d44,stroke:#6a6a80
+                style BRANCHING fill:#2d2d44,stroke:#ffd54f
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DECISIONS -->
+      <section class="section" data-section="decisions">
+        <div class="section-content">
+          <h2 class="fade-in">🤔 Making Decisions</h2>
+
+          <p class="fade-in">
+            Every decision in programming is a <strong>yes or no question</strong>.
+            Is this true? Is that false? Based on the answer, the program takes
+            different paths.
+          </p>
+
+          <div class="decision-viz fade-in">
+            <div class="decision-node" onclick="this.parentElement.classList.toggle('answered')">
+              Is age >= 13?
+            </div>
+            <div class="decision-branches">
+              <div class="branch">
+                <span class="branch-label">✓ Yes (True)</span>
+                <div class="branch-result yes">Welcome to the app!</div>
+              </div>
+              <div class="branch">
+                <span class="branch-label">✗ No (False)</span>
+                <div class="branch-result no">Sorry, too young!</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="fade-in">Comparison Operators</h3>
+
+          <p class="fade-in">
+            To ask yes/no questions, we use <strong>comparison operators</strong>:
+          </p>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card lightning stagger-item">
+              <div class="concept-card-icon">==</div>
+              <h4>Equal To</h4>
+              <p><code>5 == 5</code> → True<br><code>5 == 3</code> → False</p>
+            </div>
+
+            <div class="concept-card lightning stagger-item">
+              <div class="concept-card-icon">!=</div>
+              <h4>Not Equal</h4>
+              <p><code>5 != 3</code> → True<br><code>5 != 5</code> → False</p>
+            </div>
+
+            <div class="concept-card lightning stagger-item">
+              <div class="concept-card-icon">&gt;</div>
+              <h4>Greater Than</h4>
+              <p><code>10 > 5</code> → True<br><code>3 > 7</code> → False</p>
+            </div>
+
+            <div class="concept-card lightning stagger-item">
+              <div class="concept-card-icon">&lt;</div>
+              <h4>Less Than</h4>
+              <p><code>3 < 7</code> → True<br><code>10 < 5</code> → False</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IF/ELSE -->
+      <section class="section" data-section="if-else">
+        <div class="section-content">
+          <h2 class="fade-in">🔀 If, Elif, Else</h2>
+
+          <p class="fade-in">
+            The <code>if</code> statement is how we tell Python to make decisions:
+          </p>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="variable">age</span> = <span class="number">15</span>
+
+<span class="keyword">if</span> age >= <span class="number">18</span>:
+    <span class="function">print</span>(<span class="string">"You can vote!"</span>)
+<span class="keyword">elif</span> age >= <span class="number">13</span>:
+    <span class="function">print</span>(<span class="string">"You're a teenager!"</span>)
+<span class="keyword">else</span>:
+    <span class="function">print</span>(<span class="string">"You're still a kid!"</span>)</code></pre>
+            </div>
+            <div class="code-caption">
+              <p>
+                <span class="icon">💡</span>
+                <strong>How it works:</strong> Python checks each condition from top
+                to bottom. The first one that's True wins!
+              </p>
+            </div>
+          </div>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">Decision Flow</div>
+            <div class="mermaid">
+              flowchart TD
+                START([age = 15]) --> CHECK1{age >= 18?}
+                CHECK1 -->|No| CHECK2{age >= 13?}
+                CHECK1 -->|Yes| VOTE["You can vote!"]
+                CHECK2 -->|Yes| TEEN["You're a teenager!"]
+                CHECK2 -->|No| KID["You're still a kid!"]
+
+                style TEEN fill:#ffd54f,color:#000
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>⚠️ Important: Indentation!</h3>
+            <p>
+              Notice how the code inside <code>if</code> is <strong>indented</strong>
+              (moved right with spaces). Python uses indentation to know what code
+              belongs to which condition. Always use 4 spaces!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOOPS -->
+      <section class="section" data-section="loops">
+        <div class="section-content">
+          <h2 class="fade-in">🔁 Loops: Repeat Yourself</h2>
+
+          <p class="fade-in">
+            What if you want to do something 10 times? 100 times? A million times?
+            You don't write the same code over and over — you use a <strong>loop</strong>.
+          </p>
+
+          <div class="story-block fade-in">
+            <p>
+              Imagine counting from 1 to 5. Instead of writing <code>print(1)</code>,
+              <code>print(2)</code>, <code>print(3)</code>... you tell the computer:
+              "For each number from 1 to 5, print it."
+            </p>
+          </div>
+
+          <h3 class="fade-in">The For Loop</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># Count from 1 to 5</span>
+<span class="keyword">for</span> number <span class="keyword">in</span> <span class="function">range</span>(<span class="number">1</span>, <span class="number">6</span>):
+    <span class="function">print</span>(number)
+
+<span class="comment"># Output: 1, 2, 3, 4, 5</span></code></pre>
+            </div>
+            <div class="code-caption">
+              <p>
+                <span class="icon">💡</span>
+                <strong>Why range(1, 6)?</strong> Python's <code>range</code> stops
+                BEFORE the second number. So <code>range(1, 6)</code> gives you 1, 2, 3, 4, 5.
+              </p>
+            </div>
+          </div>
+
+          <p class="fade-in">Click the button to see the loop in action:</p>
+
+          <div class="loop-viz fade-in" id="loopDemo">
+            <div class="loop-item">1</div>
+            <div class="loop-item">2</div>
+            <div class="loop-item">3</div>
+            <div class="loop-item">4</div>
+            <div class="loop-item">5</div>
+          </div>
+
+          <button class="quiz-btn" onclick="animateLoop()" style="margin: 0 auto; display: block;">
+            ▶ Run the Loop
+          </button>
+
+          <h3 class="fade-in" style="margin-top: 2rem;">Looping Through Lists</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="variable">colors</span> = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>]
+
+<span class="keyword">for</span> color <span class="keyword">in</span> colors:
+    <span class="function">print</span>(<span class="string">f"I like </span>{color}<span class="string">!"</span>)
+
+<span class="comment"># Output:</span>
+<span class="comment"># I like red!</span>
+<span class="comment"># I like green!</span>
+<span class="comment"># I like blue!</span></code></pre>
+            </div>
+          </div>
+
+          <h3 class="fade-in">The While Loop</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="comment"># Keep asking until they guess right</span>
+<span class="variable">secret</span> = <span class="number">7</span>
+<span class="variable">guess</span> = <span class="number">0</span>
+
+<span class="keyword">while</span> guess != secret:
+    guess = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Guess the number: "</span>))
+    <span class="keyword">if</span> guess < secret:
+        <span class="function">print</span>(<span class="string">"Too low!"</span>)
+    <span class="keyword">elif</span> guess > secret:
+        <span class="function">print</span>(<span class="string">"Too high!"</span>)
+
+<span class="function">print</span>(<span class="string">"You got it!"</span>)</code></pre>
+            </div>
+            <div class="code-caption">
+              <p>
+                <span class="icon">⚠️</span>
+                <strong>Be careful!</strong> A <code>while</code> loop keeps going
+                as long as the condition is True. Make sure it can eventually become False!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIZ -->
+      <section class="section" data-section="quiz">
+        <div class="section-content">
+          <div class="quiz-container" data-answer="C">
+            <div class="quiz-header">
+              <span class="quiz-icon">🧠</span>
+              <h3 class="quiz-title">Knowledge Check</h3>
+            </div>
+
+            <div class="quiz-progress">
+              <div class="quiz-progress-dot active"></div>
+              <div class="quiz-progress-dot"></div>
+            </div>
+
+            <p class="quiz-question">
+              What will this code print?
+              <br /><br />
+              <code>
+                for i in range(3):<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+              </code>
+            </p>
+
+            <div class="quiz-options">
+              <div class="quiz-option" data-value="A">
+                <span class="quiz-option-letter">A</span>
+                <span>1, 2, 3</span>
+              </div>
+              <div class="quiz-option" data-value="B">
+                <span class="quiz-option-letter">B</span>
+                <span>1, 2</span>
+              </div>
+              <div class="quiz-option" data-value="C">
+                <span class="quiz-option-letter">C</span>
+                <span>0, 1, 2</span>
+              </div>
+              <div class="quiz-option" data-value="D">
+                <span class="quiz-option-letter">D</span>
+                <span>0, 1, 2, 3</span>
+              </div>
+            </div>
+
+            <div
+              class="quiz-feedback"
+              data-correct-msg="range(3) starts at 0 and goes up to (but not including) 3!"
+              data-incorrect-msg="Remember: range() starts at 0 by default and stops BEFORE the number you give it."
+            ></div>
+
+            <button class="quiz-btn" disabled>Check Answer</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT -->
+      <section class="section" data-section="tryit">
+        <div class="section-content">
+          <div class="try-it-box">
+            <div class="try-it-header">
+              <span class="try-it-icon">⚡</span>
+              <h3 class="try-it-title">Try It Yourself!</h3>
+            </div>
+
+            <p>Build a simple password checker:</p>
+
+            <ol class="try-it-steps">
+              <li>
+                <strong>Create a new file</strong><br />
+                Save it as <code>password_checker.py</code>
+              </li>
+              <li>
+                <strong>Type this code</strong><br />
+                <div class="code-block" style="margin-top: 0.5rem">
+                  <div class="code-content">
+                    <pre><code><span class="variable">password</span> = <span class="string">"secret123"</span>
+<span class="variable">attempts</span> = <span class="number">3</span>
+
+<span class="keyword">while</span> attempts > <span class="number">0</span>:
+    guess = <span class="function">input</span>(<span class="string">"Enter password: "</span>)
+
+    <span class="keyword">if</span> guess == password:
+        <span class="function">print</span>(<span class="string">"Access granted! ✓"</span>)
+        <span class="keyword">break</span>  <span class="comment"># Exit the loop</span>
+    <span class="keyword">else</span>:
+        attempts = attempts - <span class="number">1</span>
+        <span class="function">print</span>(<span class="string">f"Wrong! </span>{attempts}<span class="string"> attempts left."</span>)
+
+<span class="keyword">if</span> attempts == <span class="number">0</span>:
+    <span class="function">print</span>(<span class="string">"Locked out! 🔒"</span>)</code></pre>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <strong>Run it</strong><br />
+                <code>python password_checker.py</code>
+              </li>
+              <li>
+                <strong>Experiment!</strong><br />
+                Try wrong passwords, then try the right one. What happens?
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section class="section" data-section="project">
+        <div class="section-content">
+          <h2 class="fade-in">🔨 Chapter Project: Number Guesser</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              Build a game where the computer picks a random number and the player
+              has to guess it! The computer gives hints: "Too high!" or "Too low!"
+            </p>
+          </div>
+
+          <div class="terminal fade-in">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-input">python number_guesser.py</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">🎯 NUMBER GUESSER 🎯</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">I'm thinking of a number between 1 and 100...</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">Your guess: </span>
+                <span class="terminal-input" style="color: #ffd54f">50</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">Too high! Try again.</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">Your guess: </span>
+                <span class="terminal-input" style="color: #ffd54f">25</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">Too low! Try again.</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output">Your guess: </span>
+                <span class="terminal-input" style="color: #ffd54f">37</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-output success">🎉 Correct! You got it in 3 tries!</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="fade-in">Starter Code</h3>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python - number_guesser.py</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="keyword">import</span> random
+
+<span class="comment"># Pick a random number between 1 and 100</span>
+<span class="variable">secret_number</span> = random.<span class="function">randint</span>(<span class="number">1</span>, <span class="number">100</span>)
+<span class="variable">attempts</span> = <span class="number">0</span>
+<span class="variable">guessed</span> = <span class="keyword">False</span>
+
+<span class="function">print</span>(<span class="string">"🎯 NUMBER GUESSER 🎯"</span>)
+<span class="function">print</span>(<span class="string">"I'm thinking of a number between 1 and 100..."</span>)
+
+<span class="keyword">while</span> <span class="keyword">not</span> guessed:
+    guess = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"Your guess: "</span>))
+    attempts = attempts + <span class="number">1</span>
+
+    <span class="keyword">if</span> guess < secret_number:
+        <span class="function">print</span>(<span class="string">"Too low! Try again."</span>)
+    <span class="keyword">elif</span> guess > secret_number:
+        <span class="function">print</span>(<span class="string">"Too high! Try again."</span>)
+    <span class="keyword">else</span>:
+        guessed = <span class="keyword">True</span>
+        <span class="function">print</span>(<span class="string">f"🎉 Correct! You got it in </span>{attempts}<span class="string"> tries!"</span>)</code></pre>
+            </div>
+            <div class="code-caption">
+              <p>
+                <span class="icon">🚀</span>
+                <strong>Challenge:</strong> Add a maximum number of attempts! If they
+                run out, reveal the answer and say "Game Over!"
+              </p>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>📦 Save Your Work!</h3>
+            <p>Create your project in:</p>
+            <div class="code-block" style="text-align: left; margin: 1rem 0">
+              <div class="code-content">
+                <pre><code>your-folder/ch2-lightning/
+├── number_guesser.py     <span class="comment"># Your game</span>
+└── README.md             <span class="comment"># How to play</span></code></pre>
+              </div>
+            </div>
+            <a href="../ch3-magnetism/index.html" class="cta-btn">
+              <span>Continue to Chapter 3</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch1-stone/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Chapter 1
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../ch3-magnetism/index.html'">
+        Chapter 3: Magnetism
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+
+    <script>
+      // Animate the loop demonstration
+      function animateLoop() {
+        const items = document.querySelectorAll('.loop-item');
+        items.forEach(item => {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0)';
+          item.classList.remove('active');
+        });
+
+        anime({
+          targets: '.loop-item',
+          opacity: [0, 1],
+          scale: [0, 1],
+          delay: anime.stagger(300),
+          duration: 400,
+          easing: 'easeOutElastic(1, .5)',
+          complete: function() {
+            // Highlight each one in sequence
+            items.forEach((item, index) => {
+              setTimeout(() => {
+                items.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+              }, index * 500 + 1500);
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
+

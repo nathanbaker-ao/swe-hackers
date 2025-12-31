@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone II: AI Helper | AutoNateAI Apprentice</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared/css/lesson.css" />
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --chapter-color: #ff6f00;
+        --accent-final: linear-gradient(135deg, #ab47bc 0%, #ff6f00 100%);
+      }
+
+      .hero::before {
+        background: radial-gradient(
+            ellipse at 30% 50%,
+            rgba(255, 111, 0, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 70% 30%,
+            rgba(171, 71, 188, 0.15) 0%,
+            transparent 50%
+          );
+      }
+
+      .hero-icon {
+        background: var(--accent-final);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .story-block {
+        border-left-color: #ff6f00;
+      }
+
+      .story-block::before {
+        color: #ff6f00;
+      }
+
+      /* Chat preview */
+      .chat-preview {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .chat-message {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .chat-message:last-child {
+        margin-bottom: 0;
+      }
+
+      .chat-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .chat-avatar.user {
+        background: var(--accent-magnetism);
+      }
+
+      .chat-avatar.ai {
+        background: #ff6f00;
+      }
+
+      .chat-bubble {
+        background: var(--bg-tertiary);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-md);
+        flex-grow: 1;
+      }
+
+      .chat-bubble.ai {
+        background: rgba(255, 111, 0, 0.1);
+        border: 1px solid rgba(255, 111, 0, 0.3);
+      }
+
+      /* Feature cards */
+      .feature-showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .feature-card {
+        background: var(--bg-secondary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        text-align: center;
+        border-top: 3px solid #ff6f00;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(255, 111, 0, 0.2);
+      }
+
+      .feature-card .emoji {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h4 {
+        margin-bottom: 0.5rem;
+        color: #ff6f00;
+      }
+
+      /* Completion badge */
+      .completion-badge {
+        background: var(--accent-final);
+        color: white;
+        padding: 3rem;
+        border-radius: var(--radius-lg);
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .completion-badge .trophy {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .completion-badge h2 {
+        margin-bottom: 1rem;
+      }
+
+      .completion-badge p {
+        opacity: 0.9;
+      }
+
+      /* Skills earned */
+      .skills-earned {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        justify-content: center;
+        margin: 2rem 0;
+      }
+
+      .skill-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: var(--bg-secondary);
+        border-radius: 9999px;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Progress Tracker (Side) -->
+    <nav class="progress-tracker">
+      <div class="progress-dot active" data-section="hero" title="Start"></div>
+      <div class="progress-dot" data-section="challenge" title="The Challenge"></div>
+      <div class="progress-dot" data-section="features" title="Features"></div>
+      <div class="progress-dot" data-section="starter" title="Starter"></div>
+      <div class="progress-dot" data-section="requirements" title="Requirements"></div>
+      <div class="progress-dot" data-section="complete" title="Complete"></div>
+    </nav>
+
+    <main class="lesson-container">
+      <!-- HERO SECTION -->
+      <section class="hero section" data-section="hero">
+        <div class="hero-content">
+          <span class="hero-chapter">Capstone II • Final Project</span>
+          <div class="hero-icon">🤖</div>
+          <h1>The AI Helper</h1>
+          <p class="hero-subtitle">
+            Your final project! Build a command-line assistant that answers
+            questions and helps with tasks — like a simple ChatGPT!
+          </p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Complete your journey</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- THE CHALLENGE -->
+      <section class="section" data-section="challenge">
+        <div class="section-content">
+          <h2 class="fade-in">🏆 The Final Challenge</h2>
+
+          <div class="story-block fade-in">
+            <p>
+              You've come so far! From variables to loops, functions to AI thinking —
+              now you'll put it ALL together to build something truly useful: your
+              own <strong>AI-powered helper</strong>!
+            </p>
+          </div>
+
+          <p class="fade-in">
+            This assistant will be able to answer questions, do calculations, tell
+            jokes, and more. Here's what it might look like:
+          </p>
+
+          <div class="chat-preview fade-in">
+            <div class="chat-message">
+              <div class="chat-avatar user">👤</div>
+              <div class="chat-bubble">What's 15 times 8?</div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-avatar ai">🤖</div>
+              <div class="chat-bubble ai">15 × 8 = 120</div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-avatar user">👤</div>
+              <div class="chat-bubble">Tell me a joke</div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-avatar ai">🤖</div>
+              <div class="chat-bubble ai">Why do programmers prefer dark mode? Because light attracts bugs! 🐛</div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-avatar user">👤</div>
+              <div class="chat-bubble">What's the weather like?</div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-avatar ai">🤖</div>
+              <div class="chat-bubble ai">I can't check the real weather, but I hope it's sunny wherever you are! ☀️</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" data-section="features">
+        <div class="section-content">
+          <h2 class="fade-in">✨ Features to Build</h2>
+
+          <p class="fade-in">
+            Your AI helper should be able to do several different things. Pick at
+            least 4 from this list:
+          </p>
+
+          <div class="feature-showcase fade-in">
+            <div class="feature-card">
+              <div class="emoji">🧮</div>
+              <h4>Math Helper</h4>
+              <p>Add, subtract, multiply, divide numbers</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">😂</div>
+              <h4>Joke Teller</h4>
+              <p>Random jokes from a list</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">📅</div>
+              <h4>Date/Time</h4>
+              <p>Tell the current time and date</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">🎲</div>
+              <h4>Random Picker</h4>
+              <p>Pick random items, roll dice</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">📝</div>
+              <h4>To-Do List</h4>
+              <p>Add, view, and complete tasks</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">🔤</div>
+              <h4>Word Helper</h4>
+              <p>Count words, reverse text, etc.</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">🎱</div>
+              <h4>Magic 8-Ball</h4>
+              <p>Answer yes/no questions randomly</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">📚</div>
+              <h4>Fact Database</h4>
+              <p>Share random fun facts</p>
+            </div>
+          </div>
+
+          <div class="diagram-container scale-in">
+            <div class="diagram-title">How Your AI Helper Works</div>
+            <div class="mermaid">
+              flowchart TD
+                START([User Types]) --> PARSE[Parse Input]
+                PARSE --> DETECT{What Type?}
+                DETECT -->|math| MATH[Calculate]
+                DETECT -->|joke| JOKE[Pick Random Joke]
+                DETECT -->|time| TIME[Get Date/Time]
+                DETECT -->|todo| TODO[Manage Tasks]
+                DETECT -->|unknown| SORRY[Apologize]
+                MATH --> RESPOND[Show Response]
+                JOKE --> RESPOND
+                TIME --> RESPOND
+                TODO --> RESPOND
+                SORRY --> RESPOND
+                RESPOND --> START
+
+                style START fill:#ff6f00,color:#fff
+                style RESPOND fill:#4caf50,color:#fff
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STARTER CODE -->
+      <section class="section" data-section="starter">
+        <div class="section-content">
+          <h2 class="fade-in">🚀 Starter Code</h2>
+
+          <p class="fade-in">
+            Here's a framework to get you started. Your job is to add more features!
+          </p>
+
+          <div class="code-block scale-in">
+            <div class="code-header">
+              <span class="code-language">Python - ai_helper.py</span>
+              <button class="code-copy">Copy</button>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="string">"""
+🤖 MY AI HELPER
+A command-line assistant that can do lots of things!
+"""</span>
+
+<span class="keyword">import</span> random
+<span class="keyword">import</span> datetime
+
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+<span class="comment"># DATA (Stone)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+
+<span class="variable">jokes</span> = [
+    <span class="string">"Why do programmers prefer dark mode? Light attracts bugs! 🐛"</span>,
+    <span class="string">"There are only 10 types of people: those who understand binary and those who don't."</span>,
+    <span class="string">"A programmer's wife says: 'Go to the store and get a loaf of bread. If they have eggs, get a dozen.' He returns with 12 loaves of bread."</span>,
+    <span class="string">"Why was the JavaScript developer sad? Because he didn't Node how to Express himself!"</span>,
+]
+
+<span class="variable">facts</span> = [
+    <span class="string">"Honey never spoils. Archaeologists have found 3000-year-old honey in Egyptian tombs that was still edible!"</span>,
+    <span class="string">"Octopuses have three hearts and blue blood."</span>,
+    <span class="string">"The first computer programmer was Ada Lovelace, way back in the 1840s!"</span>,
+    <span class="string">"A day on Venus is longer than a year on Venus."</span>,
+]
+
+<span class="variable">todo_list</span> = []
+
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+<span class="comment"># FEATURE FUNCTIONS (Magnetism)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+
+<span class="keyword">def</span> <span class="function">tell_joke</span>():
+    <span class="string">"""Return a random joke."""</span>
+    <span class="keyword">return</span> random.choice(jokes)
+
+<span class="keyword">def</span> <span class="function">tell_fact</span>():
+    <span class="string">"""Return a random fun fact."""</span>
+    <span class="keyword">return</span> <span class="string">"🧠 Fun fact: "</span> + random.choice(facts)
+
+<span class="keyword">def</span> <span class="function">get_time</span>():
+    <span class="string">"""Return the current date and time."""</span>
+    now = datetime.datetime.now()
+    <span class="keyword">return</span> now.strftime(<span class="string">"📅 It's %A, %B %d, %Y at %I:%M %p"</span>)
+
+<span class="keyword">def</span> <span class="function">do_math</span>(expression):
+    <span class="string">"""Try to calculate a math expression."""</span>
+    <span class="keyword">try</span>:
+        <span class="comment"># Only allow safe characters</span>
+        allowed = <span class="string">"0123456789+-*/.(). "</span>
+        <span class="keyword">if</span> <span class="function">all</span>(c <span class="keyword">in</span> allowed <span class="keyword">for</span> c <span class="keyword">in</span> expression):
+            result = <span class="function">eval</span>(expression)
+            <span class="keyword">return</span> <span class="string">f"🧮 </span>{expression}<span class="string"> = </span>{result}<span class="string">"</span>
+        <span class="keyword">else</span>:
+            <span class="keyword">return</span> <span class="string">"I can only do basic math with numbers and +, -, *, /"</span>
+    <span class="keyword">except</span>:
+        <span class="keyword">return</span> <span class="string">"Hmm, I couldn't calculate that. Try something like '5 + 3' or '10 * 2'"</span>
+
+<span class="keyword">def</span> <span class="function">magic_8ball</span>():
+    <span class="string">"""Return a Magic 8-Ball response."""</span>
+    responses = [
+        <span class="string">"Yes, definitely!"</span>,
+        <span class="string">"It is certain."</span>,
+        <span class="string">"Ask again later..."</span>,
+        <span class="string">"I'm not sure about that."</span>,
+        <span class="string">"Don't count on it."</span>,
+        <span class="string">"Outlook not so good."</span>,
+    ]
+    <span class="keyword">return</span> <span class="string">"🎱 "</span> + random.choice(responses)
+
+<span class="keyword">def</span> <span class="function">add_todo</span>(task):
+    <span class="string">"""Add a task to the to-do list."""</span>
+    todo_list.append(task)
+    <span class="keyword">return</span> <span class="string">f"✅ Added to your list: </span>{task}<span class="string">"</span>
+
+<span class="keyword">def</span> <span class="function">show_todos</span>():
+    <span class="string">"""Show all to-do items."""</span>
+    <span class="keyword">if</span> <span class="keyword">not</span> todo_list:
+        <span class="keyword">return</span> <span class="string">"Your to-do list is empty! 🎉"</span>
+    result = <span class="string">"📝 Your to-do list:\n"</span>
+    <span class="keyword">for</span> i, task <span class="keyword">in</span> <span class="function">enumerate</span>(todo_list, <span class="number">1</span>):
+        result += <span class="string">f"  </span>{i}<span class="string">. </span>{task}<span class="string">\n"</span>
+    <span class="keyword">return</span> result.strip()
+
+<span class="keyword">def</span> <span class="function">show_help</span>():
+    <span class="string">"""Show available commands."""</span>
+    <span class="keyword">return</span> <span class="string">"""
+🤖 Here's what I can do:
+  • "joke" - I'll tell you a joke
+  • "fact" - I'll share a fun fact
+  • "time" - I'll tell you the date and time
+  • "8ball" - Ask me a yes/no question
+  • "calculate [math]" - I'll do math (e.g., "calculate 5 + 3")
+  • "add [task]" - Add to your to-do list
+  • "todos" - Show your to-do list
+  • "help" - Show this message
+  • "quit" - Say goodbye
+"""</span>
+
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+<span class="comment"># MAIN CONVERSATION LOOP (Lightning)</span>
+<span class="comment"># ═══════════════════════════════════════════════════════════</span>
+
+<span class="keyword">def</span> <span class="function">process_input</span>(user_input):
+    <span class="string">"""Figure out what the user wants and respond."""</span>
+    text = user_input.lower().strip()
+    
+    <span class="keyword">if</span> <span class="string">"joke"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> tell_joke()
+    <span class="keyword">elif</span> <span class="string">"fact"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> tell_fact()
+    <span class="keyword">elif</span> <span class="string">"time"</span> <span class="keyword">in</span> text <span class="keyword">or</span> <span class="string">"date"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> get_time()
+    <span class="keyword">elif</span> <span class="string">"8ball"</span> <span class="keyword">in</span> text <span class="keyword">or</span> <span class="string">"magic"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> magic_8ball()
+    <span class="keyword">elif</span> text.startswith(<span class="string">"calculate "</span>):
+        <span class="keyword">return</span> do_math(text[<span class="number">10</span>:])
+    <span class="keyword">elif</span> text.startswith(<span class="string">"add "</span>):
+        <span class="keyword">return</span> add_todo(user_input[<span class="number">4</span>:])  <span class="comment"># Keep original case</span>
+    <span class="keyword">elif</span> text == <span class="string">"todos"</span> <span class="keyword">or</span> <span class="string">"to-do"</span> <span class="keyword">in</span> text <span class="keyword">or</span> <span class="string">"todo"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> show_todos()
+    <span class="keyword">elif</span> <span class="string">"help"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> show_help()
+    <span class="keyword">elif</span> <span class="string">"hello"</span> <span class="keyword">in</span> text <span class="keyword">or</span> <span class="string">"hi"</span> <span class="keyword">in</span> text:
+        <span class="keyword">return</span> <span class="string">"Hello! 👋 Type 'help' to see what I can do!"</span>
+    <span class="keyword">else</span>:
+        <span class="keyword">return</span> <span class="string">"Hmm, I'm not sure what you mean. Try 'help' to see what I can do!"</span>
+
+<span class="comment"># Start the conversation</span>
+<span class="function">print</span>(<span class="string">"🤖 AI HELPER 🤖"</span>)
+<span class="function">print</span>(<span class="string">"Hi! I'm your AI assistant. Type 'help' to see what I can do!"</span>)
+<span class="function">print</span>(<span class="string">"Type 'quit' to exit.\n"</span>)
+
+<span class="keyword">while</span> <span class="keyword">True</span>:
+    user_input = <span class="function">input</span>(<span class="string">"You: "</span>).strip()
+    
+    <span class="keyword">if</span> user_input.lower() == <span class="string">"quit"</span>:
+        <span class="function">print</span>(<span class="string">"🤖 Goodbye! Have a great day! 👋"</span>)
+        <span class="keyword">break</span>
+    
+    <span class="keyword">if</span> user_input:
+        response = process_input(user_input)
+        <span class="function">print</span>(<span class="string">f"🤖 </span>{response}<span class="string">\n"</span>)</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REQUIREMENTS -->
+      <section class="section" data-section="requirements">
+        <div class="section-content">
+          <h2 class="fade-in">✅ Requirements</h2>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">4️⃣</div>
+              <h4>At Least 4 Features</h4>
+              <p>Pick 4+ from the feature list and make them work</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">💬</div>
+              <h4>Natural Responses</h4>
+              <p>Make it feel friendly, not robotic</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">❓</div>
+              <h4>Help Command</h4>
+              <p>Tell users what the helper can do</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🛑</div>
+              <h4>Graceful Exit</h4>
+              <p>Let users quit with a goodbye message</p>
+            </div>
+          </div>
+
+          <h3 class="fade-in">🌟 Bonus Challenges</h3>
+
+          <div class="feature-showcase fade-in">
+            <div class="feature-card">
+              <div class="emoji">🧠</div>
+              <h4>Remember Names</h4>
+              <p>Ask the user's name and use it in responses</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">📊</div>
+              <h4>Conversation Stats</h4>
+              <p>Track how many messages were exchanged</p>
+            </div>
+            <div class="feature-card">
+              <div class="emoji">🎨</div>
+              <h4>Colored Output</h4>
+              <p>Make different responses different colors</p>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in">
+            <h3>📦 Deliverables</h3>
+            <div class="code-block" style="text-align: left; margin: 1rem 0">
+              <div class="code-content">
+                <pre><code>your-folder/ch6-capstone2/
+├── ai_helper.py      <span class="comment"># Your complete assistant</span>
+├── features.md       <span class="comment"># List of features + how they work</span>
+└── README.md         <span class="comment"># How to use + what you learned</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPLETION -->
+      <section class="section" data-section="complete">
+        <div class="section-content">
+          <div class="completion-badge fade-in">
+            <div class="trophy">🏆</div>
+            <h2>Course Complete!</h2>
+            <p>
+              You did it! You've finished the AutoNateAI Apprentice course!
+            </p>
+          </div>
+
+          <h3 class="fade-in" style="text-align: center;">🎯 Skills You've Earned</h3>
+
+          <div class="skills-earned fade-in">
+            <div class="skill-badge">🪨 Variables & Memory</div>
+            <div class="skill-badge">🏷️ Data Types</div>
+            <div class="skill-badge">⚡ If/Else Decisions</div>
+            <div class="skill-badge">🔁 Loops</div>
+            <div class="skill-badge">🧲 Functions</div>
+            <div class="skill-badge">📤 Return Values</div>
+            <div class="skill-badge">📊 Diagrams</div>
+            <div class="skill-badge">🏛️ Architect Thinking</div>
+            <div class="skill-badge">🤖 AI Collaboration</div>
+            <div class="skill-badge">🎮 Building Projects</div>
+          </div>
+
+          <div class="story-block fade-in">
+            <p>
+              You started as an apprentice, and now you're on your way to becoming
+              an architect! Remember: the best programmers aren't the ones who
+              memorize the most — they're the ones who <strong>think clearly</strong>,
+              <strong>communicate well</strong>, and <strong>never stop learning</strong>.
+            </p>
+          </div>
+
+          <h3 class="fade-in" style="text-align: center;">🚀 What's Next?</h3>
+
+          <div class="concept-grid fade-in">
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🌐</div>
+              <h4>Build a Website</h4>
+              <p>Learn HTML, CSS, and JavaScript to make web apps</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">📱</div>
+              <h4>Make an App</h4>
+              <p>Create mobile apps with Python or other tools</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🤖</div>
+              <h4>AI & Machine Learning</h4>
+              <p>Dive deeper into how AI actually works</p>
+            </div>
+            <div class="concept-card stagger-item">
+              <div class="concept-card-icon">🎮</div>
+              <h4>Game Development</h4>
+              <p>Build games with Pygame or other engines</p>
+            </div>
+          </div>
+
+          <div class="cta-box fade-in" style="text-align: center;">
+            <h3>🙌 Congratulations, Architect!</h3>
+            <p>
+              Keep building. Keep learning. Keep thinking like an architect.
+              <br />The future is yours to design! 🌟
+            </p>
+            <a href="../../index.html" class="cta-btn">
+              <span>Return to Course Home</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="lesson-nav">
+      <button class="nav-btn" onclick="location.href='../ch5-capstone1/index.html'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Capstone I
+      </button>
+      <button class="nav-btn primary" onclick="location.href='../../index.html'">
+        Course Home
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="../../shared/js/lesson.js"></script>
+  </body>
+</html>
+
