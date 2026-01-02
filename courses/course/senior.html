@@ -145,6 +145,26 @@
       <div class="curriculum-list">
         <div class="chapter-item">
           <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-number">0</div>
+            <div class="chapter-info">
+              <div class="chapter-title">⚡ The Amplification Point</div>
+              <div class="chapter-subtitle">Pre-Quest: Multiply Your Impact</div>
+            </div>
+            <div class="chapter-meta"><span>📖 30 min</span><span>🎯 Foundation</span></div>
+          </div>
+          <div class="chapter-content">
+            <ul class="chapter-topics">
+              <li>The multiplier effect</li>
+              <li>Your impact, amplified</li>
+              <li>The paradigm shift</li>
+              <li>Strategic AI integration</li>
+              <li>Your potential ROI calculator</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="chapter-item">
+          <div class="chapter-header" onclick="toggleChapter(this)">
             <div class="chapter-number">1</div>
             <div class="chapter-info">
               <div class="chapter-title">🪨 Rapid Codebase Acquisition</div>
@@ -367,10 +387,10 @@
         const user = window.AuthService.getUser();
         if (!user) { window.AuthService.setRedirectUrl(location.href); location.href = '../auth/register.html'; return; }
         const p = await window.DataService.getCourseProgress(COURSE_ID);
-        if (p) { location.href = `../${COURSE_ID}/ch1-stone/`; return; }
+        if (p) { location.href = `../${COURSE_ID}/ch0-origins/`; return; }
         e.target.disabled = true; e.target.textContent = 'Enrolling...';
         const r = await window.DataService.enrollInCourse(COURSE_ID, COURSE_DATA);
-        if (r.success) location.href = `../${COURSE_ID}/ch1-stone/`;
+        if (r.success) location.href = `../${COURSE_ID}/ch0-origins/`;
         else { e.target.disabled = false; e.target.textContent = 'Start Learning →'; }
       };
       

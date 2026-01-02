@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 0: The Amplification Point | The Senior Amplifier</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/lesson.css">
+  
+  <style>
+    /* Chapter 0 Specific Styles - Senior Amplifier Theme */
+    .origin-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #0a0a0f 0%, #1a0a1e 50%, #0d0d1a 100%);
+    }
+    
+    .grid-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      opacity: 0.15;
+      background: 
+        linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 2rem;
+    }
+    
+    .chapter-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: 30px;
+      color: #a855f7;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #a855f7, #ec4899, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    
+    .scroll-arrow {
+      width: 24px;
+      height: 24px;
+      border-right: 2px solid var(--text-muted);
+      border-bottom: 2px solid var(--text-muted);
+      transform: rotate(45deg);
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(10px); }
+    }
+    
+    /* Multiplier Visualization */
+    .multiplier-demo {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 3rem;
+      margin: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .multiplier-equation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    
+    .multiplier-term {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      min-width: 150px;
+    }
+    
+    .term-value {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .term-value.experience { color: #a855f7; }
+    .term-value.ai { color: #ec4899; }
+    .term-value.result { 
+      background: linear-gradient(135deg, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .term-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .multiplier-operator {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--text-muted);
+    }
+    
+    /* Impact Grid */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .impact-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease;
+    }
+    
+    .impact-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .impact-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .impact-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .impact-before, .impact-after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+    }
+    
+    .impact-before {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    
+    .impact-after {
+      color: #10b981;
+    }
+    
+    /* Paradigm Shift */
+    .paradigm-container {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin: 2rem 0;
+    }
+    
+    .paradigm-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    
+    .paradigm-card.visible {
+      opacity: 1;
+    }
+    
+    .paradigm-card.old {
+      border-left: 4px solid #6b7280;
+    }
+    
+    .paradigm-card.new {
+      border-left: 4px solid #a855f7;
+    }
+    
+    .paradigm-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .paradigm-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    
+    .paradigm-card.old .paradigm-icon {
+      background: rgba(107, 114, 128, 0.15);
+    }
+    
+    .paradigm-card.new .paradigm-icon {
+      background: rgba(168, 85, 247, 0.15);
+    }
+    
+    .paradigm-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+    }
+    
+    .paradigm-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    
+    .paradigm-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .paradigm-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    .paradigm-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .paradigm-arrow {
+      font-size: 3rem;
+      color: #a855f7;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .paradigm-arrow.visible {
+      opacity: 1;
+    }
+    
+    /* Strategic Thinking */
+    .strategy-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .strategy-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 0.5s ease;
+    }
+    
+    .strategy-card.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    .strategy-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .strategy-number {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+    }
+    
+    .strategy-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+    }
+    
+    .strategy-desc {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    /* ROI Calculator */
+    .roi-calculator {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.05));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .roi-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .roi-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .roi-subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .roi-sliders {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .roi-slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .roi-slider-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    
+    .roi-slider-value {
+      color: #a855f7;
+      font-weight: 600;
+    }
+    
+    .roi-slider {
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      outline: none;
+    }
+    
+    .roi-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .roi-result {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+    }
+    
+    .roi-result-value {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .roi-result-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    /* Quiz Styles */
+    .origin-quiz {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.05));
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .quiz-question {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .quiz-option {
+      padding: 1rem 1.5rem;
+      background: var(--bg-card);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    
+    .quiz-option:hover {
+      border-color: #a855f7;
+      background: rgba(168, 85, 247, 0.1);
+    }
+    
+    .quiz-option.correct {
+      border-color: #10b981;
+      background: rgba(16, 185, 129, 0.15);
+    }
+    
+    .quiz-option.incorrect {
+      border-color: #ef4444;
+      background: rgba(239, 68, 68, 0.15);
+    }
+    
+    /* Continue Button */
+    .continue-section {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+    }
+    
+    .continue-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 2.5rem;
+      background: linear-gradient(135deg, #a855f7, #ec4899);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius-lg);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+    }
+    
+    .continue-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(168, 85, 247, 0.4);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.25rem; }
+      .impact-grid { grid-template-columns: 1fr; }
+      .paradigm-container { grid-template-columns: 1fr; }
+      .paradigm-arrow { transform: rotate(90deg); }
+      .strategy-matrix { grid-template-columns: 1fr; }
+      .roi-sliders { grid-template-columns: 1fr; }
+      .multiplier-equation { flex-direction: column; }
+    }
+  </style>
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  
+  <!-- Hero Section -->
+  <section class="origin-hero">
+    <div class="grid-container"></div>
+    
+    <div class="hero-content">
+      <span class="chapter-badge">⚡ Pre-Quest</span>
+      <h1 class="hero-title">The Amplification Point</h1>
+      <p class="hero-subtitle">
+        Your experience is not obsolete—it's about to become exponentially more valuable. 
+        This is where years of pattern recognition meets infinite acceleration.
+      </p>
+    </div>
+    
+    <div class="scroll-indicator">
+      <span>Discover your multiplier</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <div class="lesson-container">
+    
+    <!-- Section 1: The Multiplier Effect -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">⚡</span>
+        The Multiplier Effect
+      </h2>
+      
+      <div class="section-content">
+        <p>
+          Here's what the industry hasn't fully grasped yet: <strong>AI doesn't replace 
+          senior engineers—it multiplies them.</strong>
+        </p>
+        
+        <p>
+          A junior with AI is a faster junior. A senior with AI is an entirely different 
+          category of engineer. Your years of experience in system design, pattern recognition, 
+          and debugging intuition become superpowers when combined with AI velocity.
+        </p>
+        
+        <div class="multiplier-demo">
+          <div class="multiplier-equation">
+            <div class="multiplier-term">
+              <div class="term-value experience" id="exp-value">10</div>
+              <div class="term-label">Years of Experience</div>
+            </div>
+            <div class="multiplier-operator">×</div>
+            <div class="multiplier-term">
+              <div class="term-value ai">AI</div>
+              <div class="term-label">Amplification</div>
+            </div>
+            <div class="multiplier-operator">=</div>
+            <div class="multiplier-term">
+              <div class="term-value result" id="result-value">100x</div>
+              <div class="term-label">Impact Multiplier</div>
+            </div>
+          </div>
+          
+          <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+            The compound effect: Experience × AI leverage = Unprecedented capability
+          </p>
+        </div>
+        
+        <div class="callout callout-insight">
+          <div class="callout-title">🎯 The Senior Advantage</div>
+          <p>
+            Juniors ask AI "how to do X." Seniors ask AI to implement their design. 
+            Juniors debug AI output line by line. Seniors recognize architectural 
+            problems at a glance. <em>This difference is everything.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 2: Impact Transformation -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">📈</span>
+        Your Impact, Amplified
+      </h2>
+      
+      <div class="section-content">
+        <p>
+          See how AI transforms what you can accomplish:
+        </p>
+        
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-icon">🗺️</div>
+            <div class="impact-title">Codebase Onboarding</div>
+            <div class="impact-before">❌ 2-4 weeks</div>
+            <div class="impact-after">✅ 2-4 hours</div>
+          </div>
+          
+          <div class="impact-card">
+            <div class="impact-icon">🐛</div>
+            <div class="impact-title">Complex Bug Resolution</div>
+            <div class="impact-before">❌ Days of digging</div>
+            <div class="impact-after">✅ Hours with AI tracing</div>
+          </div>
+          
+          <div class="impact-card">
+            <div class="impact-icon">📐</div>
+            <div class="impact-title">System Design Docs</div>
+            <div class="impact-before">❌ Week of writing</div>
+            <div class="impact-after">✅ Day of refining</div>
+          </div>
+          
+          <div class="impact-card">
+            <div class="impact-icon">👥</div>
+            <div class="impact-title">Code Reviews</div>
+            <div class="impact-before">❌ Surface-level checks</div>
+            <div class="impact-after">✅ Deep architectural review</div>
+          </div>
+          
+          <div class="impact-card">
+            <div class="impact-icon">🚀</div>
+            <div class="impact-title">Feature Delivery</div>
+            <div class="impact-before">❌ Weeks per feature</div>
+            <div class="impact-after">✅ Days per feature</div>
+          </div>
+          
+          <div class="impact-card">
+            <div class="impact-icon">🎓</div>
+            <div class="impact-title">Mentoring Capacity</div>
+            <div class="impact-before">❌ 1-2 direct reports</div>
+            <div class="impact-after">✅ Scale through tooling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 3: The Paradigm Shift -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">🔄</span>
+        The Paradigm Shift
+      </h2>
+      
+      <div class="section-content">
+        <p>
+          The way senior engineers create value is fundamentally changing. 
+          Understanding this shift is the first step to leveraging it.
+        </p>
+        
+        <div class="paradigm-container">
+          <div class="paradigm-card old">
+            <div class="paradigm-header">
+              <div class="paradigm-icon">📝</div>
+              <div>
+                <div class="paradigm-title">Traditional Senior Role</div>
+                <div class="paradigm-subtitle">Value through doing</div>
+              </div>
+            </div>
+            <ul class="paradigm-list">
+              <li>Write the most complex code</li>
+              <li>Be the bottleneck for hard problems</li>
+              <li>Review code line-by-line</li>
+              <li>Mentoring = pairing sessions</li>
+              <li>Value = individual output</li>
+            </ul>
+          </div>
+          
+          <div class="paradigm-arrow">→</div>
+          
+          <div class="paradigm-card new">
+            <div class="paradigm-header">
+              <div class="paradigm-icon">🏛️</div>
+              <div>
+                <div class="paradigm-title">AI-Amplified Senior</div>
+                <div class="paradigm-subtitle">Value through directing</div>
+              </div>
+            </div>
+            <ul class="paradigm-list">
+              <li>Design systems, AI implements</li>
+              <li>Multiply problem-solving across team</li>
+              <li>Review at the architectural level</li>
+              <li>Mentoring = teaching AI leverage</li>
+              <li>Value = team amplification</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="diagram-container">
+          <pre class="mermaid">
+graph TB
+    subgraph Traditional["Traditional Model"]
+        S1[Senior Engineer] --> |writes| C1[Complex Code]
+        S1 --> |reviews| C2[PR Reviews]
+        S1 --> |solves| C3[Hard Bugs]
+    end
+    
+    subgraph Amplified["AI-Amplified Model"]
+        S2[Senior Architect] --> |designs| D1[System Architecture]
+        D1 --> |AI implements| I1[Code Generation]
+        S2 --> |validates| V1[AI Output Review]
+        S2 --> |multiplies| M1[Team Capability]
+    end
+    
+    style S1 fill:#1a1a2e,stroke:#6b7280
+    style S2 fill:#1a1a2e,stroke:#a855f7
+    style D1 fill:#1a1a2e,stroke:#ec4899
+    style M1 fill:#1a1a2e,stroke:#10b981
+          </pre>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 4: Strategic Thinking -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">🧠</span>
+        Strategic AI Integration
+      </h2>
+      
+      <div class="section-content">
+        <p>
+          This course will teach you four strategic approaches to multiply your impact:
+        </p>
+        
+        <div class="strategy-matrix">
+          <div class="strategy-card">
+            <div class="strategy-header">
+              <div class="strategy-number">1</div>
+              <div class="strategy-title">Rapid Acquisition</div>
+            </div>
+            <div class="strategy-desc">
+              Use AI to understand any codebase in hours. Map dependencies, trace data flows, 
+              identify patterns—all with AI as your pair navigator. Chapter 1.
+            </div>
+          </div>
+          
+          <div class="strategy-card">
+            <div class="strategy-header">
+              <div class="strategy-number">2</div>
+              <div class="strategy-title">System-Wide Debugging</div>
+            </div>
+            <div class="strategy-desc">
+              Leverage AI to trace bugs across service boundaries. Root cause analysis at 
+              scale. Turn days of investigation into hours. Chapter 2.
+            </div>
+          </div>
+          
+          <div class="strategy-card">
+            <div class="strategy-header">
+              <div class="strategy-number">3</div>
+              <div class="strategy-title">Platform Integration</div>
+            </div>
+            <div class="strategy-desc">
+              Design robust integration points. AI generates the glue code while you 
+              focus on contracts and error handling strategies. Chapter 3.
+            </div>
+          </div>
+          
+          <div class="strategy-card">
+            <div class="strategy-header">
+              <div class="strategy-number">4</div>
+              <div class="strategy-title">Architectural Direction</div>
+            </div>
+            <div class="strategy-desc">
+              Express architectural intent, let AI draft implementation. Your design 
+              decisions, AI's execution speed. Chapter 4.
+            </div>
+          </div>
+        </div>
+        
+        <div class="origin-quiz">
+          <div class="quiz-question">
+            🧠 Quick Check: What's the key difference in how a senior uses AI vs a junior?
+          </div>
+          <div class="quiz-options">
+            <button class="quiz-option" onclick="checkAnswer(this, false)">Seniors use more advanced prompts</button>
+            <button class="quiz-option" onclick="checkAnswer(this, false)">Seniors generate more code with AI</button>
+            <button class="quiz-option" onclick="checkAnswer(this, true)">Seniors direct AI with architectural intent while juniors ask AI how to code</button>
+            <button class="quiz-option" onclick="checkAnswer(this, false)">Seniors don't need AI because they know everything</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 5: ROI Calculator -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">📊</span>
+        Your Potential ROI
+      </h2>
+      
+      <div class="section-content">
+        <div class="roi-calculator">
+          <div class="roi-header">
+            <div class="roi-title">Calculate Your Impact Multiplier</div>
+            <div class="roi-subtitle">Based on your experience and AI adoption level</div>
+          </div>
+          
+          <div class="roi-sliders">
+            <div class="roi-slider-group">
+              <div class="roi-slider-label">
+                <span>Years of Experience</span>
+                <span class="roi-slider-value" id="exp-display">10</span>
+              </div>
+              <input type="range" class="roi-slider" id="exp-slider" min="3" max="25" value="10" oninput="updateROI()">
+            </div>
+            
+            <div class="roi-slider-group">
+              <div class="roi-slider-label">
+                <span>AI Integration Level</span>
+                <span class="roi-slider-value" id="ai-display">50%</span>
+              </div>
+              <input type="range" class="roi-slider" id="ai-slider" min="10" max="100" value="50" oninput="updateROI()">
+            </div>
+          </div>
+          
+          <div class="roi-result">
+            <div class="roi-result-value" id="roi-value">5x</div>
+            <div class="roi-result-label">Estimated Impact Multiplier</div>
+          </div>
+        </div>
+        
+        <div class="callout callout-tip">
+          <div class="callout-title">💡 The Compounding Effect</div>
+          <p>
+            Each year of experience you have makes AI more valuable. Pattern recognition 
+            you've built over years allows you to validate AI output instantly—something 
+            that takes juniors much longer to develop.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 6: What's Next -->
+    <section class="lesson-section">
+      <h2 class="section-title">
+        <span class="title-icon">🗺️</span>
+        Your Amplification Journey
+      </h2>
+      
+      <div class="section-content">
+        <p>Here's how we'll multiply your capabilities over the next 6 weeks:</p>
+        
+        <div class="diagram-container">
+          <pre class="mermaid">
+gantt
+    title Your Amplification Timeline
+    dateFormat  YYYY-MM-DD
+    section Foundation
+    Ch1: Rapid Codebase Acquisition    :a1, 2024-01-01, 7d
+    Ch2: System-Wide Debugging         :a2, after a1, 7d
+    section Integration
+    Ch3: Platform Integration          :a3, after a2, 7d
+    Ch4: AI-Augmented Design           :a4, after a3, 7d
+    section Leadership
+    Ch5: Lead Major Initiative         :a5, after a4, 7d
+    Ch6: Personal Amplified Workflow   :a6, after a5, 7d
+          </pre>
+        </div>
+        
+        <div class="callout callout-success">
+          <div class="callout-title">✅ Pre-Quest Complete!</div>
+          <p>
+            You understand the multiplier effect. You see how your experience becomes 
+            exponentially more valuable with AI. Now it's time to build your amplified 
+            toolkit. Chapter 1 starts with the most valuable skill: <strong>rapidly 
+            understanding any codebase</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Continue Section -->
+    <section class="continue-section">
+      <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">
+        Ready to Amplify?
+      </h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+        The foundation is set. Let's learn how to understand any codebase in hours instead of weeks.
+      </p>
+      <a href="../ch1-stone/" class="continue-btn">
+        Continue to Chapter 1: Rapid Acquisition →
+      </a>
+    </section>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../../shared/js/firebase-config.js"></script>
+  <script src="../../shared/js/auth.js"></script>
+  <script src="../../shared/js/data-service.js"></script>
+  
+  <script>
+    // Initialize Mermaid
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#a855f7',
+        primaryTextColor: '#e8e8f0',
+        primaryBorderColor: '#9333ea',
+        lineColor: '#6a6a80',
+        secondaryColor: '#1a1a2e',
+        tertiaryColor: '#12121a',
+        background: '#1a0a1e',
+        mainBkg: '#1a0a1e',
+        nodeBorder: '#9333ea',
+        clusterBkg: '#1a1a2e',
+        titleColor: '#e8e8f0',
+        edgeLabelBackground: '#1a1a2e'
+      },
+      flowchart: {
+        curve: 'basis',
+        padding: 20,
+        htmlLabels: true,
+        nodeSpacing: 50,
+        rankSpacing: 50
+      }
+    });
+    
+    // ROI Calculator
+    function updateROI() {
+      const exp = parseInt(document.getElementById('exp-slider').value);
+      const ai = parseInt(document.getElementById('ai-slider').value);
+      
+      document.getElementById('exp-display').textContent = exp;
+      document.getElementById('ai-display').textContent = ai + '%';
+      
+      // Calculate multiplier (simplified formula for demo)
+      const baseMultiplier = 1 + (exp / 5);
+      const aiBoost = ai / 100;
+      const multiplier = Math.round(baseMultiplier * (1 + aiBoost * 3));
+      
+      document.getElementById('roi-value').textContent = multiplier + 'x';
+      document.getElementById('exp-value').textContent = exp;
+      document.getElementById('result-value').textContent = multiplier + 'x';
+    }
+    
+    // Quiz
+    function checkAnswer(btn, isCorrect) {
+      document.querySelectorAll('.quiz-option').forEach(opt => {
+        opt.disabled = true;
+        opt.classList.remove('correct', 'incorrect');
+      });
+      
+      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+      
+      if (!isCorrect) {
+        document.querySelectorAll('.quiz-option')[2].classList.add('correct');
+      }
+    }
+    
+    // Animate on scroll
+    function setupScrollAnimations() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      // Observe elements
+      document.querySelectorAll('.impact-card, .paradigm-card, .paradigm-arrow, .strategy-card').forEach((item, i) => {
+        item.style.transitionDelay = `${i * 0.1}s`;
+        observer.observe(item);
+      });
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      setupScrollAnimations();
+      updateROI();
+      
+      // Hero animation
+      anime({
+        targets: '.hero-content > *',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(200, { start: 500 }),
+        duration: 800,
+        easing: 'easeOutQuad'
+      });
+      
+      // Multiplier animation
+      anime({
+        targets: '.multiplier-term',
+        scale: [0, 1],
+        delay: anime.stagger(200, { start: 1000 }),
+        duration: 500,
+        easing: 'easeOutBack'
+      });
+      
+      // Initialize Firebase
+      if (window.FirebaseApp) {
+        window.FirebaseApp.init();
+        window.AuthService.init();
+      }
+    });
+  </script>
+</body>
+</html>
+
