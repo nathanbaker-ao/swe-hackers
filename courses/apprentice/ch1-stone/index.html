@@ -953,24 +953,7 @@ secret = encode_message(message)
         }, 1000);
       });
 
-      // Mark lesson complete when user reaches the end
-      const lessonObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              window.LessonIntegration.finishLesson();
-              lessonObserver.disconnect();
-            }
-          });
-        },
-        { threshold: 0.8 }
-      );
-
-      // Observe the last section
-      const sections = document.querySelectorAll(".lesson-section");
-      if (sections.length > 0) {
-        lessonObserver.observe(sections[sections.length - 1]);
-      }
+      // Auto-complete is now handled by LessonIntegration.setupAutoComplete()
     </script>
   </body>
 </html>

@@ -50,16 +50,35 @@ const ProgressTracker = {
    * Discover all trackable sections on the page
    */
   discoverSections() {
-    const sectionElements = document.querySelectorAll('.lesson-section, section[id]');
+    // Find sections using multiple selectors to handle different lesson structures
+    const sectionElements = document.querySelectorAll(
+      '.lesson-section, section[id], section[data-section], section.section, .origin-section'
+    );
     this.sections = [];
     
+    // Use a Set to avoid duplicates (same element matching multiple selectors)
+    const seen = new Set();
+    
     sectionElements.forEach((el, index) => {
-      // Get section title
-      const titleEl = el.querySelector('.section-title, h2, h3');
-      const title = titleEl ? titleEl.textContent.trim() : `Section ${index + 1}`;
+      // Skip duplicates
+      if (seen.has(el)) return;
+      seen.add(el);
       
-      // Get or create ID
-      let id = el.id || el.dataset.sectionId;
+      // Get section title from various possible elements
+      const titleEl = el.querySelector('.section-title, h2, h3, .section-header h2');
+      let title = titleEl ? titleEl.textContent.trim() : null;
+      
+      // Also check the data-section attribute for title hints
+      if (!title && el.dataset.section) {
+        title = el.dataset.section.charAt(0).toUpperCase() + el.dataset.section.slice(1);
+      }
+      
+      if (!title) {
+        title = `Section ${index + 1}`;
+      }
+      
+      // Get ID from various sources
+      let id = el.id || el.dataset.section || el.dataset.sectionId;
       if (!id) {
         id = `section-${index}`;
         el.id = id;
@@ -74,6 +93,8 @@ const ProgressTracker = {
         timeSpent: 0
       });
     });
+    
+    console.log('📊 Discovered sections:', this.sections.map(s => s.title));
   },
   
   /**
