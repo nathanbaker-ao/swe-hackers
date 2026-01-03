@@ -494,12 +494,25 @@ const DataService = {
         totalSections: progressData.totalSections
       });
       
-      await courseRef.set({
+      // Build the update data using Firestore dot notation for nested field updates
+      const fieldPath = `lessons.${lessonId}`;
+      const updateData = {
         lastActivity: firebase.firestore.FieldValue.serverTimestamp(),
         lastLesson: lessonId,
         lastLessonProgress: progressData.progressPercent,
-        [`lessons.${lessonId}`]: lessonData
-      }, { merge: true });
+        [fieldPath]: lessonData
+      };
+      
+      console.log('📊 Updating course document with field path:', fieldPath);
+      console.log('📊 Lesson data being saved:', lessonData);
+      
+      try {
+        await courseRef.set(updateData, { merge: true });
+        console.log('📊 Course document updated successfully');
+      } catch (courseUpdateError) {
+        console.error('📊 Failed to update course document:', courseUpdateError);
+        throw courseUpdateError;
+      }
       
       // Recalculate overall progress if lesson was completed
       if (isComplete) {
