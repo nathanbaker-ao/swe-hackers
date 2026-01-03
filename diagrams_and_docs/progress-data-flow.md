@@ -1,7 +1,36 @@
 # Progress Tracking Data Flow Analysis
 
 ## The Problem
-The dashboard shows `lessons: {}` (empty) even though lesson progress IS being saved. There's a disconnect between where data is written and where it's read.
+
+```mermaid
+flowchart LR
+    subgraph Reality["What Actually Happens"]
+        U1[👤 User completes lesson] --> S1[✅ Progress saved]
+        S1 --> D1[📊 Dashboard shows 0%]
+    end
+    
+    subgraph Expected["What Should Happen"]
+        U2[👤 User completes lesson] --> S2[✅ Progress saved]
+        S2 --> D2[📊 Dashboard shows 14%]
+    end
+    
+    style D1 fill:#ff6b6b,stroke:#c92a2a,color:#fff
+    style D2 fill:#51cf66,stroke:#2f9e44,color:#fff
+```
+
+### The Story
+
+Imagine you're a student using AutoNateAI. You just spent 20 minutes going through "The Origins" lesson, scrolling through all 8 sections, watching the animations, and feeling great about learning where computers came from.
+
+You click "Back to Dashboard" expecting to see your progress reflected — maybe "1/7 Chapters Complete" and a nice "Continue: Stone →" button.
+
+Instead, you see: **"0/7 Chapters Complete"** and **"Continue: Origins →"**
+
+Wait, what? You JUST finished Origins! Where did your progress go?
+
+**Here's the mystery:** If you go BACK to the Origins lesson, your progress IS there. The progress tracker shows all sections completed. So the data exists... somewhere. But the dashboard can't see it.
+
+This document traces through the code to find out WHY.
 
 ---
 
@@ -35,31 +64,78 @@ flowchart TB
     style LP_Fields fill:#51cf66,stroke:#2f9e44,color:#fff
 ```
 
-### Description: Firestore Data Structure
+### The Story: Two Filing Cabinets
 
-The progress tracking system uses a **nested Firestore structure** under each authenticated user:
+Think of Firestore like an office with filing cabinets. When a user signs up and enrolls in a course, we create TWO places to store their progress:
+
+**Filing Cabinet #1: The Course Summary** (`courseProgress/{courseId}`)
+
+This is like a folder on your desk with a sticky note summary:
+- "Apprentice Course"
+- "0 lessons done"
+- "0% complete"
+- Quick reference: which lessons are done? → `lessons: {}`
+
+**Filing Cabinet #2: The Detailed Records** (`lessonProgress/{lessonId}`)
+
+This is a locked drawer inside Filing Cabinet #1, containing the FULL details:
+- Every section you scrolled past
+- Exactly how long you spent
+- Whether you finished
+- Where you left off
+
+**The Problem:** When you complete a lesson, we successfully write to Filing Cabinet #2 (the detailed drawer). But the sticky note on Filing Cabinet #1 never gets updated!
+
+The Dashboard only looks at the sticky note (Cabinet #1). The lesson pages look inside the drawer (Cabinet #2). That's why the lesson knows you're done, but the dashboard doesn't.
+
+### Technical Details: Firestore Data Structure
 
 **Path:** `users/{uid}/courseProgress/{courseId}`
 
-This **Course Document** (defined when user enrolls via `DataService.enrollInCourse()` in `courses/shared/js/data-service.js`) contains:
-- `courseId`: string (e.g., `"apprentice"`)
-- `courseName`: string (e.g., `"The Apprentice's Path"`)
-- `completedLessons`: number — count of finished chapters
-- `progressPercent`: number — overall course completion (0-100)
-- `lessons`: object — **SHOULD** contain per-lesson summaries, but is EMPTY
-- `totalLessons`: 7 (fixed, includes ch0-origins through ch6-capstone2)
+This **Course Document** is created when a user clicks "Start Learning" on a course detail page. The enrollment happens in:
+- **File:** `courses/shared/js/data-service.js`
+- **Method:** `DataService.enrollInCourse()` (line ~269)
+
+```javascript
+// What gets created on enrollment:
+{
+  courseId: "apprentice",
+  courseName: "The Apprentice's Path",
+  courseIcon: "🌟",
+  enrolledAt: Timestamp,
+  completedLessons: 0,      // Should increment as lessons finish
+  progressPercent: 0,        // Should be (completedLessons / 7) * 100
+  totalLessons: 7,
+  lessons: {}                // Should contain per-lesson summaries — BUT IT'S EMPTY!
+}
+```
 
 **Path:** `users/{uid}/courseProgress/{courseId}/lessonProgress/{lessonId}`
 
-This **Lesson Document** (subcollection) is created/updated by `DataService.saveLessonProgress()` and contains:
-- `sections`: array of `{ id, title, viewed, completed, timeSpent }`
-- `viewedSections`: number — count of sections user has scrolled past
-- `totalSections`: number — total sections in the lesson (e.g., 8 for Origins)
-- `progressPercent`: number — `(viewedSections / totalSections) * 100`
-- `completed`: boolean — true when all sections viewed
-- `lastSection`: string — ID of the last section the user was viewing
+This **Lesson Document** (a subcollection nested inside the course) is created/updated as the user progresses through a lesson:
+- **File:** `courses/shared/js/data-service.js`
+- **Method:** `DataService.saveLessonProgress()` (line ~447)
 
-**The Bug:** Data is successfully written to the subcollection but NOT to the parent document's `lessons` field.
+```javascript
+// What gets saved when you scroll through a lesson:
+{
+  lessonId: "ch0-origins",
+  courseId: "apprentice",
+  sections: [
+    { id: "section-1", title: "In The Beginning...", viewed: true, completed: true, timeSpent: 45000 },
+    { id: "section-2", title: "How Electricity Thinks", viewed: true, completed: true, timeSpent: 32000 },
+    // ... all 8 sections
+  ],
+  viewedSections: 8,
+  totalSections: 8,
+  progressPercent: 100,      // ✅ This IS saved correctly!
+  completed: true,           // ✅ This IS saved correctly!
+  lastSection: "section-8",
+  totalTimeSpent: 285000
+}
+```
+
+**The Bug:** The detailed `lessonProgress` document is saved correctly (green box in diagram). But the summary `lessons` field on the parent `courseProgress` document stays empty (red box in diagram).
 
 ---
 
