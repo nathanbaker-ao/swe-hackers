@@ -475,7 +475,8 @@
           console.log('📊 Dashboard: Processing course:', course.courseId, {
             completedLessons: course.completedLessons,
             progressPercent: course.progressPercent,
-            lessons: course.lessons
+            lessons: course.lessons,
+            lessonKeys: course.lessons ? Object.keys(course.lessons) : 'NO LESSONS'
           });
           const courseInfo = COURSES[course.courseId] || course;
           const card = createCourseCard(course, courseInfo);
