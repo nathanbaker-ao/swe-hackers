@@ -458,6 +458,8 @@
     async function loadEnrolledCourses() {
       try {
         const courses = await window.DataService.getEnrolledCourses();
+        console.log('📊 Dashboard: Loaded courses from Firestore:', courses);
+        
         const grid = document.getElementById('courses-grid');
         const emptyState = document.getElementById('empty-courses');
         
@@ -470,6 +472,11 @@
         grid.innerHTML = '';
         
         courses.forEach(course => {
+          console.log('📊 Dashboard: Processing course:', course.courseId, {
+            completedLessons: course.completedLessons,
+            progressPercent: course.progressPercent,
+            lessons: course.lessons
+          });
           const courseInfo = COURSES[course.courseId] || course;
           const card = createCourseCard(course, courseInfo);
           grid.appendChild(card);
@@ -510,10 +517,19 @@
           const chId = chapterIds[i];
           const lessonProgress = progress.lessons[chId];
           
+          console.log(`📊 Checking lesson ${chId}:`, lessonProgress);
+          
           // Consider complete if marked complete OR 100% viewed
           const isComplete = lessonProgress?.completed || 
                             (lessonProgress?.progressPercent >= 100) ||
                             (lessonProgress?.viewedSections >= lessonProgress?.totalSections);
+          
+          console.log(`📊 ${chId} isComplete:`, isComplete, {
+            completed: lessonProgress?.completed,
+            progressPercent: lessonProgress?.progressPercent,
+            viewedSections: lessonProgress?.viewedSections,
+            totalSections: lessonProgress?.totalSections
+          });
           
           if (isComplete) {
             actualCompletedCount++;
@@ -527,10 +543,20 @@
         if (!foundIncomplete) {
           nextLesson = 6;
         }
+      } else {
+        console.log('📊 No lessons data found in progress!');
       }
       
       // Use actual count if higher than stored count (in case of sync issues)
       const displayCompletedLessons = Math.max(completedLessons, actualCompletedCount);
+      
+      console.log('📊 Final card values:', {
+        storedCompletedLessons: completedLessons,
+        actualCompletedCount,
+        displayCompletedLessons,
+        nextLesson,
+        progressPercent
+      });
       
       const chapterNames = ['Origins', 'Stone', 'Lightning', 'Magnetism', 'Architect', 'Capstone I', 'Capstone II'];
       const nextChapterLink = getChapterLink(progress.courseId, nextLesson);
