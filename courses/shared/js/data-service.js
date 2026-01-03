@@ -98,15 +98,35 @@ const DataService = {
       
       const data = doc.data();
       const lessons = data.lessons || {};
-      const totalLessons = Object.keys(lessons).length;
-      const completedLessons = Object.values(lessons).filter(l => l.completed).length;
-      const progressPercent = totalLessons > 0 ? Math.round((completedLessons / 7) * 100) : 0;
+      
+      // Count completed lessons - check both 'completed' flag and 100% viewed
+      let completedLessons = 0;
+      Object.entries(lessons).forEach(([lessonId, lesson]) => {
+        const isComplete = lesson.completed || 
+                          lesson.progressPercent >= 100 ||
+                          (lesson.viewedSections && lesson.totalSections && 
+                           lesson.viewedSections >= lesson.totalSections);
+        if (isComplete) {
+          completedLessons++;
+        }
+      });
+      
+      const progressPercent = Math.round((completedLessons / 7) * 100);
+      
+      console.log('📊 Recalculating course progress:', {
+        courseId,
+        completedLessons,
+        progressPercent,
+        lessonsData: Object.keys(lessons).length
+      });
       
       await progressRef.update({
         progressPercent,
         completedLessons,
         totalLessons: 7 // Fixed for our 7-chapter courses (includes ch0-origins)
       });
+      
+      console.log('📊 Course progress updated:', completedLessons, '/ 7 complete');
     } catch (error) {
       console.error('Error recalculating progress:', error);
     }
@@ -465,6 +485,15 @@ const DataService = {
         lessonData.completedAt = firebase.firestore.FieldValue.serverTimestamp();
       }
       
+      console.log('📊 Saving lesson progress:', {
+        courseId,
+        lessonId,
+        isComplete,
+        progressPercent: progressData.progressPercent,
+        viewedSections: progressData.viewedSections,
+        totalSections: progressData.totalSections
+      });
+      
       await courseRef.set({
         lastActivity: firebase.firestore.FieldValue.serverTimestamp(),
         lastLesson: lessonId,
@@ -474,6 +503,7 @@ const DataService = {
       
       // Recalculate overall progress if lesson was completed
       if (isComplete) {
+        console.log('📊 Lesson complete, recalculating course progress...');
         await this.recalculateCourseProgress(courseId);
       }
       

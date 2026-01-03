@@ -580,73 +580,261 @@ const ProgressTracker = {
     
     this.updateTrackerUI();
     
-    // Save immediately if state changed (debounced)
+    // Check if lesson is now complete (all sections viewed)
+    const viewedCount = this.sections.filter(s => s.viewed).length;
+    const isNowComplete = viewedCount === this.sections.length;
+    
+    // Save - immediate if complete, debounced otherwise
     if (stateChanged) {
-      this.debouncedSave();
+      if (isNowComplete) {
+        // Save immediately when complete (no debounce) to ensure dashboard gets updated
+        console.log('📊 Lesson complete! Saving immediately...');
+        this.saveProgress();
+      } else {
+        this.debouncedSave();
+      }
       
-      // Check if lesson is now complete (all sections viewed)
-      const viewedCount = this.sections.filter(s => s.viewed).length;
-      if (viewedCount === this.sections.length && !this.completionShown) {
+      // Show completion modal
+      if (isNowComplete && !this.completionShown) {
         this.completionShown = true;
-        this.showCompletionToast();
+        // Small delay to let save complete first
+        setTimeout(() => this.showCompletionToast(), 500);
       }
     }
   },
   
   /**
-   * Show completion toast when all sections are viewed
+   * Scroll to the user's last viewed section
+   */
+  scrollToLastSection(lastSectionId) {
+    console.log('📊 Scrolling to last section:', lastSectionId);
+    
+    // Find the section element
+    let targetElement = document.getElementById(lastSectionId);
+    
+    // If not found by ID, try data-section attribute
+    if (!targetElement) {
+      targetElement = document.querySelector(`[data-section="${lastSectionId}"]`);
+    }
+    
+    // If still not found, try matching by section index
+    if (!targetElement) {
+      const sectionIndex = this.sections.findIndex(s => s.id === lastSectionId);
+      if (sectionIndex >= 0) {
+        const allSections = document.querySelectorAll('.lesson-section, section[id], section[data-section], section.section, .origin-section');
+        targetElement = allSections[sectionIndex];
+      }
+    }
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      console.log('📊 Scrolled to section:', lastSectionId);
+    } else {
+      console.log('📊 Could not find section element for:', lastSectionId);
+    }
+  },
+  
+  /**
+   * Show completion modal when all sections are viewed
    */
   showCompletionToast() {
-    console.log('📊 All sections viewed! Showing completion toast');
+    console.log('📊 All sections viewed! Showing completion modal');
     
-    const toast = document.createElement('div');
-    toast.className = 'lesson-complete-toast';
-    toast.innerHTML = `
-      <div class="toast-icon">🎉</div>
-      <div class="toast-content">
-        <strong>Lesson Complete!</strong>
-        <span>Great job, keep going!</span>
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'lesson-complete-modal';
+    modal.innerHTML = `
+      <div class="completion-backdrop"></div>
+      <div class="completion-content">
+        <div class="completion-confetti" id="confetti-container"></div>
+        <div class="completion-icon">🎉</div>
+        <h2 class="completion-title">Lesson Complete!</h2>
+        <p class="completion-message">Amazing work! You've completed all sections of this lesson.</p>
+        <div class="completion-stats">
+          <div class="completion-stat">
+            <span class="stat-value">${this.sections.length}</span>
+            <span class="stat-label">Sections</span>
+          </div>
+          <div class="completion-stat">
+            <span class="stat-value">${Math.round((Date.now() - this.startTime) / 60000)}m</span>
+            <span class="stat-label">Time</span>
+          </div>
+          <div class="completion-stat">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Complete</span>
+          </div>
+        </div>
+        <div class="completion-actions">
+          <button class="completion-btn secondary" onclick="this.closest('.lesson-complete-modal').remove()">Review Lesson</button>
+          <a class="completion-btn primary" href="${this.getNextLessonUrl()}">Next Lesson →</a>
+        </div>
       </div>
     `;
     
-    // Add styles if not already present
-    if (!document.getElementById('completion-toast-styles')) {
+    // Add styles
+    if (!document.getElementById('completion-modal-styles')) {
       const style = document.createElement('style');
-      style.id = 'completion-toast-styles';
+      style.id = 'completion-modal-styles';
       style.textContent = `
-        .lesson-complete-toast {
+        .lesson-complete-modal {
           position: fixed;
-          bottom: 2rem;
-          left: 50%;
-          transform: translateX(-50%);
-          background: linear-gradient(135deg, #7986cb, #4db6ac);
-          color: white;
-          padding: 1rem 2rem;
-          border-radius: 12px;
+          inset: 0;
           display: flex;
           align-items: center;
+          justify-content: center;
+          z-index: 3000;
+          animation: modalFadeIn 0.3s ease;
+        }
+        .completion-backdrop {
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(8px);
+        }
+        .completion-content {
+          position: relative;
+          background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 24px;
+          padding: 3rem;
+          max-width: 480px;
+          width: 90%;
+          text-align: center;
+          animation: modalSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          overflow: hidden;
+        }
+        .completion-confetti {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          overflow: hidden;
+        }
+        .confetti-piece {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          animation: confettiFall 3s ease-out forwards;
+        }
+        .completion-icon {
+          font-size: 4rem;
+          animation: iconBounce 0.6s ease 0.3s;
+        }
+        .completion-title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin: 1rem 0 0.5rem;
+          background: linear-gradient(135deg, #7986cb, #4db6ac);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+        .completion-message {
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 2rem;
+        }
+        .completion-stats {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          margin-bottom: 2rem;
+          padding: 1.5rem;
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 12px;
+        }
+        .completion-stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .stat-value {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #4db6ac;
+        }
+        .stat-label {
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.5);
+          text-transform: uppercase;
+        }
+        .completion-actions {
+          display: flex;
           gap: 1rem;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-          animation: toastSlideUp 0.5s ease, toastFadeOut 0.5s ease 4s forwards;
-          z-index: 2000;
+          justify-content: center;
         }
-        .toast-icon { font-size: 2rem; }
-        .toast-content { display: flex; flex-direction: column; }
-        .toast-content strong { font-size: 1rem; }
-        .toast-content span { font-size: 0.85rem; opacity: 0.9; }
-        @keyframes toastSlideUp {
-          from { transform: translateX(-50%) translateY(100px); opacity: 0; }
-          to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        .completion-btn {
+          padding: 0.75rem 1.5rem;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-decoration: none;
+          border: none;
+          font-size: 1rem;
         }
-        @keyframes toastFadeOut {
-          to { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+        .completion-btn.secondary {
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+        }
+        .completion-btn.secondary:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+        .completion-btn.primary {
+          background: linear-gradient(135deg, #7986cb, #4db6ac);
+          color: white;
+        }
+        .completion-btn.primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 20px rgba(77, 182, 172, 0.4);
+        }
+        @keyframes modalFadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes modalSlideUp {
+          from { transform: translateY(50px) scale(0.9); opacity: 0; }
+          to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        @keyframes iconBounce {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.2); }
+        }
+        @keyframes confettiFall {
+          0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(500px) rotate(720deg); opacity: 0; }
         }
       `;
       document.head.appendChild(style);
     }
     
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 5000);
+    document.body.appendChild(modal);
+    
+    // Add confetti
+    const confettiContainer = modal.querySelector('#confetti-container');
+    const colors = ['#7986cb', '#4db6ac', '#ffb74d', '#f06292', '#64b5f6', '#81c784'];
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti-piece';
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDelay = Math.random() * 0.5 + 's';
+      confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+      confettiContainer.appendChild(confetti);
+    }
+    
+    // Close on backdrop click
+    modal.querySelector('.completion-backdrop').addEventListener('click', () => {
+      modal.remove();
+    });
+  },
+  
+  /**
+   * Get the URL for the next lesson
+   */
+  getNextLessonUrl() {
+    const chapterOrder = ['ch0-origins', 'ch1-stone', 'ch2-lightning', 'ch3-magnetism', 'ch4-architect', 'ch5-capstone1', 'ch6-capstone2'];
+    const currentIndex = chapterOrder.indexOf(this.lessonId);
+    const nextIndex = (currentIndex + 1) % chapterOrder.length;
+    return `../${chapterOrder[nextIndex]}/`;
   },
   
   /**
@@ -780,6 +968,13 @@ const ProgressTracker = {
         }
         
         this.updateTrackerUI();
+        
+        // Scroll to last viewed section after a short delay
+        if (progress.lastSection) {
+          setTimeout(() => {
+            this.scrollToLastSection(progress.lastSection);
+          }, 500);
+        }
       } else {
         console.log('📊 No saved progress found for this lesson');
       }
@@ -832,7 +1027,11 @@ const ProgressTracker = {
     
     try {
       const result = await window.DataService.saveLessonProgress(this.courseId, this.lessonId, progressData);
-      console.log('📊 Progress saved:', viewedCount + '/' + this.sections.length, 'sections viewed');
+      console.log('📊 Progress saved:', viewedCount + '/' + this.sections.length, 'sections viewed, progressPercent:', progressPercent);
+      
+      if (progressPercent >= 100) {
+        console.log('📊 Lesson 100% complete, course progress should be updated');
+      }
     } catch (error) {
       console.error('📊 Error saving progress:', error);
     }
