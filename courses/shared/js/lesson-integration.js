@@ -332,49 +332,12 @@ const LessonIntegration = {
   
   /**
    * Setup automatic lesson completion when user scrolls to bottom
+   * Only triggers when user has viewed most sections AND scrolled to bottom
    */
   setupAutoComplete() {
-    // Track if user has scrolled at all
-    let hasScrolled = false;
-    let scrollHandler = () => {
-      hasScrolled = true;
-      window.removeEventListener('scroll', scrollHandler);
-    };
-    window.addEventListener('scroll', scrollHandler);
-    
-    // Delay observer setup to prevent firing on page load
-    setTimeout(() => {
-      // Find the element to observe (bottom navigation or last section)
-      const navElement = document.querySelector('.lesson-nav, .chapter-nav');
-      const sections = document.querySelectorAll('section.section, section[data-section], .lesson-section, .continue-section');
-      
-      let targetElement = navElement;
-      if (!targetElement && sections.length > 0) {
-        targetElement = sections[sections.length - 1];
-      }
-      
-      if (!targetElement) {
-        console.log('📊 No target element for auto-complete');
-        return;
-      }
-      
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            // Only trigger if user has scrolled AND element is in view
-            if (entry.isIntersecting && hasScrolled) {
-              console.log('📊 User reached end of lesson, marking complete');
-              this.finishLesson();
-              observer.disconnect();
-            }
-          });
-        },
-        { threshold: 0.5, rootMargin: '0px' }
-      );
-      
-      observer.observe(targetElement);
-      console.log('📊 Auto-complete observer set on:', targetElement.className || targetElement.tagName);
-    }, 2000); // Wait 2 seconds before setting up observer
+    // Don't set up auto-complete - we'll rely on progress tracker's section tracking
+    // Lesson is marked complete when all sections are viewed via saveLessonProgress
+    console.log('📊 Auto-complete disabled - using section-based completion');
   },
   
   /**
@@ -384,78 +347,10 @@ const LessonIntegration = {
     try {
       await window.DataService.completeLesson(this.courseId, this.lessonId);
       this.updateProgressDots();
-      
-      // Show completion message
-      this.showCompletionMessage();
+      // Completion toast is now handled by ProgressTracker when all sections are viewed
     } catch (error) {
       console.error('Error completing lesson:', error);
     }
-  },
-  
-  /**
-   * Show lesson completion message
-   */
-  showCompletionMessage() {
-    const message = document.createElement('div');
-    message.className = 'lesson-complete-toast';
-    message.innerHTML = `
-      <div class="toast-icon">🎉</div>
-      <div class="toast-content">
-        <strong>Lesson Complete!</strong>
-        <span>Great job, keep going!</span>
-      </div>
-    `;
-    
-    const style = document.createElement('style');
-    style.textContent = `
-      .lesson-complete-toast {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: linear-gradient(135deg, #7986cb, #4db6ac);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        animation: slideUp 0.5s ease, fadeOut 0.5s ease 3s forwards;
-        z-index: 2000;
-      }
-      
-      .toast-icon {
-        font-size: 2rem;
-      }
-      
-      .toast-content {
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .toast-content strong {
-        font-size: 1rem;
-      }
-      
-      .toast-content span {
-        font-size: 0.85rem;
-        opacity: 0.9;
-      }
-      
-      @keyframes slideUp {
-        from { transform: translateY(100px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-      }
-      
-      @keyframes fadeOut {
-        to { opacity: 0; transform: translateY(-20px); }
-      }
-    `;
-    
-    document.head.appendChild(style);
-    document.body.appendChild(message);
-    
-    setTimeout(() => message.remove(), 4000);
   },
   
   /**

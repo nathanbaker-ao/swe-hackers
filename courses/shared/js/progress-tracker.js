@@ -33,6 +33,7 @@ const ProgressTracker = {
     this.sections = [];
     this.currentSection = null;
     this.isInitialized = false;
+    this.completionShown = false;
     
     // Find all sections on the page
     this.discoverSections();
@@ -582,7 +583,70 @@ const ProgressTracker = {
     // Save immediately if state changed (debounced)
     if (stateChanged) {
       this.debouncedSave();
+      
+      // Check if lesson is now complete (all sections viewed)
+      const viewedCount = this.sections.filter(s => s.viewed).length;
+      if (viewedCount === this.sections.length && !this.completionShown) {
+        this.completionShown = true;
+        this.showCompletionToast();
+      }
     }
+  },
+  
+  /**
+   * Show completion toast when all sections are viewed
+   */
+  showCompletionToast() {
+    console.log('📊 All sections viewed! Showing completion toast');
+    
+    const toast = document.createElement('div');
+    toast.className = 'lesson-complete-toast';
+    toast.innerHTML = `
+      <div class="toast-icon">🎉</div>
+      <div class="toast-content">
+        <strong>Lesson Complete!</strong>
+        <span>Great job, keep going!</span>
+      </div>
+    `;
+    
+    // Add styles if not already present
+    if (!document.getElementById('completion-toast-styles')) {
+      const style = document.createElement('style');
+      style.id = 'completion-toast-styles';
+      style.textContent = `
+        .lesson-complete-toast {
+          position: fixed;
+          bottom: 2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          background: linear-gradient(135deg, #7986cb, #4db6ac);
+          color: white;
+          padding: 1rem 2rem;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+          animation: toastSlideUp 0.5s ease, toastFadeOut 0.5s ease 4s forwards;
+          z-index: 2000;
+        }
+        .toast-icon { font-size: 2rem; }
+        .toast-content { display: flex; flex-direction: column; }
+        .toast-content strong { font-size: 1rem; }
+        .toast-content span { font-size: 0.85rem; opacity: 0.9; }
+        @keyframes toastSlideUp {
+          from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+          to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+        @keyframes toastFadeOut {
+          to { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 5000);
   },
   
   /**
@@ -651,6 +715,8 @@ const ProgressTracker = {
    * Load progress from Firestore
    */
   async loadProgress() {
+    console.log('📊 loadProgress called, checking auth...');
+    
     // Wait for auth to be ready
     if (!window.AuthService) {
       console.log('📊 AuthService not ready, retrying in 500ms...');
@@ -659,19 +725,29 @@ const ProgressTracker = {
     }
     
     // Check if user is logged in
-    const user = window.AuthService.getUser();
+    let user = window.AuthService.getUser();
     if (!user) {
+      console.log('📊 User not signed in yet, waiting for auth state...');
       // Try waiting for auth state
       try {
-        await window.AuthService.waitForAuthState();
+        user = await window.AuthService.waitForAuthState();
+        console.log('📊 Auth state resolved, user:', user?.email);
       } catch (e) {
-        console.log('📊 User not authenticated, skipping progress load');
+        console.log('📊 waitForAuthState failed, retrying in 1 second...');
+        setTimeout(() => this.loadProgress(), 1000);
         return;
       }
     }
     
+    if (!user) {
+      console.log('📊 Still no user after waiting, retrying in 1 second...');
+      setTimeout(() => this.loadProgress(), 1000);
+      return;
+    }
+    
     if (!window.DataService) {
-      console.log('📊 DataService not ready');
+      console.log('📊 DataService not ready, retrying in 500ms...');
+      setTimeout(() => this.loadProgress(), 500);
       return;
     }
     
@@ -680,21 +756,32 @@ const ProgressTracker = {
       const progress = await window.DataService.getLessonProgress(this.courseId, this.lessonId);
       
       if (progress && progress.sections) {
-        console.log('📊 Loaded saved progress:', progress.sections.length, 'sections');
+        console.log('📊 Loaded saved progress:', progress.sections.length, 'sections,', 
+                   progress.sections.filter(s => s.viewed).length, 'viewed');
         
         // Restore section states
+        let restoredCount = 0;
         progress.sections.forEach(savedSection => {
           const section = this.sections.find(s => s.id === savedSection.id);
           if (section) {
             section.viewed = savedSection.viewed || false;
             section.completed = savedSection.completed || false;
             section.timeSpent = savedSection.timeSpent || 0;
+            if (savedSection.viewed) restoredCount++;
           }
         });
         
+        console.log('📊 Restored', restoredCount, 'viewed sections to UI');
+        
+        // If already complete, don't show toast again
+        if (restoredCount === this.sections.length) {
+          this.completionShown = true;
+          console.log('📊 Lesson was already complete');
+        }
+        
         this.updateTrackerUI();
       } else {
-        console.log('📊 No saved progress found');
+        console.log('📊 No saved progress found for this lesson');
       }
     } catch (error) {
       console.error('📊 Error loading progress:', error);
