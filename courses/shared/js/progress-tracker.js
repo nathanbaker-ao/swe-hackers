@@ -587,18 +587,18 @@ const ProgressTracker = {
     // Save - immediate if complete, debounced otherwise
     if (stateChanged) {
       if (isNowComplete) {
-        // Save immediately when complete (no debounce) to ensure dashboard gets updated
+        // Save immediately when complete and WAIT for it to finish
         console.log('📊 Lesson complete! Saving immediately...');
-        this.saveProgress();
+        this.saveProgress().then(() => {
+          console.log('📊 Save complete, showing modal');
+          // Show completion modal AFTER save completes
+          if (!this.completionShown) {
+            this.completionShown = true;
+            this.showCompletionToast();
+          }
+        });
       } else {
         this.debouncedSave();
-      }
-      
-      // Show completion modal
-      if (isNowComplete && !this.completionShown) {
-        this.completionShown = true;
-        // Small delay to let save complete first
-        setTimeout(() => this.showCompletionToast(), 500);
       }
     }
   },
