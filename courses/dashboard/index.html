@@ -679,46 +679,50 @@
       const chapterNames = ['Origins', 'Stone', 'Lightning', 'Magnetism', 'Architect', 'Capstone I', 'Capstone II'];
       const nextChapterLink = getChapterLink(progress.courseId, nextLesson);
       
+      const courseId = progress.courseId || progress.id;
+      
       card.innerHTML = `
-        <div class="course-banner"></div>
-        <div class="course-content">
-          <div class="course-header">
-            <div class="course-icon">${courseInfo.icon}</div>
-            <div class="course-meta">
-              <div class="course-name">${courseInfo.name}</div>
-              <div class="course-subtitle">${courseInfo.subtitle}</div>
+        <a href="course.html?id=${courseId}" class="course-card-link">
+          <div class="course-banner"></div>
+          <div class="course-content">
+            <div class="course-header">
+              <div class="course-icon">${courseInfo.icon}</div>
+              <div class="course-meta">
+                <div class="course-name">${courseInfo.name}</div>
+                <div class="course-subtitle">${courseInfo.subtitle}</div>
+              </div>
             </div>
+            
+            <div class="progress-section">
+              <div class="progress-header">
+                <span class="progress-label">${displayCompletedLessons}/7 Chapters Complete</span>
+                <span class="progress-percent">${progressPercent}%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: ${progressPercent}%"></div>
+              </div>
+            </div>
+            
+            <div class="course-stats">
+              <div class="course-stat">
+                <div class="course-stat-value">${displayCompletedLessons}</div>
+                <div class="course-stat-label">Completed</div>
+              </div>
+              <div class="course-stat">
+                <div class="course-stat-value">${7 - displayCompletedLessons}</div>
+                <div class="course-stat-label">Remaining</div>
+              </div>
+              <div class="course-stat">
+                <div class="course-stat-value">${formatTime(progress.totalTimeSpent || 0)}</div>
+                <div class="course-stat-label">Time Spent</div>
+              </div>
+            </div>
+            
+            <span class="course-action">
+              ${displayCompletedLessons === 7 ? 'View Course Dashboard →' : `Continue: ${chapterNames[nextLesson]} →`}
+            </span>
           </div>
-          
-          <div class="progress-section">
-            <div class="progress-header">
-              <span class="progress-label">${displayCompletedLessons}/7 Chapters Complete</span>
-              <span class="progress-percent">${progressPercent}%</span>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: ${progressPercent}%"></div>
-            </div>
-          </div>
-          
-          <div class="course-stats">
-            <div class="course-stat">
-              <div class="course-stat-value">${displayCompletedLessons}</div>
-              <div class="course-stat-label">Completed</div>
-            </div>
-            <div class="course-stat">
-              <div class="course-stat-value">${7 - displayCompletedLessons}</div>
-              <div class="course-stat-label">Remaining</div>
-            </div>
-            <div class="course-stat">
-              <div class="course-stat-value">${formatTime(progress.totalTimeSpent || 0)}</div>
-              <div class="course-stat-label">Time Spent</div>
-            </div>
-          </div>
-          
-          <a href="${nextChapterLink}" class="course-action">
-            ${displayCompletedLessons === 7 ? 'Review Course' : `Continue: ${chapterNames[nextLesson]} →`}
-          </a>
-        </div>
+        </a>
       `;
       
       return card;

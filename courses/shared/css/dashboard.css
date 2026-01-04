@@ -561,6 +561,12 @@ body {
   border-color: var(--accent-primary);
 }
 
+.course-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .course-banner {
   height: 8px;
   background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));

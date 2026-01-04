@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Dashboard | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Critical styles -->
+  <style>
+    .course-dashboard { display: none !important; }
+    .course-dashboard.ready { display: flex !important; }
+    
+    .auth-loading {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0a0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .auth-loading.hidden { display: none; }
+    .loading-content { text-align: center; color: #e8e8f0; }
+    .loading-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .loading-spinner {
+      width: 40px; height: 40px;
+      border: 3px solid rgba(121, 134, 203, 0.3);
+      border-top-color: #7986cb;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  <link rel="stylesheet" href="../shared/css/course-dashboard.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  
+  <!-- Loading Screen -->
+  <div class="auth-loading" id="auth-loading">
+    <div class="loading-content">
+      <div class="loading-icon">📚</div>
+      <div class="loading-spinner"></div>
+      <p>Loading course...</p>
+    </div>
+  </div>
+  
+  <div class="course-dashboard" id="course-dashboard">
+    
+    <!-- Back Navigation -->
+    <header class="course-header">
+      <a href="index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Dashboard
+      </a>
+      <div class="course-header-actions">
+        <button class="header-btn" id="bookmark-btn" title="Bookmark">🔖</button>
+        <button class="header-btn" id="share-btn" title="Share">📤</button>
+      </div>
+    </header>
+    
+    <!-- Course Hero -->
+    <section class="course-hero" id="course-hero">
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <div class="hero-icon" id="hero-icon">🌟</div>
+        <div class="hero-info">
+          <h1 class="hero-title" id="hero-title">Loading...</h1>
+          <p class="hero-subtitle" id="hero-subtitle">Loading course details...</p>
+        </div>
+        <div class="hero-progress">
+          <div class="hero-progress-ring">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" class="progress-bg"/>
+              <circle cx="50" cy="50" r="45" class="progress-fill" id="hero-progress-fill"/>
+            </svg>
+            <span class="hero-progress-text" id="hero-progress-text">0%</span>
+          </div>
+          <span class="hero-progress-label">Complete</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Tab Navigation -->
+    <nav class="course-tabs">
+      <button class="tab-btn active" data-tab="overview">
+        <span class="tab-icon">📋</span>
+        <span class="tab-text">Overview</span>
+      </button>
+      <button class="tab-btn" data-tab="chapters">
+        <span class="tab-icon">📖</span>
+        <span class="tab-text">Chapters</span>
+      </button>
+      <button class="tab-btn" data-tab="analytics">
+        <span class="tab-icon">📊</span>
+        <span class="tab-text">Analytics</span>
+      </button>
+      <button class="tab-btn" data-tab="flashcards">
+        <span class="tab-icon">🃏</span>
+        <span class="tab-text">Flashcards</span>
+      </button>
+      <button class="tab-btn" data-tab="notes">
+        <span class="tab-icon">📝</span>
+        <span class="tab-text">Notes</span>
+      </button>
+    </nav>
+    
+    <!-- Tab Content -->
+    <main class="course-content">
+      
+      <!-- Overview Tab -->
+      <div class="tab-panel active" id="panel-overview">
+        <div class="overview-grid">
+          
+          <!-- Course Stats -->
+          <div class="overview-stats">
+            <div class="overview-stat">
+              <span class="stat-icon">📚</span>
+              <span class="stat-value" id="ov-chapters">0/7</span>
+              <span class="stat-label">Chapters</span>
+            </div>
+            <div class="overview-stat">
+              <span class="stat-icon">⏱️</span>
+              <span class="stat-value" id="ov-time">0m</span>
+              <span class="stat-label">Time Spent</span>
+            </div>
+            <div class="overview-stat">
+              <span class="stat-icon">🎯</span>
+              <span class="stat-value" id="ov-quiz">--</span>
+              <span class="stat-label">Quiz Score</span>
+            </div>
+            <div class="overview-stat">
+              <span class="stat-icon">✅</span>
+              <span class="stat-value" id="ov-activities">0</span>
+              <span class="stat-label">Activities</span>
+            </div>
+          </div>
+          
+          <!-- Continue Learning Card -->
+          <div class="continue-card">
+            <div class="continue-header">
+              <span class="continue-label">Continue Learning</span>
+              <span class="continue-chapter" id="continue-chapter">Chapter 0</span>
+            </div>
+            <h3 class="continue-title" id="continue-title">The Origins</h3>
+            <p class="continue-desc" id="continue-desc">Pick up where you left off...</p>
+            <a href="#" class="continue-btn" id="continue-btn">
+              Resume Lesson →
+            </a>
+          </div>
+          
+          <!-- Quick Actions -->
+          <div class="quick-actions">
+            <button class="quick-action" data-action="flashcards">
+              <span class="action-icon">🃏</span>
+              <span class="action-text">Study Flashcards</span>
+            </button>
+            <button class="quick-action" data-action="notes">
+              <span class="action-icon">📝</span>
+              <span class="action-text">View Notes</span>
+            </button>
+            <button class="quick-action" data-action="quiz">
+              <span class="action-icon">🧠</span>
+              <span class="action-text">Practice Quiz</span>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Chapters Tab -->
+      <div class="tab-panel" id="panel-chapters">
+        <div class="chapters-list" id="chapters-list">
+          <!-- Chapters will be loaded dynamically -->
+        </div>
+      </div>
+      
+      <!-- Analytics Tab -->
+      <div class="tab-panel" id="panel-analytics">
+        <div class="analytics-grid">
+          
+          <!-- Performance Overview -->
+          <div class="analytics-card full-width">
+            <h3 class="card-title">📈 Performance Overview</h3>
+            <div class="performance-metrics">
+              <div class="metric">
+                <span class="metric-label">Quiz Accuracy</span>
+                <div class="metric-bar">
+                  <div class="metric-fill" id="an-quiz-bar" style="width: 0%"></div>
+                </div>
+                <span class="metric-value" id="an-quiz-value">0%</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Completion Rate</span>
+                <div class="metric-bar">
+                  <div class="metric-fill" id="an-completion-bar" style="width: 0%"></div>
+                </div>
+                <span class="metric-value" id="an-completion-value">0%</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Engagement Score</span>
+                <div class="metric-bar">
+                  <div class="metric-fill" id="an-engagement-bar" style="width: 0%"></div>
+                </div>
+                <span class="metric-value" id="an-engagement-value">0%</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chapter Progress Table -->
+          <div class="analytics-card full-width">
+            <h3 class="card-title">📊 Chapter Breakdown</h3>
+            <div class="chapter-table-wrapper">
+              <table class="chapter-table">
+                <thead>
+                  <tr>
+                    <th>Chapter</th>
+                    <th>Status</th>
+                    <th>Time</th>
+                    <th>Quiz</th>
+                    <th>Activities</th>
+                  </tr>
+                </thead>
+                <tbody id="chapter-table-body">
+                  <!-- Rows loaded dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <!-- Learning Timeline -->
+          <div class="analytics-card">
+            <h3 class="card-title">🕐 Learning Timeline</h3>
+            <div class="timeline" id="learning-timeline">
+              <div class="timeline-empty">Start learning to see your timeline</div>
+            </div>
+          </div>
+          
+          <!-- Strengths & Areas to Improve -->
+          <div class="analytics-card">
+            <h3 class="card-title">💪 Insights</h3>
+            <div class="insights" id="insights">
+              <div class="insight strength">
+                <span class="insight-icon">✨</span>
+                <span class="insight-text" id="insight-strength">Complete more lessons to see insights</span>
+              </div>
+              <div class="insight improve">
+                <span class="insight-icon">🎯</span>
+                <span class="insight-text" id="insight-improve">Keep learning!</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Flashcards Tab -->
+      <div class="tab-panel" id="panel-flashcards">
+        <div class="flashcards-container">
+          <div class="flashcard-deck" id="flashcard-deck">
+            <div class="no-flashcards">
+              <span class="empty-icon">🃏</span>
+              <p>No flashcards yet for this course.</p>
+              <p class="hint">Flashcards will appear as you progress through lessons.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Notes Tab -->
+      <div class="tab-panel" id="panel-notes">
+        <div class="notes-container">
+          <div class="notes-header">
+            <h3>Your Notes</h3>
+            <button class="add-note-btn" id="add-note-btn">+ Add Note</button>
+          </div>
+          <div class="notes-list" id="notes-list">
+            <div class="no-notes">
+              <span class="empty-icon">📝</span>
+              <p>No notes yet for this course.</p>
+              <p class="hint">Create notes while learning to review later.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  <script src="../shared/js/analytics-service.js"></script>
+  
+  <script>
+    // Course metadata
+    const COURSE_DATA = {
+      apprentice: {
+        name: "The Apprentice's Path",
+        subtitle: "Master the fundamentals of programming through the Three Forces",
+        icon: "🌟",
+        color: "#ffd54f"
+      },
+      undergrad: {
+        name: "The Bridge to Industry",
+        subtitle: "Transform academic knowledge into professional skills",
+        icon: "🎓",
+        color: "#7986cb"
+      },
+      junior: {
+        name: "The Junior Accelerator",
+        subtitle: "Fast-track your career from junior to mid-level in record time",
+        icon: "🚀",
+        color: "#4db6ac"
+      },
+      senior: {
+        name: "The Senior Amplifier",
+        subtitle: "Multiply your impact with AI-augmented development",
+        icon: "🎯",
+        color: "#ef5350"
+      }
+    };
+    
+    const CHAPTERS = [
+      { id: 'ch0-origins', name: 'The Origins', icon: '🏛️', desc: 'Where it all began' },
+      { id: 'ch1-stone', name: 'The Stone', icon: '🪨', desc: 'Data and memory fundamentals' },
+      { id: 'ch2-lightning', name: 'The Lightning', icon: '⚡', desc: 'Control flow and logic' },
+      { id: 'ch3-magnetism', name: 'The Magnetism', icon: '🧲', desc: 'Functions and connections' },
+      { id: 'ch4-architect', name: 'The Architect', icon: '🏗️', desc: 'Thinking in systems' },
+      { id: 'ch5-capstone1', name: 'Capstone I', icon: '🎯', desc: 'Your first project' },
+      { id: 'ch6-capstone2', name: 'Capstone II', icon: '🏆', desc: 'The final challenge' }
+    ];
+    
+    let currentCourseId = null;
+    let courseProgress = null;
+    let chapterAnalytics = null;
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', async () => {
+      const loadingScreen = document.getElementById('auth-loading');
+      const dashboard = document.getElementById('course-dashboard');
+      
+      // Get course ID from URL
+      const params = new URLSearchParams(window.location.search);
+      currentCourseId = params.get('id');
+      
+      if (!currentCourseId || !COURSE_DATA[currentCourseId]) {
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      // Initialize Firebase
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        return;
+      }
+      
+      window.AuthService.init();
+      
+      // Wait for auth
+      const user = await window.AuthService.waitForAuthState();
+      
+      if (!user) {
+        window.AuthService.setRedirectUrl(window.location.href);
+        window.location.href = '../auth/login.html';
+        return;
+      }
+      
+      // Show dashboard
+      loadingScreen.classList.add('hidden');
+      dashboard.classList.add('ready');
+      
+      // Load course data
+      await loadCourseData();
+      
+      // Setup tabs
+      setupTabs();
+      
+      // Setup quick actions
+      setupQuickActions();
+      
+      // Animate entrance
+      anime({
+        targets: '.course-hero',
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        duration: 600,
+        easing: 'easeOutCubic'
+      });
+    });
+    
+    // Load course data
+    async function loadCourseData() {
+      const course = COURSE_DATA[currentCourseId];
+      
+      // Set hero info
+      document.getElementById('hero-icon').textContent = course.icon;
+      document.getElementById('hero-title').textContent = course.name;
+      document.getElementById('hero-subtitle').textContent = course.subtitle;
+      document.title = `${course.name} | AutoNateAI`;
+      
+      // Set hero background color
+      document.querySelector('.hero-background').style.background = 
+        `linear-gradient(135deg, ${course.color}22, transparent)`;
+      
+      // Load progress
+      const courses = await window.DataService.getEnrolledCourses();
+      courseProgress = courses.find(c => c.courseId === currentCourseId || c.id === currentCourseId);
+      
+      if (courseProgress) {
+        updateProgressRing(courseProgress.progressPercent || 0);
+        updateOverviewStats(courseProgress);
+      }
+      
+      // Load chapter analytics
+      chapterAnalytics = await window.AnalyticsService.getChapterAnalytics(currentCourseId);
+      console.log('📊 Chapter analytics:', chapterAnalytics);
+      
+      renderChaptersList();
+      renderAnalytics();
+      setupContinueLearning();
+    }
+    
+    // Update progress ring
+    function updateProgressRing(percent) {
+      const circle = document.getElementById('hero-progress-fill');
+      const text = document.getElementById('hero-progress-text');
+      
+      // Circumference = 2 * π * r = 2 * 3.14159 * 45 ≈ 283
+      const circumference = 283;
+      const offset = circumference - (percent / 100) * circumference;
+      
+      circle.style.strokeDasharray = circumference;
+      circle.style.strokeDashoffset = circumference;
+      
+      text.textContent = percent + '%';
+      
+      // Animate
+      setTimeout(() => {
+        circle.style.transition = 'stroke-dashoffset 1.5s ease';
+        circle.style.strokeDashoffset = offset;
+      }, 300);
+    }
+    
+    // Update overview stats
+    function updateOverviewStats(progress) {
+      const completed = progress.completedLessons || 0;
+      document.getElementById('ov-chapters').textContent = `${completed}/7`;
+      
+      // Time
+      const timeMs = chapterAnalytics?.totals?.totalTimeMs || 0;
+      document.getElementById('ov-time').textContent = formatDuration(timeMs);
+      
+      // Quiz score
+      const quizScore = chapterAnalytics?.totals?.avgQuizScore;
+      document.getElementById('ov-quiz').textContent = quizScore !== null ? `${quizScore}%` : '--';
+      
+      // Activities
+      const activities = chapterAnalytics?.totals?.totalActivities || 0;
+      document.getElementById('ov-activities').textContent = activities;
+    }
+    
+    // Setup continue learning
+    function setupContinueLearning() {
+      // Find next incomplete chapter
+      let nextChapter = CHAPTERS[0];
+      let nextIndex = 0;
+      
+      if (chapterAnalytics?.chapters) {
+        for (let i = 0; i < chapterAnalytics.chapters.length; i++) {
+          if (chapterAnalytics.chapters[i].status !== 'completed') {
+            nextChapter = CHAPTERS[i];
+            nextIndex = i;
+            break;
+          }
+          // If all complete, show last
+          if (i === chapterAnalytics.chapters.length - 1) {
+            nextChapter = CHAPTERS[i];
+            nextIndex = i;
+          }
+        }
+      }
+      
+      document.getElementById('continue-chapter').textContent = `Chapter ${nextIndex}`;
+      document.getElementById('continue-title').textContent = nextChapter.name;
+      document.getElementById('continue-desc').textContent = nextChapter.desc;
+      document.getElementById('continue-btn').href = `../${currentCourseId}/${nextChapter.id}/`;
+    }
+    
+    // Render chapters list
+    function renderChaptersList() {
+      const container = document.getElementById('chapters-list');
+      container.innerHTML = '';
+      
+      CHAPTERS.forEach((chapter, index) => {
+        const analytics = chapterAnalytics?.chapters?.[index] || {};
+        const status = analytics.status || 'not_started';
+        
+        const card = document.createElement('div');
+        card.className = `chapter-card ${status}`;
+        
+        card.innerHTML = `
+          <div class="chapter-number">${index}</div>
+          <div class="chapter-icon">${chapter.icon}</div>
+          <div class="chapter-info">
+            <h3 class="chapter-name">${chapter.name}</h3>
+            <p class="chapter-desc">${chapter.desc}</p>
+            <div class="chapter-meta">
+              <span class="meta-item">
+                <span class="meta-icon">⏱️</span>
+                ${analytics.timeSpentFormatted || '0m'}
+              </span>
+              ${analytics.quizScore !== null ? `
+                <span class="meta-item">
+                  <span class="meta-icon">🎯</span>
+                  ${analytics.quizScore}%
+                </span>
+              ` : ''}
+              <span class="meta-item">
+                <span class="meta-icon">✅</span>
+                ${analytics.activitiesCompleted || 0} activities
+              </span>
+            </div>
+          </div>
+          <div class="chapter-status">
+            ${status === 'completed' ? '<span class="status-badge completed">✓ Complete</span>' : 
+              status === 'in_progress' ? '<span class="status-badge in-progress">In Progress</span>' :
+              '<span class="status-badge">Not Started</span>'}
+          </div>
+          <a href="../${currentCourseId}/${chapter.id}/" class="chapter-link">
+            ${status === 'completed' ? 'Review' : status === 'in_progress' ? 'Continue' : 'Start'} →
+          </a>
+        `;
+        
+        container.appendChild(card);
+      });
+      
+      // Animate cards
+      anime({
+        targets: '.chapter-card',
+        opacity: [0, 1],
+        translateX: [-20, 0],
+        delay: anime.stagger(80),
+        duration: 500,
+        easing: 'easeOutCubic'
+      });
+    }
+    
+    // Render analytics
+    function renderAnalytics() {
+      if (!chapterAnalytics) return;
+      
+      const totals = chapterAnalytics.totals;
+      
+      // Performance metrics
+      const quizScore = totals.avgQuizScore || 0;
+      const completionRate = Math.round((totals.completed / 7) * 100);
+      const engagementScore = Math.min(100, Math.round((totals.totalActivities / 14) * 100)); // Assume 2 activities per chapter
+      
+      document.getElementById('an-quiz-bar').style.width = quizScore + '%';
+      document.getElementById('an-quiz-value').textContent = quizScore + '%';
+      
+      document.getElementById('an-completion-bar').style.width = completionRate + '%';
+      document.getElementById('an-completion-value').textContent = completionRate + '%';
+      
+      document.getElementById('an-engagement-bar').style.width = engagementScore + '%';
+      document.getElementById('an-engagement-value').textContent = engagementScore + '%';
+      
+      // Chapter table
+      const tbody = document.getElementById('chapter-table-body');
+      tbody.innerHTML = '';
+      
+      chapterAnalytics.chapters.forEach((chapter, i) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>
+            <span class="table-icon">${CHAPTERS[i].icon}</span>
+            ${CHAPTERS[i].name}
+          </td>
+          <td>
+            <span class="status-dot ${chapter.status}"></span>
+            ${chapter.status === 'completed' ? 'Complete' : 
+              chapter.status === 'in_progress' ? 'In Progress' : 'Not Started'}
+          </td>
+          <td>${chapter.timeSpentFormatted || '0m'}</td>
+          <td>${chapter.quizScore !== null ? chapter.quizScore + '%' : '--'}</td>
+          <td>${chapter.activitiesCompleted || 0}</td>
+        `;
+        tbody.appendChild(row);
+      });
+      
+      // Timeline
+      renderTimeline();
+      
+      // Insights
+      generateInsights();
+    }
+    
+    // Render timeline
+    function renderTimeline() {
+      const container = document.getElementById('learning-timeline');
+      const timeline = chapterAnalytics?.timeline || [];
+      
+      if (timeline.length === 0) {
+        container.innerHTML = '<div class="timeline-empty">Start learning to see your timeline</div>';
+        return;
+      }
+      
+      container.innerHTML = '';
+      
+      timeline.slice(-5).forEach(item => {
+        const date = item.completedAt?._seconds 
+          ? new Date(item.completedAt._seconds * 1000).toLocaleDateString()
+          : 'Recently';
+        
+        const entry = document.createElement('div');
+        entry.className = 'timeline-entry';
+        entry.innerHTML = `
+          <span class="timeline-icon">${item.icon}</span>
+          <div class="timeline-content">
+            <span class="timeline-title">${item.name}</span>
+            <span class="timeline-date">${date}</span>
+          </div>
+          ${item.quizScore !== null ? `<span class="timeline-score">${item.quizScore}%</span>` : ''}
+        `;
+        container.appendChild(entry);
+      });
+    }
+    
+    // Generate insights
+    function generateInsights() {
+      const totals = chapterAnalytics?.totals || {};
+      const chapters = chapterAnalytics?.chapters || [];
+      
+      // Find strength
+      let strengthText = 'Complete more lessons to see insights';
+      if (totals.avgQuizScore >= 80) {
+        strengthText = '✨ Excellent quiz performance! You understand the concepts well.';
+      } else if (totals.completed >= 3) {
+        strengthText = '✨ Great progress! You\'re building strong momentum.';
+      } else if (totals.totalActivities >= 5) {
+        strengthText = '✨ High engagement! You\'re actively participating.';
+      }
+      
+      // Find area to improve
+      let improveText = 'Keep learning!';
+      const inProgress = chapters.filter(c => c.status === 'in_progress');
+      if (inProgress.length > 2) {
+        improveText = '🎯 Try completing chapters before starting new ones.';
+      } else if (totals.avgQuizScore !== null && totals.avgQuizScore < 70) {
+        improveText = '🎯 Review quiz material to boost your scores.';
+      } else if (totals.completed === 0) {
+        improveText = '🎯 Complete your first chapter to get started!';
+      }
+      
+      document.getElementById('insight-strength').textContent = strengthText;
+      document.getElementById('insight-improve').textContent = improveText;
+    }
+    
+    // Setup tabs
+    function setupTabs() {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.tab-panel');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const targetId = tab.dataset.tab;
+          
+          tabs.forEach(t => t.classList.remove('active'));
+          panels.forEach(p => p.classList.remove('active'));
+          
+          tab.classList.add('active');
+          document.getElementById(`panel-${targetId}`).classList.add('active');
+          
+          // Animate panel content
+          anime({
+            targets: `#panel-${targetId} > *`,
+            opacity: [0, 1],
+            translateY: [10, 0],
+            delay: anime.stagger(50),
+            duration: 400,
+            easing: 'easeOutCubic'
+          });
+        });
+      });
+    }
+    
+    // Setup quick actions
+    function setupQuickActions() {
+      document.querySelectorAll('.quick-action').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const action = btn.dataset.action;
+          
+          // Switch to corresponding tab
+          document.querySelector(`[data-tab="${action === 'quiz' ? 'chapters' : action}"]`).click();
+        });
+      });
+    }
+    
+    // Format duration
+    function formatDuration(ms) {
+      if (!ms || ms < 60000) return '0m';
+      const minutes = Math.floor(ms / 60000);
+      const hours = Math.floor(minutes / 60);
+      if (hours > 0) {
+        return `${hours}h ${minutes % 60}m`;
+      }
+      return `${minutes}m`;
+    }
+  </script>
+</body>
+</html>
+
