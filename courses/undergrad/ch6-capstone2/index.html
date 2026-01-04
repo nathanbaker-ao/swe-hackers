@@ -538,12 +538,16 @@ Code to review:
     <script src="../../shared/js/data-service.js"></script>
     <script src="../../shared/js/lesson-integration.js"></script>
     <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         window.LessonIntegration.init("undergrad", "ch6-capstone2");
         // Initialize progress tracker immediately
         if (window.ProgressTracker) {
           window.ProgressTracker.init("undergrad", "ch6-capstone2");
+        }
+        if (window.ActivityTracker) {
+          window.ActivityTracker.init("undergrad", "ch6-capstone2");
         }
       });
     </script>

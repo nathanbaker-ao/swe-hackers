@@ -449,7 +449,7 @@ Please provide 2-3 architecture options with trade-offs.
     <!-- QUIZ -->
     <section class="section" data-section="quiz">
       <div class="section-content">
-        <div class="quiz-container fade-in">
+        <div class="quiz-container fade-in" data-activity="quiz-senior-ch4-leadership" data-type="quiz" data-points="10" data-answer="C">
           <div class="quiz-header">
             <span class="quiz-icon">🧠</span>
             <h3>Knowledge Check</h3>
@@ -567,12 +567,16 @@ Please provide 2-3 architecture options with trade-offs.
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/lesson-integration.js"></script>
   <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       window.LessonIntegration.init("senior", "ch4-architect");
         // Initialize progress tracker immediately
         if (window.ProgressTracker) {
           window.ProgressTracker.init("senior", "ch4-architect");
+        }
+        if (window.ActivityTracker) {
+          window.ActivityTracker.init("senior", "ch4-architect");
         }
     });
   </script>

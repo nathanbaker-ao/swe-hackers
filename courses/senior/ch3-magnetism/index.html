@@ -382,7 +382,7 @@ Generate:
     <!-- QUIZ -->
     <section class="section" data-section="quiz">
       <div class="section-content">
-        <div class="quiz-container fade-in">
+        <div class="quiz-container fade-in" data-activity="quiz-senior-ch3-strategy" data-type="quiz" data-points="10" data-answer="D">
           <div class="quiz-header">
             <span class="quiz-icon">🧠</span>
             <h3>Knowledge Check</h3>
@@ -499,12 +499,16 @@ Generate:
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/lesson-integration.js"></script>
   <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       window.LessonIntegration.init("senior", "ch3-magnetism");
         // Initialize progress tracker immediately
         if (window.ProgressTracker) {
           window.ProgressTracker.init("senior", "ch3-magnetism");
+        }
+        if (window.ActivityTracker) {
+          window.ActivityTracker.init("senior", "ch3-magnetism");
         }
     });
   </script>

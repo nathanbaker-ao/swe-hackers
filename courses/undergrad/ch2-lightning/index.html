@@ -465,7 +465,7 @@
             These are the kinds of questions you'll face in system design interviews:
           </p>
 
-          <div class="quiz-container fade-in" data-answer="B">
+          <div class="quiz-container fade-in" data-activity="quiz-undergrad-ch2-interview" data-type="quiz" data-points="10" data-answer="B">
             <div class="quiz-header">
               <span class="quiz-icon">💼</span>
               <h3 class="quiz-title">Interview Question</h3>
@@ -628,12 +628,16 @@
     <script src="../../shared/js/data-service.js"></script>
     <script src="../../shared/js/lesson-integration.js"></script>
     <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         window.LessonIntegration.init("undergrad", "ch2-lightning");
         // Initialize progress tracker immediately
         if (window.ProgressTracker) {
           window.ProgressTracker.init("undergrad", "ch2-lightning");
+        }
+        if (window.ActivityTracker) {
+          window.ActivityTracker.init("undergrad", "ch2-lightning");
         }
       });
     </script>

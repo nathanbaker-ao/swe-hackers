@@ -447,7 +447,7 @@
          ═══════════════════════════════════════════════════════════════════════ -->
     <section class="section" data-section="quiz">
       <div class="section-content">
-        <div class="quiz-container" data-answer="D">
+        <div class="quiz-container" data-activity="quiz-junior-ch3-systems" data-type="quiz" data-points="10" data-answer="D">
           <div class="quiz-header">
             <span class="quiz-icon">🧠</span>
             <h3 class="quiz-title">Knowledge Check</h3>
@@ -610,12 +610,16 @@
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/lesson-integration.js"></script>
   <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       window.LessonIntegration.init("junior", "ch3-magnetism");
         // Initialize progress tracker immediately
         if (window.ProgressTracker) {
           window.ProgressTracker.init("junior", "ch3-magnetism");
+        }
+        if (window.ActivityTracker) {
+          window.ActivityTracker.init("junior", "ch3-magnetism");
         }
     });
   </script>

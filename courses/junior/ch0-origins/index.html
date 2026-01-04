@@ -1011,6 +1011,7 @@ gantt
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/lesson-integration.js"></script>
   <script src="../../shared/js/progress-tracker.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
   
   <script>
     // Initialize Mermaid
@@ -1177,6 +1178,9 @@ gantt
       // Initialize progress tracker immediately
       if (window.ProgressTracker) {
         window.ProgressTracker.init('junior', 'ch0-origins');
+      }
+      if (window.ActivityTracker) {
+        window.ActivityTracker.init('junior', 'ch0-origins');
       }
     });
   </script>
