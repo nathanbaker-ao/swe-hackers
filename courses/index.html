@@ -36,6 +36,9 @@
   
   <!-- Anime.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
 </head>
 <body>
   
@@ -494,41 +497,7 @@
   
   <!-- Scripts -->
   <script>
-    // Navbar scroll effect
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-    
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('active');
-      mobileMenuBtn.textContent = isOpen ? '✕' : '☰';
-      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-    });
-    
-    // Close menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        mobileMenuBtn.textContent = '☰';
-      });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        mobileMenuBtn.textContent = '☰';
-      }
-    });
+    // Navbar is handled by shared/js/navbar.js
     
     // Hero animations
     document.addEventListener('DOMContentLoaded', () => {
