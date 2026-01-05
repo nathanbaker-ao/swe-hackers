@@ -3,700 +3,589 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoNateAI Learning Hub</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>AutoNateAI - AI-Augmented Learning Platform</title>
+  <meta name="title" content="AutoNateAI - AI-Augmented Learning Platform">
+  <meta name="description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community. Track your cognitive progress with our analytics dashboard.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autonateai.com/">
+  <meta property="og:title" content="AutoNateAI - AI-Augmented Learning Platform">
+  <meta property="og:description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community. Track your cognitive progress with our analytics dashboard.">
+  <meta property="og:image" content="https://autonateai.com/assets/og-preview.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://autonateai.com/">
+  <meta name="twitter:title" content="AutoNateAI - AI-Augmented Learning Platform">
+  <meta name="twitter:description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community.">
+  <meta name="twitter:image" content="https://autonateai.com/assets/og-preview.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
   
-  <style>
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-tertiary: #1a1a2e;
-      --bg-card: #16162a;
-      
-      --text-primary: #e8e8f0;
-      --text-secondary: #a0a0b8;
-      --text-muted: #6a6a80;
-      
-      --accent-stone: #8d6e63;
-      --accent-lightning: #ffd54f;
-      --accent-magnetism: #7986cb;
-      --accent-architect: #4db6ac;
-      --accent-fire: #ef5350;
-      --accent-star: #ab47bc;
-      --accent-discord: #5865F2;
-      
-      --font-display: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      
-      --radius-md: 8px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
-    }
-    
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    body {
-      font-family: var(--font-body);
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.7;
-      min-height: 100vh;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--text-primary);
-    }
-    
-    .nav-logo-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--accent-magnetism), var(--accent-architect));
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    
-    .nav-logo-text {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 1.125rem;
-    }
-    
-    .nav-auth {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-    
-    .nav-btn {
-      padding: 0.5rem 1.25rem;
-      border-radius: var(--radius-md);
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    
-    .nav-btn.login {
-      color: var(--text-secondary);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .nav-btn.login:hover {
-      color: var(--text-primary);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-    
-    .nav-btn.register {
-      background: linear-gradient(135deg, var(--accent-magnetism), var(--accent-architect));
-      color: white;
-    }
-    
-    .nav-btn.register:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 20px rgba(121, 134, 203, 0.4);
-    }
-    
-    .nav-btn.dashboard {
-      background: var(--bg-tertiary);
-      color: var(--text-primary);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .nav-btn.dashboard:hover {
-      background: var(--bg-card);
-    }
-    
-    /* Hero */
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem 4rem;
-      background: 
-        radial-gradient(ellipse at 20% 50%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(77, 182, 172, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 100%, rgba(255, 213, 79, 0.05) 0%, transparent 50%);
-    }
-    
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-magnetism) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-    }
-    
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-    }
-    
-    .three-forces {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-    }
-    
-    .force {
-      text-align: center;
-    }
-    
-    .force-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .force-name {
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-    
-    .force-desc {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-    
-    /* Section titles */
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(90deg, var(--bg-tertiary), transparent);
-    }
-    
-    /* Courses Grid - 2x2 on desktop, 1 column on mobile */
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-    
-    @media (max-width: 768px) {
-      .courses-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .course-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .course-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-magnetism);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    }
-    
-    .course-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    
-    .course-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-    
-    .course-audience {
-      font-size: 0.875rem;
-      color: var(--accent-magnetism);
-      margin-bottom: 1rem;
-    }
-    
-    .course-card p {
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-    
-    .course-meta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .course-tag {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: var(--bg-tertiary);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-    
-    /* Color themes for cards */
-    .course-card.apprentice { border-top: 3px solid var(--accent-star); }
-    .course-card.undergrad { border-top: 3px solid var(--accent-magnetism); }
-    .course-card.junior { border-top: 3px solid var(--accent-lightning); }
-    .course-card.senior { border-top: 3px solid var(--accent-architect); }
-    
-    /* Community Section */
-    .community-section {
-      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-      border-radius: var(--radius-xl);
-      padding: 3rem;
-      margin-bottom: 4rem;
-      border: 1px solid rgba(88, 101, 242, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .community-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(88, 101, 242, 0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    
-    .community-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .community-header h2 {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      margin: 0;
-    }
-    
-    .discord-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--accent-discord);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: white;
-    }
-    
-    .community-description {
-      font-size: 1.125rem;
-      color: var(--text-secondary);
-      max-width: 700px;
-      margin-bottom: 2rem;
-    }
-    
-    .community-features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    
-    .community-feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    
-    .feature-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    
-    .feature-content h4 {
-      font-size: 1rem;
-      margin-bottom: 0.25rem;
-      color: var(--text-primary);
-    }
-    
-    .feature-content p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-    
-    .channel-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-    
-    .channel-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: var(--bg-primary);
-      border-radius: var(--radius-md);
-      font-size: 0.875rem;
-      color: var(--text-secondary);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .channel-tag .hash {
-      color: var(--accent-discord);
-      font-weight: 600;
-    }
-    
-    .join-discord-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 2rem;
-      background: var(--accent-discord);
-      color: white;
-      border: none;
-      border-radius: var(--radius-md);
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    
-    .join-discord-btn:hover {
-      background: #4752c4;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(88, 101, 242, 0.3);
-      color: white;
-    }
-    
-    .join-discord-btn svg {
-      width: 24px;
-      height: 24px;
-    }
-    
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      color: var(--text-muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    footer a {
-      color: var(--accent-magnetism);
-      text-decoration: none;
-    }
-    
-    footer a:hover {
-      color: var(--accent-lightning);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .community-section {
-        padding: 2rem 1.5rem;
-      }
-      
-      .community-features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
   
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">🏛️</div>
-      <span class="nav-logo-text">AutoNateAI</span>
-    </a>
-    <div class="nav-auth" id="nav-auth">
-      <a href="auth/login.html" class="nav-btn login">Sign In</a>
-      <a href="auth/register.html" class="nav-btn register">Get Started</a>
+  <!-- Navigation -->
+  <nav class="marketing-nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">🏛️</span>
+        <span>AutoNateAI</span>
+      </a>
+      
+      <div class="nav-links">
+        <a href="blog/" class="nav-link">Blog</a>
+        <a href="consulting.html" class="nav-link">Consulting</a>
+        <a href="enterprise.html" class="nav-link">Enterprise</a>
+        <a href="challenges.html" class="nav-link">Challenges</a>
+      </div>
+      
+      <div class="nav-cta">
+        <a href="auth/login.html" class="nav-btn secondary">Sign In</a>
+        <a href="auth/register.html" class="nav-btn primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
     </div>
   </nav>
   
-  <header class="hero">
-    <h1>AutoNateAI Learning Hub</h1>
-    <p>
-      Master the art of AI-augmented software development. Think like an architect, 
-      build like a pro, and harness AI as your force multiplier.
-    </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
     
-    <div class="three-forces">
-      <div class="force">
-        <div class="force-icon">🪨</div>
-        <div class="force-name">Stone</div>
-        <div class="force-desc">Memory & Persistence</div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>🚀</span>
+          <span>AI-Augmented Learning</span>
+        </div>
+        
+        <h1 class="hero-title">Master Development with AI as Your Copilot</h1>
+        
+        <p class="hero-subtitle">
+          Stop watching tutorials you'll forget. Learn by building real projects with AI assistance, 
+          track your cognitive progress, and join a community of architects thinking at the systems level.
+        </p>
+        
+        <div class="hero-cta">
+          <a href="auth/register.html" class="btn btn-primary">
+            Start Learning Free
+            <span>→</span>
+          </a>
+          <a href="#platform" class="btn btn-secondary">
+            See the Platform
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-value">4</div>
+            <div class="hero-stat-label">Learning Paths</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">28</div>
+            <div class="hero-stat-label">Interactive Lessons</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">∞</div>
+            <div class="hero-stat-label">Daily Challenges</div>
+          </div>
+        </div>
       </div>
-      <div class="force">
-        <div class="force-icon">⚡</div>
-        <div class="force-name">Lightning</div>
-        <div class="force-desc">Flow & Logic</div>
-      </div>
-      <div class="force">
-        <div class="force-icon">🧲</div>
-        <div class="force-name">Magnetism</div>
-        <div class="force-desc">Connection & Integration</div>
+      
+      <div class="hero-visual">
+        <div class="hero-float hero-float-1">
+          <span style="font-size: 1.5rem;">🧠</span>
+          <span style="margin-left: 0.5rem; font-size: 0.9rem; color: var(--accent-secondary);">Cognitive Score: 78</span>
+        </div>
+        <div class="hero-float hero-float-2">
+          <span style="font-size: 1.5rem;">🔥</span>
+          <span style="margin-left: 0.5rem; font-size: 0.9rem;">7 Day Streak!</span>
+        </div>
+        <div class="hero-float hero-float-3">
+          <span style="font-size: 1.5rem;">✅</span>
+          <span style="margin-left: 0.5rem; font-size: 0.9rem; color: var(--accent-success);">Quiz: 100%</span>
+        </div>
+        <!-- Placeholder for dashboard screenshot -->
+        <div style="width: 100%; aspect-ratio: 16/10; background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary)); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--text-muted);">
+          📊 Dashboard Preview
+        </div>
       </div>
     </div>
-  </header>
+  </section>
   
-  <main class="container">
-    
-    <h2 class="section-title">Choose Your Path</h2>
-    
-    <div class="courses-grid">
-      
-      <a href="course/apprentice.html" class="course-card apprentice">
-        <div class="course-icon">🌟</div>
-        <h3>The Apprentice's Path</h3>
-        <div class="course-audience">For Complete Beginners</div>
-        <p>
-          Start your coding journey from scratch. Learn Python fundamentals through 
-          adventure and discovery. Perfect for students or career changers.
+  <!-- Problem/Solution Section -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">The Problem</div>
+        <h2 class="section-title">Traditional Learning is Broken</h2>
+        <p class="section-subtitle">
+          You watch hours of tutorials, take notes you never revisit, and forget 90% within a week.
+          Meanwhile, AI is transforming how code gets written — and most courses ignore it entirely.
         </p>
-        <div class="course-meta">
-          <span class="course-tag">6 weeks</span>
-          <span class="course-tag">Python</span>
-          <span class="course-tag">6 Projects</span>
-        </div>
-      </a>
+      </div>
       
-      <a href="course/undergrad.html" class="course-card undergrad">
-        <div class="course-icon">🎓</div>
-        <h3>The Bridge to Industry</h3>
-        <div class="course-audience">For CS Students</div>
-        <p>
-          Bridge the gap between academic theory and industry practice. Prepare for 
-          interviews, internships, and your first engineering role.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">6 weeks</span>
-          <span class="course-tag">Python</span>
-          <span class="course-tag">Interview Prep</span>
+      <div class="features-grid">
+        <div class="feature-card" style="border-color: var(--accent-error); border-left-width: 3px;">
+          <div class="feature-icon">📺</div>
+          <h3 class="feature-title">Passive Video Watching</h3>
+          <p class="feature-desc">
+            Sitting through 10-hour courses creates an illusion of progress while nothing sticks in long-term memory.
+          </p>
         </div>
-      </a>
-      
-      <a href="course/junior.html" class="course-card junior">
-        <div class="course-icon">🚀</div>
-        <h3>The Junior Accelerator</h3>
-        <div class="course-audience">For Junior Engineers</div>
-        <p>
-          Skip years of slow progression. Fast-track from junior to mid/senior level 
-          in 1-2 years by leveraging AI and systems thinking.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">6 weeks</span>
-          <span class="course-tag">Python</span>
-          <span class="course-tag">Career Growth</span>
+        
+        <div class="feature-card" style="border-color: var(--accent-error); border-left-width: 3px;">
+          <div class="feature-icon">🏝️</div>
+          <h3 class="feature-title">Learning in Isolation</h3>
+          <p class="feature-desc">
+            No accountability, no community, no one to ask when you're stuck at 2am on a confusing concept.
+          </p>
         </div>
-      </a>
-      
-      <a href="course/senior.html" class="course-card senior">
-        <div class="course-icon">🎯</div>
-        <h3>The Senior Amplifier</h3>
-        <div class="course-audience">For Mid-to-Senior Engineers</div>
-        <p>
-          Multiply your impact with AI. Take on bigger projects, lead initiatives, 
-          and future-proof your career as an amplified engineer.
-        </p>
-        <div class="course-meta">
-          <span class="course-tag">6 weeks</span>
-          <span class="course-tag">Python</span>
-          <span class="course-tag">10x Impact</span>
+        
+        <div class="feature-card" style="border-color: var(--accent-error); border-left-width: 3px;">
+          <div class="feature-icon">🦕</div>
+          <h3 class="feature-title">Outdated Curriculum</h3>
+          <p class="feature-desc">
+            Most courses teach you to write code like it's 2015. AI has changed everything — your learning should too.
+          </p>
         </div>
-      </a>
-      
+      </div>
     </div>
-    
-    <!-- Community Section -->
-    <section class="community-section">
-      <div class="community-header">
-        <h2>🤝 Join Our Learning Community</h2>
-        <span class="discord-badge">
-          <svg width="16" height="16" viewBox="0 0 71 55" fill="currentColor">
-            <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3## 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.0383 50.6034 51.2557 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978Z"/>
-          </svg>
-          Discord
-        </span>
-      </div>
-      
-      <p class="community-description">
-        Learning is better together. When you start a course, you join a community of 
-        <strong>learners, builders, and mentors</strong> ready to support your journey.
-      </p>
-      
-      <div class="community-features">
-        <div class="community-feature">
-          <span class="feature-icon">📚</span>
-          <div class="feature-content">
-            <h4>Study Hall</h4>
-            <p>Ask questions, share resources, discuss concepts</p>
-          </div>
-        </div>
-        
-        <div class="community-feature">
-          <span class="feature-icon">🔨</span>
-          <div class="feature-content">
-            <h4>Builders Lounge</h4>
-            <p>Get help on your projects and code reviews</p>
-          </div>
-        </div>
-        
-        <div class="community-feature">
-          <span class="feature-icon">🎙️</span>
-          <div class="feature-content">
-            <h4>Voice Sessions</h4>
-            <p>Pair programming, study groups, and office hours</p>
-          </div>
-        </div>
-        
-        <div class="community-feature">
-          <span class="feature-icon">🏆</span>
-          <div class="feature-content">
-            <h4>Hackathons</h4>
-            <p>Build together, compete, and ship real projects</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="channel-list">
-        <span class="channel-tag"><span class="hash">#</span>study-hall</span>
-        <span class="channel-tag"><span class="hash">#</span>builders-lounge</span>
-        <span class="channel-tag"><span class="hash">#</span>code-review</span>
-        <span class="channel-tag"><span class="hash">#</span>help-requests</span>
-        <span class="channel-tag"><span class="hash">#</span>project-showcase</span>
-        <span class="channel-tag"><span class="hash">#</span>tool-tips</span>
-      </div>
-      
-      <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="join-discord-btn">
-        <svg viewBox="0 0 71 55" fill="currentColor">
-          <path d="M60.1045 4.8978C55.5792 2.8214 50.7265 1.2916 45.6527 0.41542C45.5603 0.39851 45.468 0.440769 45.4204 0.525289C44.7963 1.6353 44.105 3.0834 43.6209 4.2216C38.1637 3.4046 32.7345 3.4046 27.3892 4.2216C26.905 3.0581 26.1886 1.6353 25.5617 0.525289C25.5141 0.443589 25.4218 0.40133 25.3294 0.41542C20.2584 1.2888 15.4057 2.8186 10.8776 4.8978C10.8384 4.9147 10.8048 4.9429 10.7825 4.9795C1.57795 18.7309 -0.943561 32.1443 0.293408 45.3914C0.299005 45.4562 0.335386 45.5182 0.385761 45.5576C6.45866 50.0174 12.3413 52.7249 18.1147 54.5195C18.2071 54.5477 18.305 54.5139 18.3638 54.4378C19.7295 52.5728 20.9469 50.6063 21.9907 48.5383C22.0523 48.4172 21.9935 48.2735 21.8676 48.2256C19.9366 47.4931 18.0979 46.6 16.3292 45.5858C16.1893 45.5041 16.1781 45.304 16.3068 45.2082C16.679 44.9293 17.0513 44.6391 17.4067 44.3461C17.471 44.2926 17.5606 44.2813 17.6362 44.3151C29.2558 49.6202 41.8354 49.6202 53.3179 44.3151C53.3935 44.2785 53.4831 44.2898 53.5502 44.3433C53.9057 44.6363 54.2779 44.9293 54.6529 45.2082C54.7816 45.304 54.7732 45.5041 54.6333 45.5858C52.8646 46.6197 51.0259 47.4931 49.0921 48.2228C48.9662 48.2707 48.9102 48.4172 48.9718 48.5383C50.0383 50.6034 51.2557 52.5699 52.5959 54.435C52.6519 54.5139 52.7526 54.5477 52.845 54.5195C58.6464 52.7249 64.529 50.0174 70.6019 45.5576C70.6551 45.5182 70.6887 45.459 70.6943 45.3942C72.1747 30.0791 68.2147 16.7757 60.1968 4.9823C60.1772 4.9429 60.1437 4.9147 60.1045 4.8978Z"/>
-        </svg>
-        Join the Community
-      </a>
-    </section>
-    
-  </main>
+  </section>
   
-  <footer>
-    <p>Built with 🧠 by <a href="https://github.com/nathanbaker-ao" target="_blank">Nathan Baker</a> • AutoNateAI</p>
-    <p style="margin-top: 0.5rem; font-size: 0.875rem;">
-      <a href="https://github.com/nathanbaker-ao/swe-hackers" target="_blank">GitHub Repository</a>
+  <!-- Solution Section -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Our Approach</div>
+        <h2 class="section-title">Learn Like an Architect, Build Like a Pro</h2>
+        <p class="section-subtitle">
+          AutoNateAI teaches you to think in systems, communicate with AI, and build real projects —
+          not just copy code from tutorials.
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏗️</div>
+          <h3 class="feature-title">Systems Thinking</h3>
+          <p class="feature-desc">
+            Learn the "Three Forces" — data, control flow, and connections. Understand WHY code works, not just HOW.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">AI-Augmented</h3>
+          <p class="feature-desc">
+            Every lesson teaches you to leverage AI as a coding partner. Write less, architect more.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Track Your Growth</h3>
+          <p class="feature-desc">
+            Our analytics dashboard shows your cognitive progress, quiz mastery, and learning velocity in real-time.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h3 class="feature-title">Interactive Activities</h3>
+          <p class="feature-desc">
+            Quizzes, drag-and-drop exercises, code challenges, and interactive demos — learning by doing.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🃏</div>
+          <h3 class="feature-title">Flashcards & Notes</h3>
+          <p class="feature-desc">
+            Built-in spaced repetition tools help you retain what you learn. Never forget a concept again.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title">Active Community</h3>
+          <p class="feature-desc">
+            Join our Discord with daily challenges, study groups, and mentorship from experienced developers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Platform Preview Section -->
+  <section class="section platform-preview" id="platform">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">The Platform</div>
+        <h2 class="section-title">A Beautiful Learning Experience</h2>
+        <p class="section-subtitle">
+          Dark mode by default, stunning animations, and an interface that makes you want to keep learning.
+        </p>
+      </div>
+      
+      <div class="preview-container">
+        <!-- Placeholder for platform screenshot -->
+        <div style="width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary)); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+          <span style="font-size: 4rem;">📊</span>
+          <span style="font-size: 1.25rem; color: var(--text-secondary);">Analytics Dashboard Preview</span>
+          <span style="font-size: 0.9rem; color: var(--text-muted);">Track your cognitive progress in real-time</span>
+        </div>
+        
+        <div class="preview-features">
+          <div class="preview-feature">
+            <div class="preview-feature-icon">🧠</div>
+            <div class="preview-feature-title">Cognitive Score</div>
+            <div class="preview-feature-desc">Composite metric of your learning health</div>
+          </div>
+          <div class="preview-feature">
+            <div class="preview-feature-icon">📈</div>
+            <div class="preview-feature-title">Learning Velocity</div>
+            <div class="preview-feature-desc">Lessons per week with trend analysis</div>
+          </div>
+          <div class="preview-feature">
+            <div class="preview-feature-icon">🎯</div>
+            <div class="preview-feature-title">Quiz Mastery</div>
+            <div class="preview-feature-desc">First-try accuracy by topic</div>
+          </div>
+          <div class="preview-feature">
+            <div class="preview-feature-icon">🔥</div>
+            <div class="preview-feature-title">Active Streak</div>
+            <div class="preview-feature-desc">Build consistent daily habits</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Courses Section -->
+  <section class="section courses-section" id="courses">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Learning Paths</div>
+        <h2 class="section-title">Choose Your Journey</h2>
+        <p class="section-subtitle">
+          Whether you're a complete beginner or a senior engineer, we have a path designed for you.
+        </p>
+      </div>
+      
+      <div class="courses-grid">
+        <!-- Apprentice -->
+        <div class="course-card">
+          <div class="course-banner apprentice">🌟</div>
+          <div class="course-body">
+            <h3 class="course-title">The Apprentice's Path</h3>
+            <div class="course-audience">For Complete Beginners</div>
+            <p class="course-desc">
+              Start from zero. Learn programming fundamentals through the "Three Forces" narrative — 
+              data as stone, control flow as lightning, functions as magnetism.
+            </p>
+            <div class="course-meta">
+              <span>📚 7 Chapters</span>
+              <span>⏱️ 6 Weeks</span>
+            </div>
+            <a href="course/apprentice.html" class="course-link">Learn More →</a>
+          </div>
+        </div>
+        
+        <!-- Junior -->
+        <div class="course-card">
+          <div class="course-banner junior">🚀</div>
+          <div class="course-body">
+            <h3 class="course-title">The Junior Accelerator</h3>
+            <div class="course-audience">For Junior Engineers</div>
+            <p class="course-desc">
+              Skip the 5-year grind. Learn to think like a senior engineer with AI as your accelerator.
+              Build systems, not just features.
+            </p>
+            <div class="course-meta">
+              <span>📚 7 Chapters</span>
+              <span>⏱️ 4-8 Weeks</span>
+            </div>
+            <a href="course/junior.html" class="course-link">Learn More →</a>
+          </div>
+        </div>
+        
+        <!-- Senior -->
+        <div class="course-card">
+          <div class="course-banner senior">🎯</div>
+          <div class="course-body">
+            <h3 class="course-title">The Senior Amplifier</h3>
+            <div class="course-audience">For Mid-to-Senior Engineers</div>
+            <p class="course-desc">
+              Multiply your impact. Learn agentic workflows, architecture patterns, and how to 
+              10x your output with AI-augmented development.
+            </p>
+            <div class="course-meta">
+              <span>📚 7 Chapters</span>
+              <span>⏱️ 4-8 Weeks</span>
+            </div>
+            <a href="course/senior.html" class="course-link">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Community Section -->
+  <section class="section community-section">
+    <div class="section-container">
+      <div class="community-card">
+        <div class="community-icon">💬</div>
+        <h2 class="community-title">Join the Community</h2>
+        <p class="community-desc">
+          Learning is better together. Join our Discord for daily challenges, study groups, 
+          code reviews, and mentorship from experienced developers.
+        </p>
+        
+        <div class="community-stats">
+          <div class="community-stat">
+            <div class="community-stat-value">500+</div>
+            <div class="community-stat-label">Learners</div>
+          </div>
+          <div class="community-stat">
+            <div class="community-stat-value">Daily</div>
+            <div class="community-stat-label">Challenges</div>
+          </div>
+          <div class="community-stat">
+            <div class="community-stat-value">24/7</div>
+            <div class="community-stat-label">Support</div>
+          </div>
+        </div>
+        
+        <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-primary">
+          Join Discord
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Enterprise CTA -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3 class="service-title">For Enterprises</h3>
+          <p class="service-desc">
+            Upskill your engineering team with custom training programs. Track progress, 
+            measure ROI, and build an AI-augmented workforce.
+          </p>
+          <a href="enterprise.html" class="btn btn-secondary" style="margin-top: 1.5rem;">
+            Learn More →
+          </a>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3 class="service-title">Consulting Services</h3>
+          <p class="service-desc">
+            Need help integrating AI into your development workflow? Our consultants 
+            bring hands-on experience building AI-augmented systems.
+          </p>
+          <a href="consulting.html" class="btn btn-secondary" style="margin-top: 1.5rem;">
+            Learn More →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Level Up?</h2>
+    <p class="cta-subtitle">
+      Join thousands of developers learning to build with AI. Start free today.
     </p>
+    <div class="cta-buttons">
+      <a href="auth/register.html" class="btn btn-primary">
+        Start Learning Free
+        <span>→</span>
+      </a>
+      <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-secondary">
+        Join Discord Community
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-icon">🏛️</span>
+            <span>AutoNateAI</span>
+          </div>
+          <p class="footer-desc">
+            AI-augmented learning for developers who want to think like architects and build like pros.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Learning</h4>
+          <ul class="footer-links">
+            <li><a href="course/apprentice.html">Apprentice Path</a></li>
+            <li><a href="course/junior.html">Junior Accelerator</a></li>
+            <li><a href="course/senior.html">Senior Amplifier</a></li>
+            <li><a href="challenges.html">Daily Challenges</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="https://discord.gg/Me5N8tCdkC" target="_blank">Discord</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="auth/login.html">Sign In</a></li>
+            <li><a href="auth/register.html">Create Account</a></li>
+            <li><a href="dashboard/">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 AutoNateAI. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/Me5N8tCdkC" target="_blank" title="Discord">💬</a>
+          <a href="https://github.com/nathanbaker-ao" target="_blank" title="GitHub">🐙</a>
+          <a href="https://twitter.com/autonateai" target="_blank" title="Twitter">🐦</a>
+        </div>
+      </div>
+    </div>
   </footer>
   
-  <script src="shared/js/firebase-config.js"></script>
-  <script src="shared/js/auth.js"></script>
-  
+  <!-- Scripts -->
   <script>
-    // Initialize Firebase and auth
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.FirebaseApp.init()) {
-        window.AuthService.init();
-        
-        // Update nav based on auth state
-        window.AuthService.onAuthStateChanged((user) => {
-          const navAuth = document.getElementById('nav-auth');
-          if (user) {
-            const displayName = user.displayName || user.email.split('@')[0];
-            navAuth.innerHTML = `
-              <a href="dashboard/index.html" class="nav-btn dashboard">
-                <span>👤</span>
-                ${displayName.split(' ')[0]}
-              </a>
-            `;
-          } else {
-            navAuth.innerHTML = `
-              <a href="auth/login.html" class="nav-btn login">Sign In</a>
-              <a href="auth/register.html" class="nav-btn register">Get Started</a>
-            `;
-          }
-        });
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
       }
     });
     
-    // Animate cards on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
+    // Hero animations
+    document.addEventListener('DOMContentLoaded', () => {
+      anime({
+        targets: '.hero-badge',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
       });
-    }, { threshold: 0.1 });
-    
-    document.querySelectorAll('.course-card').forEach((card, index) => {
-      card.style.opacity = 0;
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = `all 0.5s ease ${index * 0.1}s`;
-      observer.observe(card);
+      
+      anime({
+        targets: '.hero-title',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 1000,
+        delay: 200,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-subtitle',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 1000,
+        delay: 400,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-cta',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 1000,
+        delay: 600,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-stats',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 1000,
+        delay: 800,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-visual',
+        opacity: [0, 1],
+        translateX: [50, 0],
+        duration: 1200,
+        delay: 500,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-float',
+        opacity: [0, 1],
+        scale: [0.8, 1],
+        delay: anime.stagger(200, { start: 1000 }),
+        duration: 600,
+        easing: 'easeOutCubic'
+      });
     });
     
-    // Animate community section
-    const communitySection = document.querySelector('.community-section');
-    communitySection.style.opacity = 0;
-    communitySection.style.transform = 'translateY(30px)';
-    communitySection.style.transition = 'all 0.6s ease 0.3s';
-    observer.observe(communitySection);
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: entry.target.querySelectorAll('.feature-card, .course-card, .service-card, .preview-feature'),
+            opacity: [0, 1],
+            translateY: [30, 0],
+            delay: anime.stagger(100),
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.section-container').forEach(section => {
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>

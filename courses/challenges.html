@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Daily Challenges | AutoNateAI</title>
+  <meta name="description" content="Daily AI challenges to sharpen your prompt engineering, context design, and agentic workflow skills. Compete, learn, and level up.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autonateai.com/challenges">
+  <meta property="og:title" content="Daily Challenges | AutoNateAI">
+  <meta property="og:description" content="Daily AI challenges to sharpen your prompt engineering and context design skills.">
+  <meta property="og:image" content="https://autonateai.com/assets/og-preview.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daily Challenges | AutoNateAI">
+  <meta name="twitter:image" content="https://autonateai.com/assets/og-preview.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="marketing-nav" id="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon">🏛️</span>
+        <span>AutoNateAI</span>
+      </a>
+      
+      <div class="nav-links">
+        <a href="blog/" class="nav-link">Blog</a>
+        <a href="consulting.html" class="nav-link">Consulting</a>
+        <a href="enterprise.html" class="nav-link">Enterprise</a>
+        <a href="challenges.html" class="nav-link" style="color: var(--accent-primary);">Challenges</a>
+      </div>
+      
+      <div class="nav-cta">
+        <a href="auth/login.html" class="nav-btn secondary">Sign In</a>
+        <a href="auth/register.html" class="nav-btn primary">Get Started</a>
+      </div>
+      
+      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="section blog-hero">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">⚡ Daily Challenges</div>
+        <h1 class="section-title">Train Your AI Muscle Daily</h1>
+        <p class="section-subtitle">
+          Sharpen your prompt engineering, context design, and agentic workflow skills 
+          with bite-sized daily challenges. Compete with the community and climb the leaderboard.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Challenge Types -->
+  <section class="section" style="padding-top: 0;">
+    <div class="section-container">
+      <div class="section-header" style="margin-bottom: 3rem;">
+        <h2 class="section-title">Challenge Categories</h2>
+        <p class="section-subtitle">
+          Each day features 3 challenges from different categories. Complete all 3 to maintain your streak!
+        </p>
+      </div>
+      
+      <div class="features-grid">
+        
+        <!-- Prompt Craft -->
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Prompt Craft</h3>
+          <p class="feature-desc">
+            Write the perfect prompt to achieve a specific output. Master the art of clear, 
+            effective communication with AI.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "Write a prompt that makes Claude explain recursion to a 5-year-old using only food metaphors."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Context Engineering -->
+        <div class="feature-card">
+          <div class="feature-icon">🧩</div>
+          <h3 class="feature-title">Context Engineering</h3>
+          <p class="feature-desc">
+            Structure information for optimal AI consumption. Learn what context to include, 
+            what to omit, and how to organize it.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "Given this 500-line file, what 50 lines would you include as context for fixing a specific bug?"
+            </p>
+          </div>
+        </div>
+        
+        <!-- Non-Deterministic Thinking -->
+        <div class="feature-card">
+          <div class="feature-icon">🔮</div>
+          <h3 class="feature-title">Non-Deterministic Thinking</h3>
+          <p class="feature-desc">
+            Handle AI uncertainty like a pro. Learn to evaluate multiple responses, 
+            identify hallucinations, and build robust workflows.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "The AI gave 3 different answers to the same question. How do you decide which is correct?"
+            </p>
+          </div>
+        </div>
+        
+        <!-- Agentic Workflows -->
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">Agentic Workflows</h3>
+          <p class="feature-desc">
+            Design multi-step AI processes. Break complex tasks into agent-friendly chunks 
+            and chain them together effectively.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "Design an agent workflow that can refactor a React class component to hooks."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Visual Challenges -->
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Visual Challenges</h3>
+          <p class="feature-desc">
+            Create beautiful UI animations and visualizations. Master anime.js, CSS animations, 
+            and interactive data displays.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "Create a loading animation that shows data flowing through a neural network."
+            </p>
+          </div>
+        </div>
+        
+        <!-- Code Review -->
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">Code Review</h3>
+          <p class="feature-desc">
+            Spot bugs, suggest improvements, and learn to read code critically. 
+            Train your eye for quality like a senior engineer.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
+            <strong style="color: var(--accent-secondary);">Example:</strong>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">
+              "Find 3 bugs and 2 performance issues in this 50-line function."
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Daily Challenge Mechanics</h2>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
+        <div>
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🌅</div>
+          <h4 style="margin-bottom: 0.5rem;">New Challenges Daily</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">3 fresh challenges drop at midnight EST. Complete them before the next reset.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; margin-bottom: 1rem;">⏱️</div>
+          <h4 style="margin-bottom: 0.5rem;">Timed Submissions</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Some challenges are timed. Faster completions earn bonus points.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+          <h4 style="margin-bottom: 0.5rem;">Build Your Streak</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Complete all 3 daily challenges to keep your streak alive. Longer streaks = bigger rewards.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🏆</div>
+          <h4 style="margin-bottom: 0.5rem;">Climb the Leaderboard</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">Compete with the community. Weekly and monthly leaderboards with prizes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Today's Preview -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Preview</div>
+        <h2 class="section-title">Today's Challenges</h2>
+        <p class="section-subtitle">
+          Sign in to attempt today's challenges and track your progress.
+        </p>
+      </div>
+      
+      <div class="challenges-preview">
+        
+        <!-- Challenge 1 -->
+        <div class="challenge-preview-card" style="border: 1px solid rgba(255,213,79,0.3);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="background: rgba(255,213,79,0.2); color: var(--accent-warning); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">PROMPT CRAFT</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">+50 XP</span>
+          </div>
+          <div class="challenge-icon">🎯</div>
+          <h4 class="challenge-type">The Explanation Challenge</h4>
+          <p class="challenge-desc">
+            Write a prompt that makes AI explain quantum computing using only cooking metaphors.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 0.75rem; background: var(--bg-tertiary); border-radius: var(--radius-md); text-align: center;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">🔒 Sign in to attempt</span>
+          </div>
+        </div>
+        
+        <!-- Challenge 2 -->
+        <div class="challenge-preview-card" style="border: 1px solid rgba(121,134,203,0.3);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="background: rgba(121,134,203,0.2); color: var(--accent-primary); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">CONTEXT ENGINEERING</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">+75 XP</span>
+          </div>
+          <div class="challenge-icon">🧩</div>
+          <h4 class="challenge-type">The Refactor Brief</h4>
+          <p class="challenge-desc">
+            Given a 200-line legacy function, write the minimal context needed for AI to refactor it safely.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 0.75rem; background: var(--bg-tertiary); border-radius: var(--radius-md); text-align: center;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">🔒 Sign in to attempt</span>
+          </div>
+        </div>
+        
+        <!-- Challenge 3 -->
+        <div class="challenge-preview-card" style="border: 1px solid rgba(77,182,172,0.3);">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <span style="background: rgba(77,182,172,0.2); color: var(--accent-secondary); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">VISUAL</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">+100 XP</span>
+          </div>
+          <div class="challenge-icon">🎨</div>
+          <h4 class="challenge-type">The Animation Challenge</h4>
+          <p class="challenge-desc">
+            Create an anime.js animation that visualizes a sorting algorithm in action.
+          </p>
+          <div style="margin-top: 1.5rem; padding: 0.75rem; background: var(--bg-tertiary); border-radius: var(--radius-md); text-align: center;">
+            <span style="color: var(--text-muted); font-size: 0.85rem;">🔒 Sign in to attempt</span>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="auth/register.html" class="btn btn-primary" style="padding: 1rem 3rem;">
+          Start Competing Today →
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Leaderboard Preview -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">🏆 Leaderboard</div>
+        <h2 class="section-title">This Week's Top Performers</h2>
+      </div>
+      
+      <div style="max-width: 600px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; background: var(--bg-tertiary); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+          <span>Rank</span>
+          <span>Player</span>
+          <span style="text-align: right;">Streak</span>
+          <span style="text-align: right;">XP</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 1.5rem;">🥇</span>
+          <span style="font-weight: 500;">CodeArchitect42</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 23 days</span>
+          <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">4,250</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 1.5rem;">🥈</span>
+          <span style="font-weight: 500;">PromptMaster</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 19 days</span>
+          <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,875</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 1.5rem;">🥉</span>
+          <span style="font-weight: 500;">AIWhisperer</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 15 days</span>
+          <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,650</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+          <span style="font-size: 1.25rem; color: var(--text-muted);">4</span>
+          <span style="font-weight: 500;">SystemsThinker</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 12 days</span>
+          <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,200</span>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center;">
+          <span style="font-size: 1.25rem; color: var(--text-muted);">5</span>
+          <span style="font-weight: 500;">AgenticDev</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 10 days</span>
+          <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">2,950</span>
+        </div>
+        
+        <div style="padding: 1.5rem; background: var(--bg-tertiary); text-align: center;">
+          <a href="auth/register.html" style="color: var(--accent-primary); text-decoration: none; font-weight: 500;">
+            Sign up to see your rank →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Challenge Yourself?</h2>
+    <p class="cta-subtitle">
+      Join hundreds of developers training their AI skills daily.
+    </p>
+    <div class="cta-buttons">
+      <a href="auth/register.html" class="btn btn-primary">
+        Start Competing Free →
+      </a>
+      <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-secondary">
+        Join Discord Community
+      </a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-icon">🏛️</span>
+            <span>AutoNateAI</span>
+          </div>
+          <p class="footer-desc">
+            AI-augmented learning for developers who want to think like architects and build like pros.
+          </p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Learning</h4>
+          <ul class="footer-links">
+            <li><a href="course/apprentice.html">Apprentice Path</a></li>
+            <li><a href="course/junior.html">Junior Accelerator</a></li>
+            <li><a href="course/senior.html">Senior Amplifier</a></li>
+            <li><a href="challenges.html">Daily Challenges</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="blog/">Blog</a></li>
+            <li><a href="consulting.html">Consulting</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="https://discord.gg/Me5N8tCdkC" target="_blank">Discord</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="auth/login.html">Sign In</a></li>
+            <li><a href="auth/register.html">Create Account</a></li>
+            <li><a href="dashboard/">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 AutoNateAI. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://discord.gg/Me5N8tCdkC" target="_blank" title="Discord">💬</a>
+          <a href="https://github.com/nathanbaker-ao" target="_blank" title="GitHub">🐙</a>
+          <a href="https://twitter.com/autonateai" target="_blank" title="Twitter">🐦</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      anime({
+        targets: '.feature-card, .challenge-preview-card',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+        easing: 'easeOutCubic'
+      });
+    });
+  </script>
+</body>
+</html>
+
