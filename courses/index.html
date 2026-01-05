@@ -59,7 +59,20 @@
         <a href="auth/register.html" class="nav-btn primary">Get Started</a>
       </div>
       
-      <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+    
+    <!-- Mobile Menu Dropdown -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="blog/">Blog</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="enterprise.html">Enterprise</a>
+      <a href="challenges.html">Challenges</a>
+      <div class="mobile-divider"></div>
+      <div class="mobile-cta">
+        <a href="auth/login.html" class="nav-btn secondary">Sign In</a>
+        <a href="auth/register.html" class="nav-btn primary">Get Started</a>
+      </div>
     </div>
   </nav>
   
@@ -488,6 +501,32 @@
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
+      }
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('active');
+      mobileMenuBtn.textContent = isOpen ? '✕' : '☰';
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    });
+    
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
       }
     });
     
