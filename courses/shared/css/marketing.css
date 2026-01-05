@@ -168,6 +168,11 @@ body {
   border: none;
   color: var(--text-primary);
   font-size: 1.5rem;
+}
+
+/* Hide mobile menu on desktop */
+.mobile-menu {
+  display: none !important;
   cursor: pointer;
 }
 
@@ -1033,9 +1038,9 @@ body {
     display: block;
   }
   
-  /* Mobile Menu Dropdown */
+  /* Mobile Menu Dropdown - override desktop hidden */
   .mobile-menu {
-    display: none;
+    display: none !important;
     position: fixed;
     top: var(--nav-height);
     left: 0;
@@ -1050,7 +1055,7 @@ body {
   }
   
   .mobile-menu.active {
-    display: flex;
+    display: flex !important;
   }
   
   @keyframes slideDown {
