@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Freelancing Bootcamp | Endless Opportunities x AutoNateAI</title>
+    <meta name="description" content="A 4-week program teaching youth how to use AI tools to launch freelance businesses. Master ChatGPT, design tools, and launch your first client project.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autonateai.com/course/endless-opportunities.html">
+    <meta property="og:title" content="AI Freelancing Bootcamp | Endless Opportunities">
+    <meta property="og:description" content="Learn AI tools. Build a portfolio. Launch your freelance business.">
+    <meta property="og:image" content="https://autonateai.com/assets/courses/course-endless-opportunities.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Freelancing Bootcamp | Endless Opportunities">
+    <meta name="twitter:image" content="https://autonateai.com/assets/courses/course-endless-opportunities.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../shared/css/course-detail.css" />
+    <style>
+      .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      /* Partner branding */
+      .partner-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(135deg, #2E7D32, #4CAF50);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-full);
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      
+      .partner-badge img {
+        height: 24px;
+        width: auto;
+      }
+      
+      .course-hero.endless-opportunities {
+        background: 
+          radial-gradient(ellipse at 30% 50%, rgba(46, 125, 50, 0.3) 0%, transparent 50%),
+          radial-gradient(ellipse at 70% 30%, rgba(76, 175, 80, 0.2) 0%, transparent 50%),
+          var(--bg-primary);
+      }
+      
+      .access-notice {
+        background: linear-gradient(135deg, rgba(46, 125, 50, 0.15), rgba(76, 175, 80, 0.1));
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        border-radius: var(--radius-md);
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .access-notice-icon {
+        font-size: 1.5rem;
+      }
+      
+      .access-notice-text {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+      
+      .access-notice-text strong {
+        color: #4CAF50;
+      }
+      
+      .week-badge {
+        background: #4CAF50;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-full);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      
+      .three-forces-preview .force-preview .icon {
+        font-size: 2rem;
+      }
+      
+      /* Override accent colors for this course */
+      .course-hero.endless-opportunities .enrollment-card .enroll-btn {
+        background: linear-gradient(135deg, #2E7D32, #4CAF50);
+      }
+      
+      .course-hero.endless-opportunities .enrollment-card .enroll-btn:hover {
+        background: linear-gradient(135deg, #1B5E20, #388E3C);
+      }
+    </style>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Shared Components -->
+    <script src="../shared/js/navbar.js" defer></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="course-hero endless-opportunities">
+      <div class="hero-content">
+        <nav class="hero-nav">
+          <a href="../index.html" class="back-link"> ← Back to Courses </a>
+          <div class="auth-buttons" id="auth-buttons">
+            <a href="../auth/login.html" class="auth-btn login">Sign In</a>
+            <a href="../auth/register.html" class="auth-btn register">Get Started</a>
+          </div>
+        </nav>
+
+        <div class="hero-main">
+          <div class="hero-text">
+            <div class="partner-badge">
+              <span>🌟</span>
+              <span>Endless Opportunities Partnership</span>
+            </div>
+            <span class="course-badge">4-Week Youth Bootcamp</span>
+            <h1 class="course-title">AI Freelancing Bootcamp</h1>
+            <p class="course-tagline">
+              Learn AI tools. Build a portfolio. Launch your freelance business.
+              A 4-week program teaching middle and high school students how to
+              use AI to create real income opportunities.
+            </p>
+
+            <div class="course-meta-row">
+              <span class="meta-item">
+                <span class="icon">📅</span> 4 weeks
+              </span>
+              <span class="meta-item">
+                <span class="icon">📖</span> 8 hours live
+              </span>
+              <span class="meta-item">
+                <span class="icon">🔨</span> 4 projects
+              </span>
+              <span class="meta-item">
+                <span class="icon">💼</span> Portfolio
+              </span>
+            </div>
+
+            <div class="three-forces-preview">
+              <div class="force-preview">
+                <div class="icon">✍️</div>
+                <div class="name">Text</div>
+                <div class="desc">ChatGPT Mastery</div>
+              </div>
+              <div class="force-preview">
+                <div class="icon">🎨</div>
+                <div class="name">Visual</div>
+                <div class="desc">AI Design Tools</div>
+              </div>
+              <div class="force-preview">
+                <div class="icon">💰</div>
+                <div class="name">Business</div>
+                <div class="desc">Client & Launch</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="enrollment-card">
+            <div class="access-notice" id="access-notice" style="display: none;">
+              <span class="access-notice-icon">🔒</span>
+              <div class="access-notice-text">
+                This is a <strong>partner course</strong> for Endless Opportunities participants.
+                Contact your program coordinator for access.
+              </div>
+            </div>
+            
+            <div class="enrollment-price">
+              <div class="price-tag">Partner Course</div>
+              <div class="price-note">For Endless Opportunities students</div>
+            </div>
+
+            <button class="enroll-btn" id="enroll-btn">Start Learning →</button>
+
+            <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+              Building futures in Greater Grand Rapids
+            </p>
+
+            <ul class="enrollment-features">
+              <li><span class="check">✓</span> 5+ professional AI tools</li>
+              <li><span class="check">✓</span> 10+ portfolio pieces</li>
+              <li><span class="check">✓</span> 18 service guides</li>
+              <li><span class="check">✓</span> Progress tracking</li>
+              <li><span class="check">✓</span> Instructor support</li>
+              <li><span class="check">✓</span> Certificate on completion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Content -->
+    <div class="course-content">
+      <!-- What You'll Learn -->
+      <section class="content-section">
+        <h2 class="section-title">What You'll Learn</h2>
+        <div class="learn-grid">
+          <div class="learn-item">
+            <div class="icon">🤖</div>
+            <div>
+              <h4>AI Fundamentals</h4>
+              <p>Understand how AI works and how to leverage it effectively</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">✍️</div>
+            <div>
+              <h4>Prompt Engineering</h4>
+              <p>Write prompts that get professional-quality results every time</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">🎨</div>
+            <div>
+              <h4>AI Design Tools</h4>
+              <p>Create logos, graphics, and videos with AI assistance</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">📊</div>
+            <div>
+              <h4>Research & Analysis</h4>
+              <p>Use Claude for market research and business planning</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">💼</div>
+            <div>
+              <h4>Client Acquisition</h4>
+              <p>Find, pitch, and close your first paying clients</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">💵</div>
+            <div>
+              <h4>Pricing Services</h4>
+              <p>Learn what to charge and how to present your value</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curriculum -->
+      <section class="content-section">
+        <h2 class="section-title">4-Week Curriculum</h2>
+        <div class="curriculum-list">
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <div class="chapter-number">1</div>
+              <div class="chapter-info">
+                <div class="chapter-title">✍️ AI Foundations & ChatGPT Mastery</div>
+                <div class="chapter-subtitle">Understanding AI & Making Money with Text</div>
+              </div>
+              <div class="chapter-meta">
+                <span class="week-badge">Week 1</span>
+                <span>📖 2 hours</span>
+              </div>
+            </div>
+            <div class="chapter-content">
+              <ul class="chapter-topics">
+                <li>What is AI? (No jargon, real talk)</li>
+                <li>Setting up and mastering ChatGPT</li>
+                <li>CLEAR Framework for prompt engineering</li>
+                <li>Social media content creation service</li>
+                <li>Blog writing and email newsletters</li>
+                <li>Project: Create 3 portfolio pieces</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <div class="chapter-number">2</div>
+              <div class="chapter-info">
+                <div class="chapter-title">🎨 Visual AI & Design Tools</div>
+                <div class="chapter-subtitle">Creating Visual Content with AI</div>
+              </div>
+              <div class="chapter-meta">
+                <span class="week-badge">Week 2</span>
+                <span>📖 2 hours</span>
+              </div>
+            </div>
+            <div class="chapter-content">
+              <ul class="chapter-topics">
+                <li>AI image generation (Midjourney, DALL-E)</li>
+                <li>Design automation (Canva AI, Adobe Firefly)</li>
+                <li>Video AI basics and editing</li>
+                <li>Logo design service setup</li>
+                <li>Social graphics and thumbnails</li>
+                <li>Project: Design service portfolio</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <div class="chapter-number">3</div>
+              <div class="chapter-info">
+                <div class="chapter-title">🧠 Claude & Advanced AI Applications</div>
+                <div class="chapter-subtitle">Problem-Solving & Analysis</div>
+              </div>
+              <div class="chapter-meta">
+                <span class="week-badge">Week 3</span>
+                <span>📖 2 hours</span>
+              </div>
+            </div>
+            <div class="chapter-content">
+              <ul class="chapter-topics">
+                <li>Introduction to Claude for analysis</li>
+                <li>AI for research and market analysis</li>
+                <li>Automation and productivity tools</li>
+                <li>Market research service</li>
+                <li>Business planning assistance</li>
+                <li>Project: Business consulting service</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="chapter-item">
+            <div class="chapter-header" onclick="toggleChapter(this)">
+              <div class="chapter-number">4</div>
+              <div class="chapter-info">
+                <div class="chapter-title">🚀 Business Launch & Marketing</div>
+                <div class="chapter-subtitle">Launch Your Freelance Business</div>
+              </div>
+              <div class="chapter-meta">
+                <span class="week-badge">Week 4</span>
+                <span>📖 2 hours</span>
+              </div>
+            </div>
+            <div class="chapter-content">
+              <ul class="chapter-topics">
+                <li>Building your professional portfolio</li>
+                <li>Finding clients in your network</li>
+                <li>Pricing strategies and proposals</li>
+                <li>Pitching and closing clients</li>
+                <li>Final project showcase</li>
+                <li>Launch: Get your first real client!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services You Can Offer -->
+      <section class="content-section">
+        <h2 class="section-title">Services You'll Be Able to Offer</h2>
+        <div class="learn-grid">
+          <div class="learn-item">
+            <div class="icon">📱</div>
+            <div>
+              <h4>Social Media Content</h4>
+              <p>$50-150 per week of content for local businesses</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">✏️</div>
+            <div>
+              <h4>Blog Writing</h4>
+              <p>$25-75 per 500-word article</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">🎨</div>
+            <div>
+              <h4>Logo Design</h4>
+              <p>$50-200 per logo package</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">📧</div>
+            <div>
+              <h4>Email Newsletters</h4>
+              <p>$30-100 per newsletter</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">📊</div>
+            <div>
+              <h4>Market Research</h4>
+              <p>$75-200 per research report</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">🎬</div>
+            <div>
+              <h4>Video Editing</h4>
+              <p>$25-100 per video</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Perfect For -->
+      <section class="content-section">
+        <h2 class="section-title">This Course Is Perfect For</h2>
+        <div class="learn-grid">
+          <div class="learn-item">
+            <div class="icon">🎒</div>
+            <div>
+              <h4>Middle & High School Students</h4>
+              <p>6th-12th grade, no prior experience needed</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">💡</div>
+            <div>
+              <h4>Entrepreneurial Minds</h4>
+              <p>Students who want to earn while they learn</p>
+            </div>
+          </div>
+          <div class="learn-item">
+            <div class="icon">🌱</div>
+            <div>
+              <h4>First-Gen Students</h4>
+              <p>Building pathways to economic opportunity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Endless Opportunities -->
+      <section class="content-section" style="background: var(--bg-secondary); padding: 3rem; border-radius: var(--radius-lg); margin-top: 2rem;">
+        <h2 class="section-title">About Endless Opportunities</h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; max-width: 700px; margin: 0 auto 1.5rem;">
+          Founded in 2011, <strong>Endless Opportunities</strong> has helped hundreds of first-generation 
+          college students in Greater Grand Rapids build competency, contribute to their community, 
+          and increase their economic capabilities.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8; max-width: 700px; margin: 0 auto;">
+          This AI Freelancing Bootcamp extends that mission by democratizing access to AI tools, 
+          creating real income opportunities, and building confidence through practical skills 
+          that students can use immediately.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section class="content-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Who can access this course?</span>
+              <span class="toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              This course is exclusively for students enrolled in the Endless Opportunities program.
+              If you're part of the program, your coordinator will provide access credentials.
+              If you're interested in joining, contact Endless Opportunities directly.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do I need any prior experience?</span>
+              <span class="toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              No prior coding or AI experience needed! We start from the basics and build up.
+              All you need is curiosity and a willingness to learn. A laptop with internet 
+              access is required.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can I really make money with these skills?</span>
+              <span class="toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              Absolutely! Many of our students land their first paying clients during or shortly
+              after the program. The skills you learn are in high demand, and AI gives you
+              a major competitive advantage. We teach you exactly how to find and pitch clients.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What tools will I learn?</span>
+              <span class="toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              You'll master 5+ professional AI tools including ChatGPT, Claude, Midjourney,
+              DALL-E, Canva AI, and more. All core tools we teach have free tiers, so you
+              won't need to pay for subscriptions to get started.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How is the course delivered?</span>
+              <span class="toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              The bootcamp includes weekly 2-hour live sessions (Wednesdays 6-8 PM) plus
+              self-paced online content, hands-on projects, and community support. You'll
+              work on real projects that build your portfolio throughout the program.
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section" style="background: linear-gradient(135deg, #1B5E20, #2E7D32);">
+      <h2 class="cta-title">Ready to Build Your Future?</h2>
+      <p class="cta-subtitle">
+        Join Endless Opportunities students who are learning to leverage AI 
+        for real economic opportunity. Your journey starts now.
+      </p>
+      <a href="#" class="cta-btn" id="cta-enroll-btn" style="background: white; color: #1B5E20;">
+        Start Learning →
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="course-footer">
+      <p>
+        A partnership between 
+        <a href="https://endlessopportunities.org" target="_blank">Endless Opportunities</a>
+        &
+        <a href="https://github.com/nathanbaker-ao" target="_blank">AutoNateAI</a>
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../shared/js/firebase-config.js"></script>
+    <script src="../shared/js/auth.js"></script>
+    <script src="../shared/js/data-service.js"></script>
+    <script src="../shared/js/rbac.js"></script>
+
+    <script>
+      const COURSE_ID = "endless-opportunities";
+      const COURSE_DATA = {
+        name: "AI Freelancing Bootcamp",
+        icon: "🚀",
+        subtitle: "Endless Opportunities Partnership",
+      };
+
+      // Toggle chapter accordion
+      function toggleChapter(header) {
+        const item = header.closest(".chapter-item");
+        item.classList.toggle("open");
+      }
+
+      // Toggle FAQ accordion
+      function toggleFaq(question) {
+        const item = question.closest(".faq-item");
+        item.classList.toggle("open");
+      }
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", async () => {
+        if (!window.FirebaseApp.init()) {
+          console.error("Firebase initialization failed");
+          return;
+        }
+
+        window.AuthService.init();
+
+        // Check auth state
+        window.AuthService.onAuthStateChanged(async (user) => {
+          updateAuthUI(user);
+
+          if (user) {
+            await checkAccess();
+            await checkEnrollmentStatus();
+          } else {
+            // Show access notice for logged out users
+            document.getElementById('access-notice').style.display = 'flex';
+          }
+        });
+
+        // Enroll button handlers
+        document.getElementById("enroll-btn").addEventListener("click", handleEnroll);
+        document.getElementById("cta-enroll-btn").addEventListener("click", handleEnroll);
+
+        // Animate elements
+        animateOnScroll();
+      });
+
+      // Update auth UI
+      function updateAuthUI(user) {
+        const authButtons = document.getElementById("auth-buttons");
+
+        if (user) {
+          authButtons.innerHTML = `
+          <a href="../dashboard/index.html" class="auth-btn register">My Dashboard</a>
+        `;
+        }
+      }
+
+      // Check if user has access to this course
+      async function checkAccess() {
+        if (!window.RBACService) return;
+
+        const canAccess = await window.RBACService.canAccessCourse(COURSE_ID);
+        const accessNotice = document.getElementById('access-notice');
+        const enrollBtn = document.getElementById('enroll-btn');
+        const ctaBtn = document.getElementById('cta-enroll-btn');
+
+        if (!canAccess) {
+          accessNotice.style.display = 'flex';
+          enrollBtn.textContent = 'Request Access';
+          enrollBtn.onclick = () => {
+            window.location.href = '../enterprise.html?request=endless-opportunities';
+          };
+          ctaBtn.textContent = 'Request Access';
+          ctaBtn.onclick = () => {
+            window.location.href = '../enterprise.html?request=endless-opportunities';
+          };
+        } else {
+          accessNotice.style.display = 'none';
+        }
+      }
+
+      // Check enrollment status
+      async function checkEnrollmentStatus() {
+        try {
+          const progress = await window.DataService.getCourseProgress(COURSE_ID);
+
+          if (progress) {
+            const enrollBtn = document.getElementById("enroll-btn");
+            const ctaBtn = document.getElementById("cta-enroll-btn");
+
+            enrollBtn.textContent = "Continue Learning →";
+            ctaBtn.textContent = "Continue Learning →";
+          }
+        } catch (error) {
+          console.error("Error checking enrollment:", error);
+        }
+      }
+
+      // Handle enrollment
+      async function handleEnroll(e) {
+        e.preventDefault();
+
+        // Wait for auth to be ready
+        const user = await window.AuthService.waitForAuthState();
+
+        if (!user) {
+          window.AuthService.setRedirectUrl(window.location.href);
+          window.location.href = "../auth/register.html";
+          return;
+        }
+
+        // Check access first
+        if (window.RBACService) {
+          const canAccess = await window.RBACService.canAccessCourse(COURSE_ID);
+          if (!canAccess) {
+            window.location.href = '../enterprise.html?request=endless-opportunities';
+            return;
+          }
+        }
+
+        const btn = e.target;
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> Enrolling...';
+
+        try {
+          const progress = await window.DataService.getCourseProgress(COURSE_ID);
+
+          if (progress) {
+            // Already enrolled, go to first week
+            window.location.href = `../${COURSE_ID}/week1-chatgpt/`;
+            return;
+          }
+
+          // Enroll user
+          const result = await window.DataService.enrollInCourse(COURSE_ID, COURSE_DATA);
+
+          if (result.success) {
+            window.location.href = `../${COURSE_ID}/week1-chatgpt/`;
+          } else {
+            throw new Error(result.error || "Enrollment failed");
+          }
+        } catch (error) {
+          console.error("Enrollment error:", error);
+          btn.disabled = false;
+          btn.textContent = "Start Learning →";
+          alert("Failed to enroll: " + error.message);
+        }
+      }
+
+      // Animate elements on scroll
+      function animateOnScroll() {
+        anime({
+          targets: ".hero-text > *",
+          opacity: [0, 1],
+          translateY: [30, 0],
+          delay: anime.stagger(100, { start: 200 }),
+          easing: "easeOutCubic",
+          duration: 800,
+        });
+
+        anime({
+          targets: ".enrollment-card",
+          opacity: [0, 1],
+          translateX: [30, 0],
+          delay: 500,
+          easing: "easeOutCubic",
+          duration: 800,
+        });
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                anime({
+                  targets: entry.target.querySelectorAll(
+                    ".learn-item, .chapter-item, .faq-item"
+                  ),
+                  opacity: [0, 1],
+                  translateY: [20, 0],
+                  delay: anime.stagger(80),
+                  easing: "easeOutCubic",
+                  duration: 600,
+                });
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.style.opacity = 0;
+          section
+            .querySelectorAll(".learn-item, .chapter-item, .faq-item")
+            .forEach((item) => {
+              item.style.opacity = 0;
+            });
+          section.style.opacity = 1;
+          observer.observe(section);
+        });
+      }
+    </script>
+  </body>
+</html>
+
