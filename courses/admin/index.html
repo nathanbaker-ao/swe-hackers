@@ -107,6 +107,17 @@
       background: rgba(255,255,255,0.02);
     }
     
+    .course-row:hover td {
+      background: rgba(121, 134, 203, 0.1) !important;
+      transition: background 0.2s;
+    }
+    
+    .course-row:hover .action-btn {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+    }
+    
     .role-badge {
       display: inline-block;
       padding: 0.25rem 0.75rem;
@@ -526,10 +537,11 @@
           </tr>
         </thead>
         <tbody id="courses-table">
-          <tr>
+          <!-- Apprentice -->
+          <tr class="course-row" onclick="window.location.href='../course/apprentice.html'" style="cursor: pointer;">
             <td>
               <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <span style="font-size: 1.5rem;">🌟</span>
+                <span style="font-size: 1.5rem;">⭐</span>
                 <div>
                   <div style="font-weight: 500;">The Apprentice's Path</div>
                   <div style="font-size: 0.8rem; color: var(--text-muted);">apprentice</div>
@@ -538,13 +550,70 @@
             </td>
             <td><span class="role-badge user">Public</span></td>
             <td>-</td>
-            <td>-</td>
-            <td><button class="action-btn">Edit</button></td>
+            <td id="enrollments-apprentice">-</td>
+            <td>
+              <a href="../course/apprentice.html" class="action-btn" onclick="event.stopPropagation();">View</a>
+            </td>
           </tr>
-          <tr>
+          <!-- Undergrad -->
+          <tr class="course-row" onclick="window.location.href='../course/undergrad.html'" style="cursor: pointer;">
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.5rem;">🎓</span>
+                <div>
+                  <div style="font-weight: 500;">The Bridge to Industry</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">undergrad</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="role-badge user">Public</span></td>
+            <td>-</td>
+            <td id="enrollments-undergrad">-</td>
+            <td>
+              <a href="../course/undergrad.html" class="action-btn" onclick="event.stopPropagation();">View</a>
+            </td>
+          </tr>
+          <!-- Junior -->
+          <tr class="course-row" onclick="window.location.href='../course/junior.html'" style="cursor: pointer;">
             <td>
               <div style="display: flex; align-items: center; gap: 0.75rem;">
                 <span style="font-size: 1.5rem;">🚀</span>
+                <div>
+                  <div style="font-weight: 500;">The Junior Accelerator</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">junior</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="role-badge user">Public</span></td>
+            <td>-</td>
+            <td id="enrollments-junior">-</td>
+            <td>
+              <a href="../course/junior.html" class="action-btn" onclick="event.stopPropagation();">View</a>
+            </td>
+          </tr>
+          <!-- Senior -->
+          <tr class="course-row" onclick="window.location.href='../course/senior.html'" style="cursor: pointer;">
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.5rem;">👑</span>
+                <div>
+                  <div style="font-weight: 500;">The Senior Amplifier</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">senior</div>
+                </div>
+              </div>
+            </td>
+            <td><span class="role-badge user">Public</span></td>
+            <td>-</td>
+            <td id="enrollments-senior">-</td>
+            <td>
+              <a href="../course/senior.html" class="action-btn" onclick="event.stopPropagation();">View</a>
+            </td>
+          </tr>
+          <!-- Endless Opportunities -->
+          <tr class="course-row" onclick="window.location.href='../course/endless-opportunities.html'" style="cursor: pointer;">
+            <td>
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-size: 1.5rem;">🌟</span>
                 <div>
                   <div style="font-weight: 500;">AI Freelancing Bootcamp</div>
                   <div style="font-size: 0.8rem; color: var(--text-muted);">endless-opportunities</div>
@@ -553,8 +622,10 @@
             </td>
             <td><span class="role-badge enterprise">Organization</span></td>
             <td><span class="org-tag">endless-opportunities</span></td>
-            <td>-</td>
-            <td><button class="action-btn">Edit</button></td>
+            <td id="enrollments-endless-opportunities">-</td>
+            <td>
+              <a href="../course/endless-opportunities.html" class="action-btn" onclick="event.stopPropagation();">View</a>
+            </td>
           </tr>
         </tbody>
       </table>
