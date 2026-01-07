@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Sync: January 6, 2025 | AutoNateAI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+    <style>
+      :root {
+        --brand-primary: #6366f1;
+        --brand-primary-dark: #4f46e5;
+        --brand-primary-light: #818cf8;
+        --brand-glow: rgba(99, 102, 241, 0.4);
+        --accent-cyan: #22d3ee;
+        --accent-emerald: #10b981;
+        --accent-amber: #f59e0b;
+        --accent-rose: #f43f5e;
+        --accent-purple: #a855f7;
+        --bg-dark: #0a0a0f;
+        --bg-surface: #12121a;
+        --bg-elevated: #1a1a28;
+        --bg-card: #222232;
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-muted: #71717a;
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --border-accent: rgba(99, 102, 241, 0.3);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--bg-dark);
+        color: var(--text-primary);
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      .presentation {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 80px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        background: var(--bg-dark);
+      }
+
+      .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            circle at 20% 80%,
+            var(--brand-glow) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(34, 211, 238, 0.15) 0%,
+            transparent 40%
+          );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .slide > * {
+        position: relative;
+        z-index: 1;
+      }
+      .slide.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      h1 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+          135deg,
+          var(--text-primary) 0%,
+          var(--brand-primary-light) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--brand-primary-light);
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        max-width: 800px;
+      }
+
+      .brand-mark {
+        position: fixed;
+        top: 30px;
+        left: 40px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--brand-primary-light);
+        letter-spacing: 0.05em;
+        z-index: 100;
+      }
+
+      .slide-counter {
+        position: fixed;
+        bottom: 30px;
+        right: 40px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        z-index: 100;
+      }
+
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--brand-primary),
+          var(--accent-cyan)
+        );
+        z-index: 100;
+        transition: width 0.3s ease;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+        color: var(--text-muted);
+        margin-top: 1rem;
+      }
+
+      .decorative-line {
+        width: 120px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--brand-primary),
+          var(--accent-cyan)
+        );
+        border-radius: 2px;
+        margin-top: 2rem;
+      }
+
+      .hook-label {
+        display: inline-block;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        color: var(--accent-rose);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--accent-rose);
+        border-radius: 4px;
+      }
+
+      .hook-text {
+        font-size: 3rem;
+        text-align: center;
+        max-width: 900px;
+        line-height: 1.3;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .story-number {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 6rem;
+        font-weight: 700;
+        color: var(--bg-elevated);
+        -webkit-text-stroke: 2px var(--brand-primary);
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        opacity: 0.5;
+      }
+
+      .slide-story {
+        align-items: flex-start;
+        padding-left: 12%;
+      }
+      .story-content {
+        max-width: 700px;
+      }
+      .story-content p {
+        margin-bottom: 1.5rem;
+      }
+
+      .diagram-container {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 40px;
+        margin: 1.5rem 0;
+        max-width: 1000px;
+        width: 100%;
+      }
+
+      .diagram-explanation {
+        max-width: 800px;
+        text-align: center;
+      }
+      .diagram-explanation p {
+        font-size: 1.1rem;
+      }
+
+      .mermaid {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Pipeline Cards */
+      .pipeline-cards {
+        display: flex;
+        gap: 1.5rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .pipeline-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 1.5rem;
+        min-width: 280px;
+        text-align: center;
+      }
+
+      .pipeline-card.active {
+        border-color: var(--accent-emerald);
+      }
+      .pipeline-card.pending {
+        border-color: var(--accent-amber);
+      }
+      .pipeline-card.hot {
+        border-color: var(--accent-rose);
+      }
+
+      .pipeline-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+      }
+
+      .status-ready {
+        background: rgba(16, 185, 129, 0.15);
+        color: var(--accent-emerald);
+      }
+      .status-review {
+        background: rgba(245, 158, 11, 0.15);
+        color: var(--accent-amber);
+      }
+      .status-hot {
+        background: rgba(244, 63, 94, 0.15);
+        color: var(--accent-rose);
+      }
+
+      .pipeline-card h3 {
+        margin-bottom: 0.5rem;
+      }
+      .pipeline-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+      }
+      .pipeline-next {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        color: var(--brand-primary-light);
+        margin-top: 1rem;
+      }
+
+      /* Quote */
+      .big-quote {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2rem;
+        font-style: italic;
+        color: var(--text-primary);
+        border-left: 4px solid var(--brand-primary);
+        padding-left: 2rem;
+        max-width: 800px;
+        line-height: 1.4;
+        margin: 2rem 0;
+      }
+
+      /* Rules Grid */
+      .rules-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 900px;
+        margin: 1.5rem 0;
+      }
+
+      .rule-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+        transition: border-color 0.3s, transform 0.3s;
+      }
+
+      .rule-card:hover {
+        border-color: var(--brand-primary);
+        transform: translateY(-2px);
+      }
+
+      .rule-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .rule-name {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+        color: var(--brand-primary-light);
+        margin-bottom: 0.25rem;
+      }
+      .rule-desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+
+      /* Team Grid */
+      .team-flow {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .team-source {
+        background: var(--brand-primary);
+        padding: 1.5rem 2rem;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .team-source h3 {
+        color: white;
+        margin-bottom: 0;
+      }
+
+      .team-arrow {
+        font-size: 2rem;
+        color: var(--text-muted);
+      }
+
+      .team-members {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .team-member {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        padding: 1rem 1.5rem;
+        text-align: center;
+      }
+
+      .member-avatar {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary),
+          var(--accent-cyan)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+        margin: 0 auto 0.5rem;
+      }
+
+      .team-member h4 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        color: var(--text-primary);
+      }
+
+      /* Actions */
+      .actions-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 700px;
+        width: 100%;
+      }
+
+      .action-item {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+      }
+
+      .action-owner {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        color: var(--brand-primary-light);
+      }
+
+      .action-task {
+        color: var(--text-primary);
+      }
+
+      .action-due {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-align: right;
+      }
+
+      /* Energy */
+      .energy-points {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 600px;
+      }
+
+      .energy-point {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .energy-icon {
+        font-size: 2rem;
+      }
+      .energy-text h3 {
+        margin-bottom: 0.25rem;
+      }
+      .energy-text p {
+        font-size: 1rem;
+      }
+
+      /* Closing */
+      .closing-summary {
+        font-size: 2.5rem;
+        font-family: "Space Grotesk", sans-serif;
+        color: var(--text-primary);
+        max-width: 800px;
+        margin: 2rem 0 3rem;
+        line-height: 1.3;
+        text-align: center;
+      }
+
+      .brand-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .brand-name {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(
+          135deg,
+          var(--brand-primary-light),
+          var(--accent-cyan)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .brand-tagline {
+        font-size: 1rem;
+        color: var(--text-muted);
+        letter-spacing: 0.1em;
+      }
+
+      .animate-in {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      .delay-1 {
+        animation-delay: 150ms;
+      }
+      .delay-2 {
+        animation-delay: 300ms;
+      }
+      .delay-3 {
+        animation-delay: 450ms;
+      }
+      .delay-4 {
+        animation-delay: 600ms;
+      }
+      .delay-5 {
+        animation-delay: 750ms;
+      }
+
+      .nav-hint {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        z-index: 100;
+      }
+
+      .nav-hint kbd {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-subtle);
+        border-radius: 4px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand-mark">AutoNateAI</div>
+    <div class="progress-bar" id="progress"></div>
+    <div class="slide-counter">
+      <span id="current">1</span> / <span id="total">12</span>
+    </div>
+
+    <div class="presentation" id="presentation">
+      <!-- Slide 1: Title -->
+      <section class="slide slide-title active" data-slide="1">
+        <h1 class="animate-in">Team Sync</h1>
+        <p class="subtitle animate-in delay-1">January 6, 2025</p>
+        <p
+          class="animate-in delay-2"
+          style="
+            color: var(--accent-emerald);
+            font-size: 1.25rem;
+            margin-top: 1rem;
+          "
+        >
+          We're in the game now. Let's execute.
+        </p>
+        <div class="decorative-line animate-in delay-3"></div>
+      </section>
+
+      <!-- Slide 2: Hook -->
+      <section class="slide" data-slide="2">
+        <span class="hook-label animate-in">The Moment</span>
+        <h2 class="hook-text animate-in delay-1">
+          New year. Clients in the pipeline.<br />
+          Systems in place. Team assembled.<br />
+          <em style="color: var(--accent-emerald)">It's time to build.</em>
+        </h2>
+      </section>
+
+      <!-- Slide 3: Pipeline Overview -->
+      <section class="slide" data-slide="3">
+        <h2 class="animate-in">🔥 Pipeline Status</h2>
+        <div class="pipeline-cards animate-in delay-1">
+          <div class="pipeline-card active">
+            <span class="pipeline-status status-ready">🟢 SOW Stage</span>
+            <h3>Jonathan Hubbard</h3>
+            <p>NFL Betting Bot</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted)">
+              NDA ✓ Discovery ✓ SOW Sent
+            </p>
+            <div class="pipeline-next">→ Awaiting confirmation + deposit</div>
+          </div>
+          <div class="pipeline-card pending">
+            <span class="pipeline-status status-review">🟡 NDA Review</span>
+            <h3>Gerald</h3>
+            <p>Attorney</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted)">
+              Taking time to review
+            </p>
+            <div class="pipeline-next">→ Follow up mid-week</div>
+          </div>
+          <div class="pipeline-card hot">
+            <span class="pipeline-status status-hot">🔥 Warm Lead</span>
+            <h3>Foundation Lead</h3>
+            <p>Community Foundation</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted)">
+              Needs tech, ready to spend
+            </p>
+            <div class="pipeline-next">→ Schedule discovery</div>
+          </div>
+        </div>
+        <p class="animate-in delay-2" style="text-align: center">
+          Three opportunities. Three different stages. Pipeline is healthy.
+        </p>
+      </section>
+
+      <!-- Slide 4: Jonathan Win -->
+      <section class="slide slide-story" data-slide="4">
+        <div class="story-number animate-in">01</div>
+        <h2 class="animate-in delay-1">Jonathan: Full Pipeline Complete ✅</h2>
+        <div class="story-content animate-in delay-2">
+          <p>
+            We took Jonathan from <strong>initial contact</strong> through
+            <strong>NDA</strong>, through <strong>discovery</strong>, all the
+            way to <strong>SOW</strong>—using the systems we built.
+          </p>
+          <p>
+            Once he confirms and makes the down payment, we start development on
+            the <strong>LLM-powered NFL prediction system</strong>.
+          </p>
+          <p style="color: var(--accent-emerald); font-weight: 600">
+            This is our first paying client through the new workflow.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 5: The Breakthrough -->
+      <section class="slide" data-slide="5">
+        <h2 class="animate-in">💡 Today's Breakthrough</h2>
+        <div class="big-quote animate-in delay-1">
+          "The rule IS the documentation. The script IS the actual
+          documentation. Because the rule reads that script and runs."
+        </div>
+        <p
+          class="animate-in delay-2"
+          style="text-align: center; max-width: 700px"
+        >
+          We built <strong>13 Cursor rules</strong> that automate our entire
+          business workflow—from client presentations to meeting agendas to
+          legal documents.
+        </p>
+      </section>
+
+      <!-- Slide 6: What We Built -->
+      <section class="slide" data-slide="6">
+        <h2 class="animate-in">⚡ The Rules We Built</h2>
+        <div class="rules-grid animate-in delay-1">
+          <div class="rule-card">
+            <div class="rule-icon">📋</div>
+            <div class="rule-name">consulting-workflow</div>
+            <div class="rule-desc">Full client pipeline</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">🎯</div>
+            <div class="rule-name">presentation-intro</div>
+            <div class="rule-desc">Client intros</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">🔍</div>
+            <div class="rule-name">presentation-discovery</div>
+            <div class="rule-desc">Discovery summaries</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">📝</div>
+            <div class="rule-name">presentation-sow</div>
+            <div class="rule-desc">SOW walkthroughs</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">🚀</div>
+            <div class="rule-name">presentation-kickoff</div>
+            <div class="rule-desc">Project kickoffs</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">📊</div>
+            <div class="rule-name">presentation-update</div>
+            <div class="rule-desc">Progress updates</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">📅</div>
+            <div class="rule-name">meeting-prep</div>
+            <div class="rule-desc">Meeting agendas</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">🎬</div>
+            <div class="rule-name">meeting-presentation</div>
+            <div class="rule-desc">Animated slides</div>
+          </div>
+          <div class="rule-card">
+            <div class="rule-icon">💡</div>
+            <div class="rule-name">capture-insight</div>
+            <div class="rule-desc">Knowledge capture</div>
+          </div>
+        </div>
+        <p class="animate-in delay-2" style="text-align: center">
+          Every repeatable process → A rule. Every rule → Consistent output.
+        </p>
+      </section>
+
+      <!-- Slide 7: Sharing with Team -->
+      <section class="slide" data-slide="7">
+        <h2 class="animate-in">👥 Sharing the Power</h2>
+        <div class="team-flow animate-in delay-1">
+          <div class="team-source">
+            <h3>📦 GitHub Repo</h3>
+            <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem">
+              cursor-rules
+            </p>
+          </div>
+          <span class="team-arrow">→</span>
+          <div class="team-members">
+            <div class="team-member">
+              <div class="member-avatar">M</div>
+              <h4>Marcus</h4>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">B</div>
+              <h4>Brian</h4>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">T</div>
+              <h4>Tammye</h4>
+            </div>
+            <div class="team-member">
+              <div class="member-avatar">Br</div>
+              <h4>Brittany</h4>
+            </div>
+          </div>
+        </div>
+        <div
+          class="story-content animate-in delay-2"
+          style="text-align: center"
+        >
+          <p>
+            Clone the repo. Add to your Cursor workspace. Now you can produce
+            presentations, documents, assets—from conversation.
+          </p>
+          <p style="color: var(--accent-cyan)">
+            One person can output like a team. A team can output like an agency.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 8: Content & Marketing -->
+      <section class="slide" data-slide="8">
+        <h2 class="animate-in">📢 Content & Outreach</h2>
+        <div class="diagram-container animate-in delay-1">
+          <pre class="mermaid">
+flowchart LR
+    subgraph Create["🎬 Create"]
+        C1["📹 Video"]
+        C2["🤖 AI Video"]
+        C3["🎙️ NotebookLM"]
+        C4["📊 Cursor"]
+    end
+    subgraph Distribute["📤 Distribute"]
+        D1["Social"]
+        D2["Email"]
+        D3["DMs"]
+    end
+    subgraph Result["🎯 Result"]
+        R1["Leads"]
+        R2["Awareness"]
+        R3["Community"]
+    end
+    Create --> Distribute --> Result
+    style Create fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Distribute fill:#22d3ee,stroke:#0891b2,color:#fff
+    style Result fill:#10b981,stroke:#059669,color:#fff
+          </pre>
+        </div>
+        <p class="animate-in delay-2" style="text-align: center">
+          We have the tools. We have the context engineering. Time to produce
+          and push.
+        </p>
+      </section>
+
+      <!-- Slide 9: Platform -->
+      <section class="slide" data-slide="9">
+        <h2 class="animate-in">🎓 SWE Hackers Platform</h2>
+        <div class="diagram-container animate-in delay-1">
+          <pre class="mermaid">
+flowchart LR
+    subgraph Now["✅ Live"]
+        N1["4 Courses"]
+    end
+    subgraph Coming["🔜 Coming"]
+        C1["Paid"]
+        C2["Challenges"]
+    end
+    subgraph Team["👥 Team"]
+        T1["Marcus"]
+        T2["Brian"]
+        T3["Tammye"]
+        T4["Brittany"]
+    end
+    Now --> Coming
+    Team --> Coming
+    style Now fill:#10b981,stroke:#059669,color:#fff
+    style Coming fill:#6366f1,stroke:#4f46e5,color:#fff
+    style Team fill:#22d3ee,stroke:#0891b2,color:#fff
+          </pre>
+        </div>
+        <p class="animate-in delay-2" style="text-align: center">
+          Foundation is built. Now we need hands on the code. What can you pick
+          up?
+        </p>
+      </section>
+
+      <!-- Slide 10: Action Items -->
+      <section class="slide" data-slide="10">
+        <h2 class="animate-in">📝 This Week's Actions</h2>
+        <div class="actions-list animate-in delay-1">
+          <div class="action-item">
+            <span class="action-owner">Nathan</span>
+            <span class="action-task">Push cursor rules repo to GitHub</span>
+            <span class="action-due">Jan 7</span>
+          </div>
+          <div class="action-item">
+            <span class="action-owner">All</span>
+            <span class="action-task"
+              >Clone rules repo, test by generating a presentation</span
+            >
+            <span class="action-due">Jan 8</span>
+          </div>
+          <div class="action-item">
+            <span class="action-owner">Nathan</span>
+            <span class="action-task"
+              >Schedule discovery with Foundation lead</span
+            >
+            <span class="action-due">Jan 7</span>
+          </div>
+          <div class="action-item">
+            <span class="action-owner">Team</span>
+            <span class="action-task">Pick up first dev task on platform</span>
+            <span class="action-due">Jan 10</span>
+          </div>
+          <div class="action-item">
+            <span class="action-owner">TBD</span>
+            <span class="action-task">Create first outreach content piece</span>
+            <span class="action-due">Jan 10</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11: Energy -->
+      <section class="slide" data-slide="11">
+        <h2 class="animate-in">🚀 The Reality</h2>
+        <div class="energy-points animate-in delay-1">
+          <div class="energy-point">
+            <span class="energy-icon">📅</span>
+            <div class="energy-text">
+              <h3>It's January</h3>
+              <p>Fresh year. Fresh energy. Fresh opportunities.</p>
+            </div>
+          </div>
+          <div class="energy-point">
+            <span class="energy-icon">📊</span>
+            <div class="energy-text">
+              <h3>We have clients in the pipeline</h3>
+              <p>Jonathan ready. Gerald reviewing. Foundation warm.</p>
+            </div>
+          </div>
+          <div class="energy-point">
+            <span class="energy-icon">⚡</span>
+            <div class="energy-text">
+              <h3>We have the tools</h3>
+              <p>Cursor rules. Presentation engine. Templates.</p>
+            </div>
+          </div>
+          <div class="energy-point">
+            <span class="energy-icon">👥</span>
+            <div class="energy-text">
+              <h3>We have the team</h3>
+              <p>Marcus. Brian. Tammye. Brittany. Ready to build.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 12: Closing -->
+      <section class="slide" data-slide="12">
+        <h2 class="animate-in">The Question</h2>
+        <p class="closing-summary animate-in delay-1">
+          Are you ready to execute?
+        </p>
+        <p
+          class="animate-in delay-2"
+          style="font-size: 1.5rem; color: var(--accent-emerald)"
+        >
+          Let's get it. 🚀
+        </p>
+        <div class="brand-footer animate-in delay-3">
+          <span class="brand-name">AutoNateAI</span>
+          <span class="brand-tagline">We're in the game now.</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="nav-hint">
+      <span><kbd>→</kbd> Next</span>
+      <span><kbd>←</kbd> Previous</span>
+      <span><kbd>Space</kbd> Next</span>
+    </div>
+
+    <script>
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: "dark",
+        themeVariables: {
+          primaryColor: "#6366f1",
+          primaryTextColor: "#ffffff",
+          primaryBorderColor: "#818cf8",
+          lineColor: "#818cf8",
+          secondaryColor: "#1a1a2e",
+          tertiaryColor: "#0f0f1a",
+          background: "#12121a",
+          mainBkg: "#1a1a2e",
+          nodeBorder: "#818cf8",
+          clusterBkg: "#12121a",
+          clusterBorder: "#2d2d44",
+          titleColor: "#ffffff",
+          edgeLabelBackground: "#1a1a2e",
+        },
+        flowchart: { curve: "basis", padding: 20 },
+      });
+
+      let currentSlide = 1;
+      const slides = document.querySelectorAll(".slide");
+      const totalSlides = slides.length;
+      document.getElementById("total").textContent = totalSlides;
+
+      function showSlide(n) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        if (n > totalSlides) currentSlide = 1;
+        if (n < 1) currentSlide = totalSlides;
+        const activeSlide = document.querySelector(
+          `[data-slide="${currentSlide}"]`
+        );
+        activeSlide.classList.add("active");
+        document.getElementById("current").textContent = currentSlide;
+        document.getElementById("progress").style.width = `${
+          (currentSlide / totalSlides) * 100
+        }%`;
+        animateSlide(activeSlide);
+      }
+
+      function animateSlide(slide) {
+        const elements = slide.querySelectorAll(".animate-in");
+        anime({
+          targets: elements,
+          opacity: [0, 1],
+          translateY: [30, 0],
+          duration: 800,
+          easing: "easeOutQuart",
+          delay: anime.stagger(150),
+        });
+      }
+
+      function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+      function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") {
+          e.preventDefault();
+          nextSlide();
+        }
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          prevSlide();
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        const rect = document.body.getBoundingClientRect();
+        if (e.clientX - rect.left > rect.width / 2) nextSlide();
+        else prevSlide();
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(
+          () => animateSlide(document.querySelector(".slide.active")),
+          100
+        );
+      });
+    </script>
+  </body>
+</html>

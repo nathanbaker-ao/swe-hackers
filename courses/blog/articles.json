@@ -1,0 +1,149 @@
+{
+  "articles": [
+    {
+      "slug": "building-platform-30-days",
+      "title": "How We Built This Learning Platform in 30 Days with AI",
+      "excerpt": "A behind-the-scenes look at building AutoNateAI — from architecture decisions to AI-assisted coding, and the lessons learned along the way.",
+      "category": "Platform Updates",
+      "date": "2026-01-04",
+      "readTime": 12,
+      "icon": "🏗️",
+      "featured": true,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["ai", "development", "cursor", "architecture", "startup"]
+    },
+    {
+      "slug": "context-engineering",
+      "title": "Context Engineering: The Skill That Will Define Your AI Career",
+      "excerpt": "Prompt engineering was just the beginning. Learn why context engineering is the real differentiator for AI-augmented developers.",
+      "category": "AI Workflows",
+      "date": "2025-12-28",
+      "readTime": 8,
+      "icon": "🤖",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["ai", "prompts", "context", "career", "productivity"]
+    },
+    {
+      "slug": "detroit-traffic-ai",
+      "title": "Analyzing Detroit's Traffic Patterns with AI",
+      "excerpt": "How we used GPT-4 and Python to analyze public traffic data and discover patterns in Detroit's morning commute.",
+      "category": "Local Research",
+      "date": "2025-12-20",
+      "readTime": 10,
+      "icon": "🏙️",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["ai", "data-analysis", "detroit", "research", "python"]
+    },
+    {
+      "slug": "three-forces-metaphor",
+      "title": "The Three Forces: Why We Teach Programming Through Metaphor",
+      "excerpt": "Data as stone, control flow as lightning, functions as magnetism — the pedagogical science behind our curriculum design.",
+      "category": "Learning Tips",
+      "date": "2025-12-15",
+      "readTime": 6,
+      "icon": "🧠",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["education", "pedagogy", "metaphor", "curriculum", "learning"]
+    },
+    {
+      "slug": "cognitive-progress-score",
+      "title": "Introducing the Cognitive Progress Score",
+      "excerpt": "How we designed a composite metric to track learning health — combining velocity, mastery, streak, and completion.",
+      "category": "Platform Updates",
+      "date": "2025-12-10",
+      "readTime": 5,
+      "icon": "📊",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["analytics", "metrics", "learning", "platform", "progress"]
+    },
+    {
+      "slug": "refactoring-agentic-ai",
+      "title": "From 10 Hours to 10 Minutes: Refactoring with Agentic AI",
+      "excerpt": "A case study on using Cursor and Claude to refactor a legacy codebase that would have taken days manually.",
+      "category": "AI Workflows",
+      "date": "2025-12-05",
+      "readTime": 7,
+      "icon": "⚡",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["ai", "refactoring", "cursor", "productivity", "case-study"]
+    },
+    {
+      "slug": "founding-learners",
+      "title": "Meet Our Founding Learners",
+      "excerpt": "Spotlight on the first cohort of AutoNateAI students — their backgrounds, goals, and progress so far.",
+      "category": "Community",
+      "date": "2025-12-01",
+      "readTime": 4,
+      "icon": "🎓",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["community", "students", "spotlight", "stories"]
+    }
+  ],
+  "categories": [
+    {
+      "slug": "ai-workflows",
+      "name": "AI Workflows",
+      "description": "How we use AI to solve real problems",
+      "color": "#7986cb"
+    },
+    {
+      "slug": "local-research",
+      "name": "Local Research",
+      "description": "Detroit/Michigan focused analysis",
+      "color": "#4db6ac"
+    },
+    {
+      "slug": "learning-tips",
+      "name": "Learning Tips",
+      "description": "Study techniques and retention strategies",
+      "color": "#ffd54f"
+    },
+    {
+      "slug": "platform-updates",
+      "name": "Platform Updates",
+      "description": "New features and course announcements",
+      "color": "#66bb6a"
+    },
+    {
+      "slug": "community",
+      "name": "Community",
+      "description": "Student spotlights and Discord highlights",
+      "color": "#ff7043"
+    }
+  ]
+}
+
