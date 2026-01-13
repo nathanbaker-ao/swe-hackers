@@ -1,0 +1,125 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Users Collection. The users collection is our main entry point. Every registered user gets a document here, identified by their Firebase Auth UID.",
+  "duration": 13,
+  "words": [
+    {
+      "word": "Users",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "collection",
+      "start": 0.6399999856948853,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "The",
+      "start": 2.0399999618530273,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "users",
+      "start": 2.259999990463257,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "collection",
+      "start": 2.559999942779541,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "is",
+      "start": 2.9800000190734863,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "our",
+      "start": 3.4200000762939453,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "main",
+      "start": 3.700000047683716,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "entry",
+      "start": 3.9600000381469727,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "point",
+      "start": 4.360000133514404,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "Every",
+      "start": 5.619999885559082,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "registered",
+      "start": 5.880000114440918,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "user",
+      "start": 6.460000038146973,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "gets",
+      "start": 6.900000095367432,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "a",
+      "start": 7.360000133514404,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "document",
+      "start": 8.079999923706055,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "here",
+      "start": 8.079999923706055,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "identified",
+      "start": 9.199999809265137,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "by",
+      "start": 9.619999885559082,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "their",
+      "start": 10.039999961853027,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "Firebase",
+      "start": 10.300000190734863,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "Auth",
+      "start": 10.899999618530273,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "UID",
+      "start": 11.359999656677246,
+      "end": 12.079999923706055
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Firestore Root. Welcome to Firestore—our cloud database! It uses a hierarchical structure with collections, documents, and nested subcollections.",
+  "duration": 13.920000076293945,
+  "words": [
+    {
+      "word": "Firestore",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "root",
+      "start": 0.7400000095367432,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "Welcome",
+      "start": 2.059999942779541,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "to",
+      "start": 2.200000047683716,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "Firestore",
+      "start": 2.9800000190734863,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "our",
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "cloud",
+      "start": 3.9800000190734863,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "database",
+      "start": 4.440000057220459,
+      "end": 5
+    },
+    {
+      "word": "It",
+      "start": 5.480000019073486,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "uses",
+      "start": 5.940000057220459,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "a",
+      "start": 6.179999828338623,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "hierarchical",
+      "start": 6.579999923706055,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "structure",
+      "start": 7.239999771118164,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "with",
+      "start": 7.639999866485596,
+      "end": 8.279999732971191
+    },
+    {
+      "word": "collections",
+      "start": 8.279999732971191,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "documents",
+      "start": 9.880000114440918,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 9.880000114440918,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "nested",
+      "start": 10.520000457763672,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "sub",
+      "start": 11.300000190734863,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "collections",
+      "start": 11.640000343322754,
+      "end": 12.100000381469727
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Analytics Page. analytics.html provides the big picture. Aggregate metrics across all partnerships, trends, and insights.",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "word": "Analytics",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "page",
+      "start": 0.6200000047683716,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Analytics",
+      "start": 1.9800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "html",
+      "start": 1.9800000190734863,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "provides",
+      "start": 3.119999885559082,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "the",
+      "start": 3.940000057220459,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "big",
+      "start": 4.139999866485596,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "picture",
+      "start": 4.579999923706055,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "Aggregate",
+      "start": 5.840000152587891,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "metrics",
+      "start": 6.019999980926514,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "across",
+      "start": 6.400000095367432,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "all",
+      "start": 6.900000095367432,
+      "end": 7.5
+    },
+    {
+      "word": "partnerships",
+      "start": 7.5,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "trends",
+      "start": 8.680000305175781,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "and",
+      "start": 8.920000076293945,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "insights",
+      "start": 9.300000190734863,
+      "end": 9.5600004196167
+    }
+  ]
+}

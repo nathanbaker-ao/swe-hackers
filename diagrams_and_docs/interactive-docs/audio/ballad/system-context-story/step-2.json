@@ -1,0 +1,140 @@
+{
+  "storyId": "system-context-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "GitHub Pages Hosting. All requests flow through GitHub Pages. This CDN serves our static HTML files lightning-fast from edge locations worldwide. No server to manage!",
+  "duration": 16.959999084472656,
+  "words": [
+    {
+      "word": "GitHub",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "Pages",
+      "start": 0.5799999833106995,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "Hosting",
+      "start": 1.2000000476837158,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "All",
+      "start": 2.9800000190734863,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "requests",
+      "start": 3.180000066757202,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "flow",
+      "start": 3.759999990463257,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "through",
+      "start": 4.300000190734863,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "GitHub",
+      "start": 4.71999979019165,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "Pages",
+      "start": 5.179999828338623,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "This",
+      "start": 6.539999961853027,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "CDN",
+      "start": 6.820000171661377,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "serves",
+      "start": 7.659999847412109,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "our",
+      "start": 8.140000343322754,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "static",
+      "start": 9.039999961853027,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "HTML",
+      "start": 9.039999961853027,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "files",
+      "start": 9.760000228881836,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "lightning",
+      "start": 10.359999656677246,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "fast",
+      "start": 11.279999732971191,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "from",
+      "start": 11.859999656677246,
+      "end": 12.420000076293945
+    },
+    {
+      "word": "edge",
+      "start": 12.420000076293945,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "locations",
+      "start": 12.84000015258789,
+      "end": 13.479999542236328
+    },
+    {
+      "word": "worldwide",
+      "start": 13.479999542236328,
+      "end": 14.520000457763672
+    },
+    {
+      "word": "No",
+      "start": 15.260000228881836,
+      "end": 15.5600004196167
+    },
+    {
+      "word": "server",
+      "start": 15.5600004196167,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "to",
+      "start": 15.800000190734863,
+      "end": 16.3799991607666
+    },
+    {
+      "word": "manage",
+      "start": 16.3799991607666,
+      "end": 16.3799991607666
+    }
+  ]
+}

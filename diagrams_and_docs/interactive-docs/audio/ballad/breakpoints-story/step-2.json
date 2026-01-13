@@ -1,0 +1,95 @@
+{
+  "storyId": "breakpoints-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Tablet Range. 768 to 1024 pixels is tablet territory. Two-column grids appear, sidebars become collapsible toggles.",
+  "duration": 11.899999618530273,
+  "words": [
+    {
+      "word": "Tablet",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "range",
+      "start": 0.47999998927116394,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "768",
+      "start": 0.9200000166893005,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "to",
+      "start": 2.940000057220459,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "1024",
+      "start": 3.1600000858306885,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "pixels",
+      "start": 4.460000038146973,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "is",
+      "start": 5.039999961853027,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "tablet",
+      "start": 5.739999771118164,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "territory",
+      "start": 6.119999885559082,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "Two",
+      "start": 7.699999809265137,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "column",
+      "start": 7.860000133514404,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "grids",
+      "start": 8.180000305175781,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "appear",
+      "start": 8.460000038146973,
+      "end": 9
+    },
+    {
+      "word": "sidebars",
+      "start": 9,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "become",
+      "start": 10.079999923706055,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "collapsible",
+      "start": 10.579999923706055,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "toggles",
+      "start": 11.180000305175781,
+      "end": 11.680000305175781
+    }
+  ]
+}

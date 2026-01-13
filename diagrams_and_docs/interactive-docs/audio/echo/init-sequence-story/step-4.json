@@ -1,0 +1,105 @@
+{
+  "storyId": "init-sequence-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "RouteGuard.init(). RouteGuard waits for both DataService and RBACService. It checks page access permissions and redirects unauthorized users.",
+  "duration": 11.350000381469727,
+  "words": [
+    {
+      "word": "RootGuard",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "init",
+      "start": 0.7400000095367432,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "RootGuard",
+      "start": 2.799999952316284,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "waits",
+      "start": 2.9200000762939453,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "for",
+      "start": 3.299999952316284,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "both",
+      "start": 3.640000104904175,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "DataService",
+      "start": 3.9200000762939453,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "and",
+      "start": 4.639999866485596,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "RBAC",
+      "start": 5.239999771118164,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "service",
+      "start": 5.699999809265137,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "It",
+      "start": 6.639999866485596,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "checks",
+      "start": 6.820000171661377,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "page",
+      "start": 7.139999866485596,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "access",
+      "start": 7.699999809265137,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "permissions",
+      "start": 8.15999984741211,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "and",
+      "start": 8.65999984741211,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "redirects",
+      "start": 9.239999771118164,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "unauthorized",
+      "start": 10.039999961853027,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "users",
+      "start": 10.5600004196167,
+      "end": 10.979999542236328
+    }
+  ]
+}

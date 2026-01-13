@@ -1,0 +1,125 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "All Page Types. The SWE Hackers platform has ten distinct page types. They're organized by access requirements—from fully public to highly restricted.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "word": "All",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "page",
+      "start": 0.41999998688697815,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "types",
+      "start": 0.7799999713897705,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "The",
+      "start": 1.1399999856948853,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "Sway",
+      "start": 1.8799999952316284,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "Hackers",
+      "start": 2.0999999046325684,
+      "end": 2.5
+    },
+    {
+      "word": "platform",
+      "start": 2.5,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "has",
+      "start": 3.059999942779541,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "10",
+      "start": 3.3399999141693115,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "distinct",
+      "start": 3.7200000286102295,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "page",
+      "start": 4.159999847412109,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "types",
+      "start": 4.599999904632568,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "They're",
+      "start": 5.460000038146973,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "organized",
+      "start": 5.539999961853027,
+      "end": 6
+    },
+    {
+      "word": "by",
+      "start": 6,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "access",
+      "start": 6.400000095367432,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "requirements",
+      "start": 6.880000114440918,
+      "end": 7.5
+    },
+    {
+      "word": "from",
+      "start": 7.940000057220459,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "fully",
+      "start": 8.140000343322754,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "public",
+      "start": 8.420000076293945,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "to",
+      "start": 8.800000190734863,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "highly",
+      "start": 9.300000190734863,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "restricted",
+      "start": 9.619999885559082,
+      "end": 10.0600004196167
+    }
+  ]
+}

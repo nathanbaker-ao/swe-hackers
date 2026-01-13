@@ -1,0 +1,85 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Public Pages Category. Public pages need no authentication. Anyone can browse these without signing in.",
+  "duration": 7.320000171661377,
+  "words": [
+    {
+      "word": "Public",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "Pages",
+      "start": 0.5,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "category",
+      "start": 0.8199999928474426,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Public",
+      "start": 2.4000000953674316,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "pages",
+      "start": 2.4000000953674316,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "need",
+      "start": 2.680000066757202,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "no",
+      "start": 3.0399999618530273,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "authentication",
+      "start": 3.4000000953674316,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "Anyone",
+      "start": 4.860000133514404,
+      "end": 5
+    },
+    {
+      "word": "can",
+      "start": 5,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "browse",
+      "start": 5.320000171661377,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "these",
+      "start": 5.639999866485596,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "without",
+      "start": 5.980000019073486,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "signing",
+      "start": 6.360000133514404,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "in",
+      "start": 6.78000020980835,
+      "end": 7.059999942779541
+    }
+  ]
+}

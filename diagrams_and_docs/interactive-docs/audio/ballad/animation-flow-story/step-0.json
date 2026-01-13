@@ -1,0 +1,100 @@
+{
+  "storyId": "animation-flow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Page Load Animations. Page load triggers entrance animations. Content fades in, elements stagger into view. First impressions matter!",
+  "duration": 10.960000038146973,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "load",
+      "start": 0.47999998927116394,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "animations",
+      "start": 0.7799999713897705,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "Page",
+      "start": 2.319999933242798,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "load",
+      "start": 2.319999933242798,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "triggers",
+      "start": 2.5999999046325684,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "entrance",
+      "start": 2.940000057220459,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "animations",
+      "start": 3.5799999237060547,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "Content",
+      "start": 5.400000095367432,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "fades",
+      "start": 5.400000095367432,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "in",
+      "start": 5.800000190734863,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "Elements",
+      "start": 7,
+      "end": 7
+    },
+    {
+      "word": "stagger",
+      "start": 7,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "into",
+      "start": 7.599999904632568,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "view",
+      "start": 8.039999961853027,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "First",
+      "start": 9.279999732971191,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "impressions",
+      "start": 9.4399995803833,
+      "end": 10
+    },
+    {
+      "word": "matter",
+      "start": 10,
+      "end": 10.539999961853027
+    }
+  ]
+}

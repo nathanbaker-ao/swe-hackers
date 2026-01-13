@@ -1,0 +1,95 @@
+{
+  "storyId": "scroll-observation-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Debounced Save. Progress is saved with debouncing—multiple rapid views trigger just one Firestore write. Network efficiency!",
+  "duration": 11.800000190734863,
+  "words": [
+    {
+      "word": "Debounced",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "save",
+      "start": 0.5400000214576721,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "Progress",
+      "start": 2.2799999713897705,
+      "end": 2.2799999713897705
+    },
+    {
+      "word": "is",
+      "start": 2.2799999713897705,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "saved",
+      "start": 2.859999895095825,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "with",
+      "start": 2.859999895095825,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "debouncing",
+      "start": 3.319999933242798,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "Multiple",
+      "start": 5.099999904632568,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "rapid",
+      "start": 5.099999904632568,
+      "end": 5.5
+    },
+    {
+      "word": "views",
+      "start": 5.5,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "trigger",
+      "start": 5.880000114440918,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "just",
+      "start": 6.380000114440918,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "one",
+      "start": 6.980000019073486,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "Firestore",
+      "start": 7.940000057220459,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "write",
+      "start": 8.600000381469727,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "Network",
+      "start": 10,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "efficiency",
+      "start": 10.319999694824219,
+      "end": 11.140000343322754
+    }
+  ]
+}

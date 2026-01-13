@@ -1,0 +1,100 @@
+{
+  "storyId": "partner-flow-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Redirect to Login. No authentication? Redirect to login! After signing in, the user will return to try again.",
+  "duration": 9.260000228881836,
+  "words": [
+    {
+      "word": "Redirect",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "to",
+      "start": 0.6800000071525574,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "login",
+      "start": 1.0199999809265137,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "No",
+      "start": 2.140000104904175,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "authentication",
+      "start": 2.3399999141693115,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "Redirect",
+      "start": 4.099999904632568,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "to",
+      "start": 4.21999979019165,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "login",
+      "start": 4.880000114440918,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "After",
+      "start": 5.800000190734863,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "signing",
+      "start": 6.179999828338623,
+      "end": 6.5
+    },
+    {
+      "word": "in",
+      "start": 6.5,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "the",
+      "start": 7.099999904632568,
+      "end": 7.21999979019165
+    },
+    {
+      "word": "user",
+      "start": 7.21999979019165,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "will",
+      "start": 7.380000114440918,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "return",
+      "start": 7.659999847412109,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "to",
+      "start": 8.039999961853027,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "try",
+      "start": 8.380000114440918,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "again",
+      "start": 8.65999984741211,
+      "end": 9.0600004196167
+    }
+  ]
+}

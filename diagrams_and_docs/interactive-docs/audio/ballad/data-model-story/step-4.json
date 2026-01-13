@@ -1,0 +1,105 @@
+{
+  "storyId": "data-model-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Analytics Events. Time-series analytics in the analytics subcollection. Student enrollments, cohort completions, revenue—all trackable over time.",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "Analytics",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Events",
+      "start": 1.4199999570846558,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "Time",
+      "start": 2.5999999046325684,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "Series",
+      "start": 2.700000047683716,
+      "end": 3
+    },
+    {
+      "word": "Analytics",
+      "start": 3,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "in",
+      "start": 3.4800000190734863,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "the",
+      "start": 3.759999990463257,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "Analytics",
+      "start": 4.099999904632568,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "sub",
+      "start": 4.420000076293945,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "collection",
+      "start": 4.920000076293945,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "Student",
+      "start": 6.380000114440918,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "Enrollments",
+      "start": 6.440000057220459,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "Cohort",
+      "start": 7.880000114440918,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "Completions",
+      "start": 7.920000076293945,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "Revenue",
+      "start": 9.260000228881836,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "all",
+      "start": 10.180000305175781,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "trackable",
+      "start": 10.479999542236328,
+      "end": 11
+    },
+    {
+      "word": "over",
+      "start": 11,
+      "end": 11.460000038146973
+    },
+    {
+      "word": "time",
+      "start": 11.460000038146973,
+      "end": 11.800000190734863
+    }
+  ]
+}

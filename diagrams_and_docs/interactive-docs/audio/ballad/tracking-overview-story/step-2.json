@@ -1,0 +1,95 @@
+{
+  "storyId": "tracking-overview-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "ActivityTracker. ActivityTracker handles interactive elements. Quiz answers, drag completions, code challenges—every interaction is captured.",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "Tracker",
+      "start": 0.8399999737739563,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "Activity",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Tracker",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "handles",
+      "start": 2.880000114440918,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "interactive",
+      "start": 3.3399999141693115,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "elements",
+      "start": 4.239999771118164,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "quiz",
+      "start": 6.019999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "answers",
+      "start": 6.019999980926514,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "drag",
+      "start": 7.420000076293945,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "completions",
+      "start": 7.460000038146973,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "code",
+      "start": 8.899999618530273,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "challenges",
+      "start": 9.0600004196167,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "every",
+      "start": 10.100000381469727,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "interaction",
+      "start": 10.680000305175781,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "is",
+      "start": 11.399999618530273,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "captured",
+      "start": 12.180000305175781,
+      "end": 12.180000305175781
+    }
+  ]
+}

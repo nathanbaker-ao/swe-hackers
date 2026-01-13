@@ -1,0 +1,90 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Dashboard. The dashboard is your personal hub. It shows enrolled courses, progress metrics, and learning analytics.",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "word": "Dashboard",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "The",
+      "start": 1.2000000476837158,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "Dashboard",
+      "start": 1.399999976158142,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "is",
+      "start": 1.899999976158142,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "your",
+      "start": 2.1600000858306885,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "personal",
+      "start": 2.4600000381469727,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "hub",
+      "start": 2.9000000953674316,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "It",
+      "start": 3.819999933242798,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "shows",
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "enrolled",
+      "start": 4.179999828338623,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "courses",
+      "start": 4.800000190734863,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "progress",
+      "start": 6.380000114440918,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "metrics",
+      "start": 6.420000076293945,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 7.340000152587891,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "learning",
+      "start": 7.599999904632568,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "analytics",
+      "start": 7.960000038146973,
+      "end": 8.539999961853027
+    }
+  ]
+}

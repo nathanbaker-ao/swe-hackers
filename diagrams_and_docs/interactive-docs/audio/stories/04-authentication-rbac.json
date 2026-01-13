@@ -1,0 +1,342 @@
+{
+  "pageId": "04-authentication-rbac",
+  "stories": [
+    {
+      "id": "auth-architecture-story",
+      "diagramId": "auth-architecture",
+      "title": "Authentication Architecture",
+      "steps": [
+        {
+          "nodeId": "user",
+          "icon": "👤",
+          "title": "The User",
+          "narration": "Every authentication journey starts with a user. They want to log in, access their progress, and continue learning.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "auth-service",
+          "edges": [{ "from": "user", "to": "auth-service" }],
+          "icon": "⚙️",
+          "title": "AuthService",
+          "narration": "AuthService is the gateway. It provides clean methods for login, registration, and logout—wrapping Firebase's complexity.",
+          "connectsTo": "User"
+        },
+        {
+          "nodeId": "firebase-auth",
+          "edges": [{ "from": "auth-service", "to": "firebase-auth" }],
+          "icon": "🔥",
+          "title": "Firebase Auth",
+          "narration": "Firebase Auth handles the heavy lifting. Token management, session persistence, OAuth flows—all handled securely by Google's infrastructure.",
+          "connectsTo": "AuthService"
+        },
+        {
+          "nodeId": "google",
+          "edges": [{ "from": "firebase-auth", "to": "google" }],
+          "icon": "🔵",
+          "title": "Google OAuth",
+          "narration": "For Google login, Firebase connects to Google's OAuth servers. One-click authentication using existing Google accounts!",
+          "connectsTo": "Firebase Auth"
+        },
+        {
+          "nodeId": "user-doc",
+          "edges": [{ "from": "auth-service", "to": "user-doc" }],
+          "icon": "📄",
+          "title": "User Document",
+          "narration": "After authentication, we sync with Firestore. The user document stores profile info, roles, and organization memberships.",
+          "connectsTo": "AuthService"
+        }
+      ]
+    },
+    {
+      "id": "registration-flow-story",
+      "diagramId": "registration-flow",
+      "title": "Registration Flow",
+      "steps": [
+        {
+          "nodeId": "form",
+          "icon": "📝",
+          "title": "Registration Form",
+          "narration": "New users start with the registration form. They enter email, password, and display name—the essentials for creating an account.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "validate",
+          "edges": [{ "from": "form", "to": "validate" }],
+          "icon": "✅",
+          "title": "Input Validation",
+          "narration": "Before hitting Firebase, we validate locally. Is the email formatted correctly? Is the password strong enough? Catch errors early!",
+          "connectsTo": "Registration Form"
+        },
+        {
+          "nodeId": "create-auth",
+          "edges": [{ "from": "validate", "to": "create-auth" }],
+          "icon": "🔐",
+          "title": "Create Auth Account",
+          "narration": "createUserWithEmailAndPassword creates the Firebase Auth account. A unique UID is generated—the user's permanent identifier.",
+          "connectsTo": "Validate Input"
+        },
+        {
+          "nodeId": "create-doc",
+          "edges": [{ "from": "update-profile", "to": "create-doc" }],
+          "icon": "📄",
+          "title": "Create User Document",
+          "narration": "With auth complete, we create the Firestore user document. Profile info, default role, creation timestamp—everything initialized!",
+          "connectsTo": "Update Profile"
+        },
+        {
+          "nodeId": "redirect",
+          "edges": [{ "from": "state-change", "to": "redirect" }],
+          "icon": "🚀",
+          "title": "Welcome to Dashboard",
+          "narration": "Registration complete! Auth state changes, listeners fire, and the user lands on their brand new dashboard. Learning begins!",
+          "connectsTo": "State Change"
+        }
+      ]
+    },
+    {
+      "id": "role-hierarchy-story",
+      "diagramId": "role-hierarchy",
+      "title": "Role Hierarchy",
+      "steps": [
+        {
+          "nodeId": "admin",
+          "icon": "👑",
+          "title": "Admin Role",
+          "narration": "At the top sits the admin role. Full platform access—all courses, user management, organization controls. The keys to the kingdom!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "enterprise",
+          "edges": [{ "from": "admin", "to": "enterprise" }],
+          "icon": "🏢",
+          "title": "Enterprise Role",
+          "narration": "Enterprise users belong to organizations. They inherit all standard user permissions PLUS access to partner courses for their org.",
+          "connectsTo": "Admin"
+        },
+        {
+          "nodeId": "user",
+          "edges": [{ "from": "enterprise", "to": "user" }],
+          "icon": "👤",
+          "title": "Standard User",
+          "narration": "Standard users form the base. Public courses, personal dashboard, progress tracking. Everything needed for self-paced learning!",
+          "connectsTo": "Enterprise"
+        },
+        {
+          "nodeId": "perm-public",
+          "edges": [{ "from": "user", "to": "perm-public" }],
+          "icon": "📚",
+          "title": "Public Course Access",
+          "narration": "Standard users can access all public courses. Apprentice, Junior, Senior—the full curriculum is open to everyone who registers.",
+          "connectsTo": "Standard User"
+        },
+        {
+          "nodeId": "perm-partner",
+          "edges": [{ "from": "enterprise", "to": "perm-partner" }],
+          "icon": "🤝",
+          "title": "Partner Course Access",
+          "narration": "Enterprise users unlock partner courses. Organization-specific content tailored to their learning path and requirements.",
+          "connectsTo": "Enterprise"
+        }
+      ]
+    },
+    {
+      "id": "access-check-story",
+      "diagramId": "access-check",
+      "title": "RBAC Access Check",
+      "steps": [
+        {
+          "nodeId": "request",
+          "icon": "🚪",
+          "title": "Access Request",
+          "narration": "A user wants a protected resource. The RBAC system activates—a series of checks to determine if access is allowed.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "auth-check",
+          "edges": [{ "from": "request", "to": "auth-check" }],
+          "icon": "🔐",
+          "title": "Authentication Check",
+          "narration": "First gate: Is there a valid user session? No login means no access. Redirect to the login page immediately.",
+          "connectsTo": "Access Request"
+        },
+        {
+          "nodeId": "admin-check",
+          "edges": [{ "from": "get-perms", "to": "admin-check" }],
+          "icon": "👑",
+          "title": "Admin Bypass",
+          "narration": "Admins get VIP treatment—they bypass all other checks! If role equals admin, access is granted immediately.",
+          "connectsTo": "Get Permissions"
+        },
+        {
+          "nodeId": "public-check",
+          "edges": [{ "from": "course-req", "to": "public-check" }],
+          "icon": "🌐",
+          "title": "Public Course Check",
+          "narration": "Is this a public course? If yes, any authenticated user can access. No further checks needed!",
+          "connectsTo": "Course Requirements"
+        },
+        {
+          "nodeId": "org-check",
+          "edges": [{ "from": "public-check", "to": "org-check" }],
+          "icon": "🏢",
+          "title": "Organization Check",
+          "narration": "For partner courses, verify organization membership. The user's organizations array must include the required org.",
+          "connectsTo": "Public Check"
+        },
+        {
+          "nodeId": "allow-course",
+          "edges": [{ "from": "course-check", "to": "allow-course" }],
+          "icon": "✅",
+          "title": "Access Granted!",
+          "narration": "All checks passed! The user has the right role, belongs to the right org, and has course access. Welcome in!",
+          "connectsTo": "Course Check"
+        }
+      ]
+    },
+    {
+      "id": "route-guard-story",
+      "diagramId": "route-guard",
+      "title": "RouteGuard System",
+      "steps": [
+        {
+          "nodeId": "page-load",
+          "icon": "📄",
+          "title": "Page Load",
+          "narration": "A user navigates to a page. RouteGuard intercepts before any content renders. Time for security checks!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "is-protected",
+          "edges": [{ "from": "page-load", "to": "is-protected" }],
+          "icon": "🔍",
+          "title": "Protected Check",
+          "narration": "First, isProtectedPage checks the URL. Marketing pages pass through. Dashboard and lessons require authentication.",
+          "connectsTo": "Page Load"
+        },
+        {
+          "nodeId": "show-loading",
+          "edges": [{ "from": "is-protected", "to": "show-loading" }],
+          "icon": "⏳",
+          "title": "Show Loading",
+          "narration": "For protected pages, we show a loading screen. Content stays hidden until auth state is confirmed. No flash of forbidden content!",
+          "connectsTo": "Protected Check"
+        },
+        {
+          "nodeId": "wait-auth",
+          "edges": [{ "from": "show-loading", "to": "wait-auth" }],
+          "icon": "⏳",
+          "title": "Wait for Auth",
+          "narration": "waitForAuthState returns a promise. It resolves when Firebase Auth confirms the user's session status. Patient waiting!",
+          "connectsTo": "Show Loading"
+        },
+        {
+          "nodeId": "check-rbac",
+          "edges": [{ "from": "check-user", "to": "check-rbac" }],
+          "icon": "🛡️",
+          "title": "RBAC Verification",
+          "narration": "With authentication confirmed, RBAC kicks in. Does this user have permission for this specific page and course?",
+          "connectsTo": "Check User"
+        },
+        {
+          "nodeId": "allow",
+          "edges": [{ "from": "check-rbac", "to": "allow" }],
+          "icon": "✅",
+          "title": "Show Content",
+          "narration": "All checks passed! The loading screen fades, content appears, and the user can interact. RouteGuard's job is done!",
+          "connectsTo": "RBAC Check"
+        }
+      ]
+    },
+    {
+      "id": "org-access-story",
+      "diagramId": "org-access",
+      "title": "Organization Access",
+      "steps": [
+        {
+          "nodeId": "user1",
+          "icon": "👤",
+          "title": "Alice: Standard User",
+          "narration": "Meet Alice, a standard user. She can access all public courses—Apprentice and beyond. No organization membership.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "user2",
+          "icon": "🏢",
+          "title": "Bob: Enterprise User",
+          "narration": "Bob is an enterprise user with Endless Opportunities. He gets public courses PLUS the exclusive EO Bootcamp content!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "org-eo",
+          "edges": [{ "from": "user2", "to": "org-eo" }],
+          "icon": "🤝",
+          "title": "Organization Link",
+          "narration": "Bob's user document lists Endless Opportunities in his organizations array. This unlocks partner-specific content.",
+          "connectsTo": "Bob"
+        },
+        {
+          "nodeId": "course-eo",
+          "edges": [{ "from": "org-eo", "to": "course-eo" }],
+          "icon": "📚",
+          "title": "Partner Course",
+          "narration": "The EO Bootcamp is linked to Endless Opportunities. Only members of that org can access its lessons and activities.",
+          "connectsTo": "Endless Opportunities"
+        },
+        {
+          "nodeId": "user4",
+          "icon": "👑",
+          "title": "Admin: Full Access",
+          "narration": "The admin can access everything! Public courses, all partner courses, every piece of content. Ultimate override authority!",
+          "connectsTo": null
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "role-hierarchy-story",
+      "questions": [
+        {
+          "question": "What permissions does the enterprise role inherit?",
+          "options": ["Admin permissions", "All standard user permissions", "Only partner course access", "No inherited permissions"],
+          "correct": 1,
+          "explanation": "Enterprise users inherit all standard user permissions plus access to partner courses for their organization."
+        },
+        {
+          "question": "What is the highest role in the platform?",
+          "options": ["Enterprise", "Super", "Admin", "Owner"],
+          "correct": 2,
+          "explanation": "Admin is the highest role with full platform access—all courses, user management, and organization controls."
+        }
+      ]
+    },
+    {
+      "storyId": "access-check-story",
+      "questions": [
+        {
+          "question": "What happens when an admin requests any resource?",
+          "options": ["Same checks as other users", "Skip all checks, access granted immediately", "Only skip auth check", "Extra verification required"],
+          "correct": 1,
+          "explanation": "Admins bypass all permission checks—if role equals admin, access is granted immediately."
+        },
+        {
+          "question": "In what order are access checks performed?",
+          "options": ["Role → Auth → Org", "Auth → Admin → Course → Org", "Org → Role → Auth", "Course → Org → Auth"],
+          "correct": 1,
+          "explanation": "Checks flow: Authentication first, then admin bypass check, then public/course requirements, then organization membership."
+        }
+      ]
+    },
+    {
+      "storyId": "route-guard-story",
+      "questions": [
+        {
+          "question": "Why does RouteGuard show a loading screen?",
+          "options": ["To improve SEO", "To prevent flash of forbidden content", "Required by Firebase", "For animation purposes"],
+          "correct": 1,
+          "explanation": "The loading screen prevents any flash of protected content before authentication status is confirmed."
+        }
+      ]
+    }
+  ]
+}

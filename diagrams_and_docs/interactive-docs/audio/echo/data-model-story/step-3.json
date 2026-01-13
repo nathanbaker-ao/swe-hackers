@@ -1,0 +1,90 @@
+{
+  "storyId": "data-model-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Interactions. Every touchpoint is recorded in the interactions subcollection. Calls, meetings, emails, demos—complete relationship history.",
+  "duration": 11.350000381469727,
+  "words": [
+    {
+      "word": "Interactions",
+      "start": 0,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "Every",
+      "start": 1.8200000524520874,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "touchpoint",
+      "start": 1.8200000524520874,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "is",
+      "start": 2.359999895095825,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "recorded",
+      "start": 2.759999990463257,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "in",
+      "start": 3.0999999046325684,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "the",
+      "start": 3.4000000953674316,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "Interactions",
+      "start": 3.7200000286102295,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "subcollection",
+      "start": 4.260000228881836,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "Calls",
+      "start": 6,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "Meetings",
+      "start": 6.78000020980835,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "Emails",
+      "start": 7.739999771118164,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "Demos",
+      "start": 8.600000381469727,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "Complete",
+      "start": 9.619999885559082,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "relationship",
+      "start": 9.619999885559082,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "history",
+      "start": 10.380000114440918,
+      "end": 10.84000015258789
+    }
+  ]
+}

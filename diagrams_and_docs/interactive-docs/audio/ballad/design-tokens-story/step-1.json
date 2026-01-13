@@ -1,0 +1,110 @@
+{
+  "storyId": "design-tokens-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Color Palette. Colors define the dark theme aesthetic. Primary backgrounds, accent colors, success and error states. Carefully chosen for contrast!",
+  "duration": 12.550000190734863,
+  "words": [
+    {
+      "word": "Colour",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "palette",
+      "start": 0.4000000059604645,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Colours",
+      "start": 1.840000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "define",
+      "start": 1.840000033378601,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "the",
+      "start": 2.4200000762939453,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "dark",
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "theme",
+      "start": 3.0999999046325684,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "aesthetic",
+      "start": 3.440000057220459,
+      "end": 4
+    },
+    {
+      "word": "Primary",
+      "start": 5.260000228881836,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "backgrounds",
+      "start": 5.260000228881836,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "accent",
+      "start": 6.659999847412109,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "colours",
+      "start": 6.659999847412109,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "success",
+      "start": 8.079999923706055,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "and",
+      "start": 8.079999923706055,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "error",
+      "start": 8.699999809265137,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "states",
+      "start": 9.119999885559082,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "Carefully",
+      "start": 10.5,
+      "end": 10.619999885559082
+    },
+    {
+      "word": "chosen",
+      "start": 10.619999885559082,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "for",
+      "start": 11.0600004196167,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "contrast",
+      "start": 11.680000305175781,
+      "end": 12.239999771118164
+    }
+  ]
+}

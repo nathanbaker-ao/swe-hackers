@@ -1,0 +1,105 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Page Load. The lesson page loads. ProgressTracker needs to know what sections exist before it can track them.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "load",
+      "start": 0.46000000834465027,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "The",
+      "start": 0.8799999952316284,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "lesson",
+      "start": 1.559999942779541,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "page",
+      "start": 1.840000033378601,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "loads",
+      "start": 2.259999990463257,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "Progress",
+      "start": 3.6600000858306885,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "Tracker",
+      "start": 3.680000066757202,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "needs",
+      "start": 4.039999961853027,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "to",
+      "start": 4.440000057220459,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "know",
+      "start": 4.760000228881836,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "what",
+      "start": 4.960000038146973,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "sections",
+      "start": 5.340000152587891,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "exist",
+      "start": 5.699999809265137,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "before",
+      "start": 6.300000190734863,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "it",
+      "start": 6.860000133514404,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "can",
+      "start": 7.039999961853027,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "track",
+      "start": 7.320000171661377,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "them",
+      "start": 7.619999885559082,
+      "end": 7.840000152587891
+    }
+  ]
+}

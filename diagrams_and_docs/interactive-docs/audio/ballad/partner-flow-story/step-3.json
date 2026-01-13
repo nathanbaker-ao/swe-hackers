@@ -1,0 +1,100 @@
+{
+  "storyId": "partner-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Load Permissions. User is authenticated! Now we fetch their RBAC data—roles, organization memberships, and course access lists.",
+  "duration": 11.25,
+  "words": [
+    {
+      "word": "Load",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "permissions",
+      "start": 0.5,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "User",
+      "start": 2.0399999618530273,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "is",
+      "start": 2.4000000953674316,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "authenticated",
+      "start": 2.7799999713897705,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "Now",
+      "start": 4,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "we",
+      "start": 4.099999904632568,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "fetch",
+      "start": 4.340000152587891,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "their",
+      "start": 4.559999942779541,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "RBAC",
+      "start": 4.920000076293945,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "data",
+      "start": 5.199999809265137,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "roles",
+      "start": 6.659999847412109,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "organisation",
+      "start": 7.460000038146973,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "memberships",
+      "start": 7.800000190734863,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "and",
+      "start": 8.4399995803833,
+      "end": 9
+    },
+    {
+      "word": "course",
+      "start": 9,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "access",
+      "start": 9.380000114440918,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "lists",
+      "start": 9.779999732971191,
+      "end": 10.15999984741211
+    }
+  ]
+}

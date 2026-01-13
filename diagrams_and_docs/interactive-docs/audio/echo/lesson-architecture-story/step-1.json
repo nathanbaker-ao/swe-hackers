@@ -1,0 +1,90 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Scroll Events. As users scroll, browser events fire. These scroll events trigger the progress tracking system.",
+  "duration": 8.65999984741211,
+  "words": [
+    {
+      "word": "Scroll",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "events",
+      "start": 0.5600000023841858,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "As",
+      "start": 0.8199999928474426,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "users",
+      "start": 1.3600000143051147,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "scroll",
+      "start": 1.7000000476837158,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "browser",
+      "start": 2.819999933242798,
+      "end": 3
+    },
+    {
+      "word": "events",
+      "start": 3,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "fire",
+      "start": 3.4000000953674316,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "These",
+      "start": 4.559999942779541,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "scroll",
+      "start": 4.71999979019165,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "events",
+      "start": 5.039999961853027,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "trigger",
+      "start": 5.460000038146973,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 5.920000076293945,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "progress",
+      "start": 6.300000190734863,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "tracking",
+      "start": 6.840000152587891,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "system",
+      "start": 7.380000114440918,
+      "end": 7.960000038146973
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "storyId": "activity-types-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Firestore Storage. Every attempt is saved to Firestore's activityAttempts subcollection. Complete history of engagement!",
+  "duration": 9.720000267028809,
+  "words": [
+    {
+      "word": "Firestore",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Storage",
+      "start": 0.7799999713897705,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "Every",
+      "start": 2.119999885559082,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "attempt",
+      "start": 2.299999952316284,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "is",
+      "start": 2.6600000858306885,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "saved",
+      "start": 3.0399999618530273,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "to",
+      "start": 3.299999952316284,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "Firestore's",
+      "start": 3.700000047683716,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "Activity",
+      "start": 4.559999942779541,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "Attempts",
+      "start": 5.019999980926514,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "sub",
+      "start": 5.78000020980835,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "collection",
+      "start": 5.960000038146973,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "Complete",
+      "start": 7.940000057220459,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "history",
+      "start": 7.980000019073486,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "of",
+      "start": 8.600000381469727,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "engagement",
+      "start": 8.9399995803833,
+      "end": 9.260000228881836
+    }
+  ]
+}

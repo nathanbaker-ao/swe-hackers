@@ -1,0 +1,130 @@
+{
+  "storyId": "auth-service-story",
+  "stepId": "step-8",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "User Document. After registration, a user document is created in Firestore. This stores profile data, roles, and organization membership for the app to use.",
+  "duration": 15.720000267028809,
+  "words": [
+    {
+      "word": "User",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "document",
+      "start": 0.6200000047683716,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "After",
+      "start": 2.359999895095825,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "registration",
+      "start": 2.440000057220459,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "a",
+      "start": 3.5999999046325684,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "user",
+      "start": 4.179999828338623,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "document",
+      "start": 4.400000095367432,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "is",
+      "start": 4.940000057220459,
+      "end": 5.5
+    },
+    {
+      "word": "created",
+      "start": 5.5,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "in",
+      "start": 6.039999961853027,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "Firestore",
+      "start": 6.619999885559082,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "This",
+      "start": 8.460000038146973,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "stores",
+      "start": 8.65999984741211,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "profile",
+      "start": 9.079999923706055,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "data",
+      "start": 9.859999656677246,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "roles",
+      "start": 11.420000076293945,
+      "end": 11.420000076293945
+    },
+    {
+      "word": "and",
+      "start": 11.420000076293945,
+      "end": 12.15999984741211
+    },
+    {
+      "word": "organisation",
+      "start": 12.15999984741211,
+      "end": 13.180000305175781
+    },
+    {
+      "word": "membership",
+      "start": 13.180000305175781,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "for",
+      "start": 13.619999885559082,
+      "end": 14.140000343322754
+    },
+    {
+      "word": "the",
+      "start": 14.140000343322754,
+      "end": 14.380000114440918
+    },
+    {
+      "word": "app",
+      "start": 14.380000114440918,
+      "end": 14.479999542236328
+    },
+    {
+      "word": "to",
+      "start": 14.479999542236328,
+      "end": 14.84000015258789
+    },
+    {
+      "word": "use",
+      "start": 14.84000015258789,
+      "end": 15.079999923706055
+    }
+  ]
+}

@@ -360,6 +360,10 @@ a:hover {
   height: 350px;
 }
 
+.diagram-canvas.storytelling {
+  height: 550px;
+}
+
 /* Cytoscape node info tooltip */
 .node-tooltip {
   position: absolute;
@@ -368,11 +372,11 @@ a:hover {
   border-radius: 8px;
   padding: 1rem;
   max-width: 300px;
-  z-index: 1000;
+  z-index: 2000;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(121, 134, 203, 0.2);
 }
 
 .node-tooltip.visible {
@@ -718,7 +722,8 @@ pre {
    ============================================ */
 
 /* Story Caption Container */
-.story-caption {
+.story-caption,
+.diagram-story {
   padding: 1.5rem;
   background: var(--bg-tertiary);
   border-top: 1px solid var(--border-color);
@@ -726,10 +731,31 @@ pre {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.story-caption.active {
+.story-caption::before,
+.diagram-story::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent-secondary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.story-caption.active,
+.diagram-story.active {
   background: linear-gradient(135deg, rgba(121, 134, 203, 0.1) 0%, rgba(77, 182, 172, 0.1) 100%);
+}
+
+.story-caption.active::before,
+.diagram-story.active::before {
+  opacity: 1;
 }
 
 .caption-content {
@@ -870,6 +896,17 @@ span.word.current {
   border-color: var(--accent-secondary);
 }
 
+/* Story Step Container */
+.story-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.story-content {
+  flex: 1;
+}
+
 /* Playback Controls Row */
 .playback-controls {
   display: flex;
@@ -880,6 +917,63 @@ span.word.current {
   background: var(--bg-tertiary);
   border-top: 1px solid var(--border-color);
   flex-wrap: wrap;
+}
+
+.playback-left {
+  flex-shrink: 0;
+}
+
+.playback-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.playback-right {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Play Button */
+.diagram-btn.play-btn {
+  background: var(--accent-secondary);
+  color: var(--bg-primary);
+  border-color: var(--accent-secondary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  min-width: 100px;
+}
+
+.diagram-btn.play-btn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: scale(1.05);
+}
+
+.diagram-btn.play-btn.playing {
+  background: var(--accent-warning);
+  border-color: var(--accent-warning);
+  color: var(--bg-primary);
+}
+
+.diagram-btn.play-btn.paused {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+/* Small Diagram Buttons */
+.diagram-btn.small {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  min-width: auto;
+}
+
+/* Control Groups */
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .playback-controls .btn-play {
@@ -1047,9 +1141,35 @@ span.word.current {
 /* Mobile Responsive for Storytelling */
 @media (max-width: 640px) {
   .playback-controls {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.75rem;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .playback-left {
+    order: 1;
+  }
+
+  .playback-center {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: 0.25rem;
+  }
+
+  .playback-right {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .diagram-btn.play-btn {
+    padding: 0.5rem 0.75rem;
+    min-width: 85px;
+    font-size: 0.85rem;
+  }
+
+  .diagram-btn.small {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
   }
 
   .playback-controls .btn-play {
@@ -1070,31 +1190,33 @@ span.word.current {
   }
 
   .settings-bar {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-
-  .settings-bar > * {
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
   }
 
   .settings-bar select {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .voice-select {
+    max-width: 140px;
+    min-width: 120px;
   }
 
   .audio-toggle {
     justify-content: center;
-    padding: 0.5rem;
+    padding: 0.4rem 0.6rem;
   }
 
-  .story-caption {
+  .story-caption,
+  .diagram-story {
     padding: 1rem;
     min-height: 120px;
   }
 
-  .caption-content {
+  .story-step {
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
@@ -1112,9 +1234,17 @@ span.word.current {
     font-size: 0.9rem;
   }
 
+  .story-progress {
+    gap: 0.35rem;
+  }
+
   .progress-dot {
     width: 10px;
     height: 10px;
+  }
+
+  .diagram-canvas.storytelling {
+    height: 400px;
   }
 }
 
@@ -1357,3 +1487,26 @@ span.word.current {
     order: -1;
   }
 }
+
+/* ============================================
+   EDGE PARTICLE ANIMATIONS
+   ============================================ */
+
+/* Particle styles removed - using dashed edge animation only */
+
+/* Node glow removed - only edges should have particle effects */
+
+/* Completed edge pulse on transition */
+@keyframes edgeComplete {
+  0% { 
+    filter: drop-shadow(0 0 0px #4db6ac);
+  }
+  50% { 
+    filter: drop-shadow(0 0 15px #80cbc4);
+  }
+  100% { 
+    filter: drop-shadow(0 0 5px #4db6ac);
+  }
+}
+
+/* Node breathing animation removed - only edges animate */

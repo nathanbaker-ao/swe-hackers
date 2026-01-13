@@ -1,0 +1,100 @@
+{
+  "storyId": "progress-flow-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Observer Detects. IntersectionObserver fires when sections cross visibility thresholds. No expensive scroll listeners—just efficient threshold callbacks!",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "Observer",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "detects",
+      "start": 0.699999988079071,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "Intersection",
+      "start": 2.4200000762939453,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "observer",
+      "start": 2.759999990463257,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "fires",
+      "start": 3.200000047683716,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "when",
+      "start": 3.7200000286102295,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "sections",
+      "start": 4.440000057220459,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "cross",
+      "start": 4.920000076293945,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "visibility",
+      "start": 5.400000095367432,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "thresholds",
+      "start": 6.239999771118164,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "No",
+      "start": 7.900000095367432,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "expensive",
+      "start": 8.100000381469727,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "scroll",
+      "start": 9.079999923706055,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "listeners",
+      "start": 9.600000381469727,
+      "end": 10
+    },
+    {
+      "word": "just",
+      "start": 10.720000267028809,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "efficient",
+      "start": 11.079999923706055,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "threshold",
+      "start": 11.84000015258789,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "callbacks",
+      "start": 12.4399995803833,
+      "end": 13.100000381469727
+    }
+  ]
+}

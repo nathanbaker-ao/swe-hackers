@@ -1,0 +1,85 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-10",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Activity Feed. The activity feed shows recent actions. Recent quiz attempts, lesson completions, and achievements.",
+  "duration": 9.359999656677246,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "feed",
+      "start": 0.699999988079071,
+      "end": 1
+    },
+    {
+      "word": "The",
+      "start": 1.840000033378601,
+      "end": 2
+    },
+    {
+      "word": "activity",
+      "start": 2,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "feed",
+      "start": 2.359999895095825,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "shows",
+      "start": 2.740000009536743,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "recent",
+      "start": 3.299999952316284,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "actions",
+      "start": 3.819999933242798,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "recent",
+      "start": 5.360000133514404,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "quiz",
+      "start": 5.519999980926514,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "attempts",
+      "start": 5.760000228881836,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "lesson",
+      "start": 7.039999961853027,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "completions",
+      "start": 7.039999961853027,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "and",
+      "start": 8.15999984741211,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "achievements",
+      "start": 8.460000038146973,
+      "end": 8.760000228881836
+    }
+  ]
+}

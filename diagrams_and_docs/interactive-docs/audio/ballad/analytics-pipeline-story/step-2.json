@@ -1,0 +1,130 @@
+{
+  "storyId": "analytics-pipeline-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "calculateVelocity(). calculateVelocity computes learning speed. Lessons completed divided by weeks active, scaled to a 0-100 score. Fast learners score high!",
+  "duration": 15.5,
+  "words": [
+    {
+      "word": "Calculate",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "velocity",
+      "start": 0.7799999713897705,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "Calculate",
+      "start": 2.4000000953674316,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "velocity",
+      "start": 2.819999933242798,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "computes",
+      "start": 3.3399999141693115,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "learning",
+      "start": 4.019999980926514,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "speed",
+      "start": 4.480000019073486,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "Lessons",
+      "start": 5.900000095367432,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "completed",
+      "start": 6.139999866485596,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "divided",
+      "start": 6.760000228881836,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "by",
+      "start": 7.559999942779541,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "weeks",
+      "start": 8.039999961853027,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "active",
+      "start": 8.359999656677246,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "Scale",
+      "start": 9.819999694824219,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "to",
+      "start": 9.819999694824219,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "a",
+      "start": 10.180000305175781,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "0",
+      "start": 10.4399995803833,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "to",
+      "start": 10.460000038146973,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "100",
+      "start": 10.920000076293945,
+      "end": 11.460000038146973
+    },
+    {
+      "word": "score",
+      "start": 11.460000038146973,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "Fast",
+      "start": 12.979999542236328,
+      "end": 13.100000381469727
+    },
+    {
+      "word": "learners",
+      "start": 13.100000381469727,
+      "end": 13.460000038146973
+    },
+    {
+      "word": "score",
+      "start": 13.460000038146973,
+      "end": 14.180000305175781
+    },
+    {
+      "word": "high",
+      "start": 14.180000305175781,
+      "end": 14.579999923706055
+    }
+  ]
+}

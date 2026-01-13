@@ -1,0 +1,105 @@
+{
+  "storyId": "access-check-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Public Course Check. Is this a public course? If yes, any authenticated user can access. No further checks needed!",
+  "duration": 11.520000457763672,
+  "words": [
+    {
+      "word": "Public",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "course",
+      "start": 0.4399999976158142,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "check",
+      "start": 0.7400000095367432,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Is",
+      "start": 1.9199999570846558,
+      "end": 2
+    },
+    {
+      "word": "this",
+      "start": 2,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "a",
+      "start": 2.259999990463257,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "public",
+      "start": 2.559999942779541,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "course",
+      "start": 2.7799999713897705,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "If",
+      "start": 3.859999895095825,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "yes",
+      "start": 4.039999961853027,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "any",
+      "start": 4.960000038146973,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "authenticated",
+      "start": 5.059999942779541,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "user",
+      "start": 5.78000020980835,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "can",
+      "start": 6.179999828338623,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "access",
+      "start": 6.559999942779541,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "No",
+      "start": 7.820000171661377,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "further",
+      "start": 8.15999984741211,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "checks",
+      "start": 8.619999885559082,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "needed",
+      "start": 8.979999542236328,
+      "end": 9.579999923706055
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "storyId": "entity-relations-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "User Entity. The User is at the center of everything. They have progress records, make activity attempts, write notes, and may belong to organizations.",
+  "duration": 14.0600004196167,
+  "words": [
+    {
+      "word": "User",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "Entity",
+      "start": 0.7200000286102295,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "The",
+      "start": 2.140000104904175,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "user",
+      "start": 2.259999990463257,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "is",
+      "start": 2.5999999046325684,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "at",
+      "start": 3.059999942779541,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "the",
+      "start": 3.259999990463257,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "centre",
+      "start": 3.680000066757202,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "of",
+      "start": 3.799999952316284,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "everything",
+      "start": 4.360000133514404,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "They",
+      "start": 5.679999828338623,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "have",
+      "start": 5.820000171661377,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "progress",
+      "start": 6.139999866485596,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "records",
+      "start": 6.78000020980835,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "make",
+      "start": 8.140000343322754,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "activity",
+      "start": 8.260000228881836,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "attempts",
+      "start": 8.979999542236328,
+      "end": 9.5
+    },
+    {
+      "word": "write",
+      "start": 10.4399995803833,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "notes",
+      "start": 10.460000038146973,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 11.460000038146973,
+      "end": 11.800000190734863
+    },
+    {
+      "word": "may",
+      "start": 11.800000190734863,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "belong",
+      "start": 12.0600004196167,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "to",
+      "start": 12.300000190734863,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "organisations",
+      "start": 12.739999771118164,
+      "end": 13.399999618530273
+    }
+  ]
+}

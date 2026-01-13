@@ -1,0 +1,105 @@
+{
+  "storyId": "data-model-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partners Collection. The partners collection holds all partner documents. Each organization gets one document identified by a unique ID.",
+  "duration": 10.84000015258789,
+  "words": [
+    {
+      "word": "Partners",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "Collection",
+      "start": 0.5600000023841858,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "The",
+      "start": 1.7599999904632568,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "Partners",
+      "start": 1.9199999570846558,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "Collection",
+      "start": 2.259999990463257,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "holds",
+      "start": 2.759999990463257,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "all",
+      "start": 3.2200000286102295,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "partner",
+      "start": 3.799999952316284,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "documents",
+      "start": 4.199999809265137,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "Each",
+      "start": 5.519999980926514,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "organization",
+      "start": 5.659999847412109,
+      "end": 6.5
+    },
+    {
+      "word": "gets",
+      "start": 6.5,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "one",
+      "start": 6.900000095367432,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "document",
+      "start": 7.420000076293945,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "identified",
+      "start": 7.940000057220459,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "by",
+      "start": 8.699999809265137,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "a",
+      "start": 9.180000305175781,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "unique",
+      "start": 9.859999656677246,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "ID",
+      "start": 9.859999656677246,
+      "end": 10.34000015258789
+    }
+  ]
+}

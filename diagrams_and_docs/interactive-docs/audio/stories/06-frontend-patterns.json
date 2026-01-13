@@ -1,0 +1,412 @@
+{
+  "pageId": "06-frontend-patterns",
+  "stories": [
+    {
+      "id": "css-mapping-story",
+      "diagramId": "css-mapping",
+      "title": "CSS Organization",
+      "steps": [
+        {
+          "nodeId": "marketing-css",
+          "icon": "🎨",
+          "title": "Marketing Styles",
+          "narration": "marketing.css handles landing pages and catalog pages. Hero sections, feature grids, testimonials—all the public-facing flair!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "auth-css",
+          "edges": [{ "from": "auth-css", "to": "login" }],
+          "icon": "🔐",
+          "title": "Auth Styles",
+          "narration": "auth.css styles login and registration forms. Centered cards, input fields, validation messages—clean and focused.",
+          "connectsTo": "Login/Register"
+        },
+        {
+          "nodeId": "dashboard-css",
+          "edges": [{ "from": "dashboard-css", "to": "dashboard" }],
+          "icon": "📊",
+          "title": "Dashboard Styles",
+          "narration": "dashboard.css creates the user hub layout. Sidebar navigation, stats cards, course grids, activity feeds.",
+          "connectsTo": "Dashboard"
+        },
+        {
+          "nodeId": "lesson-css",
+          "edges": [{ "from": "lesson-css", "to": "lesson" }],
+          "icon": "📚",
+          "title": "Lesson Styles",
+          "narration": "lesson.css is the richest file. Content sections, code blocks, quizzes, drag-drop zones, progress indicators!",
+          "connectsTo": "Lessons"
+        }
+      ]
+    },
+    {
+      "id": "design-tokens-story",
+      "diagramId": "design-tokens",
+      "title": "Design System",
+      "steps": [
+        {
+          "nodeId": "root",
+          "icon": "🎨",
+          "title": "CSS Custom Properties",
+          "narration": "All design tokens live in the root selector as CSS custom properties. One source of truth for the entire design system!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "colors",
+          "edges": [{ "from": "root", "to": "colors" }],
+          "icon": "🎨",
+          "title": "Color Palette",
+          "narration": "Colors define the dark theme aesthetic. Primary backgrounds, accent colors, success and error states. Carefully chosen for contrast!",
+          "connectsTo": ":root"
+        },
+        {
+          "nodeId": "bg-primary",
+          "edges": [{ "from": "colors", "to": "bg-primary" }],
+          "icon": "⬛",
+          "title": "Background Colors",
+          "narration": "bg-primary is the darkest at hash 0a0a0f. Secondary and card backgrounds get progressively lighter. Depth through color!",
+          "connectsTo": "Colors"
+        },
+        {
+          "nodeId": "typography",
+          "edges": [{ "from": "root", "to": "typography" }],
+          "icon": "📝",
+          "title": "Typography",
+          "narration": "Two font families define our look. Inter for body text—clean and readable. Space Grotesk for headings—bold and modern!",
+          "connectsTo": ":root"
+        },
+        {
+          "nodeId": "effects",
+          "edges": [{ "from": "root", "to": "effects" }],
+          "icon": "✨",
+          "title": "Effects & Transitions",
+          "narration": "Shadows and transitions bring the UI to life. Subtle shadows create depth. Smooth transitions make interactions feel polished.",
+          "connectsTo": ":root"
+        }
+      ]
+    },
+    {
+      "id": "animation-flow-story",
+      "diagramId": "animation-flow",
+      "title": "Animation System",
+      "steps": [
+        {
+          "nodeId": "page-load",
+          "icon": "🚀",
+          "title": "Page Load Animations",
+          "narration": "Page load triggers entrance animations. Content fades in, elements stagger into view. First impressions matter!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "scroll",
+          "icon": "📜",
+          "title": "Scroll Triggers",
+          "narration": "IntersectionObserver triggers scroll animations. As sections enter the viewport, they animate into visibility.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "anime-js",
+          "edges": [{ "from": "page-load", "to": "anime-js" }, { "from": "observer", "to": "anime-js" }],
+          "icon": "🎬",
+          "title": "Anime.js Engine",
+          "narration": "Anime.js handles complex animations. Staggered reveals, elastic easing, timeline sequences—smooth and performant!",
+          "connectsTo": "Page Load, Observer"
+        },
+        {
+          "nodeId": "css-trans",
+          "edges": [{ "from": "hover", "to": "css-trans" }],
+          "icon": "🔄",
+          "title": "CSS Transitions",
+          "narration": "Simple interactions use CSS transitions. Hover effects, focus states, color changes—no JavaScript needed!",
+          "connectsTo": "Hover Events"
+        },
+        {
+          "nodeId": "fade-in",
+          "edges": [{ "from": "anime-js", "to": "fade-in" }],
+          "icon": "👁️",
+          "title": "Fade In Effect",
+          "narration": "The signature fade-in: opacity zero to one, translateY 20 to zero. Content rises into view. Elegant and informative!",
+          "connectsTo": "Anime.js"
+        }
+      ]
+    },
+    {
+      "id": "component-hierarchy-story",
+      "diagramId": "component-hierarchy",
+      "title": "Component Structure",
+      "steps": [
+        {
+          "nodeId": "card",
+          "icon": "🃏",
+          "title": "Card Component",
+          "narration": "Cards are our primary container pattern. A dark background with border, holding header, content, and footer sections.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "card-header",
+          "edges": [{ "from": "card", "to": "card-header" }],
+          "icon": "📋",
+          "title": "Card Header",
+          "narration": "Card headers contain titles and icons. Consistent padding, bold typography—immediately scannable.",
+          "connectsTo": "Card"
+        },
+        {
+          "nodeId": "card-content",
+          "edges": [{ "from": "card", "to": "card-content" }],
+          "icon": "📄",
+          "title": "Card Content",
+          "narration": "Card content is flexible. Lists, paragraphs, charts, forms—any content fits within the card structure.",
+          "connectsTo": "Card"
+        },
+        {
+          "nodeId": "btn",
+          "icon": "🔘",
+          "title": "Button Component",
+          "narration": "Buttons have a base class with variants. Primary buttons stand out with accent colors. Secondary buttons are subtle.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "progress",
+          "icon": "📊",
+          "title": "Progress Bar",
+          "narration": "Progress bars show completion visually. A container with a fill element—width percentage equals progress percentage!",
+          "connectsTo": null
+        }
+      ]
+    },
+    {
+      "id": "layout-patterns-story",
+      "diagramId": "layout-patterns",
+      "title": "Layout Patterns",
+      "steps": [
+        {
+          "nodeId": "dashboard-layout",
+          "icon": "📊",
+          "title": "Dashboard Layout",
+          "narration": "Dashboard uses a sidebar plus main content pattern. Fixed 240-pixel sidebar on the left, flex-grow main area on the right.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "sidebar",
+          "edges": [{ "from": "dashboard-layout", "to": "sidebar" }],
+          "icon": "📋",
+          "title": "Sidebar Navigation",
+          "narration": "The sidebar provides persistent navigation. User profile, course links, settings—always accessible without scrolling.",
+          "connectsTo": "Dashboard Layout"
+        },
+        {
+          "nodeId": "lesson-layout",
+          "icon": "📚",
+          "title": "Lesson Layout",
+          "narration": "Lesson pages have three columns: header, scrollable content, and progress nav on the right tracking scroll position.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "marketing-layout",
+          "icon": "🎯",
+          "title": "Marketing Layout",
+          "narration": "Marketing pages use full-width sections. Hero at the top, feature grids, testimonials, call-to-action. Scroll storytelling!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "auth-layout",
+          "icon": "🔐",
+          "title": "Auth Layout",
+          "narration": "Auth pages center a single form card. Maximum 400-pixel width, vertically centered. Clean and focused on the task.",
+          "connectsTo": null
+        }
+      ]
+    },
+    {
+      "id": "quiz-structure-story",
+      "diagramId": "quiz-structure",
+      "title": "Quiz Component",
+      "steps": [
+        {
+          "nodeId": "container",
+          "icon": "📦",
+          "title": "Quiz Container",
+          "narration": "Every quiz starts with a container. The data-answer attribute holds the correct answer—hidden from the UI but accessible to JavaScript.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "question",
+          "edges": [{ "from": "container", "to": "question" }],
+          "icon": "❓",
+          "title": "Question Text",
+          "narration": "The question is displayed prominently. Clear typography, adequate spacing—the user knows exactly what to answer.",
+          "connectsTo": "Container"
+        },
+        {
+          "nodeId": "options",
+          "edges": [{ "from": "container", "to": "options" }],
+          "icon": "📋",
+          "title": "Options Container",
+          "narration": "Options are grouped in a container. Each option has a data-value attribute that gets compared against data-answer.",
+          "connectsTo": "Container"
+        },
+        {
+          "nodeId": "selected",
+          "edges": [{ "from": "option", "to": "selected" }],
+          "icon": "👆",
+          "title": "Selected State",
+          "narration": "Clicking an option adds the selected class. Visual feedback with border color and background change—the user knows their choice!",
+          "connectsTo": "Option"
+        },
+        {
+          "nodeId": "correct",
+          "edges": [{ "from": "option", "to": "correct" }],
+          "icon": "✅",
+          "title": "Correct/Incorrect",
+          "narration": "After submission, correct and incorrect classes apply. Green for right, red for wrong. Immediate visual feedback!",
+          "connectsTo": "Option"
+        }
+      ]
+    },
+    {
+      "id": "breakpoints-story",
+      "diagramId": "breakpoints",
+      "title": "Responsive Design",
+      "steps": [
+        {
+          "nodeId": "mobile",
+          "icon": "📱",
+          "title": "Mobile First",
+          "narration": "Below 768 pixels is mobile territory. Single column layouts, hidden sidebars, stacked navigation. Touch-friendly targets!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "single-col",
+          "edges": [{ "from": "mobile", "to": "single-col" }],
+          "icon": "📄",
+          "title": "Single Column",
+          "narration": "On mobile, content stacks vertically. No side-by-side layouts—everything flows top to bottom for easy scrolling.",
+          "connectsTo": "Mobile"
+        },
+        {
+          "nodeId": "tablet",
+          "edges": [{ "from": "mobile", "to": "tablet" }],
+          "icon": "📲",
+          "title": "Tablet Range",
+          "narration": "768 to 1024 pixels is tablet territory. Two-column grids appear, sidebars become collapsible toggles.",
+          "connectsTo": "Mobile"
+        },
+        {
+          "nodeId": "desktop",
+          "edges": [{ "from": "tablet", "to": "desktop" }],
+          "icon": "🖥️",
+          "title": "Desktop Layout",
+          "narration": "1024 to 1280 pixels is desktop range. Full layouts with visible sidebars, multi-column grids, expanded navigation.",
+          "connectsTo": "Tablet"
+        },
+        {
+          "nodeId": "large",
+          "edges": [{ "from": "desktop", "to": "large" }],
+          "icon": "🖥️",
+          "title": "Large Screens",
+          "narration": "Above 1280 pixels, we add max-width containers. Content doesn't stretch infinitely—readable line lengths are maintained.",
+          "connectsTo": "Desktop"
+        }
+      ]
+    },
+    {
+      "id": "color-contrast-story",
+      "diagramId": "color-contrast",
+      "title": "Dark Theme & Contrast",
+      "steps": [
+        {
+          "nodeId": "bg-primary",
+          "icon": "⬛",
+          "title": "Primary Background",
+          "narration": "bg-primary is the darkest background at hash 0a0a0f. Nearly black, it provides maximum contrast for text.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "text-primary",
+          "edges": [{ "from": "bg-primary", "to": "text-primary" }],
+          "icon": "📝",
+          "title": "Primary Text",
+          "narration": "text-primary is light gray at hash e8e8f0. Against bg-primary, it achieves 15.2:1 contrast—well above WCAG requirements!",
+          "connectsTo": "bg-primary"
+        },
+        {
+          "nodeId": "text-secondary",
+          "edges": [{ "from": "bg-primary", "to": "text-secondary" }],
+          "icon": "📝",
+          "title": "Secondary Text",
+          "narration": "text-secondary at hash a8a8b8 is slightly dimmer. 8.5:1 contrast for less prominent text—still highly readable.",
+          "connectsTo": "bg-primary"
+        },
+        {
+          "nodeId": "accent-primary",
+          "edges": [{ "from": "bg-card", "to": "accent-primary" }],
+          "icon": "💜",
+          "title": "Accent Colors",
+          "narration": "Accent colors provide visual interest. Purple primary, teal secondary, green success—each tested for adequate contrast.",
+          "connectsTo": "bg-card"
+        },
+        {
+          "nodeId": "accent-success",
+          "edges": [{ "from": "bg-card", "to": "accent-success" }],
+          "icon": "💚",
+          "title": "Success Green",
+          "narration": "accent-success at hash 66bb6a achieves 8.1:1 contrast. Perfect for positive feedback without being harsh on dark backgrounds.",
+          "connectsTo": "bg-card"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "design-tokens-story",
+      "questions": [
+        {
+          "question": "What font family is used for headings?",
+          "options": ["Inter", "Space Grotesk", "Roboto", "Open Sans"],
+          "correct": 1,
+          "explanation": "Space Grotesk is the display font used for headings—bold and modern."
+        },
+        {
+          "question": "Where are all design tokens defined?",
+          "options": ["JavaScript config", "JSON file", "CSS :root selector", "HTML head"],
+          "correct": 2,
+          "explanation": "All design tokens live in the :root selector as CSS custom properties."
+        }
+      ]
+    },
+    {
+      "storyId": "animation-flow-story",
+      "questions": [
+        {
+          "question": "What library handles complex animations?",
+          "options": ["GreenSock", "Anime.js", "Motion", "Framer Motion"],
+          "correct": 1,
+          "explanation": "Anime.js handles complex animations like staggered reveals and timeline sequences."
+        },
+        {
+          "question": "What triggers scroll-based animations?",
+          "options": ["scroll event", "IntersectionObserver", "MutationObserver", "requestAnimationFrame"],
+          "correct": 1,
+          "explanation": "IntersectionObserver efficiently triggers animations as sections enter the viewport."
+        }
+      ]
+    },
+    {
+      "storyId": "breakpoints-story",
+      "questions": [
+        {
+          "question": "At what width do sidebars become visible on desktop?",
+          "options": ["768px", "1024px", "1280px", "1440px"],
+          "correct": 1,
+          "explanation": "Desktop layouts with visible sidebars appear at 1024px and above."
+        },
+        {
+          "question": "Why do large screens have max-width containers?",
+          "options": ["Performance", "Maintain readable line lengths", "Browser compatibility", "Accessibility"],
+          "correct": 1,
+          "explanation": "Max-width containers prevent content from stretching too wide, maintaining readable line lengths."
+        }
+      ]
+    }
+  ]
+}

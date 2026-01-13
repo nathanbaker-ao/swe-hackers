@@ -1,0 +1,90 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Analytics Page. analytics.html provides the big picture. Aggregate metrics across all partnerships, trends, and insights.",
+  "duration": 11.520000457763672,
+  "words": [
+    {
+      "word": "Analytics",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "page",
+      "start": 0.7200000286102295,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "Analytics",
+      "start": 2.740000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "html",
+      "start": 2.740000009536743,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "provides",
+      "start": 3.9200000762939453,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "the",
+      "start": 4.71999979019165,
+      "end": 5
+    },
+    {
+      "word": "big",
+      "start": 5,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "picture",
+      "start": 5.380000114440918,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "Aggregate",
+      "start": 6.739999771118164,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "metrics",
+      "start": 6.940000057220459,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "across",
+      "start": 7.380000114440918,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "all",
+      "start": 7.860000133514404,
+      "end": 8.5
+    },
+    {
+      "word": "partnerships",
+      "start": 8.5,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "trends",
+      "start": 10.079999923706055,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "and",
+      "start": 10.079999923706055,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "insights",
+      "start": 10.720000267028809,
+      "end": 11.180000305175781
+    }
+  ]
+}

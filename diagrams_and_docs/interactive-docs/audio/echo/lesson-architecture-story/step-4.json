@@ -1,0 +1,130 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Progress Bar Updates. The progress bar updates in real-time as you scroll. Visual feedback shows exactly how much of the lesson you've covered.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "word": "Progress",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "bar",
+      "start": 0.5799999833106995,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "updates",
+      "start": 0.8199999928474426,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "The",
+      "start": 2.0799999237060547,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "progress",
+      "start": 2.1600000858306885,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "bar",
+      "start": 2.5399999618530273,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "updates",
+      "start": 2.9000000953674316,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "in",
+      "start": 3.240000009536743,
+      "end": 3.5
+    },
+    {
+      "word": "real",
+      "start": 3.5,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "time",
+      "start": 3.859999895095825,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "as",
+      "start": 4.199999809265137,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "you",
+      "start": 4.539999961853027,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "scroll",
+      "start": 4.760000228881836,
+      "end": 5
+    },
+    {
+      "word": "Visual",
+      "start": 6.039999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "feedback",
+      "start": 6.039999961853027,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "shows",
+      "start": 6.599999904632568,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "exactly",
+      "start": 7.159999847412109,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "how",
+      "start": 7.920000076293945,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "much",
+      "start": 8.34000015258789,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "of",
+      "start": 8.600000381469727,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 8.920000076293945,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "lesson",
+      "start": 9.300000190734863,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "you've",
+      "start": 9.300000190734863,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "covered",
+      "start": 9.880000114440918,
+      "end": 9.880000114440918
+    }
+  ]
+}

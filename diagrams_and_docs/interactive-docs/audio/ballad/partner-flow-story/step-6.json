@@ -1,0 +1,105 @@
+{
+  "storyId": "partner-flow-story",
+  "stepId": "step-6",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Access Granted - Render. All checks passed! The lesson content renders. Learning begins. The multi-layer security keeps content protected.",
+  "duration": 11.25,
+  "words": [
+    {
+      "word": "Access",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "granted",
+      "start": 0.5400000214576721,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Render",
+      "start": 1.9600000381469727,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "All",
+      "start": 2.619999885559082,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "checks",
+      "start": 2.859999895095825,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "passed",
+      "start": 3.119999885559082,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "The",
+      "start": 4,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "lesson",
+      "start": 4.079999923706055,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "content",
+      "start": 4.400000095367432,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "renders",
+      "start": 4.920000076293945,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "Learning",
+      "start": 6.239999771118164,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "begins",
+      "start": 6.239999771118164,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "The",
+      "start": 7.619999885559082,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "multi",
+      "start": 7.980000019073486,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "layer",
+      "start": 8.319999694824219,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "security",
+      "start": 8.5600004196167,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "keeps",
+      "start": 9.119999885559082,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "content",
+      "start": 9.520000457763672,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "protected",
+      "start": 10.180000305175781,
+      "end": 10.84000015258789
+    }
+  ]
+}

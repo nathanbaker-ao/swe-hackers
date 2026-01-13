@@ -1,0 +1,110 @@
+{
+  "storyId": "component-hierarchy-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Button Component. Buttons have a base class with variants. Primary buttons stand out with accent colors. Secondary buttons are subtle.",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Button",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Component",
+      "start": 0.41999998688697815,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "Buttons",
+      "start": 1.3600000143051147,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "have",
+      "start": 2.140000104904175,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "a",
+      "start": 2.3399999141693115,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "base",
+      "start": 2.559999942779541,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "class",
+      "start": 2.9000000953674316,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "with",
+      "start": 3.2799999713897705,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "variants",
+      "start": 3.5999999046325684,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "Primary",
+      "start": 5.440000057220459,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "buttons",
+      "start": 5.440000057220459,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "stand",
+      "start": 5.800000190734863,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "out",
+      "start": 6.239999771118164,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "with",
+      "start": 6.460000038146973,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "accent",
+      "start": 6.880000114440918,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "hellers",
+      "start": 7.119999885559082,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "Secondary",
+      "start": 8.479999542236328,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "buttons",
+      "start": 8.800000190734863,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "are",
+      "start": 9.119999885559082,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "subtle",
+      "start": 9.739999771118164,
+      "end": 9.960000038146973
+    }
+  ]
+}

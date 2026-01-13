@@ -1,0 +1,85 @@
+{
+  "storyId": "animation-flow-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Anime.js Engine. Anime.js handles complex animations. Staggered reveals, elastic easing, timeline sequences—smooth and performant!",
+  "duration": 14.5600004196167,
+  "words": [
+    {
+      "word": "AnimeJS",
+      "start": 0,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Engine",
+      "start": 1.0199999809265137,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "AnimeJS",
+      "start": 2.4600000381469727,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "handles",
+      "start": 3.2200000286102295,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "complex",
+      "start": 3.7200000286102295,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "animations",
+      "start": 4.559999942779541,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "staggered",
+      "start": 6.320000171661377,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "reveals",
+      "start": 6.639999866485596,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "elastic",
+      "start": 8.079999923706055,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "easing",
+      "start": 8.079999923706055,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "timeline",
+      "start": 9.65999984741211,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "sequences",
+      "start": 9.899999618530273,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "smooth",
+      "start": 11.5,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "and",
+      "start": 11.84000015258789,
+      "end": 12.420000076293945
+    },
+    {
+      "word": "performant",
+      "start": 12.420000076293945,
+      "end": 13.180000305175781
+    }
+  ]
+}

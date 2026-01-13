@@ -1,0 +1,85 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-11",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Profile Bar. The profile bar displays user name and photo. Simple read from the user document.",
+  "duration": 7.360000133514404,
+  "words": [
+    {
+      "word": "Profile",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "bar",
+      "start": 0.5199999809265137,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "The",
+      "start": 0.8199999928474426,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "profile",
+      "start": 1.5399999618530273,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "bar",
+      "start": 1.7599999904632568,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "displays",
+      "start": 2.119999885559082,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "username",
+      "start": 2.640000104904175,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "and",
+      "start": 3.380000114440918,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "photo",
+      "start": 3.880000114440918,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "Simple",
+      "start": 5.039999961853027,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "read",
+      "start": 5.179999828338623,
+      "end": 5.5
+    },
+    {
+      "word": "from",
+      "start": 5.5,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "the",
+      "start": 5.739999771118164,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "user",
+      "start": 5.960000038146973,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "document",
+      "start": 6.260000228881836,
+      "end": 6.78000020980835
+    }
+  ]
+}

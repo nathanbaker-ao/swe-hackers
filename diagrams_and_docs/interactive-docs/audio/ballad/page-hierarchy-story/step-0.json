@@ -1,0 +1,125 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "All Page Types. The SWE Hackers platform has ten distinct page types. They're organized by access requirements—from fully public to highly restricted.",
+  "duration": 15.90999984741211,
+  "words": [
+    {
+      "word": "All",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "page",
+      "start": 0.6600000262260437,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "types",
+      "start": 0.7799999713897705,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "The",
+      "start": 1.8200000524520874,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "SWE",
+      "start": 2.0999999046325684,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "Hackers",
+      "start": 2.740000009536743,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "platform",
+      "start": 3.0199999809265137,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "has",
+      "start": 3.5399999618530273,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "10",
+      "start": 4.119999885559082,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "distinct",
+      "start": 4.800000190734863,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "page",
+      "start": 5.679999828338623,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "types",
+      "start": 6.28000020980835,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "They're",
+      "start": 7.639999866485596,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "organised",
+      "start": 7.960000038146973,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "by",
+      "start": 8.399999618530273,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "access",
+      "start": 8.920000076293945,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "requirements",
+      "start": 9.359999656677246,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "from",
+      "start": 10.760000228881836,
+      "end": 11
+    },
+    {
+      "word": "fully",
+      "start": 11,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "public",
+      "start": 11.260000228881836,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "to",
+      "start": 11.699999809265137,
+      "end": 12.600000381469727
+    },
+    {
+      "word": "highly",
+      "start": 12.600000381469727,
+      "end": 13.15999984741211
+    },
+    {
+      "word": "restricted",
+      "start": 13.15999984741211,
+      "end": 13.920000076293945
+    }
+  ]
+}

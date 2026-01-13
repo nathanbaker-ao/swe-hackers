@@ -1,0 +1,110 @@
+{
+  "storyId": "tracking-services-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "DOM Events. DOM Events trigger activity tracking. Clicks, changes, and other user interactions fire events that ActivityTracker listens for.",
+  "duration": 10.40999984741211,
+  "words": [
+    {
+      "word": "DOM",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "events",
+      "start": 0.5,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "DOM",
+      "start": 0.8199999928474426,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "events",
+      "start": 1.600000023841858,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "trigger",
+      "start": 1.8600000143051147,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "activity",
+      "start": 2.240000009536743,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "tracking",
+      "start": 2.819999933242798,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "Clicks",
+      "start": 4.079999923706055,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "changes",
+      "start": 4.920000076293945,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "and",
+      "start": 5.179999828338623,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "other",
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "user",
+      "start": 5.71999979019165,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "interactions",
+      "start": 6.099999904632568,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "fire",
+      "start": 6.800000190734863,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "events",
+      "start": 7.320000171661377,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "that",
+      "start": 7.760000228881836,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "Activity",
+      "start": 8.319999694824219,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "Tracker",
+      "start": 8.680000305175781,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "listens",
+      "start": 9.0600004196167,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "for",
+      "start": 9.65999984741211,
+      "end": 10.039999961853027
+    }
+  ]
+}

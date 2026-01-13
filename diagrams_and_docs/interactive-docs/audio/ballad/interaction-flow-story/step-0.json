@@ -1,0 +1,105 @@
+{
+  "storyId": "interaction-flow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Admin User. An admin just had a call with a partner. Time to record it! Every touchpoint deserves documentation.",
+  "duration": 9.760000228881836,
+  "words": [
+    {
+      "word": "admin",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "user",
+      "start": 0.5,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "An",
+      "start": 1.5399999618530273,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "admin",
+      "start": 2.0399999618530273,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "just",
+      "start": 2.359999895095825,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "had",
+      "start": 2.9800000190734863,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "a",
+      "start": 3.1600000858306885,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "call",
+      "start": 3.4800000190734863,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "with",
+      "start": 3.5199999809265137,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "a",
+      "start": 3.759999990463257,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "partner",
+      "start": 4.320000171661377,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "Time",
+      "start": 5.179999828338623,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "to",
+      "start": 5.21999979019165,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "record",
+      "start": 5.539999961853027,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "it",
+      "start": 5.739999771118164,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "Every",
+      "start": 6.71999979019165,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "touchpoint",
+      "start": 7.179999828338623,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "deserves",
+      "start": 7.800000190734863,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "documentation",
+      "start": 8.319999694824219,
+      "end": 9.020000457763672
+    }
+  ]
+}

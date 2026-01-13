@@ -1,0 +1,100 @@
+{
+  "storyId": "role-hierarchy-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Partner Course Access. Enterprise users unlock partner courses. Organization-specific content tailored to their learning path and requirements.",
+  "duration": 11.800000190734863,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "course",
+      "start": 0.5,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "access",
+      "start": 0.8999999761581421,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "Enterprise",
+      "start": 2.9600000381469727,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "users",
+      "start": 2.9600000381469727,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "unlock",
+      "start": 3.440000057220459,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "partner",
+      "start": 4.079999923706055,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "courses",
+      "start": 4.699999809265137,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "organization",
+      "start": 6.039999961853027,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "specific",
+      "start": 6.639999866485596,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "content",
+      "start": 7.440000057220459,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "tailored",
+      "start": 8.100000381469727,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "to",
+      "start": 8.739999771118164,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "their",
+      "start": 9.0600004196167,
+      "end": 9.5
+    },
+    {
+      "word": "learning",
+      "start": 9.5,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "path",
+      "start": 9.819999694824219,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "and",
+      "start": 10.239999771118164,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "requirements",
+      "start": 10.640000343322754,
+      "end": 11.119999885559082
+    }
+  ]
+}

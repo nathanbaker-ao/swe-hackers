@@ -1,0 +1,125 @@
+{
+  "storyId": "system-context-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Marketing Pages. Marketing pages are public—landing pages, course catalog, and pricing. No login required! Anyone can browse and discover what we offer.",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "Marketing",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "pages",
+      "start": 0.6800000071525574,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "Marketing",
+      "start": 2.5799999237060547,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "pages",
+      "start": 2.5799999237060547,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "are",
+      "start": 2.880000114440918,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "public",
+      "start": 3.4800000190734863,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "Landing",
+      "start": 5.159999847412109,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "pages",
+      "start": 5.159999847412109,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "course",
+      "start": 6.400000095367432,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "catalogue",
+      "start": 6.400000095367432,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "and",
+      "start": 6.820000171661377,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "pricing",
+      "start": 7.340000152587891,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "No",
+      "start": 8.680000305175781,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "login",
+      "start": 8.880000114440918,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "required",
+      "start": 9.180000305175781,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "Anyone",
+      "start": 10.699999809265137,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "can",
+      "start": 10.800000190734863,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "browse",
+      "start": 11.239999771118164,
+      "end": 11.5
+    },
+    {
+      "word": "and",
+      "start": 11.5,
+      "end": 12.260000228881836
+    },
+    {
+      "word": "discover",
+      "start": 12.260000228881836,
+      "end": 12.260000228881836
+    },
+    {
+      "word": "what",
+      "start": 12.260000228881836,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "we",
+      "start": 12.819999694824219,
+      "end": 13.15999984741211
+    },
+    {
+      "word": "offer",
+      "start": 13.15999984741211,
+      "end": 13.260000228881836
+    }
+  ]
+}

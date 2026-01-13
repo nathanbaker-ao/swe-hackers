@@ -1,0 +1,100 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Streak Calculation. Streak counts consecutive active days. Data comes from dailyChallenges and user document's lastActive timestamp.",
+  "duration": 10.199999809265137,
+  "words": [
+    {
+      "word": "Streak",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "calculation",
+      "start": 0.5,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Streak",
+      "start": 2.1600000858306885,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "counts",
+      "start": 2.1600000858306885,
+      "end": 2.5
+    },
+    {
+      "word": "consecutive",
+      "start": 2.5,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "active",
+      "start": 3.299999952316284,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "days",
+      "start": 3.819999933242798,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "Data",
+      "start": 5.059999942779541,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "comes",
+      "start": 5.059999942779541,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "from",
+      "start": 5.380000114440918,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "daily",
+      "start": 5.679999828338623,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "challenges",
+      "start": 6.059999942779541,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "and",
+      "start": 6.559999942779541,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "user",
+      "start": 6.980000019073486,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "documents",
+      "start": 7.380000114440918,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "last",
+      "start": 8.5,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "active",
+      "start": 8.600000381469727,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "timestamp",
+      "start": 9.119999885559082,
+      "end": 9.899999618530273
+    }
+  ]
+}

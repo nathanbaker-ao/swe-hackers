@@ -1,0 +1,85 @@
+{
+  "storyId": "analytics-flow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Trend Calculation. Calculations reveal insights. Growth rates, completion percentages, revenue trends—metrics that drive decisions.",
+  "duration": 11.710000038146973,
+  "words": [
+    {
+      "word": "Trend",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "calculation",
+      "start": 0.6000000238418579,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Calculations",
+      "start": 2.359999895095825,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "reveal",
+      "start": 2.7799999713897705,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "insights",
+      "start": 3.4000000953674316,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "Growth",
+      "start": 5.28000020980835,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "rates",
+      "start": 5.28000020980835,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "Completion",
+      "start": 6.440000057220459,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "percentages",
+      "start": 6.659999847412109,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "Revenue",
+      "start": 8.300000190734863,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "trends",
+      "start": 8.300000190734863,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "Metrics",
+      "start": 9.779999732971191,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "that",
+      "start": 9.779999732971191,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "drive",
+      "start": 10.199999809265137,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "decisions",
+      "start": 10.640000343322754,
+      "end": 11.100000381469727
+    }
+  ]
+}

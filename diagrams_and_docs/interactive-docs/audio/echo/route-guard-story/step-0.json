@@ -1,0 +1,105 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Page Load. A user navigates to a page. RouteGuard intercepts before any content renders. Time for security checks!",
+  "duration": 8.949999809265137,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "load",
+      "start": 0.4000000059604645,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "A",
+      "start": 1.1799999475479126,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "user",
+      "start": 1.2799999713897705,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "navigates",
+      "start": 1.5399999618530273,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "to",
+      "start": 2.0999999046325684,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "a",
+      "start": 2.3399999141693115,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "page",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Root",
+      "start": 3.5799999237060547,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "guard",
+      "start": 3.619999885559082,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "intercepts",
+      "start": 3.9600000381469727,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "before",
+      "start": 5.079999923706055,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "any",
+      "start": 5.079999923706055,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "content",
+      "start": 5.579999923706055,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "renders",
+      "start": 6.039999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "Time",
+      "start": 7.320000171661377,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "for",
+      "start": 7.360000133514404,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "security",
+      "start": 8.180000305175781,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "checks",
+      "start": 8.180000305175781,
+      "end": 8.579999923706055
+    }
+  ]
+}

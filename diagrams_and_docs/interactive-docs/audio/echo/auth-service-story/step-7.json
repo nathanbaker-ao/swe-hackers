@@ -1,0 +1,135 @@
+{
+  "storyId": "auth-service-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Firebase Auth Backend. Firebase Auth is the backend service that handles all the heavy lifting—password hashing, token generation, OAuth flows, and secure session management.",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Firebase",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Auth",
+      "start": 0.8799999952316284,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Backend",
+      "start": 1.340000033378601,
+      "end": 2.2799999713897705
+    },
+    {
+      "word": "Firebase",
+      "start": 2.5199999809265137,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "Auth",
+      "start": 3.299999952316284,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "is",
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "the",
+      "start": 3.880000114440918,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "backend",
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "service",
+      "start": 4.559999942779541,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "that",
+      "start": 4.960000038146973,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "handles",
+      "start": 5.199999809265137,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "all",
+      "start": 5.440000057220459,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "the",
+      "start": 5.980000019073486,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "heavy",
+      "start": 6.179999828338623,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "lifting",
+      "start": 6.420000076293945,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "password",
+      "start": 6.800000190734863,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "hashing",
+      "start": 7.579999923706055,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "token",
+      "start": 8.640000343322754,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "generation",
+      "start": 8.640000343322754,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "OAuth",
+      "start": 10.039999961853027,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "flows",
+      "start": 10.079999923706055,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "and",
+      "start": 10.819999694824219,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "secure",
+      "start": 11.039999961853027,
+      "end": 11.619999885559082
+    },
+    {
+      "word": "session",
+      "start": 11.619999885559082,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "management",
+      "start": 12.020000457763672,
+      "end": 12.4399995803833
+    }
+  ]
+}

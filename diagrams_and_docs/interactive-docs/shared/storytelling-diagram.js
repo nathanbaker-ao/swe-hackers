@@ -27,9 +27,11 @@ class StorytellingDiagram {
     this.elements = elements;
     this.storySteps = storySteps;
     this.options = {
-      stepDuration: 2000,
+      stepDuration: 500, // Default for audio-on mode
       audioEnabled: true,
       audioBasePath: 'audio',
+      storyId: containerId, // Default to containerId, can be overridden
+      audioEngine: null, // Optional shared audio engine
       ...options
     };
     this.currentStep = -1;
@@ -39,7 +41,6 @@ class StorytellingDiagram {
     this.cy = null;
     this.animationMode = false;
     this.activeEdgeAnimations = [];
-    this.activeNodeAnimation = null;
     this.tooltip = null;
     this.tooltipNode = null;
     this.narrator = null;
@@ -48,8 +49,8 @@ class StorytellingDiagram {
   }
 
   init() {
-    // Create narrator instance
-    this.narrator = new AudioNarrationEngine(this.options.audioBasePath);
+    // Use shared audio engine if provided, otherwise create one
+    this.narrator = this.options.audioEngine || new AudioNarrationEngine(this.options.audioBasePath);
     
     // Create cytoscape with custom styles
     this.cy = this.createCustomDiagram();
@@ -134,9 +135,11 @@ class StorytellingDiagram {
       {
         selector: 'edge.story-complete',
         style: {
-          'opacity': 0.7,
-          'width': 2,
-          'line-style': 'solid'
+          'opacity': 1,
+          'width': 3,
+          'line-style': 'solid',
+          'line-color': '#4db6ac',
+          'target-arrow-color': '#4db6ac'
         }
       }
     ];
@@ -163,16 +166,21 @@ class StorytellingDiagram {
     const container = document.getElementById(this.containerId);
     this.tooltip = this.createTooltip(container);
 
-    // Custom hover - only when not in animation mode
+    // Custom hover - allow on active/complete nodes during animation
     this.cy.on('mouseover', 'node', (e) => {
-      if (this.animationMode) return;
       const node = e.target;
       if (node.data('type') === 'group') return;
+      
+      // During animation, only show tooltip for active or complete nodes
+      if (this.animationMode) {
+        if (!node.hasClass('story-active') && !node.hasClass('story-complete')) {
+          return;
+        }
+      }
       this.showTooltip(node);
     });
 
     this.cy.on('mouseout', 'node', () => {
-      if (this.animationMode) return;
       this.hideTooltip();
     });
 
@@ -268,10 +276,11 @@ class StorytellingDiagram {
       this.playBtn.addEventListener('click', () => this.togglePlayPause());
     }
 
-    // Speed select
-    const speedSelect = container.querySelector('select[id$="speed-select"]');
-    if (speedSelect) {
-      speedSelect.addEventListener('change', (e) => {
+    // Speed select - store reference for audio-based visibility
+    this.speedSelect = container.querySelector('select[id$="speed-select"]');
+    this.speedControlGroup = this.speedSelect?.closest('.control-group');
+    if (this.speedSelect) {
+      this.speedSelect.addEventListener('change', (e) => {
         this.options.stepDuration = parseInt(e.target.value, 10);
       });
     }
@@ -368,6 +377,7 @@ class StorytellingDiagram {
       this.audioToggle.addEventListener('click', () => {
         this.options.audioEnabled = !this.options.audioEnabled;
         this.updateAudioToggleUI();
+        this.updateSpeedControlVisibility();
         this.narrator.setMuted(!this.options.audioEnabled);
         if (!this.options.audioEnabled) this.narrator.stop();
       });
@@ -387,6 +397,26 @@ class StorytellingDiagram {
         this.audioToggle.classList.toggle('speaking', speaking);
       }
     };
+    
+    // Set initial speed control visibility based on audio state
+    this.updateSpeedControlVisibility();
+  }
+  
+  updateSpeedControlVisibility() {
+    if (!this.speedControlGroup) return;
+    
+    if (this.options.audioEnabled) {
+      // Audio ON: hide speed control, use 0.5s
+      this.speedControlGroup.style.display = 'none';
+      this.options.stepDuration = 500;
+    } else {
+      // Audio OFF (muted): show speed control, use 2s default
+      this.speedControlGroup.style.display = '';
+      if (this.speedSelect) {
+        this.speedSelect.value = '2000';
+        this.options.stepDuration = 2000;
+      }
+    }
   }
 
   populateVoices() {
@@ -459,10 +489,10 @@ class StorytellingDiagram {
     const captionContainer = document.getElementById(`${this.containerId}-caption`);
     if (!captionContainer) return;
 
-    const icon = captionContainer.querySelector('[id$="story-icon"]');
-    const title = captionContainer.querySelector('[id$="story-title"]');
-    const text = captionContainer.querySelector('[id$="story-text"]');
-    const connection = captionContainer.querySelector('[id$="story-connection"]');
+    const icon = captionContainer.querySelector('.story-icon');
+    const title = captionContainer.querySelector('.story-title');
+    const text = captionContainer.querySelector('.story-text');
+    const connection = captionContainer.querySelector('.story-connection');
 
     if (icon) { icon.textContent = '🚀'; icon.classList.add('visible'); }
     if (title) { title.textContent = 'Ready to Explore'; title.classList.add('visible'); }
@@ -478,11 +508,11 @@ class StorytellingDiagram {
     const captionContainer = document.getElementById(`${this.containerId}-caption`);
     if (!captionContainer) return;
 
-    const icon = captionContainer.querySelector('[id$="story-icon"]');
-    const title = captionContainer.querySelector('[id$="story-title"]');
-    const text = captionContainer.querySelector('[id$="story-text"]');
-    const connection = captionContainer.querySelector('[id$="story-connection"]');
-    const connectionText = captionContainer.querySelector('[id$="connection-text"]');
+    const icon = captionContainer.querySelector('.story-icon');
+    const title = captionContainer.querySelector('.story-title');
+    const text = captionContainer.querySelector('.story-text');
+    const connection = captionContainer.querySelector('.story-connection');
+    const connectionText = captionContainer.querySelector('.connection-text');
 
     // Quick fade out
     icon?.classList.remove('visible');
@@ -542,23 +572,28 @@ class StorytellingDiagram {
   // ============================================
 
   async jumpToStep(stepIndex) {
-    this.stop();
+    // Stop any ongoing playback but don't reset everything
+    this.isPlaying = false;
+    this.isPaused = false;
+    this.shouldStop = true;
     this.narrator.stop();
     this.clearEdgeAnimations();
 
     this.animationMode = true;
     this.currentStep = stepIndex;
 
-    // Build up to this step
-    this.showAllDimmed();
+    // Reset all elements first
+    this.cy.elements().removeClass('story-dimmed story-active story-complete');
+    this.cy.nodes().style('opacity', 0.3);
+    this.cy.edges().style('opacity', 0.15);
 
-    // Show all completed steps
-    for (let i = 0; i <= stepIndex; i++) {
+    // Mark all steps UP TO (but not including) current as complete
+    for (let i = 0; i < stepIndex; i++) {
       const step = this.storySteps[i];
       
       if (step.nodeId) {
         const node = this.cy.getElementById(step.nodeId);
-        node.removeClass('story-dimmed').addClass('story-complete');
+        node.addClass('story-complete');
         node.style('opacity', 1);
       }
 
@@ -567,16 +602,24 @@ class StorytellingDiagram {
           const edge = this.cy.edges().filter(e => 
             e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
           );
-          edge.removeClass('story-dimmed').addClass('story-complete');
+          edge.addClass('story-complete');
+          edge.style({
+            'opacity': 1,
+            'width': 3,
+            'line-style': 'solid',
+            'line-color': '#4db6ac',
+            'target-arrow-color': '#4db6ac'
+          });
         }
       }
     }
 
-    // Highlight current step
+    // Highlight CURRENT step as active
     const currentStepData = this.storySteps[stepIndex];
     if (currentStepData.nodeId) {
       const node = this.cy.getElementById(currentStepData.nodeId);
-      node.removeClass('story-complete').addClass('story-active');
+      node.addClass('story-active');
+      node.style('opacity', 1);
       
       this.zoomToNode(node);
       this.animateNodeGlow(node);
@@ -588,36 +631,21 @@ class StorytellingDiagram {
         const edge = this.cy.edges().filter(e => 
           e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
         );
-        edge.removeClass('story-complete').addClass('story-active');
+        edge.addClass('story-active');
+        edge.style('opacity', 1);
         this.animateEdgeFlow(edge);
       }
     }
 
-    // Update caption and narrate
+    // Update caption and progress dots
     this.updateCaption(currentStepData);
+    this.updateProgressDots();
+    this.updatePlayButtonUI();
     
+    // Play audio if enabled
     if (this.options.audioEnabled) {
       await this.narrateStep(currentStepData);
     }
-
-    // Clear active states after narration
-    setTimeout(() => {
-      this.cy.elements().removeClass('story-active');
-      if (currentStepData.nodeId) {
-        const node = this.cy.getElementById(currentStepData.nodeId);
-        node.addClass('story-complete');
-      }
-      if (currentStepData.edges) {
-        for (const edgeSpec of currentStepData.edges) {
-          const edge = this.cy.edges().filter(e => 
-            e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
-          );
-          edge.addClass('story-complete');
-        }
-      }
-      this.clearEdgeAnimations();
-      this.animationMode = false;
-    }, 500);
   }
 
   async play() {
@@ -734,7 +762,37 @@ class StorytellingDiagram {
         const edge = this.cy.edges().filter(e => 
           e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
         );
-        edge.removeClass('story-active').addClass('story-complete');
+        
+        if (edge.length === 0) continue;
+        
+        // Big flash effect when edge becomes solid
+        edge.removeClass('story-active');
+        edge.style({
+          'width': 8,
+          'opacity': 1,
+          'line-style': 'solid',
+          'line-color': '#b2dfdb',
+          'target-arrow-color': '#b2dfdb'
+        });
+        
+        // Animate to solid teal then settle
+        setTimeout(() => {
+          edge.style({
+            'line-color': '#4db6ac',
+            'target-arrow-color': '#4db6ac',
+            'width': 5
+          });
+        }, 150);
+        
+        // Settle to final complete state
+        setTimeout(() => {
+          edge.addClass('story-complete');
+          edge.style({
+            'width': 3,
+            'line-color': '#4db6ac',
+            'target-arrow-color': '#4db6ac'
+          });
+        }, 400);
       }
     }
 
@@ -776,21 +834,11 @@ class StorytellingDiagram {
   }
 
   animateNodeGlow(node) {
-    const glowAnimation = anime({
-      targets: { intensity: 0 },
-      intensity: 1,
-      duration: 800,
-      easing: 'easeInOutSine',
-      direction: 'alternate',
-      loop: true,
-      update: (anim) => {
-        const intensity = anim.animations[0].currentValue;
-        const borderWidth = 3 + (intensity * 3);
-        node.style('border-width', borderWidth);
-      }
+    // Simple static border highlight - no animated effects on nodes
+    node.style({
+      'border-width': 4,
+      'border-color': '#4db6ac'
     });
-
-    this.activeNodeAnimation = glowAnimation;
   }
 
   animateEdgeIn(edge) {
@@ -809,23 +857,22 @@ class StorytellingDiagram {
   }
 
   animateEdgeFlow(edge) {
-    let offset = 0;
-    const flowAnimation = setInterval(() => {
-      offset = (offset + 2) % 24;
-      edge.style('line-dash-offset', -offset);
-    }, 50);
-
-    this.activeEdgeAnimations.push(flowAnimation);
+    // Simple dashed line animation - no particles
+    let dashOffset = 0;
+    const dashAnimation = setInterval(() => {
+      dashOffset = (dashOffset + 3) % 24;
+      edge.style('line-dash-offset', -dashOffset);
+    }, 40);
+    this.activeEdgeAnimations.push(dashAnimation);
   }
 
   clearEdgeAnimations() {
-    this.activeEdgeAnimations.forEach(anim => clearInterval(anim));
+    this.activeEdgeAnimations.forEach(anim => {
+      if (typeof anim === 'number') {
+        clearInterval(anim);
+      }
+    });
     this.activeEdgeAnimations = [];
-    
-    if (this.activeNodeAnimation) {
-      this.activeNodeAnimation.pause();
-      this.activeNodeAnimation = null;
-    }
   }
 
   // ============================================
@@ -836,8 +883,12 @@ class StorytellingDiagram {
     await this.wait(200);
     
     const captionContainer = document.getElementById(`${this.containerId}-caption`);
-    const titleWords = captionContainer?.querySelector('.story-title')?.querySelectorAll('.word') || [];
-    const textWords = captionContainer?.querySelector('.story-text')?.querySelectorAll('.word') || [];
+    if (!captionContainer) return;
+    
+    const titleEl = captionContainer.querySelector('.story-title');
+    const textEl = captionContainer.querySelector('.story-text');
+    const titleWords = titleEl ? titleEl.querySelectorAll('.word') : [];
+    const textWords = textEl ? textEl.querySelectorAll('.word') : [];
     const allWords = [...titleWords, ...textWords];
     
     this.narrator.onWordHighlight = (wordIndex, word) => {
@@ -858,7 +909,8 @@ class StorytellingDiagram {
       }
     };
     
-    await this.narrator.playStep(this.containerId, this.currentStep);
+    // Use storyId from options for audio lookup
+    await this.narrator.playStep(this.options.storyId, this.currentStep);
     
     allWords.forEach(el => {
       el.classList.remove('current');

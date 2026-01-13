@@ -1,0 +1,125 @@
+{
+  "storyId": "service-deps-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "RBACService. RBACService handles role-based access control. It checks if users have the right role and organization membership to access content.",
+  "duration": 13.40999984741211,
+  "words": [
+    {
+      "word": "RBAC",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "service",
+      "start": 0.5400000214576721,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "RBAC",
+      "start": 2.0199999809265137,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "service",
+      "start": 2.559999942779541,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "handles",
+      "start": 3.0799999237060547,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "role",
+      "start": 3.5199999809265137,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "based",
+      "start": 4.019999980926514,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "access",
+      "start": 4.28000020980835,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "control",
+      "start": 4.840000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "It",
+      "start": 6.179999828338623,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "checks",
+      "start": 6.300000190734863,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "if",
+      "start": 6.480000019073486,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "users",
+      "start": 6.800000190734863,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "have",
+      "start": 7.179999828338623,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 7.579999923706055,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "right",
+      "start": 7.739999771118164,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "role",
+      "start": 8.260000228881836,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "and",
+      "start": 8.600000381469727,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "organisation",
+      "start": 9.180000305175781,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "membership",
+      "start": 10.239999771118164,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "to",
+      "start": 10.760000228881836,
+      "end": 11.460000038146973
+    },
+    {
+      "word": "access",
+      "start": 11.460000038146973,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "content",
+      "start": 11.960000038146973,
+      "end": 12.600000381469727
+    }
+  ]
+}

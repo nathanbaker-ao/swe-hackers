@@ -1,0 +1,120 @@
+{
+  "storyId": "registration-flow-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Registration Form. New users start with the registration form. They enter email, password, and display name—the essentials for creating an account.",
+  "duration": 9.119999885559082,
+  "words": [
+    {
+      "word": "Registration",
+      "start": 0,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "form",
+      "start": 0.800000011920929,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "New",
+      "start": 1.7599999904632568,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "users",
+      "start": 1.7799999713897705,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "start",
+      "start": 2.0799999237060547,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "with",
+      "start": 2.380000114440918,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "the",
+      "start": 2.5399999618530273,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "registration",
+      "start": 2.7200000286102295,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "form",
+      "start": 3.180000066757202,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "They",
+      "start": 4.059999942779541,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "enter",
+      "start": 4.059999942779541,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "email",
+      "start": 4.28000020980835,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "password",
+      "start": 5.420000076293945,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "and",
+      "start": 5.920000076293945,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "display",
+      "start": 6.159999847412109,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "name",
+      "start": 6.460000038146973,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "the",
+      "start": 7,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "essentials",
+      "start": 7.260000228881836,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "for",
+      "start": 7.639999866485596,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "creating",
+      "start": 7.980000019073486,
+      "end": 8.279999732971191
+    },
+    {
+      "word": "an",
+      "start": 8.279999732971191,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "account",
+      "start": 8.579999923706055,
+      "end": 8.739999771118164
+    }
+  ]
+}

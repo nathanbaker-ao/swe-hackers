@@ -1,0 +1,100 @@
+{
+  "storyId": "progress-flow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Calculate Percentage. Progress percentage is calculated. Viewed sections divided by total sections equals completion. Simple math, powerful tracking!",
+  "duration": 11.609999656677246,
+  "words": [
+    {
+      "word": "Calculate",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "percentage",
+      "start": 0.6399999856948853,
+      "end": 1.2599999904632568
+    },
+    {
+      "word": "Progress",
+      "start": 2.3399999141693115,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "percentage",
+      "start": 2.3399999141693115,
+      "end": 3
+    },
+    {
+      "word": "is",
+      "start": 3,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "calculated",
+      "start": 3.4000000953674316,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "Viewed",
+      "start": 4.800000190734863,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "sections",
+      "start": 5.400000095367432,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "divided",
+      "start": 5.400000095367432,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "by",
+      "start": 5.940000057220459,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "total",
+      "start": 6.340000152587891,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "sections",
+      "start": 6.639999866485596,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "equals",
+      "start": 7.079999923706055,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "completion",
+      "start": 7.800000190734863,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "Simple",
+      "start": 9.319999694824219,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "math",
+      "start": 9.460000038146973,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "Powerful",
+      "start": 10.34000015258789,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "tracking",
+      "start": 10.739999771118164,
+      "end": 11
+    }
+  ]
+}

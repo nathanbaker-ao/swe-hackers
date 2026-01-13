@@ -1,0 +1,95 @@
+{
+  "storyId": "activity-types-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Code Challenges. Code challenges have data-solution attributes. User code is compared against expected output for validation.",
+  "duration": 10.800000190734863,
+  "words": [
+    {
+      "word": "Code",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "challenges",
+      "start": 0.699999988079071,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Code",
+      "start": 2.4600000381469727,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "challenges",
+      "start": 2.4600000381469727,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "have",
+      "start": 2.859999895095825,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "data",
+      "start": 3.440000057220459,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "solution",
+      "start": 3.9000000953674316,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "attributes",
+      "start": 4.380000114440918,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "User",
+      "start": 6.21999979019165,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "code",
+      "start": 6.239999771118164,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "is",
+      "start": 6.579999923706055,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "compared",
+      "start": 7.019999980926514,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "against",
+      "start": 7.420000076293945,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "expected",
+      "start": 7.900000095367432,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "output",
+      "start": 8.680000305175781,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "for",
+      "start": 9.15999984741211,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "validation",
+      "start": 9.819999694824219,
+      "end": 10.239999771118164
+    }
+  ]
+}

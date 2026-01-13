@@ -1,0 +1,110 @@
+{
+  "storyId": "init-sequence-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "ActivityTracker.init(). ActivityTracker.init discovers interactive activities on the page—quizzes, drag-drops, code challenges. Ready to capture user interactions!",
+  "duration": 14.15999984741211,
+  "words": [
+    {
+      "word": "activitytracker",
+      "start": 0,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "init",
+      "start": 1.100000023841858,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "ActivityTracker",
+      "start": 3.5199999809265137,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "init",
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "discovers",
+      "start": 4.159999847412109,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "interactive",
+      "start": 5.119999885559082,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "activities",
+      "start": 6.059999942779541,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "on",
+      "start": 6.699999809265137,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "the",
+      "start": 7.039999961853027,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "page",
+      "start": 7.179999828338623,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "Quizzes",
+      "start": 8.380000114440918,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "drag",
+      "start": 9.15999984741211,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "drops",
+      "start": 9.260000228881836,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "code",
+      "start": 10.020000457763672,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "challenges",
+      "start": 10.260000228881836,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "ready",
+      "start": 11.520000457763672,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "to",
+      "start": 11.819999694824219,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "capture",
+      "start": 12.460000038146973,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "user",
+      "start": 12.460000038146973,
+      "end": 13
+    },
+    {
+      "word": "interactions",
+      "start": 13,
+      "end": 13.699999809265137
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "storyId": "auth-architecture-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "AuthService. AuthService is the gateway. It provides clean methods for login, registration, and logout—wrapping Firebase's complexity.",
+  "duration": 12.720000267028809,
+  "words": [
+    {
+      "word": "AuthService",
+      "start": 0,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "AuthService",
+      "start": 1.9800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "is",
+      "start": 2.4800000190734863,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "the",
+      "start": 2.859999895095825,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "gateway",
+      "start": 3.0799999237060547,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "It",
+      "start": 4.179999828338623,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "provides",
+      "start": 4.199999809265137,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "clean",
+      "start": 4.619999885559082,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "methods",
+      "start": 5.199999809265137,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "for",
+      "start": 5.579999923706055,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "login",
+      "start": 6.239999771118164,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "registration",
+      "start": 7.599999904632568,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "and",
+      "start": 7.659999847412109,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "logout",
+      "start": 8.300000190734863,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "Wrapping",
+      "start": 9.779999732971191,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "Firebase's",
+      "start": 9.920000076293945,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "complexity",
+      "start": 11.100000381469727,
+      "end": 11.460000038146973
+    }
+  ]
+}

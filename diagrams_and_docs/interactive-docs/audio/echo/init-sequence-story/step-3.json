@@ -1,0 +1,130 @@
+{
+  "storyId": "init-sequence-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "RBACService Ready. RBACService initializes in parallel with DataService. It needs both auth and database access to check user roles and permissions.",
+  "duration": 11.010000228881836,
+  "words": [
+    {
+      "word": "RABAC",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "service",
+      "start": 0.6000000238418579,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "ready",
+      "start": 1.0399999618530273,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "RABAC",
+      "start": 2.2200000286102295,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "service",
+      "start": 2.5199999809265137,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "initializes",
+      "start": 2.940000057220459,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "in",
+      "start": 3.759999990463257,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "parallel",
+      "start": 4.199999809265137,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "with",
+      "start": 4.440000057220459,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "data",
+      "start": 4.820000171661377,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "service",
+      "start": 5.179999828338623,
+      "end": 5.5
+    },
+    {
+      "word": "It",
+      "start": 6.099999904632568,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "needs",
+      "start": 6.099999904632568,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "both",
+      "start": 6.300000190734863,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "auth",
+      "start": 6.679999828338623,
+      "end": 7
+    },
+    {
+      "word": "and",
+      "start": 7,
+      "end": 7.5
+    },
+    {
+      "word": "database",
+      "start": 7.5,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "access",
+      "start": 7.940000057220459,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "to",
+      "start": 8.34000015258789,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "check",
+      "start": 8.699999809265137,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "user",
+      "start": 8.9399995803833,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "roles",
+      "start": 9.319999694824219,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "and",
+      "start": 9.640000343322754,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "permissions",
+      "start": 10.020000457763672,
+      "end": 10.34000015258789
+    }
+  ]
+}

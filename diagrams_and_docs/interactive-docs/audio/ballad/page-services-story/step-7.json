@@ -1,0 +1,100 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-7",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "route-guard.js. route-guard.js protects pages requiring login. If you're not authenticated, you get redirected before seeing anything.",
+  "duration": 12.5,
+  "words": [
+    {
+      "word": "RootGuard",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "js",
+      "start": 0.7799999713897705,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "RootGuard",
+      "start": 2.3399999141693115,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "js",
+      "start": 2.880000114440918,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "protects",
+      "start": 3.640000104904175,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "pages",
+      "start": 4.300000190734863,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "requiring",
+      "start": 4.840000152587891,
+      "end": 5.5
+    },
+    {
+      "word": "login",
+      "start": 5.5,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "If",
+      "start": 6.760000228881836,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "you're",
+      "start": 6.860000133514404,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "not",
+      "start": 7.079999923706055,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "authenticated",
+      "start": 7.400000095367432,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "you",
+      "start": 8.640000343322754,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "get",
+      "start": 8.739999771118164,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "redirected",
+      "start": 9.220000267028809,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "before",
+      "start": 10.34000015258789,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "seeing",
+      "start": 11.100000381469727,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "anything",
+      "start": 11.5600004196167,
+      "end": 12.140000343322754
+    }
+  ]
+}

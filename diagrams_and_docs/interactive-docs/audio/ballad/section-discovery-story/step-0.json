@@ -1,0 +1,105 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Page Load. The lesson page loads. ProgressTracker needs to know what sections exist before it can track them.",
+  "duration": 9.550000190734863,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "load",
+      "start": 0.4399999976158142,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "The",
+      "start": 1.4800000190734863,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "lesson",
+      "start": 1.6399999856948853,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "page",
+      "start": 1.840000033378601,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "loads",
+      "start": 2.319999933242798,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "Progress",
+      "start": 3.9800000190734863,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "Tracker",
+      "start": 4.039999961853027,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "needs",
+      "start": 4.360000133514404,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "to",
+      "start": 4.940000057220459,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "know",
+      "start": 5.28000020980835,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "what",
+      "start": 5.460000038146973,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "sections",
+      "start": 5.940000057220459,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "exist",
+      "start": 6.420000076293945,
+      "end": 7
+    },
+    {
+      "word": "before",
+      "start": 7,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "it",
+      "start": 7.800000190734863,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "can",
+      "start": 8.15999984741211,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "track",
+      "start": 8.619999885559082,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "them",
+      "start": 8.640000343322754,
+      "end": 8.880000114440918
+    }
+  ]
+}

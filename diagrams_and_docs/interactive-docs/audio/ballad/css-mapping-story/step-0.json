@@ -1,0 +1,115 @@
+{
+  "storyId": "css-mapping-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Marketing Styles. marketing.css handles landing pages and catalog pages. Hero sections, feature grids, testimonials—all the public-facing flair!",
+  "duration": 13.920000076293945,
+  "words": [
+    {
+      "word": "Marketing",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "styles",
+      "start": 0.6200000047683716,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Marketing",
+      "start": 2.559999942779541,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "CSS",
+      "start": 2.559999942779541,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "Handle",
+      "start": 4.059999942779541,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "for",
+      "start": 4.119999885559082,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "landing",
+      "start": 4.480000019073486,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "pages",
+      "start": 4.71999979019165,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "and",
+      "start": 5.179999828338623,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "catalogue",
+      "start": 5.820000171661377,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "pages",
+      "start": 6.21999979019165,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "Hero",
+      "start": 7.539999961853027,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "sections",
+      "start": 7.960000038146973,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "Feature",
+      "start": 9.380000114440918,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "grids",
+      "start": 9.380000114440918,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "Testimonials",
+      "start": 10.420000076293945,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "All",
+      "start": 11.579999923706055,
+      "end": 11.800000190734863
+    },
+    {
+      "word": "the",
+      "start": 11.800000190734863,
+      "end": 12.079999923706055
+    },
+    {
+      "word": "public",
+      "start": 12.079999923706055,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "facing",
+      "start": 12.4399995803833,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "flair",
+      "start": 12.859999656677246,
+      "end": 13.220000267028809
+    }
+  ]
+}

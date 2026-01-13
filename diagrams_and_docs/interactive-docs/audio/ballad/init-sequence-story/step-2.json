@@ -1,0 +1,130 @@
+{
+  "storyId": "init-sequence-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "DataService Ready. With auth ready, DataService becomes available. It can now query the database using FirebaseApp.getDb() for the authenticated user.",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "Data",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "service",
+      "start": 0.4399999976158142,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "ready",
+      "start": 0.7799999713897705,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "With",
+      "start": 2.0999999046325684,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "Auth",
+      "start": 2.319999933242798,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "ready",
+      "start": 2.680000066757202,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "data",
+      "start": 3.5799999237060547,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "service",
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "becomes",
+      "start": 4.139999866485596,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "available",
+      "start": 4.619999885559082,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "It",
+      "start": 5.940000057220459,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "can",
+      "start": 6.039999961853027,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "now",
+      "start": 6.260000228881836,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "query",
+      "start": 6.679999828338623,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 6.920000076293945,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "database",
+      "start": 7.679999828338623,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "using",
+      "start": 7.679999828338623,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "Firebase",
+      "start": 8.300000190734863,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "app",
+      "start": 8.859999656677246,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "GetDB",
+      "start": 9.199999809265137,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "for",
+      "start": 9.800000190734863,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "the",
+      "start": 10.5600004196167,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "authenticated",
+      "start": 10.899999618530273,
+      "end": 11.600000381469727
+    },
+    {
+      "word": "user",
+      "start": 11.600000381469727,
+      "end": 11.979999542236328
+    }
+  ]
+}

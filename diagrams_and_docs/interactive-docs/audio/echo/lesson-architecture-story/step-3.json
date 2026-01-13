@@ -1,0 +1,115 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Save Progress. Progress changes trigger Firestore writes. Your reading progress is persisted so you can pick up where you left off.",
+  "duration": 9.760000228881836,
+  "words": [
+    {
+      "word": "Save",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "progress",
+      "start": 0.47999998927116394,
+      "end": 1
+    },
+    {
+      "word": "Progress",
+      "start": 1.899999976158142,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "changes",
+      "start": 1.899999976158142,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "trigger",
+      "start": 2.3399999141693115,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "Firestore",
+      "start": 2.7799999713897705,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "Rights",
+      "start": 3.5199999809265137,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "Your",
+      "start": 4.619999885559082,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "reading",
+      "start": 4.840000152587891,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "progress",
+      "start": 5.179999828338623,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "is",
+      "start": 5.639999866485596,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "persisted",
+      "start": 5.940000057220459,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "so",
+      "start": 6.679999828338623,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "you",
+      "start": 6.960000038146973,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "can",
+      "start": 7.099999904632568,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "pick",
+      "start": 7.360000133514404,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "up",
+      "start": 7.579999923706055,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "where",
+      "start": 7.860000133514404,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "you",
+      "start": 8.020000457763672,
+      "end": 8.279999732971191
+    },
+    {
+      "word": "left",
+      "start": 8.279999732971191,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "off",
+      "start": 8.600000381469727,
+      "end": 9.0600004196167
+    }
+  ]
+}

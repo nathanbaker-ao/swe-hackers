@@ -1,0 +1,140 @@
+{
+  "storyId": "system-context-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Students: The Users. Meet our users—students eager to learn software engineering. They access everything through a simple browser, connecting to our platform over standard HTTP.",
+  "duration": 13.050000190734863,
+  "words": [
+    {
+      "word": "Students",
+      "start": 0,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "the",
+      "start": 1.059999942779541,
+      "end": 1.2599999904632568
+    },
+    {
+      "word": "users",
+      "start": 1.2599999904632568,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "meet",
+      "start": 2.359999895095825,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "our",
+      "start": 2.4000000953674316,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "users",
+      "start": 2.819999933242798,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "students",
+      "start": 4.019999980926514,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "eager",
+      "start": 4.079999923706055,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "to",
+      "start": 4.400000095367432,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "learn",
+      "start": 4.760000228881836,
+      "end": 5
+    },
+    {
+      "word": "software",
+      "start": 5,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "engineering",
+      "start": 5.559999942779541,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "They",
+      "start": 6.559999942779541,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "access",
+      "start": 6.71999979019165,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "everything",
+      "start": 7.119999885559082,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "through",
+      "start": 7.800000190734863,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "a",
+      "start": 8.079999923706055,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "simple",
+      "start": 8.319999694824219,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "browser",
+      "start": 8.640000343322754,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "connecting",
+      "start": 9.899999618530273,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "to",
+      "start": 9.899999618530273,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "our",
+      "start": 10.15999984741211,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "platform",
+      "start": 10.380000114440918,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "over",
+      "start": 10.880000114440918,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "standard",
+      "start": 11.399999618530273,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "HTTP",
+      "start": 11.899999618530273,
+      "end": 12.600000381469727
+    }
+  ]
+}

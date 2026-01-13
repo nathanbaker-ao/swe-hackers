@@ -1,0 +1,110 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Admin Section. Partnership pages live under the admin section. Only users with admin role can access any of these features.",
+  "duration": 9.550000190734863,
+  "words": [
+    {
+      "word": "Admin",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "section",
+      "start": 0.5,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "Partnership",
+      "start": 2.140000104904175,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "pages",
+      "start": 2.140000104904175,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "live",
+      "start": 2.5199999809265137,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "under",
+      "start": 2.880000114440918,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "the",
+      "start": 3.1600000858306885,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "admin",
+      "start": 3.7200000286102295,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "section",
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "Only",
+      "start": 5.079999923706055,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "users",
+      "start": 5.239999771118164,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "with",
+      "start": 5.639999866485596,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "admin",
+      "start": 5.980000019073486,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "role",
+      "start": 6.320000171661377,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "can",
+      "start": 6.71999979019165,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "access",
+      "start": 7.039999961853027,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "any",
+      "start": 7.460000038146973,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "of",
+      "start": 7.900000095367432,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "these",
+      "start": 8.15999984741211,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "features",
+      "start": 8.399999618530273,
+      "end": 8.800000190734863
+    }
+  ]
+}

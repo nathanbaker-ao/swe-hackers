@@ -1,0 +1,110 @@
+{
+  "storyId": "dashboard-flow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Page Load Begins. User navigates to the dashboard. The browser requests the page, and our loading sequence kicks into gear.",
+  "duration": 10.319999694824219,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "load",
+      "start": 0.46000000834465027,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "begins",
+      "start": 0.7799999713897705,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "User",
+      "start": 2.619999885559082,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "navigates",
+      "start": 2.6600000858306885,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "to",
+      "start": 3.4000000953674316,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.5799999237060547,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "dashboard",
+      "start": 3.759999990463257,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "The",
+      "start": 4.820000171661377,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "browser",
+      "start": 5.039999961853027,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "requests",
+      "start": 5.420000076293945,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "the",
+      "start": 6.039999961853027,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "page",
+      "start": 6.659999847412109,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "and",
+      "start": 6.659999847412109,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "our",
+      "start": 7.239999771118164,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "loading",
+      "start": 7.539999961853027,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "sequence",
+      "start": 7.800000190734863,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "ticks",
+      "start": 8.399999618530273,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "into",
+      "start": 8.859999656677246,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "gear",
+      "start": 9.319999694824219,
+      "end": 9.5600004196167
+    }
+  ]
+}

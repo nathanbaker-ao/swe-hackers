@@ -1,0 +1,105 @@
+{
+  "storyId": "access-check-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Admin Bypass. Admins get VIP treatment—they bypass all other checks! If role equals admin, access is granted immediately.",
+  "duration": 11.010000228881836,
+  "words": [
+    {
+      "word": "Admin",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "bypass",
+      "start": 0.5400000214576721,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "Admins",
+      "start": 2.299999952316284,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "get",
+      "start": 2.299999952316284,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "VIP",
+      "start": 2.5799999237060547,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "treatment",
+      "start": 3.180000066757202,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "They",
+      "start": 4.179999828338623,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "bypass",
+      "start": 4.340000152587891,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "all",
+      "start": 4.78000020980835,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "other",
+      "start": 5.199999809265137,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "checks",
+      "start": 5.440000057220459,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "If",
+      "start": 6.579999923706055,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "role",
+      "start": 6.699999809265137,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "equals",
+      "start": 6.960000038146973,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "admin",
+      "start": 7.460000038146973,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "access",
+      "start": 8.720000267028809,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "is",
+      "start": 8.720000267028809,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "granted",
+      "start": 9.100000381469727,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "immediately",
+      "start": 9.539999961853027,
+      "end": 10.279999732971191
+    }
+  ]
+}

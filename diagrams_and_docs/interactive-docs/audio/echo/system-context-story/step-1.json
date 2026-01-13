@@ -1,0 +1,110 @@
+{
+  "storyId": "system-context-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Admins: The Managers. Admins manage the platform—creating courses, managing organizations, and monitoring learner progress. Same browser access, elevated permissions!",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "admins",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "the",
+      "start": 0.6000000238418579,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "managers",
+      "start": 1.4800000190734863,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Admins",
+      "start": 2.259999990463257,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "manage",
+      "start": 2.299999952316284,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "the",
+      "start": 2.680000066757202,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "platform",
+      "start": 2.9000000953674316,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "creating",
+      "start": 4.059999942779541,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "courses",
+      "start": 4.059999942779541,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "managing",
+      "start": 5.300000190734863,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "organizations",
+      "start": 5.300000190734863,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "and",
+      "start": 6.460000038146973,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "monitoring",
+      "start": 7.119999885559082,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "learner",
+      "start": 7.119999885559082,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "progress",
+      "start": 7.659999847412109,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "Same",
+      "start": 9,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "browser",
+      "start": 9.180000305175781,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "access",
+      "start": 9.619999885559082,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "elevated",
+      "start": 10.739999771118164,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "permissions",
+      "start": 11.119999885559082,
+      "end": 11.600000381469727
+    }
+  ]
+}

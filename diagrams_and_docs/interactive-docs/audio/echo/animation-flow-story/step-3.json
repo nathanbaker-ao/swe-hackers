@@ -1,0 +1,90 @@
+{
+  "storyId": "animation-flow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "CSS Transitions. Simple interactions use CSS transitions. Hover effects, focus states, color changes—no JavaScript needed!",
+  "duration": 11.199999809265137,
+  "words": [
+    {
+      "word": "CSS",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "Transitions",
+      "start": 0.6000000238418579,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Simple",
+      "start": 1.2799999713897705,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "interactions",
+      "start": 2.319999933242798,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "use",
+      "start": 3.0999999046325684,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "CSS",
+      "start": 3.5399999618530273,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "Transitions",
+      "start": 4.159999847412109,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "Hover",
+      "start": 5.400000095367432,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "effects",
+      "start": 6.079999923706055,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "Focus",
+      "start": 6.800000190734863,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "states",
+      "start": 7.639999866485596,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "Color",
+      "start": 8.039999961853027,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "changes",
+      "start": 8.720000267028809,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "No",
+      "start": 9.260000228881836,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "JavaScript",
+      "start": 9.960000038146973,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "needed",
+      "start": 10.520000457763672,
+      "end": 10.979999542236328
+    }
+  ]
+}

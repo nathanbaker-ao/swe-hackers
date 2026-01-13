@@ -1,0 +1,100 @@
+{
+  "storyId": "breakpoints-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Mobile First. Below 768 pixels is mobile territory. Single column layouts, hidden sidebars, stacked navigation. Touch-friendly targets!",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "Mobile",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "first",
+      "start": 0.4399999976158142,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Below",
+      "start": 1.9800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "768",
+      "start": 1.9800000190734863,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "pixels",
+      "start": 3.3399999141693115,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "is",
+      "start": 3.700000047683716,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "mobile",
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "territory",
+      "start": 4.539999961853027,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "Single",
+      "start": 6.21999979019165,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "column",
+      "start": 6.21999979019165,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "layouts",
+      "start": 6.579999923706055,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "Hidden",
+      "start": 7.940000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "sidebars",
+      "start": 7.940000057220459,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "Stacked",
+      "start": 9.420000076293945,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "navigation",
+      "start": 9.460000038146973,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "Touch",
+      "start": 11.039999961853027,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "friendly",
+      "start": 11.119999885559082,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "targets",
+      "start": 11.479999542236328,
+      "end": 11.899999618530273
+    }
+  ]
+}

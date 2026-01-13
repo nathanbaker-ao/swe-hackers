@@ -1,0 +1,100 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-8",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Partner Courses. Partner courses are organization-specific. You must belong to the sponsoring organization AND have course access.",
+  "duration": 11.0600004196167,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "courses",
+      "start": 0.5400000214576721,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Partner",
+      "start": 2.299999952316284,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "courses",
+      "start": 2.299999952316284,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "are",
+      "start": 2.5999999046325684,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "organisation",
+      "start": 3.2200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "specific",
+      "start": 4.139999866485596,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "You",
+      "start": 5.800000190734863,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "must",
+      "start": 5.880000114440918,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "belong",
+      "start": 6.139999866485596,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 6.420000076293945,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "the",
+      "start": 6.739999771118164,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "sponsoring",
+      "start": 7.079999923706055,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "organisation",
+      "start": 7.539999961853027,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "and",
+      "start": 8.460000038146973,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "have",
+      "start": 9.319999694824219,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "course",
+      "start": 9.880000114440918,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "access",
+      "start": 10.300000190734863,
+      "end": 10.760000228881836
+    }
+  ]
+}

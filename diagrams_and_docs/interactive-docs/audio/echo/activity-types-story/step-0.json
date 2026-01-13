@@ -1,0 +1,120 @@
+{
+  "storyId": "activity-types-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "ActivityTracker Hub. ActivityTracker is the hub for all interactive elements. It discovers activities on page load and tracks their completion.",
+  "duration": 10.239999771118164,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "Tracker",
+      "start": 0.6800000071525574,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Hub",
+      "start": 0.9800000190734863,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Activity",
+      "start": 1.8799999952316284,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "Tracker",
+      "start": 2.619999885559082,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "is",
+      "start": 2.9000000953674316,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "the",
+      "start": 3.359999895095825,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "hub",
+      "start": 3.619999885559082,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "for",
+      "start": 3.8399999141693115,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "all",
+      "start": 4.139999866485596,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "interactive",
+      "start": 4.460000038146973,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "elements",
+      "start": 4.980000019073486,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "It",
+      "start": 6.119999885559082,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "discovers",
+      "start": 6.179999828338623,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "activities",
+      "start": 6.679999828338623,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "on",
+      "start": 7.260000228881836,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "page",
+      "start": 7.639999866485596,
+      "end": 8
+    },
+    {
+      "word": "load",
+      "start": 8,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "and",
+      "start": 8.239999771118164,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "tracks",
+      "start": 8.720000267028809,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "their",
+      "start": 8.9399995803833,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "completion",
+      "start": 9.260000228881836,
+      "end": 9.579999923706055
+    }
+  ]
+}

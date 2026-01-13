@@ -1,0 +1,90 @@
+{
+  "storyId": "status-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Paused Status. Sometimes partnerships pause. Between cohorts, budget reviews, organizational changes. Not ended—just on hold.",
+  "duration": 11.5600004196167,
+  "words": [
+    {
+      "word": "Paused",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "status",
+      "start": 0.5600000023841858,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "Sometimes",
+      "start": 2.440000057220459,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "partnerships",
+      "start": 2.440000057220459,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "pause",
+      "start": 3.2799999713897705,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "Between",
+      "start": 5.380000114440918,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "cohorts",
+      "start": 5.380000114440918,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "budget",
+      "start": 6.340000152587891,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "reviews",
+      "start": 6.559999942779541,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "organisational",
+      "start": 7.739999771118164,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "changes",
+      "start": 8.420000076293945,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "Not",
+      "start": 9.539999961853027,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "ended",
+      "start": 9.720000267028809,
+      "end": 10.100000381469727
+    },
+    {
+      "word": "just",
+      "start": 10.359999656677246,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "on",
+      "start": 10.720000267028809,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "hold",
+      "start": 11.079999923706055,
+      "end": 11.199999809265137
+    }
+  ]
+}

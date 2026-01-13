@@ -1,0 +1,100 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Protected Check. First, isProtectedPage checks the URL. Marketing pages pass through. Dashboard and lessons require authentication.",
+  "duration": 11.520000457763672,
+  "words": [
+    {
+      "word": "Protected",
+      "start": 0,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "Check",
+      "start": 0.7599999904632568,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "First",
+      "start": 2.0199999809265137,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "Is",
+      "start": 2.4800000190734863,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "Protected",
+      "start": 2.6600000858306885,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "page",
+      "start": 3.200000047683716,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "checks",
+      "start": 3.5999999046325684,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "the",
+      "start": 4.119999885559082,
+      "end": 4.5
+    },
+    {
+      "word": "URL",
+      "start": 4.5,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "Marketing",
+      "start": 6.260000228881836,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "pages",
+      "start": 6.260000228881836,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "pass",
+      "start": 6.71999979019165,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "through",
+      "start": 7.239999771118164,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "Dashboard",
+      "start": 8.4399995803833,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "and",
+      "start": 8.739999771118164,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "lessons",
+      "start": 9.380000114440918,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "require",
+      "start": 9.380000114440918,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "authentication",
+      "start": 10.15999984741211,
+      "end": 10.84000015258789
+    }
+  ]
+}

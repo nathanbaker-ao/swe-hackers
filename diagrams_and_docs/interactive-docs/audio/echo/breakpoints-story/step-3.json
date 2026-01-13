@@ -1,0 +1,105 @@
+{
+  "storyId": "breakpoints-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Desktop Layout. 1024 to 1280 pixels is desktop range. Full layouts with visible sidebars, multi-column grids, expanded navigation.",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "Desktop",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "layout",
+      "start": 0.7200000286102295,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "1024",
+      "start": 2.180000066757202,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "to",
+      "start": 3.180000066757202,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "1280",
+      "start": 3.5399999618530273,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "pixels",
+      "start": 5.039999961853027,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "is",
+      "start": 5.559999942779541,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "desktop",
+      "start": 5.980000019073486,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "range",
+      "start": 6.420000076293945,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "Full",
+      "start": 6.940000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "layouts",
+      "start": 7.940000057220459,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "with",
+      "start": 8.4399995803833,
+      "end": 9
+    },
+    {
+      "word": "visible",
+      "start": 9,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "sidebars",
+      "start": 9.34000015258789,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "Multi",
+      "start": 10.180000305175781,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "column",
+      "start": 11.0600004196167,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "grids",
+      "start": 11.399999618530273,
+      "end": 11.880000114440918
+    },
+    {
+      "word": "Expanded",
+      "start": 12.119999885559082,
+      "end": 13.119999885559082
+    },
+    {
+      "word": "navigation",
+      "start": 13.119999885559082,
+      "end": 13.619999885559082
+    }
+  ]
+}

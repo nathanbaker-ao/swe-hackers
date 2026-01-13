@@ -1,0 +1,115 @@
+{
+  "storyId": "org-access-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Bob: Enterprise User. Bob is an enterprise user with Endless Opportunities. He gets public courses PLUS the exclusive EO Bootcamp content!",
+  "duration": 13.510000228881836,
+  "words": [
+    {
+      "word": "Bob",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Enterprise",
+      "start": 1.600000023841858,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "User",
+      "start": 1.600000023841858,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "Bob",
+      "start": 3.1600000858306885,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "is",
+      "start": 3.1600000858306885,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "an",
+      "start": 3.4000000953674316,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "enterprise",
+      "start": 3.7799999713897705,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "user",
+      "start": 4.239999771118164,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "with",
+      "start": 4.559999942779541,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "endless",
+      "start": 5.179999828338623,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "opportunities",
+      "start": 5.639999866485596,
+      "end": 6.5
+    },
+    {
+      "word": "He",
+      "start": 7.539999961853027,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "gets",
+      "start": 7.679999828338623,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "public",
+      "start": 7.920000076293945,
+      "end": 8.5
+    },
+    {
+      "word": "courses",
+      "start": 8.5,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "plus",
+      "start": 8.960000038146973,
+      "end": 10
+    },
+    {
+      "word": "the",
+      "start": 10,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "exclusive",
+      "start": 11.399999618530273,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "EO",
+      "start": 11.399999618530273,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "Bootcamp",
+      "start": 11.979999542236328,
+      "end": 12.520000457763672
+    },
+    {
+      "word": "content",
+      "start": 12.520000457763672,
+      "end": 13.079999923706055
+    }
+  ]
+}

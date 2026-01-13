@@ -1,0 +1,95 @@
+{
+  "storyId": "offline-flow-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Connection Check. navigator.onLine tells us the connection status. Online? Save directly. Offline? Time for the queue!",
+  "duration": 11.800000190734863,
+  "words": [
+    {
+      "word": "Connection",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "check",
+      "start": 0.6800000071525574,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "Navigator",
+      "start": 2,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "online",
+      "start": 2.359999895095825,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "tells",
+      "start": 3.240000009536743,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "us",
+      "start": 3.859999895095825,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "the",
+      "start": 4.099999904632568,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "connection",
+      "start": 4.420000076293945,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "status",
+      "start": 4.840000152587891,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "Online",
+      "start": 6.099999904632568,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "Save",
+      "start": 7.519999980926514,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "directly",
+      "start": 7.559999942779541,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "Offline",
+      "start": 9.140000343322754,
+      "end": 9.5
+    },
+    {
+      "word": "Time",
+      "start": 10.260000228881836,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "for",
+      "start": 10.680000305175781,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 10.920000076293945,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "queue",
+      "start": 11.15999984741211,
+      "end": 11.460000038146973
+    }
+  ]
+}

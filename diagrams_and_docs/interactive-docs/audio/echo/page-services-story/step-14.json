@@ -1,0 +1,115 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-14",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partner Courses. Partner courses are like lesson pages plus access control. Users must belong to the right organization to view content.",
+  "duration": 10.050000190734863,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "Courses",
+      "start": 0.5400000214576721,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Partner",
+      "start": 1.1399999856948853,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "Courses",
+      "start": 1.9800000190734863,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "are",
+      "start": 2.4000000953674316,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "like",
+      "start": 2.680000066757202,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "lesson",
+      "start": 3.0799999237060547,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "pages",
+      "start": 3.3399999141693115,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "plus",
+      "start": 3.7799999713897705,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "access",
+      "start": 4.340000152587891,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "control",
+      "start": 4.900000095367432,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "Users",
+      "start": 6.360000133514404,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "must",
+      "start": 6.360000133514404,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "belong",
+      "start": 6.78000020980835,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "to",
+      "start": 7.159999847412109,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "the",
+      "start": 7.360000133514404,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "right",
+      "start": 7.619999885559082,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "organization",
+      "start": 7.860000133514404,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "to",
+      "start": 8.539999961853027,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "view",
+      "start": 8.920000076293945,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "content",
+      "start": 9.15999984741211,
+      "end": 9.699999809265137
+    }
+  ]
+}

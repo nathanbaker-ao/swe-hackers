@@ -1,0 +1,95 @@
+{
+  "storyId": "org-access-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Organization Link. Bob's user document lists Endless Opportunities in his organizations array. This unlocks partner-specific content.",
+  "duration": 11.949999809265137,
+  "words": [
+    {
+      "word": "Organization",
+      "start": 0,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "link",
+      "start": 1.0199999809265137,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "Bob's",
+      "start": 2.4600000381469727,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "user",
+      "start": 2.5999999046325684,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "document",
+      "start": 2.940000057220459,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "lists",
+      "start": 3.4800000190734863,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "endless",
+      "start": 4.079999923706055,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "opportunities",
+      "start": 4.659999847412109,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "in",
+      "start": 5.380000114440918,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "his",
+      "start": 5.840000152587891,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "organization's",
+      "start": 6.099999904632568,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "array",
+      "start": 7.239999771118164,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "This",
+      "start": 7.980000019073486,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "unlocks",
+      "start": 8.380000114440918,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "partner",
+      "start": 8.979999542236328,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "specific",
+      "start": 9.720000267028809,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "content",
+      "start": 10.399999618530273,
+      "end": 10.979999542236328
+    }
+  ]
+}

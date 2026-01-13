@@ -1,0 +1,105 @@
+{
+  "storyId": "tracking-services-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "IntersectionObserver API. The browser's IntersectionObserver API powers scroll tracking. It efficiently detects when sections enter or leave the viewport.",
+  "duration": 12.039999961853027,
+  "words": [
+    {
+      "word": "IntersectionObserver",
+      "start": 0,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "API",
+      "start": 1.2400000095367432,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "The",
+      "start": 2.6600000858306885,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "browser's",
+      "start": 2.740000009536743,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "IntersectionObserver",
+      "start": 3.7200000286102295,
+      "end": 4.5
+    },
+    {
+      "word": "API",
+      "start": 4.5,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "powers",
+      "start": 5.21999979019165,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "scroll",
+      "start": 5.820000171661377,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "tracking",
+      "start": 6.28000020980835,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "It",
+      "start": 7.400000095367432,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "efficiently",
+      "start": 7.440000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "detects",
+      "start": 7.940000057220459,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "when",
+      "start": 8.600000381469727,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "sections",
+      "start": 9.100000381469727,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "enter",
+      "start": 9.460000038146973,
+      "end": 10
+    },
+    {
+      "word": "or",
+      "start": 10,
+      "end": 10.600000381469727
+    },
+    {
+      "word": "leave",
+      "start": 10.600000381469727,
+      "end": 10.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 10.960000038146973,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "viewport",
+      "start": 11.520000457763672,
+      "end": 11.859999656677246
+    }
+  ]
+}

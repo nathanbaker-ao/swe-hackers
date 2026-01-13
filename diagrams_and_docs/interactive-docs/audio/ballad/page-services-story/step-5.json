@@ -1,0 +1,105 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "data-service.js. data-service.js handles all Firestore operations. Progress, activities, notes—anything that needs to persist goes through here.",
+  "duration": 13.649999618530273,
+  "words": [
+    {
+      "word": "DataService",
+      "start": 0,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "js",
+      "start": 0.8999999761581421,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "DataService",
+      "start": 2.5199999809265137,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "js",
+      "start": 3.4600000381469727,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "handles",
+      "start": 4.380000114440918,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "all",
+      "start": 5.059999942779541,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "Firestore",
+      "start": 5.820000171661377,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "operations",
+      "start": 6.460000038146973,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "Progress",
+      "start": 8.739999771118164,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "activities",
+      "start": 9.800000190734863,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "notes",
+      "start": 10.5,
+      "end": 10.5
+    },
+    {
+      "word": "anything",
+      "start": 11.039999961853027,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "that",
+      "start": 11.300000190734863,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "needs",
+      "start": 11.779999732971191,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "to",
+      "start": 11.779999732971191,
+      "end": 12.420000076293945
+    },
+    {
+      "word": "persist",
+      "start": 12.420000076293945,
+      "end": 12.420000076293945
+    },
+    {
+      "word": "goes",
+      "start": 12.420000076293945,
+      "end": 12.9399995803833
+    },
+    {
+      "word": "through",
+      "start": 12.9399995803833,
+      "end": 13.239999771118164
+    },
+    {
+      "word": "here",
+      "start": 13.239999771118164,
+      "end": 13.520000457763672
+    }
+  ]
+}

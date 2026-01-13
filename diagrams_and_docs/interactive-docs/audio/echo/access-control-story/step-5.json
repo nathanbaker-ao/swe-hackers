@@ -1,0 +1,125 @@
+{
+  "storyId": "access-control-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "canAccessCourse() Check. canAccessCourse() is the final gate. It verifies the user has permission to access this specific course content.",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "word": "Can",
+      "start": 0,
+      "end": 0.36000001430511475
+    },
+    {
+      "word": "access",
+      "start": 0.36000001430511475,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "course",
+      "start": 0.7200000286102295,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "check",
+      "start": 1.0399999618530273,
+      "end": 1.5
+    },
+    {
+      "word": "Can",
+      "start": 1.5199999809265137,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "access",
+      "start": 2.240000009536743,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "course",
+      "start": 2.5799999237060547,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "is",
+      "start": 2.9600000381469727,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "the",
+      "start": 3.2200000286102295,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "final",
+      "start": 3.4800000190734863,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "gate",
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "It",
+      "start": 4.639999866485596,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "verifies",
+      "start": 4.800000190734863,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "the",
+      "start": 5.380000114440918,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "user",
+      "start": 5.699999809265137,
+      "end": 6
+    },
+    {
+      "word": "has",
+      "start": 6,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "permission",
+      "start": 6.320000171661377,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "to",
+      "start": 6.760000228881836,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "access",
+      "start": 7.340000152587891,
+      "end": 7.5
+    },
+    {
+      "word": "this",
+      "start": 7.5,
+      "end": 8
+    },
+    {
+      "word": "specific",
+      "start": 8,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "course",
+      "start": 8.579999923706055,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "content",
+      "start": 8.9399995803833,
+      "end": 9.399999618530273
+    }
+  ]
+}

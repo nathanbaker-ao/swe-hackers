@@ -36,41 +36,235 @@
       <p>Architecture patterns for different page types in the platform</p>
     </div>
 
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Self-Narrating Architecture</h4>
+            <p>Explore page types with AI narration • Click dots to jump • Test understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
     <!-- Page Type Overview -->
-    <section class="section">
+    <section class="section" id="page-hierarchy-section">
       <h2>Page Type Hierarchy</h2>
       <p>The platform has 8 distinct page types, each with different authentication requirements and service dependencies.</p>
       
-      <div class="diagram-container">
+      <div class="diagram-container" id="page-hierarchy-container">
         <div class="diagram-header">
-          <span class="diagram-title">Page Type Classification</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-layout="concentric">Concentric</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
+          <span class="diagram-title">📊 Page Type Classification</span>
+        </div>
+        <div id="page-hierarchy-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="page-hierarchy-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">See how page types are organized by access level.</div>
+              <div class="story-connection" style="display: none;"><span class="arrow">→</span><span class="connection-text"></span></div>
+            </div>
           </div>
         </div>
-        <div id="page-hierarchy" class="diagram-canvas large"></div>
-        <div class="diagram-legend">
-          <div class="legend-item">
-            <div class="legend-dot" style="background: #66bb6a;"></div>
-            <span>Public (No Auth)</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot auth"></div>
-            <span>Auth Required</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot external"></div>
-            <span>Auth + RBAC</span>
+
+        <div class="playback-controls">
+          <div class="playback-left"><button class="diagram-btn play-btn" data-action="play">▶ Play</button></div>
+          <div class="playback-center"><div class="story-progress" id="page-hierarchy-story-progress"></div></div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit">Fit</button>
+            <button class="diagram-btn small" data-action="reset">Reset</button>
+            <button class="diagram-btn small" data-action="export">PNG</button>
           </div>
         </div>
-        <div class="diagram-instructions">
-          <span>🖱️ Click a page type to see its architecture</span>
+
+        <div class="settings-bar">
+          <div class="control-group"><label>⏱️</label><select id="page-hierarchy-speed-select"><option value="1000">1s</option><option value="2000" selected>2s</option><option value="5000">5s</option><option value="10000">10s</option></select></div>
+          <div class="control-group"><button class="audio-toggle" id="page-hierarchy-audio-toggle"><span class="audio-icon">🔊</span></button></div>
+          <div class="control-group"><label>🎤</label><select id="page-hierarchy-voice-select" class="voice-select"><option value="">Loading...</option></select></div>
         </div>
       </div>
 
+      <div class="quiz-card" id="page-hierarchy-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress"><span class="answered">0</span>/<span class="total">2</span> answered<span class="score"></span></div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Architecture -->
+    <section class="section" id="dashboard-flow-section">
+      <h2>Dashboard</h2>
+      <p>Main user hub showing progress, analytics, and enrolled courses. Requires authentication and loads all services.</p>
+      
+      <div class="diagram-container" id="dashboard-flow-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📊 Dashboard Loading Sequence</span>
+        </div>
+        <div id="dashboard-flow-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="dashboard-flow-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Watch the dashboard loading sequence from request to render.</div>
+              <div class="story-connection" style="display: none;"><span class="arrow">→</span><span class="connection-text"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left"><button class="diagram-btn play-btn" data-action="play">▶ Play</button></div>
+          <div class="playback-center"><div class="story-progress" id="dashboard-flow-story-progress"></div></div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit">Fit</button>
+            <button class="diagram-btn small" data-action="reset">Reset</button>
+            <button class="diagram-btn small" data-action="export">PNG</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group"><label>⏱️</label><select id="dashboard-flow-speed-select"><option value="1000">1s</option><option value="2000" selected>2s</option><option value="5000">5s</option><option value="10000">10s</option></select></div>
+          <div class="control-group"><button class="audio-toggle" id="dashboard-flow-audio-toggle"><span class="audio-icon">🔊</span></button></div>
+          <div class="control-group"><label>🎤</label><select id="dashboard-flow-voice-select" class="voice-select"><option value="">Loading...</option></select></div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h4>💡 Loading Screen Pattern</h4>
+        <p>Dashboard shows a loading screen while auth state is determined and data is fetched. Content is hidden until ready.</p>
+      </div>
+    </section>
+
+    <!-- Lesson Architecture -->
+    <section class="section" id="lesson-architecture-section">
+      <h2>Lesson Pages</h2>
+      <p>Interactive course content with progress tracking, quizzes, and activities. The most feature-rich page type.</p>
+      
+      <div class="diagram-container" id="lesson-architecture-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📚 Lesson Page Architecture</span>
+        </div>
+        <div id="lesson-architecture-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="lesson-architecture-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Watch how user interactions flow through lesson pages.</div>
+              <div class="story-connection" style="display: none;"><span class="arrow">→</span><span class="connection-text"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left"><button class="diagram-btn play-btn" data-action="play">▶ Play</button></div>
+          <div class="playback-center"><div class="story-progress" id="lesson-architecture-story-progress"></div></div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit">Fit</button>
+            <button class="diagram-btn small" data-action="reset">Reset</button>
+            <button class="diagram-btn small" data-action="export">PNG</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group"><label>⏱️</label><select id="lesson-architecture-speed-select"><option value="1000">1s</option><option value="2000" selected>2s</option><option value="5000">5s</option><option value="10000">10s</option></select></div>
+          <div class="control-group"><button class="audio-toggle" id="lesson-architecture-audio-toggle"><span class="audio-icon">🔊</span></button></div>
+          <div class="control-group"><label>🎤</label><select id="lesson-architecture-voice-select" class="voice-select"><option value="">Loading...</option></select></div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="lesson-architecture-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress"><span class="answered">0</span>/<span class="total">2</span> answered<span class="score"></span></div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Course Architecture -->
+    <section class="section" id="partner-flow-section">
+      <h2>Partner Courses</h2>
+      <p>Organization-specific courses with RBAC restrictions. Users must belong to the organization to access.</p>
+      
+      <div class="diagram-container" id="partner-flow-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🤝 Partner Course Access Flow</span>
+        </div>
+        <div id="partner-flow-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="partner-flow-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Follow the multi-gate access flow for partner courses.</div>
+              <div class="story-connection" style="display: none;"><span class="arrow">→</span><span class="connection-text"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left"><button class="diagram-btn play-btn" data-action="play">▶ Play</button></div>
+          <div class="playback-center"><div class="story-progress" id="partner-flow-story-progress"></div></div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit">Fit</button>
+            <button class="diagram-btn small" data-action="reset">Reset</button>
+            <button class="diagram-btn small" data-action="export">PNG</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group"><label>⏱️</label><select id="partner-flow-speed-select"><option value="1000">1s</option><option value="2000" selected>2s</option><option value="5000">5s</option><option value="10000">10s</option></select></div>
+          <div class="control-group"><button class="audio-toggle" id="partner-flow-audio-toggle"><span class="audio-icon">🔊</span></button></div>
+          <div class="control-group"><label>🎤</label><select id="partner-flow-voice-select" class="voice-select"><option value="">Loading...</option></select></div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="partner-flow-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress"><span class="answered">0</span>/<span class="total">1</span> answered<span class="score"></span></div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+
+      <div class="info-box warning">
+        <h4>⚠️ Double Protection</h4>
+        <p>Partner courses are protected by both client-side RBAC checks AND Firestore security rules. The UI is a convenience layer; real security is in the rules.</p>
+      </div>
+    </section>
+
+    <!-- Page Type Reference Table -->
+    <section class="section">
+      <h2>Page Type Reference</h2>
       <div class="table-container">
         <table>
           <thead>
@@ -82,267 +276,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>Marketing</strong></td>
-              <td>❌</td>
-              <td>❌</td>
-              <td><code>/index.html</code>, <code>/catalog/</code></td>
-            </tr>
-            <tr>
-              <td><strong>Auth</strong></td>
-              <td>❌</td>
-              <td>❌</td>
-              <td><code>/auth/login.html</code>, <code>/auth/register.html</code></td>
-            </tr>
-            <tr>
-              <td><strong>Blog</strong></td>
-              <td>❌</td>
-              <td>❌</td>
-              <td><code>/blog/article.html</code></td>
-            </tr>
-            <tr>
-              <td><strong>Course Detail</strong></td>
-              <td>❌</td>
-              <td>❌</td>
-              <td><code>/apprentice/</code>, <code>/junior/</code></td>
-            </tr>
-            <tr>
-              <td><strong>Dashboard</strong></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td><code>/dashboard/</code></td>
-            </tr>
-            <tr>
-              <td><strong>Lessons</strong></td>
-              <td>✅</td>
-              <td>✅</td>
-              <td><code>/apprentice/ch1-stone/</code></td>
-            </tr>
-            <tr>
-              <td><strong>Partner Course</strong></td>
-              <td>✅</td>
-              <td>✅ + RBAC</td>
-              <td><code>/endless-opportunities/week1/</code></td>
-            </tr>
-            <tr>
-              <td><strong>Admin</strong></td>
-              <td>✅</td>
-              <td>✅ + Admin Role</td>
-              <td><code>/admin/</code></td>
-            </tr>
+            <tr><td><strong>Marketing</strong></td><td>❌</td><td>❌</td><td><code>/index.html</code>, <code>/catalog/</code></td></tr>
+            <tr><td><strong>Auth</strong></td><td>❌</td><td>❌</td><td><code>/auth/login.html</code></td></tr>
+            <tr><td><strong>Dashboard</strong></td><td>✅</td><td>✅</td><td><code>/dashboard/</code></td></tr>
+            <tr><td><strong>Lessons</strong></td><td>✅</td><td>✅</td><td><code>/apprentice/ch1-stone/</code></td></tr>
+            <tr><td><strong>Partner Course</strong></td><td>✅</td><td>✅ + RBAC</td><td><code>/endless-opportunities/week1/</code></td></tr>
+            <tr><td><strong>Admin</strong></td><td>✅</td><td>✅ + Admin Role</td><td><code>/admin/</code></td></tr>
           </tbody>
         </table>
-      </div>
-    </section>
-
-    <!-- Marketing Page Architecture -->
-    <section class="section">
-      <h2>Marketing Pages</h2>
-      <p>Public-facing pages that work without authentication. Minimal JavaScript for enhanced navigation.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Marketing Page Loading Flow</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="marketing-flow" class="diagram-canvas small"></div>
-      </div>
-
-      <div class="info-box success">
-        <h4>✅ Fast Initial Load</h4>
-        <p>Marketing pages load instantly with static HTML. No Firebase initialization required for basic functionality.</p>
-      </div>
-    </section>
-
-    <!-- Auth Page Architecture -->
-    <section class="section">
-      <h2>Auth Pages</h2>
-      <p>Login, registration, and password reset pages. Initialize Firebase Auth but redirect if already logged in.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Auth Page Flow</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="auth-flow" class="diagram-canvas"></div>
-      </div>
-    </section>
-
-    <!-- Dashboard Architecture -->
-    <section class="section">
-      <h2>Dashboard</h2>
-      <p>Main user hub showing progress, analytics, and enrolled courses. Requires authentication and loads all services.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Dashboard Loading Sequence</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-layout="hierarchicalLR">Horizontal</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="dashboard-flow" class="diagram-canvas large"></div>
-        <div class="diagram-legend">
-          <div class="legend-item">
-            <div class="legend-dot" style="background: #42a5f5;"></div>
-            <span>UI Component</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot service"></div>
-            <span>Service</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot data"></div>
-            <span>Data Source</span>
-          </div>
-        </div>
-        <div class="diagram-instructions">
-          <span>🔍 Hover to see what data each component needs</span>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <h4>💡 Loading Screen Pattern</h4>
-        <p>Dashboard shows a loading screen while auth state is determined and data is fetched. Content is hidden until ready.</p>
-      </div>
-    </section>
-
-    <!-- Lesson Architecture -->
-    <section class="section">
-      <h2>Lesson Pages</h2>
-      <p>Interactive course content with progress tracking, quizzes, and activities. The most feature-rich page type.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Lesson Page Architecture</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="lesson-architecture" class="diagram-canvas large"></div>
-        <div class="diagram-legend">
-          <div class="legend-item">
-            <div class="legend-dot external"></div>
-            <span>User Interaction</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot service"></div>
-            <span>Service</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot data"></div>
-            <span>Data</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot" style="background: #42a5f5;"></div>
-            <span>UI Update</span>
-          </div>
-        </div>
-        <div class="diagram-instructions">
-          <span>🖱️ Drag to explore the lesson page data flow</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Partner Course Architecture -->
-    <section class="section">
-      <h2>Partner Courses</h2>
-      <p>Organization-specific courses with RBAC restrictions. Users must belong to the organization to access.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Partner Course Access Flow</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="partner-flow" class="diagram-canvas"></div>
-        <div class="diagram-legend">
-          <div class="legend-item">
-            <div class="legend-dot external"></div>
-            <span>Request</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot auth"></div>
-            <span>Auth Check</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot service"></div>
-            <span>RBAC Check</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot page"></div>
-            <span>Result</span>
-          </div>
-        </div>
-        <div class="diagram-instructions">
-          <span>🔍 Follow the access decision path</span>
-        </div>
-      </div>
-
-      <div class="info-box warning">
-        <h4>⚠️ Double Protection</h4>
-        <p>Partner courses are protected by both client-side RBAC checks AND Firestore security rules. The UI is a convenience layer; real security is in the rules.</p>
-      </div>
-    </section>
-
-    <!-- Admin Architecture -->
-    <section class="section">
-      <h2>Admin Pages</h2>
-      <p>Platform administration dashboard for user management, organization management, and course oversight. Requires admin role.</p>
-      
-      <div class="diagram-container">
-        <div class="diagram-header">
-          <span class="diagram-title">Admin Access Control Flow</span>
-          <div class="diagram-controls">
-            <button class="diagram-btn" data-action="fit">Fit</button>
-            <button class="diagram-btn" data-action="reset">Reset</button>
-            <button class="diagram-btn" data-action="export">Export PNG</button>
-          </div>
-        </div>
-        <div id="admin-flow" class="diagram-canvas"></div>
-        <div class="diagram-legend">
-          <div class="legend-item">
-            <div class="legend-dot external"></div>
-            <span>Request</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot auth"></div>
-            <span>Auth Check</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot service"></div>
-            <span>Role Check</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot page"></div>
-            <span>Result</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="info-box">
-        <h4>🛡️ Admin Capabilities</h4>
-        <ul style="margin: 0.5rem 0 0 1rem; color: var(--text-secondary);">
-          <li>View and edit all user profiles and roles</li>
-          <li>Grant/revoke organization access</li>
-          <li>View course enrollment statistics</li>
-          <li>Manage organizations</li>
-        </ul>
       </div>
     </section>
 
@@ -367,13 +308,10 @@
   <nav class="page-nav">
     <h4>On This Page</h4>
     <ul>
-      <li><a href="#page-hierarchy">Overview</a></li>
-      <li><a href="#marketing-flow">Marketing</a></li>
-      <li><a href="#auth-flow">Auth</a></li>
-      <li><a href="#dashboard-flow">Dashboard</a></li>
-      <li><a href="#lesson-architecture">Lessons</a></li>
-      <li><a href="#partner-flow">Partner</a></li>
-      <li><a href="#admin-flow">Admin</a></li>
+      <li><a href="#page-hierarchy-section">Overview</a></li>
+      <li><a href="#dashboard-flow-section">Dashboard</a></li>
+      <li><a href="#lesson-architecture-section">Lessons</a></li>
+      <li><a href="#partner-flow-section">Partner</a></li>
     </ul>
   </nav>
 
@@ -385,272 +323,117 @@
   <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
   <script src="shared/diagram-utils.js"></script>
+  <script src="shared/audio-engine.js"></script>
+  <script src="shared/storytelling-diagram.js"></script>
+  <script src="shared/quiz-system.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       DiagramUtils.initPageAnimations();
       DiagramUtils.setupBackToTop();
 
-      // ============================================
-      // DIAGRAM 1: Page Type Hierarchy
-      // ============================================
-      const hierarchyElements = [
-        // Root
-        { data: { id: 'all-pages', label: 'All Pages', type: 'service', description: 'SWE Hackers page types' } },
-        
-        // Public
-        { data: { id: 'public', label: 'Public Pages', type: 'data', description: 'No authentication required' } },
-        { data: { id: 'marketing', label: 'Marketing', type: 'data', description: 'Landing, catalog, pricing' } },
-        { data: { id: 'auth-pages', label: 'Auth Pages', type: 'data', description: 'Login, register, reset' } },
-        { data: { id: 'blog', label: 'Blog', type: 'data', description: 'Articles and tutorials' } },
-        { data: { id: 'course-detail', label: 'Course Detail', type: 'data', description: 'Course info pages' } },
-        
-        // Protected
-        { data: { id: 'protected', label: 'Protected Pages', type: 'auth', description: 'Authentication required' } },
-        { data: { id: 'dashboard', label: 'Dashboard', type: 'auth', description: 'User progress hub' } },
-        { data: { id: 'lessons', label: 'Lessons', type: 'auth', description: 'Course content' } },
-        
-        // RBAC Protected
-        { data: { id: 'rbac', label: 'RBAC Protected', type: 'external', description: 'Auth + role/org check' } },
-        { data: { id: 'partner', label: 'Partner Courses', type: 'external', description: 'Organization-specific' } },
-        { data: { id: 'admin', label: 'Admin Pages', type: 'external', description: 'Admin role required' } },
-        
-        // Edges
-        { data: { source: 'all-pages', target: 'public' } },
-        { data: { source: 'all-pages', target: 'protected' } },
-        { data: { source: 'all-pages', target: 'rbac' } },
-        { data: { source: 'public', target: 'marketing' } },
-        { data: { source: 'public', target: 'auth-pages' } },
-        { data: { source: 'public', target: 'blog' } },
-        { data: { source: 'public', target: 'course-detail' } },
-        { data: { source: 'protected', target: 'dashboard' } },
-        { data: { source: 'protected', target: 'lessons' } },
-        { data: { source: 'rbac', target: 'partner' } },
-        { data: { source: 'rbac', target: 'admin' } },
-      ];
+      const response = await fetch('audio/stories/02-page-types.json');
+      const pageData = await response.json();
+      const audioEngine = new AudioNarrationEngine('audio');
 
-      const cyHierarchy = DiagramUtils.createDiagram('page-hierarchy', hierarchyElements, {
-        layout: DiagramUtils.LAYOUTS.hierarchical
+      const diagramElements = {
+        'page-hierarchy': [
+          { data: { id: 'all-pages', label: 'All Pages', type: 'service', description: 'SWE Hackers page types' } },
+          { data: { id: 'public', label: 'Public Pages', type: 'data', description: 'No authentication required' } },
+          { data: { id: 'marketing', label: 'Marketing', type: 'data', description: 'Landing, catalog, pricing' } },
+          { data: { id: 'auth-pages', label: 'Auth Pages', type: 'data', description: 'Login, register, reset' } },
+          { data: { id: 'protected', label: 'Protected Pages', type: 'auth', description: 'Authentication required' } },
+          { data: { id: 'dashboard', label: 'Dashboard', type: 'auth', description: 'User progress hub' } },
+          { data: { id: 'lessons', label: 'Lessons', type: 'auth', description: 'Course content' } },
+          { data: { id: 'rbac', label: 'RBAC Protected', type: 'external', description: 'Auth + role/org check' } },
+          { data: { id: 'partner', label: 'Partner Courses', type: 'external', description: 'Organization-specific' } },
+          { data: { id: 'admin', label: 'Admin Pages', type: 'external', description: 'Admin role required' } },
+          { data: { source: 'all-pages', target: 'public' } },
+          { data: { source: 'all-pages', target: 'protected' } },
+          { data: { source: 'all-pages', target: 'rbac' } },
+          { data: { source: 'public', target: 'marketing' } },
+          { data: { source: 'public', target: 'auth-pages' } },
+          { data: { source: 'protected', target: 'dashboard' } },
+          { data: { source: 'protected', target: 'lessons' } },
+          { data: { source: 'rbac', target: 'partner' } },
+          { data: { source: 'rbac', target: 'admin' } },
+        ],
+        'dashboard-flow': [
+          { data: { id: 'request', label: 'Page Load', type: 'external', description: 'User visits dashboard' } },
+          { data: { id: 'loading', label: 'Show Loading', type: 'ui', description: 'Display loading screen' } },
+          { data: { id: 'init-services', label: 'Init Services', type: 'service', description: 'Firebase, Auth, Data' } },
+          { data: { id: 'auth-check', label: 'Auth Check', type: 'auth', description: 'Verify user signed in' } },
+          { data: { id: 'load-user', label: 'Load User', type: 'service', description: 'Get user profile' } },
+          { data: { id: 'load-analytics', label: 'Load Analytics', type: 'service', description: 'Calculate metrics' } },
+          { data: { id: 'stats-cards', label: 'Stats Cards', type: 'ui', description: 'Velocity, mastery, streak' } },
+          { data: { id: 'course-grid', label: 'Course Grid', type: 'ui', description: 'Enrolled courses' } },
+          { data: { source: 'request', target: 'loading' } },
+          { data: { source: 'loading', target: 'init-services' } },
+          { data: { source: 'init-services', target: 'auth-check' } },
+          { data: { source: 'auth-check', target: 'load-user' } },
+          { data: { source: 'auth-check', target: 'load-analytics' } },
+          { data: { source: 'load-analytics', target: 'stats-cards' } },
+          { data: { source: 'load-user', target: 'course-grid' } },
+        ],
+        'lesson-architecture': [
+          { data: { id: 'scroll', label: 'Scroll Event', type: 'external', description: 'User scrolls page' } },
+          { data: { id: 'quiz-click', label: 'Quiz Answer', type: 'external', description: 'User clicks quiz option' } },
+          { data: { id: 'progress-tracker', label: 'ProgressTracker', type: 'service', description: 'Section visibility tracking' } },
+          { data: { id: 'activity-tracker', label: 'ActivityTracker', type: 'service', description: 'Activity completion' } },
+          { data: { id: 'lesson-js', label: 'lesson.js', type: 'service', description: 'UI interactions' } },
+          { data: { id: 'lesson-integration', label: 'LessonIntegration', type: 'service', description: 'Orchestrates all services' } },
+          { data: { id: 'save-progress', label: 'Save Progress', type: 'data', description: 'Write to Firestore' } },
+          { data: { id: 'progress-bar', label: 'Progress Bar', type: 'ui', description: 'Update progress' } },
+          { data: { id: 'completion', label: 'Completion Toast', type: 'ui', description: 'Show lesson complete' } },
+          { data: { source: 'scroll', target: 'progress-tracker' } },
+          { data: { source: 'quiz-click', target: 'lesson-js' } },
+          { data: { source: 'lesson-js', target: 'activity-tracker' } },
+          { data: { source: 'progress-tracker', target: 'save-progress', type: 'data' } },
+          { data: { source: 'progress-tracker', target: 'progress-bar' } },
+          { data: { source: 'progress-tracker', target: 'completion' } },
+          { data: { source: 'lesson-integration', target: 'progress-tracker' } },
+          { data: { source: 'lesson-integration', target: 'activity-tracker' } },
+        ],
+        'partner-flow': [
+          { data: { id: 'request', label: 'Page Request', type: 'external', description: 'User visits partner course' } },
+          { data: { id: 'auth-check', label: 'Auth Check', type: 'auth', description: 'Is user signed in?' } },
+          { data: { id: 'load-perms', label: 'Load Permissions', type: 'service', description: 'Get user RBAC data' } },
+          { data: { id: 'org-check', label: 'Org Check', type: 'service', description: 'User in required org?' } },
+          { data: { id: 'course-check', label: 'Course Access', type: 'service', description: 'Can access this course?' } },
+          { data: { id: 'allowed', label: 'Render Lesson', type: 'page', description: 'Show course content' } },
+          { data: { id: 'no-auth', label: 'Redirect Login', type: 'external', description: 'Not authenticated' } },
+          { data: { source: 'request', target: 'auth-check' } },
+          { data: { source: 'auth-check', target: 'load-perms' } },
+          { data: { source: 'auth-check', target: 'no-auth', type: 'optional' } },
+          { data: { source: 'load-perms', target: 'org-check' } },
+          { data: { source: 'org-check', target: 'course-check' } },
+          { data: { source: 'course-check', target: 'allowed' } },
+        ]
+      };
+
+      const storyToContainer = {
+        'page-hierarchy-story': 'page-hierarchy',
+        'dashboard-flow-story': 'dashboard-flow',
+        'lesson-architecture-story': 'lesson-architecture',
+        'partner-flow-story': 'partner-flow'
+      };
+
+      pageData.stories.forEach(story => {
+        const containerId = storyToContainer[story.id];
+        if (!containerId || !diagramElements[containerId]) return;
+        new StorytellingDiagram(`${containerId}-story`, diagramElements[containerId], story.steps, { audioEngine, storyId: story.id });
       });
-      DiagramUtils.setupDiagramControls(cyHierarchy, 'page-hierarchy');
 
-      // ============================================
-      // DIAGRAM 2: Marketing Flow
-      // ============================================
-      const marketingElements = [
-        { data: { id: 'request', label: 'HTTP Request', type: 'external', description: 'User visits URL' } },
-        { data: { id: 'html', label: 'Static HTML', type: 'page', description: 'Pre-rendered HTML served' } },
-        { data: { id: 'css', label: 'marketing.css', type: 'page', description: 'Styles loaded' } },
-        { data: { id: 'navbar', label: 'navbar.js', type: 'service', description: 'Navigation enhancement' } },
-        { data: { id: 'render', label: 'Page Rendered', type: 'data', description: 'Fully interactive' } },
-        
-        { data: { source: 'request', target: 'html' } },
-        { data: { source: 'html', target: 'css' } },
-        { data: { source: 'css', target: 'navbar' } },
-        { data: { source: 'navbar', target: 'render' } },
-      ];
+      const storyToQuizContainer = {
+        'page-hierarchy-story': 'page-hierarchy-quiz',
+        'lesson-architecture-story': 'lesson-architecture-quiz',
+        'partner-flow-story': 'partner-flow-quiz'
+      };
 
-      const cyMarketing = DiagramUtils.createDiagram('marketing-flow', marketingElements, {
-        layout: DiagramUtils.LAYOUTS.hierarchicalLR
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuizContainer[quiz.storyId];
+        if (!containerId) return;
+        new Quiz(containerId, quiz.questions);
       });
-      DiagramUtils.setupDiagramControls(cyMarketing, 'marketing-flow');
-
-      // ============================================
-      // DIAGRAM 3: Auth Flow
-      // ============================================
-      const authElements = [
-        { data: { id: 'request', label: 'Page Load', type: 'external', description: 'User visits auth page' } },
-        { data: { id: 'firebase-init', label: 'Firebase Init', type: 'config', description: 'Initialize SDK' } },
-        { data: { id: 'auth-init', label: 'AuthService Init', type: 'auth', description: 'Setup state listener' } },
-        { data: { id: 'check-state', label: 'Check Auth State', type: 'auth', description: 'Already logged in?' } },
-        { data: { id: 'redirect', label: 'Redirect Dashboard', type: 'page', description: 'User already authenticated' } },
-        { data: { id: 'show-form', label: 'Show Auth Form', type: 'page', description: 'Display login/register' } },
-        { data: { id: 'submit', label: 'Form Submit', type: 'external', description: 'User submits credentials' } },
-        { data: { id: 'firebase-auth', label: 'Firebase Auth', type: 'data', description: 'Authenticate with Firebase' } },
-        { data: { id: 'create-doc', label: 'Create User Doc', type: 'data', description: 'First-time user setup' } },
-        { data: { id: 'success', label: 'Auth Success', type: 'data', description: 'Redirect to dashboard' } },
-        
-        { data: { source: 'request', target: 'firebase-init' } },
-        { data: { source: 'firebase-init', target: 'auth-init' } },
-        { data: { source: 'auth-init', target: 'check-state' } },
-        { data: { source: 'check-state', target: 'redirect', type: 'auth' } },
-        { data: { source: 'check-state', target: 'show-form' } },
-        { data: { source: 'show-form', target: 'submit' } },
-        { data: { source: 'submit', target: 'firebase-auth' } },
-        { data: { source: 'firebase-auth', target: 'create-doc', type: 'data' } },
-        { data: { source: 'firebase-auth', target: 'success' } },
-      ];
-
-      const cyAuth = DiagramUtils.createDiagram('auth-flow', authElements, {
-        layout: DiagramUtils.LAYOUTS.hierarchical
-      });
-      DiagramUtils.setupDiagramControls(cyAuth, 'auth-flow');
-
-      // ============================================
-      // DIAGRAM 4: Dashboard Flow
-      // ============================================
-      const dashboardElements = [
-        // Loading phase
-        { data: { id: 'request', label: 'Page Load', type: 'external', description: 'User visits dashboard' } },
-        { data: { id: 'loading', label: 'Show Loading', type: 'ui', description: 'Display loading screen' } },
-        { data: { id: 'init-services', label: 'Init Services', type: 'service', description: 'Firebase, Auth, Data' } },
-        { data: { id: 'auth-check', label: 'Auth Check', type: 'auth', description: 'Verify user signed in' } },
-        
-        // Data loading
-        { data: { id: 'load-user', label: 'Load User', type: 'service', description: 'Get user profile' } },
-        { data: { id: 'load-courses', label: 'Load Courses', type: 'service', description: 'Get enrolled courses' } },
-        { data: { id: 'load-analytics', label: 'Load Analytics', type: 'service', description: 'Calculate metrics' } },
-        
-        // Data sources
-        { data: { id: 'user-doc', label: 'users/{uid}', type: 'data', description: 'User profile document' } },
-        { data: { id: 'progress-col', label: 'courseProgress', type: 'data', description: 'Progress subcollection' } },
-        { data: { id: 'activity-col', label: 'activityAttempts', type: 'data', description: 'Activity data' } },
-        
-        // UI components
-        { data: { id: 'sidebar', label: 'Sidebar', type: 'ui', description: 'Navigation sidebar' } },
-        { data: { id: 'stats-cards', label: 'Stats Cards', type: 'ui', description: 'Velocity, mastery, streak' } },
-        { data: { id: 'course-grid', label: 'Course Grid', type: 'ui', description: 'Enrolled courses cards' } },
-        { data: { id: 'activity-feed', label: 'Activity Feed', type: 'ui', description: 'Recent activity' } },
-        
-        // Edges - Loading
-        { data: { source: 'request', target: 'loading' } },
-        { data: { source: 'loading', target: 'init-services' } },
-        { data: { source: 'init-services', target: 'auth-check' } },
-        
-        // Edges - Data loading
-        { data: { source: 'auth-check', target: 'load-user' } },
-        { data: { source: 'auth-check', target: 'load-courses' } },
-        { data: { source: 'auth-check', target: 'load-analytics' } },
-        
-        // Edges - Data sources
-        { data: { source: 'load-user', target: 'user-doc', type: 'data' } },
-        { data: { source: 'load-courses', target: 'progress-col', type: 'data' } },
-        { data: { source: 'load-analytics', target: 'activity-col', type: 'data' } },
-        
-        // Edges - UI rendering
-        { data: { source: 'load-user', target: 'sidebar' } },
-        { data: { source: 'load-analytics', target: 'stats-cards' } },
-        { data: { source: 'load-courses', target: 'course-grid' } },
-        { data: { source: 'load-analytics', target: 'activity-feed' } },
-      ];
-
-      const cyDashboard = DiagramUtils.createDiagram('dashboard-flow', dashboardElements, {
-        layout: {
-          name: 'dagre',
-          rankDir: 'TB',
-          nodeSep: 40,
-          rankSep: 60,
-          padding: 20
-        }
-      });
-      DiagramUtils.setupDiagramControls(cyDashboard, 'dashboard-flow');
-
-      // ============================================
-      // DIAGRAM 5: Lesson Architecture
-      // ============================================
-      const lessonElements = [
-        // User interactions
-        { data: { id: 'scroll', label: 'Scroll Event', type: 'external', description: 'User scrolls page' } },
-        { data: { id: 'quiz-click', label: 'Quiz Answer', type: 'external', description: 'User clicks quiz option' } },
-        { data: { id: 'drag-drop', label: 'Drag & Drop', type: 'external', description: 'User completes drag activity' } },
-        
-        // Services
-        { data: { id: 'progress-tracker', label: 'ProgressTracker', type: 'service', description: 'Section visibility tracking' } },
-        { data: { id: 'activity-tracker', label: 'ActivityTracker', type: 'service', description: 'Activity completion tracking' } },
-        { data: { id: 'lesson-js', label: 'lesson.js', type: 'service', description: 'UI interactions and animations' } },
-        { data: { id: 'lesson-integration', label: 'LessonIntegration', type: 'service', description: 'Orchestrates all services' } },
-        
-        // Data operations
-        { data: { id: 'save-progress', label: 'Save Progress', type: 'data', description: 'Write to Firestore' } },
-        { data: { id: 'save-attempt', label: 'Save Attempt', type: 'data', description: 'Record activity result' } },
-        { data: { id: 'cache', label: 'LocalStorage', type: 'data', description: 'Offline cache' } },
-        
-        // UI updates
-        { data: { id: 'progress-bar', label: 'Progress Bar', type: 'ui', description: 'Update progress indicator' } },
-        { data: { id: 'quiz-feedback', label: 'Quiz Feedback', type: 'ui', description: 'Show correct/incorrect' } },
-        { data: { id: 'completion', label: 'Completion Toast', type: 'ui', description: 'Show lesson complete' } },
-        
-        // Edges
-        { data: { source: 'scroll', target: 'progress-tracker' } },
-        { data: { source: 'quiz-click', target: 'lesson-js' } },
-        { data: { source: 'drag-drop', target: 'lesson-js' } },
-        { data: { source: 'lesson-js', target: 'activity-tracker' } },
-        { data: { source: 'progress-tracker', target: 'save-progress', type: 'data' } },
-        { data: { source: 'activity-tracker', target: 'save-attempt', type: 'data' } },
-        { data: { source: 'activity-tracker', target: 'cache', type: 'data' } },
-        { data: { source: 'progress-tracker', target: 'progress-bar' } },
-        { data: { source: 'lesson-js', target: 'quiz-feedback' } },
-        { data: { source: 'progress-tracker', target: 'completion' } },
-        { data: { source: 'lesson-integration', target: 'progress-tracker' } },
-        { data: { source: 'lesson-integration', target: 'activity-tracker' } },
-        { data: { source: 'lesson-integration', target: 'lesson-js' } },
-      ];
-
-      const cyLesson = DiagramUtils.createDiagram('lesson-architecture', lessonElements, {
-        layout: {
-          name: 'cose',
-          padding: 40,
-          nodeRepulsion: 6000,
-          idealEdgeLength: 80,
-          animate: false
-        }
-      });
-      DiagramUtils.setupDiagramControls(cyLesson, 'lesson-architecture');
-
-      // ============================================
-      // DIAGRAM 6: Partner Course Flow
-      // ============================================
-      const partnerElements = [
-        { data: { id: 'request', label: 'Page Request', type: 'external', description: 'User visits partner course' } },
-        { data: { id: 'auth-check', label: 'Auth Check', type: 'auth', description: 'Is user signed in?' } },
-        { data: { id: 'no-auth', label: 'Redirect Login', type: 'external', description: 'Not authenticated' } },
-        { data: { id: 'load-perms', label: 'Load Permissions', type: 'service', description: 'Get user RBAC data' } },
-        { data: { id: 'org-check', label: 'Org Check', type: 'service', description: 'User in required org?' } },
-        { data: { id: 'no-org', label: 'Access Denied', type: 'external', description: 'Not in organization' } },
-        { data: { id: 'course-check', label: 'Course Access', type: 'service', description: 'Can access this course?' } },
-        { data: { id: 'no-course', label: 'Upgrade Required', type: 'page', description: 'Need course access' } },
-        { data: { id: 'allowed', label: 'Render Lesson', type: 'page', description: 'Show course content' } },
-        
-        { data: { source: 'request', target: 'auth-check' } },
-        { data: { source: 'auth-check', target: 'no-auth', type: 'optional' } },
-        { data: { source: 'auth-check', target: 'load-perms' } },
-        { data: { source: 'load-perms', target: 'org-check' } },
-        { data: { source: 'org-check', target: 'no-org', type: 'optional' } },
-        { data: { source: 'org-check', target: 'course-check' } },
-        { data: { source: 'course-check', target: 'no-course', type: 'optional' } },
-        { data: { source: 'course-check', target: 'allowed' } },
-      ];
-
-      const cyPartner = DiagramUtils.createDiagram('partner-flow', partnerElements, {
-        layout: DiagramUtils.LAYOUTS.hierarchical
-      });
-      DiagramUtils.setupDiagramControls(cyPartner, 'partner-flow');
-
-      // ============================================
-      // DIAGRAM 7: Admin Access Flow
-      // ============================================
-      const adminElements = [
-        { data: { id: 'request', label: 'Admin Page Request', type: 'external', description: 'User visits /admin/' } },
-        { data: { id: 'auth-check', label: 'Auth Check', type: 'auth', description: 'Is user signed in?' } },
-        { data: { id: 'no-auth', label: 'Redirect Login', type: 'external', description: 'Not authenticated' } },
-        { data: { id: 'load-perms', label: 'Load Permissions', type: 'service', description: 'Get user RBAC data' } },
-        { data: { id: 'role-check', label: 'Admin Role?', type: 'service', description: 'Check role === admin' } },
-        { data: { id: 'super-check', label: 'Super Admin?', type: 'service', description: 'Check email whitelist' } },
-        { data: { id: 'access-denied', label: 'Access Denied', type: 'external', description: 'Redirect to dashboard' } },
-        { data: { id: 'admin-dash', label: 'Admin Dashboard', type: 'page', description: 'Full admin access' } },
-        
-        { data: { source: 'request', target: 'auth-check' } },
-        { data: { source: 'auth-check', target: 'no-auth', type: 'optional' } },
-        { data: { source: 'auth-check', target: 'load-perms' } },
-        { data: { source: 'load-perms', target: 'role-check' } },
-        { data: { source: 'role-check', target: 'super-check' } },
-        { data: { source: 'role-check', target: 'access-denied', type: 'optional' } },
-        { data: { source: 'super-check', target: 'admin-dash' } },
-      ];
-
-      const cyAdmin = DiagramUtils.createDiagram('admin-flow', adminElements, {
-        layout: DiagramUtils.LAYOUTS.hierarchical
-      });
-      DiagramUtils.setupDiagramControls(cyAdmin, 'admin-flow');
     });
   </script>
 </body>

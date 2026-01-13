@@ -1,0 +1,110 @@
+{
+  "storyId": "entity-relations-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Activity Entity. Activities are interactive elements within lessons. Quizzes test knowledge, drag-drops build mental models, code challenges apply skills.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "entity",
+      "start": 0.6399999856948853,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Activities",
+      "start": 2.180000066757202,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "are",
+      "start": 2.3399999141693115,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "interactive",
+      "start": 2.740000009536743,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "elements",
+      "start": 3.299999952316284,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "within",
+      "start": 3.8399999141693115,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "lessons",
+      "start": 4.380000114440918,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "Quizzes",
+      "start": 5.659999847412109,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "test",
+      "start": 5.920000076293945,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "knowledge",
+      "start": 6.360000133514404,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "Drag",
+      "start": 7.579999923706055,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "drops",
+      "start": 7.760000228881836,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "build",
+      "start": 8.140000343322754,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "mental",
+      "start": 8.819999694824219,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "models",
+      "start": 9.300000190734863,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "Code",
+      "start": 10.539999961853027,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "challenges",
+      "start": 10.680000305175781,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "apply",
+      "start": 11.260000228881836,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "skills",
+      "start": 12.0600004196167,
+      "end": 12.479999542236328
+    }
+  ]
+}

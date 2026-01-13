@@ -1,0 +1,110 @@
+{
+  "storyId": "org-access-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Alice: Standard User. Meet Alice, a standard user. She can access all public courses—Apprentice and beyond. No organization membership.",
+  "duration": 12.210000038146973,
+  "words": [
+    {
+      "word": "Alice",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "Standard",
+      "start": 1.059999942779541,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "User",
+      "start": 1.2999999523162842,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "Meet",
+      "start": 1.7200000286102295,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "Alice",
+      "start": 2.4800000190734863,
+      "end": 3
+    },
+    {
+      "word": "a",
+      "start": 3.4000000953674316,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "Standard",
+      "start": 3.759999990463257,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "User",
+      "start": 4.199999809265137,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "She",
+      "start": 5.260000228881836,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "can",
+      "start": 5.260000228881836,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "access",
+      "start": 5.559999942779541,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "all",
+      "start": 6.019999980926514,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "public",
+      "start": 6.559999942779541,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "courses",
+      "start": 6.980000019073486,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "Apprentice",
+      "start": 8.0600004196167,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "and",
+      "start": 8.600000381469727,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "beyond",
+      "start": 9.15999984741211,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "No",
+      "start": 10.260000228881836,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "organization",
+      "start": 10.5600004196167,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "membership",
+      "start": 11.4399995803833,
+      "end": 11.859999656677246
+    }
+  ]
+}

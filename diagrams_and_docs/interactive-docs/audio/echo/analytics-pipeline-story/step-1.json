@@ -1,0 +1,130 @@
+{
+  "storyId": "analytics-pipeline-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Activity Data Input. Quiz attempts and scores feed into the pipeline separately. This measures how well users understand the material, not just consumption.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "Data",
+      "start": 0.5600000023841858,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Input",
+      "start": 0.9800000190734863,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "–",
+      "start": 1.399999976158142,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "quiz",
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "attempts",
+      "start": 2.180000066757202,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "and",
+      "start": 2.4600000381469727,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "scores",
+      "start": 2.7799999713897705,
+      "end": 3
+    },
+    {
+      "word": "feed",
+      "start": 3,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "into",
+      "start": 3.4200000762939453,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "the",
+      "start": 3.619999885559082,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "pipeline",
+      "start": 3.819999933242798,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "separately",
+      "start": 4.260000228881836,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "This",
+      "start": 5.860000133514404,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "measures",
+      "start": 6.059999942779541,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "how",
+      "start": 6.619999885559082,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "well",
+      "start": 6.900000095367432,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "users",
+      "start": 7.400000095367432,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "understand",
+      "start": 7.739999771118164,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "the",
+      "start": 8.420000076293945,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "material",
+      "start": 9.079999923706055,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "not",
+      "start": 9.520000457763672,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "just",
+      "start": 9.65999984741211,
+      "end": 10
+    },
+    {
+      "word": "consumption",
+      "start": 10,
+      "end": 10.380000114440918
+    }
+  ]
+}

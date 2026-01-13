@@ -1,0 +1,90 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Scroll Events. As users scroll, browser events fire. These scroll events trigger the progress tracking system.",
+  "duration": 10.600000381469727,
+  "words": [
+    {
+      "word": "Scroll",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "events",
+      "start": 0.699999988079071,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "As",
+      "start": 2.319999933242798,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "users",
+      "start": 2.4000000953674316,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "scroll",
+      "start": 2.880000114440918,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "browser",
+      "start": 4.059999942779541,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "events",
+      "start": 4.21999979019165,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "fire",
+      "start": 4.699999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "These",
+      "start": 6.260000228881836,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "scroll",
+      "start": 6.619999885559082,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "events",
+      "start": 6.940000057220459,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "trigger",
+      "start": 7.340000152587891,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 8.079999923706055,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "progress",
+      "start": 8.640000343322754,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "tracking",
+      "start": 9.199999809265137,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "system",
+      "start": 9.699999809265137,
+      "end": 10.180000305175781
+    }
+  ]
+}

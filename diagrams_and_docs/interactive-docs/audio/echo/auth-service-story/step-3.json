@@ -1,0 +1,135 @@
+{
+  "storyId": "auth-service-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "loginWithGoogle() Method. loginWithGoogle opens the OAuth popup. One click and users are authenticated with their Google account. Fast and secure!",
+  "duration": 11.010000228881836,
+  "words": [
+    {
+      "word": "Login",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "with",
+      "start": 0.46000000834465027,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Google",
+      "start": 0.7400000095367432,
+      "end": 1
+    },
+    {
+      "word": "method",
+      "start": 1,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "Login",
+      "start": 1.6799999475479126,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "with",
+      "start": 2.380000114440918,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "Google",
+      "start": 2.7200000286102295,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "opens",
+      "start": 2.859999895095825,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "the",
+      "start": 3.4000000953674316,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "OAuth",
+      "start": 3.7200000286102295,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "pop",
+      "start": 4.099999904632568,
+      "end": 4.5
+    },
+    {
+      "word": "up",
+      "start": 4.5,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "One",
+      "start": 5.360000133514404,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "click",
+      "start": 5.679999828338623,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "and",
+      "start": 5.940000057220459,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "users",
+      "start": 6.300000190734863,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "are",
+      "start": 6.559999942779541,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "authenticated",
+      "start": 6.880000114440918,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "with",
+      "start": 7.539999961853027,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "their",
+      "start": 7.980000019073486,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "Google",
+      "start": 8.199999809265137,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "account",
+      "start": 8.479999542236328,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "Fast",
+      "start": 9.899999618530273,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "and",
+      "start": 9.9399995803833,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "secure",
+      "start": 10.359999656677246,
+      "end": 10.739999771118164
+    }
+  ]
+}

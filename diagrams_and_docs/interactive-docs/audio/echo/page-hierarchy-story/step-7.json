@@ -1,0 +1,95 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "RBAC Protected Category. RBAC pages add role and organization checks on top of authentication. Extra security layers!",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "word": "RBAC",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Protected",
+      "start": 0.41999998688697815,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "category",
+      "start": 0.9800000190734863,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "RBAC",
+      "start": 2.0799999237060547,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "pages",
+      "start": 2.319999933242798,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "add",
+      "start": 2.680000066757202,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "role",
+      "start": 3.059999942779541,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "and",
+      "start": 3.319999933242798,
+      "end": 3.5
+    },
+    {
+      "word": "organization",
+      "start": 3.5,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "checks",
+      "start": 4.079999923706055,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "on",
+      "start": 4.480000019073486,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "top",
+      "start": 4.880000114440918,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "of",
+      "start": 5.139999866485596,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "authentication",
+      "start": 5.480000019073486,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "Extra",
+      "start": 6.619999885559082,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "security",
+      "start": 6.800000190734863,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "layers",
+      "start": 7.28000020980835,
+      "end": 7.599999904632568
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "storyId": "role-hierarchy-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Standard User. Standard users form the base. Public courses, personal dashboard, progress tracking. Everything needed for self-paced learning!",
+  "duration": 13.100000381469727,
+  "words": [
+    {
+      "word": "Standard",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "user",
+      "start": 0.6800000071525574,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "Standard",
+      "start": 2.740000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "users",
+      "start": 2.740000009536743,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "form",
+      "start": 3.119999885559082,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "the",
+      "start": 3.5199999809265137,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "base",
+      "start": 4.119999885559082,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "Public",
+      "start": 5.539999961853027,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "courses",
+      "start": 5.539999961853027,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "personal",
+      "start": 7.099999904632568,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "dashboard",
+      "start": 7.119999885559082,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "progress",
+      "start": 8.739999771118164,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "tracking",
+      "start": 8.739999771118164,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "Everything",
+      "start": 10.300000190734863,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "needed",
+      "start": 10.65999984741211,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "for",
+      "start": 11.079999923706055,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "self",
+      "start": 11.680000305175781,
+      "end": 12
+    },
+    {
+      "word": "paced",
+      "start": 12,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "learning",
+      "start": 12.380000114440918,
+      "end": 12.800000190734863
+    }
+  ]
+}

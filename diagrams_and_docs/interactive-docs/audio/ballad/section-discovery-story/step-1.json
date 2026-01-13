@@ -1,0 +1,100 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Tracker Initializes. ProgressTracker.init kicks off the discovery process. Time to find all trackable sections on the page!",
+  "duration": 12,
+  "words": [
+    {
+      "word": "Tracker",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "initializes",
+      "start": 0.46000000834465027,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "ProgressTracker",
+      "start": 2.5999999046325684,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "init",
+      "start": 3.240000009536743,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "kicks",
+      "start": 4.340000152587891,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "off",
+      "start": 5.139999866485596,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "the",
+      "start": 5.400000095367432,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "discovery",
+      "start": 5.71999979019165,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "process",
+      "start": 6.159999847412109,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "Time",
+      "start": 7.78000020980835,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "to",
+      "start": 7.800000190734863,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "find",
+      "start": 8.34000015258789,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "all",
+      "start": 8.479999542236328,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "trackable",
+      "start": 9.100000381469727,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "sections",
+      "start": 9.5600004196167,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "on",
+      "start": 9.920000076293945,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 10.579999923706055,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "page",
+      "start": 10.760000228881836,
+      "end": 11.140000343322754
+    }
+  ]
+}

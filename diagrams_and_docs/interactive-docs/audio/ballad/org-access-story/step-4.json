@@ -1,0 +1,110 @@
+{
+  "storyId": "org-access-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Admin: Full Access. The admin can access everything! Public courses, all partner courses, every piece of content. Ultimate override authority!",
+  "duration": 11.15999984741211,
+  "words": [
+    {
+      "word": "Admin",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "fire",
+      "start": 0.8600000143051147,
+      "end": 1
+    },
+    {
+      "word": "access",
+      "start": 1,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "the",
+      "start": 1.840000033378601,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "admin",
+      "start": 1.940000057220459,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "can",
+      "start": 2.200000047683716,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "access",
+      "start": 2.4800000190734863,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "everything",
+      "start": 2.799999952316284,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "public",
+      "start": 4.059999942779541,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "courses",
+      "start": 4.340000152587891,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "all",
+      "start": 5.440000057220459,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "partner",
+      "start": 5.659999847412109,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "courses",
+      "start": 6.039999961853027,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "every",
+      "start": 7.119999885559082,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "piece",
+      "start": 7.260000228881836,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "of",
+      "start": 7.539999961853027,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "content",
+      "start": 8.34000015258789,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "ultimate",
+      "start": 9.039999961853027,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "override",
+      "start": 9.4399995803833,
+      "end": 10.100000381469727
+    },
+    {
+      "word": "authority",
+      "start": 10.100000381469727,
+      "end": 10.699999809265137
+    }
+  ]
+}

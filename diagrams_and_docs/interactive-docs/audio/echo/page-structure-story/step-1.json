@@ -1,0 +1,90 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partnerships Folder. The partnerships folder contains all portal pages. A logical grouping within the admin area.",
+  "duration": 8.300000190734863,
+  "words": [
+    {
+      "word": "Partnerships",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "folder",
+      "start": 0.6399999856948853,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "The",
+      "start": 1.600000023841858,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "Partnerships",
+      "start": 1.8200000524520874,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "folder",
+      "start": 2.4000000953674316,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "contains",
+      "start": 2.819999933242798,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "all",
+      "start": 3.380000114440918,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "portal",
+      "start": 3.9600000381469727,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "pages",
+      "start": 4.28000020980835,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "a",
+      "start": 5.159999847412109,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "logical",
+      "start": 5.539999961853027,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "grouping",
+      "start": 5.880000114440918,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "within",
+      "start": 6.300000190734863,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 6.760000228881836,
+      "end": 7
+    },
+    {
+      "word": "admin",
+      "start": 7,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "area",
+      "start": 7.300000190734863,
+      "end": 7.699999809265137
+    }
+  ]
+}

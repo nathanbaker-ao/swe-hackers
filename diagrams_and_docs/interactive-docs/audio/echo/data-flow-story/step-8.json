@@ -1,0 +1,125 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-8",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "LocalStorage Cache. Some data is cached in LocalStorage for offline access and faster loading. This reduces database reads and improves performance!",
+  "duration": 10.960000038146973,
+  "words": [
+    {
+      "word": "Local",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "Storage",
+      "start": 0.5,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Cache",
+      "start": 0.7799999713897705,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "Some",
+      "start": 1.1799999475479126,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "data",
+      "start": 1.940000057220459,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "is",
+      "start": 2.200000047683716,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "cached",
+      "start": 2.940000057220459,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "in",
+      "start": 2.940000057220459,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "local",
+      "start": 3.2799999713897705,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "storage",
+      "start": 3.619999885559082,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "for",
+      "start": 3.9200000762939453,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "offline",
+      "start": 4.239999771118164,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "access",
+      "start": 4.800000190734863,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "and",
+      "start": 5.360000133514404,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "faster",
+      "start": 5.900000095367432,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "loading",
+      "start": 6.260000228881836,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "This",
+      "start": 7.340000152587891,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "reduces",
+      "start": 7.460000038146973,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "database",
+      "start": 8.15999984741211,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "reads",
+      "start": 8.720000267028809,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "and",
+      "start": 9.079999923706055,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "improves",
+      "start": 9.479999542236328,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "performance",
+      "start": 9.899999618530273,
+      "end": 10.539999961853027
+    }
+  ]
+}

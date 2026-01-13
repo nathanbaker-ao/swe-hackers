@@ -1,0 +1,105 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Firebase SDK. Services communicate with Firebase through the client-side SDK. It handles authentication tokens and database connections automatically.",
+  "duration": 10.84000015258789,
+  "words": [
+    {
+      "word": "Firebase",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "SDK",
+      "start": 0.699999988079071,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "Services",
+      "start": 1.600000023841858,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "communicate",
+      "start": 2.5199999809265137,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "with",
+      "start": 3.0399999618530273,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "Firebase",
+      "start": 3.4000000953674316,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "through",
+      "start": 3.700000047683716,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 4.079999923706055,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "client",
+      "start": 4.28000020980835,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "side",
+      "start": 4.659999847412109,
+      "end": 5
+    },
+    {
+      "word": "SDK",
+      "start": 5,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "It",
+      "start": 6.380000114440918,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "handles",
+      "start": 6.400000095367432,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "authentication",
+      "start": 6.679999828338623,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "tokens",
+      "start": 7.519999980926514,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "and",
+      "start": 7.980000019073486,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "database",
+      "start": 8.600000381469727,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "connections",
+      "start": 9.0600004196167,
+      "end": 9.579999923706055
+    },
+    {
+      "word": "automatically",
+      "start": 9.579999923706055,
+      "end": 10.380000114440918
+    }
+  ]
+}

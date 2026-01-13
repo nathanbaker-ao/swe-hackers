@@ -1,0 +1,130 @@
+{
+  "storyId": "design-tokens-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "CSS Custom Properties. All design tokens live in the root selector as CSS custom properties. One source of truth for the entire design system!",
+  "duration": 13.800000190734863,
+  "words": [
+    {
+      "word": "CSS",
+      "start": 0,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "custom",
+      "start": 0.8199999928474426,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "properties",
+      "start": 1.4800000190734863,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "All",
+      "start": 3.0399999618530273,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "design",
+      "start": 3.200000047683716,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "tokens",
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "live",
+      "start": 4.139999866485596,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "in",
+      "start": 4.739999771118164,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "the",
+      "start": 4.900000095367432,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "root",
+      "start": 5.139999866485596,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "selector",
+      "start": 5.400000095367432,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "as",
+      "start": 6.159999847412109,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "CSS",
+      "start": 6.579999923706055,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "custom",
+      "start": 7.159999847412109,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "properties",
+      "start": 7.980000019073486,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "One",
+      "start": 9.760000228881836,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "source",
+      "start": 9.9399995803833,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "of",
+      "start": 10.300000190734863,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "truth",
+      "start": 10.84000015258789,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "for",
+      "start": 10.859999656677246,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "the",
+      "start": 11.300000190734863,
+      "end": 11.600000381469727
+    },
+    {
+      "word": "entire",
+      "start": 11.600000381469727,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "design",
+      "start": 12.100000381469727,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "system",
+      "start": 12.880000114440918,
+      "end": 13.359999656677246
+    }
+  ]
+}

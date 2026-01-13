@@ -1,0 +1,100 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Daily Challenges. dailyChallenges tracks completed challenges by date. This powers the streak calculation and daily engagement metrics.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "word": "Scaly",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Challenges",
+      "start": 0.41999998688697815,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Daily",
+      "start": 2.059999942779541,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "Challenges",
+      "start": 2.0799999237060547,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "tracks",
+      "start": 2.559999942779541,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "completed",
+      "start": 2.9800000190734863,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "challenges",
+      "start": 3.700000047683716,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "by",
+      "start": 4.139999866485596,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "date",
+      "start": 4.579999923706055,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "This",
+      "start": 5.820000171661377,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "powers",
+      "start": 5.820000171661377,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "the",
+      "start": 6.340000152587891,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "streak",
+      "start": 6.760000228881836,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "calculation",
+      "start": 7.039999961853027,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "and",
+      "start": 7.739999771118164,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "daily",
+      "start": 8.460000038146973,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "engagement",
+      "start": 8.859999656677246,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "metrics",
+      "start": 9.520000457763672,
+      "end": 10.039999961853027
+    }
+  ]
+}

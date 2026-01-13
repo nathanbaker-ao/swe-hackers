@@ -1,0 +1,90 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Lesson Pages. Lesson pages are where the actual learning happens. Interactive content, quizzes, and progress tracking.",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "pages",
+      "start": 0.5,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "Lesson",
+      "start": 1.6399999856948853,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "pages",
+      "start": 1.7200000286102295,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "are",
+      "start": 1.899999976158142,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "where",
+      "start": 2.240000009536743,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "the",
+      "start": 2.380000114440918,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "actual",
+      "start": 2.640000104904175,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "learning",
+      "start": 3.200000047683716,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "happens",
+      "start": 3.5199999809265137,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "interactive",
+      "start": 4.539999961853027,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "content",
+      "start": 4.920000076293945,
+      "end": 5.5
+    },
+    {
+      "word": "quizzes",
+      "start": 6.320000171661377,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "and",
+      "start": 6.739999771118164,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "progress",
+      "start": 7.079999923706055,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "tracking",
+      "start": 7.400000095367432,
+      "end": 7.800000190734863
+    }
+  ]
+}

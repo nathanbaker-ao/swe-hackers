@@ -1,0 +1,100 @@
+{
+  "storyId": "status-flow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Prospect Status. New partners start as prospects. Discovery calls, evaluating fit, understanding their needs. Building the relationship foundation.",
+  "duration": 11.010000228881836,
+  "words": [
+    {
+      "word": "Prospects",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "status",
+      "start": 0.8399999737739563,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "New",
+      "start": 1.7799999713897705,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "partners",
+      "start": 1.8799999952316284,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "start",
+      "start": 2.200000047683716,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "as",
+      "start": 2.5999999046325684,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "prospects",
+      "start": 2.859999895095825,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "Discovery",
+      "start": 4.420000076293945,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "calls",
+      "start": 4.420000076293945,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "Evaluating",
+      "start": 5.5,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "fit",
+      "start": 5.739999771118164,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "Understanding",
+      "start": 7.139999866485596,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "their",
+      "start": 7.139999866485596,
+      "end": 7.5
+    },
+    {
+      "word": "needs",
+      "start": 7.5,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "Building",
+      "start": 8.699999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "the",
+      "start": 8.699999809265137,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "relationship",
+      "start": 9.100000381469727,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "foundation",
+      "start": 9.720000267028809,
+      "end": 10.319999694824219
+    }
+  ]
+}

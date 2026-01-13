@@ -1,0 +1,95 @@
+{
+  "storyId": "offline-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "LocalStorage Backup. The queue persists in LocalStorage. Even if the browser closes, queued attempts survive.",
+  "duration": 8.520000457763672,
+  "words": [
+    {
+      "word": "Local",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "storage",
+      "start": 0.5799999833106995,
+      "end": 1
+    },
+    {
+      "word": "backup",
+      "start": 1,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "The",
+      "start": 2,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "queue",
+      "start": 2.2200000286102295,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "persists",
+      "start": 2.380000114440918,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "in",
+      "start": 2.9200000762939453,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "local",
+      "start": 3.3399999141693115,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "storage",
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "Even",
+      "start": 4.739999771118164,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "if",
+      "start": 4.880000114440918,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "the",
+      "start": 5.059999942779541,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "browser",
+      "start": 5.300000190734863,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "closes",
+      "start": 5.539999961853027,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "queued",
+      "start": 6.840000152587891,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "attempts",
+      "start": 6.960000038146973,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "survive",
+      "start": 7.480000019073486,
+      "end": 8.239999771118164
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Courses Collection. The courses collection stores course metadata. This is optional—mainly used for admin features and catalog displays.",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Courses",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "Collection",
+      "start": 0.7200000286102295,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "The",
+      "start": 1.340000033378601,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "Courses",
+      "start": 2.180000066757202,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "Collection",
+      "start": 2.5999999046325684,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "stores",
+      "start": 2.9600000381469727,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "course",
+      "start": 3.4800000190734863,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "metadata",
+      "start": 3.9600000381469727,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "This",
+      "start": 5.199999809265137,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "is",
+      "start": 5.260000228881836,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "optional",
+      "start": 5.539999961853027,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "mainly",
+      "start": 6.699999809265137,
+      "end": 7
+    },
+    {
+      "word": "used",
+      "start": 7,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "for",
+      "start": 7.420000076293945,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "admin",
+      "start": 7.960000038146973,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "features",
+      "start": 8.34000015258789,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "and",
+      "start": 8.84000015258789,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "catalog",
+      "start": 9.4399995803833,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "displays",
+      "start": 9.859999656677246,
+      "end": 10.5
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "storyId": "system-context-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Lesson Pages. Lesson pages are where the magic happens. These interactive course content pages include quizzes, drag-drop activities, and progress tracking.",
+  "duration": 11.65999984741211,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "pages",
+      "start": 0.5400000214576721,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "Lesson",
+      "start": 1.6799999475479126,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "pages",
+      "start": 1.7400000095367432,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "are",
+      "start": 1.940000057220459,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "where",
+      "start": 2.299999952316284,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "the",
+      "start": 2.4800000190734863,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "magic",
+      "start": 3.0199999809265137,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "happens",
+      "start": 3.0199999809265137,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "These",
+      "start": 4.059999942779541,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "interactive",
+      "start": 4.199999809265137,
+      "end": 5
+    },
+    {
+      "word": "course",
+      "start": 5,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "content",
+      "start": 5.480000019073486,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "pages",
+      "start": 5.980000019073486,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "include",
+      "start": 6.380000114440918,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "quizzes",
+      "start": 6.900000095367432,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "drag",
+      "start": 8.300000190734863,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "drop",
+      "start": 8.979999542236328,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "activities",
+      "start": 8.979999542236328,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "and",
+      "start": 9.739999771118164,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "progress",
+      "start": 10.300000190734863,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "tracking",
+      "start": 10.800000190734863,
+      "end": 11.260000228881836
+    }
+  ]
+}

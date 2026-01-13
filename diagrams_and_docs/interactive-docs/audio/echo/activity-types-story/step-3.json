@@ -1,0 +1,95 @@
+{
+  "storyId": "activity-types-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Code Challenges. Code challenges have data-solution attributes. User code is compared against expected output for validation.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "word": "Code",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "challenges",
+      "start": 0.41999998688697815,
+      "end": 1
+    },
+    {
+      "word": "Code",
+      "start": 1,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "challenges",
+      "start": 1.9800000190734863,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "have",
+      "start": 2.380000114440918,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "data",
+      "start": 2.7799999713897705,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "solution",
+      "start": 3.259999990463257,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "attributes",
+      "start": 3.7799999713897705,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "User",
+      "start": 5.539999961853027,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "code",
+      "start": 5.679999828338623,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "is",
+      "start": 6.019999980926514,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "compared",
+      "start": 6.360000133514404,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "against",
+      "start": 6.639999866485596,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "expected",
+      "start": 7.079999923706055,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "output",
+      "start": 7.860000133514404,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "for",
+      "start": 8.420000076293945,
+      "end": 9
+    },
+    {
+      "word": "validation",
+      "start": 9,
+      "end": 9.520000457763672
+    }
+  ]
+}

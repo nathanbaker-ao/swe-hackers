@@ -1,0 +1,105 @@
+{
+  "storyId": "breakpoints-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Large Screens. Above 1280 pixels, we add max-width containers. Content doesn't stretch infinitely—readable line lengths are maintained.",
+  "duration": 14.0600004196167,
+  "words": [
+    {
+      "word": "Large",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "screens",
+      "start": 0.5,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "Above",
+      "start": 1.940000057220459,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "1280",
+      "start": 1.940000057220459,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "pixels",
+      "start": 3.7799999713897705,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "we",
+      "start": 4.820000171661377,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "had",
+      "start": 4.960000038146973,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "max",
+      "start": 5.400000095367432,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "width",
+      "start": 6.019999980926514,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "containers",
+      "start": 6.400000095367432,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "Content",
+      "start": 8.260000228881836,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "doesn't",
+      "start": 8.260000228881836,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "stretch",
+      "start": 8.84000015258789,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "infinitely",
+      "start": 9.279999732971191,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "Readable",
+      "start": 10.880000114440918,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "line",
+      "start": 11.119999885559082,
+      "end": 11.5
+    },
+    {
+      "word": "lengths",
+      "start": 11.5,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "are",
+      "start": 11.699999809265137,
+      "end": 12.319999694824219
+    },
+    {
+      "word": "maintained",
+      "start": 12.319999694824219,
+      "end": 12.739999771118164
+    }
+  ]
+}

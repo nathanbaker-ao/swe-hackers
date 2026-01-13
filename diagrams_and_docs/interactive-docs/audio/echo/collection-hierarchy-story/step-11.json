@@ -1,0 +1,100 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-11",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Attempt Document. Individual attempt documents record each interaction—timestamp, answer given, whether it was correct, and score earned.",
+  "duration": 9.760000228881836,
+  "words": [
+    {
+      "word": "Attempt",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "Document",
+      "start": 0.5400000214576721,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Individual",
+      "start": 1.4800000190734863,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "attempt",
+      "start": 2.319999933242798,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "documents",
+      "start": 2.7200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "record",
+      "start": 3.2200000286102295,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "each",
+      "start": 3.680000066757202,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "interaction",
+      "start": 4.059999942779541,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "timestamp",
+      "start": 5.260000228881836,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "answer",
+      "start": 6.380000114440918,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "given",
+      "start": 6.380000114440918,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "whether",
+      "start": 7.159999847412109,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "it",
+      "start": 7.28000020980835,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "was",
+      "start": 7.440000057220459,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "correct",
+      "start": 7.699999809265137,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "and",
+      "start": 8.380000114440918,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "score",
+      "start": 8.720000267028809,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "earned",
+      "start": 8.9399995803833,
+      "end": 9.380000114440918
+    }
+  ]
+}

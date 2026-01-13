@@ -1,0 +1,110 @@
+{
+  "storyId": "auth-architecture-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The User. Every authentication journey starts with a user. They want to log in, access their progress, and continue learning.",
+  "duration": 10.319999694824219,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.36000001430511475
+    },
+    {
+      "word": "user",
+      "start": 0.36000001430511475,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Every",
+      "start": 1.7200000286102295,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "authentication",
+      "start": 1.9600000381469727,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "journey",
+      "start": 2.7799999713897705,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "starts",
+      "start": 3.319999933242798,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "with",
+      "start": 3.7799999713897705,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "a",
+      "start": 3.9800000190734863,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "user",
+      "start": 4.519999980926514,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "They",
+      "start": 5.179999828338623,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "want",
+      "start": 5.300000190734863,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "to",
+      "start": 5.559999942779541,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "log",
+      "start": 5.960000038146973,
+      "end": 6
+    },
+    {
+      "word": "in",
+      "start": 6,
+      "end": 6.5
+    },
+    {
+      "word": "access",
+      "start": 7.019999980926514,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "their",
+      "start": 7.019999980926514,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "progress",
+      "start": 7.340000152587891,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "and",
+      "start": 7.820000171661377,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "continue",
+      "start": 8.4399995803833,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "learning",
+      "start": 9.140000343322754,
+      "end": 9.539999961853027
+    }
+  ]
+}

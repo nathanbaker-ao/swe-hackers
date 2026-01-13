@@ -1,0 +1,95 @@
+{
+  "storyId": "progress-flow-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Subcollection Write. First write goes to the lessonProgress subcollection. Detailed data—viewed sections, timestamps, completion status.",
+  "duration": 10.84000015258789,
+  "words": [
+    {
+      "word": "Subcollection",
+      "start": 0,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Right",
+      "start": 0.9800000190734863,
+      "end": 1.5
+    },
+    {
+      "word": "First",
+      "start": 1.7799999713897705,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "right",
+      "start": 2.740000009536743,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "goes",
+      "start": 2.9800000190734863,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "to",
+      "start": 3.440000057220459,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "the",
+      "start": 3.640000104904175,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "Lesson",
+      "start": 3.819999933242798,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "Progress",
+      "start": 4.239999771118164,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "subcollection",
+      "start": 4.739999771118164,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "Detailed",
+      "start": 6.400000095367432,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "Data",
+      "start": 6.659999847412109,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "Viewed",
+      "start": 7.079999923706055,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "Sections",
+      "start": 7.900000095367432,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "Timestamps",
+      "start": 8.260000228881836,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "Completion",
+      "start": 9.0600004196167,
+      "end": 10
+    },
+    {
+      "word": "Status",
+      "start": 10,
+      "end": 10.420000076293945
+    }
+  ]
+}

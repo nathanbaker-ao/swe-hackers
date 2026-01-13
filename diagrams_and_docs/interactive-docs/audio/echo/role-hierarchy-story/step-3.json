@@ -1,0 +1,120 @@
+{
+  "storyId": "role-hierarchy-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Public Course Access. Standard users can access all public courses. Apprentice, Junior, Senior—the full curriculum is open to everyone who registers.",
+  "duration": 12.859999656677246,
+  "words": [
+    {
+      "word": "public",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "course",
+      "start": 0.47999998927116394,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "access",
+      "start": 0.8399999737739563,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "Standard",
+      "start": 2.4200000762939453,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "users",
+      "start": 2.440000057220459,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "can",
+      "start": 2.880000114440918,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "access",
+      "start": 3.259999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "all",
+      "start": 3.5399999618530273,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "public",
+      "start": 4.179999828338623,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "courses",
+      "start": 4.599999904632568,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "Apprentice",
+      "start": 6.039999961853027,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "Junior",
+      "start": 7,
+      "end": 7
+    },
+    {
+      "word": "Senior",
+      "start": 7.559999942779541,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "The",
+      "start": 8.300000190734863,
+      "end": 8.5
+    },
+    {
+      "word": "full",
+      "start": 8.5,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "curriculum",
+      "start": 8.899999618530273,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "is",
+      "start": 9.319999694824219,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "open",
+      "start": 9.84000015258789,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "to",
+      "start": 10.140000343322754,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "everyone",
+      "start": 10.699999809265137,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "who",
+      "start": 11.0600004196167,
+      "end": 11.460000038146973
+    },
+    {
+      "word": "registers",
+      "start": 11.460000038146973,
+      "end": 11.760000228881836
+    }
+  ]
+}

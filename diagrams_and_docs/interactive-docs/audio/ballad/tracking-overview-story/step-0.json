@@ -1,0 +1,95 @@
+{
+  "storyId": "tracking-overview-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "User Actions Begin. Progress tracking starts with user actions. Scrolling through content, answering quizzes, completing drag-drop activities.",
+  "duration": 12.119999885559082,
+  "words": [
+    {
+      "word": "User",
+      "start": 0,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "Actions",
+      "start": 0.7599999904632568,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "begin",
+      "start": 1.2799999713897705,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "Progress",
+      "start": 3.240000009536743,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "Tracking",
+      "start": 3.240000009536743,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "starts",
+      "start": 3.5999999046325684,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "with",
+      "start": 4.039999961853027,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "User",
+      "start": 4.400000095367432,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "Actions",
+      "start": 4.71999979019165,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "Scrolling",
+      "start": 6.579999923706055,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "through",
+      "start": 6.579999923706055,
+      "end": 7
+    },
+    {
+      "word": "content",
+      "start": 7,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "answering",
+      "start": 8.460000038146973,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "quizzes",
+      "start": 8.479999542236328,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "completing",
+      "start": 10.239999771118164,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "DreadDrop",
+      "start": 10.260000228881836,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "activities",
+      "start": 10.920000076293945,
+      "end": 11.600000381469727
+    }
+  ]
+}

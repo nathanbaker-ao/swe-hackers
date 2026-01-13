@@ -1,0 +1,115 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Wait for Auth. waitForAuthState returns a promise. It resolves when Firebase Auth confirms the user's session status. Patient waiting!",
+  "duration": 10.100000381469727,
+  "words": [
+    {
+      "word": "Wait",
+      "start": 0,
+      "end": 0.36000001430511475
+    },
+    {
+      "word": "for",
+      "start": 0.36000001430511475,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "Auth",
+      "start": 0.6000000238418579,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Wait",
+      "start": 0.8799999952316284,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "for",
+      "start": 1.6200000047683716,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "AuthState",
+      "start": 1.8600000143051147,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "returns",
+      "start": 2.359999895095825,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "a",
+      "start": 2.740000009536743,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "promise",
+      "start": 3.359999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "It",
+      "start": 4.039999961853027,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "resolves",
+      "start": 4.059999942779541,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "when",
+      "start": 4.639999866485596,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "Firebase",
+      "start": 4.980000019073486,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "Auth",
+      "start": 5.559999942779541,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "confirms",
+      "start": 5.960000038146973,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "the",
+      "start": 6.639999866485596,
+      "end": 7
+    },
+    {
+      "word": "user's",
+      "start": 7,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "session",
+      "start": 7.619999885559082,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "status",
+      "start": 7.920000076293945,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "Patient",
+      "start": 9.020000457763672,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "waiting",
+      "start": 9.279999732971191,
+      "end": 9.5600004196167
+    }
+  ]
+}

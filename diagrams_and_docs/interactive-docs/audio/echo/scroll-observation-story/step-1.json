@@ -1,0 +1,100 @@
+{
+  "storyId": "scroll-observation-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Observer Monitors. IntersectionObserver watches visibility changes. Unlike scroll events, it only fires when thresholds are crossed. Efficient!",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Observer",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "monitors",
+      "start": 0.6399999856948853,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Intersection",
+      "start": 2.0399999618530273,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "Observer",
+      "start": 2.380000114440918,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "watches",
+      "start": 2.759999990463257,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "visibility",
+      "start": 3.319999933242798,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "changes",
+      "start": 4.039999961853027,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "Unlike",
+      "start": 5.380000114440918,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "scroll",
+      "start": 5.420000076293945,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "events",
+      "start": 5.860000133514404,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "it",
+      "start": 6.699999809265137,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "only",
+      "start": 6.699999809265137,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "fires",
+      "start": 7.300000190734863,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "when",
+      "start": 7.579999923706055,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "thresholds",
+      "start": 8.020000457763672,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "are",
+      "start": 8.720000267028809,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "crossed",
+      "start": 8.979999542236328,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "Efficient",
+      "start": 10.239999771118164,
+      "end": 10.319999694824219
+    }
+  ]
+}

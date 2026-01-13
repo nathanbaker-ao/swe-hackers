@@ -1,0 +1,95 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-8",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Progress Calculation. Course progress percentages come from the lessons summary field. Quick reads, no deep queries needed.",
+  "duration": 8.949999809265137,
+  "words": [
+    {
+      "word": "Progress",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "calculation",
+      "start": 0.5600000023841858,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Course",
+      "start": 2.0999999046325684,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "progress",
+      "start": 2.2200000286102295,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "percentages",
+      "start": 2.700000047683716,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "come",
+      "start": 3.259999990463257,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "from",
+      "start": 3.7799999713897705,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "the",
+      "start": 3.9800000190734863,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "Lessons",
+      "start": 4.320000171661377,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "Summary",
+      "start": 4.619999885559082,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "field",
+      "start": 5.039999961853027,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "Quick",
+      "start": 6.159999847412109,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "Reads",
+      "start": 6.239999771118164,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "No",
+      "start": 7.239999771118164,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "deep",
+      "start": 7.420000076293945,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "queries",
+      "start": 7.760000228881836,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "needed",
+      "start": 8.140000343322754,
+      "end": 8.520000457763672
+    }
+  ]
+}

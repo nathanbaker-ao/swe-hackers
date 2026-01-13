@@ -1,0 +1,85 @@
+{
+  "storyId": "analytics-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Trend Calculation. Calculations reveal insights. Growth rates, completion percentages, revenue trends—metrics that drive decisions.",
+  "duration": 12.640000343322754,
+  "words": [
+    {
+      "word": "Trend",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "calculation",
+      "start": 0.5600000023841858,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "Calculations",
+      "start": 2.440000057220459,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "reveal",
+      "start": 2.859999895095825,
+      "end": 3.5
+    },
+    {
+      "word": "insights",
+      "start": 3.5,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "growth",
+      "start": 5.300000190734863,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "rates",
+      "start": 5.360000133514404,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "completion",
+      "start": 6.559999942779541,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "percentages",
+      "start": 6.559999942779541,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "revenue",
+      "start": 8.180000305175781,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "trends",
+      "start": 8.180000305175781,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "metrics",
+      "start": 9.800000190734863,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "that",
+      "start": 9.800000190734863,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "drive",
+      "start": 10.359999656677246,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "decisions",
+      "start": 10.800000190734863,
+      "end": 11.5
+    }
+  ]
+}

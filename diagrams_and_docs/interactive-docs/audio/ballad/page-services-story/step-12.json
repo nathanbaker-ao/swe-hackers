@@ -1,0 +1,115 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-12",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Blog Pages. Blog pages are mostly public but can have some interactive features. They load navbar and the blog-specific service.",
+  "duration": 9.960000038146973,
+  "words": [
+    {
+      "word": "Blog",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "pages",
+      "start": 0.4399999976158142,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Blog",
+      "start": 1.9600000381469727,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "pages",
+      "start": 1.9600000381469727,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "are",
+      "start": 2.2200000286102295,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "mostly",
+      "start": 2.5999999046325684,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "public",
+      "start": 3.0399999618530273,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "but",
+      "start": 3.4800000190734863,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "can",
+      "start": 3.940000057220459,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "have",
+      "start": 4.260000228881836,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "some",
+      "start": 4.480000019073486,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "interactive",
+      "start": 4.880000114440918,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "features",
+      "start": 5.440000057220459,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "They",
+      "start": 6.460000038146973,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "load",
+      "start": 6.599999904632568,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "NuvBar",
+      "start": 6.860000133514404,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "and",
+      "start": 7.320000171661377,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 7.760000228881836,
+      "end": 8
+    },
+    {
+      "word": "blog",
+      "start": 8,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "specific",
+      "start": 8.319999694824219,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "service",
+      "start": 8.84000015258789,
+      "end": 9.420000076293945
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "storyId": "completion-flow-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Mark Complete. markLessonComplete sets the completion flag. This is a one-time operation per lesson.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "word": "Mock",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "complete",
+      "start": 0.41999998688697815,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Mock",
+      "start": 1.8200000524520874,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "lesson",
+      "start": 1.8200000524520874,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "complete",
+      "start": 2.1600000858306885,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "sets",
+      "start": 2.700000047683716,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "the",
+      "start": 3.319999933242798,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "completion",
+      "start": 3.6600000858306885,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "flag",
+      "start": 4.059999942779541,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "This",
+      "start": 5.039999961853027,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "is",
+      "start": 5.139999866485596,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "a",
+      "start": 5.300000190734863,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "one",
+      "start": 5.539999961853027,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "time",
+      "start": 5.760000228881836,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "operation",
+      "start": 6.059999942779541,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "per",
+      "start": 6.71999979019165,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "lesson",
+      "start": 7.300000190734863,
+      "end": 7.559999942779541
+    }
+  ]
+}

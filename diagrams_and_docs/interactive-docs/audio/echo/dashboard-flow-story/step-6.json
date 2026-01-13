@@ -1,0 +1,105 @@
+{
+  "storyId": "dashboard-flow-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Stats Cards Render. Analytics flow to the stats cards. Velocity, mastery, and streak scores render with animated progress indicators.",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "word": "Stats",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "cards",
+      "start": 0.5600000023841858,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "render",
+      "start": 0.8799999952316284,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "Analytics",
+      "start": 2.4800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "flow",
+      "start": 2.4800000190734863,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "to",
+      "start": 2.9000000953674316,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "the",
+      "start": 3.140000104904175,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "stats",
+      "start": 3.4000000953674316,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "cards",
+      "start": 3.640000104904175,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "Velocity",
+      "start": 4.760000228881836,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "mastery",
+      "start": 6.119999885559082,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "and",
+      "start": 6.340000152587891,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "streak",
+      "start": 6.679999828338623,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "scores",
+      "start": 6.920000076293945,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "render",
+      "start": 7.320000171661377,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "with",
+      "start": 7.760000228881836,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "animated",
+      "start": 8.260000228881836,
+      "end": 8.779999732971191
+    },
+    {
+      "word": "progress",
+      "start": 8.779999732971191,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "indicators",
+      "start": 9.399999618530273,
+      "end": 9.960000038146973
+    }
+  ]
+}

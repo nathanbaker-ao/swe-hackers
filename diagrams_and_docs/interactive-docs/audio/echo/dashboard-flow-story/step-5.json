@@ -1,0 +1,95 @@
+{
+  "storyId": "dashboard-flow-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Load Analytics. Simultaneously, we calculate learning metrics—velocity, mastery, streak, cognitive score. All computed from progress data.",
+  "duration": 10.920000076293945,
+  "words": [
+    {
+      "word": "load",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "analytics",
+      "start": 0.7799999713897705,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "Simultaneously",
+      "start": 2.119999885559082,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "we",
+      "start": 3.140000104904175,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "calculate",
+      "start": 3.3399999141693115,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "learning",
+      "start": 3.7200000286102295,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "metrics",
+      "start": 4.179999828338623,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "velocity",
+      "start": 5.559999942779541,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "mastery",
+      "start": 6.340000152587891,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "streak",
+      "start": 7.059999942779541,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "cognitive",
+      "start": 7.840000152587891,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "score",
+      "start": 7.880000114440918,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "all",
+      "start": 8.720000267028809,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "computed",
+      "start": 9.119999885559082,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "from",
+      "start": 9.479999542236328,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "progress",
+      "start": 9.880000114440918,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "data",
+      "start": 10.359999656677246,
+      "end": 10.720000267028809
+    }
+  ]
+}

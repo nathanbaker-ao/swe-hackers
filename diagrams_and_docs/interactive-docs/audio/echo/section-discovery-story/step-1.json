@@ -1,0 +1,100 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Tracker Initializes. ProgressTracker.init kicks off the discovery process. Time to find all trackable sections on the page!",
+  "duration": 10.40999984741211,
+  "words": [
+    {
+      "word": "Tracker",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "initializes",
+      "start": 0.46000000834465027,
+      "end": 1.5
+    },
+    {
+      "word": "ProgressTracker",
+      "start": 2.2200000286102295,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "init",
+      "start": 2.940000057220459,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "kicks",
+      "start": 3.680000066757202,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "off",
+      "start": 4.300000190734863,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 4.579999923706055,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "discovery",
+      "start": 4.880000114440918,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "process",
+      "start": 5.239999771118164,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "Time",
+      "start": 6.739999771118164,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "to",
+      "start": 6.820000171661377,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "find",
+      "start": 7.28000020980835,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "all",
+      "start": 7.360000133514404,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "trackable",
+      "start": 8.0600004196167,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "sections",
+      "start": 8.579999923706055,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "on",
+      "start": 8.9399995803833,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "the",
+      "start": 9.479999542236328,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "page",
+      "start": 9.680000305175781,
+      "end": 10.079999923706055
+    }
+  ]
+}

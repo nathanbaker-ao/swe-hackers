@@ -1,0 +1,115 @@
+{
+  "storyId": "completion-flow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "90% Threshold. Progress hits 90 percent! This is the magic threshold—the lesson is essentially complete when this milestone is reached.",
+  "duration": 10.649999618530273,
+  "words": [
+    {
+      "word": "90",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "",
+      "start": 0.5,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "threshold",
+      "start": 0.8799999952316284,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Progress",
+      "start": 2.4800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "hits",
+      "start": 2.4800000190734863,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "90",
+      "start": 2.740000009536743,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "This",
+      "start": 3.8399999141693115,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "is",
+      "start": 4.380000114440918,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "the",
+      "start": 4.599999904632568,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "magic",
+      "start": 4.880000114440918,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "threshold",
+      "start": 5.199999809265137,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "The",
+      "start": 6.340000152587891,
+      "end": 6.5
+    },
+    {
+      "word": "lesson",
+      "start": 6.5,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "is",
+      "start": 6.71999979019165,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "essentially",
+      "start": 7.019999980926514,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "complete",
+      "start": 7.579999923706055,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "when",
+      "start": 8.199999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "this",
+      "start": 8.699999809265137,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "milestone",
+      "start": 9.039999961853027,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "is",
+      "start": 9.539999961853027,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "reached",
+      "start": 9.979999542236328,
+      "end": 10.300000190734863
+    }
+  ]
+}

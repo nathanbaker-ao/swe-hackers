@@ -1,0 +1,85 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Activity Attempts Data. Mastery reads from activityAttempts. Each attempt's score contributes to the average.",
+  "duration": 8.199999809265137,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "attempts",
+      "start": 0.6600000262260437,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "data",
+      "start": 0.9800000190734863,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "Mastery",
+      "start": 2.319999933242798,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "reads",
+      "start": 2.6600000858306885,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "from",
+      "start": 3.0999999046325684,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "activity",
+      "start": 3.4000000953674316,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "attempts",
+      "start": 3.859999895095825,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "Each",
+      "start": 5.119999885559082,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "attempt",
+      "start": 5.239999771118164,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "score",
+      "start": 5.639999866485596,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "contributes",
+      "start": 6.139999866485596,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "to",
+      "start": 6.760000228881836,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "the",
+      "start": 7.139999866485596,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "average",
+      "start": 7.360000133514404,
+      "end": 7.659999847412109
+    }
+  ]
+}

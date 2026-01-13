@@ -1,0 +1,85 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partner Detail. partner.html shows individual partner details. Timeline, attachments, courses, metrics—the complete picture.",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.3799999952316284
+    },
+    {
+      "word": "detail",
+      "start": 0.3799999952316284,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "Partner",
+      "start": 1.7999999523162842,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "html",
+      "start": 1.7999999523162842,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "shows",
+      "start": 2.799999952316284,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "individual",
+      "start": 3.440000057220459,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "partner",
+      "start": 4.099999904632568,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "details",
+      "start": 4.579999923706055,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "timeline",
+      "start": 6.059999942779541,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "attachments",
+      "start": 7.059999942779541,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "courses",
+      "start": 7.920000076293945,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "metrics",
+      "start": 8.479999542236328,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 9.180000305175781,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "complete",
+      "start": 9.359999656677246,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "picture",
+      "start": 9.819999694824219,
+      "end": 10.140000343322754
+    }
+  ]
+}

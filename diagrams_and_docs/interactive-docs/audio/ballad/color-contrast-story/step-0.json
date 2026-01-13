@@ -1,0 +1,105 @@
+{
+  "storyId": "color-contrast-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Primary Background. bg-primary is the darkest background at hash 0a0a0f. Nearly black, it provides maximum contrast for text.",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "Primary",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "background",
+      "start": 0.6000000238418579,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "BG",
+      "start": 2.0399999618530273,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "Primary",
+      "start": 2.3399999141693115,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "is",
+      "start": 2.7799999713897705,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "the",
+      "start": 3.259999990463257,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "darkest",
+      "start": 3.559999942779541,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "background",
+      "start": 3.9600000381469727,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "at",
+      "start": 4.480000019073486,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "hash",
+      "start": 6.199999809265137,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "0A0AF",
+      "start": 7.159999847412109,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "nearly",
+      "start": 8.65999984741211,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "black",
+      "start": 8.880000114440918,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "It",
+      "start": 10,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "provides",
+      "start": 10.140000343322754,
+      "end": 10.619999885559082
+    },
+    {
+      "word": "maximum",
+      "start": 10.619999885559082,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "contrast",
+      "start": 11.399999618530273,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "for",
+      "start": 12.020000457763672,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "text",
+      "start": 12.399999618530273,
+      "end": 12.680000305175781
+    }
+  ]
+}

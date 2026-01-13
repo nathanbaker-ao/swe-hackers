@@ -1,0 +1,95 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Sections Array. All discovered sections are stored in an array. This becomes the denominator for progress calculation.",
+  "duration": 10.359999656677246,
+  "words": [
+    {
+      "word": "Sections",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "array",
+      "start": 0.6800000071525574,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "All",
+      "start": 2.180000066757202,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "discovered",
+      "start": 2.359999895095825,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "sections",
+      "start": 2.7799999713897705,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "are",
+      "start": 3.2200000286102295,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "stored",
+      "start": 3.880000114440918,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "in",
+      "start": 4.099999904632568,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "an",
+      "start": 4.400000095367432,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "array",
+      "start": 4.880000114440918,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "This",
+      "start": 5.840000152587891,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "becomes",
+      "start": 6.059999942779541,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "the",
+      "start": 6.480000019073486,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "denominator",
+      "start": 6.960000038146973,
+      "end": 7.5
+    },
+    {
+      "word": "for",
+      "start": 7.5,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "progress",
+      "start": 8.380000114440918,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "calculation",
+      "start": 8.960000038146973,
+      "end": 9.600000381469727
+    }
+  ]
+}

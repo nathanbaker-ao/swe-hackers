@@ -1,0 +1,130 @@
+{
+  "storyId": "design-tokens-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "CSS Custom Properties. All design tokens live in the root selector as CSS custom properties. One source of truth for the entire design system!",
+  "duration": 11.0600004196167,
+  "words": [
+    {
+      "word": "CSS",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Custom",
+      "start": 0.7400000095367432,
+      "end": 1.2599999904632568
+    },
+    {
+      "word": "Properties",
+      "start": 1.2599999904632568,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "All",
+      "start": 1.8600000143051147,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "design",
+      "start": 2.5799999237060547,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "tokens",
+      "start": 3.0199999809265137,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "live",
+      "start": 3.3399999141693115,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "in",
+      "start": 3.619999885559082,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "the",
+      "start": 3.740000009536743,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "root",
+      "start": 4.019999980926514,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "selector",
+      "start": 4.139999866485596,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "as",
+      "start": 4.619999885559082,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "CSS",
+      "start": 5.159999847412109,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "Custom",
+      "start": 5.760000228881836,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "Properties",
+      "start": 6.340000152587891,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "One",
+      "start": 7.800000190734863,
+      "end": 8
+    },
+    {
+      "word": "source",
+      "start": 8,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "of",
+      "start": 8.260000228881836,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "truth",
+      "start": 8.739999771118164,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "for",
+      "start": 8.739999771118164,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "the",
+      "start": 9.180000305175781,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "entire",
+      "start": 9.319999694824219,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "design",
+      "start": 9.859999656677246,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "system",
+      "start": 10.380000114440918,
+      "end": 10.720000267028809
+    }
+  ]
+}

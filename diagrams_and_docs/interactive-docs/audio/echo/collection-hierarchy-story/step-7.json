@@ -1,0 +1,85 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Course Document. Each course progress document contains summary data plus nested subcollections for detailed tracking.",
+  "duration": 10,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "Document",
+      "start": 0.5600000023841858,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Each",
+      "start": 1.159999966621399,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "course",
+      "start": 2.319999933242798,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "progress",
+      "start": 2.740000009536743,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "document",
+      "start": 3.2200000286102295,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "contains",
+      "start": 3.680000066757202,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "summary",
+      "start": 4.360000133514404,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "data",
+      "start": 5.039999961853027,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "plus",
+      "start": 5.519999980926514,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "nested",
+      "start": 6.159999847412109,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "subcollections",
+      "start": 6.880000114440918,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "for",
+      "start": 7.659999847412109,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "detailed",
+      "start": 8.220000267028809,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "tracking",
+      "start": 8.800000190734863,
+      "end": 9.4399995803833
+    }
+  ]
+}

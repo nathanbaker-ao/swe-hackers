@@ -1,0 +1,100 @@
+{
+  "storyId": "css-mapping-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Lesson Styles. lesson.css is the richest file. Content sections, code blocks, quizzes, drag-drop zones, progress indicators!",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "styles",
+      "start": 0.6600000262260437,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "Lesson",
+      "start": 2.700000047683716,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "css",
+      "start": 2.819999933242798,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "is",
+      "start": 3.619999885559082,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "the",
+      "start": 4.28000020980835,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "richest",
+      "start": 4.599999904632568,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "file",
+      "start": 4.980000019073486,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "Content",
+      "start": 6.619999885559082,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "sections",
+      "start": 6.639999866485596,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "code",
+      "start": 7.900000095367432,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "blocks",
+      "start": 8.020000457763672,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "quizzes",
+      "start": 9.239999771118164,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "drag",
+      "start": 10.079999923706055,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "drop",
+      "start": 10.15999984741211,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "zones",
+      "start": 10.479999542236328,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "progress",
+      "start": 11.920000076293945,
+      "end": 12
+    },
+    {
+      "word": "indicators",
+      "start": 12,
+      "end": 12.65999984741211
+    }
+  ]
+}

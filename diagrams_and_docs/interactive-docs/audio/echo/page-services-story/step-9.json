@@ -1,0 +1,105 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-9",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "progress-tracker.js. progress-tracker.js uses IntersectionObserver to track what sections you've scrolled past. It auto-saves your reading progress!",
+  "duration": 11.0600004196167,
+  "words": [
+    {
+      "word": "ProgressTracker",
+      "start": 0,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "js",
+      "start": 0.8600000143051147,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "ProgressTracker",
+      "start": 2.559999942779541,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "js",
+      "start": 3.059999942779541,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "uses",
+      "start": 3.799999952316284,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "IntersectionObserver",
+      "start": 4.380000114440918,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "to",
+      "start": 5.380000114440918,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "track",
+      "start": 5.960000038146973,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "what",
+      "start": 6.28000020980835,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "sections",
+      "start": 6.71999979019165,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "you've",
+      "start": 7.039999961853027,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "scrolled",
+      "start": 7.679999828338623,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "past",
+      "start": 7.880000114440918,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "It",
+      "start": 8.739999771118164,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "auto",
+      "start": 8.880000114440918,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "saves",
+      "start": 9.34000015258789,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "your",
+      "start": 9.539999961853027,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "reading",
+      "start": 9.84000015258789,
+      "end": 10.119999885559082
+    },
+    {
+      "word": "progress",
+      "start": 10.119999885559082,
+      "end": 10.619999885559082
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "storyId": "partner-flow-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Organization Check. Second gate—organization membership. The user must belong to the organization that sponsors this course.",
+  "duration": 10.460000038146973,
+  "words": [
+    {
+      "word": "Organisation",
+      "start": 0,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "check",
+      "start": 0.8199999928474426,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "Second",
+      "start": 2.440000057220459,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "gate",
+      "start": 2.440000057220459,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "Organisation",
+      "start": 3.5799999237060547,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "membership",
+      "start": 4.199999809265137,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "The",
+      "start": 5.420000076293945,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "user",
+      "start": 5.599999904632568,
+      "end": 6
+    },
+    {
+      "word": "must",
+      "start": 6,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "belong",
+      "start": 6.619999885559082,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "to",
+      "start": 6.960000038146973,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "the",
+      "start": 7.159999847412109,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "organisation",
+      "start": 7.519999980926514,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "that",
+      "start": 8.15999984741211,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "sponsors",
+      "start": 8.739999771118164,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "this",
+      "start": 9.119999885559082,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "course",
+      "start": 9.640000343322754,
+      "end": 10.039999961853027
+    }
+  ]
+}

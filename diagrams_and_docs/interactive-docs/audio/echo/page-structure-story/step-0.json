@@ -1,0 +1,110 @@
+{
+  "storyId": "page-structure-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Admin Section. Partnership pages live under the admin section. Only users with admin role can access any of these features.",
+  "duration": 9,
+  "words": [
+    {
+      "word": "Admin",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "section",
+      "start": 0.47999998927116394,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Partnership",
+      "start": 1.840000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "pages",
+      "start": 1.840000033378601,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "live",
+      "start": 2.180000066757202,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "under",
+      "start": 2.5799999237060547,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "the",
+      "start": 2.9600000381469727,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "admin",
+      "start": 3.5799999237060547,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "section",
+      "start": 3.5799999237060547,
+      "end": 4
+    },
+    {
+      "word": "Only",
+      "start": 4.960000038146973,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "users",
+      "start": 5.119999885559082,
+      "end": 5.5
+    },
+    {
+      "word": "with",
+      "start": 5.5,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "admin",
+      "start": 5.800000190734863,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "role",
+      "start": 6.139999866485596,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "can",
+      "start": 6.559999942779541,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "access",
+      "start": 7.019999980926514,
+      "end": 7.5
+    },
+    {
+      "word": "any",
+      "start": 7.5,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "of",
+      "start": 7.900000095367432,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "these",
+      "start": 8.119999885559082,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "features",
+      "start": 8.319999694824219,
+      "end": 8.699999809265137
+    }
+  ]
+}

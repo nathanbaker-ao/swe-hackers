@@ -1,0 +1,100 @@
+{
+  "storyId": "animation-flow-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Page Load Animations. Page load triggers entrance animations. Content fades in, elements stagger into view. First impressions matter!",
+  "duration": 10.510000228881836,
+  "words": [
+    {
+      "word": "Page",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "load",
+      "start": 0.5400000214576721,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "animations",
+      "start": 0.7799999713897705,
+      "end": 1.5
+    },
+    {
+      "word": "Page",
+      "start": 2.240000009536743,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "load",
+      "start": 2.240000009536743,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "triggers",
+      "start": 2.5199999809265137,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "entrance",
+      "start": 2.9200000762939453,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "animations",
+      "start": 3.4800000190734863,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "Content",
+      "start": 4.920000076293945,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "fades",
+      "start": 4.920000076293945,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "in",
+      "start": 5.420000076293945,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "Elements",
+      "start": 6.539999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "stagger",
+      "start": 6.539999961853027,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "into",
+      "start": 7.179999828338623,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "view",
+      "start": 7.579999923706055,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "First",
+      "start": 8.859999656677246,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "impressions",
+      "start": 8.960000038146973,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "matter",
+      "start": 9.539999961853027,
+      "end": 10.199999809265137
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "storyId": "access-control-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "belongsToOrg() Check. belongsToOrg() verifies organization membership. For partner courses, users must belong to the sponsoring organization.",
+  "duration": 10.359999656677246,
+  "words": [
+    {
+      "word": "Belongs",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "to",
+      "start": 0.5199999809265137,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "org",
+      "start": 0.7799999713897705,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "check",
+      "start": 1.399999976158142,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "Belongs",
+      "start": 2.819999933242798,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "to",
+      "start": 2.8399999141693115,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "org",
+      "start": 3.140000104904175,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "verifies",
+      "start": 3.3399999141693115,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "organization",
+      "start": 3.940000057220459,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "membership",
+      "start": 4.78000020980835,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "For",
+      "start": 5.860000133514404,
+      "end": 6
+    },
+    {
+      "word": "partner",
+      "start": 6,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "courses",
+      "start": 6.360000133514404,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "users",
+      "start": 7.5,
+      "end": 7.5
+    },
+    {
+      "word": "must",
+      "start": 7.5,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "belong",
+      "start": 8.020000457763672,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "to",
+      "start": 8.380000114440918,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "the",
+      "start": 8.600000381469727,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "sponsoring",
+      "start": 8.880000114440918,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "organization",
+      "start": 9.260000228881836,
+      "end": 9.920000076293945
+    }
+  ]
+}

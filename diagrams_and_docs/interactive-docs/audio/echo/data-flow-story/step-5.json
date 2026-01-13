@@ -1,0 +1,115 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "State Management. Services update local state—window globals and component state. This triggers UI re-renders to show the latest data.",
+  "duration": 11.350000381469727,
+  "words": [
+    {
+      "word": "state",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "management",
+      "start": 0.5400000214576721,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "services",
+      "start": 2.240000009536743,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "update",
+      "start": 2.240000009536743,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "local",
+      "start": 2.880000114440918,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "state",
+      "start": 3.3399999141693115,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "window",
+      "start": 4.360000133514404,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "globals",
+      "start": 4.519999980926514,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "and",
+      "start": 5.400000095367432,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "component",
+      "start": 5.800000190734863,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "state",
+      "start": 6.119999885559082,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "This",
+      "start": 7.199999809265137,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "triggers",
+      "start": 7.360000133514404,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "UI",
+      "start": 7.760000228881836,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "re",
+      "start": 8.479999542236328,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "renders",
+      "start": 8.800000190734863,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "to",
+      "start": 9.140000343322754,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "show",
+      "start": 9.65999984741211,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "the",
+      "start": 9.899999618530273,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "latest",
+      "start": 10.180000305175781,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "data",
+      "start": 10.520000457763672,
+      "end": 10.880000114440918
+    }
+  ]
+}

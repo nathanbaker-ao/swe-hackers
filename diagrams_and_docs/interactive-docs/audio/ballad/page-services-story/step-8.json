@@ -1,0 +1,110 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-8",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Lesson Pages. Lesson pages are feature-rich! They need the most services—progress tracking, activity tracking, lesson orchestration, and more.",
+  "duration": 12.119999885559082,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "pages",
+      "start": 0.5400000214576721,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Lesson",
+      "start": 2.319999933242798,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "pages",
+      "start": 2.3399999141693115,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "are",
+      "start": 2.5999999046325684,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "feature",
+      "start": 3.200000047683716,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "rich",
+      "start": 3.7200000286102295,
+      "end": 4
+    },
+    {
+      "word": "They",
+      "start": 4.639999866485596,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "need",
+      "start": 4.760000228881836,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "the",
+      "start": 4.980000019073486,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "most",
+      "start": 5.199999809265137,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "services",
+      "start": 5.579999923706055,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "progress",
+      "start": 6.659999847412109,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "tracking",
+      "start": 6.920000076293945,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "activity",
+      "start": 8.319999694824219,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "tracking",
+      "start": 8.319999694824219,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "lesson",
+      "start": 9.420000076293945,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "orchestration",
+      "start": 9.520000457763672,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "and",
+      "start": 10.539999961853027,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "more",
+      "start": 10.899999618530273,
+      "end": 11.180000305175781
+    }
+  ]
+}

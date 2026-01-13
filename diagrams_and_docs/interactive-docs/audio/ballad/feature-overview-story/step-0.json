@@ -1,0 +1,115 @@
+{
+  "storyId": "feature-overview-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Partnership Portal. Welcome to the Partnership Portal! This admin-only system helps manage relationships with educational organizations, churches, foundations, and businesses.",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "Partnership",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Portal",
+      "start": 0.7400000095367432,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Welcome",
+      "start": 2.240000009536743,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "to",
+      "start": 2.299999952316284,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "the",
+      "start": 2.559999942779541,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Partnership",
+      "start": 2.880000114440918,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "Portal",
+      "start": 3.299999952316284,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "This",
+      "start": 4.5,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "admin",
+      "start": 4.78000020980835,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "only",
+      "start": 5.300000190734863,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "system",
+      "start": 5.679999828338623,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "helps",
+      "start": 6.099999904632568,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "manage",
+      "start": 6.760000228881836,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "relationships",
+      "start": 7.300000190734863,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "with",
+      "start": 8.039999961853027,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "educational",
+      "start": 8.460000038146973,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "organisations",
+      "start": 9.180000305175781,
+      "end": 10
+    },
+    {
+      "word": "churches",
+      "start": 11.119999885559082,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "foundations",
+      "start": 12.220000267028809,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "and",
+      "start": 12.220000267028809,
+      "end": 13.020000457763672
+    },
+    {
+      "word": "businesses",
+      "start": 13.020000457763672,
+      "end": 13.4399995803833
+    }
+  ]
+}

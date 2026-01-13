@@ -1,0 +1,95 @@
+{
+  "storyId": "access-check-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Organization Check. For partner courses, verify organization membership. The user's organizations array must include the required org.",
+  "duration": 10.5600004196167,
+  "words": [
+    {
+      "word": "Organization",
+      "start": 0,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Check",
+      "start": 0.8999999761581421,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "For",
+      "start": 2.2200000286102295,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "partner",
+      "start": 2.2200000286102295,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "courses",
+      "start": 2.559999942779541,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "verify",
+      "start": 3.819999933242798,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "organization",
+      "start": 3.819999933242798,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "membership",
+      "start": 4.639999866485596,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "The",
+      "start": 5.840000152587891,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "user's",
+      "start": 5.960000038146973,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "organizations",
+      "start": 6.599999904632568,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "array",
+      "start": 7.159999847412109,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "must",
+      "start": 7.539999961853027,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "include",
+      "start": 8.260000228881836,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 8.760000228881836,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "required",
+      "start": 9.079999923706055,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "org",
+      "start": 9.520000457763672,
+      "end": 9.960000038146973
+    }
+  ]
+}

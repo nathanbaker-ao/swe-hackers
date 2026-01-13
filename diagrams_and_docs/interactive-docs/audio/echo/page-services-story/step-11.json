@@ -1,0 +1,105 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-11",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "lesson-integration.js. lesson-integration.js orchestrates everything on lesson pages. It coordinates all the trackers and services together!",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "Integration",
+      "start": 0.47999998927116394,
+      "end": 1
+    },
+    {
+      "word": "JS",
+      "start": 1,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "Lesson",
+      "start": 2.200000047683716,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "Integration",
+      "start": 3.059999942779541,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "JS",
+      "start": 3.059999942779541,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "orchestrates",
+      "start": 3.559999942779541,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "everything",
+      "start": 4.300000190734863,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "on",
+      "start": 5.039999961853027,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "lesson",
+      "start": 5.400000095367432,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "pages",
+      "start": 5.679999828338623,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "It",
+      "start": 6.659999847412109,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "coordinates",
+      "start": 6.659999847412109,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "all",
+      "start": 7.139999866485596,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 7.579999923706055,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "trackers",
+      "start": 7.760000228881836,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "and",
+      "start": 8.260000228881836,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "services",
+      "start": 8.699999809265137,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "together",
+      "start": 9.100000381469727,
+      "end": 9.5600004196167
+    }
+  ]
+}

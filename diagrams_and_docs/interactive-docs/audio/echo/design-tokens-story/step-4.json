@@ -1,0 +1,115 @@
+{
+  "storyId": "design-tokens-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Effects & Transitions. Shadows and transitions bring the UI to life. Subtle shadows create depth. Smooth transitions make interactions feel polished.",
+  "duration": 11.010000228881836,
+  "words": [
+    {
+      "word": "Effects",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "and",
+      "start": 0.46000000834465027,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "transitions",
+      "start": 0.699999988079071,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Shadows",
+      "start": 1.3200000524520874,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "and",
+      "start": 2.119999885559082,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "transitions",
+      "start": 2.4200000762939453,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "bring",
+      "start": 2.9000000953674316,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "the",
+      "start": 3.299999952316284,
+      "end": 3.5
+    },
+    {
+      "word": "UI",
+      "start": 3.5,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "to",
+      "start": 3.859999895095825,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "life",
+      "start": 4.179999828338623,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "Subtle",
+      "start": 5.380000114440918,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "shadows",
+      "start": 5.539999961853027,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "create",
+      "start": 5.900000095367432,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "depth",
+      "start": 6.400000095367432,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "Smooth",
+      "start": 7.820000171661377,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "transitions",
+      "start": 7.900000095367432,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "make",
+      "start": 8.5600004196167,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "interactions",
+      "start": 8.920000076293945,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "feel",
+      "start": 9.699999809265137,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "polished",
+      "start": 10.199999809265137,
+      "end": 10.619999885559082
+    }
+  ]
+}

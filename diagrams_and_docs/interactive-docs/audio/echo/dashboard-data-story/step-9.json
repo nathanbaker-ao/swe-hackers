@@ -1,0 +1,100 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-9",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Course Progress Data. The courseProgress collection provides course-level summaries. Each enrolled course has a document here.",
+  "duration": 8.609999656677246,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "Progress",
+      "start": 0.5199999809265137,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Data",
+      "start": 1.0199999809265137,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "The",
+      "start": 1.5399999618530273,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "Course",
+      "start": 2.299999952316284,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "Progress",
+      "start": 2.619999885559082,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "Collection",
+      "start": 2.9600000381469727,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "provides",
+      "start": 3.4800000190734863,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "course",
+      "start": 4.059999942779541,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "level",
+      "start": 4.579999923706055,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "summaries",
+      "start": 4.940000057220459,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "Each",
+      "start": 6.019999980926514,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "enrolled",
+      "start": 6.21999979019165,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "course",
+      "start": 6.679999828338623,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "has",
+      "start": 7.119999885559082,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "a",
+      "start": 7.460000038146973,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "document",
+      "start": 8.020000457763672,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "here",
+      "start": 8.020000457763672,
+      "end": 8.34000015258789
+    }
+  ]
+}

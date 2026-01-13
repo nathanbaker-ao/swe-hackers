@@ -1,0 +1,85 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Protected Pages Category. Protected pages require authentication. You must be logged in to see these!",
+  "duration": 7.320000171661377,
+  "words": [
+    {
+      "word": "Protected",
+      "start": 0,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "Pages",
+      "start": 0.7599999904632568,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "category",
+      "start": 1.0800000429153442,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "Protected",
+      "start": 2.5199999809265137,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "pages",
+      "start": 2.880000114440918,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "require",
+      "start": 3.0399999618530273,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "authentication",
+      "start": 3.619999885559082,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "You",
+      "start": 5.079999923706055,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "must",
+      "start": 5.159999847412109,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "be",
+      "start": 5.400000095367432,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "logged",
+      "start": 5.739999771118164,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "in",
+      "start": 5.980000019073486,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "to",
+      "start": 6.260000228881836,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "see",
+      "start": 6.420000076293945,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "these",
+      "start": 6.619999885559082,
+      "end": 6.940000057220459
+    }
+  ]
+}

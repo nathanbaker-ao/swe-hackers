@@ -1,0 +1,100 @@
+{
+  "storyId": "interaction-flow-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "PartnerService. createInteraction in PartnerService handles the save. It updates multiple documents in a coordinated operation.",
+  "duration": 10.199999809265137,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "Service",
+      "start": 0.5400000214576721,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Create",
+      "start": 1.940000057220459,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "interaction",
+      "start": 2.0199999809265137,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "in",
+      "start": 2.740000009536743,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "Partner",
+      "start": 3.0999999046325684,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "Service",
+      "start": 3.380000114440918,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "handles",
+      "start": 3.7799999713897705,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "the",
+      "start": 4.440000057220459,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "save",
+      "start": 4.800000190734863,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "It",
+      "start": 5.940000057220459,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "updates",
+      "start": 6.059999942779541,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "multiple",
+      "start": 6.460000038146973,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "documents",
+      "start": 7.159999847412109,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "in",
+      "start": 7.659999847412109,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "a",
+      "start": 8.039999961853027,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "coordinated",
+      "start": 8.359999656677246,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "operation",
+      "start": 8.960000038146973,
+      "end": 9.739999771118164
+    }
+  ]
+}

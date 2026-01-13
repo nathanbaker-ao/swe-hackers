@@ -1,0 +1,110 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Show Content. All checks passed! The loading screen fades, content appears, and the user can interact. RouteGuard's job is done!",
+  "duration": 12.119999885559082,
+  "words": [
+    {
+      "word": "Show",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "content",
+      "start": 0.47999998927116394,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "all",
+      "start": 1.7799999713897705,
+      "end": 2
+    },
+    {
+      "word": "checks",
+      "start": 2,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "passed",
+      "start": 2.380000114440918,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.759999990463257,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "loading",
+      "start": 3.880000114440918,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "screen",
+      "start": 4.139999866485596,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "fades",
+      "start": 4.639999866485596,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "content",
+      "start": 6.019999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "appears",
+      "start": 6.019999980926514,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "and",
+      "start": 6.519999980926514,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "the",
+      "start": 7.099999904632568,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "user",
+      "start": 7.380000114440918,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "can",
+      "start": 7.639999866485596,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "interact",
+      "start": 8.260000228881836,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "Rootguard's",
+      "start": 9.880000114440918,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "job",
+      "start": 10.420000076293945,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "is",
+      "start": 10.699999809265137,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "done",
+      "start": 11.359999656677246,
+      "end": 11.619999885559082
+    }
+  ]
+}

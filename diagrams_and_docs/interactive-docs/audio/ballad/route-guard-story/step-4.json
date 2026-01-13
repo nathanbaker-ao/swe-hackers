@@ -1,0 +1,105 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "RBAC Verification. With authentication confirmed, RBAC kicks in. Does this user have permission for this specific page and course?",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "RBAC",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "verification",
+      "start": 0.5600000023841858,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "With",
+      "start": 2.380000114440918,
+      "end": 2.5
+    },
+    {
+      "word": "authentication",
+      "start": 2.5,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "confirmed",
+      "start": 3.4200000762939453,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "RBAC",
+      "start": 4.960000038146973,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "kicks",
+      "start": 5.320000171661377,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "in",
+      "start": 5.860000133514404,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "Does",
+      "start": 7.099999904632568,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "this",
+      "start": 7.139999866485596,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "user",
+      "start": 7.539999961853027,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "have",
+      "start": 7.800000190734863,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "permission",
+      "start": 8.140000343322754,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "for",
+      "start": 8.600000381469727,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "this",
+      "start": 9.140000343322754,
+      "end": 9.5
+    },
+    {
+      "word": "specific",
+      "start": 9.5,
+      "end": 10.0600004196167
+    },
+    {
+      "word": "page",
+      "start": 10.0600004196167,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "and",
+      "start": 10.479999542236328,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "course",
+      "start": 11.079999923706055,
+      "end": 11.460000038146973
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "storyId": "offline-flow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Connection Check. navigator.onLine tells us the connection status. Online? Save directly. Offline? Time for the queue!",
+  "duration": 9.640000343322754,
+  "words": [
+    {
+      "word": "Connection",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "check",
+      "start": 0.6000000238418579,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Navigator",
+      "start": 1.5399999618530273,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "online",
+      "start": 1.8200000524520874,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "tells",
+      "start": 2.7200000286102295,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "us",
+      "start": 3.119999885559082,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "the",
+      "start": 3.3399999141693115,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "connection",
+      "start": 3.559999942779541,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "status",
+      "start": 3.9200000762939453,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "Online",
+      "start": 5.099999904632568,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "Save",
+      "start": 6.28000020980835,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "directly",
+      "start": 6.320000171661377,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "Offline",
+      "start": 7.800000190734863,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "Time",
+      "start": 8.539999961853027,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "for",
+      "start": 8.800000190734863,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 8.960000038146973,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "queue",
+      "start": 9.319999694824219,
+      "end": 9.359999656677246
+    }
+  ]
+}

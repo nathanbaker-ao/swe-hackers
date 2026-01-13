@@ -1,0 +1,125 @@
+{
+  "storyId": "role-hierarchy-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Admin Role. At the top sits the admin role. Full platform access—all courses, user management, organization controls. The keys to the kingdom!",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Admin",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "role",
+      "start": 0.5199999809265137,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "At",
+      "start": 1.340000033378601,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "the",
+      "start": 1.3799999952316284,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "top",
+      "start": 1.559999942779541,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "sits",
+      "start": 1.8799999952316284,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "the",
+      "start": 2.140000104904175,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "admin",
+      "start": 2.4600000381469727,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "role",
+      "start": 2.799999952316284,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "Full",
+      "start": 3.8399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "platform",
+      "start": 3.859999895095825,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "access",
+      "start": 4.460000038146973,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "All",
+      "start": 5.559999942779541,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "courses",
+      "start": 5.71999979019165,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "user",
+      "start": 6.800000190734863,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "management",
+      "start": 6.840000152587891,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "organization",
+      "start": 7.71999979019165,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "controls",
+      "start": 8.300000190734863,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "The",
+      "start": 9.34000015258789,
+      "end": 9.5
+    },
+    {
+      "word": "keys",
+      "start": 9.5,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "to",
+      "start": 9.739999771118164,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "the",
+      "start": 9.9399995803833,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "kingdom",
+      "start": 10.199999809265137,
+      "end": 10.380000114440918
+    }
+  ]
+}

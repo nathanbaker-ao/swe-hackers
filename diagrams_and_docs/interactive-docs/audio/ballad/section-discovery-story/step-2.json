@@ -1,0 +1,100 @@
+{
+  "storyId": "section-discovery-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Query Selectors. querySelectorAll finds all elements with data-section attributes. These are our trackable content sections.",
+  "duration": 10.920000076293945,
+  "words": [
+    {
+      "word": "Query",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "Selectors",
+      "start": 0.6000000238418579,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Query",
+      "start": 2.5,
+      "end": 2.5
+    },
+    {
+      "word": "Selector",
+      "start": 2.5,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "All",
+      "start": 2.940000057220459,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "finds",
+      "start": 3.299999952316284,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "all",
+      "start": 3.8399999141693115,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "elements",
+      "start": 4.420000076293945,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "with",
+      "start": 4.739999771118164,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "data",
+      "start": 5.260000228881836,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "section",
+      "start": 5.800000190734863,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "attributes",
+      "start": 6.21999979019165,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "These",
+      "start": 7.880000114440918,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "are",
+      "start": 8.199999809265137,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "our",
+      "start": 8.619999885559082,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "trackable",
+      "start": 8.979999542236328,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "content",
+      "start": 9.420000076293945,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "sections",
+      "start": 9.920000076293945,
+      "end": 10.319999694824219
+    }
+  ]
+}

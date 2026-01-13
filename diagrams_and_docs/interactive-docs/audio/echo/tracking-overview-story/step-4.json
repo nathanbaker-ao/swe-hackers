@@ -1,0 +1,100 @@
+{
+  "storyId": "tracking-overview-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "UI Updates. As data changes, UI updates follow. Progress bars fill, completion indicators appear, toast notifications celebrate achievements!",
+  "duration": 12.90999984741211,
+  "words": [
+    {
+      "word": "UI",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "updates",
+      "start": 0.7400000095367432,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "As",
+      "start": 1.9600000381469727,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "data",
+      "start": 2.0799999237060547,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "changes",
+      "start": 2.440000057220459,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "UI",
+      "start": 3.680000066757202,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "updates",
+      "start": 4.059999942779541,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "follow",
+      "start": 4.599999904632568,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "Progress",
+      "start": 6,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "bars",
+      "start": 6.019999980926514,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "fill",
+      "start": 6.380000114440918,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "completion",
+      "start": 7.739999771118164,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "indicators",
+      "start": 7.739999771118164,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "appear",
+      "start": 8.359999656677246,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "toast",
+      "start": 9.619999885559082,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "notifications",
+      "start": 9.699999809265137,
+      "end": 10.5
+    },
+    {
+      "word": "celebrate",
+      "start": 10.5,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "achievements",
+      "start": 11.479999542236328,
+      "end": 12.119999885559082
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "storyId": "data-service-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Progress Operations. Progress ops handle lesson and course completion. saveLessonProgress, getCourseProgress—everything about tracking what users have learned.",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "Progress",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "operations",
+      "start": 0.5799999833106995,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Progress",
+      "start": 2.359999895095825,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "Ops",
+      "start": 2.359999895095825,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "handle",
+      "start": 2.759999990463257,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "lesson",
+      "start": 3.259999990463257,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "and",
+      "start": 3.619999885559082,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "course",
+      "start": 3.9000000953674316,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "completion",
+      "start": 4.179999828338623,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "Save",
+      "start": 6.179999828338623,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "lesson",
+      "start": 6.21999979019165,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "progress",
+      "start": 6.539999961853027,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "Get",
+      "start": 7.659999847412109,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "course",
+      "start": 7.760000228881836,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "progress",
+      "start": 8.199999809265137,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "Everything",
+      "start": 9.539999961853027,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "about",
+      "start": 9.920000076293945,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "tracking",
+      "start": 10.420000076293945,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "what",
+      "start": 10.819999694824219,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "users",
+      "start": 11.199999809265137,
+      "end": 11.5
+    },
+    {
+      "word": "have",
+      "start": 11.5,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "learned",
+      "start": 11.859999656677246,
+      "end": 12.140000343322754
+    }
+  ]
+}

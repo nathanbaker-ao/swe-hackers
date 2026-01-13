@@ -1,0 +1,100 @@
+{
+  "storyId": "color-contrast-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Accent Colors. Accent colors provide visual interest. Purple primary, teal secondary, green success—each tested for adequate contrast.",
+  "duration": 10.920000076293945,
+  "words": [
+    {
+      "word": "Accent",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "Colors",
+      "start": 0.6600000262260437,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Accent",
+      "start": 1.1399999856948853,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "colors",
+      "start": 2.180000066757202,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "provide",
+      "start": 2.4600000381469727,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "visual",
+      "start": 2.940000057220459,
+      "end": 3.5
+    },
+    {
+      "word": "interest",
+      "start": 3.5,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "Purple",
+      "start": 4.760000228881836,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "Primary",
+      "start": 4.860000133514404,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "Teal",
+      "start": 5.460000038146973,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "Secondary",
+      "start": 6.099999904632568,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "Green",
+      "start": 6.760000228881836,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "Success",
+      "start": 7.360000133514404,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "Each",
+      "start": 7.940000057220459,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "tested",
+      "start": 8.760000228881836,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "for",
+      "start": 9.079999923706055,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "adequate",
+      "start": 9.5600004196167,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "contrast",
+      "start": 10.020000457763672,
+      "end": 10.680000305175781
+    }
+  ]
+}

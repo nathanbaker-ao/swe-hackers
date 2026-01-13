@@ -1,0 +1,125 @@
+{
+  "storyId": "color-contrast-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Success Green. accent-success at hash 66bb6a achieves 8.1:1 contrast. Perfect for positive feedback without being harsh on dark backgrounds.",
+  "duration": 13.699999809265137,
+  "words": [
+    {
+      "word": "Success",
+      "start": 0,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "Green",
+      "start": 0.9200000166893005,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "Accent",
+      "start": 1.9199999570846558,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "Success",
+      "start": 2.119999885559082,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "at",
+      "start": 2.680000066757202,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "hash",
+      "start": 3.0399999618530273,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "66BB6A",
+      "start": 3.4000000953674316,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "achieves",
+      "start": 5.099999904632568,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "8",
+      "start": 5.840000152587891,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "1",
+      "start": 6.320000171661377,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "to",
+      "start": 6.900000095367432,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "1",
+      "start": 7.119999885559082,
+      "end": 7.5
+    },
+    {
+      "word": "contrast",
+      "start": 7.5,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "Perfect",
+      "start": 9.399999618530273,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "for",
+      "start": 9.399999618530273,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "positive",
+      "start": 9.739999771118164,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "feedback",
+      "start": 10.220000267028809,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "without",
+      "start": 10.739999771118164,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "being",
+      "start": 11.260000228881836,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "harsh",
+      "start": 11.960000038146973,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "on",
+      "start": 11.960000038146973,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "dark",
+      "start": 12.4399995803833,
+      "end": 12.680000305175781
+    },
+    {
+      "word": "backgrounds",
+      "start": 12.680000305175781,
+      "end": 13.15999984741211
+    }
+  ]
+}

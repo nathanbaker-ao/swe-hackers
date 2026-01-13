@@ -1,0 +1,105 @@
+{
+  "storyId": "entity-relations-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Course Entity. Courses contain lessons. Apprentice, Junior, Senior—each course has a hierarchy of chapters and lessons to complete.",
+  "duration": 14.109999656677246,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "entity",
+      "start": 0.5,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "Courses",
+      "start": 2.319999933242798,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "contain",
+      "start": 2.559999942779541,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "lessons",
+      "start": 3.140000104904175,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "Apprentice",
+      "start": 5.119999885559082,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "junior",
+      "start": 5.679999828338623,
+      "end": 6
+    },
+    {
+      "word": "senior",
+      "start": 6.340000152587891,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "Each",
+      "start": 7.639999866485596,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "course",
+      "start": 7.78000020980835,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "has",
+      "start": 8.199999809265137,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "a",
+      "start": 8.5600004196167,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "hierarchy",
+      "start": 8.979999542236328,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "of",
+      "start": 9.359999656677246,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "chapters",
+      "start": 10.5600004196167,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "and",
+      "start": 10.5600004196167,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "lessons",
+      "start": 11.279999732971191,
+      "end": 11.5
+    },
+    {
+      "word": "to",
+      "start": 11.5,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "complete",
+      "start": 12.4399995803833,
+      "end": 12.4399995803833
+    }
+  ]
+}

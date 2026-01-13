@@ -1,0 +1,105 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Velocity Calculation. Learning Velocity comes from lesson completion records. Lessons completed per week, scaled to a 0-100 score.",
+  "duration": 12.960000038146973,
+  "words": [
+    {
+      "word": "Velocity",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "calculation",
+      "start": 0.7400000095367432,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "Learning",
+      "start": 2.5999999046325684,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "velocity",
+      "start": 2.6600000858306885,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "comes",
+      "start": 3.1600000858306885,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "from",
+      "start": 3.740000009536743,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "lesson",
+      "start": 4.260000228881836,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "completion",
+      "start": 4.480000019073486,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "records",
+      "start": 5.139999866485596,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "Lessons",
+      "start": 6.71999979019165,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "completed",
+      "start": 6.980000019073486,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "per",
+      "start": 7.579999923706055,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "week",
+      "start": 8.199999809265137,
+      "end": 8.520000457763672
+    },
+    {
+      "word": "scaled",
+      "start": 9.140000343322754,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "to",
+      "start": 9.399999618530273,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "a",
+      "start": 10.020000457763672,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "0",
+      "start": 10.380000114440918,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "100",
+      "start": 10.760000228881836,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "score",
+      "start": 11.239999771118164,
+      "end": 11.819999694824219
+    }
+  ]
+}

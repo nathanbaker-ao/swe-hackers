@@ -1,0 +1,120 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Marketing Pages. Marketing pages are the lightest. They only load the navbar script for basic navigation. No authentication needed—anyone can browse!",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Marketing",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "pages",
+      "start": 0.7799999713897705,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Marketing",
+      "start": 2.640000104904175,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "pages",
+      "start": 2.640000104904175,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "are",
+      "start": 2.9800000190734863,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "the",
+      "start": 3.380000114440918,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "lightest",
+      "start": 3.799999952316284,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "They",
+      "start": 4.860000133514404,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "only",
+      "start": 4.960000038146973,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "load",
+      "start": 5.579999923706055,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 5.960000038146973,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "navbar",
+      "start": 6.380000114440918,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "script",
+      "start": 6.78000020980835,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "for",
+      "start": 7.039999961853027,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "basic",
+      "start": 7.519999980926514,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "navigation",
+      "start": 7.900000095367432,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "No",
+      "start": 9.34000015258789,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "authentication",
+      "start": 9.65999984741211,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "needed",
+      "start": 10.420000076293945,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "Anyone",
+      "start": 11.640000343322754,
+      "end": 11.739999771118164
+    },
+    {
+      "word": "can",
+      "start": 11.739999771118164,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "browse",
+      "start": 12.119999885559082,
+      "end": 12.420000076293945
+    }
+  ]
+}

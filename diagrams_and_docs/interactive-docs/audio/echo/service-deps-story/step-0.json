@@ -1,0 +1,130 @@
+{
+  "storyId": "service-deps-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "FirebaseApp: The Foundation. Everything starts with FirebaseApp. This service initializes the Firebase SDK, giving all other services access to authentication and database.",
+  "duration": 14.800000190734863,
+  "words": [
+    {
+      "word": "Firebase",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "App",
+      "start": 0.5799999833106995,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "The",
+      "start": 1.2000000476837158,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "foundation",
+      "start": 1.7400000095367432,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "Everything",
+      "start": 2.440000057220459,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "starts",
+      "start": 3.440000057220459,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "with",
+      "start": 3.9200000762939453,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "Firebase",
+      "start": 4.260000228881836,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "App",
+      "start": 4.78000020980835,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "This",
+      "start": 5.699999809265137,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "service",
+      "start": 6.119999885559082,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "initializes",
+      "start": 6.539999961853027,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "the",
+      "start": 7.480000019073486,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "Firebase",
+      "start": 7.78000020980835,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "SDK",
+      "start": 8.260000228881836,
+      "end": 9
+    },
+    {
+      "word": "giving",
+      "start": 9.779999732971191,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "all",
+      "start": 9.800000190734863,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "other",
+      "start": 10.359999656677246,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "services",
+      "start": 10.800000190734863,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "access",
+      "start": 11.199999809265137,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "to",
+      "start": 11.720000267028809,
+      "end": 12.279999732971191
+    },
+    {
+      "word": "authentication",
+      "start": 12.279999732971191,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 12.880000114440918,
+      "end": 13.460000038146973
+    },
+    {
+      "word": "database",
+      "start": 13.460000038146973,
+      "end": 13.960000038146973
+    }
+  ]
+}

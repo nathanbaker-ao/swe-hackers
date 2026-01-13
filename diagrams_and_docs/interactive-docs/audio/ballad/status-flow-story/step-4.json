@@ -1,0 +1,95 @@
+{
+  "storyId": "status-flow-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Churned. Churned means the partnership ended. Lost opportunity or completed engagement. But wait—re-engagement is possible!",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "word": "Churned",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "Churned",
+      "start": 1.5,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "means",
+      "start": 1.559999942779541,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "the",
+      "start": 1.8200000524520874,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "partnership",
+      "start": 2.059999942779541,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "ended",
+      "start": 2.5799999237060547,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "lost",
+      "start": 4.019999980926514,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "opportunity",
+      "start": 4.079999923706055,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "or",
+      "start": 4.820000171661377,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "completed",
+      "start": 5.400000095367432,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "engagement",
+      "start": 6.039999961853027,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "But",
+      "start": 7.320000171661377,
+      "end": 7.5
+    },
+    {
+      "word": "wait",
+      "start": 7.5,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "Re",
+      "start": 8.619999885559082,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "engagement",
+      "start": 9.079999923706055,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "is",
+      "start": 9.300000190734863,
+      "end": 10
+    },
+    {
+      "word": "possible",
+      "start": 10,
+      "end": 10.420000076293945
+    }
+  ]
+}

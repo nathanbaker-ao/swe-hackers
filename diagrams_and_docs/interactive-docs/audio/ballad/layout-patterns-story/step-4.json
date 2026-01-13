@@ -1,0 +1,115 @@
+{
+  "storyId": "layout-patterns-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Auth Layout. Auth pages center a single form card. Maximum 400-pixel width, vertically centered. Clean and focused on the task.",
+  "duration": 14.300000190734863,
+  "words": [
+    {
+      "word": "Auth",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "Layout",
+      "start": 0.5,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Auth",
+      "start": 2.0999999046325684,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "pages",
+      "start": 2.119999885559082,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "centre",
+      "start": 2.4800000190734863,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "a",
+      "start": 3.1600000858306885,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "single",
+      "start": 3.5199999809265137,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "form",
+      "start": 3.940000057220459,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "card",
+      "start": 4.420000076293945,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "Maximum",
+      "start": 5.900000095367432,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "400",
+      "start": 6.179999828338623,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "pixel",
+      "start": 7.139999866485596,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "width",
+      "start": 7.659999847412109,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "Vertically",
+      "start": 8.9399995803833,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "centred",
+      "start": 9.199999809265137,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "Clean",
+      "start": 10.859999656677246,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "and",
+      "start": 10.859999656677246,
+      "end": 11.579999923706055
+    },
+    {
+      "word": "focused",
+      "start": 11.579999923706055,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "on",
+      "start": 12.039999961853027,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "the",
+      "start": 12.4399995803833,
+      "end": 12.600000381469727
+    },
+    {
+      "word": "task",
+      "start": 12.600000381469727,
+      "end": 13
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "storyId": "auth-service-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "AuthService: The Hub. AuthService is the authentication hub. It wraps Firebase Auth with a clean, consistent API for the rest of the application to use.",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "word": "AuthService",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "the",
+      "start": 1.2799999713897705,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "hub",
+      "start": 1.4800000190734863,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "AuthService",
+      "start": 2.880000114440918,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "is",
+      "start": 3.0999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "the",
+      "start": 3.5999999046325684,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "authentication",
+      "start": 3.9200000762939453,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "hub",
+      "start": 4.480000019073486,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "It",
+      "start": 5.920000076293945,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "wraps",
+      "start": 5.920000076293945,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "Firebase",
+      "start": 6.28000020980835,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "Auth",
+      "start": 7.119999885559082,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "with",
+      "start": 7.400000095367432,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "a",
+      "start": 8.020000457763672,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "clean",
+      "start": 8.539999961853027,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "consistent",
+      "start": 9.65999984741211,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "API",
+      "start": 9.65999984741211,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "for",
+      "start": 10.319999694824219,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "the",
+      "start": 10.899999618530273,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "rest",
+      "start": 11.319999694824219,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "of",
+      "start": 11.380000114440918,
+      "end": 11.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 11.579999923706055,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "application",
+      "start": 11.720000267028809,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "to",
+      "start": 12.119999885559082,
+      "end": 12.640000343322754
+    },
+    {
+      "word": "use",
+      "start": 12.640000343322754,
+      "end": 12.800000190734863
+    }
+  ]
+}

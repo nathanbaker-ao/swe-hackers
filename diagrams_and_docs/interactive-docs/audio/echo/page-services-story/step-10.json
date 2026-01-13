@@ -1,0 +1,85 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-10",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "activity-tracker.js. activity-tracker.js captures quiz answers and activity completions. Every interaction is logged for learning analytics.",
+  "duration": 10.050000190734863,
+  "words": [
+    {
+      "word": "ActivityTracker",
+      "start": 0,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "js",
+      "start": 0.9800000190734863,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "captures",
+      "start": 2.200000047683716,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "quiz",
+      "start": 3.3399999141693115,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "answers",
+      "start": 3.7200000286102295,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "and",
+      "start": 4.099999904632568,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "activity",
+      "start": 4.539999961853027,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "completions",
+      "start": 4.940000057220459,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "Every",
+      "start": 6.460000038146973,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "interaction",
+      "start": 6.659999847412109,
+      "end": 7.21999979019165
+    },
+    {
+      "word": "is",
+      "start": 7.21999979019165,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "logged",
+      "start": 7.559999942779541,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "for",
+      "start": 7.840000152587891,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "learning",
+      "start": 8.34000015258789,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "analytics",
+      "start": 8.720000267028809,
+      "end": 9.359999656677246
+    }
+  ]
+}

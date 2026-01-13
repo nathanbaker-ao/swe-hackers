@@ -1,0 +1,115 @@
+{
+  "storyId": "data-service-story",
+  "stepId": "step-6",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "activityAttempts Collection. activityAttempts records every quiz answer and activity interaction. Timestamps, answers, scores—all preserved for learning analytics.",
+  "duration": 13.699999809265137,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "Attempts",
+      "start": 0.7200000286102295,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Collection",
+      "start": 1.3200000524520874,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "Activity",
+      "start": 3,
+      "end": 3
+    },
+    {
+      "word": "Attempts",
+      "start": 3,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "records",
+      "start": 3.5999999046325684,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "every",
+      "start": 3.9600000381469727,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "quiz",
+      "start": 4.699999809265137,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "answer",
+      "start": 4.980000019073486,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "and",
+      "start": 5.400000095367432,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "activity",
+      "start": 5.760000228881836,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "interaction",
+      "start": 6.360000133514404,
+      "end": 7.5
+    },
+    {
+      "word": "Timestamps",
+      "start": 8.260000228881836,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "answers",
+      "start": 9.359999656677246,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "scores",
+      "start": 10.079999923706055,
+      "end": 10.100000381469727
+    },
+    {
+      "word": "–",
+      "start": 10.100000381469727,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "all",
+      "start": 10.9399995803833,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "preserved",
+      "start": 11.020000457763672,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "for",
+      "start": 11.5600004196167,
+      "end": 12
+    },
+    {
+      "word": "learning",
+      "start": 12,
+      "end": 12.5
+    },
+    {
+      "word": "analytics",
+      "start": 12.5,
+      "end": 13.020000457763672
+    }
+  ]
+}

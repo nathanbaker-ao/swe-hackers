@@ -1,0 +1,105 @@
+{
+  "storyId": "color-contrast-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Primary Background. bg-primary is the darkest background at hash 0a0a0f. Nearly black, it provides maximum contrast for text.",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Primary",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "Background",
+      "start": 0.6399999856948853,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "BG",
+      "start": 1.399999976158142,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "Primary",
+      "start": 2.2200000286102295,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "is",
+      "start": 2.7799999713897705,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "the",
+      "start": 3.0399999618530273,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "darkest",
+      "start": 3.319999933242798,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "background",
+      "start": 3.6600000858306885,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "at",
+      "start": 4.199999809265137,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "hash",
+      "start": 4.599999904632568,
+      "end": 5
+    },
+    {
+      "word": "0A0AF",
+      "start": 5,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "Nearly",
+      "start": 6.920000076293945,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "black",
+      "start": 7.159999847412109,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "it",
+      "start": 7.940000057220459,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "provides",
+      "start": 8.039999961853027,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "maximum",
+      "start": 8.399999618530273,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "contrast",
+      "start": 9.119999885559082,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "for",
+      "start": 9.640000343322754,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "text",
+      "start": 10.180000305175781,
+      "end": 10.479999542236328
+    }
+  ]
+}

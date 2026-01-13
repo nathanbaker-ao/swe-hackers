@@ -1,0 +1,105 @@
+{
+  "storyId": "auth-architecture-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "AuthService. AuthService is the gateway. It provides clean methods for login, registration, and logout—wrapping Firebase's complexity.",
+  "duration": 9.8100004196167,
+  "words": [
+    {
+      "word": "Off",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "service",
+      "start": 0.4000000059604645,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Off",
+      "start": 1.5800000429153442,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "service",
+      "start": 1.7599999904632568,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "is",
+      "start": 1.940000057220459,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "the",
+      "start": 2.319999933242798,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "gateway",
+      "start": 2.5799999237060547,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "It",
+      "start": 3.5999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "provides",
+      "start": 3.5999999046325684,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "clean",
+      "start": 3.940000057220459,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "methods",
+      "start": 4.420000076293945,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "for",
+      "start": 4.71999979019165,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "login",
+      "start": 5.059999942779541,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "registration",
+      "start": 6.360000133514404,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "and",
+      "start": 6.679999828338623,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "logout",
+      "start": 6.880000114440918,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "wrapping",
+      "start": 7.980000019073486,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "Firebase's",
+      "start": 8.039999961853027,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "complexity",
+      "start": 9.4399995803833,
+      "end": 9.4399995803833
+    }
+  ]
+}

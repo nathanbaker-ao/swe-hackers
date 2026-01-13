@@ -1,0 +1,95 @@
+{
+  "storyId": "offline-flow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "LocalStorage Backup. The queue persists in LocalStorage. Even if the browser closes, queued attempts survive.",
+  "duration": 7.800000190734863,
+  "words": [
+    {
+      "word": "Local",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "Storage",
+      "start": 0.5199999809265137,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "Backup",
+      "start": 0.8600000143051147,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "The",
+      "start": 1.5800000429153442,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "queue",
+      "start": 2.3399999141693115,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "persists",
+      "start": 2.3399999141693115,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "in",
+      "start": 3.0799999237060547,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "local",
+      "start": 3.3399999141693115,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "storage",
+      "start": 3.700000047683716,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "Even",
+      "start": 4.639999866485596,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "if",
+      "start": 4.820000171661377,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 4.960000038146973,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "browser",
+      "start": 5.159999847412109,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "closes",
+      "start": 5.360000133514404,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "queued",
+      "start": 6.460000038146973,
+      "end": 6.5
+    },
+    {
+      "word": "attempts",
+      "start": 6.5,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "survive",
+      "start": 6.880000114440918,
+      "end": 7.400000095367432
+    }
+  ]
+}

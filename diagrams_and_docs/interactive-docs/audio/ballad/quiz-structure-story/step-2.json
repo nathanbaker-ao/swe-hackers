@@ -1,0 +1,115 @@
+{
+  "storyId": "quiz-structure-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Options Container. Options are grouped in a container. Each option has a data-value attribute that gets compared against data-answer.",
+  "duration": 11.25,
+  "words": [
+    {
+      "word": "Options",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "container",
+      "start": 0.46000000834465027,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "Options",
+      "start": 2.0199999809265137,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "are",
+      "start": 2.0199999809265137,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "grouped",
+      "start": 2.4200000762939453,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "in",
+      "start": 2.6600000858306885,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "a",
+      "start": 2.9800000190734863,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "container",
+      "start": 3.5399999618530273,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "Each",
+      "start": 4.340000152587891,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "option",
+      "start": 4.440000057220459,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "has",
+      "start": 4.900000095367432,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "a",
+      "start": 5.340000152587891,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "data",
+      "start": 5.800000190734863,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "value",
+      "start": 6.019999980926514,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "attribute",
+      "start": 6.440000057220459,
+      "end": 7
+    },
+    {
+      "word": "that",
+      "start": 7,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "gets",
+      "start": 7.739999771118164,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "compared",
+      "start": 8.020000457763672,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "against",
+      "start": 8.539999961853027,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "data",
+      "start": 9.020000457763672,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "answer",
+      "start": 9.739999771118164,
+      "end": 10.239999771118164
+    }
+  ]
+}

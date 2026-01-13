@@ -1,0 +1,110 @@
+{
+  "storyId": "page-hierarchy-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Auth Pages. Auth pages handle login, registration, and password reset. They're public so users can create accounts and sign in.",
+  "duration": 11.4399995803833,
+  "words": [
+    {
+      "word": "Auth",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "pages",
+      "start": 0.47999998927116394,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Auth",
+      "start": 1.7000000476837158,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "pages",
+      "start": 2.0799999237060547,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "handle",
+      "start": 2.4200000762939453,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "login",
+      "start": 2.8399999141693115,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "registration",
+      "start": 4.420000076293945,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "and",
+      "start": 4.420000076293945,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "password",
+      "start": 5.039999961853027,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "reset",
+      "start": 5.579999923706055,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "They're",
+      "start": 6.760000228881836,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "public",
+      "start": 6.940000057220459,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "so",
+      "start": 7.699999809265137,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "users",
+      "start": 8.119999885559082,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "can",
+      "start": 8.420000076293945,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "create",
+      "start": 8.800000190734863,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "accounts",
+      "start": 9.180000305175781,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "and",
+      "start": 9.600000381469727,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "sign",
+      "start": 10.199999809265137,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "in",
+      "start": 10.460000038146973,
+      "end": 10.720000267028809
+    }
+  ]
+}

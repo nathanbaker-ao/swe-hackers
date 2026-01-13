@@ -1,0 +1,110 @@
+{
+  "storyId": "route-guard-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Show Content. All checks passed! The loading screen fades, content appears, and the user can interact. RouteGuard's job is done!",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "word": "Show",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "content",
+      "start": 0.5199999809265137,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "All",
+      "start": 1.5800000429153442,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "checks",
+      "start": 1.7799999713897705,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "passed",
+      "start": 2.0799999237060547,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "The",
+      "start": 2.9600000381469727,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "loading",
+      "start": 3.0999999046325684,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "screen",
+      "start": 3.3399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "fades",
+      "start": 3.859999895095825,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "content",
+      "start": 5.059999942779541,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "appears",
+      "start": 5.079999923706055,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "and",
+      "start": 6.019999980926514,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "the",
+      "start": 6.119999885559082,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "user",
+      "start": 6.300000190734863,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "can",
+      "start": 6.539999961853027,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "interact",
+      "start": 6.920000076293945,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "Rootguard's",
+      "start": 8.199999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "job",
+      "start": 8.699999809265137,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "is",
+      "start": 8.960000038146973,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "done",
+      "start": 9.539999961853027,
+      "end": 9.579999923706055
+    }
+  ]
+}

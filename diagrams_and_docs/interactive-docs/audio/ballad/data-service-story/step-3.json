@@ -1,0 +1,115 @@
+{
+  "storyId": "data-service-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Enrollment Operations. Enrollment ops manage course registrations. Users enroll in courses, and the system tracks their enrollment status and access dates.",
+  "duration": 12.359999656677246,
+  "words": [
+    {
+      "word": "Enrolment",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "operations",
+      "start": 0.6399999856948853,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "Enrolment",
+      "start": 2.380000114440918,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "Ops",
+      "start": 2.619999885559082,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "manage",
+      "start": 2.880000114440918,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "course",
+      "start": 3.3399999141693115,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "registrations",
+      "start": 3.799999952316284,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "Users",
+      "start": 5.820000171661377,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "enrol",
+      "start": 5.820000171661377,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "in",
+      "start": 6.400000095367432,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "courses",
+      "start": 7.199999809265137,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "And",
+      "start": 7.739999771118164,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "the",
+      "start": 7.820000171661377,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "system",
+      "start": 8.020000457763672,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "tracks",
+      "start": 8.420000076293945,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "their",
+      "start": 8.859999656677246,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "enrolment",
+      "start": 9.220000267028809,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "status",
+      "start": 9.680000305175781,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "and",
+      "start": 10.140000343322754,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "access",
+      "start": 10.800000190734863,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "dates",
+      "start": 11.199999809265137,
+      "end": 11.579999923706055
+    }
+  ]
+}

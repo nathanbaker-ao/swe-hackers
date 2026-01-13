@@ -1,0 +1,100 @@
+{
+  "storyId": "analytics-flow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Event Storage. Events are stored with timestamps in the analytics subcollection. Time-series data ready for aggregation.",
+  "duration": 9.260000228881836,
+  "words": [
+    {
+      "word": "Event",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "storage",
+      "start": 0.5600000023841858,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Events",
+      "start": 2.2200000286102295,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "are",
+      "start": 2.2200000286102295,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "stored",
+      "start": 2.5999999046325684,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "with",
+      "start": 2.819999933242798,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "timestamps",
+      "start": 3.2200000286102295,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "in",
+      "start": 3.9000000953674316,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "the",
+      "start": 4.199999809265137,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "Analytics",
+      "start": 4.420000076293945,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "sub",
+      "start": 4.920000076293945,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "collection",
+      "start": 5.440000057220459,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "Time",
+      "start": 6.519999980926514,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "series",
+      "start": 6.699999809265137,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "data",
+      "start": 7.079999923706055,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "ready",
+      "start": 7.900000095367432,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "for",
+      "start": 7.940000057220459,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "aggregation",
+      "start": 8.420000076293945,
+      "end": 9.039999961853027
+    }
+  ]
+}

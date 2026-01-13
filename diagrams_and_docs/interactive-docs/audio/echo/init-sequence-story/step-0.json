@@ -1,0 +1,130 @@
+{
+  "storyId": "init-sequence-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "FirebaseApp.init(). The initialization chain begins! FirebaseApp.init runs first, setting up the Firebase SDK and making the database available to all other services.",
+  "duration": 12.859999656677246,
+  "words": [
+    {
+      "word": "FirebaseApp",
+      "start": 0,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "init",
+      "start": 0.8600000143051147,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "The",
+      "start": 1.8300000429153442,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "initialization",
+      "start": 2.299999952316284,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "chain",
+      "start": 3.0399999618530273,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "begins",
+      "start": 3.4800000190734863,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "FirebaseApp",
+      "start": 4.900000095367432,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "init",
+      "start": 5.440000057220459,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "runs",
+      "start": 6.059999942779541,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "first",
+      "start": 6.659999847412109,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "setting",
+      "start": 7.760000228881836,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "up",
+      "start": 7.760000228881836,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 7.960000038146973,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "Firebase",
+      "start": 8.15999984741211,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "SDK",
+      "start": 8.600000381469727,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "and",
+      "start": 9.220000267028809,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "making",
+      "start": 9.739999771118164,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "the",
+      "start": 9.979999542236328,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "database",
+      "start": 10.319999694824219,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "available",
+      "start": 10.640000343322754,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "to",
+      "start": 11.039999961853027,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "all",
+      "start": 11.399999618530273,
+      "end": 11.739999771118164
+    },
+    {
+      "word": "other",
+      "start": 11.739999771118164,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "services",
+      "start": 12.100000381469727,
+      "end": 12.460000038146973
+    }
+  ]
+}

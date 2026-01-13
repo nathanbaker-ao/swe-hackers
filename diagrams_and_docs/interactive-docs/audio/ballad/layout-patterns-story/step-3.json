@@ -1,0 +1,110 @@
+{
+  "storyId": "layout-patterns-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Marketing Layout. Marketing pages use full-width sections. Hero at the top, feature grids, testimonials, call-to-action. Scroll storytelling!",
+  "duration": 12.640000343322754,
+  "words": [
+    {
+      "word": "Marketing",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "layout",
+      "start": 0.699999988079071,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Marketing",
+      "start": 2.5799999237060547,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "pages",
+      "start": 2.5799999237060547,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "use",
+      "start": 2.9600000381469727,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "full",
+      "start": 3.319999933242798,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "width",
+      "start": 3.799999952316284,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "sections",
+      "start": 4.119999885559082,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "Hero",
+      "start": 5.619999885559082,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "at",
+      "start": 5.619999885559082,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "the",
+      "start": 5.820000171661377,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "top",
+      "start": 6.179999828338623,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "Feature",
+      "start": 7.139999866485596,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "grids",
+      "start": 7.239999771118164,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "Testimonials",
+      "start": 8.380000114440918,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "Call",
+      "start": 9.520000457763672,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "to",
+      "start": 9.539999961853027,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "action",
+      "start": 9.819999694824219,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "Scroll",
+      "start": 11.15999984741211,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "storytelling",
+      "start": 11.279999732971191,
+      "end": 12.0600004196167
+    }
+  ]
+}

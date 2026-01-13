@@ -1,0 +1,85 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-6",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Daily Challenges Data. Streak calculation uses dailyChallenges. Each dated document proves that day's activity.",
+  "duration": 9.3100004196167,
+  "words": [
+    {
+      "word": "Scaly",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "challenges",
+      "start": 0.4000000059604645,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "data",
+      "start": 0.8399999737739563,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Street",
+      "start": 2.4000000953674316,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "calculation",
+      "start": 2.4800000190734863,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "uses",
+      "start": 3.0999999046325684,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "daily",
+      "start": 3.7799999713897705,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "challenges",
+      "start": 4.28000020980835,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "Each",
+      "start": 5.800000190734863,
+      "end": 6
+    },
+    {
+      "word": "dated",
+      "start": 6,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "document",
+      "start": 6.400000095367432,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "proves",
+      "start": 6.940000057220459,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "that",
+      "start": 7.699999809265137,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "day's",
+      "start": 8.100000381469727,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "activity",
+      "start": 8.699999809265137,
+      "end": 9
+    }
+  ]
+}

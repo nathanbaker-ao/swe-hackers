@@ -1,0 +1,105 @@
+{
+  "storyId": "access-control-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Access Granted!. All checks passed! The user can access the content. Page renders, learning begins. The flow is complete!",
+  "duration": 10.600000381469727,
+  "words": [
+    {
+      "word": "Access",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "granted",
+      "start": 0.47999998927116394,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "All",
+      "start": 1.4800000190734863,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "checks",
+      "start": 1.7200000286102295,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "passed",
+      "start": 1.9800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "The",
+      "start": 2.9600000381469727,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "user",
+      "start": 3.0999999046325684,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "can",
+      "start": 3.319999933242798,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "access",
+      "start": 3.7200000286102295,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "the",
+      "start": 4.019999980926514,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "content",
+      "start": 4.28000020980835,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "Page",
+      "start": 5.679999828338623,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "renders",
+      "start": 5.679999828338623,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "Learning",
+      "start": 6.940000057220459,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "begins",
+      "start": 6.980000019073486,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "The",
+      "start": 8.260000228881836,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "flow",
+      "start": 8.460000038146973,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "is",
+      "start": 8.800000190734863,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "complete",
+      "start": 9.380000114440918,
+      "end": 9.760000228881836
+    }
+  ]
+}

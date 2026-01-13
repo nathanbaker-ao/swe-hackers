@@ -1,0 +1,95 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Course Grid. The course grid shows enrolled courses with progress bars. Data flows from courseProgress documents.",
+  "duration": 8.65999984741211,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "Grid",
+      "start": 0.5199999809265137,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "The",
+      "start": 0.8199999928474426,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "course",
+      "start": 1.5199999809265137,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "grid",
+      "start": 1.8200000524520874,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "shows",
+      "start": 2.0999999046325684,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "enrolled",
+      "start": 2.5999999046325684,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "courses",
+      "start": 3.200000047683716,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "with",
+      "start": 3.559999942779541,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "progress",
+      "start": 3.9800000190734863,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "bars",
+      "start": 4.420000076293945,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "Data",
+      "start": 5.940000057220459,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "flows",
+      "start": 5.940000057220459,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "from",
+      "start": 6.300000190734863,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "course",
+      "start": 6.679999828338623,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "progress",
+      "start": 7.079999923706055,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "documents",
+      "start": 7.539999961853027,
+      "end": 8
+    }
+  ]
+}

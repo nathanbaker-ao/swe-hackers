@@ -1,0 +1,110 @@
+{
+  "storyId": "component-hierarchy-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Button Component. Buttons have a base class with variants. Primary buttons stand out with accent colors. Secondary buttons are subtle.",
+  "duration": 11.609999656677246,
+  "words": [
+    {
+      "word": "Button",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "component",
+      "start": 0.5199999809265137,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Buttons",
+      "start": 2.5199999809265137,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "have",
+      "start": 2.5199999809265137,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "a",
+      "start": 2.7799999713897705,
+      "end": 3
+    },
+    {
+      "word": "base",
+      "start": 3,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "class",
+      "start": 3.3399999141693115,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "with",
+      "start": 3.619999885559082,
+      "end": 4
+    },
+    {
+      "word": "variants",
+      "start": 4,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "Primary",
+      "start": 5.920000076293945,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "buttons",
+      "start": 5.920000076293945,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "stand",
+      "start": 6.380000114440918,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "out",
+      "start": 7.099999904632568,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "with",
+      "start": 7.440000057220459,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "accent",
+      "start": 7.840000152587891,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "colours",
+      "start": 8.180000305175781,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "Secondary",
+      "start": 9.760000228881836,
+      "end": 10.0600004196167
+    },
+    {
+      "word": "buttons",
+      "start": 10.0600004196167,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "are",
+      "start": 10.359999656677246,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "subtle",
+      "start": 11.079999923706055,
+      "end": 11.319999694824219
+    }
+  ]
+}

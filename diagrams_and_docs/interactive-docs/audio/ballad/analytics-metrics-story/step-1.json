@@ -1,0 +1,115 @@
+{
+  "storyId": "analytics-metrics-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Learning Velocity. calcVelocity computes learning speed. Lessons completed per week, multiplied by 20, gives a 0-100 velocity score.",
+  "duration": 14.350000381469727,
+  "words": [
+    {
+      "word": "Learning",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "velocity",
+      "start": 0.6600000262260437,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "Calc",
+      "start": 2.5799999237060547,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "velocity",
+      "start": 2.7200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "computes",
+      "start": 3.2200000286102295,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "learning",
+      "start": 4.159999847412109,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "speed",
+      "start": 4.840000152587891,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "Lessons",
+      "start": 6.440000057220459,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "completed",
+      "start": 6.760000228881836,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "per",
+      "start": 7.300000190734863,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "week",
+      "start": 7.739999771118164,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "multiplied",
+      "start": 8.020000457763672,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "by",
+      "start": 8.9399995803833,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "20",
+      "start": 9.359999656677246,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "gives",
+      "start": 9.880000114440918,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "a",
+      "start": 10.9399995803833,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "0",
+      "start": 11.479999542236328,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "to",
+      "start": 11.720000267028809,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "100",
+      "start": 12.180000305175781,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "velocity",
+      "start": 12.819999694824219,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "score",
+      "start": 13.600000381469727,
+      "end": 13.9399995803833
+    }
+  ]
+}

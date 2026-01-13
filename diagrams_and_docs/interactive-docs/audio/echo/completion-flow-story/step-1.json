@@ -1,0 +1,90 @@
+{
+  "storyId": "completion-flow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Already Complete?. Before celebrating, we check if the lesson was already marked complete. No duplicate celebrations!",
+  "duration": 8.15999984741211,
+  "words": [
+    {
+      "word": "Already",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "complete",
+      "start": 0.4000000059604645,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Before",
+      "start": 1.600000023841858,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "celebrating",
+      "start": 1.8799999952316284,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "we",
+      "start": 2.859999895095825,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "check",
+      "start": 3.0799999237060547,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "if",
+      "start": 3.3399999141693115,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.5799999237060547,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "lesson",
+      "start": 3.7799999713897705,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "was",
+      "start": 4.039999961853027,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "already",
+      "start": 4.380000114440918,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "marked",
+      "start": 4.960000038146973,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "complete",
+      "start": 5.239999771118164,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "No",
+      "start": 6.440000057220459,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "duplicate",
+      "start": 6.599999904632568,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "celebrations",
+      "start": 7.099999904632568,
+      "end": 7.639999866485596
+    }
+  ]
+}

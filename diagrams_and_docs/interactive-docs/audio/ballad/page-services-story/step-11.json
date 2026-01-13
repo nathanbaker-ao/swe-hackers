@@ -1,0 +1,95 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-11",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "lesson-integration.js. lesson-integration.js orchestrates everything on lesson pages. It coordinates all the trackers and services together!",
+  "duration": 13.510000228881836,
+  "words": [
+    {
+      "word": "LessonIntegration",
+      "start": 0,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "js",
+      "start": 1.600000023841858,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "LessonIntegration",
+      "start": 3.700000047683716,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "js",
+      "start": 4.800000190734863,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "orchestrates",
+      "start": 5.699999809265137,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "everything",
+      "start": 6.539999961853027,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "on",
+      "start": 7.28000020980835,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "lesson",
+      "start": 7.78000020980835,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "pages",
+      "start": 8.079999923706055,
+      "end": 8.5
+    },
+    {
+      "word": "It",
+      "start": 9.319999694824219,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "coordinates",
+      "start": 9.399999618530273,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "all",
+      "start": 9.920000076293945,
+      "end": 10.5
+    },
+    {
+      "word": "the",
+      "start": 10.5,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "trackers",
+      "start": 10.920000076293945,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "and",
+      "start": 11.180000305175781,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "services",
+      "start": 11.640000343322754,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "together",
+      "start": 12.100000381469727,
+      "end": 12.859999656677246
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "storyId": "entity-relations-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Activity Attempts. Users make attempts on activities. A single quiz might have multiple attempts as users retry for better scores.",
+  "duration": 11.520000457763672,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "attempts",
+      "start": 0.8399999737739563,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Users",
+      "start": 2.5399999618530273,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "make",
+      "start": 2.5399999618530273,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "attempts",
+      "start": 2.9200000762939453,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "on",
+      "start": 3.380000114440918,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "activities",
+      "start": 3.8399999141693115,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "A",
+      "start": 5.099999904632568,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "single",
+      "start": 5.28000020980835,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "quiz",
+      "start": 5.599999904632568,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "might",
+      "start": 5.940000057220459,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "have",
+      "start": 6.519999980926514,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "multiple",
+      "start": 6.840000152587891,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "attempts",
+      "start": 7.340000152587891,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "as",
+      "start": 7.78000020980835,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "users",
+      "start": 8.300000190734863,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "retry",
+      "start": 8.640000343322754,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "for",
+      "start": 9.279999732971191,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "better",
+      "start": 9.84000015258789,
+      "end": 10.119999885559082
+    },
+    {
+      "word": "scores",
+      "start": 10.119999885559082,
+      "end": 10.5600004196167
+    }
+  ]
+}

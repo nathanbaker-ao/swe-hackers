@@ -1,0 +1,95 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Quiz Click Events. When you click a quiz answer, interaction events fire. Time to validate your knowledge!",
+  "duration": 7.650000095367432,
+  "words": [
+    {
+      "word": "Quiz",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Click",
+      "start": 0.41999998688697815,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Events",
+      "start": 0.7400000095367432,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "When",
+      "start": 1.1200000047683716,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "you",
+      "start": 1.840000033378601,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "click",
+      "start": 2.0199999809265137,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "a",
+      "start": 2.180000066757202,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "quiz",
+      "start": 2.4000000953674316,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "answer",
+      "start": 2.5399999618530273,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "interaction",
+      "start": 3.559999942779541,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "events",
+      "start": 3.9600000381469727,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "fire",
+      "start": 4.300000190734863,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "Time",
+      "start": 5.760000228881836,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "to",
+      "start": 5.840000152587891,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "validate",
+      "start": 6.579999923706055,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "your",
+      "start": 6.579999923706055,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "knowledge",
+      "start": 6.920000076293945,
+      "end": 7.300000190734863
+    }
+  ]
+}

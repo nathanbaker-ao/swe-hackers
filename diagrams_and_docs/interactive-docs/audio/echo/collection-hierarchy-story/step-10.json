@@ -1,0 +1,95 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-10",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Lesson Document. Each lesson document stores detailed progress—viewed sections array, timestamps, scroll position, and completion percentage.",
+  "duration": 9.960000038146973,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "document",
+      "start": 0.5,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Each",
+      "start": 0.8799999952316284,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "lesson",
+      "start": 1.659999966621399,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "document",
+      "start": 2.180000066757202,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "stores",
+      "start": 2.7200000286102295,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "detailed",
+      "start": 3.059999942779541,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "progress",
+      "start": 3.700000047683716,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "viewed",
+      "start": 5.019999980926514,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "sections",
+      "start": 5.079999923706055,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "array",
+      "start": 5.519999980926514,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "timestamps",
+      "start": 6.260000228881836,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "scroll",
+      "start": 7.519999980926514,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "position",
+      "start": 7.559999942779541,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "and",
+      "start": 8.420000076293945,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "completion",
+      "start": 8.720000267028809,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "percentage",
+      "start": 9.079999923706055,
+      "end": 9.680000305175781
+    }
+  ]
+}

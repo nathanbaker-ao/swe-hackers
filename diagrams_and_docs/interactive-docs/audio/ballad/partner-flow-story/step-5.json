@@ -1,0 +1,130 @@
+{
+  "storyId": "partner-flow-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Course Access Check. Final gate—course access. Does the user have this specific course in their access list? All gates cleared means access granted!",
+  "duration": 14.5600004196167,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "access",
+      "start": 0.6600000262260437,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "check",
+      "start": 1.2000000476837158,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "Final",
+      "start": 2.7799999713897705,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "gate",
+      "start": 2.799999952316284,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "Course",
+      "start": 4.039999961853027,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "access",
+      "start": 4.079999923706055,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "Does",
+      "start": 5.739999771118164,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "the",
+      "start": 5.900000095367432,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "user",
+      "start": 6.139999866485596,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "have",
+      "start": 6.380000114440918,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "this",
+      "start": 6.659999847412109,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "specific",
+      "start": 6.980000019073486,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "course",
+      "start": 7.539999961853027,
+      "end": 8
+    },
+    {
+      "word": "in",
+      "start": 8,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "their",
+      "start": 8.319999694824219,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "access",
+      "start": 8.699999809265137,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "list",
+      "start": 9.140000343322754,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "All",
+      "start": 10.579999923706055,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "gates",
+      "start": 10.84000015258789,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "cleared",
+      "start": 11.079999923706055,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "means",
+      "start": 11.520000457763672,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "access",
+      "start": 12.300000190734863,
+      "end": 13.020000457763672
+    },
+    {
+      "word": "granted",
+      "start": 13.020000457763672,
+      "end": 13.699999809265137
+    }
+  ]
+}

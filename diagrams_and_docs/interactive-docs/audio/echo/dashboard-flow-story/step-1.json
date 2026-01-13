@@ -1,0 +1,130 @@
+{
+  "storyId": "dashboard-flow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Show Loading Screen. First, we show a loading screen. Content is hidden until we confirm the user is authenticated. No flashing of unauthorized content!",
+  "duration": 11.350000381469727,
+  "words": [
+    {
+      "word": "Show",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "loading",
+      "start": 0.47999998927116394,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "screen",
+      "start": 0.7599999904632568,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "First",
+      "start": 1.2400000095367432,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "we",
+      "start": 2.380000114440918,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "show",
+      "start": 2.619999885559082,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "a",
+      "start": 2.740000009536743,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "loading",
+      "start": 2.940000057220459,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "screen",
+      "start": 3.200000047683716,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "Content",
+      "start": 4.420000076293945,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "is",
+      "start": 4.420000076293945,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "hidden",
+      "start": 4.679999828338623,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "until",
+      "start": 4.840000152587891,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "we",
+      "start": 5.360000133514404,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "confirm",
+      "start": 5.679999828338623,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 6.079999923706055,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "user",
+      "start": 6.519999980926514,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "is",
+      "start": 6.699999809265137,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "authenticated",
+      "start": 7.059999942779541,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "No",
+      "start": 8.399999618530273,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "flashing",
+      "start": 8.579999923706055,
+      "end": 9
+    },
+    {
+      "word": "of",
+      "start": 9,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "unauthorized",
+      "start": 9.720000267028809,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "content",
+      "start": 10.300000190734863,
+      "end": 10.760000228881836
+    }
+  ]
+}

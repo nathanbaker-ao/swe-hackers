@@ -1,0 +1,120 @@
+{
+  "storyId": "progress-flow-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Parent Field Write. Second write updates the parent courseProgress document. The lessons field gives dashboard a quick summary without deep queries!",
+  "duration": 10.649999618530273,
+  "words": [
+    {
+      "word": "Parent",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "field",
+      "start": 0.4399999976158142,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "right",
+      "start": 0.8199999928474426,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Second",
+      "start": 2.0799999237060547,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "right",
+      "start": 2.0799999237060547,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "updates",
+      "start": 2.380000114440918,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "the",
+      "start": 2.9000000953674316,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "parent",
+      "start": 3.359999895095825,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "course",
+      "start": 3.5799999237060547,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "progress",
+      "start": 4.059999942779541,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "document",
+      "start": 4.559999942779541,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "The",
+      "start": 5.78000020980835,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "Lessons",
+      "start": 6.059999942779541,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "field",
+      "start": 6.340000152587891,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "gives",
+      "start": 6.739999771118164,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "Dashboard",
+      "start": 7.099999904632568,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "a",
+      "start": 7.800000190734863,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "quick",
+      "start": 8.260000228881836,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "summary",
+      "start": 8.579999923706055,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "without",
+      "start": 8.979999542236328,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "deep",
+      "start": 9.5600004196167,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "queries",
+      "start": 9.979999542236328,
+      "end": 10.359999656677246
+    }
+  ]
+}

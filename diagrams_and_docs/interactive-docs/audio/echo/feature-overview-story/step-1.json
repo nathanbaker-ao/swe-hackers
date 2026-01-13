@@ -1,0 +1,120 @@
+{
+  "storyId": "feature-overview-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partner List. The partner list shows all organizations at a glance. Filter by type, status, or search by name. Your partnership CRM!",
+  "duration": 12.640000343322754,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "list",
+      "start": 0.6200000047683716,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "The",
+      "start": 1.559999942779541,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "partner",
+      "start": 1.7000000476837158,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "list",
+      "start": 2.0799999237060547,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "shows",
+      "start": 2.5799999237060547,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "all",
+      "start": 3.0399999618530273,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "organizations",
+      "start": 3.700000047683716,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "at",
+      "start": 4.559999942779541,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "a",
+      "start": 4.980000019073486,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "glance",
+      "start": 5.639999866485596,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "Filter",
+      "start": 6.539999961853027,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "by",
+      "start": 6.539999961853027,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "type",
+      "start": 6.900000095367432,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "status",
+      "start": 8.239999771118164,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "or",
+      "start": 8.260000228881836,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "search",
+      "start": 8.880000114440918,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "by",
+      "start": 9.140000343322754,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "name",
+      "start": 9.600000381469727,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "Your",
+      "start": 10.640000343322754,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "partnership",
+      "start": 10.920000076293945,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "CRM",
+      "start": 11.5600004196167,
+      "end": 12.460000038146973
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "storyId": "quiz-structure-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Question Text. The question is displayed prominently. Clear typography, adequate spacing—the user knows exactly what to answer.",
+  "duration": 9.859999656677246,
+  "words": [
+    {
+      "word": "Question",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "text",
+      "start": 0.5799999833106995,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "The",
+      "start": 1.5199999809265137,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "question",
+      "start": 1.5800000429153442,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "is",
+      "start": 1.9800000190734863,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "displayed",
+      "start": 2.3399999141693115,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "prominently",
+      "start": 2.8399999141693115,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "Clear",
+      "start": 4.480000019073486,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "typography",
+      "start": 4.480000019073486,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "Adequate",
+      "start": 6.039999961853027,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "spacing",
+      "start": 6.21999979019165,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "The",
+      "start": 7.099999904632568,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "user",
+      "start": 7.199999809265137,
+      "end": 7.5
+    },
+    {
+      "word": "knows",
+      "start": 7.5,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "exactly",
+      "start": 7.880000114440918,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "what",
+      "start": 8.600000381469727,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "to",
+      "start": 9.020000457763672,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "answer",
+      "start": 9.520000457763672,
+      "end": 9.520000457763672
+    }
+  ]
+}

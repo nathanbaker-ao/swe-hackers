@@ -1,0 +1,110 @@
+{
+  "storyId": "tracking-services-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "activityAttempts Firestore. Activity completion data flows to Firestore's activityAttempts collection. Every quiz answer and interaction is permanently recorded.",
+  "duration": 11.4399995803833,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "Attempts",
+      "start": 0.6800000071525574,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "Firestore",
+      "start": 1.2000000476837158,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "Activity",
+      "start": 2.619999885559082,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "completion",
+      "start": 2.619999885559082,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "data",
+      "start": 3.119999885559082,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "flows",
+      "start": 3.5399999618530273,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "to",
+      "start": 3.819999933242798,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "Firestore's",
+      "start": 4.340000152587891,
+      "end": 4.869999885559082
+    },
+    {
+      "word": "Activity",
+      "start": 5.380000114440918,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "Attempts",
+      "start": 5.380000114440918,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "collection",
+      "start": 6.320000171661377,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "Every",
+      "start": 6.960000038146973,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "quiz",
+      "start": 7.320000171661377,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "answer",
+      "start": 7.659999847412109,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "and",
+      "start": 8.199999809265137,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "interaction",
+      "start": 8.800000190734863,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "is",
+      "start": 9.300000190734863,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "permanently",
+      "start": 9.880000114440918,
+      "end": 10.5
+    },
+    {
+      "word": "recorded",
+      "start": 10.5,
+      "end": 11.0600004196167
+    }
+  ]
+}

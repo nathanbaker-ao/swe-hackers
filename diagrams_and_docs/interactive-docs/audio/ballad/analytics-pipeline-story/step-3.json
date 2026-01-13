@@ -1,0 +1,100 @@
+{
+  "storyId": "analytics-pipeline-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "calculateMastery(). calculateMastery averages quiz scores. Correct answers divided by total attempts gives us a mastery percentage.",
+  "duration": 11.949999809265137,
+  "words": [
+    {
+      "word": "Calculate",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "mastery",
+      "start": 0.6000000238418579,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Calculate",
+      "start": 2.5999999046325684,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "mastery",
+      "start": 2.799999952316284,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "averages",
+      "start": 3.259999990463257,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "quiz",
+      "start": 4.320000171661377,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "scores",
+      "start": 4.900000095367432,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "Correct",
+      "start": 6.460000038146973,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "answers",
+      "start": 6.460000038146973,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "divided",
+      "start": 7.019999980926514,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "by",
+      "start": 7.679999828338623,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "total",
+      "start": 8.0600004196167,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "attempts",
+      "start": 8.399999618530273,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "gives",
+      "start": 8.960000038146973,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "us",
+      "start": 9.699999809265137,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "a",
+      "start": 10.079999923706055,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "mastery",
+      "start": 10.9399995803833,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "percentage",
+      "start": 10.9399995803833,
+      "end": 11.5
+    }
+  ]
+}

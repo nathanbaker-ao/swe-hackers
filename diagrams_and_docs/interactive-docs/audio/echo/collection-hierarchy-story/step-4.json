@@ -1,0 +1,120 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Course Progress. The courseProgress subcollection tracks progress per course. Each course the user enrolls in gets its own document here.",
+  "duration": 12.15999984741211,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "Progress",
+      "start": 0.5799999833106995,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "The",
+      "start": 2.0999999046325684,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "Course",
+      "start": 2.5399999618530273,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "Progress",
+      "start": 2.9200000762939453,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "sub",
+      "start": 3.299999952316284,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "collection",
+      "start": 4.159999847412109,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "tracks",
+      "start": 4.360000133514404,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "progress",
+      "start": 5.059999942779541,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "per",
+      "start": 5.71999979019165,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "course",
+      "start": 6.320000171661377,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "Each",
+      "start": 7.480000019073486,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "course",
+      "start": 7.78000020980835,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "the",
+      "start": 8.119999885559082,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "user",
+      "start": 8.34000015258789,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "enrolls",
+      "start": 8.65999984741211,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "in",
+      "start": 9.239999771118164,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "gets",
+      "start": 9.739999771118164,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "its",
+      "start": 9.9399995803833,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "own",
+      "start": 10.260000228881836,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "document",
+      "start": 10.859999656677246,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "here",
+      "start": 11.34000015258789,
+      "end": 11.739999771118164
+    }
+  ]
+}

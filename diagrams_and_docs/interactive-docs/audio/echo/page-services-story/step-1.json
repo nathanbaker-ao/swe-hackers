@@ -1,0 +1,110 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "navbar.js. navbar.js is the simplest service—just navigation handling. It's the only script marketing pages need to load!",
+  "duration": 11.0600004196167,
+  "words": [
+    {
+      "word": "Navbar",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "js",
+      "start": 0.7400000095367432,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Navbar",
+      "start": 2.3399999141693115,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "js",
+      "start": 2.5799999237060547,
+      "end": 3
+    },
+    {
+      "word": "is",
+      "start": 3,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "the",
+      "start": 3.259999990463257,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "simplest",
+      "start": 3.559999942779541,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "service",
+      "start": 3.9800000190734863,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "just",
+      "start": 5.260000228881836,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "navigation",
+      "start": 5.71999979019165,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "handling",
+      "start": 6.519999980926514,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "It's",
+      "start": 7.599999904632568,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "the",
+      "start": 7.820000171661377,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "only",
+      "start": 8.140000343322754,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "script",
+      "start": 8.640000343322754,
+      "end": 9
+    },
+    {
+      "word": "marketing",
+      "start": 9,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "pages",
+      "start": 9.699999809265137,
+      "end": 10.0600004196167
+    },
+    {
+      "word": "need",
+      "start": 10.0600004196167,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 10.420000076293945,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "load",
+      "start": 10.859999656677246,
+      "end": 10.859999656677246
+    }
+  ]
+}

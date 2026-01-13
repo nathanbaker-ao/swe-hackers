@@ -1,0 +1,85 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Activity Attempts Data. Mastery reads from activityAttempts. Each attempt's score contributes to the average.",
+  "duration": 8.850000381469727,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Attempts",
+      "start": 0.699999988079071,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "data",
+      "start": 1.3600000143051147,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Mastery",
+      "start": 2.4800000190734863,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "reads",
+      "start": 2.7799999713897705,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "from",
+      "start": 3.119999885559082,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "Activity",
+      "start": 3.4800000190734863,
+      "end": 4
+    },
+    {
+      "word": "Attempts",
+      "start": 4,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "Each",
+      "start": 5.239999771118164,
+      "end": 5.5
+    },
+    {
+      "word": "attempt's",
+      "start": 5.5,
+      "end": 6.5
+    },
+    {
+      "word": "score",
+      "start": 6.5,
+      "end": 6.5
+    },
+    {
+      "word": "contributes",
+      "start": 6.5,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "to",
+      "start": 7.480000019073486,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "the",
+      "start": 7.860000133514404,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "average",
+      "start": 8.100000381469727,
+      "end": 8.420000076293945
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "storyId": "feature-overview-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Partner Types. Partners come in many forms—schools, churches, foundations, businesses, community organizations. Each type has unique needs.",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Partner",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "types",
+      "start": 0.46000000834465027,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Partners",
+      "start": 1.7599999904632568,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "come",
+      "start": 1.7599999904632568,
+      "end": 2
+    },
+    {
+      "word": "in",
+      "start": 2,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "many",
+      "start": 2.2200000286102295,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "forms",
+      "start": 2.559999942779541,
+      "end": 3
+    },
+    {
+      "word": "Schools",
+      "start": 3.940000057220459,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "churches",
+      "start": 4.71999979019165,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "foundations",
+      "start": 5.699999809265137,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "businesses",
+      "start": 6.340000152587891,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "community",
+      "start": 6.900000095367432,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "organizations",
+      "start": 7.260000228881836,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "Each",
+      "start": 8.680000305175781,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "type",
+      "start": 8.760000228881836,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "has",
+      "start": 9.0600004196167,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "unique",
+      "start": 9.34000015258789,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "needs",
+      "start": 9.720000267028809,
+      "end": 10.119999885559082
+    }
+  ]
+}

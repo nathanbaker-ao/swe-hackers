@@ -1,0 +1,115 @@
+{
+  "storyId": "registration-flow-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Welcome to Dashboard. Registration complete! Auth state changes, listeners fire, and the user lands on their brand new dashboard. Learning begins!",
+  "duration": 11.710000038146973,
+  "words": [
+    {
+      "word": "Welcome",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "to",
+      "start": 0.5,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "Dashboard",
+      "start": 0.800000011920929,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "Registration",
+      "start": 2.200000047683716,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "complete",
+      "start": 2.559999942779541,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "Auth",
+      "start": 3.9200000762939453,
+      "end": 4
+    },
+    {
+      "word": "state",
+      "start": 4,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "changes",
+      "start": 4.300000190734863,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "listeners",
+      "start": 5.519999980926514,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "fire",
+      "start": 5.519999980926514,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "and",
+      "start": 6.480000019073486,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "the",
+      "start": 6.559999942779541,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "user",
+      "start": 6.760000228881836,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "lands",
+      "start": 7.119999885559082,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "on",
+      "start": 7.440000057220459,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "their",
+      "start": 7.78000020980835,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "brand",
+      "start": 7.960000038146973,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "new",
+      "start": 8.479999542236328,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "dashboard",
+      "start": 8.880000114440918,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "Learning",
+      "start": 10.479999542236328,
+      "end": 10.5
+    },
+    {
+      "word": "begins",
+      "start": 10.5,
+      "end": 11.119999885559082
+    }
+  ]
+}

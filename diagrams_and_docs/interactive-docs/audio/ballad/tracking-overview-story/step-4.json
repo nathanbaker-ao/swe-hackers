@@ -1,0 +1,100 @@
+{
+  "storyId": "tracking-overview-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "UI Updates. As data changes, UI updates follow. Progress bars fill, completion indicators appear, toast notifications celebrate achievements!",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "UI",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "updates",
+      "start": 0.5799999833106995,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "As",
+      "start": 1.9600000381469727,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "data",
+      "start": 2.059999942779541,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "changes",
+      "start": 2.4200000762939453,
+      "end": 3
+    },
+    {
+      "word": "UI",
+      "start": 3.819999933242798,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "updates",
+      "start": 3.9200000762939453,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "follow",
+      "start": 4.519999980926514,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "Progress",
+      "start": 6.159999847412109,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "bars",
+      "start": 6.159999847412109,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "fill",
+      "start": 6.519999980926514,
+      "end": 7
+    },
+    {
+      "word": "Completion",
+      "start": 7.900000095367432,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "indicators",
+      "start": 8.15999984741211,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "appear",
+      "start": 8.739999771118164,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "Toast",
+      "start": 10.460000038146973,
+      "end": 10.600000381469727
+    },
+    {
+      "word": "notifications",
+      "start": 10.600000381469727,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "celebrate",
+      "start": 11.680000305175781,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "achievements",
+      "start": 12.65999984741211,
+      "end": 13.239999771118164
+    }
+  ]
+}

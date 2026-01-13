@@ -1,0 +1,120 @@
+{
+  "storyId": "feature-overview-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Course Offerings. Partners can offer our four free courses, request custom curriculum, run live cohorts, or provide digital access to their members.",
+  "duration": 10.600000381469727,
+  "words": [
+    {
+      "word": "Course",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "offerings",
+      "start": 0.46000000834465027,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Partners",
+      "start": 1.9800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "can",
+      "start": 1.9800000190734863,
+      "end": 2.2799999713897705
+    },
+    {
+      "word": "offer",
+      "start": 2.2799999713897705,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "our",
+      "start": 2.5399999618530273,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "four",
+      "start": 2.940000057220459,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "free",
+      "start": 3.259999990463257,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "courses",
+      "start": 3.5399999618530273,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "request",
+      "start": 4.739999771118164,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "custom",
+      "start": 4.739999771118164,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "curriculum",
+      "start": 5.260000228881836,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "run",
+      "start": 6.559999942779541,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "live",
+      "start": 6.559999942779541,
+      "end": 7
+    },
+    {
+      "word": "cohorts",
+      "start": 7,
+      "end": 7.5
+    },
+    {
+      "word": "or",
+      "start": 7.679999828338623,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "provide",
+      "start": 8.079999923706055,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "digital",
+      "start": 8.420000076293945,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "access",
+      "start": 8.960000038146973,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "to",
+      "start": 9.399999618530273,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "their",
+      "start": 9.699999809265137,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "members",
+      "start": 9.899999618530273,
+      "end": 10.199999809265137
+    }
+  ]
+}

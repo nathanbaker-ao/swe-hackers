@@ -1,0 +1,120 @@
+{
+  "storyId": "access-check-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Access Request. A user wants a protected resource. The RBAC system activates—a series of checks to determine if access is allowed.",
+  "duration": 9.90999984741211,
+  "words": [
+    {
+      "word": "Access",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "Request",
+      "start": 0.5799999833106995,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "A",
+      "start": 1.1399999856948853,
+      "end": 1.6799999475479126
+    },
+    {
+      "word": "user",
+      "start": 1.6799999475479126,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "wants",
+      "start": 1.899999976158142,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "a",
+      "start": 2.2200000286102295,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "protected",
+      "start": 2.4800000190734863,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "resource",
+      "start": 2.859999895095825,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "The",
+      "start": 4.139999866485596,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "RBAC",
+      "start": 4.179999828338623,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "system",
+      "start": 4.820000171661377,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "activates",
+      "start": 5.380000114440918,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "a",
+      "start": 5.980000019073486,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "series",
+      "start": 6.400000095367432,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "of",
+      "start": 6.639999866485596,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "checks",
+      "start": 7.239999771118164,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "to",
+      "start": 7.239999771118164,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "determine",
+      "start": 7.639999866485596,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "if",
+      "start": 7.980000019073486,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "access",
+      "start": 8.5600004196167,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "is",
+      "start": 8.880000114440918,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "allowed",
+      "start": 9.319999694824219,
+      "end": 9.579999923706055
+    }
+  ]
+}

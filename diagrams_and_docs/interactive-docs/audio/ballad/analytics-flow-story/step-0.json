@@ -1,0 +1,90 @@
+{
+  "storyId": "analytics-flow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Event Sources. Analytics events come from many sources. Student enrollments, cohort milestones, interactions, revenue—all tracked!",
+  "duration": 12.600000381469727,
+  "words": [
+    {
+      "word": "Event",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "sources",
+      "start": 0.7200000286102295,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Analytics",
+      "start": 2.440000057220459,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "events",
+      "start": 2.4600000381469727,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "come",
+      "start": 2.880000114440918,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "from",
+      "start": 3.3399999141693115,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "many",
+      "start": 3.7200000286102295,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "sources",
+      "start": 4.139999866485596,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "Student",
+      "start": 5.900000095367432,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "enrolments",
+      "start": 5.900000095367432,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "Cohort",
+      "start": 7.639999866485596,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "milestones",
+      "start": 7.639999866485596,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "Interactions",
+      "start": 9.140000343322754,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "Revenue",
+      "start": 10.539999961853027,
+      "end": 10.539999961853027
+    },
+    {
+      "word": "All",
+      "start": 11.100000381469727,
+      "end": 11.5
+    },
+    {
+      "word": "tracked",
+      "start": 11.5,
+      "end": 11.880000114440918
+    }
+  ]
+}

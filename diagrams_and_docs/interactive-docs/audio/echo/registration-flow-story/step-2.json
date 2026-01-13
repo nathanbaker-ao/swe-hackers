@@ -1,0 +1,125 @@
+{
+  "storyId": "registration-flow-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Create Auth Account. createUserWithEmailAndPassword creates the Firebase Auth account. A unique UID is generated—the user's permanent identifier.",
+  "duration": 10.84000015258789,
+  "words": [
+    {
+      "word": "Create",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "Auth",
+      "start": 0.5400000214576721,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "Account",
+      "start": 0.8199999928474426,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "Create",
+      "start": 1.2599999904632568,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "user",
+      "start": 2.0399999618530273,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "with",
+      "start": 2.4000000953674316,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "email",
+      "start": 2.6600000858306885,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "and",
+      "start": 3.0399999618530273,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "password",
+      "start": 3.319999933242798,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "creates",
+      "start": 3.759999990463257,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "the",
+      "start": 4.360000133514404,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "Firebase",
+      "start": 4.599999904632568,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "Auth",
+      "start": 5.099999904632568,
+      "end": 5.5
+    },
+    {
+      "word": "Account",
+      "start": 5.5,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "A",
+      "start": 6.380000114440918,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "unique",
+      "start": 6.460000038146973,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "UID",
+      "start": 6.840000152587891,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "is",
+      "start": 7.360000133514404,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "generated",
+      "start": 7.739999771118164,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "the",
+      "start": 8.65999984741211,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "user's",
+      "start": 8.800000190734863,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "permanent",
+      "start": 9.34000015258789,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "identifier",
+      "start": 9.739999771118164,
+      "end": 10.460000038146973
+    }
+  ]
+}

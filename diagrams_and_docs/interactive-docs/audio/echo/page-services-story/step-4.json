@@ -1,0 +1,105 @@
+{
+  "storyId": "page-services-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Dashboard. The dashboard is where users see their progress. It needs auth, data, analytics, and route protection—four services!",
+  "duration": 10.319999694824219,
+  "words": [
+    {
+      "word": "Dashboard",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "The",
+      "start": 1.2799999713897705,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "dashboard",
+      "start": 1.5199999809265137,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "is",
+      "start": 1.7400000095367432,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "where",
+      "start": 2.259999990463257,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "users",
+      "start": 2.4800000190734863,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "see",
+      "start": 2.819999933242798,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "their",
+      "start": 3.119999885559082,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "progress",
+      "start": 3.440000057220459,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "It",
+      "start": 4.480000019073486,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "needs",
+      "start": 4.480000019073486,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "auth",
+      "start": 4.679999828338623,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "data",
+      "start": 5.940000057220459,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "analytics",
+      "start": 6.940000057220459,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "and",
+      "start": 7.260000228881836,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "route",
+      "start": 7.679999828338623,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "protection",
+      "start": 7.760000228881836,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "Four",
+      "start": 8.859999656677246,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "services",
+      "start": 9.359999656677246,
+      "end": 9.760000228881836
+    }
+  ]
+}

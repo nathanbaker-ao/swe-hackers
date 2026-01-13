@@ -1,0 +1,110 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-9",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Activity Attempts. Every quiz answer, drag-drop completion, and code challenge is recorded in activityAttempts. Complete history of engagement!",
+  "duration": 10,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "Attempts",
+      "start": 0.7200000286102295,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "Every",
+      "start": 1.4199999570846558,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "quiz",
+      "start": 2.0399999618530273,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "answer",
+      "start": 2.3399999141693115,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "drag",
+      "start": 3.0999999046325684,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "drop",
+      "start": 3.259999990463257,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "completion",
+      "start": 3.5199999809265137,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "and",
+      "start": 4.28000020980835,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "code",
+      "start": 4.460000038146973,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "challenge",
+      "start": 4.760000228881836,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "is",
+      "start": 5.179999828338623,
+      "end": 5.5
+    },
+    {
+      "word": "recorded",
+      "start": 5.5,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "in",
+      "start": 5.940000057220459,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "Activity",
+      "start": 6.460000038146973,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "Attempts",
+      "start": 6.880000114440918,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "Complete",
+      "start": 8.199999809265137,
+      "end": 8.520000457763672
+    },
+    {
+      "word": "history",
+      "start": 8.520000457763672,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "of",
+      "start": 9.0600004196167,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "engagement",
+      "start": 9.460000038146973,
+      "end": 9.720000267028809
+    }
+  ]
+}

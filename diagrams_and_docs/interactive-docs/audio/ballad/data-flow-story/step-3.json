@@ -1,0 +1,115 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Event Handlers Fire. When users click, scroll, or type, event handlers spring into action. These JavaScript functions decide what happens next.",
+  "duration": 11.710000038146973,
+  "words": [
+    {
+      "word": "Event",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "handlers",
+      "start": 0.5799999833106995,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "fire",
+      "start": 0.9200000166893005,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "When",
+      "start": 2.0799999237060547,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "users",
+      "start": 2.2200000286102295,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "click",
+      "start": 2.680000066757202,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "scroll",
+      "start": 3.9000000953674316,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "or",
+      "start": 4.079999923706055,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "type",
+      "start": 4.300000190734863,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "event",
+      "start": 5.199999809265137,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "handlers",
+      "start": 5.539999961853027,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "spring",
+      "start": 5.960000038146973,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "into",
+      "start": 6.480000019073486,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "action",
+      "start": 6.820000171661377,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "These",
+      "start": 7.860000133514404,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "JavaScript",
+      "start": 8.119999885559082,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "functions",
+      "start": 8.699999809265137,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "decide",
+      "start": 9.199999809265137,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "what",
+      "start": 9.899999618530273,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "happens",
+      "start": 10.4399995803833,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "next",
+      "start": 10.819999694824219,
+      "end": 11.279999732971191
+    }
+  ]
+}

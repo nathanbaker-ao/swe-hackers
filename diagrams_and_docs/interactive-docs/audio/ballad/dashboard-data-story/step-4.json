@@ -1,0 +1,95 @@
+{
+  "storyId": "dashboard-data-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Lesson Progress Data. Velocity reads from lessonProgress collection. Completion timestamps let us calculate lessons per week.",
+  "duration": 10.75,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "progress",
+      "start": 0.7400000095367432,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "data",
+      "start": 1.2999999523162842,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "Velocity",
+      "start": 2.859999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "reads",
+      "start": 3.359999895095825,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "from",
+      "start": 3.9000000953674316,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "lesson",
+      "start": 4.360000133514404,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "progress",
+      "start": 4.619999885559082,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "collection",
+      "start": 5.119999885559082,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "Completion",
+      "start": 6.739999771118164,
+      "end": 7
+    },
+    {
+      "word": "timestamps",
+      "start": 7,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "let",
+      "start": 7.619999885559082,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "us",
+      "start": 8.180000305175781,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "calculate",
+      "start": 8.479999542236328,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "lessons",
+      "start": 9.020000457763672,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "per",
+      "start": 9.640000343322754,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "week",
+      "start": 10.140000343322754,
+      "end": 10.34000015258789
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "storyId": "lesson-architecture-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "ActivityTracker Service. ActivityTracker handles all interactive elements—quizzes, drag-drop, code challenges. Every completion is saved to Firestore.",
+  "duration": 12.210000038146973,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Tracker",
+      "start": 0.8799999952316284,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "service",
+      "start": 1.059999942779541,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "Activity",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Tracker",
+      "start": 2.880000114440918,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "handles",
+      "start": 3.180000066757202,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "all",
+      "start": 3.640000104904175,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "interactive",
+      "start": 4.179999828338623,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "elements",
+      "start": 4.78000020980835,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "quizzes",
+      "start": 6.260000228881836,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "drag",
+      "start": 6.960000038146973,
+      "end": 7
+    },
+    {
+      "word": "drop",
+      "start": 7,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "code",
+      "start": 7.880000114440918,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "challenges",
+      "start": 8.020000457763672,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "Every",
+      "start": 9.319999694824219,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "completion",
+      "start": 9.619999885559082,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "is",
+      "start": 10.079999923706055,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "saved",
+      "start": 10.640000343322754,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "to",
+      "start": 10.920000076293945,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "Firestore",
+      "start": 11.359999656677246,
+      "end": 11.920000076293945
+    }
+  ]
+}

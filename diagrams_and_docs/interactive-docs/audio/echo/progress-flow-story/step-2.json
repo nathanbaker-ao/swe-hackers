@@ -1,0 +1,105 @@
+{
+  "storyId": "progress-flow-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "ProgressTracker. ProgressTracker maintains the viewedSections set. Each visible section gets added, tracking exactly what's been seen.",
+  "duration": 10.600000381469727,
+  "words": [
+    {
+      "word": "Progress",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "Tracker",
+      "start": 0.8399999737739563,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Progress",
+      "start": 2.0399999618530273,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "Tracker",
+      "start": 2.9000000953674316,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "maintains",
+      "start": 2.9000000953674316,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "the",
+      "start": 3.4000000953674316,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "viewed",
+      "start": 3.700000047683716,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "sections",
+      "start": 3.940000057220459,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "set",
+      "start": 4.460000038146973,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "Each",
+      "start": 5.639999866485596,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "visible",
+      "start": 5.739999771118164,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "section",
+      "start": 6.360000133514404,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "gets",
+      "start": 6.739999771118164,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "added",
+      "start": 7.079999923706055,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "tracking",
+      "start": 8.15999984741211,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "exactly",
+      "start": 8.15999984741211,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "what's",
+      "start": 8.899999618530273,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "been",
+      "start": 9.319999694824219,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "seen",
+      "start": 9.539999961853027,
+      "end": 9.819999694824219
+    }
+  ]
+}

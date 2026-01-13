@@ -1,0 +1,100 @@
+{
+  "storyId": "quiz-structure-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Correct/Incorrect. After submission, correct and incorrect classes apply. Green for right, red for wrong. Immediate visual feedback!",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "correct",
+      "start": 0,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "incorrect",
+      "start": 1.340000033378601,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "After",
+      "start": 2.9200000762939453,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "submission",
+      "start": 3.059999942779541,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "correct",
+      "start": 4.5,
+      "end": 4.5
+    },
+    {
+      "word": "and",
+      "start": 4.5,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "incorrect",
+      "start": 5.039999961853027,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "classes",
+      "start": 5.519999980926514,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "apply",
+      "start": 6.099999904632568,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "Green",
+      "start": 8.039999961853027,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "for",
+      "start": 8.039999961853027,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "right",
+      "start": 8.359999656677246,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "red",
+      "start": 9.579999923706055,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "for",
+      "start": 9.619999885559082,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "wrong",
+      "start": 10.239999771118164,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "Immediate",
+      "start": 11.4399995803833,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "visual",
+      "start": 11.819999694824219,
+      "end": 12.5
+    },
+    {
+      "word": "feedback",
+      "start": 12.5,
+      "end": 13
+    }
+  ]
+}

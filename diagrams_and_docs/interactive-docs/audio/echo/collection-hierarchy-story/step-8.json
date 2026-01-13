@@ -1,0 +1,105 @@
+{
+  "storyId": "collection-hierarchy-story",
+  "stepId": "step-8",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Lesson Progress. Nested even deeper—lessonProgress tracks individual lessons. Viewed sections, completion status, last visit time. Granular tracking!",
+  "duration": 12.760000228881836,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "progress",
+      "start": 0.5799999833106995,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Nested",
+      "start": 1.100000023841858,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "even",
+      "start": 2.140000104904175,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "deeper",
+      "start": 2.7200000286102295,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "lesson",
+      "start": 3.759999990463257,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "progress",
+      "start": 3.9200000762939453,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "tracks",
+      "start": 4.400000095367432,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "individual",
+      "start": 4.880000114440918,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "lessons",
+      "start": 5.78000020980835,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "Viewed",
+      "start": 7.360000133514404,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "sections",
+      "start": 7.699999809265137,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "Completion",
+      "start": 8.039999961853027,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "status",
+      "start": 9.020000457763672,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "Last",
+      "start": 9.479999542236328,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "visit",
+      "start": 10.239999771118164,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "time",
+      "start": 10.479999542236328,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "Granular",
+      "start": 10.979999542236328,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "tracking",
+      "start": 11.859999656677246,
+      "end": 12.319999694824219
+    }
+  ]
+}

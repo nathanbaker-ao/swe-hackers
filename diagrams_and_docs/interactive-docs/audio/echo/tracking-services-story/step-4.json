@@ -1,0 +1,130 @@
+{
+  "storyId": "tracking-services-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "viewedSections Set. viewedSections is a Set that stores which sections have been scrolled to. It prevents duplicate tracking and enables efficient lookups.",
+  "duration": 9.960000038146973,
+  "words": [
+    {
+      "word": "Viewed",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "sections",
+      "start": 0.5600000023841858,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "set",
+      "start": 0.8799999952316284,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Viewed",
+      "start": 2.2200000286102295,
+      "end": 2.4200000762939453
+    },
+    {
+      "word": "sections",
+      "start": 2.4200000762939453,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "is",
+      "start": 2.640000104904175,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "a",
+      "start": 2.9600000381469727,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "set",
+      "start": 3.2200000286102295,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "that",
+      "start": 3.380000114440918,
+      "end": 4
+    },
+    {
+      "word": "stores",
+      "start": 4,
+      "end": 4
+    },
+    {
+      "word": "which",
+      "start": 4,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "sections",
+      "start": 4.400000095367432,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "have",
+      "start": 4.739999771118164,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "been",
+      "start": 4.980000019073486,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "scrolled",
+      "start": 5.199999809265137,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "to",
+      "start": 5.579999923706055,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "It",
+      "start": 6.300000190734863,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "prevents",
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "duplicate",
+      "start": 6.659999847412109,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "tracking",
+      "start": 7.239999771118164,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "and",
+      "start": 7.679999828338623,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "enables",
+      "start": 8.180000305175781,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "efficient",
+      "start": 8.5600004196167,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "lookups",
+      "start": 9.199999809265137,
+      "end": 9.65999984741211
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "storyId": "component-hierarchy-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Card Header. Card headers contain titles and icons. Consistent padding, bold typography—immediately scannable.",
+  "duration": 9.550000190734863,
+  "words": [
+    {
+      "word": "Card",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "header",
+      "start": 0.5400000214576721,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Card",
+      "start": 2.0199999809265137,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "headers",
+      "start": 2.0799999237060547,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "contain",
+      "start": 2.380000114440918,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "titles",
+      "start": 2.9200000762939453,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "and",
+      "start": 3.440000057220459,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "icons",
+      "start": 3.9000000953674316,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "Consistent",
+      "start": 5.320000171661377,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "padding",
+      "start": 5.460000038146973,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "bold",
+      "start": 6.420000076293945,
+      "end": 6.5
+    },
+    {
+      "word": "typography",
+      "start": 6.5,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "Immediately",
+      "start": 8.119999885559082,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "scannable",
+      "start": 8.359999656677246,
+      "end": 8.880000114440918
+    }
+  ]
+}
