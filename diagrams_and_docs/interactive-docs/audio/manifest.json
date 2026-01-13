@@ -1,0 +1,4370 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "ballad": {
+    "service-story": [
+      {
+        "storyId": "service-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Foundation: Firebase Config. Everything starts here. FirebaseApp initializes the Firebase SDK, establishing connections to Authentication and Firestore. This is loaded first on every page.",
+        "duration": 17.440000534057617,
+        "words": [
+          {
+            "word": "Foundation",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "Firebase",
+            "start": 1.659999966621399,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "Config",
+            "start": 1.9800000190734863,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "Everything",
+            "start": 3.559999942779541,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "starts",
+            "start": 3.7200000286102295,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "here",
+            "start": 4.21999979019165,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "Firebase",
+            "start": 5.599999904632568,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "app",
+            "start": 5.880000114440918,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "initializes",
+            "start": 6.360000133514404,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 7.260000228881836,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "Firebase",
+            "start": 7.699999809265137,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "SDK",
+            "start": 8.15999984741211,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "establishing",
+            "start": 10.220000267028809,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "connections",
+            "start": 10.220000267028809,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "to",
+            "start": 10.800000190734863,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "Authentication",
+            "start": 11.520000457763672,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "and",
+            "start": 12.319999694824219,
+            "end": 13
+          },
+          {
+            "word": "Firestore",
+            "start": 13,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "This",
+            "start": 14.100000381469727,
+            "end": 14.600000381469727
+          },
+          {
+            "word": "is",
+            "start": 14.600000381469727,
+            "end": 14.979999542236328
+          },
+          {
+            "word": "loaded",
+            "start": 14.979999542236328,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "first",
+            "start": 15.180000305175781,
+            "end": 15.680000305175781
+          },
+          {
+            "word": "on",
+            "start": 15.680000305175781,
+            "end": 15.979999542236328
+          },
+          {
+            "word": "every",
+            "start": 15.979999542236328,
+            "end": 16.579999923706055
+          },
+          {
+            "word": "page",
+            "start": 16.579999923706055,
+            "end": 17.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Authentication Layer. AuthService wraps Firebase Auth, managing user sessions, login flows, and auth state changes. It depends on FirebaseApp for the auth instance.",
+        "duration": 13.510000228881836,
+        "words": [
+          {
+            "word": "Authentication",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "layer",
+            "start": 0.800000011920929,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "Auth",
+            "start": 1.9800000190734863,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "service",
+            "start": 1.9800000190734863,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "wraps",
+            "start": 2.440000057220459,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "Firebase",
+            "start": 3.0199999809265137,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "Auth",
+            "start": 3.640000104904175,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "managing",
+            "start": 4.699999809265137,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "user",
+            "start": 4.699999809265137,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "sessions",
+            "start": 5.199999809265137,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "login",
+            "start": 6.260000228881836,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "flows",
+            "start": 6.420000076293945,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "and",
+            "start": 7.159999847412109,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "auth",
+            "start": 7.440000057220459,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "state",
+            "start": 7.679999828338623,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "changes",
+            "start": 8.0600004196167,
+            "end": 8.5
+          },
+          {
+            "word": "It",
+            "start": 9.079999923706055,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "depends",
+            "start": 9.579999923706055,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "on",
+            "start": 9.979999542236328,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "Firebase",
+            "start": 10.539999961853027,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "app",
+            "start": 10.9399995803833,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "for",
+            "start": 11.239999771118164,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "the",
+            "start": 11.619999885559082,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "auth",
+            "start": 12.100000381469727,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "instance",
+            "start": 12.260000228881836,
+            "end": 12.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Data Access Layer. DataService handles all Firestore CRUD operations. It needs FirebaseApp for database access AND AuthService to scope queries to the current user.",
+        "duration": 14.0600004196167,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "Access",
+            "start": 0.4399999976158142,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "Layer",
+            "start": 0.8199999928474426,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "Data",
+            "start": 2.0799999237060547,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "Service",
+            "start": 2.259999990463257,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "handles",
+            "start": 2.5799999237060547,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "all",
+            "start": 3.0199999809265137,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "Firestore",
+            "start": 3.640000104904175,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "CRUD",
+            "start": 4.119999885559082,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "operations",
+            "start": 4.539999961853027,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "It",
+            "start": 6.019999980926514,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "needs",
+            "start": 6.059999942779541,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "Firebase",
+            "start": 6.340000152587891,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "App",
+            "start": 6.920000076293945,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "for",
+            "start": 7.28000020980835,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "database",
+            "start": 7.71999979019165,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "access",
+            "start": 8.140000343322754,
+            "end": 8.760000228881836
+          },
+          {
+            "word": "and",
+            "start": 8.760000228881836,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "Auth",
+            "start": 9.760000228881836,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "Service",
+            "start": 10.399999618530273,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "to",
+            "start": 10.760000228881836,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "scope",
+            "start": 11.300000190734863,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "queries",
+            "start": 11.520000457763672,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 11.9399995803833,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 12.180000305175781,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "current",
+            "start": 12.359999656677246,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "user",
+            "start": 12.619999885559082,
+            "end": 12.9399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Role-Based Access Control. RBACService checks user roles and permissions. It queries AuthService to get the current user, then checks their role against required permissions.",
+        "duration": 13.40999984741211,
+        "words": [
+          {
+            "word": "Role",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "based",
+            "start": 0.46000000834465027,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "access",
+            "start": 0.7599999904632568,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "control",
+            "start": 1.2400000095367432,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "RBAC",
+            "start": 2.859999895095825,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "service",
+            "start": 2.859999895095825,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "checks",
+            "start": 3.259999990463257,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "user",
+            "start": 3.5399999618530273,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "roles",
+            "start": 3.9600000381469727,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "and",
+            "start": 4.260000228881836,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "permissions",
+            "start": 4.820000171661377,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "It",
+            "start": 6.260000228881836,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "queries",
+            "start": 6.320000171661377,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "auth",
+            "start": 6.659999847412109,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "service",
+            "start": 7.099999904632568,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "to",
+            "start": 7.440000057220459,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "get",
+            "start": 7.639999866485596,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "the",
+            "start": 7.760000228881836,
+            "end": 8
+          },
+          {
+            "word": "current",
+            "start": 8,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "user",
+            "start": 8.220000267028809,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "then",
+            "start": 9.079999923706055,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "checks",
+            "start": 9.359999656677246,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "their",
+            "start": 9.800000190734863,
+            "end": 10.100000381469727
+          },
+          {
+            "word": "role",
+            "start": 10.100000381469727,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "against",
+            "start": 10.479999542236328,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "required",
+            "start": 11.079999923706055,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "permissions",
+            "start": 11.779999732971191,
+            "end": 12.359999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Progress Tracking. ProgressTracker uses IntersectionObserver to detect which content users have viewed. It saves progress via DataService and identifies users via AuthService.",
+        "duration": 14.899999618530273,
+        "words": [
+          {
+            "word": "Progress",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "Tracking",
+            "start": 0.5400000214576721,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "Progress",
+            "start": 1.2200000286102295,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "Tracker",
+            "start": 2.259999990463257,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "uses",
+            "start": 2.5999999046325684,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "Intersection",
+            "start": 3.119999885559082,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "Observer",
+            "start": 3.9600000381469727,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "to",
+            "start": 4.440000057220459,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "detect",
+            "start": 5.139999866485596,
+            "end": 5.5
+          },
+          {
+            "word": "which",
+            "start": 5.5,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "content",
+            "start": 5.920000076293945,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "users",
+            "start": 6.440000057220459,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "have",
+            "start": 6.840000152587891,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "viewed",
+            "start": 7.420000076293945,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "It",
+            "start": 8.479999542236328,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "saves",
+            "start": 8.479999542236328,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "progress",
+            "start": 8.800000190734863,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "via",
+            "start": 9.420000076293945,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "Data",
+            "start": 9.819999694824219,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "Service",
+            "start": 10.380000114440918,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "and",
+            "start": 10.779999732971191,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "identifies",
+            "start": 11.619999885559082,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "users",
+            "start": 12.399999618530273,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "via",
+            "start": 12.9399995803833,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "Auth",
+            "start": 13.539999961853027,
+            "end": 14
+          },
+          {
+            "word": "Service",
+            "start": 14,
+            "end": 14.4399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Activity Completion. ActivityTracker records quiz answers and exercise completions. Like ProgressTracker, it writes to Firestore via DataService for authenticated users.",
+        "duration": 15.3100004196167,
+        "words": [
+          {
+            "word": "Activity",
+            "start": 0,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "Completion",
+            "start": 0.7799999713897705,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "Activity",
+            "start": 3.2200000286102295,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "Tracker",
+            "start": 3.2200000286102295,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "records",
+            "start": 3.440000057220459,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "quiz",
+            "start": 4.019999980926514,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "answers",
+            "start": 4.460000038146973,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "and",
+            "start": 4.920000076293945,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "exercise",
+            "start": 5.599999904632568,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "completions",
+            "start": 6.320000171661377,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "Like",
+            "start": 7.960000038146973,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "Progress",
+            "start": 8.180000305175781,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "Tracker",
+            "start": 8.899999618530273,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "it",
+            "start": 9.84000015258789,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "writes",
+            "start": 9.84000015258789,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "to",
+            "start": 10.220000267028809,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "Firestore",
+            "start": 10.899999618530273,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "via",
+            "start": 11.15999984741211,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "data",
+            "start": 11.84000015258789,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "service",
+            "start": 12.4399995803833,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "for",
+            "start": 12.880000114440918,
+            "end": 13.5600004196167
+          },
+          {
+            "word": "authenticated",
+            "start": 13.5600004196167,
+            "end": 14.380000114440918
+          },
+          {
+            "word": "users",
+            "start": 14.380000114440918,
+            "end": 14.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-6",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Route Protection. RouteGuard runs on page load to check if users can access the current page. It verifies authentication status AND role requirements before showing content.",
+        "duration": 13.699999809265137,
+        "words": [
+          {
+            "word": "Root",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "Protection",
+            "start": 0.41999998688697815,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "RootGuard",
+            "start": 2.0999999046325684,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "runs",
+            "start": 2.2799999713897705,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "on",
+            "start": 2.859999895095825,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "page",
+            "start": 3.140000104904175,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "load",
+            "start": 3.4600000381469727,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "to",
+            "start": 3.7200000286102295,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "check",
+            "start": 3.940000057220459,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "if",
+            "start": 4.159999847412109,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "users",
+            "start": 4.460000038146973,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "can",
+            "start": 4.699999809265137,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "access",
+            "start": 5.059999942779541,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "the",
+            "start": 5.460000038146973,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "current",
+            "start": 5.679999828338623,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "page",
+            "start": 6.019999980926514,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "It",
+            "start": 7.139999866485596,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "verifies",
+            "start": 7.320000171661377,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "authentication",
+            "start": 7.920000076293945,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "status",
+            "start": 8.859999656677246,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "and",
+            "start": 9.460000038146973,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "role",
+            "start": 10.34000015258789,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "requirements",
+            "start": 10.9399995803833,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "before",
+            "start": 11.579999923706055,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "showing",
+            "start": 12.399999618530273,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "content",
+            "start": 12.779999732971191,
+            "end": 13.279999732971191
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-7",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Lesson Orchestration. Finally, LessonIntegration ties it all together on lesson pages. It coordinates ProgressTracker and ActivityTracker to create a seamless learning experience.",
+        "duration": 17.610000610351562,
+        "words": [
+          {
+            "word": "Lesson",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "orchestration",
+            "start": 0.800000011920929,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "Finally",
+            "start": 3.4000000953674316,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "lesson",
+            "start": 4.179999828338623,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "integration",
+            "start": 4.400000095367432,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "ties",
+            "start": 5.320000171661377,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "it",
+            "start": 5.940000057220459,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "all",
+            "start": 6.260000228881836,
+            "end": 7
+          },
+          {
+            "word": "together",
+            "start": 7,
+            "end": 7
+          },
+          {
+            "word": "on",
+            "start": 7,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "lesson",
+            "start": 7.539999961853027,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "pages",
+            "start": 7.880000114440918,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "It",
+            "start": 9.4399995803833,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "coordinates",
+            "start": 9.5600004196167,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "progress",
+            "start": 10.15999984741211,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "tracker",
+            "start": 11.119999885559082,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "and",
+            "start": 11.460000038146973,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "activity",
+            "start": 12.100000381469727,
+            "end": 12.680000305175781
+          },
+          {
+            "word": "tracker",
+            "start": 12.680000305175781,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "to",
+            "start": 13.039999961853027,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "create",
+            "start": 13.880000114440918,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "a",
+            "start": 14.220000267028809,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "seamless",
+            "start": 15.180000305175781,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "learning",
+            "start": 15.180000305175781,
+            "end": 15.920000076293945
+          },
+          {
+            "word": "experience",
+            "start": 15.920000076293945,
+            "end": 16.799999237060547
+          }
+        ]
+      }
+    ],
+    "dataflow-story": [
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "User Initiates Action. It all starts with a user interaction—clicking a Complete Quiz button, scrolling past a section, or submitting a form. The browser captures this event.",
+        "duration": 15.640000343322754,
+        "words": [
+          {
+            "word": "User",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "initiates",
+            "start": 0.6200000047683716,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "action",
+            "start": 1.2599999904632568,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "It",
+            "start": 2.319999933242798,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "all",
+            "start": 2.4000000953674316,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "starts",
+            "start": 2.940000057220459,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "with",
+            "start": 3.2200000286102295,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "a",
+            "start": 3.4600000381469727,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "user",
+            "start": 4.079999923706055,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "interaction",
+            "start": 4.079999923706055,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "Clicking",
+            "start": 5.820000171661377,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "a",
+            "start": 6.019999980926514,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "complete",
+            "start": 6.260000228881836,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "quiz",
+            "start": 6.699999809265137,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "button",
+            "start": 6.980000019073486,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "scrolling",
+            "start": 8.34000015258789,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "past",
+            "start": 8.34000015258789,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "a",
+            "start": 8.720000267028809,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "section",
+            "start": 9.34000015258789,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "or",
+            "start": 9.34000015258789,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "submitting",
+            "start": 10.079999923706055,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "a",
+            "start": 10.4399995803833,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "form",
+            "start": 11.239999771118164,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "The",
+            "start": 11.739999771118164,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "browser",
+            "start": 12.140000343322754,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "captures",
+            "start": 12.5600004196167,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "this",
+            "start": 13.260000228881836,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "event",
+            "start": 13.720000267028809,
+            "end": 14.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Event Handler Catches It. The DOM event handler fires. This is JavaScript code in the page that responds to user actions and decides what to do next.",
+        "duration": 12.720000267028809,
+        "words": [
+          {
+            "word": "Event",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "handler",
+            "start": 0.8199999928474426,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "catches",
+            "start": 0.8199999928474426,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "it",
+            "start": 1.3600000143051147,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "The",
+            "start": 2.4200000762939453,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "DOM",
+            "start": 2.5399999618530273,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "event",
+            "start": 2.819999933242798,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "handler",
+            "start": 3.4200000762939453,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "fires",
+            "start": 3.7799999713897705,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "This",
+            "start": 5.260000228881836,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "is",
+            "start": 5.340000152587891,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "JavaScript",
+            "start": 5.820000171661377,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "code",
+            "start": 6.360000133514404,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "in",
+            "start": 6.940000057220459,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 7.21999979019165,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "page",
+            "start": 7.420000076293945,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "that",
+            "start": 7.739999771118164,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "responds",
+            "start": 8.199999809265137,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "to",
+            "start": 8.699999809265137,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "user",
+            "start": 9.100000381469727,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "actions",
+            "start": 9.520000457763672,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "and",
+            "start": 10.15999984741211,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "decides",
+            "start": 10.84000015258789,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "what",
+            "start": 11.359999656677246,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "to",
+            "start": 11.640000343322754,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "do",
+            "start": 11.859999656677246,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "next",
+            "start": 11.979999542236328,
+            "end": 12.34000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Service Method Called. The handler calls a service method like ProgressTracker.markComplete or ActivityTracker.submitAnswer. Business logic lives in these services, not in UI code.",
+        "duration": 17.760000228881836,
+        "words": [
+          {
+            "word": "service",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "method",
+            "start": 0.6600000262260437,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "called",
+            "start": 1.0399999618530273,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "The",
+            "start": 2.6600000858306885,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "handler",
+            "start": 2.819999933242798,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "calls",
+            "start": 3.1600000858306885,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "a",
+            "start": 3.640000104904175,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "service",
+            "start": 3.9200000762939453,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "method",
+            "start": 4.260000228881836,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "like",
+            "start": 4.599999904632568,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "progressTracker",
+            "start": 5.21999979019165,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "markComplete",
+            "start": 6.199999809265137,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "or",
+            "start": 7.71999979019165,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "activityTracker",
+            "start": 8.640000343322754,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "submitAnswer",
+            "start": 9.5600004196167,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "Business",
+            "start": 12.020000457763672,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "logic",
+            "start": 12.4399995803833,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "lives",
+            "start": 12.800000190734863,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "in",
+            "start": 13.079999923706055,
+            "end": 13.5
+          },
+          {
+            "word": "these",
+            "start": 13.5,
+            "end": 13.9399995803833
+          },
+          {
+            "word": "services",
+            "start": 13.9399995803833,
+            "end": 14.420000076293945
+          },
+          {
+            "word": "not",
+            "start": 15.119999885559082,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "in",
+            "start": 15.180000305175781,
+            "end": 15.640000343322754
+          },
+          {
+            "word": "UI",
+            "start": 15.640000343322754,
+            "end": 16
+          },
+          {
+            "word": "code",
+            "start": 16,
+            "end": 16.34000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Authentication Verified. Before writing data, the service checks AuthService.getCurrentUser. If no user is logged in, the action may be queued or rejected.",
+        "duration": 13.649999618530273,
+        "words": [
+          {
+            "word": "Authentication",
+            "start": 0,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "verified",
+            "start": 1.059999942779541,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "Before",
+            "start": 2.859999895095825,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "writing",
+            "start": 2.859999895095825,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "data",
+            "start": 3.319999933242798,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "the",
+            "start": 4.340000152587891,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "service",
+            "start": 4.440000057220459,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "checks",
+            "start": 4.860000133514404,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "AuthService",
+            "start": 5.300000190734863,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "GetCurrentUser",
+            "start": 6.239999771118164,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "If",
+            "start": 8.34000015258789,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "no",
+            "start": 8.800000190734863,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "user",
+            "start": 9.15999984741211,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "is",
+            "start": 9.420000076293945,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "logged",
+            "start": 9.880000114440918,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "in",
+            "start": 9.880000114440918,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "the",
+            "start": 10.680000305175781,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "action",
+            "start": 10.819999694824219,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "may",
+            "start": 11.180000305175781,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "be",
+            "start": 11.5600004196167,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "queued",
+            "start": 12.180000305175781,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "or",
+            "start": 12.180000305175781,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "rejected",
+            "start": 12.779999732971191,
+            "end": 13.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Data Written to Firestore. The service calls Firestore to persist the data. This might be updating a progress document, saving quiz answers, or logging activity.",
+        "duration": 12.449999809265137,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "written",
+            "start": 0.46000000834465027,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "to",
+            "start": 0.7799999713897705,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "Firestore",
+            "start": 1.2400000095367432,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "The",
+            "start": 2.359999895095825,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "service",
+            "start": 2.5199999809265137,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "calls",
+            "start": 2.9000000953674316,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "Firestore",
+            "start": 3.359999895095825,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "to",
+            "start": 3.9000000953674316,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "persist",
+            "start": 4.199999809265137,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 4.71999979019165,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "data",
+            "start": 5.260000228881836,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "This",
+            "start": 6.059999942779541,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "might",
+            "start": 6.119999885559082,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "be",
+            "start": 6.360000133514404,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "updating",
+            "start": 6.78000020980835,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "a",
+            "start": 7.239999771118164,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "progress",
+            "start": 7.539999961853027,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "document",
+            "start": 7.960000038146973,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "saving",
+            "start": 9.420000076293945,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "quiz",
+            "start": 9.420000076293945,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "answers",
+            "start": 9.739999771118164,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "or",
+            "start": 10.180000305175781,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "logging",
+            "start": 10.84000015258789,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "activity",
+            "start": 11.479999542236328,
+            "end": 12.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Realtime Listener Triggers. Firestores onSnapshot listeners detect the change instantly. Any component subscribed to this data gets notified automatically.",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "Real",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "time",
+            "start": 0.47999998927116394,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "listener",
+            "start": 0.7599999904632568,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "triggers",
+            "start": 1.1399999856948853,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "Firestore's",
+            "start": 2.619999885559082,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "on",
+            "start": 3.3399999141693115,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "snap",
+            "start": 3.559999942779541,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "shot",
+            "start": 3.680000066757202,
+            "end": 4
+          },
+          {
+            "word": "listeners",
+            "start": 4,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "detect",
+            "start": 4.320000171661377,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "the",
+            "start": 4.900000095367432,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "change",
+            "start": 5.179999828338623,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "instantly",
+            "start": 5.840000152587891,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "Any",
+            "start": 7.400000095367432,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "component",
+            "start": 7.599999904632568,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "subscribed",
+            "start": 8.220000267028809,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 8.9399995803833,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "this",
+            "start": 9.180000305175781,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "data",
+            "start": 9.460000038146973,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "gets",
+            "start": 9.84000015258789,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "notified",
+            "start": 10.539999961853027,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "automatically",
+            "start": 11.279999732971191,
+            "end": 12.220000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-6",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Local State Updates. The listener callback updates the local state. This keeps the UI in sync with the database.",
+        "duration": 9.760000228881836,
+        "words": [
+          {
+            "word": "Local",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "State",
+            "start": 0.5199999809265137,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "Updates",
+            "start": 0.8600000143051147,
+            "end": 1.5
+          },
+          {
+            "word": "The",
+            "start": 2.5799999237060547,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "listener",
+            "start": 2.700000047683716,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "callback",
+            "start": 3.0199999809265137,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "updates",
+            "start": 3.700000047683716,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "the",
+            "start": 4.400000095367432,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "local",
+            "start": 4.800000190734863,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "state",
+            "start": 5.179999828338623,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "This",
+            "start": 6.400000095367432,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "keeps",
+            "start": 6.400000095367432,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 6.579999923706055,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "UI",
+            "start": 6.800000190734863,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "in",
+            "start": 7.179999828338623,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "sync",
+            "start": 7.679999828338623,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "with",
+            "start": 7.920000076293945,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "the",
+            "start": 8.300000190734863,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "database",
+            "start": 8.5600004196167,
+            "end": 8.800000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-7",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "UI Reflects the Change. Finally, the UI re-renders to show the new state. A progress bar fills, a checkmark appears, or a success toast shows. The cycle is complete!",
+        "duration": 13.800000190734863,
+        "words": [
+          {
+            "word": "UI",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "reflects",
+            "start": 0.5,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "the",
+            "start": 0.9200000166893005,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "change",
+            "start": 1.159999966621399,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "Finally",
+            "start": 2.680000066757202,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "the",
+            "start": 2.940000057220459,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "UI",
+            "start": 3.119999885559082,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "re",
+            "start": 3.4200000762939453,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "renders",
+            "start": 3.859999895095825,
+            "end": 4
+          },
+          {
+            "word": "to",
+            "start": 4,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "show",
+            "start": 4.300000190734863,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "the",
+            "start": 4.480000019073486,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "new",
+            "start": 4.679999828338623,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "state",
+            "start": 5.019999980926514,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "A",
+            "start": 6.039999961853027,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "progress",
+            "start": 6.199999809265137,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "bar",
+            "start": 6.579999923706055,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "fills",
+            "start": 6.900000095367432,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "a",
+            "start": 7.920000076293945,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "checkmark",
+            "start": 8.119999885559082,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "appears",
+            "start": 8.5600004196167,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "or",
+            "start": 9.300000190734863,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "a",
+            "start": 9.760000228881836,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "success",
+            "start": 9.960000038146973,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "toast",
+            "start": 10.399999618530273,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "shows",
+            "start": 10.819999694824219,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "The",
+            "start": 11.960000038146973,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "cycle",
+            "start": 12.220000267028809,
+            "end": 12.5
+          },
+          {
+            "word": "is",
+            "start": 12.5,
+            "end": 13
+          },
+          {
+            "word": "complete",
+            "start": 13,
+            "end": 13.380000114440918
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "service-story": [
+      {
+        "storyId": "service-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Foundation: Firebase Config. Everything starts here. FirebaseApp initializes the Firebase SDK, establishing connections to Authentication and Firestore. This is loaded first on every page.",
+        "duration": 15.5,
+        "words": [
+          {
+            "word": "Foundation",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "Firebase",
+            "start": 1.5,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "Config",
+            "start": 1.7599999904632568,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "Everything",
+            "start": 3.359999895095825,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "starts",
+            "start": 3.359999895095825,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "here",
+            "start": 3.740000009536743,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "Firebase",
+            "start": 4.800000190734863,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "app",
+            "start": 5.139999866485596,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "initializes",
+            "start": 5.519999980926514,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 6.260000228881836,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "Firebase",
+            "start": 6.679999828338623,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "SDK",
+            "start": 7.019999980926514,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "establishing",
+            "start": 8.739999771118164,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "connections",
+            "start": 8.779999732971191,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "to",
+            "start": 9.359999656677246,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "Authentication",
+            "start": 9.800000190734863,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "and",
+            "start": 10.420000076293945,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "Firestore",
+            "start": 11.34000015258789,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "Vase",
+            "start": 12.800000190734863,
+            "end": 13
+          },
+          {
+            "word": "is",
+            "start": 13,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "loaded",
+            "start": 13.420000076293945,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "first",
+            "start": 13.420000076293945,
+            "end": 13.899999618530273
+          },
+          {
+            "word": "on",
+            "start": 13.899999618530273,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "every",
+            "start": 14.220000267028809,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "page",
+            "start": 14.800000190734863,
+            "end": 15.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Authentication Layer. AuthService wraps Firebase Auth, managing user sessions, login flows, and auth state changes. It depends on FirebaseApp for the auth instance.",
+        "duration": 13.460000038146973,
+        "words": [
+          {
+            "word": "Authentication",
+            "start": 0,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "Layer",
+            "start": 0.9200000166893005,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "Auth",
+            "start": 1.600000023841858,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "Service",
+            "start": 2.440000057220459,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "wraps",
+            "start": 2.859999895095825,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "Firebase",
+            "start": 3.319999933242798,
+            "end": 4
+          },
+          {
+            "word": "Auth",
+            "start": 4,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "managing",
+            "start": 5.199999809265137,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "user",
+            "start": 5.199999809265137,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "sessions",
+            "start": 5.739999771118164,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "login",
+            "start": 6.679999828338623,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "flows",
+            "start": 6.900000095367432,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 7.639999866485596,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "auth",
+            "start": 8.100000381469727,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "state",
+            "start": 8.180000305175781,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "changes",
+            "start": 8.539999961853027,
+            "end": 9
+          },
+          {
+            "word": "It",
+            "start": 9.680000305175781,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "depends",
+            "start": 10.239999771118164,
+            "end": 10.5
+          },
+          {
+            "word": "on",
+            "start": 10.5,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "Firebase",
+            "start": 10.859999656677246,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "App",
+            "start": 11.34000015258789,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "for",
+            "start": 11.739999771118164,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 12.15999984741211,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "Auth",
+            "start": 12.520000457763672,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "instance",
+            "start": 12.65999984741211,
+            "end": 13.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Data Access Layer. DataService handles all Firestore CRUD operations. It needs FirebaseApp for database access AND AuthService to scope queries to the current user.",
+        "duration": 11.800000190734863,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "Access",
+            "start": 0.6399999856948853,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "Layer",
+            "start": 1.1799999475479126,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "Data",
+            "start": 1.600000023841858,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "Service",
+            "start": 2.359999895095825,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "handles",
+            "start": 2.700000047683716,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "all",
+            "start": 3.0399999618530273,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "Firestore",
+            "start": 3.5399999618530273,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "CRUD",
+            "start": 4.039999961853027,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "operations",
+            "start": 4.420000076293945,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "It",
+            "start": 5.619999885559082,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "needs",
+            "start": 5.619999885559082,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "Firebase",
+            "start": 5.920000076293945,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "out",
+            "start": 6.440000057220459,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "for",
+            "start": 6.78000020980835,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "database",
+            "start": 7.039999961853027,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "access",
+            "start": 7.460000038146973,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "and",
+            "start": 8.039999961853027,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "Auth",
+            "start": 8.579999923706055,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "Service",
+            "start": 8.9399995803833,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 9.239999771118164,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "scope",
+            "start": 9.640000343322754,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "queries",
+            "start": 9.9399995803833,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "to",
+            "start": 10.319999694824219,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 10.579999923706055,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "current",
+            "start": 10.760000228881836,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "user",
+            "start": 11.100000381469727,
+            "end": 11.479999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Role-Based Access Control. RBACService checks user roles and permissions. It queries AuthService to get the current user, then checks their role against required permissions.",
+        "duration": 11.800000190734863,
+        "words": [
+          {
+            "word": "Role",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "based",
+            "start": 0.41999998688697815,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "access",
+            "start": 0.800000011920929,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "control",
+            "start": 1.3200000524520874,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "RBAC",
+            "start": 2.6600000858306885,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "service",
+            "start": 2.680000066757202,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "checks",
+            "start": 3.200000047683716,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "user",
+            "start": 3.5199999809265137,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "roles",
+            "start": 4.019999980926514,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "and",
+            "start": 4.28000020980835,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "permissions",
+            "start": 4.619999885559082,
+            "end": 5
+          },
+          {
+            "word": "It",
+            "start": 5.699999809265137,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "queries",
+            "start": 5.840000152587891,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "AuthService",
+            "start": 6.099999904632568,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "to",
+            "start": 6.760000228881836,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "get",
+            "start": 7.099999904632568,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "the",
+            "start": 7.239999771118164,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "current",
+            "start": 7.420000076293945,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "user",
+            "start": 7.71999979019165,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "then",
+            "start": 8.619999885559082,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "checks",
+            "start": 8.819999694824219,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "their",
+            "start": 9.079999923706055,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "role",
+            "start": 9.380000114440918,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "against",
+            "start": 9.739999771118164,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "required",
+            "start": 10.199999809265137,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "permissions",
+            "start": 10.779999732971191,
+            "end": 11.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Progress Tracking. ProgressTracker uses IntersectionObserver to detect which content users have viewed. It saves progress via DataService and identifies users via AuthService.",
+        "duration": 13.510000228881836,
+        "words": [
+          {
+            "word": "Progress",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "tracking",
+            "start": 0.6800000071525574,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "Progress",
+            "start": 2.700000047683716,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "Tracker",
+            "start": 2.700000047683716,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "uses",
+            "start": 2.700000047683716,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "Intersection",
+            "start": 3.1600000858306885,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "Observer",
+            "start": 4.059999942779541,
+            "end": 4.5
+          },
+          {
+            "word": "to",
+            "start": 4.5,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "detect",
+            "start": 4.860000133514404,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "which",
+            "start": 5.21999979019165,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "content",
+            "start": 5.699999809265137,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "users",
+            "start": 6.28000020980835,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "have",
+            "start": 6.820000171661377,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "viewed",
+            "start": 7.159999847412109,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "It",
+            "start": 8.300000190734863,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "saves",
+            "start": 8.4399995803833,
+            "end": 8.760000228881836
+          },
+          {
+            "word": "progress",
+            "start": 8.760000228881836,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "via",
+            "start": 9.300000190734863,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "data",
+            "start": 9.579999923706055,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "service",
+            "start": 10.0600004196167,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "and",
+            "start": 10.399999618530273,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "identifies",
+            "start": 10.739999771118164,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "users",
+            "start": 11.460000038146973,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "via",
+            "start": 11.9399995803833,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "auth",
+            "start": 12.520000457763672,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "service",
+            "start": 12.880000114440918,
+            "end": 13.239999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Activity Completion. ActivityTracker records quiz answers and exercise completions. Like ProgressTracker, it writes to Firestore via DataService for authenticated users.",
+        "duration": 12,
+        "words": [
+          {
+            "word": "Activity",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "Completion",
+            "start": 0.5799999833106995,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "Activity",
+            "start": 1.399999976158142,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "Tracker",
+            "start": 2.299999952316284,
+            "end": 2.5
+          },
+          {
+            "word": "records",
+            "start": 2.5,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "quiz",
+            "start": 3.0399999618530273,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "answers",
+            "start": 3.4000000953674316,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "and",
+            "start": 3.759999990463257,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "exercise",
+            "start": 4.139999866485596,
+            "end": 4.760000228881836
+          },
+          {
+            "word": "completions",
+            "start": 4.760000228881836,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "Like",
+            "start": 6.099999904632568,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "Progress",
+            "start": 6.260000228881836,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "Tracker",
+            "start": 6.71999979019165,
+            "end": 7
+          },
+          {
+            "word": "it",
+            "start": 7.460000038146973,
+            "end": 7.5
+          },
+          {
+            "word": "writes",
+            "start": 7.5,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "to",
+            "start": 7.800000190734863,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "Firestore",
+            "start": 8.100000381469727,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "via",
+            "start": 8.699999809265137,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "data",
+            "start": 9.180000305175781,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "service",
+            "start": 9.619999885559082,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "for",
+            "start": 10.039999961853027,
+            "end": 10.5
+          },
+          {
+            "word": "authenticated",
+            "start": 10.5,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "users",
+            "start": 11.199999809265137,
+            "end": 11.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-6",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Route Protection. RouteGuard runs on page load to check if users can access the current page. It verifies authentication status AND role requirements before showing content.",
+        "duration": 13.239999771118164,
+        "words": [
+          {
+            "word": "Root",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "Protection",
+            "start": 0.3199999928474426,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "RootGuard",
+            "start": 1.6799999475479126,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "runs",
+            "start": 1.7000000476837158,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "on",
+            "start": 2.140000104904175,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "page",
+            "start": 2.640000104904175,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "load",
+            "start": 2.9800000190734863,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "to",
+            "start": 3.240000009536743,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "check",
+            "start": 3.5199999809265137,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "if",
+            "start": 3.740000009536743,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "users",
+            "start": 4.059999942779541,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "can",
+            "start": 4.260000228881836,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "access",
+            "start": 4.639999866485596,
+            "end": 5
+          },
+          {
+            "word": "the",
+            "start": 5,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "current",
+            "start": 5.28000020980835,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "page",
+            "start": 5.559999942779541,
+            "end": 6
+          },
+          {
+            "word": "It",
+            "start": 6.800000190734863,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "verifies",
+            "start": 6.800000190734863,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "authentication",
+            "start": 7.360000133514404,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "status",
+            "start": 8.260000228881836,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "and",
+            "start": 8.819999694824219,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "role",
+            "start": 9.399999618530273,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "requirements",
+            "start": 9.859999656677246,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "before",
+            "start": 10.479999542236328,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "showing",
+            "start": 11.199999809265137,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "content",
+            "start": 11.640000343322754,
+            "end": 12.239999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "service-story",
+        "stepId": "step-7",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Lesson Orchestration. Finally, LessonIntegration ties it all together on lesson pages. It coordinates ProgressTracker and ActivityTracker to create a seamless learning experience.",
+        "duration": 14.899999618530273,
+        "words": [
+          {
+            "word": "Lesson",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "Orchestration",
+            "start": 0.6399999856948853,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "Finally",
+            "start": 2.0199999809265137,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "Lesson",
+            "start": 3.680000066757202,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "Integration",
+            "start": 3.9000000953674316,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "ties",
+            "start": 4.480000019073486,
+            "end": 5
+          },
+          {
+            "word": "it",
+            "start": 5,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "all",
+            "start": 5.320000171661377,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "together",
+            "start": 5.699999809265137,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "on",
+            "start": 6.119999885559082,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "lesson",
+            "start": 6.539999961853027,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "pages",
+            "start": 6.860000133514404,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "It",
+            "start": 8.020000457763672,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "coordinates",
+            "start": 8.279999732971191,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "Progress",
+            "start": 8.800000190734863,
+            "end": 9.5
+          },
+          {
+            "word": "Tracker",
+            "start": 9.5,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "and",
+            "start": 9.800000190734863,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "Activity",
+            "start": 10.34000015258789,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "Tracker",
+            "start": 10.979999542236328,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "to",
+            "start": 11.380000114440918,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "create",
+            "start": 11.899999618530273,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "a",
+            "start": 12.220000267028809,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "seamless",
+            "start": 13.140000343322754,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "learning",
+            "start": 13.140000343322754,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "experience",
+            "start": 13.680000305175781,
+            "end": 14.420000076293945
+          }
+        ]
+      }
+    ],
+    "dataflow-story": [
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "User Initiates Action. It all starts with a user interaction—clicking a Complete Quiz button, scrolling past a section, or submitting a form. The browser captures this event.",
+        "duration": 12.550000190734863,
+        "words": [
+          {
+            "word": "User",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "initiates",
+            "start": 0.5,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "action",
+            "start": 1.059999942779541,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "It",
+            "start": 2.0399999618530273,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "all",
+            "start": 2.059999942779541,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "starts",
+            "start": 2.4800000190734863,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "with",
+            "start": 2.619999885559082,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "a",
+            "start": 2.819999933242798,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "user",
+            "start": 3.119999885559082,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "interaction",
+            "start": 3.3399999141693115,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "clicking",
+            "start": 4.78000020980835,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "a",
+            "start": 4.78000020980835,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "complete",
+            "start": 5.079999923706055,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "quiz",
+            "start": 5.619999885559082,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "button",
+            "start": 5.980000019073486,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "scrolling",
+            "start": 7.28000020980835,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "past",
+            "start": 7.28000020980835,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "a",
+            "start": 7.639999866485596,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "section",
+            "start": 8.239999771118164,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "or",
+            "start": 8.579999923706055,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "submitting",
+            "start": 9.100000381469727,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "a",
+            "start": 9.399999618530273,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "form",
+            "start": 9.699999809265137,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "The",
+            "start": 10.4399995803833,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "browser",
+            "start": 10.640000343322754,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "captures",
+            "start": 11.0600004196167,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "this",
+            "start": 11.65999984741211,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "event",
+            "start": 12.0600004196167,
+            "end": 12.300000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Event Handler Catches It. The DOM event handler fires. This is JavaScript code in the page that responds to user actions and decides what to do next.",
+        "duration": 10.649999618530273,
+        "words": [
+          {
+            "word": "Event",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "Handler",
+            "start": 0.5600000023841858,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "catches",
+            "start": 0.8799999952316284,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "it",
+            "start": 1.4199999570846558,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "The",
+            "start": 2.0399999618530273,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "DOM",
+            "start": 2.180000066757202,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "Event",
+            "start": 2.440000057220459,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "Handler",
+            "start": 2.940000057220459,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "fires",
+            "start": 3.299999952316284,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "This",
+            "start": 4.28000020980835,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "is",
+            "start": 4.28000020980835,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "JavaScript",
+            "start": 4.559999942779541,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "code",
+            "start": 5.119999885559082,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "in",
+            "start": 5.639999866485596,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 5.880000114440918,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "page",
+            "start": 6.059999942779541,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "that",
+            "start": 6.360000133514404,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "responds",
+            "start": 6.840000152587891,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "to",
+            "start": 7.360000133514404,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "user",
+            "start": 7.679999828338623,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "actions",
+            "start": 8.0600004196167,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "and",
+            "start": 8.600000381469727,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "decides",
+            "start": 8.979999542236328,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "what",
+            "start": 9.420000076293945,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "to",
+            "start": 9.720000267028809,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "do",
+            "start": 9.960000038146973,
+            "end": 10.100000381469727
+          },
+          {
+            "word": "next",
+            "start": 10.100000381469727,
+            "end": 10.460000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Service Method Called. The handler calls a service method like ProgressTracker.markComplete or ActivityTracker.submitAnswer. Business logic lives in these services, not in UI code.",
+        "duration": 14.0600004196167,
+        "words": [
+          {
+            "word": "service",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "method",
+            "start": 0.6200000047683716,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "called",
+            "start": 0.9800000190734863,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "The",
+            "start": 2.0999999046325684,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "handler",
+            "start": 2.2200000286102295,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "calls",
+            "start": 2.4600000381469727,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "a",
+            "start": 2.859999895095825,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "service",
+            "start": 3.119999885559082,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "method",
+            "start": 3.4800000190734863,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "like",
+            "start": 3.799999952316284,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "progressTracker",
+            "start": 4.300000190734863,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "markComplete",
+            "start": 5.199999809265137,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "or",
+            "start": 6.480000019073486,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "activityTracker",
+            "start": 7.079999923706055,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "submitAnswer",
+            "start": 7.980000019073486,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "Business",
+            "start": 9.779999732971191,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "logic",
+            "start": 10.199999809265137,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "lives",
+            "start": 10.640000343322754,
+            "end": 11.039999961853027
+          },
+          {
+            "word": "in",
+            "start": 11.039999961853027,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "these",
+            "start": 11.380000114440918,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "services",
+            "start": 11.65999984741211,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "not",
+            "start": 12.619999885559082,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "in",
+            "start": 12.800000190734863,
+            "end": 13.100000381469727
+          },
+          {
+            "word": "UI",
+            "start": 13.100000381469727,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "code",
+            "start": 13.420000076293945,
+            "end": 13.800000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Authentication Verified. Before writing data, the service checks AuthService.getCurrentUser. If no user is logged in, the action may be queued or rejected.",
+        "duration": 12.8100004196167,
+        "words": [
+          {
+            "word": "Authentication",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "Verified",
+            "start": 1.100000023841858,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "Before",
+            "start": 2.0999999046325684,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "writing",
+            "start": 2.859999895095825,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "data",
+            "start": 3.240000009536743,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "the",
+            "start": 4.099999904632568,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "service",
+            "start": 4.239999771118164,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "checks",
+            "start": 4.579999923706055,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "off",
+            "start": 4.980000019073486,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "service",
+            "start": 5.480000019073486,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "getCurrentUser",
+            "start": 5.840000152587891,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "If",
+            "start": 7.760000228881836,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "no",
+            "start": 7.940000057220459,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "user",
+            "start": 8.359999656677246,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "is",
+            "start": 8.640000343322754,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "logged",
+            "start": 8.960000038146973,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "in",
+            "start": 9.180000305175781,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "the",
+            "start": 9.859999656677246,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "action",
+            "start": 9.979999542236328,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "may",
+            "start": 10.34000015258789,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "be",
+            "start": 10.619999885559082,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "queued",
+            "start": 11.239999771118164,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "or",
+            "start": 11.239999771118164,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "rejected",
+            "start": 11.899999618530273,
+            "end": 12.359999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Data Written to Firestore. The service calls Firestore to persist the data. This might be updating a progress document, saving quiz answers, or logging activity.",
+        "duration": 11.399999618530273,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "written",
+            "start": 0.3400000035762787,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "to",
+            "start": 0.6000000238418579,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "Firestore",
+            "start": 1.0399999618530273,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "The",
+            "start": 2.0199999809265137,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "service",
+            "start": 2.0999999046325684,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "calls",
+            "start": 2.4200000762939453,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "Firestore",
+            "start": 2.799999952316284,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "to",
+            "start": 3.4600000381469727,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "persist",
+            "start": 3.859999895095825,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "the",
+            "start": 4.360000133514404,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "data",
+            "start": 4.920000076293945,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "This",
+            "start": 5.699999809265137,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "might",
+            "start": 5.820000171661377,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "be",
+            "start": 6.019999980926514,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "updating",
+            "start": 6.380000114440918,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "a",
+            "start": 6.619999885559082,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "progress",
+            "start": 6.900000095367432,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "document",
+            "start": 7.28000020980835,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "saving",
+            "start": 8.5600004196167,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "quiz",
+            "start": 8.579999923706055,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "answers",
+            "start": 8.920000076293945,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "or",
+            "start": 9.819999694824219,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "logging",
+            "start": 10.079999923706055,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "activity",
+            "start": 10.399999618530273,
+            "end": 11.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Realtime Listener Triggers. Firestores onSnapshot listeners detect the change instantly. Any component subscribed to this data gets notified automatically.",
+        "duration": 11.399999618530273,
+        "words": [
+          {
+            "word": "Real",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "time",
+            "start": 0.4399999976158142,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "Listener",
+            "start": 0.6600000262260437,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "Triggers",
+            "start": 1.159999966621399,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "Firestore's",
+            "start": 2.200000047683716,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "on",
+            "start": 3.0799999237060547,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "snapshot",
+            "start": 3.2799999713897705,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "listeners",
+            "start": 3.7200000286102295,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "detect",
+            "start": 4.179999828338623,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "the",
+            "start": 4.900000095367432,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "change",
+            "start": 5.159999847412109,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "instantly",
+            "start": 5.559999942779541,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "Any",
+            "start": 6.980000019073486,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "component",
+            "start": 7.079999923706055,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "subscribed",
+            "start": 7.599999904632568,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "to",
+            "start": 8.199999809265137,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "this",
+            "start": 8.420000076293945,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "data",
+            "start": 8.640000343322754,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "gets",
+            "start": 8.899999618530273,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "notified",
+            "start": 9.15999984741211,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "automatically",
+            "start": 9.859999656677246,
+            "end": 10.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-6",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Local State Updates. The listener callback updates the local state. This keeps the UI in sync with the database.",
+        "duration": 9.3100004196167,
+        "words": [
+          {
+            "word": "Local",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "state",
+            "start": 0.5799999833106995,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "updates",
+            "start": 0.8399999737739563,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "The",
+            "start": 2.1600000858306885,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "listener",
+            "start": 2.299999952316284,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "callback",
+            "start": 2.619999885559082,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "updates",
+            "start": 3.2799999713897705,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 3.880000114440918,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "local",
+            "start": 4.199999809265137,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "state",
+            "start": 4.519999980926514,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "This",
+            "start": 5.800000190734863,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "keeps",
+            "start": 6.099999904632568,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "the",
+            "start": 6.420000076293945,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "UI",
+            "start": 6.679999828338623,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "in",
+            "start": 7.079999923706055,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "sync",
+            "start": 7.579999923706055,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "with",
+            "start": 7.840000152587891,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "the",
+            "start": 8.34000015258789,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "database",
+            "start": 8.539999961853027,
+            "end": 8.960000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "dataflow-story",
+        "stepId": "step-7",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "UI Reflects the Change. Finally, the UI re-renders to show the new state. A progress bar fills, a checkmark appears, or a success toast shows. The cycle is complete!",
+        "duration": 13.199999809265137,
+        "words": [
+          {
+            "word": "UI",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "reflects",
+            "start": 0.47999998927116394,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "the",
+            "start": 0.9200000166893005,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "change",
+            "start": 1.159999966621399,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "Finally",
+            "start": 2.5399999618530273,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "the",
+            "start": 2.759999990463257,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "UI",
+            "start": 2.940000057220459,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "re",
+            "start": 3.2200000286102295,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "renders",
+            "start": 3.619999885559082,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "to",
+            "start": 3.9000000953674316,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "show",
+            "start": 4.159999847412109,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "the",
+            "start": 4.360000133514404,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "new",
+            "start": 4.559999942779541,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "state",
+            "start": 4.840000152587891,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "A",
+            "start": 5.639999866485596,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "progress",
+            "start": 5.760000228881836,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "bar",
+            "start": 6.239999771118164,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "fills",
+            "start": 6.579999923706055,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "a",
+            "start": 7.380000114440918,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "checkmark",
+            "start": 7.559999942779541,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "appears",
+            "start": 8.0600004196167,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "or",
+            "start": 8.760000228881836,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "a",
+            "start": 9.34000015258789,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "success",
+            "start": 9.579999923706055,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "toast",
+            "start": 10.079999923706055,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "shows",
+            "start": 10.520000457763672,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "The",
+            "start": 11.380000114440918,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "cycle",
+            "start": 11.640000343322754,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "is",
+            "start": 11.9399995803833,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "complete",
+            "start": 12.380000114440918,
+            "end": 12.920000076293945
+          }
+        ]
+      }
+    ]
+  }
+}

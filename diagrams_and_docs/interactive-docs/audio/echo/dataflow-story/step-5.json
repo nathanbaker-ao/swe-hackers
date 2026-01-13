@@ -1,0 +1,115 @@
+{
+  "storyId": "dataflow-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Realtime Listener Triggers. Firestores onSnapshot listeners detect the change instantly. Any component subscribed to this data gets notified automatically.",
+  "duration": 11.399999618530273,
+  "words": [
+    {
+      "word": "Real",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "time",
+      "start": 0.4399999976158142,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "Listener",
+      "start": 0.6600000262260437,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Triggers",
+      "start": 1.159999966621399,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Firestore's",
+      "start": 2.200000047683716,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "on",
+      "start": 3.0799999237060547,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "snapshot",
+      "start": 3.2799999713897705,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "listeners",
+      "start": 3.7200000286102295,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "detect",
+      "start": 4.179999828338623,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "the",
+      "start": 4.900000095367432,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "change",
+      "start": 5.159999847412109,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "instantly",
+      "start": 5.559999942779541,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "Any",
+      "start": 6.980000019073486,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "component",
+      "start": 7.079999923706055,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "subscribed",
+      "start": 7.599999904632568,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "to",
+      "start": 8.199999809265137,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "this",
+      "start": 8.420000076293945,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "data",
+      "start": 8.640000343322754,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "gets",
+      "start": 8.899999618530273,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "notified",
+      "start": 9.15999984741211,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "automatically",
+      "start": 9.859999656677246,
+      "end": 10.619999885559082
+    }
+  ]
+}

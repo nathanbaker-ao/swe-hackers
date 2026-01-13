@@ -1,0 +1,105 @@
+{
+  "storyId": "dataflow-story",
+  "stepId": "step-6",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Local State Updates. The listener callback updates the local state. This keeps the UI in sync with the database.",
+  "duration": 9.760000228881836,
+  "words": [
+    {
+      "word": "Local",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "State",
+      "start": 0.5199999809265137,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "Updates",
+      "start": 0.8600000143051147,
+      "end": 1.5
+    },
+    {
+      "word": "The",
+      "start": 2.5799999237060547,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "listener",
+      "start": 2.700000047683716,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "callback",
+      "start": 3.0199999809265137,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "updates",
+      "start": 3.700000047683716,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "the",
+      "start": 4.400000095367432,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "local",
+      "start": 4.800000190734863,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "state",
+      "start": 5.179999828338623,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "This",
+      "start": 6.400000095367432,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "keeps",
+      "start": 6.400000095367432,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 6.579999923706055,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "UI",
+      "start": 6.800000190734863,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "in",
+      "start": 7.179999828338623,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "sync",
+      "start": 7.679999828338623,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "with",
+      "start": 7.920000076293945,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "the",
+      "start": 8.300000190734863,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "database",
+      "start": 8.5600004196167,
+      "end": 8.800000190734863
+    }
+  ]
+}

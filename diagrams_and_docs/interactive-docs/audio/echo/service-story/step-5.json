@@ -1,0 +1,125 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Activity Completion. ActivityTracker records quiz answers and exercise completions. Like ProgressTracker, it writes to Firestore via DataService for authenticated users.",
+  "duration": 12,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "Completion",
+      "start": 0.5799999833106995,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Activity",
+      "start": 1.399999976158142,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "Tracker",
+      "start": 2.299999952316284,
+      "end": 2.5
+    },
+    {
+      "word": "records",
+      "start": 2.5,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "quiz",
+      "start": 3.0399999618530273,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "answers",
+      "start": 3.4000000953674316,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "and",
+      "start": 3.759999990463257,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "exercise",
+      "start": 4.139999866485596,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "completions",
+      "start": 4.760000228881836,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "Like",
+      "start": 6.099999904632568,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "Progress",
+      "start": 6.260000228881836,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "Tracker",
+      "start": 6.71999979019165,
+      "end": 7
+    },
+    {
+      "word": "it",
+      "start": 7.460000038146973,
+      "end": 7.5
+    },
+    {
+      "word": "writes",
+      "start": 7.5,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "to",
+      "start": 7.800000190734863,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "Firestore",
+      "start": 8.100000381469727,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "via",
+      "start": 8.699999809265137,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "data",
+      "start": 9.180000305175781,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "service",
+      "start": 9.619999885559082,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "for",
+      "start": 10.039999961853027,
+      "end": 10.5
+    },
+    {
+      "word": "authenticated",
+      "start": 10.5,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "users",
+      "start": 11.199999809265137,
+      "end": 11.619999885559082
+    }
+  ]
+}

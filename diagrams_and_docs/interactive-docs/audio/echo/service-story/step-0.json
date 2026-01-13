@@ -1,0 +1,135 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Foundation: Firebase Config. Everything starts here. FirebaseApp initializes the Firebase SDK, establishing connections to Authentication and Firestore. This is loaded first on every page.",
+  "duration": 15.5,
+  "words": [
+    {
+      "word": "Foundation",
+      "start": 0,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "Firebase",
+      "start": 1.5,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "Config",
+      "start": 1.7599999904632568,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "Everything",
+      "start": 3.359999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "starts",
+      "start": 3.359999895095825,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "here",
+      "start": 3.740000009536743,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "Firebase",
+      "start": 4.800000190734863,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "app",
+      "start": 5.139999866485596,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "initializes",
+      "start": 5.519999980926514,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "the",
+      "start": 6.260000228881836,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "Firebase",
+      "start": 6.679999828338623,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "SDK",
+      "start": 7.019999980926514,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "establishing",
+      "start": 8.739999771118164,
+      "end": 8.779999732971191
+    },
+    {
+      "word": "connections",
+      "start": 8.779999732971191,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "to",
+      "start": 9.359999656677246,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "Authentication",
+      "start": 9.800000190734863,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "and",
+      "start": 10.420000076293945,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "Firestore",
+      "start": 11.34000015258789,
+      "end": 12.079999923706055
+    },
+    {
+      "word": "Vase",
+      "start": 12.800000190734863,
+      "end": 13
+    },
+    {
+      "word": "is",
+      "start": 13,
+      "end": 13.420000076293945
+    },
+    {
+      "word": "loaded",
+      "start": 13.420000076293945,
+      "end": 13.420000076293945
+    },
+    {
+      "word": "first",
+      "start": 13.420000076293945,
+      "end": 13.899999618530273
+    },
+    {
+      "word": "on",
+      "start": 13.899999618530273,
+      "end": 14.220000267028809
+    },
+    {
+      "word": "every",
+      "start": 14.220000267028809,
+      "end": 14.800000190734863
+    },
+    {
+      "word": "page",
+      "start": 14.800000190734863,
+      "end": 15.199999809265137
+    }
+  ]
+}

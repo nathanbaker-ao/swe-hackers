@@ -1,0 +1,135 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Authentication Layer. AuthService wraps Firebase Auth, managing user sessions, login flows, and auth state changes. It depends on FirebaseApp for the auth instance.",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "Authentication",
+      "start": 0,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "Layer",
+      "start": 0.9200000166893005,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "Auth",
+      "start": 1.600000023841858,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "Service",
+      "start": 2.440000057220459,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "wraps",
+      "start": 2.859999895095825,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "Firebase",
+      "start": 3.319999933242798,
+      "end": 4
+    },
+    {
+      "word": "Auth",
+      "start": 4,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "managing",
+      "start": 5.199999809265137,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "user",
+      "start": 5.199999809265137,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "sessions",
+      "start": 5.739999771118164,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "login",
+      "start": 6.679999828338623,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "flows",
+      "start": 6.900000095367432,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "and",
+      "start": 7.639999866485596,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "auth",
+      "start": 8.100000381469727,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "state",
+      "start": 8.180000305175781,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "changes",
+      "start": 8.539999961853027,
+      "end": 9
+    },
+    {
+      "word": "It",
+      "start": 9.680000305175781,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "depends",
+      "start": 10.239999771118164,
+      "end": 10.5
+    },
+    {
+      "word": "on",
+      "start": 10.5,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "Firebase",
+      "start": 10.859999656677246,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "App",
+      "start": 11.34000015258789,
+      "end": 11.739999771118164
+    },
+    {
+      "word": "for",
+      "start": 11.739999771118164,
+      "end": 12.15999984741211
+    },
+    {
+      "word": "the",
+      "start": 12.15999984741211,
+      "end": 12.520000457763672
+    },
+    {
+      "word": "Auth",
+      "start": 12.520000457763672,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "instance",
+      "start": 12.65999984741211,
+      "end": 13.15999984741211
+    }
+  ]
+}

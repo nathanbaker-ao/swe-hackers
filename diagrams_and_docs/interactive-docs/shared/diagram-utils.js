@@ -3,6 +3,9 @@
  * Cytoscape.js helper functions and common configurations
  */
 
+// Track diagram animation states
+const diagramAnimationState = new Map();
+
 // Color palette matching CSS variables
 const COLORS = {
   bgPrimary: '#0a0a0f',
@@ -415,6 +418,204 @@ function exportDiagram(cy, filename = 'diagram') {
 }
 
 /**
+ * Animate diagram build - nodes appear then edges connect
+ * @param {Object} cy - Cytoscape instance
+ * @param {Object} options - Animation options
+ */
+function animateDiagramBuild(cy, options = {}) {
+  const {
+    nodeDelay = 80,
+    edgeDelay = 50,
+    nodeDuration = 400,
+    edgeDuration = 300,
+    containerId = null,
+    onComplete = () => {}
+  } = options;
+
+  const nodes = cy.nodes();
+  const edges = cy.edges();
+  
+  // Get topological order for nodes (dependencies first)
+  const nodeOrder = getTopologicalOrder(cy);
+  
+  // Add visual feedback class
+  const canvas = cy.container();
+  const container = canvas?.closest('.diagram-container');
+  const replayBtn = container?.querySelector('.replay-btn');
+  
+  canvas?.classList.add('animating');
+  replayBtn?.classList.add('playing');
+  
+  // Initially hide all elements
+  nodes.style({ 'opacity': 0, 'transform': 'scale(0.5)' });
+  edges.style({ 'opacity': 0, 'line-style': 'solid' });
+  
+  // Animate nodes appearing in order
+  nodeOrder.forEach((node, index) => {
+    setTimeout(() => {
+      anime({
+        targets: {},
+        opacity: [0, 1],
+        scale: [0.5, 1],
+        duration: nodeDuration,
+        easing: 'easeOutBack',
+        update: (anim) => {
+          const progress = anim.progress / 100;
+          node.style({
+            'opacity': progress,
+            'transform': `scale(${0.5 + (0.5 * progress)})`
+          });
+        },
+        complete: () => {
+          node.style({ 'transform': 'scale(1)' });
+        }
+      });
+    }, index * nodeDelay);
+  });
+  
+  // After nodes, animate edges with a "draw" effect
+  const edgeStartDelay = nodeOrder.length * nodeDelay + nodeDuration;
+  
+  edges.forEach((edge, index) => {
+    setTimeout(() => {
+      // Flash the connected nodes briefly
+      const sourceNode = edge.source();
+      const targetNode = edge.target();
+      
+      sourceNode.addClass('highlighted');
+      targetNode.addClass('highlighted');
+      
+      anime({
+        targets: {},
+        opacity: [0, 0.7],
+        duration: edgeDuration,
+        easing: 'easeOutQuad',
+        update: (anim) => {
+          const progress = anim.progress / 100;
+          edge.style({ 'opacity': progress * 0.7 });
+        },
+        complete: () => {
+          // Remove highlight after brief delay
+          setTimeout(() => {
+            sourceNode.removeClass('highlighted');
+            targetNode.removeClass('highlighted');
+          }, 150);
+        }
+      });
+    }, edgeStartDelay + (index * edgeDelay));
+  });
+  
+  // Call onComplete when all animations finish
+  const totalDuration = edgeStartDelay + (edges.length * edgeDelay) + edgeDuration + 200;
+  setTimeout(() => {
+    canvas?.classList.remove('animating');
+    replayBtn?.classList.remove('playing');
+    onComplete();
+  }, totalDuration);
+  
+  return totalDuration;
+}
+
+/**
+ * Get nodes in topological order (root/independent nodes first)
+ */
+function getTopologicalOrder(cy) {
+  const nodes = cy.nodes();
+  const ordered = [];
+  const visited = new Set();
+  
+  // Find root nodes (no incoming edges)
+  const roots = nodes.filter(node => node.incomers('edge').length === 0);
+  
+  // BFS from roots
+  const queue = [...roots];
+  roots.forEach(node => visited.add(node.id()));
+  
+  while (queue.length > 0) {
+    const node = queue.shift();
+    ordered.push(node);
+    
+    node.outgoers('node').forEach(neighbor => {
+      if (!visited.has(neighbor.id())) {
+        visited.add(neighbor.id());
+        queue.push(neighbor);
+      }
+    });
+  }
+  
+  // Add any remaining nodes (cycles or disconnected)
+  nodes.forEach(node => {
+    if (!visited.has(node.id())) {
+      ordered.push(node);
+    }
+  });
+  
+  return ordered;
+}
+
+/**
+ * Setup scroll-triggered diagram animation
+ */
+function setupDiagramScrollAnimation(cy, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  
+  const diagramContainer = container.closest('.diagram-container');
+  if (!diagramContainer) return;
+  
+  // Mark as not yet animated
+  diagramAnimationState.set(containerId, {
+    hasAnimated: false,
+    isAnimating: false,
+    cy: cy
+  });
+  
+  // Initially hide elements
+  cy.nodes().style({ 'opacity': 0 });
+  cy.edges().style({ 'opacity': 0 });
+  
+  // Setup IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const state = diagramAnimationState.get(containerId);
+        if (state && !state.hasAnimated && !state.isAnimating) {
+          state.isAnimating = true;
+          
+          // Small delay to ensure layout is complete
+          setTimeout(() => {
+            animateDiagramBuild(cy, {
+              onComplete: () => {
+                state.hasAnimated = true;
+                state.isAnimating = false;
+              }
+            });
+          }, 200);
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  observer.observe(diagramContainer);
+}
+
+/**
+ * Replay diagram build animation
+ */
+function replayDiagramAnimation(containerId) {
+  const state = diagramAnimationState.get(containerId);
+  if (!state || state.isAnimating) return;
+  
+  state.isAnimating = true;
+  
+  animateDiagramBuild(state.cy, {
+    onComplete: () => {
+      state.isAnimating = false;
+    }
+  });
+}
+
+/**
  * Common layout configurations
  */
 const LAYOUTS = {
@@ -558,12 +759,32 @@ function setupBackToTop() {
 /**
  * Setup diagram control buttons
  */
-function setupDiagramControls(cy, diagramId) {
+function setupDiagramControls(cy, diagramId, options = {}) {
+  const { enableScrollAnimation = true } = options;
+  
   const container = document.querySelector(`#${diagramId}`).closest('.diagram-container');
   if (!container) return;
 
   const controls = container.querySelector('.diagram-controls');
   if (!controls) return;
+
+  // Add Replay button if it doesn't exist
+  if (!controls.querySelector('[data-action="replay"]')) {
+    const replayBtn = document.createElement('button');
+    replayBtn.className = 'diagram-btn replay-btn';
+    replayBtn.setAttribute('data-action', 'replay');
+    replayBtn.innerHTML = '▶ Replay';
+    replayBtn.title = 'Replay build animation';
+    controls.insertBefore(replayBtn, controls.firstChild);
+  }
+
+  // Replay button
+  const replayBtn = controls.querySelector('[data-action="replay"]');
+  if (replayBtn) {
+    replayBtn.addEventListener('click', () => {
+      replayDiagramAnimation(diagramId);
+    });
+  }
 
   // Fit button
   const fitBtn = controls.querySelector('[data-action="fit"]');
@@ -599,6 +820,11 @@ function setupDiagramControls(cy, diagramId) {
       }
     });
   });
+
+  // Setup scroll animation if enabled
+  if (enableScrollAnimation) {
+    setupDiagramScrollAnimation(cy, diagramId);
+  }
 }
 
 // Export for use in pages
@@ -613,5 +839,8 @@ window.DiagramUtils = {
   setupDiagramControls,
   initPageAnimations,
   setupBackToTop,
-  getBaseStylesheet
+  getBaseStylesheet,
+  animateDiagramBuild,
+  replayDiagramAnimation,
+  setupDiagramScrollAnimation
 };

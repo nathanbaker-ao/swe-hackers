@@ -333,6 +333,20 @@ a:hover {
   border-color: var(--accent-primary);
 }
 
+.diagram-btn.replay-btn {
+  background: var(--accent-secondary);
+  color: var(--bg-primary);
+  border-color: var(--accent-secondary);
+  font-weight: 500;
+}
+
+.diagram-btn.replay-btn:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
 .diagram-canvas {
   height: 500px;
   position: relative;
@@ -682,4 +696,19 @@ pre {
 
 .diagram-instructions span {
   margin: 0 1rem;
+}
+
+/* Diagram Animation States */
+.diagram-canvas.animating {
+  border: 2px solid var(--accent-secondary);
+  box-shadow: 0 0 20px rgba(77, 182, 172, 0.2);
+}
+
+.diagram-btn.replay-btn.playing {
+  animation: pulse-btn 1s ease-in-out infinite;
+}
+
+@keyframes pulse-btn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }

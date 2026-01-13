@@ -1,0 +1,125 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Activity Completion. ActivityTracker records quiz answers and exercise completions. Like ProgressTracker, it writes to Firestore via DataService for authenticated users.",
+  "duration": 15.3100004196167,
+  "words": [
+    {
+      "word": "Activity",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Completion",
+      "start": 0.7799999713897705,
+      "end": 1.6799999475479126
+    },
+    {
+      "word": "Activity",
+      "start": 3.2200000286102295,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "Tracker",
+      "start": 3.2200000286102295,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "records",
+      "start": 3.440000057220459,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "quiz",
+      "start": 4.019999980926514,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "answers",
+      "start": 4.460000038146973,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "and",
+      "start": 4.920000076293945,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "exercise",
+      "start": 5.599999904632568,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "completions",
+      "start": 6.320000171661377,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "Like",
+      "start": 7.960000038146973,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "Progress",
+      "start": 8.180000305175781,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "Tracker",
+      "start": 8.899999618530273,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "it",
+      "start": 9.84000015258789,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "writes",
+      "start": 9.84000015258789,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "to",
+      "start": 10.220000267028809,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "Firestore",
+      "start": 10.899999618530273,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "via",
+      "start": 11.15999984741211,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "data",
+      "start": 11.84000015258789,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "service",
+      "start": 12.4399995803833,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "for",
+      "start": 12.880000114440918,
+      "end": 13.5600004196167
+    },
+    {
+      "word": "authenticated",
+      "start": 13.5600004196167,
+      "end": 14.380000114440918
+    },
+    {
+      "word": "users",
+      "start": 14.380000114440918,
+      "end": 14.859999656677246
+    }
+  ]
+}

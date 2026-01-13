@@ -1,0 +1,140 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-6",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Route Protection. RouteGuard runs on page load to check if users can access the current page. It verifies authentication status AND role requirements before showing content.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "Root",
+      "start": 0,
+      "end": 0.3199999928474426
+    },
+    {
+      "word": "Protection",
+      "start": 0.3199999928474426,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "RootGuard",
+      "start": 1.6799999475479126,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "runs",
+      "start": 1.7000000476837158,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "on",
+      "start": 2.140000104904175,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "page",
+      "start": 2.640000104904175,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "load",
+      "start": 2.9800000190734863,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "to",
+      "start": 3.240000009536743,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "check",
+      "start": 3.5199999809265137,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "if",
+      "start": 3.740000009536743,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "users",
+      "start": 4.059999942779541,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "can",
+      "start": 4.260000228881836,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "access",
+      "start": 4.639999866485596,
+      "end": 5
+    },
+    {
+      "word": "the",
+      "start": 5,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "current",
+      "start": 5.28000020980835,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "page",
+      "start": 5.559999942779541,
+      "end": 6
+    },
+    {
+      "word": "It",
+      "start": 6.800000190734863,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "verifies",
+      "start": 6.800000190734863,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "authentication",
+      "start": 7.360000133514404,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "status",
+      "start": 8.260000228881836,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "and",
+      "start": 8.819999694824219,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "role",
+      "start": 9.399999618530273,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "requirements",
+      "start": 9.859999656677246,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "before",
+      "start": 10.479999542236328,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "showing",
+      "start": 11.199999809265137,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "content",
+      "start": 11.640000343322754,
+      "end": 12.239999771118164
+    }
+  ]
+}

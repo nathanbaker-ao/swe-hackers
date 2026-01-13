@@ -1,0 +1,130 @@
+{
+  "storyId": "dataflow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Authentication Verified. Before writing data, the service checks AuthService.getCurrentUser. If no user is logged in, the action may be queued or rejected.",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Authentication",
+      "start": 0,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Verified",
+      "start": 1.100000023841858,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "Before",
+      "start": 2.0999999046325684,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "writing",
+      "start": 2.859999895095825,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "data",
+      "start": 3.240000009536743,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "the",
+      "start": 4.099999904632568,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "service",
+      "start": 4.239999771118164,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "checks",
+      "start": 4.579999923706055,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "off",
+      "start": 4.980000019073486,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "service",
+      "start": 5.480000019073486,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "getCurrentUser",
+      "start": 5.840000152587891,
+      "end": 7.21999979019165
+    },
+    {
+      "word": "If",
+      "start": 7.760000228881836,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "no",
+      "start": 7.940000057220459,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "user",
+      "start": 8.359999656677246,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "is",
+      "start": 8.640000343322754,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "logged",
+      "start": 8.960000038146973,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "in",
+      "start": 9.180000305175781,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "the",
+      "start": 9.859999656677246,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "action",
+      "start": 9.979999542236328,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "may",
+      "start": 10.34000015258789,
+      "end": 10.619999885559082
+    },
+    {
+      "word": "be",
+      "start": 10.619999885559082,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "queued",
+      "start": 11.239999771118164,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "or",
+      "start": 11.239999771118164,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "rejected",
+      "start": 11.899999618530273,
+      "end": 12.359999656677246
+    }
+  ]
+}

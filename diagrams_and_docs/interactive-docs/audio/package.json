@@ -1,0 +1,12 @@
+{
+  "name": "storytelling-audio-generator",
+  "version": "1.0.0",
+  "description": "Generate TTS audio with word timestamps for storytelling diagrams",
+  "main": "generate-audio.js",
+  "scripts": {
+    "generate": "node generate-audio.js"
+  },
+  "dependencies": {
+    "openai": "^4.77.0"
+  }
+}

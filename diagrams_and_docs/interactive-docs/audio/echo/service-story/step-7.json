@@ -1,0 +1,135 @@
+{
+  "storyId": "service-story",
+  "stepId": "step-7",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Lesson Orchestration. Finally, LessonIntegration ties it all together on lesson pages. It coordinates ProgressTracker and ActivityTracker to create a seamless learning experience.",
+  "duration": 14.899999618530273,
+  "words": [
+    {
+      "word": "Lesson",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "Orchestration",
+      "start": 0.6399999856948853,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "Finally",
+      "start": 2.0199999809265137,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "Lesson",
+      "start": 3.680000066757202,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "Integration",
+      "start": 3.9000000953674316,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "ties",
+      "start": 4.480000019073486,
+      "end": 5
+    },
+    {
+      "word": "it",
+      "start": 5,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "all",
+      "start": 5.320000171661377,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "together",
+      "start": 5.699999809265137,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "on",
+      "start": 6.119999885559082,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "lesson",
+      "start": 6.539999961853027,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "pages",
+      "start": 6.860000133514404,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "It",
+      "start": 8.020000457763672,
+      "end": 8.279999732971191
+    },
+    {
+      "word": "coordinates",
+      "start": 8.279999732971191,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "Progress",
+      "start": 8.800000190734863,
+      "end": 9.5
+    },
+    {
+      "word": "Tracker",
+      "start": 9.5,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "and",
+      "start": 9.800000190734863,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "Activity",
+      "start": 10.34000015258789,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "Tracker",
+      "start": 10.979999542236328,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "to",
+      "start": 11.380000114440918,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "create",
+      "start": 11.899999618530273,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "a",
+      "start": 12.220000267028809,
+      "end": 13.140000343322754
+    },
+    {
+      "word": "seamless",
+      "start": 13.140000343322754,
+      "end": 13.140000343322754
+    },
+    {
+      "word": "learning",
+      "start": 13.140000343322754,
+      "end": 13.680000305175781
+    },
+    {
+      "word": "experience",
+      "start": 13.680000305175781,
+      "end": 14.420000076293945
+    }
+  ]
+}
