@@ -5,7 +5,12 @@
  * Uses OpenAI gpt-4o-mini-tts with expressive instructions, then Whisper for timestamps.
  * Generates multiple voice options in parallel.
  * 
- * Usage: node generate-audio.js
+ * Usage: 
+ *   node generate-audio.js                        # Process all story files
+ *   node generate-audio.js --page demo-storytelling   # Process specific page
+ *   node generate-audio.js --incremental          # Skip existing files
+ *   node generate-audio.js --story service-story  # Process specific story
+ * 
  * Requires: OPENAI_API_KEY environment variable
  */
 
@@ -14,110 +19,6 @@ const path = require('path');
 const OpenAI = require('openai');
 
 const openai = new OpenAI();
-
-// Story data extracted from demo-storytelling-diagram.html
-const stories = {
-  'service-story': [
-    {
-      id: 'step-0',
-      nodeId: 'firebase-config',
-      title: 'Foundation: Firebase Config',
-      narration: 'Everything starts here. FirebaseApp initializes the Firebase SDK, establishing connections to Authentication and Firestore. This is loaded first on every page.'
-    },
-    {
-      id: 'step-1',
-      nodeId: 'auth-service',
-      title: 'Authentication Layer',
-      narration: 'AuthService wraps Firebase Auth, managing user sessions, login flows, and auth state changes. It depends on FirebaseApp for the auth instance.'
-    },
-    {
-      id: 'step-2',
-      nodeId: 'data-service',
-      title: 'Data Access Layer',
-      narration: 'DataService handles all Firestore CRUD operations. It needs FirebaseApp for database access AND AuthService to scope queries to the current user.'
-    },
-    {
-      id: 'step-3',
-      nodeId: 'rbac',
-      title: 'Role-Based Access Control',
-      narration: 'RBACService checks user roles and permissions. It queries AuthService to get the current user, then checks their role against required permissions.'
-    },
-    {
-      id: 'step-4',
-      nodeId: 'progress-tracker',
-      title: 'Progress Tracking',
-      narration: 'ProgressTracker uses IntersectionObserver to detect which content users have viewed. It saves progress via DataService and identifies users via AuthService.'
-    },
-    {
-      id: 'step-5',
-      nodeId: 'activity-tracker',
-      title: 'Activity Completion',
-      narration: 'ActivityTracker records quiz answers and exercise completions. Like ProgressTracker, it writes to Firestore via DataService for authenticated users.'
-    },
-    {
-      id: 'step-6',
-      nodeId: 'route-guard',
-      title: 'Route Protection',
-      narration: 'RouteGuard runs on page load to check if users can access the current page. It verifies authentication status AND role requirements before showing content.'
-    },
-    {
-      id: 'step-7',
-      nodeId: 'lesson-integration',
-      title: 'Lesson Orchestration',
-      narration: 'Finally, LessonIntegration ties it all together on lesson pages. It coordinates ProgressTracker and ActivityTracker to create a seamless learning experience.'
-    }
-  ],
-  'dataflow-story': [
-    {
-      id: 'step-0',
-      nodeId: 'user-click',
-      title: 'User Initiates Action',
-      narration: 'It all starts with a user interaction—clicking a Complete Quiz button, scrolling past a section, or submitting a form. The browser captures this event.'
-    },
-    {
-      id: 'step-1',
-      nodeId: 'event-handler',
-      title: 'Event Handler Catches It',
-      narration: 'The DOM event handler fires. This is JavaScript code in the page that responds to user actions and decides what to do next.'
-    },
-    {
-      id: 'step-2',
-      nodeId: 'service-call',
-      title: 'Service Method Called',
-      narration: 'The handler calls a service method like ProgressTracker.markComplete or ActivityTracker.submitAnswer. Business logic lives in these services, not in UI code.'
-    },
-    {
-      id: 'step-3',
-      nodeId: 'auth-check',
-      title: 'Authentication Verified',
-      narration: 'Before writing data, the service checks AuthService.getCurrentUser. If no user is logged in, the action may be queued or rejected.'
-    },
-    {
-      id: 'step-4',
-      nodeId: 'firestore-write',
-      title: 'Data Written to Firestore',
-      narration: 'The service calls Firestore to persist the data. This might be updating a progress document, saving quiz answers, or logging activity.'
-    },
-    {
-      id: 'step-5',
-      nodeId: 'realtime-update',
-      title: 'Realtime Listener Triggers',
-      narration: 'Firestores onSnapshot listeners detect the change instantly. Any component subscribed to this data gets notified automatically.'
-    },
-    {
-      id: 'step-6',
-      nodeId: 'state-update',
-      title: 'Local State Updates',
-      narration: 'The listener callback updates the local state. This keeps the UI in sync with the database.'
-    },
-    {
-      id: 'step-7',
-      nodeId: 'ui-render',
-      title: 'UI Reflects the Change',
-      narration: 'Finally, the UI re-renders to show the new state. A progress bar fills, a checkmark appears, or a success toast shows. The cycle is complete!'
-    }
-  ]
-};
 
 // Voice configurations with expressive storytelling instructions
 const VOICES = {
@@ -143,7 +44,95 @@ Make the listener feel like they're discovering something incredible.`
   }
 };
 
-async function generateAudioForStep(storyId, step, voiceConfig) {
+// Parse command line arguments
+function parseArgs() {
+  const args = process.argv.slice(2);
+  const options = {
+    incremental: false,
+    page: null,
+    story: null
+  };
+
+  for (let i = 0; i < args.length; i++) {
+    switch (args[i]) {
+      case '--incremental':
+      case '-i':
+        options.incremental = true;
+        break;
+      case '--page':
+      case '-p':
+        options.page = args[++i];
+        break;
+      case '--story':
+      case '-s':
+        options.story = args[++i];
+        break;
+      case '--help':
+      case '-h':
+        console.log(`
+Audio Generator for Storytelling Diagrams
+
+Usage: node generate-audio.js [options]
+
+Options:
+  --incremental, -i    Skip existing audio files
+  --page, -p <name>    Process only specified page (e.g., demo-storytelling)
+  --story, -s <name>   Process only specified story (e.g., service-story)
+  --help, -h           Show this help message
+
+Story files should be placed in ./stories/ as JSON files.
+See ./stories/schema.json for the expected format.
+        `);
+        process.exit(0);
+    }
+  }
+
+  return options;
+}
+
+// Load story definitions from JSON files
+function loadStories(options) {
+  const storiesDir = path.join(__dirname, 'stories');
+  const stories = {};
+
+  if (!fs.existsSync(storiesDir)) {
+    console.error('Stories directory not found:', storiesDir);
+    process.exit(1);
+  }
+
+  const files = fs.readdirSync(storiesDir)
+    .filter(f => f.endsWith('.json') && f !== 'schema.json');
+
+  for (const file of files) {
+    const pageId = path.basename(file, '.json');
+    
+    // Filter by page if specified
+    if (options.page && pageId !== options.page) {
+      continue;
+    }
+
+    const filePath = path.join(storiesDir, file);
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+    for (const story of data.stories) {
+      // Filter by story if specified
+      if (options.story && story.id !== options.story) {
+        continue;
+      }
+
+      stories[story.id] = story.steps.map((step, index) => ({
+        id: `step-${index}`,
+        nodeId: step.nodeId,
+        title: step.title,
+        narration: step.narration
+      }));
+    }
+  }
+
+  return stories;
+}
+
+async function generateAudioForStep(storyId, step, voiceConfig, options) {
   const text = `${step.title}. ${step.narration}`;
   const voiceDir = path.join(__dirname, voiceConfig.name, storyId);
   const audioPath = path.join(voiceDir, `${step.id}.mp3`);
@@ -152,6 +141,12 @@ async function generateAudioForStep(storyId, step, voiceConfig) {
   // Create directory if needed
   if (!fs.existsSync(voiceDir)) {
     fs.mkdirSync(voiceDir, { recursive: true });
+  }
+
+  // Skip if incremental and file exists
+  if (options.incremental && fs.existsSync(audioPath) && fs.existsSync(timestampPath)) {
+    console.log(`   ⏭️  [${voiceConfig.name}] ${step.id} (skipped - exists)`);
+    return JSON.parse(fs.readFileSync(timestampPath, 'utf8'));
   }
 
   console.log(`   🎤 [${voiceConfig.name}] ${step.id}...`);
@@ -202,7 +197,7 @@ async function generateAudioForStep(storyId, step, voiceConfig) {
   return timestampData;
 }
 
-async function generateForVoice(voiceConfig) {
+async function generateForVoice(voiceConfig, stories, options) {
   console.log(`\n🎭 Generating ${voiceConfig.label} voice...`);
   
   const voiceTimestamps = {};
@@ -213,7 +208,7 @@ async function generateForVoice(voiceConfig) {
 
     for (const step of steps) {
       try {
-        const timestamps = await generateAudioForStep(storyId, step, voiceConfig);
+        const timestamps = await generateAudioForStep(storyId, step, voiceConfig, options);
         voiceTimestamps[storyId].push(timestamps);
       } catch (error) {
         console.error(`   ❌ [${voiceConfig.name}] ${step.id}: ${error.message}`);
@@ -224,14 +219,26 @@ async function generateForVoice(voiceConfig) {
   return voiceTimestamps;
 }
 
-async function generateAllAudio() {
+async function generateAllAudio(options) {
+  // Load stories from JSON files
+  const stories = loadStories(options);
+  
+  if (Object.keys(stories).length === 0) {
+    console.log('No stories found to process.');
+    console.log('Place story JSON files in ./stories/ directory.');
+    process.exit(1);
+  }
+
   console.log('🚀 Starting audio generation with gpt-4o-mini-tts...');
   console.log(`   Voices: ${Object.values(VOICES).map(v => v.label).join(', ')}`);
   console.log(`   Stories: ${Object.keys(stories).join(', ')}`);
+  if (options.incremental) {
+    console.log('   Mode: Incremental (skipping existing files)');
+  }
 
   // Generate all voices in parallel
   const voiceResults = await Promise.all(
-    Object.values(VOICES).map(voiceConfig => generateForVoice(voiceConfig))
+    Object.values(VOICES).map(voiceConfig => generateForVoice(voiceConfig, stories, options))
   );
 
   // Build combined manifest with voice options
@@ -239,7 +246,9 @@ async function generateAllAudio() {
     voices: Object.fromEntries(
       Object.entries(VOICES).map(([key, config]) => [key, { name: config.name, label: config.label }])
     ),
-    defaultVoice: 'ballad'
+    defaultVoice: 'ballad',
+    generatedAt: new Date().toISOString(),
+    stories: Object.keys(stories)
   };
 
   // Add each voice's timestamps to manifest
@@ -253,9 +262,11 @@ async function generateAllAudio() {
   console.log(`\n✅ Generated manifest: ${manifestPath}`);
 
   console.log('\n🎉 Audio generation complete!');
-  console.log(`   📁 ballad/ - Storyteller voice`);
-  console.log(`   📁 sage/   - Wise mentor voice`);
+  Object.values(VOICES).forEach(v => {
+    console.log(`   📁 ${v.name}/ - ${v.label}`);
+  });
 }
 
 // Run
-generateAllAudio().catch(console.error);
+const options = parseArgs();
+generateAllAudio(options).catch(console.error);
