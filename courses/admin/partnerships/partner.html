@@ -481,8 +481,9 @@
     
     .description-text {
       color: var(--text-secondary);
-      line-height: 1.6;
-      white-space: pre-wrap;
+      line-height: 1.9;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
     }
     
     .empty-state {
@@ -559,6 +560,11 @@
         </div>
       </div>
       
+      <div class="info-card" style="margin-bottom: 1.5rem;">
+        <h3>Description</h3>
+        <p class="description-text" id="partner-description">No description provided.</p>
+      </div>
+      
       <div class="cards-grid" style="grid-template-columns: 1fr 1fr;">
         <div class="info-card">
           <h3>Contact Information</h3>
@@ -599,11 +605,6 @@
             <span class="info-value" id="org-total-interactions">0</span>
           </div>
         </div>
-      </div>
-      
-      <div class="info-card">
-        <h3>Description</h3>
-        <p class="description-text" id="partner-description">No description provided.</p>
       </div>
     </div>
     

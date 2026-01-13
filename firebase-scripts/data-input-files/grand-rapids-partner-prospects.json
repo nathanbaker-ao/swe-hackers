@@ -1,0 +1,431 @@
+{
+  "metadata": {
+    "generatedAt": "2026-01-12",
+    "region": "Grand Rapids, Michigan",
+    "purpose": "AI Literacy Education Partnership Prospects",
+    "totalProspects": 21,
+    "targetAudience": "Organizations that educate their community, employees, or students who would benefit from AI literacy training"
+  },
+  "partners": [
+    {
+      "name": "West Michigan Center for Arts + Technology (WMCAT)",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://wmcat.org",
+      "description": "Tuition-free Adult Career Training Program for Kent County adults experiencing underemployment. Offers career training in Health Information, Pharmacy Technician, and Cybersecurity. Also runs youth arts programs. Strong fit for AI literacy integration into existing tech career pathways.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "info@wmcat.org",
+        "phone": "(616) 454-7004"
+      },
+      "address": {
+        "street": "614 First St NW, Suite 300",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49504"
+      },
+      "tags": ["workforce-development", "career-training", "cybersecurity", "adults", "underemployed", "tuition-free", "tech-education"]
+    },
+    {
+      "name": "Grand Rapids Community Foundation",
+      "type": "foundation",
+      "status": "prospect",
+      "website": "https://grfoundation.org",
+      "description": "Michigan's oldest community foundation (est. 1922). Awards over $24 million annually in grants and scholarships. Focuses on eliminating barriers to opportunity and promoting equity. Could fund AI literacy initiatives or partner on grant-funded programs.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 454-1751"
+      },
+      "address": {
+        "street": "185 Oakes Street SW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["foundation", "grants", "scholarships", "equity", "funder", "nonprofit-support"]
+    },
+    {
+      "name": "West Michigan Works!",
+      "type": "government",
+      "status": "prospect",
+      "website": "https://westmiworks.org",
+      "description": "Regional workforce development agency managing 62 U.S. Department of Labor Registered Apprenticeship programs. Serves 385 active apprentices across 123 employers. Offers job seeker services and employer training resources. Ideal partner for workforce AI upskilling programs.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": ""
+      },
+      "address": {
+        "street": "215 Straight Ave NW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49504"
+      },
+      "tags": ["workforce-development", "apprenticeships", "job-training", "government", "employers", "career-services"]
+    },
+    {
+      "name": "Urban League of West Michigan",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://grurbanleague.org",
+      "description": "Provides educational programs addressing barriers to student success. Services include parent advocacy, educational advising, GED referrals, and the Parent Leadership Network. Focus on improving quality and accountability of local schools. Strong community trust.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 245-2207"
+      },
+      "address": {
+        "street": "745 Eastern Avenue SE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["education", "parent-advocacy", "community", "equity", "youth", "leadership"]
+    },
+    {
+      "name": "Grand Rapids Area Chamber of Commerce",
+      "type": "business",
+      "status": "prospect",
+      "website": "https://grandrapids.org",
+      "description": "Regional business chamber offering talent acquisition workshops, HR summits, and professional development programs. Partners with ASE for training. Annual Talent & HR Summit draws business leaders. Excellent channel for reaching employers who need AI-literate workforce.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "info@grandrapids.org",
+        "phone": "(616) 771-0300"
+      },
+      "address": {
+        "street": "250 Monroe Avenue NW, Suite 150",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["business", "chamber", "employers", "hr", "talent", "professional-development", "networking"]
+    },
+    {
+      "name": "Boys & Girls Clubs of Grand Rapids",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://bgcgrandrapids.org",
+      "description": "Multiple club locations serving youth in 49503 and 49507 zip codes. Offers after-school activities, tutoring, art programs, leadership development, and career exploration. Partnership with Hope Academy. Great fit for youth AI literacy programs.",
+      "contact": {
+        "name": "Dalton Mulcahy",
+        "title": "Club Director (Steil Club)",
+        "email": "dmulcahy@bgcgrandrapids.org",
+        "phone": "(616) 275-5500"
+      },
+      "address": {
+        "street": "235 Straight Ave NW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49504"
+      },
+      "tags": ["youth", "after-school", "tutoring", "leadership", "career-exploration", "k-12"]
+    },
+    {
+      "name": "Kent Intermediate School District (Kent ISD)",
+      "type": "school",
+      "status": "prospect",
+      "website": "https://kentisd.org",
+      "description": "Serves 20 local school districts in Kent County. Provides professional development, instructional support, and shared services including occupational therapy and ELL support. Implements Multi-Tiered System of Supports (MTSS). Could scale AI training across multiple districts.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 364-1333"
+      },
+      "address": {
+        "street": "2930 Knapp Street NE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49525"
+      },
+      "tags": ["k-12", "school-district", "professional-development", "teachers", "education", "scale"]
+    },
+    {
+      "name": "YMCA of Greater Grand Rapids",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://grymca.org",
+      "description": "Community organization with multiple locations offering family engagement programs, early learning support, and youth development. Child and Family Advocate Program serves families with children ages 0-5. Strong community presence and trust.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 855-9622"
+      },
+      "address": {
+        "street": "475 Lake Michigan Drive NW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49504"
+      },
+      "tags": ["youth", "families", "early-learning", "community", "wellness", "child-development"]
+    },
+    {
+      "name": "The Salvation Army Kent County (Kroc Center)",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://grkroccenter.org",
+      "description": "Grand Rapids Kroc Corps Community Center offers Camp Kroc (licensed day camp), fine arts programs, and youth services. Fulton Heights location offers after-school K-6 programs with homework help and character building. Friday community events.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "wmigrandrapidskroc@usc.salvationarmy.org",
+        "phone": "(616) 588-7200"
+      },
+      "address": {
+        "street": "2500 S. Division Ave.",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49507"
+      },
+      "tags": ["youth", "summer-camps", "after-school", "community", "k-12", "fine-arts"]
+    },
+    {
+      "name": "Baxter Community Center",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://wearebaxter.org",
+      "description": "Child Development Center serving children newborn to 12 years. Offers full-time care and before/after school programs. Available for low-income families, operates 6am-6pm Monday-Friday. Deep community roots in underserved neighborhoods.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 456-8593"
+      },
+      "address": {
+        "street": "935 Baxter St. SE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49506"
+      },
+      "tags": ["childcare", "youth", "low-income", "community", "early-childhood", "families"]
+    },
+    {
+      "name": "Grand Rapids Public Library",
+      "type": "government",
+      "status": "prospect",
+      "website": "https://grpl.org",
+      "description": "Seven branches offering digital literacy programs, computer classes, and one-on-one tech help. DigiBridge initiative with GRPS bridges technology gap for students. GRCC Virtual Learning Hub at Seymour branch. Perfect venue for community AI workshops.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "custserv@grpl.org",
+        "phone": "(616) 988-5400"
+      },
+      "address": {
+        "street": "111 Library Street NE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["library", "digital-literacy", "technology", "community", "free-resources", "computer-classes"]
+    },
+    {
+      "name": "Grand Rapids Community College - Workforce Training",
+      "type": "university",
+      "status": "prospect",
+      "website": "https://grcc.edu/schools-departments/school-workforce-training",
+      "description": "School of Workforce Training at M-TEC facility. Offers apprenticeship programs in construction, healthcare, IT, and manufacturing. Partners with employers for customized training. Adult education classes including GED and ESL. Established training infrastructure.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "workforcetraining@grcc.edu",
+        "phone": "(616) 234-3800"
+      },
+      "address": {
+        "street": "622 Godfrey Ave. SW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["higher-ed", "workforce-training", "apprenticeships", "it", "manufacturing", "adult-education"]
+    },
+    {
+      "name": "The Right Place, Inc.",
+      "type": "business",
+      "status": "prospect",
+      "website": "https://www.rightplace.org",
+      "description": "Leading economic development org since 1985. Facilitated $6.1B in investments and 50,000 jobs. Offers business support, talent access via Hello West Michigan, and MMTC-West manufacturing tech support. Hosts Tech Week Grand Rapids with AI/cybersecurity topics.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "info@rightplace.org",
+        "phone": "(616) 771-0325"
+      },
+      "address": {
+        "street": "125 Ottawa Avenue NW, Suite 450",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["economic-development", "business", "manufacturing", "tech", "talent", "employers"]
+    },
+    {
+      "name": "Keller Foundation",
+      "type": "foundation",
+      "status": "prospect",
+      "website": "https://kellerfoundation.org",
+      "description": "Since 1980, awarded nearly $7 million to 150+ nonprofits in Grand Rapids. Primary focus on innovative programs for core city youth. Emphasis on cultural, educational, environmental, health, and human services initiatives. Could fund AI literacy for youth.",
+      "contact": {
+        "name": "Zelene Wilkins",
+        "title": "Executive Director",
+        "email": "",
+        "phone": ""
+      },
+      "address": {
+        "street": "5225 33rd Street S.E.",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49512"
+      },
+      "tags": ["foundation", "grants", "youth", "education", "innovation", "funder"]
+    },
+    {
+      "name": "TalentFirst",
+      "type": "business",
+      "status": "prospect",
+      "website": "https://talentfirst.net",
+      "description": "Developed MiCareerCompass, an AI-powered career exploration platform launched March 2025. Helps job seekers explore careers, find training, and connect with West Michigan employers. Already investing in AI - natural partner for AI literacy education.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "info@talentfirst.net",
+        "phone": "(616) 871-2450"
+      },
+      "address": {
+        "street": "833 Kenmoor Ave SE, Suite B",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49546"
+      },
+      "tags": ["workforce", "ai", "career-services", "technology", "job-seekers", "employers"]
+    },
+    {
+      "name": "Hope Network Workforce Development",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://hopenetwork.org/workforce-development",
+      "description": "Helps people with disabilities and other barriers find meaningful employment. Provides job training, placement services, and ongoing support. Serves individuals who could greatly benefit from accessible AI literacy training.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "kgarter@hopenetwork.org",
+        "phone": "(616) 248-5160"
+      },
+      "address": {
+        "street": "551 36th Street SE",
+        "city": "Kentwood",
+        "state": "MI",
+        "zip": "49548"
+      },
+      "tags": ["workforce-development", "disabilities", "job-training", "accessibility", "employment", "support-services"]
+    },
+    {
+      "name": "Goodwill Industries of Greater Grand Rapids",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://goodwillgr.org",
+      "description": "Employment Center offers Achieve program for long-term career goals, CNA training, and job placement workshops. Training team provides various career development services. Serves job seekers needing skill development.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "training@goodwillgr.org",
+        "phone": "(616) 532-4200"
+      },
+      "address": {
+        "street": "3777 Sparks Dr SE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49546"
+      },
+      "tags": ["workforce-development", "job-training", "career-services", "employment", "skill-building"]
+    },
+    {
+      "name": "Heart of West Michigan United Way",
+      "type": "foundation",
+      "status": "prospect",
+      "website": "https://hwmuw.org",
+      "description": "Operates 2-1-1 helpline connecting individuals to 2,900+ services in Kent County. Focuses on education, financial stability, and health initiatives. Strong convening power and community reach. Could amplify AI literacy across their network.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "communications@hwmuw.org",
+        "phone": "(616) 459-6281"
+      },
+      "address": {
+        "street": "118 Commerce Ave SW, Suite 100",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["united-way", "community", "education", "financial-stability", "network", "convener"]
+    },
+    {
+      "name": "Grand Rapids Public Schools (GRPS)",
+      "type": "school",
+      "status": "prospect",
+      "website": "https://grps.org",
+      "description": "Largest school district in the region. F.A.C.E. department builds home-school-community links. Partners with OCC for after-school programs. LOOP extended learning program serves elementary and middle schoolers. $29.5M Promise Neighborhood grant recipient.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 819-2000"
+      },
+      "address": {
+        "street": "1331 Martin Luther King Jr St SE",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49506"
+      },
+      "tags": ["k-12", "school-district", "public-schools", "education", "after-school", "large-scale"]
+    },
+    {
+      "name": "Hispanic Center of Western Michigan",
+      "type": "community",
+      "status": "prospect",
+      "website": "https://hispanic-center.org",
+      "description": "Bilingual preschool, school enrollment assistance, and youth internship programs. Serves the growing Hispanic/Latino community in Grand Rapids. Office hours Mon-Fri 9-5. Could bring AI literacy to underserved Spanish-speaking community.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "",
+        "phone": "(616) 742-0200"
+      },
+      "address": {
+        "street": "1204 Cesar E. Chavez Ave SW",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["hispanic", "bilingual", "youth", "community", "education", "cultural"]
+    },
+    {
+      "name": "Our Community's Children (OCC)",
+      "type": "government",
+      "status": "prospect",
+      "website": "https://grandrapidsmi.gov/Government/Departments/Our-Communitys-Children",
+      "description": "Public-private partnership between City of Grand Rapids, GRPS, and community partners. Ensures every child can succeed through jobs, quality after-school programs, college opportunities, and leadership experiences. GRow1000 youth employment program.",
+      "contact": {
+        "name": "",
+        "title": "",
+        "email": "sharris@grcity.us",
+        "phone": "(616) 456-3558"
+      },
+      "address": {
+        "street": "201 Market Ave SW, 2nd Floor",
+        "city": "Grand Rapids",
+        "state": "MI",
+        "zip": "49503"
+      },
+      "tags": ["government", "youth", "after-school", "employment", "public-private", "leadership"]
+    }
+  ]
+}
