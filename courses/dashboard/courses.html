@@ -627,7 +627,7 @@
             </div>
           ` : ''}
           
-          <a href="../course/${course.id}.html" class="card-action ${isEnrolled ? 'continue' : 'enroll'}">
+          <a href="${isEnrolled ? `course.html?id=${course.id}` : `../course/${course.id}.html`}" class="card-action ${isEnrolled ? 'continue' : 'enroll'}">
             ${isEnrolled ? 'Continue Learning →' : 'View Course Details'}
           </a>
         </div>
