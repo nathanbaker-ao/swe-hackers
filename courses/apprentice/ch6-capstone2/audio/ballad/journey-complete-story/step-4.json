@@ -1,0 +1,130 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Think Like an Architect. Chapter 4 shifted your perspective. You learned to think big picture—planning systems, visualizing with diagrams, and designing before coding!",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "word": "Think",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "like",
+      "start": 0.46000000834465027,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "an",
+      "start": 0.8600000143051147,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "architect",
+      "start": 1.4800000190734863,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Chapter",
+      "start": 2.5199999809265137,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "4",
+      "start": 2.5399999618530273,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "shifted",
+      "start": 3.0199999809265137,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "your",
+      "start": 3.5799999237060547,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "perspective",
+      "start": 3.9000000953674316,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "You",
+      "start": 5.28000020980835,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "learned",
+      "start": 5.320000171661377,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "to",
+      "start": 5.579999923706055,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "think",
+      "start": 5.960000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "big",
+      "start": 6.019999980926514,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "picture",
+      "start": 6.460000038146973,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "planning",
+      "start": 7.659999847412109,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "systems",
+      "start": 7.800000190734863,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "visualizing",
+      "start": 9.220000267028809,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "with",
+      "start": 9.5600004196167,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "diagrams",
+      "start": 9.9399995803833,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "and",
+      "start": 11.0600004196167,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "designing",
+      "start": 11.279999732971191,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "before",
+      "start": 11.699999809265137,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "coding",
+      "start": 12.619999885559082,
+      "end": 12.9399995803833
+    }
+  ]
+}

@@ -1,0 +1,5125 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T01:05:24.917Z",
+  "stories": [
+    "architect-shift-story",
+    "evolution-story",
+    "new-skills-story"
+  ],
+  "ballad": {
+    "architect-shift-story": [
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Old Way. Imagine building a house. In the old days, you had to make every brick by hand, one by one. It took forever! Coding used to be the same—every line written manually.",
+        "duration": 15.039999961853027,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "old",
+            "start": 0.3400000035762787,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "way",
+            "start": 0.9599999785423279,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "Imagine",
+            "start": 2.4200000762939453,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "building",
+            "start": 2.619999885559082,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 3.119999885559082,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "house",
+            "start": 3.7200000286102295,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "In",
+            "start": 4.380000114440918,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 4.440000057220459,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "old",
+            "start": 4.619999885559082,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "days",
+            "start": 4.840000152587891,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 5.400000095367432,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "had",
+            "start": 5.539999961853027,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "to",
+            "start": 5.699999809265137,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "make",
+            "start": 5.900000095367432,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "every",
+            "start": 5.980000019073486,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "brick",
+            "start": 6.480000019073486,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "by",
+            "start": 6.679999828338623,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "hand",
+            "start": 7.019999980926514,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "one",
+            "start": 7.840000152587891,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "by",
+            "start": 7.980000019073486,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "one",
+            "start": 8.199999809265137,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "It",
+            "start": 9.039999961853027,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "took",
+            "start": 9.399999618530273,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "forever",
+            "start": 9.680000305175781,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "Coding",
+            "start": 11.359999656677246,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "used",
+            "start": 11.359999656677246,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "to",
+            "start": 11.880000114440918,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "be",
+            "start": 12.039999961853027,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "the",
+            "start": 12.140000343322754,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "same",
+            "start": 12.539999961853027,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "Every",
+            "start": 13.0600004196167,
+            "end": 13.460000038146973
+          },
+          {
+            "word": "line",
+            "start": 13.460000038146973,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "written",
+            "start": 13.84000015258789,
+            "end": 14.34000015258789
+          },
+          {
+            "word": "manually",
+            "start": 14.34000015258789,
+            "end": 14.84000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Machines Help. Then machines came along that could make bricks faster. Frameworks and libraries helped programmers reuse code. But you still had to stack every brick yourself.",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "Machines",
+            "start": 0,
+            "end": 0.7200000286102295
+          },
+          {
+            "word": "help",
+            "start": 0.7200000286102295,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "Then",
+            "start": 2.140000104904175,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "machines",
+            "start": 2.319999933242798,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "came",
+            "start": 2.759999990463257,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "along",
+            "start": 3.0799999237060547,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "that",
+            "start": 3.3399999141693115,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "could",
+            "start": 3.680000066757202,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "make",
+            "start": 3.859999895095825,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "bricks",
+            "start": 4.119999885559082,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "faster",
+            "start": 4.360000133514404,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "Frameworks",
+            "start": 5.960000038146973,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "and",
+            "start": 6.199999809265137,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "libraries",
+            "start": 6.519999980926514,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "helped",
+            "start": 6.920000076293945,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "programmers",
+            "start": 7.480000019073486,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "reuse",
+            "start": 8.100000381469727,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "code",
+            "start": 8.739999771118164,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "But",
+            "start": 9.699999809265137,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "you",
+            "start": 9.9399995803833,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "still",
+            "start": 10.140000343322754,
+            "end": 10.5
+          },
+          {
+            "word": "had",
+            "start": 10.5,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "to",
+            "start": 10.680000305175781,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "stack",
+            "start": 11.260000228881836,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "every",
+            "start": 11.260000228881836,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "brick",
+            "start": 11.84000015258789,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "yourself",
+            "start": 12.079999923706055,
+            "end": 12.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "AI Assistants Arrive. Now imagine you have a super-smart robot helper. You tell it: Build me a wall here, make it 10 feet tall, paint it blue. And it does it!",
+        "duration": 12.960000038146973,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "assistants",
+            "start": 0.5400000214576721,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "arrive",
+            "start": 1.2400000095367432,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "Now",
+            "start": 2.4600000381469727,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "imagine",
+            "start": 2.680000066757202,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "you",
+            "start": 3.059999942779541,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "have",
+            "start": 3.299999952316284,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "a",
+            "start": 3.4600000381469727,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "super",
+            "start": 3.7200000286102295,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "smart",
+            "start": 4.099999904632568,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "robot",
+            "start": 4.420000076293945,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "helper",
+            "start": 4.880000114440918,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "You",
+            "start": 5.900000095367432,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "tell",
+            "start": 6.059999942779541,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "it",
+            "start": 6.239999771118164,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "build",
+            "start": 7.119999885559082,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "me",
+            "start": 7.320000171661377,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "a",
+            "start": 7.559999942779541,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "wall",
+            "start": 7.840000152587891,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "here",
+            "start": 7.920000076293945,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "make",
+            "start": 8.65999984741211,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "it",
+            "start": 8.699999809265137,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "10",
+            "start": 8.9399995803833,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "feet",
+            "start": 9.239999771118164,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "tall",
+            "start": 9.4399995803833,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "paint",
+            "start": 10.399999618530273,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "it",
+            "start": 10.399999618530273,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "blue",
+            "start": 10.699999809265137,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "and",
+            "start": 11.260000228881836,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "it",
+            "start": 11.880000114440918,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "does",
+            "start": 12.399999618530273,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "it",
+            "start": 12.600000381469727,
+            "end": 12.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Tools Like Cursor. That's what AI coding tools like Cursor do for programmers. You describe what you want, and AI helps you build it. You don't have to type every single line of code!",
+        "duration": 13.699999809265137,
+        "words": [
+          {
+            "word": "Tools",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "like",
+            "start": 0.800000011920929,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "cursor",
+            "start": 1.2000000476837158,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "That's",
+            "start": 2.740000009536743,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "what",
+            "start": 2.880000114440918,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "AI",
+            "start": 3.200000047683716,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "coding",
+            "start": 3.5399999618530273,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "tools",
+            "start": 3.859999895095825,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "like",
+            "start": 4.199999809265137,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "cursor",
+            "start": 4.599999904632568,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "do",
+            "start": 4.880000114440918,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "for",
+            "start": 5.440000057220459,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "programmers",
+            "start": 5.739999771118164,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "You",
+            "start": 7.019999980926514,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "describe",
+            "start": 7.179999828338623,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "what",
+            "start": 7.639999866485596,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "you",
+            "start": 7.860000133514404,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "want",
+            "start": 8.079999923706055,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "and",
+            "start": 8.260000228881836,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "AI",
+            "start": 8.800000190734863,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "helps",
+            "start": 9.199999809265137,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "you",
+            "start": 9.720000267028809,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "build",
+            "start": 9.9399995803833,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "it",
+            "start": 10.119999885559082,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "You",
+            "start": 10.720000267028809,
+            "end": 11
+          },
+          {
+            "word": "don't",
+            "start": 11,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "have",
+            "start": 11.239999771118164,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "to",
+            "start": 11.4399995803833,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "type",
+            "start": 11.859999656677246,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "every",
+            "start": 11.859999656677246,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "single",
+            "start": 12.520000457763672,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "line",
+            "start": 12.819999694824219,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "of",
+            "start": 13.079999923706055,
+            "end": 13.520000457763672
+          },
+          {
+            "word": "code",
+            "start": 13.520000457763672,
+            "end": 13.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "You Are the Architect. You're no longer just a brick-stacker—you're an architect who designs and directs. Your job isn't to type fast. Your job is to think clearly and communicate well.",
+        "duration": 13,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "are",
+            "start": 0.41999998688697815,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "the",
+            "start": 0.6399999856948853,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "architect",
+            "start": 1.0399999618530273,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "You're",
+            "start": 2.140000104904175,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "no",
+            "start": 2.2799999713897705,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "longer",
+            "start": 2.4800000190734863,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "just",
+            "start": 2.7200000286102295,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "a",
+            "start": 2.9600000381469727,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "brick",
+            "start": 3.140000104904175,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "stacker",
+            "start": 3.3399999141693115,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "you're",
+            "start": 4.139999866485596,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "an",
+            "start": 4.300000190734863,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "architect",
+            "start": 4.639999866485596,
+            "end": 5
+          },
+          {
+            "word": "who",
+            "start": 5,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "designs",
+            "start": 5.519999980926514,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "and",
+            "start": 6.019999980926514,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "directs",
+            "start": 6.539999961853027,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "Your",
+            "start": 7.78000020980835,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "job",
+            "start": 7.920000076293945,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "isn't",
+            "start": 8.15999984741211,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "to",
+            "start": 8.4399995803833,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "type",
+            "start": 8.800000190734863,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "fast",
+            "start": 8.899999618530273,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "your",
+            "start": 9.979999542236328,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "job",
+            "start": 10.180000305175781,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "is",
+            "start": 10.420000076293945,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "to",
+            "start": 10.699999809265137,
+            "end": 11
+          },
+          {
+            "word": "think",
+            "start": 11,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "clearly",
+            "start": 11.140000343322754,
+            "end": 11.5
+          },
+          {
+            "word": "and",
+            "start": 11.5,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "communicate",
+            "start": 12.100000381469727,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "well",
+            "start": 12.579999923706055,
+            "end": 12.920000076293945
+          }
+        ]
+      }
+    ],
+    "evolution-story": [
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Stone Age. In the Stone Age of computing, programmers used punch cards. They literally punched holes in cards to give instructions. One mistake meant starting over!",
+        "duration": 13.239999771118164,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "Stone",
+            "start": 0.3799999952316284,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Age",
+            "start": 0.8999999761581421,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "In",
+            "start": 2.1600000858306885,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "the",
+            "start": 2.2200000286102295,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "Stone",
+            "start": 2.559999942779541,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "Age",
+            "start": 2.819999933242798,
+            "end": 3
+          },
+          {
+            "word": "of",
+            "start": 3,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "computing",
+            "start": 3.240000009536743,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "programmers",
+            "start": 4.079999923706055,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "used",
+            "start": 4.460000038146973,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "punch",
+            "start": 4.900000095367432,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "cards",
+            "start": 5.320000171661377,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "They",
+            "start": 6.380000114440918,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "literally",
+            "start": 6.559999942779541,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "punch",
+            "start": 7.099999904632568,
+            "end": 7.5
+          },
+          {
+            "word": "holes",
+            "start": 7.5,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "in",
+            "start": 7.880000114440918,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "cards",
+            "start": 8.399999618530273,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "to",
+            "start": 8.600000381469727,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "give",
+            "start": 8.899999618530273,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "instructions",
+            "start": 9.100000381469727,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "One",
+            "start": 10.539999961853027,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "mistake",
+            "start": 10.779999732971191,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "meant",
+            "start": 11.220000267028809,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "starting",
+            "start": 11.819999694824219,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "over",
+            "start": 12.600000381469727,
+            "end": 12.920000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Bronze Age. The Bronze Age brought real keyboards and screens. Programmers could finally type code and see it immediately. Still slow, but a huge improvement!",
+        "duration": 13.510000228881836,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "Bronze",
+            "start": 1.340000033378601,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "Age",
+            "start": 1.7599999904632568,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "The",
+            "start": 2.819999933242798,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "Bronze",
+            "start": 2.9200000762939453,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "Age",
+            "start": 3.2799999713897705,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "brought",
+            "start": 3.5999999046325684,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "real",
+            "start": 3.9200000762939453,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "keyboards",
+            "start": 4.380000114440918,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "and",
+            "start": 4.840000152587891,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "screens",
+            "start": 5.320000171661377,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "Programmers",
+            "start": 6.559999942779541,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "could",
+            "start": 6.840000152587891,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "finally",
+            "start": 7.139999866485596,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "type",
+            "start": 7.619999885559082,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "code",
+            "start": 7.920000076293945,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 8.300000190734863,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "see",
+            "start": 8.880000114440918,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "it",
+            "start": 9.100000381469727,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "immediately",
+            "start": 9.319999694824219,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "Still",
+            "start": 10.819999694824219,
+            "end": 11
+          },
+          {
+            "word": "slow",
+            "start": 11,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "but",
+            "start": 11.84000015258789,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "a",
+            "start": 12.039999961853027,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "huge",
+            "start": 12.260000228881836,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "improvement",
+            "start": 12.699999809265137,
+            "end": 13.140000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Iron Age. The Iron Age introduced frameworks—pre-built toolkits that handled common tasks. React, Django, Rails—these let developers build faster than ever.",
+        "duration": 13.199999809265137,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "Iron",
+            "start": 0.4000000059604645,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "Age",
+            "start": 0.800000011920929,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "The",
+            "start": 2,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "Iron",
+            "start": 2.2200000286102295,
+            "end": 2.5
+          },
+          {
+            "word": "Age",
+            "start": 2.5,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "introduced",
+            "start": 2.799999952316284,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "frameworks",
+            "start": 3.4600000381469727,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "pre",
+            "start": 5.059999942779541,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "built",
+            "start": 5.28000020980835,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "toolkits",
+            "start": 5.360000133514404,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "that",
+            "start": 5.920000076293945,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "handled",
+            "start": 6.21999979019165,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "common",
+            "start": 6.539999961853027,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "tasks",
+            "start": 6.960000038146973,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "React",
+            "start": 8.260000228881836,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "Django",
+            "start": 9.319999694824219,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "Rails",
+            "start": 9.979999542236328,
+            "end": 10
+          },
+          {
+            "word": "These",
+            "start": 10.65999984741211,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "let",
+            "start": 10.859999656677246,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "developers",
+            "start": 11.119999885559082,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "build",
+            "start": 11.5600004196167,
+            "end": 12
+          },
+          {
+            "word": "faster",
+            "start": 12,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "than",
+            "start": 12.619999885559082,
+            "end": 12.899999618530273
+          },
+          {
+            "word": "ever",
+            "start": 12.899999618530273,
+            "end": 13.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Age of Architects. Right now, we're entering the Age of Architects. This is an exciting time! Programmers who learn to work with AI will build amazing things faster than ever before.",
+        "duration": 13.800000190734863,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "age",
+            "start": 0.4399999976158142,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "of",
+            "start": 0.8600000143051147,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "architects",
+            "start": 1.2400000095367432,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "Right",
+            "start": 2.5399999618530273,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "now",
+            "start": 2.6600000858306885,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "we're",
+            "start": 3.180000066757202,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "entering",
+            "start": 3.4000000953674316,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "the",
+            "start": 3.680000066757202,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "age",
+            "start": 4.059999942779541,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "of",
+            "start": 4.360000133514404,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "architects",
+            "start": 4.679999828338623,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "This",
+            "start": 5.820000171661377,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "is",
+            "start": 5.900000095367432,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "an",
+            "start": 6.039999961853027,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "exciting",
+            "start": 6.360000133514404,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "time",
+            "start": 6.71999979019165,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "Programmers",
+            "start": 8.199999809265137,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "who",
+            "start": 8.399999618530273,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "learn",
+            "start": 8.600000381469727,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "to",
+            "start": 8.859999656677246,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "work",
+            "start": 9.279999732971191,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "with",
+            "start": 9.279999732971191,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "AI",
+            "start": 9.5600004196167,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "will",
+            "start": 9.819999694824219,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "build",
+            "start": 10.359999656677246,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "amazing",
+            "start": 10.640000343322754,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "things",
+            "start": 11.300000190734863,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "faster",
+            "start": 11.739999771118164,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "than",
+            "start": 12.34000015258789,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "ever",
+            "start": 12.600000381469727,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "before",
+            "start": 12.920000076293945,
+            "end": 13.300000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Your Opportunity. You're learning at the perfect time! The rules of programming are changing, and those who adapt will have superpowers. Welcome to the future.",
+        "duration": 12.550000190734863,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "opportunity",
+            "start": 0.5,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "You're",
+            "start": 2.140000104904175,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "learning",
+            "start": 2.359999895095825,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "at",
+            "start": 2.640000104904175,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "the",
+            "start": 2.9600000381469727,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "perfect",
+            "start": 3.259999990463257,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "time",
+            "start": 3.700000047683716,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "The",
+            "start": 5,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "rules",
+            "start": 5.059999942779541,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "of",
+            "start": 5.380000114440918,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "programming",
+            "start": 6.099999904632568,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "are",
+            "start": 6.099999904632568,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "changing",
+            "start": 6.519999980926514,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "and",
+            "start": 7.659999847412109,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "those",
+            "start": 7.78000020980835,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "who",
+            "start": 8.0600004196167,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "adapt",
+            "start": 8.220000267028809,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "will",
+            "start": 8.539999961853027,
+            "end": 9
+          },
+          {
+            "word": "have",
+            "start": 9,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "superpowers",
+            "start": 9.279999732971191,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "Welcome",
+            "start": 10.920000076293945,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "to",
+            "start": 11.0600004196167,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 11.539999961853027,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "future",
+            "start": 11.760000228881836,
+            "end": 12.140000343322754
+          }
+        ]
+      }
+    ],
+    "new-skills-story": [
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Skills That Faded. Some skills used to be essential. Memorizing every command. Typing super fast. Writing every line by hand. Remembering tiny syntax details. These still help, but they're less critical now.",
+        "duration": 20.65999984741211,
+        "words": [
+          {
+            "word": "Skills",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "that",
+            "start": 0.8199999928474426,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "faded",
+            "start": 1.6200000047683716,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "Some",
+            "start": 3.2200000286102295,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "skills",
+            "start": 3.3399999141693115,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "used",
+            "start": 3.759999990463257,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "to",
+            "start": 4.440000057220459,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "be",
+            "start": 4.679999828338623,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "essential",
+            "start": 5.059999942779541,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "Memorising",
+            "start": 6.820000171661377,
+            "end": 7.199999809265137
+          },
+          {
+            "word": "every",
+            "start": 7.199999809265137,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "command",
+            "start": 7.920000076293945,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "Typing",
+            "start": 9.399999618530273,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "super",
+            "start": 9.399999618530273,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "fast",
+            "start": 10.039999961853027,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "Writing",
+            "start": 11.539999961853027,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "every",
+            "start": 11.539999961853027,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "line",
+            "start": 12.079999923706055,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "by",
+            "start": 12.359999656677246,
+            "end": 12.760000228881836
+          },
+          {
+            "word": "hand",
+            "start": 12.760000228881836,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "Remembering",
+            "start": 14.119999885559082,
+            "end": 14.5
+          },
+          {
+            "word": "tiny",
+            "start": 14.5,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "syntax",
+            "start": 15.039999961853027,
+            "end": 15.460000038146973
+          },
+          {
+            "word": "details",
+            "start": 15.460000038146973,
+            "end": 15.979999542236328
+          },
+          {
+            "word": "These",
+            "start": 16.899999618530273,
+            "end": 17.18000030517578
+          },
+          {
+            "word": "still",
+            "start": 17.18000030517578,
+            "end": 17.559999465942383
+          },
+          {
+            "word": "help",
+            "start": 17.559999465942383,
+            "end": 17.8799991607666
+          },
+          {
+            "word": "but",
+            "start": 18.479999542236328,
+            "end": 18.579999923706055
+          },
+          {
+            "word": "they're",
+            "start": 18.579999923706055,
+            "end": 18.860000610351562
+          },
+          {
+            "word": "less",
+            "start": 18.860000610351562,
+            "end": 19.219999313354492
+          },
+          {
+            "word": "critical",
+            "start": 19.219999313354492,
+            "end": 19.600000381469727
+          },
+          {
+            "word": "now",
+            "start": 19.600000381469727,
+            "end": 20.040000915527344
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Understanding Deeply. The first new superpower is understanding how things work. When you truly understand the concepts, you can guide AI to build the right solution, even if you don't remember exact syntax.",
+        "duration": 16.40999984741211,
+        "words": [
+          {
+            "word": "Understanding",
+            "start": 0,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "deeply",
+            "start": 1.0399999618530273,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "The",
+            "start": 2.5399999618530273,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "first",
+            "start": 2.619999885559082,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "new",
+            "start": 3.0399999618530273,
+            "end": 3.5
+          },
+          {
+            "word": "superpower",
+            "start": 3.5,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "is",
+            "start": 4.019999980926514,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "understanding",
+            "start": 4.860000133514404,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "how",
+            "start": 5.599999904632568,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "things",
+            "start": 5.980000019073486,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "work",
+            "start": 6.260000228881836,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "When",
+            "start": 7.599999904632568,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "you",
+            "start": 7.639999866485596,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "truly",
+            "start": 7.860000133514404,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "understand",
+            "start": 8.300000190734863,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "the",
+            "start": 8.779999732971191,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "concepts",
+            "start": 9.539999961853027,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "you",
+            "start": 10.180000305175781,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "can",
+            "start": 10.220000267028809,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "guide",
+            "start": 10.5600004196167,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "AI",
+            "start": 10.880000114440918,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "to",
+            "start": 11.34000015258789,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "build",
+            "start": 11.65999984741211,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "the",
+            "start": 11.899999618530273,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "right",
+            "start": 12.119999885559082,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "solution",
+            "start": 12.539999961853027,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "even",
+            "start": 13.65999984741211,
+            "end": 13.899999618530273
+          },
+          {
+            "word": "if",
+            "start": 13.899999618530273,
+            "end": 14.079999923706055
+          },
+          {
+            "word": "you",
+            "start": 14.079999923706055,
+            "end": 14.300000190734863
+          },
+          {
+            "word": "don't",
+            "start": 14.300000190734863,
+            "end": 14.5600004196167
+          },
+          {
+            "word": "remember",
+            "start": 14.5600004196167,
+            "end": 14.979999542236328
+          },
+          {
+            "word": "exact",
+            "start": 14.979999542236328,
+            "end": 15.680000305175781
+          },
+          {
+            "word": "syntax",
+            "start": 15.680000305175781,
+            "end": 16.18000030517578
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Communicating Clearly. The second superpower is explaining what you want. The clearer you describe your goal, the better AI can help you. Vague instructions give vague results!",
+        "duration": 13.460000038146973,
+        "words": [
+          {
+            "word": "Communicating",
+            "start": 0,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "clearly",
+            "start": 0.8999999761581421,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "The",
+            "start": 2.200000047683716,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "second",
+            "start": 2.4200000762939453,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "superpower",
+            "start": 2.799999952316284,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "is",
+            "start": 3.380000114440918,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "explaining",
+            "start": 3.9600000381469727,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "what",
+            "start": 4.599999904632568,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "you",
+            "start": 4.980000019073486,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "want",
+            "start": 5.21999979019165,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "The",
+            "start": 6.260000228881836,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "clearer",
+            "start": 6.340000152587891,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "you",
+            "start": 6.739999771118164,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "describe",
+            "start": 7.099999904632568,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "your",
+            "start": 7.519999980926514,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "goal",
+            "start": 7.860000133514404,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "the",
+            "start": 8.579999923706055,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "better",
+            "start": 8.800000190734863,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "AI",
+            "start": 9.140000343322754,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "can",
+            "start": 9.5600004196167,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "help",
+            "start": 9.779999732971191,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "you",
+            "start": 10.039999961853027,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "Vague",
+            "start": 11.0600004196167,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "instructions",
+            "start": 11.15999984741211,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "give",
+            "start": 11.739999771118164,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "vague",
+            "start": 12.359999656677246,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "results",
+            "start": 12.699999809265137,
+            "end": 13.140000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Reading Code Critically. The third superpower is reading and checking code. AI generates code, but you must review it. Understanding what code does is more important than writing it from scratch.",
+        "duration": 14.4399995803833,
+        "words": [
+          {
+            "word": "Reading",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "code",
+            "start": 0.6200000047683716,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "critically",
+            "start": 1.059999942779541,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "The",
+            "start": 2.4200000762939453,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "third",
+            "start": 2.4600000381469727,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "superpower",
+            "start": 2.859999895095825,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "is",
+            "start": 3.4200000762939453,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "reading",
+            "start": 3.940000057220459,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 4.300000190734863,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "checking",
+            "start": 5.099999904632568,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "code",
+            "start": 5.099999904632568,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "AI",
+            "start": 6.239999771118164,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "generates",
+            "start": 6.539999961853027,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "code",
+            "start": 7.159999847412109,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "but",
+            "start": 7.860000133514404,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "you",
+            "start": 8.039999961853027,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "must",
+            "start": 8.260000228881836,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "review",
+            "start": 8.539999961853027,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "it",
+            "start": 8.84000015258789,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "Understanding",
+            "start": 10.279999732971191,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "what",
+            "start": 10.279999732971191,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "code",
+            "start": 10.720000267028809,
+            "end": 11.039999961853027
+          },
+          {
+            "word": "does",
+            "start": 11.039999961853027,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "is",
+            "start": 11.420000076293945,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "more",
+            "start": 12.039999961853027,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "important",
+            "start": 12.34000015258789,
+            "end": 12.760000228881836
+          },
+          {
+            "word": "than",
+            "start": 12.760000228881836,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "writing",
+            "start": 13.079999923706055,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "it",
+            "start": 13.380000114440918,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "from",
+            "start": 13.619999885559082,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "scratch",
+            "start": 13.880000114440918,
+            "end": 14.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Planning with Diagrams. The fourth superpower is drawing diagrams to plan. Before you build, sketch your ideas. Flowcharts, sequence diagrams, and box diagrams help you and AI understand the goal.",
+        "duration": 17.440000534057617,
+        "words": [
+          {
+            "word": "Planning",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "with",
+            "start": 0.699999988079071,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "diagrams",
+            "start": 1.2799999713897705,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "The",
+            "start": 2.5399999618530273,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "fourth",
+            "start": 2.7200000286102295,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "superpower",
+            "start": 3.0999999046325684,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "is",
+            "start": 3.680000066757202,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "drawing",
+            "start": 4.28000020980835,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "diagrams",
+            "start": 4.78000020980835,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "to",
+            "start": 5.320000171661377,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "plan",
+            "start": 5.78000020980835,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "Before",
+            "start": 7.099999904632568,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "you",
+            "start": 7.159999847412109,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "build",
+            "start": 7.539999961853027,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "sketch",
+            "start": 8.460000038146973,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "your",
+            "start": 8.460000038146973,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "ideas",
+            "start": 9.239999771118164,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "Flowcharts",
+            "start": 10.180000305175781,
+            "end": 10.5
+          },
+          {
+            "word": "sequence",
+            "start": 10.960000038146973,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "diagrams",
+            "start": 11.300000190734863,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "and",
+            "start": 11.800000190734863,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "box",
+            "start": 12.199999809265137,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "diagrams",
+            "start": 12.520000457763672,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "help",
+            "start": 13.039999961853027,
+            "end": 13.640000343322754
+          },
+          {
+            "word": "you",
+            "start": 13.640000343322754,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "and",
+            "start": 14.020000457763672,
+            "end": 14.300000190734863
+          },
+          {
+            "word": "AI",
+            "start": 14.300000190734863,
+            "end": 14.640000343322754
+          },
+          {
+            "word": "understand",
+            "start": 14.640000343322754,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "the",
+            "start": 15.399999618530273,
+            "end": 15.899999618530273
+          },
+          {
+            "word": "goal",
+            "start": 15.899999618530273,
+            "end": 15.960000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Modern Programmer. The best programmers aren't the fastest typists. They're the best thinkers and communicators. Master these four skills, and you'll thrive in the Age of Architects!",
+        "duration": 14.710000038146973,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "modern",
+            "start": 0.3799999952316284,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "programmer",
+            "start": 0.8399999737739563,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "The",
+            "start": 2.319999933242798,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "best",
+            "start": 2.5399999618530273,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "programmers",
+            "start": 2.880000114440918,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "aren't",
+            "start": 3.359999895095825,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "the",
+            "start": 3.759999990463257,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "fastest",
+            "start": 4.440000057220459,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "typists",
+            "start": 4.440000057220459,
+            "end": 5
+          },
+          {
+            "word": "they're",
+            "start": 5.639999866485596,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 5.800000190734863,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "best",
+            "start": 6.019999980926514,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "thinkers",
+            "start": 6.400000095367432,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "and",
+            "start": 6.820000171661377,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "communicators",
+            "start": 7.380000114440918,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "Master",
+            "start": 9.359999656677246,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "these",
+            "start": 9.359999656677246,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "four",
+            "start": 9.739999771118164,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "skills",
+            "start": 10.220000267028809,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 10.4399995803833,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "you'll",
+            "start": 11.420000076293945,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "thrive",
+            "start": 12.34000015258789,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "in",
+            "start": 12.34000015258789,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "the",
+            "start": 12.779999732971191,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "age",
+            "start": 13.359999656677246,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "of",
+            "start": 13.420000076293945,
+            "end": 13.960000038146973
+          },
+          {
+            "word": "architects",
+            "start": 13.960000038146973,
+            "end": 14.260000228881836
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "architect-shift-story": [
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Old Way. Imagine building a house. In the old days, you had to make every brick by hand, one by one. It took forever! Coding used to be the same—every line written manually.",
+        "duration": 12,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "old",
+            "start": 0.30000001192092896,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "way",
+            "start": 0.6800000071525574,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "Imagine",
+            "start": 1.659999966621399,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "building",
+            "start": 2.0399999618530273,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "a",
+            "start": 2.440000057220459,
+            "end": 3
+          },
+          {
+            "word": "house",
+            "start": 3,
+            "end": 3
+          },
+          {
+            "word": "In",
+            "start": 3.4600000381469727,
+            "end": 3.5
+          },
+          {
+            "word": "the",
+            "start": 3.5,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "old",
+            "start": 3.6600000858306885,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "days",
+            "start": 3.9000000953674316,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 4.119999885559082,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "had",
+            "start": 4.260000228881836,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "to",
+            "start": 4.400000095367432,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "make",
+            "start": 4.579999923706055,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "every",
+            "start": 4.679999828338623,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "brick",
+            "start": 5.059999942779541,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "by",
+            "start": 5.199999809265137,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "hand",
+            "start": 5.460000038146973,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "one",
+            "start": 5.940000057220459,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "by",
+            "start": 6.099999904632568,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "one",
+            "start": 6.300000190734863,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "It",
+            "start": 6.960000038146973,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "took",
+            "start": 7.079999923706055,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "forever",
+            "start": 7.260000228881836,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "Coding",
+            "start": 8.65999984741211,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "used",
+            "start": 8.65999984741211,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 8.9399995803833,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "be",
+            "start": 9.0600004196167,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 9.180000305175781,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "same",
+            "start": 9.579999923706055,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "Every",
+            "start": 10.199999809265137,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "line",
+            "start": 10.420000076293945,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "written",
+            "start": 10.680000305175781,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "manually",
+            "start": 10.960000038146973,
+            "end": 11.380000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Machines Help. Then machines came along that could make bricks faster. Frameworks and libraries helped programmers reuse code. But you still had to stack every brick yourself.",
+        "duration": 11.800000190734863,
+        "words": [
+          {
+            "word": "Machines",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "help",
+            "start": 0.6399999856948853,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "Then",
+            "start": 2.0399999618530273,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "machines",
+            "start": 2.1600000858306885,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "came",
+            "start": 2.559999942779541,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "along",
+            "start": 2.859999895095825,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "that",
+            "start": 3.140000104904175,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "could",
+            "start": 3.319999933242798,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "make",
+            "start": 3.4800000190734863,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "bricks",
+            "start": 3.740000009536743,
+            "end": 4
+          },
+          {
+            "word": "faster",
+            "start": 4,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "Frameworks",
+            "start": 5.639999866485596,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "and",
+            "start": 5.820000171661377,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "libraries",
+            "start": 6.079999923706055,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "helped",
+            "start": 6.460000038146973,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "programmers",
+            "start": 6.860000133514404,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "reuse",
+            "start": 7.420000076293945,
+            "end": 8
+          },
+          {
+            "word": "code",
+            "start": 8,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "but",
+            "start": 9.359999656677246,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "you",
+            "start": 9.460000038146973,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "still",
+            "start": 9.619999885559082,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "had",
+            "start": 9.899999618530273,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "to",
+            "start": 10.0600004196167,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "stack",
+            "start": 10.579999923706055,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "every",
+            "start": 10.579999923706055,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "brick",
+            "start": 11.180000305175781,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "yourself",
+            "start": 11.180000305175781,
+            "end": 11.65999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "AI Assistants Arrive. Now imagine you have a super-smart robot helper. You tell it: Build me a wall here, make it 10 feet tall, paint it blue. And it does it!",
+        "duration": 11.010000228881836,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "assistants",
+            "start": 0.5600000023841858,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "arrive",
+            "start": 1.2400000095367432,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "Now",
+            "start": 2.2799999713897705,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "imagine",
+            "start": 2.4800000190734863,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "you",
+            "start": 2.7799999713897705,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "have",
+            "start": 2.9800000190734863,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "a",
+            "start": 3.140000104904175,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "super",
+            "start": 3.3399999141693115,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "smart",
+            "start": 3.700000047683716,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "robot",
+            "start": 3.9600000381469727,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "helper",
+            "start": 4.400000095367432,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "You",
+            "start": 5.019999980926514,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "tell",
+            "start": 5.179999828338623,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "it",
+            "start": 5.360000133514404,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "build",
+            "start": 6.039999961853027,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "me",
+            "start": 6.159999847412109,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "a",
+            "start": 6.380000114440918,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "wall",
+            "start": 6.71999979019165,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "here",
+            "start": 6.760000228881836,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "make",
+            "start": 7.579999923706055,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "it",
+            "start": 7.619999885559082,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "10",
+            "start": 7.840000152587891,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "feet",
+            "start": 8.15999984741211,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "tall",
+            "start": 8.380000114440918,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "paint",
+            "start": 9.239999771118164,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "it",
+            "start": 9.239999771118164,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "blue",
+            "start": 9.520000457763672,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "And",
+            "start": 9.819999694824219,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "it",
+            "start": 10.300000190734863,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "does",
+            "start": 10.479999542236328,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "it",
+            "start": 10.65999984741211,
+            "end": 10.84000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Tools Like Cursor. That's what AI coding tools like Cursor do for programmers. You describe what you want, and AI helps you build it. You don't have to type every single line of code!",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "Tools",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "like",
+            "start": 0.699999988079071,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "Cursor",
+            "start": 1.0800000429153442,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "that's",
+            "start": 2.0999999046325684,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "what",
+            "start": 2.2200000286102295,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "AI",
+            "start": 2.5399999618530273,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "coding",
+            "start": 2.859999895095825,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "tools",
+            "start": 3.240000009536743,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "like",
+            "start": 3.5999999046325684,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "Cursor",
+            "start": 4.159999847412109,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "do",
+            "start": 4.21999979019165,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "for",
+            "start": 4.480000019073486,
+            "end": 4.760000228881836
+          },
+          {
+            "word": "programmers",
+            "start": 4.760000228881836,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "You",
+            "start": 6.019999980926514,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "describe",
+            "start": 6.099999904632568,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "what",
+            "start": 6.579999923706055,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "you",
+            "start": 6.78000020980835,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "want",
+            "start": 7.139999866485596,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "and",
+            "start": 7.639999866485596,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "AI",
+            "start": 7.900000095367432,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "helps",
+            "start": 8.119999885559082,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "you",
+            "start": 8.399999618530273,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "build",
+            "start": 8.640000343322754,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "it",
+            "start": 8.800000190734863,
+            "end": 9
+          },
+          {
+            "word": "You",
+            "start": 9.699999809265137,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "don't",
+            "start": 9.859999656677246,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "have",
+            "start": 10.0600004196167,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 10.239999771118164,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "type",
+            "start": 10.640000343322754,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "every",
+            "start": 10.640000343322754,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "single",
+            "start": 11.100000381469727,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "line",
+            "start": 11.399999618530273,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "of",
+            "start": 11.619999885559082,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "code",
+            "start": 12.039999961853027,
+            "end": 12.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "architect-shift-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "You Are the Architect. You're no longer just a brick-stacker—you're an architect who designs and directs. Your job isn't to type fast. Your job is to think clearly and communicate well.",
+        "duration": 13.319999694824219,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "are",
+            "start": 0.4399999976158142,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "the",
+            "start": 0.6200000047683716,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "architect",
+            "start": 0.8999999761581421,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "You're",
+            "start": 2.0399999618530273,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "no",
+            "start": 2.2200000286102295,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "longer",
+            "start": 2.4800000190734863,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "just",
+            "start": 2.819999933242798,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 3.119999885559082,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "brick",
+            "start": 3.359999895095825,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "stacker",
+            "start": 3.5799999237060547,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "You're",
+            "start": 4.460000038146973,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "an",
+            "start": 4.639999866485596,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "architect",
+            "start": 4.940000057220459,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "who",
+            "start": 5.21999979019165,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "designs",
+            "start": 5.559999942779541,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "and",
+            "start": 6.239999771118164,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "directs",
+            "start": 6.840000152587891,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "Your",
+            "start": 7.659999847412109,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "job",
+            "start": 7.78000020980835,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "isn't",
+            "start": 8.140000343322754,
+            "end": 8.5
+          },
+          {
+            "word": "to",
+            "start": 8.5,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "type",
+            "start": 8.819999694824219,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "fast",
+            "start": 8.920000076293945,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "Your",
+            "start": 9.979999542236328,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "job",
+            "start": 10.15999984741211,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "is",
+            "start": 10.399999618530273,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "to",
+            "start": 10.579999923706055,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "think",
+            "start": 10.819999694824219,
+            "end": 11
+          },
+          {
+            "word": "clearly",
+            "start": 11,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "and",
+            "start": 11.460000038146973,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "communicate",
+            "start": 12.079999923706055,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "well",
+            "start": 12.579999923706055,
+            "end": 13
+          }
+        ]
+      }
+    ],
+    "evolution-story": [
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Stone Age. In the Stone Age of computing, programmers used punch cards. They literally punched holes in cards to give instructions. One mistake meant starting over!",
+        "duration": 11.850000381469727,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "Stone",
+            "start": 0.41999998688697815,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "Age",
+            "start": 0.6200000047683716,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "In",
+            "start": 1.7799999713897705,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "the",
+            "start": 1.7799999713897705,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "Stone",
+            "start": 2.0999999046325684,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "Age",
+            "start": 2.299999952316284,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "of",
+            "start": 2.4600000381469727,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "computing",
+            "start": 2.7799999713897705,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "programmers",
+            "start": 3.680000066757202,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "used",
+            "start": 4.099999904632568,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "punch",
+            "start": 4.480000019073486,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "cards",
+            "start": 4.880000114440918,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "They",
+            "start": 5.860000133514404,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "literally",
+            "start": 6.039999961853027,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "punched",
+            "start": 6.559999942779541,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "holes",
+            "start": 6.880000114440918,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "in",
+            "start": 7.260000228881836,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "cards",
+            "start": 7.960000038146973,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "to",
+            "start": 7.960000038146973,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "give",
+            "start": 8.4399995803833,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "instructions",
+            "start": 8.640000343322754,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "One",
+            "start": 9.880000114440918,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "mistake",
+            "start": 10.020000457763672,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "meant",
+            "start": 10.460000038146973,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "starting",
+            "start": 10.9399995803833,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "over",
+            "start": 11.300000190734863,
+            "end": 11.640000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Bronze Age. The Bronze Age brought real keyboards and screens. Programmers could finally type code and see it immediately. Still slow, but a huge improvement!",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "Bronze",
+            "start": 0.4399999976158142,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "Age",
+            "start": 0.9200000166893005,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "The",
+            "start": 1.9800000190734863,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "Bronze",
+            "start": 2.0799999237060547,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "Age",
+            "start": 2.5399999618530273,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "brought",
+            "start": 2.880000114440918,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "real",
+            "start": 3.200000047683716,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "keyboards",
+            "start": 3.740000009536743,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "and",
+            "start": 4.199999809265137,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "screens",
+            "start": 4.739999771118164,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "Programmers",
+            "start": 6.320000171661377,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "could",
+            "start": 6.739999771118164,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "finally",
+            "start": 7.019999980926514,
+            "end": 7.5
+          },
+          {
+            "word": "type",
+            "start": 7.5,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "code",
+            "start": 7.820000171661377,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "and",
+            "start": 8.15999984741211,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "see",
+            "start": 8.680000305175781,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "it",
+            "start": 8.84000015258789,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "immediately",
+            "start": 9.079999923706055,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "Still",
+            "start": 10.399999618530273,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "slow",
+            "start": 10.619999885559082,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "but",
+            "start": 11.260000228881836,
+            "end": 11.5
+          },
+          {
+            "word": "a",
+            "start": 11.5,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "huge",
+            "start": 11.65999984741211,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "improvement",
+            "start": 12.0600004196167,
+            "end": 12.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Iron Age. The Iron Age introduced frameworks—pre-built toolkits that handled common tasks. React, Django, Rails—these let developers build faster than ever.",
+        "duration": 11.25,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "Iron",
+            "start": 0.3799999952316284,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "Age",
+            "start": 0.6800000071525574,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "The",
+            "start": 1.440000057220459,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "Iron",
+            "start": 1.600000023841858,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "Age",
+            "start": 1.8600000143051147,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "introduced",
+            "start": 2.140000104904175,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "frameworks",
+            "start": 2.6600000858306885,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "pre",
+            "start": 3.940000057220459,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "built",
+            "start": 4.139999866485596,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "toolkits",
+            "start": 4.199999809265137,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "that",
+            "start": 4.78000020980835,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "handled",
+            "start": 5.059999942779541,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "common",
+            "start": 5.340000152587891,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "tasks",
+            "start": 5.760000228881836,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "React",
+            "start": 6.940000057220459,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "Django",
+            "start": 7.980000019073486,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "Rails",
+            "start": 8.619999885559082,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "These",
+            "start": 9.020000457763672,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "let",
+            "start": 9.140000343322754,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "developers",
+            "start": 9.359999656677246,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "build",
+            "start": 9.819999694824219,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "faster",
+            "start": 10.140000343322754,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "than",
+            "start": 10.5600004196167,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "ever",
+            "start": 10.84000015258789,
+            "end": 11.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Age of Architects. Right now, we're entering the Age of Architects. This is an exciting time! Programmers who learn to work with AI will build amazing things faster than ever before.",
+        "duration": 13.84000015258789,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "age",
+            "start": 0.4000000059604645,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "of",
+            "start": 0.8600000143051147,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "architects",
+            "start": 1.2599999904632568,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "Right",
+            "start": 2.5199999809265137,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "now",
+            "start": 2.5999999046325684,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "we're",
+            "start": 3.059999942779541,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "entering",
+            "start": 3.200000047683716,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "the",
+            "start": 3.4600000381469727,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "age",
+            "start": 4.059999942779541,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "of",
+            "start": 4.119999885559082,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "architects",
+            "start": 4.480000019073486,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "This",
+            "start": 5.460000038146973,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "is",
+            "start": 5.480000019073486,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "an",
+            "start": 5.639999866485596,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "exciting",
+            "start": 5.900000095367432,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "time",
+            "start": 6.21999979019165,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "Programmers",
+            "start": 7.579999923706055,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "who",
+            "start": 7.940000057220459,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "learn",
+            "start": 8.180000305175781,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "to",
+            "start": 8.399999618530273,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "work",
+            "start": 8.819999694824219,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "with",
+            "start": 8.819999694824219,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "AI",
+            "start": 9.079999923706055,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "will",
+            "start": 9.460000038146973,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "build",
+            "start": 10.039999961853027,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "amazing",
+            "start": 10.300000190734863,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "things",
+            "start": 10.920000076293945,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "faster",
+            "start": 11.4399995803833,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "than",
+            "start": 12.140000343322754,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "ever",
+            "start": 12.420000076293945,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "before",
+            "start": 12.779999732971191,
+            "end": 13.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "evolution-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Your Opportunity. You're learning at the perfect time! The rules of programming are changing, and those who adapt will have superpowers. Welcome to the future.",
+        "duration": 10.149999618530273,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "opportunity",
+            "start": 0.4000000059604645,
+            "end": 1
+          },
+          {
+            "word": "You're",
+            "start": 1.6799999475479126,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "learning",
+            "start": 1.899999976158142,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "at",
+            "start": 2.0999999046325684,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "the",
+            "start": 2.299999952316284,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "perfect",
+            "start": 2.5199999809265137,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "time",
+            "start": 2.880000114440918,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "The",
+            "start": 3.859999895095825,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "rules",
+            "start": 3.940000057220459,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "of",
+            "start": 4.21999979019165,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "programming",
+            "start": 4.960000038146973,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "are",
+            "start": 4.960000038146973,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "changing",
+            "start": 5.199999809265137,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "and",
+            "start": 6.099999904632568,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "those",
+            "start": 6.179999828338623,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "who",
+            "start": 6.380000114440918,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "adapt",
+            "start": 6.599999904632568,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "will",
+            "start": 6.920000076293945,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "have",
+            "start": 7.340000152587891,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "superpowers",
+            "start": 7.579999923706055,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "Welcome",
+            "start": 9,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "to",
+            "start": 9.100000381469727,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "the",
+            "start": 9.380000114440918,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "future",
+            "start": 9.579999923706055,
+            "end": 9.84000015258789
+          }
+        ]
+      }
+    ],
+    "new-skills-story": [
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Skills That Faded. Some skills used to be essential. Memorizing every command. Typing super fast. Writing every line by hand. Remembering tiny syntax details. These still help, but they're less critical now.",
+        "duration": 16.959999084472656,
+        "words": [
+          {
+            "word": "Skills",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "that",
+            "start": 0.6000000238418579,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "faded",
+            "start": 0.9599999785423279,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "Some",
+            "start": 2.5799999237060547,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "skills",
+            "start": 2.5799999237060547,
+            "end": 3
+          },
+          {
+            "word": "used",
+            "start": 3,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "to",
+            "start": 3.359999895095825,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "be",
+            "start": 3.5399999618530273,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "essential",
+            "start": 3.759999990463257,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "Memorizing",
+            "start": 5.179999828338623,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "every",
+            "start": 5.480000019073486,
+            "end": 6
+          },
+          {
+            "word": "command",
+            "start": 6,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "typing",
+            "start": 7.099999904632568,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "super",
+            "start": 7.099999904632568,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "fast",
+            "start": 7.659999847412109,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "writing",
+            "start": 8.880000114440918,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "every",
+            "start": 8.880000114440918,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "line",
+            "start": 9.380000114440918,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "by",
+            "start": 9.5600004196167,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "hand",
+            "start": 9.979999542236328,
+            "end": 10.100000381469727
+          },
+          {
+            "word": "remembering",
+            "start": 11.100000381469727,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "tiny",
+            "start": 11.100000381469727,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "syntax",
+            "start": 11.65999984741211,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "details",
+            "start": 12.079999923706055,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "These",
+            "start": 13.300000190734863,
+            "end": 13.5
+          },
+          {
+            "word": "still",
+            "start": 13.5,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "help",
+            "start": 13.84000015258789,
+            "end": 14.140000343322754
+          },
+          {
+            "word": "but",
+            "start": 14.699999809265137,
+            "end": 14.819999694824219
+          },
+          {
+            "word": "they're",
+            "start": 14.819999694824219,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "less",
+            "start": 15.039999961853027,
+            "end": 15.319999694824219
+          },
+          {
+            "word": "critical",
+            "start": 15.319999694824219,
+            "end": 15.619999885559082
+          },
+          {
+            "word": "now",
+            "start": 15.619999885559082,
+            "end": 15.979999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Understanding Deeply. The first new superpower is understanding how things work. When you truly understand the concepts, you can guide AI to build the right solution, even if you don't remember exact syntax.",
+        "duration": 15.5,
+        "words": [
+          {
+            "word": "Understanding",
+            "start": 0,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "deeply",
+            "start": 1.1799999475479126,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "the",
+            "start": 2.5799999237060547,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "first",
+            "start": 2.7200000286102295,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "new",
+            "start": 3.0799999237060547,
+            "end": 3.5
+          },
+          {
+            "word": "superpower",
+            "start": 3.5,
+            "end": 4
+          },
+          {
+            "word": "is",
+            "start": 4,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "understanding",
+            "start": 4.559999942779541,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "how",
+            "start": 5.320000171661377,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "things",
+            "start": 5.760000228881836,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "work",
+            "start": 6.079999923706055,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "When",
+            "start": 7.139999866485596,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "you",
+            "start": 7.179999828338623,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "truly",
+            "start": 7.420000076293945,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "understand",
+            "start": 7.860000133514404,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 8.359999656677246,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "concepts",
+            "start": 9.0600004196167,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "you",
+            "start": 9.600000381469727,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "can",
+            "start": 9.619999885559082,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "guide",
+            "start": 9.899999618530273,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "AI",
+            "start": 10.220000267028809,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "to",
+            "start": 10.65999984741211,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "build",
+            "start": 10.979999542236328,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 11.199999809265137,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "right",
+            "start": 11.399999618530273,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "solution",
+            "start": 11.720000267028809,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "even",
+            "start": 12.779999732971191,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "if",
+            "start": 12.920000076293945,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "you",
+            "start": 13.140000343322754,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "don't",
+            "start": 13.359999656677246,
+            "end": 13.65999984741211
+          },
+          {
+            "word": "remember",
+            "start": 13.65999984741211,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "exact",
+            "start": 14.020000457763672,
+            "end": 14.600000381469727
+          },
+          {
+            "word": "syntax",
+            "start": 14.600000381469727,
+            "end": 15.0600004196167
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Communicating Clearly. The second superpower is explaining what you want. The clearer you describe your goal, the better AI can help you. Vague instructions give vague results!",
+        "duration": 13.75,
+        "words": [
+          {
+            "word": "Communicating",
+            "start": 0,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "clearly",
+            "start": 0.9200000166893005,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "The",
+            "start": 2.559999942779541,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "second",
+            "start": 2.559999942779541,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "superpower",
+            "start": 2.9200000762939453,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "is",
+            "start": 3.5999999046325684,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "explaining",
+            "start": 3.9800000190734863,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "what",
+            "start": 4.539999961853027,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "you",
+            "start": 4.820000171661377,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "want",
+            "start": 5.019999980926514,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "The",
+            "start": 5.800000190734863,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "clearer",
+            "start": 5.940000057220459,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "you",
+            "start": 6.300000190734863,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "describe",
+            "start": 6.599999904632568,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "your",
+            "start": 7.039999961853027,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "goal",
+            "start": 7.340000152587891,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 7.940000057220459,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "better",
+            "start": 8.220000267028809,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "AI",
+            "start": 8.460000038146973,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "can",
+            "start": 8.9399995803833,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "help",
+            "start": 9.180000305175781,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "you",
+            "start": 9.460000038146973,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "Vague",
+            "start": 10.640000343322754,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "instructions",
+            "start": 10.739999771118164,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "give",
+            "start": 11.420000076293945,
+            "end": 12
+          },
+          {
+            "word": "vague",
+            "start": 12,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "results",
+            "start": 12.359999656677246,
+            "end": 12.819999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Reading Code Critically. The third superpower is reading and checking code. AI generates code, but you must review it. Understanding what code does is more important than writing it from scratch.",
+        "duration": 14.710000038146973,
+        "words": [
+          {
+            "word": "Reading",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "code",
+            "start": 0.6200000047683716,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "critically",
+            "start": 1.1200000047683716,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "The",
+            "start": 2.4600000381469727,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "third",
+            "start": 2.4800000190734863,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "superpower",
+            "start": 2.799999952316284,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "is",
+            "start": 3.380000114440918,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "reading",
+            "start": 3.819999933242798,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "and",
+            "start": 4.159999847412109,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "checking",
+            "start": 4.940000057220459,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "code",
+            "start": 4.940000057220459,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "AI",
+            "start": 6.260000228881836,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "generates",
+            "start": 6.460000038146973,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "code",
+            "start": 6.980000019073486,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "but",
+            "start": 7.820000171661377,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "you",
+            "start": 7.940000057220459,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "must",
+            "start": 8.140000343322754,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "review",
+            "start": 8.460000038146973,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "it",
+            "start": 8.739999771118164,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "Understanding",
+            "start": 10.180000305175781,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "what",
+            "start": 10.199999809265137,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "code",
+            "start": 10.5600004196167,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "does",
+            "start": 10.819999694824219,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "is",
+            "start": 11.260000228881836,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "more",
+            "start": 11.859999656677246,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "important",
+            "start": 12.140000343322754,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "than",
+            "start": 12.539999961853027,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "writing",
+            "start": 13.0600004196167,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "it",
+            "start": 13.399999618530273,
+            "end": 13.600000381469727
+          },
+          {
+            "word": "from",
+            "start": 13.600000381469727,
+            "end": 13.859999656677246
+          },
+          {
+            "word": "scratch",
+            "start": 13.859999656677246,
+            "end": 14.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Planning with Diagrams. The fourth superpower is drawing diagrams to plan. Before you build, sketch your ideas. Flowcharts, sequence diagrams, and box diagrams help you and AI understand the goal.",
+        "duration": 15.600000381469727,
+        "words": [
+          {
+            "word": "Planning",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "with",
+            "start": 0.6399999856948853,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "diagrams",
+            "start": 1.100000023841858,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "The",
+            "start": 2.3399999141693115,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "fourth",
+            "start": 2.440000057220459,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "superpower",
+            "start": 2.740000009536743,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "is",
+            "start": 3.299999952316284,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "drawing",
+            "start": 3.7799999713897705,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "diagrams",
+            "start": 4.199999809265137,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "to",
+            "start": 4.78000020980835,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "plan",
+            "start": 5.139999866485596,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "Before",
+            "start": 6.639999866485596,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "you",
+            "start": 6.639999866485596,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "build",
+            "start": 6.940000057220459,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "sketch",
+            "start": 7.920000076293945,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "your",
+            "start": 7.920000076293945,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "ideas",
+            "start": 8.720000267028809,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "Flowcharts",
+            "start": 9.720000267028809,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "sequence",
+            "start": 10.579999923706055,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "diagrams",
+            "start": 10.859999656677246,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "and",
+            "start": 11.539999961853027,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "box",
+            "start": 11.9399995803833,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "diagrams",
+            "start": 12.039999961853027,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "help",
+            "start": 12.539999961853027,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "you",
+            "start": 12.920000076293945,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 13.300000190734863,
+            "end": 13.65999984741211
+          },
+          {
+            "word": "AI",
+            "start": 13.65999984741211,
+            "end": 14.100000381469727
+          },
+          {
+            "word": "understand",
+            "start": 14.100000381469727,
+            "end": 14.84000015258789
+          },
+          {
+            "word": "the",
+            "start": 14.84000015258789,
+            "end": 15.199999809265137
+          },
+          {
+            "word": "goal",
+            "start": 15.199999809265137,
+            "end": 15.260000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "new-skills-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Modern Programmer. The best programmers aren't the fastest typists. They're the best thinkers and communicators. Master these four skills, and you'll thrive in the Age of Architects!",
+        "duration": 12.640000343322754,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "modern",
+            "start": 0.3400000035762787,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "programmer",
+            "start": 0.8399999737739563,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "The",
+            "start": 2.5999999046325684,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "best",
+            "start": 2.619999885559082,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "programmers",
+            "start": 2.9800000190734863,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "aren't",
+            "start": 3.4600000381469727,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 3.880000114440918,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "fastest",
+            "start": 4.480000019073486,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "typists",
+            "start": 4.480000019073486,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "They're",
+            "start": 5.579999923706055,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 5.71999979019165,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "best",
+            "start": 5.920000076293945,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "thinkers",
+            "start": 6.260000228881836,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "and",
+            "start": 6.679999828338623,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "communicators",
+            "start": 7.099999904632568,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "Master",
+            "start": 8.699999809265137,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "these",
+            "start": 8.699999809265137,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "four",
+            "start": 9.020000457763672,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "skills",
+            "start": 9.4399995803833,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "and",
+            "start": 10.319999694824219,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "you'll",
+            "start": 10.420000076293945,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "thrive",
+            "start": 11.119999885559082,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "in",
+            "start": 11.119999885559082,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "the",
+            "start": 11.34000015258789,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "age",
+            "start": 11.680000305175781,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "of",
+            "start": 11.720000267028809,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "architects",
+            "start": 12.039999961853027,
+            "end": 12.34000015258789
+          }
+        ]
+      }
+    ]
+  }
+}

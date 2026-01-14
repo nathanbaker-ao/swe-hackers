@@ -1,0 +1,155 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Stone Remembers. Chapter 1 gave you variables and data types. You learned to store information and understood that computers need memory to work with, just like humans do!",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.36000001430511475
+    },
+    {
+      "word": "Stone",
+      "start": 0.36000001430511475,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "Remembers",
+      "start": 0.8199999928474426,
+      "end": 1.6799999475479126
+    },
+    {
+      "word": "Chapter",
+      "start": 2.9800000190734863,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "one",
+      "start": 2.9800000190734863,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "gave",
+      "start": 3.3399999141693115,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "you",
+      "start": 3.859999895095825,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "variables",
+      "start": 4.099999904632568,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "and",
+      "start": 4.619999885559082,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "data",
+      "start": 5.119999885559082,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "types",
+      "start": 5.460000038146973,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "You",
+      "start": 6.539999961853027,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "learned",
+      "start": 6.619999885559082,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "to",
+      "start": 6.880000114440918,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "store",
+      "start": 7.440000057220459,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "information",
+      "start": 7.440000057220459,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "and",
+      "start": 8.0600004196167,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "understood",
+      "start": 8.699999809265137,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "that",
+      "start": 9.140000343322754,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "computers",
+      "start": 9.680000305175781,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "need",
+      "start": 10.079999923706055,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "memory",
+      "start": 10.479999542236328,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "to",
+      "start": 10.84000015258789,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "work",
+      "start": 11.180000305175781,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "with",
+      "start": 11.380000114440918,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "just",
+      "start": 12.220000267028809,
+      "end": 12.420000076293945
+    },
+    {
+      "word": "like",
+      "start": 12.420000076293945,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "humans",
+      "start": 12.739999771118164,
+      "end": 13.020000457763672
+    },
+    {
+      "word": "do",
+      "start": 13.020000457763672,
+      "end": 13.34000015258789
+    }
+  ]
+}

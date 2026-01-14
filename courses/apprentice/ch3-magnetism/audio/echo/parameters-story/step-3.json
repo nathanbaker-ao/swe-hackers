@@ -1,0 +1,175 @@
+{
+  "storyId": "parameters-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Recipe Metaphor. Think of it like a recipe. The function is your recipe for chocolate chip cookies. Parameters are the ingredients—flour, sugar, chocolate chips. Same recipe, different amounts, slightly different cookies!",
+  "duration": 14.399999618530273,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3799999952316284
+    },
+    {
+      "word": "recipe",
+      "start": 0.3799999952316284,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "metaphor",
+      "start": 0.8399999737739563,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "Think",
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "of",
+      "start": 2.180000066757202,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "it",
+      "start": 2.319999933242798,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "like",
+      "start": 2.4000000953674316,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "a",
+      "start": 2.5999999046325684,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "recipe",
+      "start": 3.119999885559082,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "The",
+      "start": 3.5799999237060547,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "function",
+      "start": 3.759999990463257,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "is",
+      "start": 4.079999923706055,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "your",
+      "start": 4.440000057220459,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "recipe",
+      "start": 4.699999809265137,
+      "end": 5
+    },
+    {
+      "word": "for",
+      "start": 5,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "chocolate",
+      "start": 5.400000095367432,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "chip",
+      "start": 5.699999809265137,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "cookies",
+      "start": 5.980000019073486,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "Parameters",
+      "start": 7.179999828338623,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "are",
+      "start": 7.340000152587891,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "the",
+      "start": 7.639999866485596,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "ingredients",
+      "start": 7.860000133514404,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "flour",
+      "start": 8.920000076293945,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "sugar",
+      "start": 9.520000457763672,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "chocolate",
+      "start": 10.020000457763672,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "chips",
+      "start": 10.020000457763672,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "Same",
+      "start": 11,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "recipe",
+      "start": 11.180000305175781,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "different",
+      "start": 12.239999771118164,
+      "end": 12.34000015258789
+    },
+    {
+      "word": "amounts",
+      "start": 12.34000015258789,
+      "end": 12.699999809265137
+    },
+    {
+      "word": "slightly",
+      "start": 13.380000114440918,
+      "end": 13.380000114440918
+    },
+    {
+      "word": "different",
+      "start": 13.380000114440918,
+      "end": 13.84000015258789
+    },
+    {
+      "word": "cookies",
+      "start": 13.84000015258789,
+      "end": 14.100000381469727
+    }
+  ]
+}

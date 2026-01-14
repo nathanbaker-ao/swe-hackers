@@ -1,0 +1,160 @@
+{
+  "storyId": "ai-architecture-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Parse the Input. First, your helper reads the input and looks for keywords. Is there 'joke' in the message? What about 'calculate' or 'time'? This is pattern matching in action!",
+  "duration": 14.199999809265137,
+  "words": [
+    {
+      "word": "Pass",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "the",
+      "start": 0.5799999833106995,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "input",
+      "start": 1.2400000095367432,
+      "end": 1.5
+    },
+    {
+      "word": "First",
+      "start": 2.299999952316284,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "your",
+      "start": 3.0399999618530273,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "helper",
+      "start": 3.2799999713897705,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "reads",
+      "start": 3.559999942779541,
+      "end": 4
+    },
+    {
+      "word": "the",
+      "start": 4,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "input",
+      "start": 4.480000019073486,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "and",
+      "start": 4.480000019073486,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "looks",
+      "start": 4.860000133514404,
+      "end": 5.059999942779541
+    },
+    {
+      "word": "for",
+      "start": 5.059999942779541,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "keywords",
+      "start": 5.320000171661377,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "Is",
+      "start": 6.579999923706055,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "there",
+      "start": 6.659999847412109,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "joke",
+      "start": 6.980000019073486,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "in",
+      "start": 7.300000190734863,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "the",
+      "start": 7.559999942779541,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "message",
+      "start": 7.980000019073486,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "What",
+      "start": 8.65999984741211,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "about",
+      "start": 8.859999656677246,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "calculate",
+      "start": 9.180000305175781,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "or",
+      "start": 9.979999542236328,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "time",
+      "start": 10.680000305175781,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "This",
+      "start": 11.579999923706055,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "is",
+      "start": 12.140000343322754,
+      "end": 12.5
+    },
+    {
+      "word": "pattern",
+      "start": 12.5,
+      "end": 12.800000190734863
+    },
+    {
+      "word": "matching",
+      "start": 12.800000190734863,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "in",
+      "start": 13.199999809265137,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "action",
+      "start": 13.880000114440918,
+      "end": 13.979999542236328
+    }
+  ]
+}

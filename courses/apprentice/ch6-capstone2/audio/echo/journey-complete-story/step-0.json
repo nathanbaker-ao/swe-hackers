@@ -1,0 +1,175 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Where You Started. You began with nothing—no coding experience, maybe even unsure if you could do this. In Origins, you learned that coding is really about thinking clearly and communicating with machines.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "Where",
+      "start": 0,
+      "end": 0.3400000035762787
+    },
+    {
+      "word": "you",
+      "start": 0.3400000035762787,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "started",
+      "start": 0.6200000047683716,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "you",
+      "start": 1.659999966621399,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "began",
+      "start": 1.7000000476837158,
+      "end": 2
+    },
+    {
+      "word": "with",
+      "start": 2,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "nothing",
+      "start": 2.3399999141693115,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "no",
+      "start": 3.299999952316284,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "coding",
+      "start": 3.4200000762939453,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "experience",
+      "start": 3.6600000858306885,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "maybe",
+      "start": 4.78000020980835,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "even",
+      "start": 4.900000095367432,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "unsure",
+      "start": 5.340000152587891,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "if",
+      "start": 5.679999828338623,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "you",
+      "start": 5.920000076293945,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "could",
+      "start": 6.019999980926514,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "do",
+      "start": 6.199999809265137,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "this",
+      "start": 6.340000152587891,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "In",
+      "start": 7.260000228881836,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "Origins",
+      "start": 7.380000114440918,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "you",
+      "start": 8.319999694824219,
+      "end": 8.5
+    },
+    {
+      "word": "learned",
+      "start": 8.5,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "that",
+      "start": 8.720000267028809,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "coding",
+      "start": 9.239999771118164,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "is",
+      "start": 9.239999771118164,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "really",
+      "start": 9.460000038146973,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "about",
+      "start": 9.859999656677246,
+      "end": 10.100000381469727
+    },
+    {
+      "word": "thinking",
+      "start": 10.100000381469727,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "clearly",
+      "start": 10.460000038146973,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 10.880000114440918,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "communicating",
+      "start": 11.479999542236328,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "with",
+      "start": 12.020000457763672,
+      "end": 12.359999656677246
+    },
+    {
+      "word": "machines",
+      "start": 12.359999656677246,
+      "end": 12.699999809265137
+    }
+  ]
+}

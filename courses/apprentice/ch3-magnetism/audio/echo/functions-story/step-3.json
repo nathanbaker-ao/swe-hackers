@@ -1,0 +1,170 @@
+{
+  "storyId": "functions-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Calling Functions. To use your function, write its name followed by parentheses. Say hello, parentheses—the function runs! You can call it as many times as you want. Write once, use forever!",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "Calling",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "functions",
+      "start": 0.5400000214576721,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "To",
+      "start": 1.9600000381469727,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "use",
+      "start": 2.0799999237060547,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "your",
+      "start": 2.3399999141693115,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "function",
+      "start": 2.5799999237060547,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "write",
+      "start": 3.240000009536743,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "its",
+      "start": 3.440000057220459,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "name",
+      "start": 3.6600000858306885,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "followed",
+      "start": 4.21999979019165,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "by",
+      "start": 4.460000038146973,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "parentheses",
+      "start": 4.820000171661377,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "Say",
+      "start": 6,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "hello",
+      "start": 6.139999866485596,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "parentheses",
+      "start": 6.739999771118164,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "the",
+      "start": 7.619999885559082,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "function",
+      "start": 7.800000190734863,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "runs",
+      "start": 8.039999961853027,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "You",
+      "start": 9.319999694824219,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "can",
+      "start": 9.420000076293945,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "call",
+      "start": 9.640000343322754,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "it",
+      "start": 9.899999618530273,
+      "end": 10
+    },
+    {
+      "word": "as",
+      "start": 10,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "many",
+      "start": 10.319999694824219,
+      "end": 10.5
+    },
+    {
+      "word": "times",
+      "start": 10.5,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "as",
+      "start": 10.819999694824219,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "you",
+      "start": 10.979999542236328,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "want",
+      "start": 11.140000343322754,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "Write",
+      "start": 11.859999656677246,
+      "end": 11.9399995803833
+    },
+    {
+      "word": "once",
+      "start": 11.9399995803833,
+      "end": 12.260000228881836
+    },
+    {
+      "word": "use",
+      "start": 12.65999984741211,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "forever",
+      "start": 12.880000114440918,
+      "end": 13.180000305175781
+    }
+  ]
+}

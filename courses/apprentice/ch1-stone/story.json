@@ -13,63 +13,148 @@
       "title": "Variables: Your Computer's Memory",
       "steps": [
         {
-          "nodeId": "brain",
+          "nodeId": "brain-problem",
           "icon": "🧠",
-          "title": "Your Brain's Superpower",
-          "narration": "Imagine your brain had no memory. Every second, you'd forget everything—your name, where you are, what you were doing. You couldn't think at all!",
+          "title": "The Memory Problem",
+          "narration": "Imagine your brain had no memory. Every second, you'd forget your name, where you are, what you were doing. You couldn't think at all! Computers face the same challenge.",
           "connectsTo": null
         },
         {
-          "nodeId": "computer",
-          "edges": [{ "from": "brain", "to": "computer" }],
+          "nodeId": "computer-memory",
+          "edges": [{ "from": "brain-problem", "to": "computer-memory" }],
           "icon": "💻",
-          "title": "Computers Face the Same Challenge",
-          "narration": "Computers are exactly the same. Before they can do anything useful, they need a way to remember things. That's where variables come in.",
-          "connectsTo": "Brain"
+          "title": "Computer Memory",
+          "narration": "Before computers can do anything useful, they need a way to remember things. Just like your brain stores information, computers need a place to keep data while they work.",
+          "connectsTo": "The Memory Problem"
         },
         {
-          "nodeId": "variable",
-          "edges": [{ "from": "computer", "to": "variable" }],
+          "nodeId": "variable-box",
+          "edges": [{ "from": "computer-memory", "to": "variable-box" }],
           "icon": "📦",
           "title": "Variables: Labeled Boxes",
-          "narration": "A variable is like a labeled box. You put something in the box, give it a name, and later you can ask 'Hey, what's in the box called score?' and the computer remembers.",
-          "connectsTo": "Computer"
+          "narration": "In Python, we use variables to give the computer memory. A variable is like a labeled box—you put something inside, give it a name, and the computer remembers it for you.",
+          "connectsTo": "Computer Memory"
         },
         {
-          "nodeId": "player-name",
-          "edges": [{ "from": "variable", "to": "player-name" }],
-          "icon": "👤",
-          "title": "Example: player_name",
-          "narration": "Let's create a variable called player underscore name and store the text 'Alex' inside. Now anytime we need the player's name, we just look in that box!",
-          "connectsTo": "Variable"
+          "nodeId": "creating-variables",
+          "edges": [{ "from": "variable-box", "to": "creating-variables" }],
+          "icon": "✍️",
+          "title": "Creating Variables",
+          "narration": "To create a variable, write the name, an equals sign, and the value. Like: player_name equals quote Alex quote. Now the computer has a box labeled player_name with Alex inside!",
+          "connectsTo": "Labeled Boxes"
         },
         {
-          "nodeId": "score",
-          "edges": [{ "from": "variable", "to": "score" }],
+          "nodeId": "using-variables",
+          "edges": [{ "from": "creating-variables", "to": "using-variables" }],
           "icon": "🎯",
-          "title": "Example: score",
-          "narration": "We can also create a variable called score and set it to zero. As the player earns points, we update what's in the box. The computer always remembers the latest value.",
-          "connectsTo": "Variable"
-        },
-        {
-          "nodeId": "is-playing",
-          "edges": [{ "from": "variable", "to": "is-playing" }],
-          "icon": "🎮",
-          "title": "Example: is_playing",
-          "narration": "And here's is underscore playing set to True. This tells the computer whether the game is currently running. Variables can hold text, numbers, or true-false values!",
-          "connectsTo": "Variable"
-        },
-        {
-          "nodeId": "use-variable",
-          "edges": [
-            { "from": "player-name", "to": "use-variable" },
-            { "from": "score", "to": "use-variable" },
-            { "from": "is-playing", "to": "use-variable" }
-          ],
-          "icon": "✨",
           "title": "Using Variables",
-          "narration": "When you use a variable in your code, Python looks in the box and gets whatever value is stored there. You've just learned the first superpower of programming: giving your computer memory!",
-          "connectsTo": "All Variables"
+          "narration": "Later, you can ask 'Hey, what's in the box called player_name?' and the computer says 'Alex!' This is how programs remember and use information throughout their execution.",
+          "connectsTo": "Creating Variables"
+        }
+      ]
+    },
+    {
+      "id": "datatypes-story",
+      "diagramId": "datatypes",
+      "title": "Data Types: What Can You Store?",
+      "steps": [
+        {
+          "nodeId": "different-data",
+          "icon": "🏷️",
+          "title": "Different Kinds of Data",
+          "narration": "Not everything fits in the same type of box. Your name is text. Your age is a number. Whether you're a student is yes or no. Python has different data types for these different kinds of information.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "strings",
+          "edges": [{ "from": "different-data", "to": "strings" }],
+          "icon": "📝",
+          "title": "Strings: Text",
+          "narration": "Strings hold text—words, sentences, even just a single letter. In Python, wrap text in quotes: 'Hello World' or 'Alex'. The quotes tell Python this is text, not code.",
+          "connectsTo": "Different Data"
+        },
+        {
+          "nodeId": "integers",
+          "edges": [{ "from": "different-data", "to": "integers" }],
+          "icon": "🔢",
+          "title": "Integers: Whole Numbers",
+          "narration": "Integers are whole numbers with no decimal point. Age equals 12. Score equals 100. No quotes needed—Python sees a number and knows it's a number!",
+          "connectsTo": "Different Data"
+        },
+        {
+          "nodeId": "floats",
+          "edges": [{ "from": "different-data", "to": "floats" }],
+          "icon": "📊",
+          "title": "Floats: Decimals",
+          "narration": "Floats are numbers with decimal points. Price equals 9.99. Temperature equals 98.6. The decimal point tells Python to use more precise storage for these values.",
+          "connectsTo": "Different Data"
+        },
+        {
+          "nodeId": "booleans",
+          "edges": [{ "from": "different-data", "to": "booleans" }],
+          "icon": "✅",
+          "title": "Booleans: True or False",
+          "narration": "Booleans are the simplest type—just True or False. Is the student logged in? True! Is it raining? False! These on-off values are incredibly powerful for making decisions in code.",
+          "connectsTo": "Different Data"
+        },
+        {
+          "nodeId": "types-matter",
+          "edges": [
+            { "from": "strings", "to": "types-matter" },
+            { "from": "integers", "to": "types-matter" },
+            { "from": "floats", "to": "types-matter" },
+            { "from": "booleans", "to": "types-matter" }
+          ],
+          "icon": "⚠️",
+          "title": "Why Types Matter",
+          "narration": "Here's the key insight: quote 42 quote is not the same as 42. The quotes make it text! You can do math with the number 42, but string 42 is just two characters. Knowing your types prevents bugs!",
+          "connectsTo": "All Types"
+        }
+      ]
+    },
+    {
+      "id": "input-output-story",
+      "diagramId": "input-output",
+      "title": "Talking to Your Program",
+      "steps": [
+        {
+          "nodeId": "communication",
+          "icon": "💬",
+          "title": "Programs Need to Communicate",
+          "narration": "A program that can't communicate is useless! It needs to show you results and ask you questions. Python gives us two simple tools: print for output and input for, well, input!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "print-output",
+          "edges": [{ "from": "communication", "to": "print-output" }],
+          "icon": "📤",
+          "title": "Output with print()",
+          "narration": "The print function displays text on screen. Print quote Hello World quote shows Hello World. You can print variables too—print player_name shows whatever's in that box!",
+          "connectsTo": "Communication"
+        },
+        {
+          "nodeId": "input-function",
+          "edges": [{ "from": "communication", "to": "input-function" }],
+          "icon": "📥",
+          "title": "Input with input()",
+          "narration": "The input function pauses your program and waits for the user to type something. Name equals input quote What is your name? quote. The program asks, waits for an answer, and stores it!",
+          "connectsTo": "Communication"
+        },
+        {
+          "nodeId": "input-is-string",
+          "edges": [{ "from": "input-function", "to": "input-is-string" }],
+          "icon": "⚠️",
+          "title": "Input is Always Text",
+          "narration": "Here's a gotcha: input always gives you a string! Even if the user types 12, Python receives the text '12', not the number 12. This matters when you want to do math!",
+          "connectsTo": "Input Function"
+        },
+        {
+          "nodeId": "type-conversion",
+          "edges": [{ "from": "input-is-string", "to": "type-conversion" }],
+          "icon": "🔄",
+          "title": "Converting Types",
+          "narration": "Use int to convert text to a number. Age equals int of input quote How old are you? quote. Now you can do math with age! This pattern—converting input—is something you'll use constantly.",
+          "connectsTo": "Input is Text"
         }
       ]
     }
@@ -79,37 +164,113 @@
       "storyId": "variables-story",
       "questions": [
         {
-          "question": "What is a variable in programming?",
+          "question": "What is a variable in Python?",
           "options": [
-            "A type of computer",
-            "A labeled container that stores data",
-            "A programming language",
-            "A button you click"
+            "A type of loop",
+            "A named container that stores a value",
+            "A mathematical equation",
+            "A built-in Python function"
           ],
           "correct": 1,
-          "explanation": "A variable is like a labeled box where you store information. You give it a name (the label) and put a value inside."
+          "explanation": "A variable is like a labeled box—you give it a name and put a value inside. The computer remembers this value so you can use it later!"
         },
         {
-          "question": "In Python, what does player_name = \"Alex\" do?",
+          "question": "Which line correctly creates a variable named 'score' with the value 100?",
           "options": [
-            "Deletes the player's name",
-            "Creates a box labeled 'player_name' and stores 'Alex' inside",
-            "Prints Alex to the screen",
-            "Asks the user for their name"
+            "100 = score",
+            "score == 100",
+            "score = 100",
+            "var score = 100"
+          ],
+          "correct": 2,
+          "explanation": "In Python, the variable name goes on the left, then a single equals sign, then the value. score = 100 creates a box called 'score' with 100 inside."
+        },
+        {
+          "question": "If you write: name = 'Alex' and then print(name), what appears?",
+          "options": [
+            "name",
+            "'Alex'",
+            "Alex",
+            "Error"
+          ],
+          "correct": 2,
+          "explanation": "print(name) looks inside the 'name' box and displays what it finds—Alex. The quotes aren't displayed; they just tell Python it's text."
+        }
+      ]
+    },
+    {
+      "storyId": "datatypes-story",
+      "questions": [
+        {
+          "question": "What's the difference between \"42\" and 42 in Python?",
+          "options": [
+            "They're exactly the same thing",
+            "\"42\" is text (string), 42 is a number (integer)",
+            "\"42\" is a number, 42 is text",
+            "The quotes are just for decoration"
           ],
           "correct": 1,
-          "explanation": "The = sign in Python puts the value on the right into the variable on the left. So player_name = \"Alex\" stores the text 'Alex' in a variable called player_name."
+          "explanation": "The quotes make it text! \"42\" is a string (two characters: '4' and '2'), while 42 is an integer you can do math with. This distinction is crucial!"
         },
         {
-          "question": "Which of these is NOT a valid thing to store in a variable?",
+          "question": "What data type would you use to store whether a user is logged in?",
           "options": [
-            "Text like \"Hello\"",
-            "Numbers like 42",
-            "True or False",
-            "All of these CAN be stored in variables"
+            "String",
+            "Integer",
+            "Float",
+            "Boolean"
           ],
           "correct": 3,
-          "explanation": "Variables can store many types of data including text (strings), numbers (integers and floats), and boolean values (True/False). That's what makes them so powerful!"
+          "explanation": "Boolean! It's either True (logged in) or False (not logged in). Booleans are perfect for yes/no, on/off, true/false situations."
+        },
+        {
+          "question": "Which is a valid float in Python?",
+          "options": [
+            "\"3.14\"",
+            "3,14",
+            "3.14",
+            "three point one four"
+          ],
+          "correct": 2,
+          "explanation": "3.14 is a float—a number with a decimal point. \"3.14\" with quotes is a string, 3,14 with comma is invalid, and text isn't a number at all!"
+        }
+      ]
+    },
+    {
+      "storyId": "input-output-story",
+      "questions": [
+        {
+          "question": "What does input() return in Python?",
+          "options": [
+            "An integer",
+            "A float",
+            "Always a string",
+            "Whatever type the user enters"
+          ],
+          "correct": 2,
+          "explanation": "input() always returns a string! Even if the user types 42, Python gives you \"42\" as text. You must convert it with int() or float() if you need a number."
+        },
+        {
+          "question": "What's wrong with this code? age = input(\"Age? \") and then next_year = age + 1",
+          "options": [
+            "Nothing, it works fine",
+            "input() doesn't exist",
+            "Can't add 1 to a string—need to convert age to int first",
+            "The variable names are wrong"
+          ],
+          "correct": 2,
+          "explanation": "input() gives you a string, and you can't add a number to a string! Fix it with: age = int(input(\"Age? \")). Then age + 1 works perfectly."
+        },
+        {
+          "question": "Which code correctly asks for a name and greets the user?",
+          "options": [
+            "print(input())",
+            "name = input(\"Name? \") then print(\"Hello, \" + name)",
+            "name = \"input()\" then print(name)",
+            "input(print(\"Name?\"))"
+          ],
+          "correct": 1,
+          "explanation": "First, input(\"Name? \") asks the question and stores the answer in 'name'. Then print(\"Hello, \" + name) combines the greeting with their name!"
         }
       ]
     }

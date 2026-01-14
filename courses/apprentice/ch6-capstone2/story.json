@@ -1,0 +1,294 @@
+{
+  "pageId": "ch6-capstone2",
+  "courseId": "apprentice",
+  "chapterMeta": {
+    "title": "Capstone II: AI Helper",
+    "icon": "🤖",
+    "themeColor": "capstone"
+  },
+  "stories": [
+    {
+      "id": "ai-architecture-story",
+      "diagramId": "ai-architecture",
+      "title": "How Your AI Helper Works",
+      "steps": [
+        {
+          "nodeId": "user-input",
+          "icon": "👤",
+          "title": "User Types a Message",
+          "narration": "Everything starts with the user typing something. They might ask for a joke, request a calculation, or want to know the time. Your AI helper needs to listen!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "parse-input",
+          "edges": [{ "from": "user-input", "to": "parse-input" }],
+          "icon": "🔍",
+          "title": "Parse the Input",
+          "narration": "First, your helper reads the input and looks for keywords. Is there 'joke' in the message? What about 'calculate' or 'time'? This is pattern matching in action!",
+          "connectsTo": "User Input"
+        },
+        {
+          "nodeId": "detect-intent",
+          "edges": [{ "from": "parse-input", "to": "detect-intent" }],
+          "icon": "🧠",
+          "title": "Detect the Intent",
+          "narration": "Using if-elif-else chains, your helper decides what the user wants. This is the Architect at work—routing requests to the right feature based on what it detects!",
+          "connectsTo": "Parse Input"
+        },
+        {
+          "nodeId": "call-feature",
+          "edges": [{ "from": "detect-intent", "to": "call-feature" }],
+          "icon": "⚡",
+          "title": "Call the Right Feature",
+          "narration": "Once the intent is known, your helper calls the appropriate function. Tell a joke? Call tell_joke. Do math? Call do_math. Each feature is a function doing one job well!",
+          "connectsTo": "Detect Intent"
+        },
+        {
+          "nodeId": "respond",
+          "edges": [{ "from": "call-feature", "to": "respond" }],
+          "icon": "💬",
+          "title": "Show the Response",
+          "narration": "The function returns a response, and your helper displays it to the user. Then the loop continues—waiting for the next input. This conversation loop runs until the user quits!",
+          "connectsTo": "Call Feature"
+        },
+        {
+          "nodeId": "loop-back",
+          "edges": [{ "from": "respond", "to": "user-input" }],
+          "icon": "🔄",
+          "title": "The Conversation Loop",
+          "narration": "The magic is in the while loop. It keeps the conversation going, processing input after input, until the user says 'quit'. Your AI helper is patient and always ready!",
+          "connectsTo": "Respond"
+        }
+      ]
+    },
+    {
+      "id": "skills-integration-story",
+      "diagramId": "skills-integration",
+      "title": "All Your Skills Combined",
+      "steps": [
+        {
+          "nodeId": "stone-foundation",
+          "icon": "🪨",
+          "title": "Stone: Your Data Foundation",
+          "narration": "Remember the Stone? Variables store everything your helper needs—the joke list, the fact database, the to-do list. Data is the foundation your AI helper is built on!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "lightning-decisions",
+          "edges": [{ "from": "stone-foundation", "to": "lightning-decisions" }],
+          "icon": "⚡",
+          "title": "Lightning: Making Decisions",
+          "narration": "Lightning taught you if-elif-else. That's exactly how your helper decides what to do! If the user says 'joke', do this. Elif they say 'time', do that. Decisions power the routing!",
+          "connectsTo": "Stone Foundation"
+        },
+        {
+          "nodeId": "magnetism-functions",
+          "edges": [{ "from": "lightning-decisions", "to": "magnetism-functions" }],
+          "icon": "🧲",
+          "title": "Magnetism: Reusable Functions",
+          "narration": "Each feature is a function! tell_joke, do_math, show_todos—they're all Magnetism at work. You write the logic once, then call it whenever needed. Functions make your code clean and powerful!",
+          "connectsTo": "Lightning Decisions"
+        },
+        {
+          "nodeId": "architect-design",
+          "edges": [{ "from": "magnetism-functions", "to": "architect-design" }],
+          "icon": "🏛️",
+          "title": "Architect: The Big Picture",
+          "narration": "The Architect mindset ties it all together. You designed a system where input flows to parsing, parsing routes to features, and features return responses. That's architecture!",
+          "connectsTo": "Magnetism Functions"
+        },
+        {
+          "nodeId": "integration-complete",
+          "edges": [
+            { "from": "stone-foundation", "to": "integration-complete" },
+            { "from": "lightning-decisions", "to": "integration-complete" },
+            { "from": "magnetism-functions", "to": "integration-complete" },
+            { "from": "architect-design", "to": "integration-complete" }
+          ],
+          "icon": "🎯",
+          "title": "The Complete Picture",
+          "narration": "Your AI helper uses ALL of these skills together! Stone stores data, Lightning makes decisions, Magnetism organizes code into functions, and the Architect designs the flow. You've become a real programmer!",
+          "connectsTo": "All Skills"
+        }
+      ]
+    },
+    {
+      "id": "journey-complete-story",
+      "diagramId": "journey-complete",
+      "title": "Your Learning Journey",
+      "steps": [
+        {
+          "nodeId": "origins-start",
+          "icon": "🌱",
+          "title": "Where You Started",
+          "narration": "You began with nothing—no coding experience, maybe even unsure if you could do this. In Origins, you learned that coding is really about thinking clearly and communicating with machines.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "stone-chapter",
+          "edges": [{ "from": "origins-start", "to": "stone-chapter" }],
+          "icon": "🪨",
+          "title": "The Stone Remembers",
+          "narration": "Chapter 1 gave you variables and data types. You learned to store information and understood that computers need memory to work with, just like humans do!",
+          "connectsTo": "Origins"
+        },
+        {
+          "nodeId": "lightning-chapter",
+          "edges": [{ "from": "stone-chapter", "to": "lightning-chapter" }],
+          "icon": "⚡",
+          "title": "Lightning Decides",
+          "narration": "Chapter 2 taught decisions and loops. Your code could finally think—making choices with if-else and repeating actions with while and for loops!",
+          "connectsTo": "Stone"
+        },
+        {
+          "nodeId": "magnetism-chapter",
+          "edges": [{ "from": "lightning-chapter", "to": "magnetism-chapter" }],
+          "icon": "🧲",
+          "title": "Magnetism Organizes",
+          "narration": "Chapter 3 introduced functions. You learned to package code into reusable pieces—the building blocks that professional programmers use every day!",
+          "connectsTo": "Lightning"
+        },
+        {
+          "nodeId": "architect-chapter",
+          "edges": [{ "from": "magnetism-chapter", "to": "architect-chapter" }],
+          "icon": "🏛️",
+          "title": "Think Like an Architect",
+          "narration": "Chapter 4 shifted your perspective. You learned to think big picture—planning systems, visualizing with diagrams, and designing before coding!",
+          "connectsTo": "Magnetism"
+        },
+        {
+          "nodeId": "capstones",
+          "edges": [{ "from": "architect-chapter", "to": "capstones" }],
+          "icon": "🎮",
+          "title": "Building Real Projects",
+          "narration": "The capstones brought everything together! You built a number guessing game and now an AI helper—real programs that work and do useful things!",
+          "connectsTo": "Architect"
+        },
+        {
+          "nodeId": "graduation",
+          "edges": [{ "from": "capstones", "to": "graduation" }],
+          "icon": "🏆",
+          "title": "Course Complete!",
+          "narration": "You did it! You've gone from apprentice to someone who can design, code, and build real programs. The future is yours to create. Keep building, keep learning, keep thinking like an architect!",
+          "connectsTo": "Capstones"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "ai-architecture-story",
+      "questions": [
+        {
+          "question": "What is the main purpose of the conversation loop in your AI helper?",
+          "options": [
+            "To make the program faster",
+            "To keep processing user input until they quit",
+            "To store data permanently",
+            "To connect to the internet"
+          ],
+          "correct": 1,
+          "explanation": "The while loop keeps your AI helper running, continuously accepting input and responding, until the user types 'quit'. This creates an interactive conversation!"
+        },
+        {
+          "question": "How does the AI helper know which feature to use?",
+          "options": [
+            "It randomly picks one",
+            "It uses if-elif-else to check for keywords",
+            "It asks the user to pick from a menu",
+            "It tries every feature until one works"
+          ],
+          "correct": 1,
+          "explanation": "The helper uses if-elif-else chains to detect keywords like 'joke', 'time', or 'calculate' in the user's input, then routes to the appropriate function."
+        },
+        {
+          "question": "Why is each feature implemented as a separate function?",
+          "options": [
+            "Python requires it",
+            "To make the code longer",
+            "For organization, reusability, and testing",
+            "Functions run faster than regular code"
+          ],
+          "correct": 2,
+          "explanation": "Each function handles one job well—telling jokes, doing math, etc. This keeps code organized, makes it easy to add new features, and lets you test each piece separately!"
+        }
+      ]
+    },
+    {
+      "storyId": "skills-integration-story",
+      "questions": [
+        {
+          "question": "Which skill from the course does storing the jokes list represent?",
+          "options": [
+            "Lightning (decisions)",
+            "Stone (variables and data)",
+            "Magnetism (functions)",
+            "Architect (design)"
+          ],
+          "correct": 1,
+          "explanation": "The Stone chapter taught you about variables and data storage. The jokes list is data stored in a variable—exactly what Stone is all about!"
+        },
+        {
+          "question": "The process_input() function uses if-elif-else to route requests. Which skill is this?",
+          "options": [
+            "Stone",
+            "Lightning",
+            "Magnetism",
+            "Origins"
+          ],
+          "correct": 1,
+          "explanation": "Lightning is all about decisions! The if-elif-else chain decides what the user wants based on their input—classic decision-making logic."
+        },
+        {
+          "question": "Why is the Architect mindset important for building the AI helper?",
+          "options": [
+            "It makes the code run faster",
+            "It helps you plan the overall system before coding details",
+            "It's required by Python",
+            "It makes the program look better"
+          ],
+          "correct": 1,
+          "explanation": "The Architect mindset helps you see the big picture—how input flows to parsing, routing, features, and responses. Planning first leads to better, more maintainable code!"
+        }
+      ]
+    },
+    {
+      "storyId": "journey-complete-story",
+      "questions": [
+        {
+          "question": "What was the main lesson from Chapter 1 (Stone)?",
+          "options": [
+            "How to use loops",
+            "How to create functions",
+            "How to store and work with data using variables",
+            "How to design systems"
+          ],
+          "correct": 2,
+          "explanation": "The Stone chapter introduced variables and data types—the foundation for giving your programs memory to store and work with information!"
+        },
+        {
+          "question": "What makes the AI Helper a good capstone project?",
+          "options": [
+            "It's the shortest project",
+            "It only uses one skill from the course",
+            "It combines ALL skills: data, decisions, functions, and design",
+            "It requires no coding"
+          ],
+          "correct": 2,
+          "explanation": "The AI Helper is perfect because it uses everything: Stone (data storage), Lightning (decisions), Magnetism (functions), and Architect (system design)!"
+        },
+        {
+          "question": "What's the most important thing about finishing this course?",
+          "options": [
+            "You never need to learn again",
+            "You can now call yourself an expert",
+            "You have a foundation to keep building and learning",
+            "All programming is now easy"
+          ],
+          "correct": 2,
+          "explanation": "The real gift is a foundation! The best programmers never stop learning. You now have the core skills and mindset to keep growing and building amazing things!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "storyId": "new-skills-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Modern Programmer. The best programmers aren't the fastest typists. They're the best thinkers and communicators. Master these four skills, and you'll thrive in the Age of Architects!",
+  "duration": 12.640000343322754,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3400000035762787
+    },
+    {
+      "word": "modern",
+      "start": 0.3400000035762787,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "programmer",
+      "start": 0.8399999737739563,
+      "end": 1.6799999475479126
+    },
+    {
+      "word": "The",
+      "start": 2.5999999046325684,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "best",
+      "start": 2.619999885559082,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "programmers",
+      "start": 2.9800000190734863,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "aren't",
+      "start": 3.4600000381469727,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "the",
+      "start": 3.880000114440918,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "fastest",
+      "start": 4.480000019073486,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "typists",
+      "start": 4.480000019073486,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "They're",
+      "start": 5.579999923706055,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "the",
+      "start": 5.71999979019165,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "best",
+      "start": 5.920000076293945,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "thinkers",
+      "start": 6.260000228881836,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "and",
+      "start": 6.679999828338623,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "communicators",
+      "start": 7.099999904632568,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "Master",
+      "start": 8.699999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "these",
+      "start": 8.699999809265137,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "four",
+      "start": 9.020000457763672,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "skills",
+      "start": 9.4399995803833,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "and",
+      "start": 10.319999694824219,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "you'll",
+      "start": 10.420000076293945,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "thrive",
+      "start": 11.119999885559082,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "in",
+      "start": 11.119999885559082,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "the",
+      "start": 11.34000015258789,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "age",
+      "start": 11.680000305175781,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "of",
+      "start": 11.720000267028809,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "architects",
+      "start": 12.039999961853027,
+      "end": 12.34000015258789
+    }
+  ]
+}

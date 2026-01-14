@@ -1,0 +1,160 @@
+{
+  "storyId": "skills-integration-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Your Complete Game. Stone holds the state, Lightning makes decisions, Magnetism provides the actions, and the game loop ties it all together. You're not just coding—you're creating an experience!",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "You're",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "complete",
+      "start": 0.46000000834465027,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "game",
+      "start": 0.9800000190734863,
+      "end": 1.5
+    },
+    {
+      "word": "Stone",
+      "start": 2.4000000953674316,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "holds",
+      "start": 2.4000000953674316,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "the",
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "state",
+      "start": 3.0799999237060547,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "Lightning",
+      "start": 4.079999923706055,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "makes",
+      "start": 4.079999923706055,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "decisions",
+      "start": 4.400000095367432,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "Magnetism",
+      "start": 5.559999942779541,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "provides",
+      "start": 5.980000019073486,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "the",
+      "start": 6.440000057220459,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "actions",
+      "start": 6.699999809265137,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "And",
+      "start": 7.579999923706055,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "the",
+      "start": 7.659999847412109,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "game",
+      "start": 7.880000114440918,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "loop",
+      "start": 8.140000343322754,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "ties",
+      "start": 8.380000114440918,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "it",
+      "start": 8.720000267028809,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "all",
+      "start": 8.920000076293945,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "together",
+      "start": 9.140000343322754,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "You're",
+      "start": 10.039999961853027,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "not",
+      "start": 10.220000267028809,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "just",
+      "start": 10.359999656677246,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "coding",
+      "start": 10.699999809265137,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "You're",
+      "start": 11.4399995803833,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "creating",
+      "start": 11.720000267028809,
+      "end": 12.079999923706055
+    },
+    {
+      "word": "an",
+      "start": 12.079999923706055,
+      "end": 12.479999542236328
+    },
+    {
+      "word": "experience",
+      "start": 12.479999542236328,
+      "end": 12.9399995803833
+    }
+  ]
+}

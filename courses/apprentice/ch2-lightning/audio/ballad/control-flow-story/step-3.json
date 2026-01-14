@@ -1,0 +1,135 @@
+{
+  "storyId": "control-flow-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Branching Paths. With control flow, your program can branch into different paths. Like a tree growing multiple branches, each condition creates a new possible direction.",
+  "duration": 13,
+  "words": [
+    {
+      "word": "Branching",
+      "start": 0,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "paths",
+      "start": 1.1399999856948853,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "With",
+      "start": 2.319999933242798,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "Control",
+      "start": 2.4600000381469727,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "Flow",
+      "start": 2.9200000762939453,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "your",
+      "start": 3.819999933242798,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "program",
+      "start": 3.9800000190734863,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "can",
+      "start": 4.320000171661377,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "branch",
+      "start": 4.760000228881836,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "into",
+      "start": 5.099999904632568,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "different",
+      "start": 5.440000057220459,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "paths",
+      "start": 5.960000038146973,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "Like",
+      "start": 7.019999980926514,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "a",
+      "start": 7.179999828338623,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "tree",
+      "start": 7.71999979019165,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "growing",
+      "start": 7.71999979019165,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "multiple",
+      "start": 8.140000343322754,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "branches",
+      "start": 8.619999885559082,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "each",
+      "start": 9.920000076293945,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "condition",
+      "start": 10.039999961853027,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "creates",
+      "start": 10.5600004196167,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "a",
+      "start": 11.079999923706055,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "new",
+      "start": 11.479999542236328,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "possible",
+      "start": 11.819999694824219,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "direction",
+      "start": 12.199999809265137,
+      "end": 12.65999984741211
+    }
+  ]
+}

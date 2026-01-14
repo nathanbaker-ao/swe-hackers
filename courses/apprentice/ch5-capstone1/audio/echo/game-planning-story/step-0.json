@@ -1,0 +1,140 @@
+{
+  "storyId": "game-planning-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Architects Plan First. Great game developers don't just start typing code. Like architects designing a building, they draw a plan first. Your map IS your blueprint!",
+  "duration": 11.899999618530273,
+  "words": [
+    {
+      "word": "Architects",
+      "start": 0,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "plan",
+      "start": 0.8600000143051147,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "first",
+      "start": 1.159999966621399,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "Great",
+      "start": 2.259999990463257,
+      "end": 2.5
+    },
+    {
+      "word": "game",
+      "start": 2.5,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "developers",
+      "start": 2.819999933242798,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "don't",
+      "start": 3.240000009536743,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "just",
+      "start": 3.640000104904175,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "start",
+      "start": 3.9800000190734863,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "typing",
+      "start": 4.179999828338623,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "code",
+      "start": 4.440000057220459,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "Like",
+      "start": 5.380000114440918,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "architects",
+      "start": 5.659999847412109,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "designing",
+      "start": 6.039999961853027,
+      "end": 6.5
+    },
+    {
+      "word": "a",
+      "start": 6.5,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "building",
+      "start": 7.019999980926514,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "they",
+      "start": 7.440000057220459,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "draw",
+      "start": 7.599999904632568,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "a",
+      "start": 7.900000095367432,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "plan",
+      "start": 8.479999542236328,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "first",
+      "start": 8.479999542236328,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "Your",
+      "start": 9.5600004196167,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "map",
+      "start": 9.800000190734863,
+      "end": 10.119999885559082
+    },
+    {
+      "word": "is",
+      "start": 10.119999885559082,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "your",
+      "start": 10.859999656677246,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "blueprint",
+      "start": 11.239999771118164,
+      "end": 11.460000038146973
+    }
+  ]
+}

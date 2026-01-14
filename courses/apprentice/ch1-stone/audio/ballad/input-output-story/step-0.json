@@ -1,0 +1,185 @@
+{
+  "storyId": "input-output-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Programs Need to Communicate. A program that can't communicate is useless! It needs to show you results and ask you questions. Python gives us two simple tools: print for output and input for, well, input!",
+  "duration": 18.209999084472656,
+  "words": [
+    {
+      "word": "Programs",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "need",
+      "start": 0.6600000262260437,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "to",
+      "start": 0.9800000190734863,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "communicate",
+      "start": 1.340000033378601,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "A",
+      "start": 2.640000104904175,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "program",
+      "start": 2.819999933242798,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "that",
+      "start": 3.140000104904175,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "can't",
+      "start": 3.4200000762939453,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "communicate",
+      "start": 3.9000000953674316,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "is",
+      "start": 4.320000171661377,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "useless",
+      "start": 4.800000190734863,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "It",
+      "start": 6.179999828338623,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "needs",
+      "start": 6.260000228881836,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 6.420000076293945,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "show",
+      "start": 6.71999979019165,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "you",
+      "start": 6.880000114440918,
+      "end": 7.5
+    },
+    {
+      "word": "results",
+      "start": 7.5,
+      "end": 7.5
+    },
+    {
+      "word": "and",
+      "start": 7.5,
+      "end": 8
+    },
+    {
+      "word": "ask",
+      "start": 8,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "you",
+      "start": 8.399999618530273,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "questions",
+      "start": 9.220000267028809,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "Python",
+      "start": 10.319999694824219,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "gives",
+      "start": 10.640000343322754,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "us",
+      "start": 10.979999542236328,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "two",
+      "start": 11.34000015258789,
+      "end": 11.739999771118164
+    },
+    {
+      "word": "simple",
+      "start": 11.739999771118164,
+      "end": 12.5
+    },
+    {
+      "word": "tools",
+      "start": 12.5,
+      "end": 12.899999618530273
+    },
+    {
+      "word": "Print",
+      "start": 14.119999885559082,
+      "end": 14.119999885559082
+    },
+    {
+      "word": "for",
+      "start": 14.119999885559082,
+      "end": 14.5600004196167
+    },
+    {
+      "word": "output",
+      "start": 14.5600004196167,
+      "end": 14.9399995803833
+    },
+    {
+      "word": "and",
+      "start": 14.9399995803833,
+      "end": 15.680000305175781
+    },
+    {
+      "word": "Input",
+      "start": 15.680000305175781,
+      "end": 15.960000038146973
+    },
+    {
+      "word": "for",
+      "start": 15.960000038146973,
+      "end": 16.5
+    },
+    {
+      "word": "well",
+      "start": 16.579999923706055,
+      "end": 17.15999984741211
+    },
+    {
+      "word": "input",
+      "start": 17.520000457763672,
+      "end": 17.8799991607666
+    }
+  ]
+}

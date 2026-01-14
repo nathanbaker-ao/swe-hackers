@@ -1,629 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Capstone I: Adventure Game | AutoNateAI Apprentice</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capstone I: The Adventure Game | The Apprentice's Path</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="apprentice" data-lesson="ch5-capstone1">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">🎮</div>
+        <span>Capstone I</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Apprentice</a>
+        <a href="../ch4-architect/">Ch 4</a>
+        <a href="index.html" class="active">Ch 5</a>
+        <a href="../ch6-capstone2/">Ch 6: Capstone II</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Apprentice</a>
+        <span>/</span>
+        <span>Capstone I: The Adventure Game</span>
+      </div>
+      <h1>🎮 Capstone I: The Adventure Game</h1>
+      <p>Put everything together! Build a text-based adventure game where players explore rooms, collect items, and make choices.</p>
+    </div>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../../shared/css/lesson.css" />
-
-    <!-- Mermaid for diagrams -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-    <style>
-      :root {
-        --chapter-color: var(--accent-capstone);
-        --accent-capstone: #ab47bc;
-      }
-
-      .hero::before {
-        background: radial-gradient(
-            ellipse at 30% 50%,
-            rgba(171, 71, 188, 0.2) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 70% 30%,
-            rgba(142, 36, 170, 0.15) 0%,
-            transparent 50%
-          );
-      }
-
-      .story-block {
-        border-left-color: var(--accent-capstone);
-      }
-
-      .story-block::before {
-        color: var(--accent-capstone);
-      }
-
-      /* Game preview */
-      .game-preview {
-        background: #0d1117;
-        border-radius: var(--radius-lg);
-        padding: 2rem;
-        margin: 2rem 0;
-        font-family: var(--font-mono);
-        color: #c9d1d9;
-        line-height: 1.8;
-      }
-
-      .game-preview .title {
-        color: var(--accent-capstone);
-        font-size: 1.25rem;
-        text-align: center;
-        margin-bottom: 1rem;
-      }
-
-      .game-preview .description {
-        color: #8b949e;
-        margin-bottom: 1rem;
-      }
-
-      .game-preview .choice {
-        color: #58a6ff;
-        cursor: pointer;
-      }
-
-      .game-preview .choice:hover {
-        text-decoration: underline;
-      }
-
-      /* Room cards */
-      .room-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin: 2rem 0;
-      }
-
-      .room-card {
-        background: var(--bg-secondary);
-        border-radius: var(--radius-lg);
-        padding: 1.5rem;
-        text-align: center;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-      }
-
-      .room-card:hover {
-        border-color: var(--accent-capstone);
-        transform: translateY(-5px);
-      }
-
-      .room-card .emoji {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .room-card h4 {
-        margin-bottom: 0.5rem;
-      }
-
-      .room-card p {
-        font-size: 0.875rem;
-        color: var(--text-muted);
-      }
-
-      /* Checklist */
-      .checklist {
-        background: var(--bg-secondary);
-        border-radius: var(--radius-lg);
-        padding: 1.5rem;
-        margin: 2rem 0;
-      }
-
-      .checklist-item {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.75rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      .checklist-item:last-child {
-        border-bottom: none;
-      }
-
-      .checklist-box {
-        width: 24px;
-        height: 24px;
-        border: 2px solid var(--accent-capstone);
-        border-radius: var(--radius-sm);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .checklist-box:hover {
-        background: rgba(171, 71, 188, 0.2);
-      }
-
-      .checklist-box.checked {
-        background: var(--accent-capstone);
-      }
-
-      .checklist-box.checked::after {
-        content: "✓";
-        color: white;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Progress Bar -->
-    <div class="progress-bar"></div>
-
-    <!-- Progress Tracker (Side) -->
-    <nav class="progress-tracker">
-      <div class="progress-dot active" data-section="hero" title="Start"></div>
-      <div class="progress-dot" data-section="intro" title="The Challenge"></div>
-      <div class="progress-dot" data-section="plan" title="Plan"></div>
-      <div class="progress-dot" data-section="skills" title="Skills Used"></div>
-      <div class="progress-dot" data-section="starter" title="Starter"></div>
-      <div class="progress-dot" data-section="requirements" title="Requirements"></div>
-    </nav>
-
-    <main class="lesson-container">
-      <!-- HERO SECTION -->
-      <section class="hero section" data-section="hero">
-        <div class="hero-content">
-          <span class="hero-chapter">Capstone I • Weeks 5-6</span>
-          <div class="hero-icon">🎮</div>
-          <h1>The Adventure Game</h1>
-          <p class="hero-subtitle">
-            Put everything together! Build a text-based adventure game where
-            players explore rooms, collect items, and make choices.
-          </p>
-        </div>
-
-        <div class="scroll-indicator">
-          <span>Begin your quest</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12l7 7 7-7" />
-          </svg>
-        </div>
-      </section>
-
-      <!-- THE CHALLENGE -->
-      <section class="section" data-section="intro">
-        <div class="section-content">
-          <h2 class="fade-in">🏆 The Challenge</h2>
-
-          <div class="story-block fade-in">
-            <p>
-              You've learned variables, loops, conditions, and functions. Now
-              it's time to put them ALL together into one big project: a
-              <strong>text adventure game</strong>!
-            </p>
-          </div>
-
-          <p class="fade-in">
-            Players will type commands to explore different rooms, pick up items,
-            and try to reach the goal. Here's what it might look like:
-          </p>
-
-          <div class="game-preview fade-in">
-            <div class="title">🏰 THE HAUNTED CASTLE 🏰</div>
-            <div class="description">
-              You wake up in a dark dungeon. There's a rusty key on the ground
-              and a door to the north.
-            </div>
-            <p>> <span class="choice">pick up key</span></p>
-            <p>You picked up the rusty key!</p>
-            <p>> <span class="choice">go north</span></p>
-            <p>You use the key to unlock the door and enter the Great Hall...</p>
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
           </div>
         </div>
-      </section>
-
-      <!-- PLANNING -->
-      <section class="section" data-section="plan">
-        <div class="section-content">
-          <h2 class="fade-in">📋 Plan Your Game</h2>
-
-          <p class="fade-in">
-            Before you write code, plan your game! Good architects always draw
-            a map first.
-          </p>
-
-          <h3 class="fade-in">Step 1: Draw Your Map</h3>
-
-          <div class="diagram-container scale-in">
-            <div class="diagram-title">Example Game Map</div>
-            <div class="mermaid">
-              flowchart TD
-                DUNGEON["🔒 Dungeon<br/>(Start)"] -->|north| HALL["🏛️ Great Hall"]
-                HALL -->|east| KITCHEN["🍳 Kitchen"]
-                HALL -->|west| LIBRARY["📚 Library"]
-                HALL -->|north| TOWER["🏰 Tower<br/>(Goal!)"]
-                KITCHEN -->|west| HALL
-                LIBRARY -->|east| HALL
-
-                style DUNGEON fill:#6d4c41,color:#fff
-                style TOWER fill:#ab47bc,color:#fff
-            </div>
-          </div>
-
-          <h3 class="fade-in">Step 2: Decide on Rooms</h3>
-
-          <div class="room-grid fade-in">
-            <div class="room-card">
-              <div class="emoji">🔒</div>
-              <h4>Dungeon</h4>
-              <p>Starting room. Dark and damp.</p>
-            </div>
-            <div class="room-card">
-              <div class="emoji">🏛️</div>
-              <h4>Great Hall</h4>
-              <p>Central hub. Connects to other rooms.</p>
-            </div>
-            <div class="room-card">
-              <div class="emoji">🍳</div>
-              <h4>Kitchen</h4>
-              <p>Find food and supplies here.</p>
-            </div>
-            <div class="room-card">
-              <div class="emoji">📚</div>
-              <h4>Library</h4>
-              <p>Ancient books with clues.</p>
-            </div>
-            <div class="room-card">
-              <div class="emoji">🏰</div>
-              <h4>Tower</h4>
-              <p>The goal! Escape the castle.</p>
-            </div>
-          </div>
-
-          <h3 class="fade-in">Step 3: Decide on Items</h3>
-
-          <div class="concept-grid fade-in">
-            <div class="concept-card stone stagger-item">
-              <div class="concept-card-icon">🗝️</div>
-              <h4>Rusty Key</h4>
-              <p>Found in dungeon. Opens the first door.</p>
-            </div>
-            <div class="concept-card stone stagger-item">
-              <div class="concept-card-icon">🍎</div>
-              <h4>Apple</h4>
-              <p>Found in kitchen. Restores health.</p>
-            </div>
-            <div class="concept-card stone stagger-item">
-              <div class="concept-card-icon">📜</div>
-              <h4>Magic Scroll</h4>
-              <p>Found in library. Contains a secret.</p>
-            </div>
-          </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SKILLS USED -->
-      <section class="section" data-section="skills">
-        <div class="section-content">
-          <h2 class="fade-in">🧰 Skills You'll Use</h2>
-
-          <p class="fade-in">
-            This project uses EVERYTHING you've learned:
-          </p>
-
-          <div class="concept-grid fade-in">
-            <div class="concept-card stone stagger-item">
-              <div class="concept-card-icon">🪨</div>
-              <h4>Stone (Memory)</h4>
-              <p>Variables to track: current room, inventory, game state</p>
-            </div>
-            <div class="concept-card lightning stagger-item">
-              <div class="concept-card-icon">⚡</div>
-              <h4>Lightning (Flow)</h4>
-              <p>If/else to handle commands. While loop for game loop.</p>
-            </div>
-            <div class="concept-card magnetism stagger-item">
-              <div class="concept-card-icon">🧲</div>
-              <h4>Magnetism (Functions)</h4>
-              <p>Functions for each action: move(), pickup(), look()</p>
-            </div>
-            <div class="concept-card stagger-item" style="border-top-color: var(--accent-architect);">
-              <div class="concept-card-icon">🏛️</div>
-              <h4>Architect (Planning)</h4>
-              <p>Diagrams to plan rooms and flow. AI to help write code.</p>
-            </div>
-          </div>
-
-          <div class="diagram-container scale-in">
-            <div class="diagram-title">Game Loop Structure</div>
-            <div class="mermaid">
-              flowchart TD
-                START([Start Game]) --> SHOW[Show Room Description]
-                SHOW --> GET[Get Player Command]
-                GET --> PARSE{What Command?}
-                PARSE -->|go| MOVE[Move to New Room]
-                PARSE -->|look| LOOK[Describe Room]
-                PARSE -->|pick up| PICKUP[Add Item to Inventory]
-                PARSE -->|quit| END([End Game])
-                MOVE --> WIN{Reached Goal?}
-                LOOK --> SHOW
-                PICKUP --> SHOW
-                WIN -->|No| SHOW
-                WIN -->|Yes| VICTORY([🎉 You Win!])
-
-                style START fill:#ab47bc,color:#fff
-                style END fill:#ef5350,color:#fff
-                style VICTORY fill:#4caf50,color:#fff
-            </div>
-          </div>
+    <!-- Story 1: The Adventure Vision -->
+    <section class="section" id="adventure-vision-section">
+      <h2>The Adventure Vision</h2>
+      <p>Before you write a single line of code, understand what you're building. A text adventure is an interactive story where players type commands to explore, collect, and conquer!</p>
+      
+      <div class="diagram-container" id="adventure-vision-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🏆 What You're Building</span>
         </div>
-      </section>
-
-      <!-- STARTER CODE -->
-      <section class="section" data-section="starter">
-        <div class="section-content">
-          <h2 class="fade-in">🚀 Starter Code</h2>
-
-          <p class="fade-in">
-            Here's a basic structure to get you started. Your job is to expand it!
-          </p>
-
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python - adventure_game.py</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="string">"""
-🎮 MY ADVENTURE GAME
-A text-based adventure where you explore and collect items!
-"""</span>
-
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-<span class="comment"># GAME DATA (Stone - Memory)</span>
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-
-<span class="variable">rooms</span> = {
-    <span class="string">"dungeon"</span>: {
-        <span class="string">"description"</span>: <span class="string">"A dark, damp dungeon. There's a door to the north."</span>,
-        <span class="string">"exits"</span>: {<span class="string">"north"</span>: <span class="string">"hall"</span>},
-        <span class="string">"items"</span>: [<span class="string">"rusty key"</span>]
-    },
-    <span class="string">"hall"</span>: {
-        <span class="string">"description"</span>: <span class="string">"A grand hall with doors in every direction."</span>,
-        <span class="string">"exits"</span>: {<span class="string">"south"</span>: <span class="string">"dungeon"</span>, <span class="string">"north"</span>: <span class="string">"tower"</span>, <span class="string">"east"</span>: <span class="string">"kitchen"</span>},
-        <span class="string">"items"</span>: []
-    },
-    <span class="string">"kitchen"</span>: {
-        <span class="string">"description"</span>: <span class="string">"A dusty kitchen. Something smells good..."</span>,
-        <span class="string">"exits"</span>: {<span class="string">"west"</span>: <span class="string">"hall"</span>},
-        <span class="string">"items"</span>: [<span class="string">"apple"</span>]
-    },
-    <span class="string">"tower"</span>: {
-        <span class="string">"description"</span>: <span class="string">"You made it to the tower! Sunlight streams in. You're FREE!"</span>,
-        <span class="string">"exits"</span>: {},
-        <span class="string">"items"</span>: [],
-        <span class="string">"is_goal"</span>: <span class="keyword">True</span>
-    }
-}
-
-<span class="variable">current_room</span> = <span class="string">"dungeon"</span>
-<span class="variable">inventory</span> = []
-<span class="variable">game_running</span> = <span class="keyword">True</span>
-
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-<span class="comment"># FUNCTIONS (Magnetism - Connections)</span>
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-
-<span class="keyword">def</span> <span class="function">show_room</span>():
-    <span class="string">"""Display the current room's description and items."""</span>
-    room = rooms[current_room]
-    <span class="function">print</span>(<span class="string">f"\n{'='*50}"</span>)
-    <span class="function">print</span>(room[<span class="string">"description"</span>])
-    
-    <span class="keyword">if</span> room[<span class="string">"items"</span>]:
-        <span class="function">print</span>(<span class="string">f"You see: </span>{<span class="string">', '</span>.join(room[<span class="string">'items'</span>])}<span class="string">"</span>)
-    
-    exits = <span class="string">", "</span>.join(room[<span class="string">"exits"</span>].keys())
-    <span class="function">print</span>(<span class="string">f"Exits: </span>{exits}<span class="string">"</span>)
-    <span class="function">print</span>(<span class="string">"="</span>*<span class="number">50</span>)
-
-<span class="keyword">def</span> <span class="function">move</span>(direction):
-    <span class="string">"""Move to a new room if the exit exists."""</span>
-    <span class="keyword">global</span> current_room, game_running
-    
-    room = rooms[current_room]
-    <span class="keyword">if</span> direction <span class="keyword">in</span> room[<span class="string">"exits"</span>]:
-        current_room = room[<span class="string">"exits"</span>][direction]
-        <span class="function">print</span>(<span class="string">f"You go </span>{direction}<span class="string">..."</span>)
+        <div id="adventure-vision-story" class="diagram-canvas storytelling"></div>
         
-        <span class="comment"># Check for victory!</span>
-        <span class="keyword">if</span> rooms[current_room].get(<span class="string">"is_goal"</span>):
-            show_room()
-            <span class="function">print</span>(<span class="string">"\n🎉 CONGRATULATIONS! You escaped the castle! 🎉"</span>)
-            game_running = <span class="keyword">False</span>
-    <span class="keyword">else</span>:
-        <span class="function">print</span>(<span class="string">"You can't go that way!"</span>)
-
-<span class="keyword">def</span> <span class="function">pickup</span>(item_name):
-    <span class="string">"""Pick up an item from the current room."""</span>
-    room = rooms[current_room]
-    <span class="keyword">if</span> item_name <span class="keyword">in</span> room[<span class="string">"items"</span>]:
-        room[<span class="string">"items"</span>].remove(item_name)
-        inventory.append(item_name)
-        <span class="function">print</span>(<span class="string">f"You picked up the </span>{item_name}<span class="string">!"</span>)
-    <span class="keyword">else</span>:
-        <span class="function">print</span>(<span class="string">"There's no </span>{item_name}<span class="string"> here."</span>)
-
-<span class="keyword">def</span> <span class="function">show_inventory</span>():
-    <span class="string">"""Show what items the player is carrying."""</span>
-    <span class="keyword">if</span> inventory:
-        <span class="function">print</span>(<span class="string">"You are carrying: "</span> + <span class="string">", "</span>.join(inventory))
-    <span class="keyword">else</span>:
-        <span class="function">print</span>(<span class="string">"Your inventory is empty."</span>)
-
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-<span class="comment"># GAME LOOP (Lightning - Flow)</span>
-<span class="comment"># ═══════════════════════════════════════════════════════════</span>
-
-<span class="function">print</span>(<span class="string">"🏰 WELCOME TO THE HAUNTED CASTLE 🏰"</span>)
-<span class="function">print</span>(<span class="string">"Commands: go [direction], look, pick up [item], inventory, quit"</span>)
-
-show_room()
-
-<span class="keyword">while</span> game_running:
-    command = <span class="function">input</span>(<span class="string">"\n> "</span>).lower().strip()
-    
-    <span class="keyword">if</span> command.startswith(<span class="string">"go "</span>):
-        direction = command[<span class="number">3</span>:]
-        move(direction)
-        <span class="keyword">if</span> game_running:
-            show_room()
-    <span class="keyword">elif</span> command == <span class="string">"look"</span>:
-        show_room()
-    <span class="keyword">elif</span> command.startswith(<span class="string">"pick up "</span>):
-        item = command[<span class="number">8</span>:]
-        pickup(item)
-    <span class="keyword">elif</span> command == <span class="string">"inventory"</span>:
-        show_inventory()
-    <span class="keyword">elif</span> command == <span class="string">"quit"</span>:
-        <span class="function">print</span>(<span class="string">"Thanks for playing! Goodbye!"</span>)
-        game_running = <span class="keyword">False</span>
-    <span class="keyword">else</span>:
-        <span class="function">print</span>(<span class="string">"I don't understand that command."</span>)
-
-<span class="function">print</span>(<span class="string">"\n🎮 GAME OVER 🎮"</span>)</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- REQUIREMENTS -->
-      <section class="section" data-section="requirements">
-        <div class="section-content">
-          <h2 class="fade-in">✅ Requirements Checklist</h2>
-
-          <p class="fade-in">
-            Your game must have these features. Click to check off as you complete them!
-          </p>
-
-          <div class="checklist fade-in">
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>At least 5 different rooms</span>
-            </div>
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>At least 3 items to collect</span>
-            </div>
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>A clear goal (escape, find treasure, etc.)</span>
-            </div>
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>At least 4 different commands work</span>
-            </div>
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>A win condition that ends the game</span>
-            </div>
-            <div class="checklist-item">
-              <div class="checklist-box" onclick="this.classList.toggle('checked')"></div>
-              <span>A game map diagram (draw your rooms!)</span>
-            </div>
-          </div>
-
-          <h3 class="fade-in">🌟 Bonus Challenges</h3>
-
-          <div class="concept-grid fade-in">
-            <div class="concept-card stagger-item">
-              <div class="concept-card-icon">🔐</div>
-              <h4>Locked Doors</h4>
-              <p>Require specific items to enter certain rooms</p>
-            </div>
-            <div class="concept-card stagger-item">
-              <div class="concept-card-icon">👹</div>
-              <h4>Enemies</h4>
-              <p>Add simple combat or puzzles to solve</p>
-            </div>
-            <div class="concept-card stagger-item">
-              <div class="concept-card-icon">❤️</div>
-              <h4>Health System</h4>
-              <p>Track health, use items to heal</p>
-            </div>
-            <div class="concept-card stagger-item">
-              <div class="concept-card-icon">💾</div>
-              <h4>Save/Load</h4>
-              <p>Save progress to a file and load it later</p>
-            </div>
-          </div>
-
-          <div class="cta-box fade-in">
-            <h3>📦 Deliverables</h3>
-            <div class="code-block" style="text-align: left; margin: 1rem 0">
-              <div class="code-content">
-                <pre><code>your-folder/ch5-capstone1/
-├── adventure_game.py   <span class="comment"># Your complete game</span>
-├── game_map.md         <span class="comment"># Diagram of your rooms</span>
-└── README.md           <span class="comment"># How to play + what you learned</span></code></pre>
+        <div class="diagram-story" id="adventure-vision-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
               </div>
             </div>
-            <a href="../ch6-capstone2/index.html" class="cta-btn">
-              <span>Continue to Capstone II</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
           </div>
         </div>
-      </section>
-    </main>
 
-    <!-- Bottom Navigation -->
-    <nav class="lesson-nav">
-      <button class="nav-btn" onclick="location.href='../ch4-architect/index.html'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Chapter 4
-      </button>
-      <button class="nav-btn primary" onclick="location.href='../ch6-capstone2/index.html'">
-        Capstone II
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </button>
-    </nav>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="adventure-vision-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-    <script src="../../shared/js/lesson.js"></script>
-    
-    <!-- Lesson Integration -->
-    <script src="../../shared/js/firebase-config.js"></script>
-    <script src="../../shared/js/auth.js"></script>
-    <script src="../../shared/js/data-service.js"></script>
-    <script src="../../shared/js/lesson-integration.js"></script>
-    <script src="../../shared/js/progress-tracker.js"></script>
-    <script src="../../shared/js/activity-tracker.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        window.LessonIntegration.init("apprentice", "ch5-capstone1");
-        if (window.ProgressTracker) {
-          window.ProgressTracker.init("apprentice", "ch5-capstone1");
-        }
-        if (window.ActivityTracker) {
-          window.ActivityTracker.init("apprentice", "ch5-capstone1");
-        }
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="adventure-vision-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="adventure-vision-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="adventure-vision-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="adventure-vision-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: Game Planning -->
+    <section class="section" id="game-planning-section">
+      <h2>Planning Your Game</h2>
+      <p>Good architects always draw a map first. Learn how to plan your rooms, items, and win conditions before writing any code.</p>
+      
+      <div class="diagram-container" id="game-planning-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📋 Your Game Blueprint</span>
+        </div>
+        <div id="game-planning-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="game-planning-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="game-planning-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="game-planning-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="game-planning-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="game-planning-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="game-planning-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Skills Integration -->
+    <section class="section" id="skills-integration-section">
+      <h2>Putting It All Together</h2>
+      <p>This capstone combines every skill you've learned: Stone for memory, Lightning for flow, and Magnetism for reusable functions. Watch how they work together!</p>
+      
+      <div class="diagram-container" id="skills-integration-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔗 Your Complete Toolkit</span>
+        </div>
+        <div id="skills-integration-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="skills-integration-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="skills-integration-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="skills-integration-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="skills-integration-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="skills-integration-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="skills-integration-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready to Build?</h2>
+      <p>You've seen the vision, learned how to plan, and understand how your skills connect. Now it's time to create your own adventure! After completing this capstone, continue to Capstone II for an even bigger challenge.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../ch6-capstone2/" class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Chapter 6: Capstone II</h3>
+          <p>Take your skills further with a more advanced project challenge.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all chapters in The Apprentice's Path.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#adventure-vision-section">The Adventure Vision</a></li>
+      <li><a href="#game-planning-section">Planning Your Game</a></li>
+      <li><a href="#skills-integration-section">Putting It All Together</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'adventure-vision': [
+          // Nodes
+          { data: { id: 'the-challenge', label: '🏆 The Challenge\nCapstone Project', type: 'concept', description: 'Put all your skills together' } },
+          { data: { id: 'text-adventure', label: '🎮 Text Adventure\nInteractive Story', type: 'example', description: 'A game controlled by typed commands' } },
+          { data: { id: 'player-experience', label: '👤 Player\nExperience', type: 'external', description: 'Explore, collect, and conquer' } },
+          { data: { id: 'combine-skills', label: '🔗 All Skills\nCombined', type: 'service', description: 'Stone, Lightning, Magnetism' } },
+          { data: { id: 'victory-moment', label: '🎉 Victory!\nYou Built It', type: 'page', description: 'Your code creates magic' } },
+          // Edges
+          { data: { source: 'the-challenge', target: 'text-adventure' } },
+          { data: { source: 'text-adventure', target: 'player-experience' } },
+          { data: { source: 'player-experience', target: 'combine-skills' } },
+          { data: { source: 'combine-skills', target: 'victory-moment' } }
+        ],
+
+        'game-planning': [
+          // Nodes
+          { data: { id: 'architects-plan', label: '📋 Plan First\nArchitects Draw', type: 'concept', description: 'Design before coding' } },
+          { data: { id: 'draw-map', label: '🗺️ Draw Map\nRooms & Paths', type: 'example', description: 'Sketch connections' } },
+          { data: { id: 'define-rooms', label: '🚪 Define Rooms\nDescription + Exits', type: 'data', description: 'What players see and where they go' } },
+          { data: { id: 'add-items', label: '🗝️ Add Items\nCollectibles', type: 'auth', description: 'Rewards and tools' } },
+          { data: { id: 'win-condition', label: '🏁 Win Condition\nThe Goal', type: 'page', description: 'What players strive for' } },
+          // Edges
+          { data: { source: 'architects-plan', target: 'draw-map' } },
+          { data: { source: 'draw-map', target: 'define-rooms' } },
+          { data: { source: 'define-rooms', target: 'add-items' } },
+          { data: { source: 'add-items', target: 'win-condition' } }
+        ],
+
+        'skills-integration': [
+          // Nodes
+          { data: { id: 'all-skills', label: '⭐ Your Toolkit\nComplete Skills', type: 'concept', description: 'Everything you learned' } },
+          { data: { id: 'stone-memory', label: '🪨 Stone\nGame Memory', type: 'data', description: 'Variables track state' } },
+          { data: { id: 'lightning-flow', label: '⚡ Lightning\nDecision Making', type: 'auth', description: 'If/else and while loops' } },
+          { data: { id: 'magnetism-functions', label: '🧲 Magnetism\nReusable Actions', type: 'service', description: 'Functions for each action' } },
+          { data: { id: 'game-loop', label: '🔄 Game Loop\nThe Heartbeat', type: 'example', description: 'Show, get, process, repeat' } },
+          { data: { id: 'your-game', label: '🎮 Your Game\nComplete!', type: 'page', description: 'An experience you created' } },
+          // Edges
+          { data: { source: 'all-skills', target: 'stone-memory' } },
+          { data: { source: 'all-skills', target: 'lightning-flow' } },
+          { data: { source: 'all-skills', target: 'magnetism-functions' } },
+          { data: { source: 'stone-memory', target: 'game-loop' } },
+          { data: { source: 'lightning-flow', target: 'game-loop' } },
+          { data: { source: 'magnetism-functions', target: 'game-loop' } },
+          { data: { source: 'game-loop', target: 'your-game' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      // Map story IDs to diagram element keys
+      const storyToDiagram = {
+        'adventure-vision-story': 'adventure-vision',
+        'game-planning-story': 'game-planning',
+        'skills-integration-story': 'skills-integration'
+      };
+
+      // Create storytelling diagrams for each story in the JSON
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
       });
-    </script>
-  </body>
-</html>
 
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      // Map story IDs to quiz container IDs
+      const storyToQuiz = {
+        'adventure-vision-story': 'adventure-vision-quiz',
+        'game-planning-story': 'game-planning-quiz',
+        'skills-integration-story': 'skills-integration-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>

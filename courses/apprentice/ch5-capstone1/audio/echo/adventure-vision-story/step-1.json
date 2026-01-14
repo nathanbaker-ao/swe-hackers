@@ -1,0 +1,165 @@
+{
+  "storyId": "adventure-vision-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "What is a Text Adventure?. A text adventure is a game where players type commands to explore, collect items, and reach goals. No fancy graphics needed—just your imagination and code!",
+  "duration": 12.600000381469727,
+  "words": [
+    {
+      "word": "What",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "is",
+      "start": 0.6000000238418579,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "a",
+      "start": 0.7799999713897705,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "text",
+      "start": 1.1200000047683716,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "adventure",
+      "start": 1.2200000286102295,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "A",
+      "start": 2.440000057220459,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "text",
+      "start": 2.619999885559082,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "adventure",
+      "start": 2.8399999141693115,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "is",
+      "start": 3.1600000858306885,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "a",
+      "start": 3.4000000953674316,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "game",
+      "start": 3.759999990463257,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "where",
+      "start": 3.759999990463257,
+      "end": 4
+    },
+    {
+      "word": "players",
+      "start": 4,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "type",
+      "start": 4.260000228881836,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "commands",
+      "start": 4.659999847412109,
+      "end": 5
+    },
+    {
+      "word": "to",
+      "start": 5,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "explore",
+      "start": 5.300000190734863,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "collect",
+      "start": 6.519999980926514,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "items",
+      "start": 6.519999980926514,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "and",
+      "start": 7.260000228881836,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "reach",
+      "start": 7.659999847412109,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "goals",
+      "start": 7.659999847412109,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "No",
+      "start": 8.760000228881836,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "fancy",
+      "start": 8.920000076293945,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "graphics",
+      "start": 9.239999771118164,
+      "end": 9.579999923706055
+    },
+    {
+      "word": "needed",
+      "start": 9.579999923706055,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "just",
+      "start": 10.4399995803833,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "your",
+      "start": 10.5600004196167,
+      "end": 10.779999732971191
+    },
+    {
+      "word": "imagination",
+      "start": 10.779999732971191,
+      "end": 11.220000267028809
+    },
+    {
+      "word": "and",
+      "start": 11.220000267028809,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "code",
+      "start": 11.960000038146973,
+      "end": 12.260000228881836
+    }
+  ]
+}

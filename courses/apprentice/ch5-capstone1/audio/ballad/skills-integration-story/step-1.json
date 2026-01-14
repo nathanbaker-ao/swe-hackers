@@ -1,0 +1,135 @@
+{
+  "storyId": "skills-integration-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Stone: Game Memory. Variables store everything: current room tracks where the player is, inventory holds collected items, and game running controls if the loop continues. The Stone remembers!",
+  "duration": 13.359999656677246,
+  "words": [
+    {
+      "word": "Stone",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Game",
+      "start": 1.7599999904632568,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "memory",
+      "start": 1.7999999523162842,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "Variables",
+      "start": 3.4800000190734863,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "store",
+      "start": 3.700000047683716,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "everything",
+      "start": 4.119999885559082,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "Current",
+      "start": 5.539999961853027,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "room",
+      "start": 5.559999942779541,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "tracks",
+      "start": 5.940000057220459,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "where",
+      "start": 6.28000020980835,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "the",
+      "start": 6.539999961853027,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "player",
+      "start": 6.78000020980835,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "is",
+      "start": 6.880000114440918,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "Inventory",
+      "start": 8.15999984741211,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "holds",
+      "start": 8.34000015258789,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "collected",
+      "start": 8.680000305175781,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "items",
+      "start": 9.140000343322754,
+      "end": 9.579999923706055
+    },
+    {
+      "word": "And",
+      "start": 10.199999809265137,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "game",
+      "start": 10.460000038146973,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "running",
+      "start": 10.720000267028809,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "controls",
+      "start": 11.0600004196167,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "if",
+      "start": 11.5600004196167,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "the",
+      "start": 11.859999656677246,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "loop",
+      "start": 12.140000343322754,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "continues",
+      "start": 12.199999809265137,
+      "end": 12.760000228881836
+    }
+  ]
+}

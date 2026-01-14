@@ -1,0 +1,140 @@
+{
+  "storyId": "evolution-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Bronze Age. The Bronze Age brought real keyboards and screens. Programmers could finally type code and see it immediately. Still slow, but a huge improvement!",
+  "duration": 12.859999656677246,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "Bronze",
+      "start": 0.4399999976158142,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "Age",
+      "start": 0.9200000166893005,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "The",
+      "start": 1.9800000190734863,
+      "end": 2.0799999237060547
+    },
+    {
+      "word": "Bronze",
+      "start": 2.0799999237060547,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "Age",
+      "start": 2.5399999618530273,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "brought",
+      "start": 2.880000114440918,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "real",
+      "start": 3.200000047683716,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "keyboards",
+      "start": 3.740000009536743,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "and",
+      "start": 4.199999809265137,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "screens",
+      "start": 4.739999771118164,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "Programmers",
+      "start": 6.320000171661377,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "could",
+      "start": 6.739999771118164,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "finally",
+      "start": 7.019999980926514,
+      "end": 7.5
+    },
+    {
+      "word": "type",
+      "start": 7.5,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "code",
+      "start": 7.820000171661377,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "and",
+      "start": 8.15999984741211,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "see",
+      "start": 8.680000305175781,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "it",
+      "start": 8.84000015258789,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "immediately",
+      "start": 9.079999923706055,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "Still",
+      "start": 10.399999618530273,
+      "end": 10.619999885559082
+    },
+    {
+      "word": "slow",
+      "start": 10.619999885559082,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "but",
+      "start": 11.260000228881836,
+      "end": 11.5
+    },
+    {
+      "word": "a",
+      "start": 11.5,
+      "end": 11.65999984741211
+    },
+    {
+      "word": "huge",
+      "start": 11.65999984741211,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "improvement",
+      "start": 12.0600004196167,
+      "end": 12.520000457763672
+    }
+  ]
+}

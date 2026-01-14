@@ -1,0 +1,135 @@
+{
+  "storyId": "adventure-vision-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Challenge Awaits. You've learned variables, loops, conditions, and functions. Now it's time for the ultimate test—building a complete text adventure game from scratch!",
+  "duration": 12.260000228881836,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "challenge",
+      "start": 0.4000000059604645,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "awaits",
+      "start": 0.9599999785423279,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "You've",
+      "start": 2.259999990463257,
+      "end": 2.5
+    },
+    {
+      "word": "learned",
+      "start": 2.5,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "variables",
+      "start": 2.700000047683716,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "loops",
+      "start": 3.940000057220459,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "conditions",
+      "start": 4.679999828338623,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "and",
+      "start": 4.920000076293945,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "functions",
+      "start": 5.28000020980835,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "Now",
+      "start": 6.360000133514404,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "it's",
+      "start": 6.619999885559082,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "time",
+      "start": 6.880000114440918,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "for",
+      "start": 7.179999828338623,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "the",
+      "start": 7.360000133514404,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "ultimate",
+      "start": 8.020000457763672,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "test",
+      "start": 8.020000457763672,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "Building",
+      "start": 9.34000015258789,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "a",
+      "start": 9.34000015258789,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "complete",
+      "start": 9.65999984741211,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "text",
+      "start": 10.020000457763672,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "adventure",
+      "start": 10.460000038146973,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "game",
+      "start": 10.859999656677246,
+      "end": 11.220000267028809
+    },
+    {
+      "word": "from",
+      "start": 11.220000267028809,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "scratch",
+      "start": 11.5600004196167,
+      "end": 11.979999542236328
+    }
+  ]
+}

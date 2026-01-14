@@ -1,0 +1,5210 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T01:17:27.168Z",
+  "stories": [
+    "adventure-vision-story",
+    "game-planning-story",
+    "skills-integration-story"
+  ],
+  "ballad": {
+    "adventure-vision-story": [
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Challenge Awaits. You've learned variables, loops, conditions, and functions. Now it's time for the ultimate test—building a complete text adventure game from scratch!",
+        "duration": 13.319999694824219,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "challenge",
+            "start": 0.4000000059604645,
+            "end": 1
+          },
+          {
+            "word": "awaits",
+            "start": 1,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "You've",
+            "start": 2.319999933242798,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "learned",
+            "start": 2.559999942779541,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "variables",
+            "start": 2.7799999713897705,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "loops",
+            "start": 4.119999885559082,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "conditions",
+            "start": 4.619999885559082,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "and",
+            "start": 5.300000190734863,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "functions",
+            "start": 5.639999866485596,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "Now",
+            "start": 6.71999979019165,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "it's",
+            "start": 6.940000057220459,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "time",
+            "start": 7.179999828338623,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "for",
+            "start": 7.519999980926514,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "the",
+            "start": 7.820000171661377,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "ultimate",
+            "start": 8.5600004196167,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "test",
+            "start": 8.5600004196167,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "Building",
+            "start": 9.979999542236328,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "a",
+            "start": 9.979999542236328,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "complete",
+            "start": 10.380000114440918,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "text",
+            "start": 10.779999732971191,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "adventure",
+            "start": 11.300000190734863,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "game",
+            "start": 11.680000305175781,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "from",
+            "start": 12.079999923706055,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "scratch",
+            "start": 12.5600004196167,
+            "end": 13.0600004196167
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "What is a Text Adventure?. A text adventure is a game where players type commands to explore, collect items, and reach goals. No fancy graphics needed—just your imagination and code!",
+        "duration": 14.199999809265137,
+        "words": [
+          {
+            "word": "What",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "is",
+            "start": 0.3799999952316284,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "a",
+            "start": 0.6000000238418579,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "text",
+            "start": 0.9800000190734863,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "adventure",
+            "start": 1.1399999856948853,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "A",
+            "start": 2.440000057220459,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "text",
+            "start": 2.759999990463257,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "adventure",
+            "start": 2.9600000381469727,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "is",
+            "start": 3.359999895095825,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "a",
+            "start": 3.799999952316284,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "game",
+            "start": 4.28000020980835,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "where",
+            "start": 4.28000020980835,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "players",
+            "start": 4.519999980926514,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "type",
+            "start": 4.860000133514404,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "commands",
+            "start": 5.360000133514404,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "to",
+            "start": 5.820000171661377,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "explore",
+            "start": 6.380000114440918,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "collect",
+            "start": 7.559999942779541,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "items",
+            "start": 7.559999942779541,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "and",
+            "start": 8.399999618530273,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "reach",
+            "start": 8.779999732971191,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "goals",
+            "start": 8.859999656677246,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "No",
+            "start": 10,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "fancy",
+            "start": 10.220000267028809,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "graphics",
+            "start": 10.619999885559082,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "needed",
+            "start": 10.9399995803833,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "just",
+            "start": 11.880000114440918,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "your",
+            "start": 12.0600004196167,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "imagination",
+            "start": 12.34000015258789,
+            "end": 12.84000015258789
+          },
+          {
+            "word": "and",
+            "start": 12.84000015258789,
+            "end": 13.460000038146973
+          },
+          {
+            "word": "code",
+            "start": 13.460000038146973,
+            "end": 13.779999732971191
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Player Experience. Players wake up in a dungeon. They type 'pick up key' and 'go north' to explore. The game responds to their commands, creating an interactive story they control.",
+        "duration": 13.600000381469727,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "player",
+            "start": 0.2800000011920929,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "experience",
+            "start": 0.6800000071525574,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "Players",
+            "start": 2.6600000858306885,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "wake",
+            "start": 2.6600000858306885,
+            "end": 3
+          },
+          {
+            "word": "up",
+            "start": 3,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "in",
+            "start": 3.2799999713897705,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "a",
+            "start": 3.440000057220459,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "dungeon",
+            "start": 3.9000000953674316,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "They",
+            "start": 4.599999904632568,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "type",
+            "start": 4.679999828338623,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "pick",
+            "start": 5.019999980926514,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "up",
+            "start": 5.400000095367432,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "key",
+            "start": 5.599999904632568,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "and",
+            "start": 5.840000152587891,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "go",
+            "start": 6.320000171661377,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "north",
+            "start": 6.679999828338623,
+            "end": 7
+          },
+          {
+            "word": "to",
+            "start": 7,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "explore",
+            "start": 7.400000095367432,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "The",
+            "start": 8.220000267028809,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "game",
+            "start": 8.600000381469727,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "responds",
+            "start": 8.920000076293945,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "to",
+            "start": 9.420000076293945,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "their",
+            "start": 9.600000381469727,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "commands",
+            "start": 9.880000114440918,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "creating",
+            "start": 11.119999885559082,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "an",
+            "start": 11.119999885559082,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "interactive",
+            "start": 11.579999923706055,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "story",
+            "start": 11.899999618530273,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "they",
+            "start": 12.399999618530273,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "control",
+            "start": 12.9399995803833,
+            "end": 13.380000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Everything Comes Together. This project combines every skill you've learned: Stone for memory, Lightning for decisions, Magnetism for functions, and Architect thinking for planning. It all clicks into place!",
+        "duration": 16.049999237060547,
+        "words": [
+          {
+            "word": "Everything",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "comes",
+            "start": 0.699999988079071,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "together",
+            "start": 1.1799999475479126,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "This",
+            "start": 2.5,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "project",
+            "start": 2.680000066757202,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "combines",
+            "start": 3.1600000858306885,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "every",
+            "start": 3.640000104904175,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "skill",
+            "start": 4.21999979019165,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "you've",
+            "start": 4.440000057220459,
+            "end": 5
+          },
+          {
+            "word": "learned",
+            "start": 5,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "Stone",
+            "start": 6.179999828338623,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "for",
+            "start": 6.179999828338623,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "memory",
+            "start": 6.460000038146973,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "lightning",
+            "start": 7.71999979019165,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "for",
+            "start": 7.71999979019165,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "decisions",
+            "start": 8.579999923706055,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "magnetism",
+            "start": 9.460000038146973,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "for",
+            "start": 9.84000015258789,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "functions",
+            "start": 10.65999984741211,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "and",
+            "start": 11.319999694824219,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "architect",
+            "start": 11.619999885559082,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "thinking",
+            "start": 12.079999923706055,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "for",
+            "start": 12.579999923706055,
+            "end": 13
+          },
+          {
+            "word": "planning",
+            "start": 13,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "It",
+            "start": 13.819999694824219,
+            "end": 14.300000190734863
+          },
+          {
+            "word": "all",
+            "start": 14.300000190734863,
+            "end": 14.880000114440918
+          },
+          {
+            "word": "clicks",
+            "start": 14.880000114440918,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "into",
+            "start": 15.180000305175781,
+            "end": 15.539999961853027
+          },
+          {
+            "word": "place",
+            "start": 15.539999961853027,
+            "end": 15.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Victory Moment. When a player escapes the castle and sees 'Congratulations! You escaped!'—that's YOUR code creating that magic moment. You built something real and playable!",
+        "duration": 13.5600004196167,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "victory",
+            "start": 0.41999998688697815,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "moment",
+            "start": 1.0199999809265137,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "When",
+            "start": 2.359999895095825,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "a",
+            "start": 2.4000000953674316,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "player",
+            "start": 2.880000114440918,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "escapes",
+            "start": 2.880000114440918,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 3.440000057220459,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "castle",
+            "start": 4.019999980926514,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "and",
+            "start": 4.019999980926514,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "sees",
+            "start": 4.460000038146973,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "congratulations",
+            "start": 5.400000095367432,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "you",
+            "start": 6.420000076293945,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "escaped",
+            "start": 6.599999904632568,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "That's",
+            "start": 7.71999979019165,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "your",
+            "start": 8.100000381469727,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "code",
+            "start": 8.460000038146973,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "creating",
+            "start": 8.779999732971191,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "that",
+            "start": 9.239999771118164,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "magic",
+            "start": 9.65999984741211,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "moment",
+            "start": 10.020000457763672,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "You",
+            "start": 11.100000381469727,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "built",
+            "start": 11.279999732971191,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "something",
+            "start": 11.520000457763672,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "real",
+            "start": 11.920000076293945,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "and",
+            "start": 12.359999656677246,
+            "end": 12.899999618530273
+          },
+          {
+            "word": "playable",
+            "start": 12.899999618530273,
+            "end": 13.220000267028809
+          }
+        ]
+      }
+    ],
+    "game-planning-story": [
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Architects Plan First. Great game developers don't just start typing code. Like architects designing a building, they draw a plan first. Your map IS your blueprint!",
+        "duration": 13.649999618530273,
+        "words": [
+          {
+            "word": "Architects",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "plan",
+            "start": 1.100000023841858,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "first",
+            "start": 1.3799999952316284,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Great",
+            "start": 2.940000057220459,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "game",
+            "start": 3.0199999809265137,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "developers",
+            "start": 3.440000057220459,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "don't",
+            "start": 3.799999952316284,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "just",
+            "start": 4.440000057220459,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "start",
+            "start": 4.739999771118164,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "typing",
+            "start": 5.079999923706055,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "code",
+            "start": 5.380000114440918,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "Like",
+            "start": 6.579999923706055,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "architects",
+            "start": 6.820000171661377,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "designing",
+            "start": 7.380000114440918,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "a",
+            "start": 7.880000114440918,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "building",
+            "start": 8.420000076293945,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "they",
+            "start": 9.0600004196167,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "draw",
+            "start": 9.199999809265137,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "a",
+            "start": 9.579999923706055,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "plan",
+            "start": 10.140000343322754,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "first",
+            "start": 10.140000343322754,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "Your",
+            "start": 11.319999694824219,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "map",
+            "start": 11.520000457763672,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "is",
+            "start": 11.819999694824219,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "your",
+            "start": 12.479999542236328,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "blueprint",
+            "start": 13.020000457763672,
+            "end": 13.279999732971191
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Draw Your Map. Sketch out your rooms and how they connect. Dungeon leads north to the Hall. Hall connects to Kitchen, Library, and Tower. Each arrow is a path players can walk.",
+        "duration": 13.960000038146973,
+        "words": [
+          {
+            "word": "Draw",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "your",
+            "start": 0.5799999833106995,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "map",
+            "start": 1.0399999618530273,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "Sketch",
+            "start": 2.200000047683716,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "out",
+            "start": 2.200000047683716,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "your",
+            "start": 2.440000057220459,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "rooms",
+            "start": 2.819999933242798,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "and",
+            "start": 2.940000057220459,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "how",
+            "start": 3.440000057220459,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "they",
+            "start": 3.700000047683716,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "connect",
+            "start": 3.880000114440918,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "Dungeon",
+            "start": 5.320000171661377,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "leads",
+            "start": 5.440000057220459,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "north",
+            "start": 5.840000152587891,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 6.239999771118164,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "the",
+            "start": 6.420000076293945,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "hall",
+            "start": 6.980000019073486,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "Hall",
+            "start": 7.940000057220459,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "connects",
+            "start": 7.940000057220459,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "to",
+            "start": 8.260000228881836,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "kitchen",
+            "start": 8.9399995803833,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "library",
+            "start": 9.680000305175781,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "and",
+            "start": 9.680000305175781,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "tower",
+            "start": 10.15999984741211,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "Each",
+            "start": 11.180000305175781,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "arrow",
+            "start": 11.479999542236328,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "is",
+            "start": 11.84000015258789,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "a",
+            "start": 12.180000305175781,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "path",
+            "start": 12.779999732971191,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "players",
+            "start": 12.779999732971191,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "can",
+            "start": 13.140000343322754,
+            "end": 13.4399995803833
+          },
+          {
+            "word": "walk",
+            "start": 13.4399995803833,
+            "end": 13.699999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Define Your Rooms. Every room needs three things: a description that sets the mood, exits telling where players can go, and items they might find. That's the recipe for a room!",
+        "duration": 13.920000076293945,
+        "words": [
+          {
+            "word": "Define",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "your",
+            "start": 0.8399999737739563,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "rooms",
+            "start": 1.2599999904632568,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "Every",
+            "start": 2.619999885559082,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "room",
+            "start": 2.859999895095825,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "needs",
+            "start": 3.140000104904175,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "three",
+            "start": 3.5799999237060547,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "things",
+            "start": 4.039999961853027,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "A",
+            "start": 4.860000133514404,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "description",
+            "start": 4.960000038146973,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "that",
+            "start": 5.420000076293945,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "sets",
+            "start": 5.880000114440918,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "the",
+            "start": 6.039999961853027,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "mood",
+            "start": 6.639999866485596,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "exits",
+            "start": 7.659999847412109,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "telling",
+            "start": 7.659999847412109,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "where",
+            "start": 8.020000457763672,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "players",
+            "start": 8.319999694824219,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "can",
+            "start": 8.579999923706055,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "go",
+            "start": 8.920000076293945,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "and",
+            "start": 9.739999771118164,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "items",
+            "start": 10.15999984741211,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "they",
+            "start": 10.319999694824219,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "might",
+            "start": 10.600000381469727,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "find",
+            "start": 10.899999618530273,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "That's",
+            "start": 12.020000457763672,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "the",
+            "start": 12.300000190734863,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "recipe",
+            "start": 12.640000343322754,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "for",
+            "start": 12.819999694824219,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "a",
+            "start": 13.180000305175781,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "room",
+            "start": 13.579999923706055,
+            "end": 13.579999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Add Items to Collect. Rusty key in the dungeon. Apple in the kitchen. Magic scroll in the library. Items make exploration rewarding and can unlock new paths through your adventure.",
+        "duration": 13.460000038146973,
+        "words": [
+          {
+            "word": "Add",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "items",
+            "start": 0.3799999952316284,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "to",
+            "start": 0.800000011920929,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "collect",
+            "start": 1.100000023841858,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "rusty",
+            "start": 2.259999990463257,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "key",
+            "start": 2.5199999809265137,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "in",
+            "start": 2.799999952316284,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "the",
+            "start": 2.9600000381469727,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "dungeon",
+            "start": 3.200000047683716,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "apple",
+            "start": 4.360000133514404,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "in",
+            "start": 4.360000133514404,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 4.539999961853027,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "kitchen",
+            "start": 5.059999942779541,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "magic",
+            "start": 5.760000228881836,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "scroll",
+            "start": 5.920000076293945,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "in",
+            "start": 6.340000152587891,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "the",
+            "start": 6.599999904632568,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "library",
+            "start": 7.119999885559082,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "Items",
+            "start": 8.220000267028809,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "make",
+            "start": 8.220000267028809,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "exploration",
+            "start": 8.5600004196167,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "rewarding",
+            "start": 9.359999656677246,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "and",
+            "start": 9.880000114440918,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "can",
+            "start": 10.539999961853027,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "unlock",
+            "start": 10.9399995803833,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "new",
+            "start": 11.140000343322754,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "paths",
+            "start": 11.539999961853027,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "through",
+            "start": 11.920000076293945,
+            "end": 12.460000038146973
+          },
+          {
+            "word": "your",
+            "start": 12.460000038146973,
+            "end": 12.760000228881836
+          },
+          {
+            "word": "adventure",
+            "start": 12.760000228881836,
+            "end": 13.0600004196167
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Set the Win Condition. Every game needs a goal! Reach the tower to escape, collect all treasures, defeat the dragon—you decide. The win condition gives players something to strive for.",
+        "duration": 15.399999618530273,
+        "words": [
+          {
+            "word": "Set",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "the",
+            "start": 0.5400000214576721,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "win",
+            "start": 1.0199999809265137,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "condition",
+            "start": 1.2599999904632568,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "Every",
+            "start": 2.700000047683716,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "game",
+            "start": 3.0799999237060547,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "needs",
+            "start": 3.380000114440918,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "a",
+            "start": 3.759999990463257,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "goal",
+            "start": 4.099999904632568,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "Reach",
+            "start": 5.400000095367432,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "the",
+            "start": 5.400000095367432,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "tower",
+            "start": 5.920000076293945,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "to",
+            "start": 5.920000076293945,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "escape",
+            "start": 6.28000020980835,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "Collect",
+            "start": 7.519999980926514,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "all",
+            "start": 7.519999980926514,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "treasures",
+            "start": 8.039999961853027,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "Defeat",
+            "start": 9.220000267028809,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "the",
+            "start": 9.279999732971191,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "dragon",
+            "start": 9.65999984741211,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "You",
+            "start": 10.539999961853027,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "decide",
+            "start": 10.779999732971191,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "The",
+            "start": 12.020000457763672,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "win",
+            "start": 12.260000228881836,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "condition",
+            "start": 12.579999923706055,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "gives",
+            "start": 12.9399995803833,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "players",
+            "start": 13.34000015258789,
+            "end": 13.739999771118164
+          },
+          {
+            "word": "something",
+            "start": 13.739999771118164,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "to",
+            "start": 14.15999984741211,
+            "end": 14.760000228881836
+          },
+          {
+            "word": "strive",
+            "start": 14.760000228881836,
+            "end": 14.760000228881836
+          },
+          {
+            "word": "for",
+            "start": 14.760000228881836,
+            "end": 15.100000381469727
+          }
+        ]
+      }
+    ],
+    "skills-integration-story": [
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Stone: Your Data Foundation. Remember the Stone? Variables store everything your helper needs—the joke list, the fact database, the to-do list. Data is the foundation your AI helper is built on!",
+        "duration": 15.210000038146973,
+        "words": [
+          {
+            "word": "Stone",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "Your",
+            "start": 1.2999999523162842,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "data",
+            "start": 1.600000023841858,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "foundation",
+            "start": 1.940000057220459,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "Remember",
+            "start": 3.5199999809265137,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "the",
+            "start": 3.5399999618530273,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "stone",
+            "start": 4.139999866485596,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "Variables",
+            "start": 5.099999904632568,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "store",
+            "start": 5.460000038146973,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "everything",
+            "start": 5.860000133514404,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "your",
+            "start": 6.420000076293945,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "helper",
+            "start": 6.699999809265137,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "needs",
+            "start": 6.880000114440918,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "The",
+            "start": 7.800000190734863,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "joke",
+            "start": 7.920000076293945,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "list",
+            "start": 8.140000343322754,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "the",
+            "start": 8.739999771118164,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "fact",
+            "start": 8.920000076293945,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "database",
+            "start": 9.140000343322754,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 9.979999542236328,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "to",
+            "start": 10.119999885559082,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "do",
+            "start": 10.180000305175781,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "list",
+            "start": 10.319999694824219,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "Data",
+            "start": 11.65999984741211,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "is",
+            "start": 11.65999984741211,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "the",
+            "start": 12.140000343322754,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "foundation",
+            "start": 12.520000457763672,
+            "end": 12.960000038146973
+          },
+          {
+            "word": "your",
+            "start": 12.960000038146973,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "AI",
+            "start": 13.380000114440918,
+            "end": 13.699999809265137
+          },
+          {
+            "word": "helper",
+            "start": 13.699999809265137,
+            "end": 13.960000038146973
+          },
+          {
+            "word": "is",
+            "start": 13.960000038146973,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "built",
+            "start": 14.520000457763672,
+            "end": 14.65999984741211
+          },
+          {
+            "word": "on",
+            "start": 14.65999984741211,
+            "end": 14.9399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Stone: Game Memory. Variables store everything: current room tracks where the player is, inventory holds collected items, and game running controls if the loop continues. The Stone remembers!",
+        "duration": 13.359999656677246,
+        "words": [
+          {
+            "word": "Stone",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "Game",
+            "start": 1.7599999904632568,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "memory",
+            "start": 1.7999999523162842,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "Variables",
+            "start": 3.4800000190734863,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "store",
+            "start": 3.700000047683716,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "everything",
+            "start": 4.119999885559082,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "Current",
+            "start": 5.539999961853027,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "room",
+            "start": 5.559999942779541,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "tracks",
+            "start": 5.940000057220459,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "where",
+            "start": 6.28000020980835,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 6.539999961853027,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "player",
+            "start": 6.78000020980835,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "is",
+            "start": 6.880000114440918,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "Inventory",
+            "start": 8.15999984741211,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "holds",
+            "start": 8.34000015258789,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "collected",
+            "start": 8.680000305175781,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "items",
+            "start": 9.140000343322754,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "And",
+            "start": 10.199999809265137,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "game",
+            "start": 10.460000038146973,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "running",
+            "start": 10.720000267028809,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "controls",
+            "start": 11.0600004196167,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "if",
+            "start": 11.5600004196167,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "the",
+            "start": 11.859999656677246,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "loop",
+            "start": 12.140000343322754,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "continues",
+            "start": 12.199999809265137,
+            "end": 12.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Magnetism: Reusable Functions. Each feature is a function! tell_joke, do_math, show_todos—they're all Magnetism at work. You write the logic once, then call it whenever needed. Functions make your code clean and powerful!",
+        "duration": 17.610000610351562,
+        "words": [
+          {
+            "word": "Magnetism",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "Reusable",
+            "start": 1.5800000429153442,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "functions",
+            "start": 2.0199999809265137,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "Each",
+            "start": 3.440000057220459,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "feature",
+            "start": 3.5199999809265137,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "is",
+            "start": 3.940000057220459,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "a",
+            "start": 4.320000171661377,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "function",
+            "start": 4.980000019073486,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "Tell",
+            "start": 5.659999847412109,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "joke",
+            "start": 5.78000020980835,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "do",
+            "start": 6.480000019073486,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "math",
+            "start": 6.699999809265137,
+            "end": 7
+          },
+          {
+            "word": "show",
+            "start": 7.440000057220459,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "to",
+            "start": 7.679999828338623,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "those",
+            "start": 7.820000171661377,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "They're",
+            "start": 8.539999961853027,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "all",
+            "start": 8.899999618530273,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "magnetism",
+            "start": 9.539999961853027,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "at",
+            "start": 9.9399995803833,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "work",
+            "start": 10.180000305175781,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "You",
+            "start": 11,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "write",
+            "start": 11.079999923706055,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "the",
+            "start": 11.319999694824219,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "logic",
+            "start": 11.760000228881836,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "once",
+            "start": 11.760000228881836,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "then",
+            "start": 12.619999885559082,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "call",
+            "start": 12.739999771118164,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "it",
+            "start": 13.0600004196167,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "whenever",
+            "start": 13.34000015258789,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "needed",
+            "start": 13.619999885559082,
+            "end": 14
+          },
+          {
+            "word": "Functions",
+            "start": 15.079999923706055,
+            "end": 15.079999923706055
+          },
+          {
+            "word": "make",
+            "start": 15.079999923706055,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "your",
+            "start": 15.399999618530273,
+            "end": 15.699999809265137
+          },
+          {
+            "word": "code",
+            "start": 15.699999809265137,
+            "end": 16.020000457763672
+          },
+          {
+            "word": "clean",
+            "start": 16.020000457763672,
+            "end": 16.600000381469727
+          },
+          {
+            "word": "and",
+            "start": 16.600000381469727,
+            "end": 17.040000915527344
+          },
+          {
+            "word": "powerful",
+            "start": 17.040000915527344,
+            "end": 17.3799991607666
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Architect: The Big Picture. The Architect mindset ties it all together. You designed a system where input flows to parsing, parsing routes to features, and features return responses. That's architecture!",
+        "duration": 15.550000190734863,
+        "words": [
+          {
+            "word": "Architect",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "The",
+            "start": 1.399999976158142,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "big",
+            "start": 1.559999942779541,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "picture",
+            "start": 1.8600000143051147,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "The",
+            "start": 3.0399999618530273,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "architect's",
+            "start": 3.240000009536743,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "mindset",
+            "start": 3.880000114440918,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "ties",
+            "start": 4.139999866485596,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "it",
+            "start": 4.480000019073486,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "all",
+            "start": 4.699999809265137,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "together",
+            "start": 4.940000057220459,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "You",
+            "start": 5.880000114440918,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "designed",
+            "start": 6.059999942779541,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "a",
+            "start": 6.360000133514404,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "system",
+            "start": 6.900000095367432,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "where",
+            "start": 6.900000095367432,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "input",
+            "start": 7.380000114440918,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "flows",
+            "start": 7.860000133514404,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "to",
+            "start": 8.199999809265137,
+            "end": 8.5
+          },
+          {
+            "word": "parsing",
+            "start": 8.5,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "parsing",
+            "start": 9.819999694824219,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "routes",
+            "start": 9.979999542236328,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "to",
+            "start": 10.220000267028809,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "features",
+            "start": 10.859999656677246,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "and",
+            "start": 11.4399995803833,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "features",
+            "start": 11.600000381469727,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "return",
+            "start": 11.979999542236328,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "responses",
+            "start": 12.619999885559082,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "That's",
+            "start": 14.260000228881836,
+            "end": 14.760000228881836
+          },
+          {
+            "word": "architecture",
+            "start": 14.760000228881836,
+            "end": 15.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Complete Picture. Your AI helper uses ALL of these skills together! Stone stores data, Lightning makes decisions, Magnetism organizes code into functions, and the Architect designs the flow. You've become a real programmer!",
+        "duration": 17.25,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "complete",
+            "start": 0.3400000035762787,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "picture",
+            "start": 0.9599999785423279,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "Your",
+            "start": 2.5399999618530273,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "AI",
+            "start": 2.619999885559082,
+            "end": 3
+          },
+          {
+            "word": "helper",
+            "start": 3,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "uses",
+            "start": 3.359999895095825,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "all",
+            "start": 3.759999990463257,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "of",
+            "start": 4.199999809265137,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "these",
+            "start": 4.619999885559082,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "skills",
+            "start": 4.619999885559082,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "together",
+            "start": 4.960000038146973,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "Stone",
+            "start": 6.460000038146973,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "stores",
+            "start": 6.519999980926514,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "data",
+            "start": 6.860000133514404,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "lightning",
+            "start": 8.15999984741211,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "makes",
+            "start": 8.260000228881836,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "decisions",
+            "start": 8.5600004196167,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "magnetism",
+            "start": 9.920000076293945,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "organizes",
+            "start": 10.399999618530273,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "code",
+            "start": 11.15999984741211,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "into",
+            "start": 11.420000076293945,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "functions",
+            "start": 11.720000267028809,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "and",
+            "start": 12.539999961853027,
+            "end": 12.859999656677246
+          },
+          {
+            "word": "the",
+            "start": 12.859999656677246,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "architect",
+            "start": 13.180000305175781,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "designs",
+            "start": 13.579999923706055,
+            "end": 14.119999885559082
+          },
+          {
+            "word": "the",
+            "start": 14.119999885559082,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "flow",
+            "start": 14.399999618530273,
+            "end": 14.619999885559082
+          },
+          {
+            "word": "You've",
+            "start": 15.220000267028809,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "become",
+            "start": 15.5600004196167,
+            "end": 15.859999656677246
+          },
+          {
+            "word": "a",
+            "start": 15.859999656677246,
+            "end": 16.100000381469727
+          },
+          {
+            "word": "real",
+            "start": 16.100000381469727,
+            "end": 16.5
+          },
+          {
+            "word": "programmer",
+            "start": 16.5,
+            "end": 16.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Your Complete Game. Stone holds the state, Lightning makes decisions, Magnetism provides the actions, and the game loop ties it all together. You're not just coding—you're creating an experience!",
+        "duration": 16.510000228881836,
+        "words": [
+          {
+            "word": "your",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "complete",
+            "start": 0.5400000214576721,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "game",
+            "start": 1.3200000524520874,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "Stone",
+            "start": 3.1600000858306885,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "holds",
+            "start": 3.200000047683716,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "the",
+            "start": 3.680000066757202,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "state",
+            "start": 3.9200000762939453,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "Lightning",
+            "start": 5.340000152587891,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "makes",
+            "start": 5.340000152587891,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "decisions",
+            "start": 5.880000114440918,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "Magnetism",
+            "start": 7.28000020980835,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "provides",
+            "start": 7.739999771118164,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "the",
+            "start": 8.300000190734863,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "actions",
+            "start": 8.979999542236328,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "And",
+            "start": 9.5600004196167,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "the",
+            "start": 9.65999984741211,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "game",
+            "start": 9.880000114440918,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "loop",
+            "start": 10.140000343322754,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "ties",
+            "start": 10.539999961853027,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "it",
+            "start": 10.899999618530273,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "all",
+            "start": 11.180000305175781,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "together",
+            "start": 11.5600004196167,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "You're",
+            "start": 12.359999656677246,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "not",
+            "start": 12.920000076293945,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "just",
+            "start": 13.079999923706055,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "coding",
+            "start": 13.539999961853027,
+            "end": 13.739999771118164
+          },
+          {
+            "word": "you're",
+            "start": 14.260000228881836,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "creating",
+            "start": 14.520000457763672,
+            "end": 14.920000076293945
+          },
+          {
+            "word": "an",
+            "start": 14.920000076293945,
+            "end": 15.539999961853027
+          },
+          {
+            "word": "experience",
+            "start": 15.539999961853027,
+            "end": 15.960000038146973
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "adventure-vision-story": [
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Challenge Awaits. You've learned variables, loops, conditions, and functions. Now it's time for the ultimate test—building a complete text adventure game from scratch!",
+        "duration": 12.260000228881836,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4000000059604645
+          },
+          {
+            "word": "challenge",
+            "start": 0.4000000059604645,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "awaits",
+            "start": 0.9599999785423279,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "You've",
+            "start": 2.259999990463257,
+            "end": 2.5
+          },
+          {
+            "word": "learned",
+            "start": 2.5,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "variables",
+            "start": 2.700000047683716,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "loops",
+            "start": 3.940000057220459,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "conditions",
+            "start": 4.679999828338623,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "and",
+            "start": 4.920000076293945,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "functions",
+            "start": 5.28000020980835,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "Now",
+            "start": 6.360000133514404,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "it's",
+            "start": 6.619999885559082,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "time",
+            "start": 6.880000114440918,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "for",
+            "start": 7.179999828338623,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "the",
+            "start": 7.360000133514404,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "ultimate",
+            "start": 8.020000457763672,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "test",
+            "start": 8.020000457763672,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "Building",
+            "start": 9.34000015258789,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "a",
+            "start": 9.34000015258789,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "complete",
+            "start": 9.65999984741211,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "text",
+            "start": 10.020000457763672,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "adventure",
+            "start": 10.460000038146973,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "game",
+            "start": 10.859999656677246,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "from",
+            "start": 11.220000267028809,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "scratch",
+            "start": 11.5600004196167,
+            "end": 11.979999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "What is a Text Adventure?. A text adventure is a game where players type commands to explore, collect items, and reach goals. No fancy graphics needed—just your imagination and code!",
+        "duration": 12.600000381469727,
+        "words": [
+          {
+            "word": "What",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "is",
+            "start": 0.6000000238418579,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "a",
+            "start": 0.7799999713897705,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "text",
+            "start": 1.1200000047683716,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "adventure",
+            "start": 1.2200000286102295,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "A",
+            "start": 2.440000057220459,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "text",
+            "start": 2.619999885559082,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "adventure",
+            "start": 2.8399999141693115,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "is",
+            "start": 3.1600000858306885,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "a",
+            "start": 3.4000000953674316,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "game",
+            "start": 3.759999990463257,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "where",
+            "start": 3.759999990463257,
+            "end": 4
+          },
+          {
+            "word": "players",
+            "start": 4,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "type",
+            "start": 4.260000228881836,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "commands",
+            "start": 4.659999847412109,
+            "end": 5
+          },
+          {
+            "word": "to",
+            "start": 5,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "explore",
+            "start": 5.300000190734863,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "collect",
+            "start": 6.519999980926514,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "items",
+            "start": 6.519999980926514,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "and",
+            "start": 7.260000228881836,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "reach",
+            "start": 7.659999847412109,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "goals",
+            "start": 7.659999847412109,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "No",
+            "start": 8.760000228881836,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "fancy",
+            "start": 8.920000076293945,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "graphics",
+            "start": 9.239999771118164,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "needed",
+            "start": 9.579999923706055,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "just",
+            "start": 10.4399995803833,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "your",
+            "start": 10.5600004196167,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "imagination",
+            "start": 10.779999732971191,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "and",
+            "start": 11.220000267028809,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "code",
+            "start": 11.960000038146973,
+            "end": 12.260000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Player Experience. Players wake up in a dungeon. They type 'pick up key' and 'go north' to explore. The game responds to their commands, creating an interactive story they control.",
+        "duration": 12.960000038146973,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.25999999046325684
+          },
+          {
+            "word": "player",
+            "start": 0.25999999046325684,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "experience",
+            "start": 0.6800000071525574,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "Players",
+            "start": 2.680000066757202,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "wake",
+            "start": 2.680000066757202,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "up",
+            "start": 2.9800000190734863,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "in",
+            "start": 3.140000104904175,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "a",
+            "start": 3.240000009536743,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "dungeon",
+            "start": 3.640000104904175,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "They",
+            "start": 4.21999979019165,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "type",
+            "start": 4.300000190734863,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "pick",
+            "start": 4.599999904632568,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "up",
+            "start": 4.840000152587891,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "key",
+            "start": 5.039999961853027,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 5.300000190734863,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "go",
+            "start": 5.860000133514404,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "north",
+            "start": 6.119999885559082,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "to",
+            "start": 6.420000076293945,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "explore",
+            "start": 6.840000152587891,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "The",
+            "start": 7.420000076293945,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "game",
+            "start": 8.020000457763672,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "responds",
+            "start": 8.260000228881836,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "to",
+            "start": 8.800000190734863,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "their",
+            "start": 9.039999961853027,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "commands",
+            "start": 9.300000190734863,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "creating",
+            "start": 10.399999618530273,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "an",
+            "start": 10.399999618530273,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "interactive",
+            "start": 10.819999694824219,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "story",
+            "start": 11.15999984741211,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "they",
+            "start": 11.680000305175781,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "control",
+            "start": 12.34000015258789,
+            "end": 12.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Everything Comes Together. This project combines every skill you've learned: Stone for memory, Lightning for decisions, Magnetism for functions, and Architect thinking for planning. It all clicks into place!",
+        "duration": 15.15999984741211,
+        "words": [
+          {
+            "word": "Everything",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "comes",
+            "start": 0.8199999928474426,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "together",
+            "start": 1.440000057220459,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "This",
+            "start": 2.799999952316284,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "project",
+            "start": 2.9000000953674316,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "combines",
+            "start": 3.319999933242798,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "every",
+            "start": 3.740000009536743,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "skill",
+            "start": 4.320000171661377,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "you've",
+            "start": 4.539999961853027,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "learned",
+            "start": 5.099999904632568,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "Stone",
+            "start": 5.980000019073486,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "for",
+            "start": 5.980000019073486,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "memory",
+            "start": 6.21999979019165,
+            "end": 6.5
+          },
+          {
+            "word": "lightning",
+            "start": 7.360000133514404,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "for",
+            "start": 7.420000076293945,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "decisions",
+            "start": 7.880000114440918,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "magnetism",
+            "start": 9.0600004196167,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "for",
+            "start": 9.420000076293945,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "functions",
+            "start": 10.180000305175781,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "and",
+            "start": 10.720000267028809,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "architect",
+            "start": 11.0600004196167,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "thinking",
+            "start": 11.319999694824219,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "for",
+            "start": 11.619999885559082,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "planning",
+            "start": 11.920000076293945,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "It",
+            "start": 12.680000305175781,
+            "end": 13.119999885559082
+          },
+          {
+            "word": "all",
+            "start": 13.119999885559082,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "clicks",
+            "start": 13.619999885559082,
+            "end": 13.9399995803833
+          },
+          {
+            "word": "into",
+            "start": 13.9399995803833,
+            "end": 14.279999732971191
+          },
+          {
+            "word": "place",
+            "start": 14.279999732971191,
+            "end": 14.579999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "adventure-vision-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Victory Moment. When a player escapes the castle and sees 'Congratulations! You escaped!'—that's YOUR code creating that magic moment. You built something real and playable!",
+        "duration": 12.760000228881836,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "victory",
+            "start": 0.3799999952316284,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "moment",
+            "start": 0.8999999761581421,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "When",
+            "start": 2.259999990463257,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "a",
+            "start": 2.299999952316284,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "player",
+            "start": 2.740000009536743,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "escapes",
+            "start": 2.740000009536743,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "the",
+            "start": 3.180000066757202,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "castle",
+            "start": 3.819999933242798,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "and",
+            "start": 3.819999933242798,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "sees",
+            "start": 4.320000171661377,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "congratulations",
+            "start": 4.619999885559082,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "you",
+            "start": 5.400000095367432,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "escaped",
+            "start": 5.78000020980835,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "That's",
+            "start": 6.840000152587891,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "your",
+            "start": 7.21999979019165,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "code",
+            "start": 7.619999885559082,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "creating",
+            "start": 8.020000457763672,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "that",
+            "start": 8.600000381469727,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "magic",
+            "start": 8.960000038146973,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "moment",
+            "start": 9.34000015258789,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "You",
+            "start": 10.359999656677246,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "built",
+            "start": 10.539999961853027,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "something",
+            "start": 10.779999732971191,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "real",
+            "start": 11.220000267028809,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "and",
+            "start": 11.680000305175781,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "playable",
+            "start": 12.220000267028809,
+            "end": 12.520000457763672
+          }
+        ]
+      }
+    ],
+    "game-planning-story": [
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Architects Plan First. Great game developers don't just start typing code. Like architects designing a building, they draw a plan first. Your map IS your blueprint!",
+        "duration": 11.899999618530273,
+        "words": [
+          {
+            "word": "Architects",
+            "start": 0,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "plan",
+            "start": 0.8600000143051147,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "first",
+            "start": 1.159999966621399,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "Great",
+            "start": 2.259999990463257,
+            "end": 2.5
+          },
+          {
+            "word": "game",
+            "start": 2.5,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "developers",
+            "start": 2.819999933242798,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "don't",
+            "start": 3.240000009536743,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "just",
+            "start": 3.640000104904175,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "start",
+            "start": 3.9800000190734863,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "typing",
+            "start": 4.179999828338623,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "code",
+            "start": 4.440000057220459,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "Like",
+            "start": 5.380000114440918,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "architects",
+            "start": 5.659999847412109,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "designing",
+            "start": 6.039999961853027,
+            "end": 6.5
+          },
+          {
+            "word": "a",
+            "start": 6.5,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "building",
+            "start": 7.019999980926514,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "they",
+            "start": 7.440000057220459,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "draw",
+            "start": 7.599999904632568,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "a",
+            "start": 7.900000095367432,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "plan",
+            "start": 8.479999542236328,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "first",
+            "start": 8.479999542236328,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "Your",
+            "start": 9.5600004196167,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "map",
+            "start": 9.800000190734863,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "is",
+            "start": 10.119999885559082,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "your",
+            "start": 10.859999656677246,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "blueprint",
+            "start": 11.239999771118164,
+            "end": 11.460000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Draw Your Map. Sketch out your rooms and how they connect. Dungeon leads north to the Hall. Hall connects to Kitchen, Library, and Tower. Each arrow is a path players can walk.",
+        "duration": 11.710000038146973,
+        "words": [
+          {
+            "word": "Draw",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "your",
+            "start": 0.46000000834465027,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "map",
+            "start": 0.7799999713897705,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "Sketch",
+            "start": 1.7999999523162842,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "out",
+            "start": 1.7999999523162842,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "your",
+            "start": 2.0199999809265137,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "rooms",
+            "start": 2.3399999141693115,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "and",
+            "start": 2.4200000762939453,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "how",
+            "start": 2.6600000858306885,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "they",
+            "start": 2.819999933242798,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "connect",
+            "start": 2.9600000381469727,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "Dungeon",
+            "start": 4.059999942779541,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "leads",
+            "start": 4.239999771118164,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "north",
+            "start": 4.599999904632568,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "to",
+            "start": 4.940000057220459,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "the",
+            "start": 5.119999885559082,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "hall",
+            "start": 5.519999980926514,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "Hall",
+            "start": 6.260000228881836,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "connects",
+            "start": 6.260000228881836,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "to",
+            "start": 6.539999961853027,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "kitchen",
+            "start": 7.119999885559082,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "library",
+            "start": 7.960000038146973,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "and",
+            "start": 8.220000267028809,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "tower",
+            "start": 8.800000190734863,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "Each",
+            "start": 9.380000114440918,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "arrow",
+            "start": 9.539999961853027,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "is",
+            "start": 9.880000114440918,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 10.119999885559082,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "path",
+            "start": 10.600000381469727,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "players",
+            "start": 10.600000381469727,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "can",
+            "start": 10.9399995803833,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "walk",
+            "start": 11.239999771118164,
+            "end": 11.479999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Define Your Rooms. Every room needs three things: a description that sets the mood, exits telling where players can go, and items they might find. That's the recipe for a room!",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "Define",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "your",
+            "start": 0.800000011920929,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "rooms",
+            "start": 1.4199999570846558,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Every",
+            "start": 2.5999999046325684,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "room",
+            "start": 2.759999990463257,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "needs",
+            "start": 3.0399999618530273,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "three",
+            "start": 3.359999895095825,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "things",
+            "start": 3.8399999141693115,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "a",
+            "start": 4.760000228881836,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "description",
+            "start": 5.019999980926514,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "that",
+            "start": 5.28000020980835,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "sets",
+            "start": 5.71999979019165,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "the",
+            "start": 5.860000133514404,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "mood",
+            "start": 6.28000020980835,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "exits",
+            "start": 7.300000190734863,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "telling",
+            "start": 7.300000190734863,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "where",
+            "start": 7.619999885559082,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "players",
+            "start": 7.880000114440918,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "can",
+            "start": 8.140000343322754,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "go",
+            "start": 8.4399995803833,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "and",
+            "start": 9.319999694824219,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "items",
+            "start": 9.779999732971191,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "they",
+            "start": 9.779999732971191,
+            "end": 10
+          },
+          {
+            "word": "might",
+            "start": 10,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "find",
+            "start": 10.239999771118164,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "That's",
+            "start": 11.199999809265137,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "the",
+            "start": 11.520000457763672,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "recipe",
+            "start": 11.779999732971191,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "for",
+            "start": 11.979999542236328,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "a",
+            "start": 12.279999732971191,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "room",
+            "start": 12.579999923706055,
+            "end": 12.65999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Add Items to Collect. Rusty key in the dungeon. Apple in the kitchen. Magic scroll in the library. Items make exploration rewarding and can unlock new paths through your adventure.",
+        "duration": 13.050000190734863,
+        "words": [
+          {
+            "word": "Add",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "items",
+            "start": 0.4399999976158142,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "to",
+            "start": 0.8199999928474426,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "collect",
+            "start": 1.1399999856948853,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "Rusty",
+            "start": 2.4000000953674316,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "key",
+            "start": 2.619999885559082,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "in",
+            "start": 2.759999990463257,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "the",
+            "start": 2.940000057220459,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "dungeon",
+            "start": 3.2200000286102295,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "Apple",
+            "start": 4.320000171661377,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "in",
+            "start": 4.320000171661377,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "the",
+            "start": 4.559999942779541,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "kitchen",
+            "start": 5.159999847412109,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "Magic",
+            "start": 5.820000171661377,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "scroll",
+            "start": 5.940000057220459,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "in",
+            "start": 6.320000171661377,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "the",
+            "start": 6.519999980926514,
+            "end": 7.059999942779541
+          },
+          {
+            "word": "library",
+            "start": 7.059999942779541,
+            "end": 7.059999942779541
+          },
+          {
+            "word": "Items",
+            "start": 8,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "make",
+            "start": 8.0600004196167,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "exploration",
+            "start": 8.380000114440918,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "rewarding",
+            "start": 9.140000343322754,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "and",
+            "start": 9.619999885559082,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "can",
+            "start": 10.199999809265137,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "unlock",
+            "start": 10.539999961853027,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "new",
+            "start": 10.899999618530273,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "paths",
+            "start": 11.300000190734863,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "through",
+            "start": 11.680000305175781,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "your",
+            "start": 12.300000190734863,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "adventure",
+            "start": 12.5600004196167,
+            "end": 12.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "game-planning-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Set the Win Condition. Every game needs a goal! Reach the tower to escape, collect all treasures, defeat the dragon—you decide. The win condition gives players something to strive for.",
+        "duration": 13.199999809265137,
+        "words": [
+          {
+            "word": "Set",
+            "start": 0,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "the",
+            "start": 0.9399999976158142,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "win",
+            "start": 1.2200000286102295,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "condition",
+            "start": 1.4199999570846558,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Every",
+            "start": 2.740000009536743,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "game",
+            "start": 2.9800000190734863,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "needs",
+            "start": 3.2799999713897705,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "a",
+            "start": 3.559999942779541,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "goal",
+            "start": 3.9800000190734863,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "Reach",
+            "start": 4.800000190734863,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "the",
+            "start": 4.820000171661377,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "tower",
+            "start": 5.28000020980835,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "to",
+            "start": 5.28000020980835,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "escape",
+            "start": 5.599999904632568,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "Collect",
+            "start": 6.639999866485596,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "all",
+            "start": 6.639999866485596,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "treasures",
+            "start": 6.960000038146973,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "Defeat",
+            "start": 7.980000019073486,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "the",
+            "start": 8.039999961853027,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "dragon",
+            "start": 8.380000114440918,
+            "end": 8.5
+          },
+          {
+            "word": "You",
+            "start": 8.920000076293945,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "decide",
+            "start": 9.079999923706055,
+            "end": 9.5
+          },
+          {
+            "word": "The",
+            "start": 10.100000381469727,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "win",
+            "start": 10.300000190734863,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "condition",
+            "start": 10.5600004196167,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "gives",
+            "start": 10.920000076293945,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "players",
+            "start": 11.279999732971191,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "something",
+            "start": 11.720000267028809,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "to",
+            "start": 12.100000381469727,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "strive",
+            "start": 12.600000381469727,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "for",
+            "start": 12.600000381469727,
+            "end": 12.9399995803833
+          }
+        ]
+      }
+    ],
+    "skills-integration-story": [
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Stone: Your Data Foundation. Remember the Stone? Variables store everything your helper needs—the joke list, the fact database, the to-do list. Data is the foundation your AI helper is built on!",
+        "duration": 14.520000457763672,
+        "words": [
+          {
+            "word": "Stone",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "your",
+            "start": 1.2000000476837158,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "data",
+            "start": 1.4600000381469727,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "foundation",
+            "start": 1.7400000095367432,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "Remember",
+            "start": 3.319999933242798,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "the",
+            "start": 3.380000114440918,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "stone",
+            "start": 3.9000000953674316,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "Variables",
+            "start": 5.039999961853027,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "store",
+            "start": 5.179999828338623,
+            "end": 5.5
+          },
+          {
+            "word": "everything",
+            "start": 5.5,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "your",
+            "start": 6.099999904632568,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "helper",
+            "start": 6.340000152587891,
+            "end": 6.5
+          },
+          {
+            "word": "needs",
+            "start": 6.5,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "The",
+            "start": 7.5,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "joke",
+            "start": 7.639999866485596,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "list",
+            "start": 7.840000152587891,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "the",
+            "start": 8.5600004196167,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "fact",
+            "start": 8.720000267028809,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "database",
+            "start": 8.979999542236328,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "the",
+            "start": 9.9399995803833,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "to",
+            "start": 10.119999885559082,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "do",
+            "start": 10.180000305175781,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "list",
+            "start": 10.34000015258789,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "Data",
+            "start": 11.5,
+            "end": 11.5
+          },
+          {
+            "word": "is",
+            "start": 11.5,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "the",
+            "start": 11.720000267028809,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "foundation",
+            "start": 12.0600004196167,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "your",
+            "start": 12.420000076293945,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "AI",
+            "start": 12.779999732971191,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "helper",
+            "start": 13.15999984741211,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "is",
+            "start": 13.399999618530273,
+            "end": 13.859999656677246
+          },
+          {
+            "word": "built",
+            "start": 13.859999656677246,
+            "end": 14
+          },
+          {
+            "word": "on",
+            "start": 14,
+            "end": 14.319999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Lightning: Making Decisions. Lightning taught you if-elif-else. That's exactly how your helper decides what to do! If the user says 'joke', do this. Elif they say 'time', do that. Decisions power the routing!",
+        "duration": 14.850000381469727,
+        "words": [
+          {
+            "word": "Lightning",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "making",
+            "start": 1.2000000476837158,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "decisions",
+            "start": 1.5399999618530273,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Lightning",
+            "start": 3.0799999237060547,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "taught",
+            "start": 3.0799999237060547,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "you",
+            "start": 3.4000000953674316,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "if",
+            "start": 3.819999933242798,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "elif",
+            "start": 4.019999980926514,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "else",
+            "start": 4.360000133514404,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "That's",
+            "start": 5,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "exactly",
+            "start": 5.21999979019165,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "how",
+            "start": 5.679999828338623,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "your",
+            "start": 5.920000076293945,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "helper",
+            "start": 6.099999904632568,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "decides",
+            "start": 6.340000152587891,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "what",
+            "start": 6.800000190734863,
+            "end": 7
+          },
+          {
+            "word": "to",
+            "start": 7,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "do",
+            "start": 7.21999979019165,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "If",
+            "start": 7.980000019073486,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "the",
+            "start": 8.0600004196167,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "user",
+            "start": 8.319999694824219,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "says",
+            "start": 8.579999923706055,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "joke",
+            "start": 8.9399995803833,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "do",
+            "start": 9.739999771118164,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "this",
+            "start": 9.800000190734863,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "Elif",
+            "start": 10.720000267028809,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "they",
+            "start": 10.84000015258789,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "say",
+            "start": 11.100000381469727,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "time",
+            "start": 11.319999694824219,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "do",
+            "start": 12.15999984741211,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "that",
+            "start": 12.260000228881836,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "Decisions",
+            "start": 13.260000228881836,
+            "end": 13.4399995803833
+          },
+          {
+            "word": "power",
+            "start": 13.4399995803833,
+            "end": 13.9399995803833
+          },
+          {
+            "word": "the",
+            "start": 13.9399995803833,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "routing",
+            "start": 14.220000267028809,
+            "end": 14.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Magnetism: Reusable Functions. Each feature is a function! tell_joke, do_math, show_todos—they're all Magnetism at work. You write the logic once, then call it whenever needed. Functions make your code clean and powerful!",
+        "duration": 16.149999618530273,
+        "words": [
+          {
+            "word": "Magnetism",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "Reusable",
+            "start": 1.4199999570846558,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "functions",
+            "start": 1.8200000524520874,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "Each",
+            "start": 3,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "feature",
+            "start": 3.0999999046325684,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "is",
+            "start": 3.440000057220459,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "a",
+            "start": 3.7200000286102295,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "function",
+            "start": 4.019999980926514,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "Tell",
+            "start": 4.840000152587891,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "joke",
+            "start": 4.960000038146973,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "do",
+            "start": 5.579999923706055,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "math",
+            "start": 5.800000190734863,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "show",
+            "start": 6.400000095367432,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "to",
+            "start": 6.579999923706055,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "dos",
+            "start": 6.699999809265137,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "They're",
+            "start": 7.199999809265137,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "all",
+            "start": 7.539999961853027,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "magnetism",
+            "start": 8.0600004196167,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "at",
+            "start": 8.5600004196167,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "work",
+            "start": 8.9399995803833,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "You",
+            "start": 9.699999809265137,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "write",
+            "start": 9.880000114440918,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "the",
+            "start": 10.079999923706055,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "logic",
+            "start": 10.600000381469727,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "once",
+            "start": 10.600000381469727,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "then",
+            "start": 11.399999618530273,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "call",
+            "start": 11.619999885559082,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "it",
+            "start": 11.960000038146973,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "whenever",
+            "start": 12.15999984741211,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "needed",
+            "start": 12.479999542236328,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "Functions",
+            "start": 13.539999961853027,
+            "end": 13.699999809265137
+          },
+          {
+            "word": "make",
+            "start": 13.699999809265137,
+            "end": 14
+          },
+          {
+            "word": "your",
+            "start": 14,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "code",
+            "start": 14.220000267028809,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "clean",
+            "start": 14.539999961853027,
+            "end": 15.140000343322754
+          },
+          {
+            "word": "and",
+            "start": 15.140000343322754,
+            "end": 15.520000457763672
+          },
+          {
+            "word": "powerful",
+            "start": 15.520000457763672,
+            "end": 15.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Architect: The Big Picture. The Architect mindset ties it all together. You designed a system where input flows to parsing, parsing routes to features, and features return responses. That's architecture!",
+        "duration": 14.899999618530273,
+        "words": [
+          {
+            "word": "Architect",
+            "start": 0,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "The",
+            "start": 1.159999966621399,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "big",
+            "start": 1.2999999523162842,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "picture",
+            "start": 1.600000023841858,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "The",
+            "start": 2.5999999046325684,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "architect",
+            "start": 2.859999895095825,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "mindset",
+            "start": 3.299999952316284,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "ties",
+            "start": 3.9000000953674316,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "it",
+            "start": 4.300000190734863,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "all",
+            "start": 4.559999942779541,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "together",
+            "start": 4.960000038146973,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "You",
+            "start": 5.920000076293945,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "designed",
+            "start": 6.039999961853027,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "a",
+            "start": 6.380000114440918,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "system",
+            "start": 6.639999866485596,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "where",
+            "start": 6.880000114440918,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "input",
+            "start": 7.159999847412109,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "flows",
+            "start": 7.579999923706055,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "to",
+            "start": 7.900000095367432,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "parsing",
+            "start": 8.4399995803833,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "parsing",
+            "start": 9.5,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "routes",
+            "start": 9.699999809265137,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 9.9399995803833,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "features",
+            "start": 10.319999694824219,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "and",
+            "start": 11.140000343322754,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "features",
+            "start": 11.319999694824219,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "return",
+            "start": 11.640000343322754,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "responses",
+            "start": 12.119999885559082,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "That's",
+            "start": 13.460000038146973,
+            "end": 13.960000038146973
+          },
+          {
+            "word": "architecture",
+            "start": 13.960000038146973,
+            "end": 14.479999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Game Loop. While game running: show the room, get a command, decide what to do, call the right function, check for victory, repeat. That's the heartbeat of your adventure game!",
+        "duration": 11.899999618530273,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "game",
+            "start": 0.7799999713897705,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "loop",
+            "start": 1.0800000429153442,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "While",
+            "start": 2.0199999809265137,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "game",
+            "start": 2.0199999809265137,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "running",
+            "start": 2.359999895095825,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "show",
+            "start": 3.059999942779541,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "the",
+            "start": 3.1600000858306885,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "room",
+            "start": 3.5799999237060547,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "get",
+            "start": 3.940000057220459,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "a",
+            "start": 4.019999980926514,
+            "end": 4.5
+          },
+          {
+            "word": "command",
+            "start": 4.5,
+            "end": 4.5
+          },
+          {
+            "word": "decide",
+            "start": 4.920000076293945,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "what",
+            "start": 5.139999866485596,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "to",
+            "start": 5.300000190734863,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "do",
+            "start": 5.519999980926514,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "call",
+            "start": 6.179999828338623,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 6.21999979019165,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "right",
+            "start": 6.380000114440918,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "function",
+            "start": 6.619999885559082,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "check",
+            "start": 7.5,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "for",
+            "start": 7.519999980926514,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "victory",
+            "start": 8.039999961853027,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "repeat",
+            "start": 8.800000190734863,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "That's",
+            "start": 9.460000038146973,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "the",
+            "start": 10.0600004196167,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "heartbeat",
+            "start": 10.359999656677246,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "of",
+            "start": 10.579999923706055,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "your",
+            "start": 10.819999694824219,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "adventure",
+            "start": 11.020000457763672,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "game",
+            "start": 11.380000114440918,
+            "end": 11.680000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "skills-integration-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Your Complete Game. Stone holds the state, Lightning makes decisions, Magnetism provides the actions, and the game loop ties it all together. You're not just coding—you're creating an experience!",
+        "duration": 13.359999656677246,
+        "words": [
+          {
+            "word": "You're",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "complete",
+            "start": 0.46000000834465027,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "game",
+            "start": 0.9800000190734863,
+            "end": 1.5
+          },
+          {
+            "word": "Stone",
+            "start": 2.4000000953674316,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "holds",
+            "start": 2.4000000953674316,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "the",
+            "start": 2.799999952316284,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "state",
+            "start": 3.0799999237060547,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "Lightning",
+            "start": 4.079999923706055,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "makes",
+            "start": 4.079999923706055,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "decisions",
+            "start": 4.400000095367432,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "Magnetism",
+            "start": 5.559999942779541,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "provides",
+            "start": 5.980000019073486,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 6.440000057220459,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "actions",
+            "start": 6.699999809265137,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "And",
+            "start": 7.579999923706055,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "the",
+            "start": 7.659999847412109,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "game",
+            "start": 7.880000114440918,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "loop",
+            "start": 8.140000343322754,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "ties",
+            "start": 8.380000114440918,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "it",
+            "start": 8.720000267028809,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "all",
+            "start": 8.920000076293945,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "together",
+            "start": 9.140000343322754,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "You're",
+            "start": 10.039999961853027,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "not",
+            "start": 10.220000267028809,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "just",
+            "start": 10.359999656677246,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "coding",
+            "start": 10.699999809265137,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "You're",
+            "start": 11.4399995803833,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "creating",
+            "start": 11.720000267028809,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "an",
+            "start": 12.079999923706055,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "experience",
+            "start": 12.479999542236328,
+            "end": 12.9399995803833
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Lightning Decides. Chapter 2 taught decisions and loops. Your code could finally think—making choices with if-else and repeating actions with while and for loops!",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "word": "Lightning",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Decides",
+      "start": 0.699999988079071,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Chapter",
+      "start": 2.359999895095825,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "2",
+      "start": 2.4600000381469727,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "taught",
+      "start": 2.880000114440918,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "decisions",
+      "start": 3.359999895095825,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "and",
+      "start": 3.9000000953674316,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "loops",
+      "start": 4.360000133514404,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "Your",
+      "start": 5.420000076293945,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "code",
+      "start": 5.599999904632568,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "could",
+      "start": 5.980000019073486,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "finally",
+      "start": 6.300000190734863,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "think",
+      "start": 6.739999771118164,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "making",
+      "start": 8.039999961853027,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "choices",
+      "start": 8.0600004196167,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "with",
+      "start": 8.479999542236328,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "if",
+      "start": 8.819999694824219,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "else",
+      "start": 9.0600004196167,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "and",
+      "start": 10,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "repeating",
+      "start": 10.220000267028809,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "actions",
+      "start": 10.520000457763672,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "with",
+      "start": 11.039999961853027,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "while",
+      "start": 11.539999961853027,
+      "end": 11.880000114440918
+    },
+    {
+      "word": "and",
+      "start": 11.880000114440918,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "for",
+      "start": 12.180000305175781,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "loops",
+      "start": 12.5600004196167,
+      "end": 12.84000015258789
+    }
+  ]
+}

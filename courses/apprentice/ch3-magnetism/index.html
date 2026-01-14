@@ -1,623 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 3: The Pull of Magnetism | AutoNateAI Apprentice</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: The Pull of Magnetism | The Apprentice's Path</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="apprentice" data-lesson="ch3-magnetism">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">🧲</div>
+        <span>Magnetism</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Apprentice</a>
+        <a href="../ch2-lightning/">Ch 2</a>
+        <a href="index.html" class="active">Ch 3</a>
+        <a href="../ch4-architect/">Ch 4: Architects</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Apprentice</a>
+        <span>/</span>
+        <span>Chapter 3: The Pull of Magnetism</span>
+      </div>
+      <h1>🧲 The Pull of Magnetism</h1>
+      <p>The stone remembers. Lightning decides. But magnetism <strong>connects</strong> — pulling pieces together into something greater. Learn how functions let you write code once and use it forever!</p>
+    </div>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../../shared/css/lesson.css" />
-
-    <!-- Mermaid for diagrams -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-
-    <style>
-      :root {
-        --chapter-color: var(--accent-magnetism);
-      }
-
-      .hero::before {
-        background: radial-gradient(
-            ellipse at 30% 50%,
-            rgba(121, 134, 203, 0.2) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 70% 30%,
-            rgba(63, 81, 181, 0.15) 0%,
-            transparent 50%
-          );
-      }
-
-      .story-block {
-        border-left-color: var(--accent-magnetism);
-      }
-
-      .story-block::before {
-        color: var(--accent-magnetism);
-      }
-
-      /* Function visualization */
-      .function-machine {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin: 2rem 0;
-        flex-wrap: wrap;
-      }
-
-      .machine-input {
-        padding: 1rem 1.5rem;
-        background: var(--accent-stone);
-        color: white;
-        border-radius: var(--radius-md);
-        font-family: var(--font-mono);
-      }
-
-      .machine-arrow {
-        font-size: 2rem;
-        color: var(--text-muted);
-      }
-
-      .machine-box {
-        padding: 1.5rem 2rem;
-        background: var(--accent-magnetism);
-        color: white;
-        border-radius: var(--radius-lg);
-        font-family: var(--font-display);
-        font-weight: 600;
-        box-shadow: 0 10px 30px rgba(121, 134, 203, 0.3);
-      }
-
-      .machine-output {
-        padding: 1rem 1.5rem;
-        background: var(--success);
-        color: white;
-        border-radius: var(--radius-md);
-        font-family: var(--font-mono);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Progress Bar -->
-    <div class="progress-bar"></div>
-
-    <!-- Progress Tracker (Side) -->
-    <nav class="progress-tracker">
-      <div class="progress-dot active" data-section="hero" title="Start"></div>
-      <div class="progress-dot" data-section="story" title="The Story"></div>
-      <div class="progress-dot" data-section="functions" title="Functions"></div>
-      <div class="progress-dot" data-section="parameters" title="Parameters"></div>
-      <div class="progress-dot" data-section="return" title="Return Values"></div>
-      <div class="progress-dot" data-section="quiz" title="Quiz"></div>
-      <div class="progress-dot" data-section="tryit" title="Try It"></div>
-      <div class="progress-dot" data-section="project" title="Project"></div>
-    </nav>
-
-    <main class="lesson-container">
-      <!-- HERO SECTION -->
-      <section class="hero section" data-section="hero">
-        <div class="hero-content">
-          <span class="hero-chapter">Chapter 3 • Week 3</span>
-          <div class="hero-icon">🧲</div>
-          <h1>The Pull of Magnetism</h1>
-          <p class="hero-subtitle">
-            The stone remembers. Lightning decides. But magnetism
-            <strong>connects</strong> — pulling pieces together into something greater.
-          </p>
-        </div>
-
-        <div class="scroll-indicator">
-          <span>Scroll to connect</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 5v14M5 12l7 7 7-7" />
-          </svg>
-        </div>
-      </section>
-
-      <!-- THE STORY -->
-      <section class="section" data-section="story">
-        <div class="section-content">
-          <h2 class="fade-in">🧲 The Story</h2>
-
-          <div class="story-block fade-in">
-            <p>
-              Imagine you have a magic machine. You put something in, it does its
-              magic, and something new comes out. You don't need to know how the
-              machine works inside — you just need to know what to put in and what
-              you'll get out.
-            </p>
-          </div>
-
-          <p class="fade-in">
-            That's what <strong>functions</strong> are! They're reusable machines
-            that take inputs, do something with them, and give you back outputs.
-            Functions let you write code once and use it many times.
-          </p>
-
-          <div class="function-machine fade-in">
-            <div class="machine-input">"alex"</div>
-            <div class="machine-arrow">→</div>
-            <div class="machine-box">greet(name)</div>
-            <div class="machine-arrow">→</div>
-            <div class="machine-output">"Hello, Alex!"</div>
-          </div>
-
-          <div class="cta-box fade-in">
-            <h3>🧠 Why Functions Matter</h3>
-            <p>
-              Without functions, you'd have to copy-paste the same code everywhere.
-              With functions, you write it once and <strong>call</strong> it whenever
-              you need it. This is called <em>DRY</em>: Don't Repeat Yourself!
-            </p>
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
           </div>
         </div>
-      </section>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
 
-      <!-- FUNCTIONS -->
-      <section class="section" data-section="functions">
-        <div class="section-content">
-          <h2 class="fade-in">🔧 Creating Functions</h2>
-
-          <p class="fade-in">
-            In Python, you create a function using the <code>def</code> keyword
-            (short for "define"):
-          </p>
-
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="comment"># Define a function</span>
-<span class="keyword">def</span> <span class="function">say_hello</span>():
-    <span class="function">print</span>(<span class="string">"Hello, world!"</span>)
-
-<span class="comment"># Call the function (use it!)</span>
-say_hello()  <span class="comment"># Output: Hello, world!</span>
-say_hello()  <span class="comment"># Output: Hello, world!</span>
-say_hello()  <span class="comment"># Output: Hello, world!</span></code></pre>
-            </div>
-            <div class="code-caption">
-              <p>
-                <span class="icon">💡</span>
-                <strong>Key idea:</strong> Define the function once, then call it
-                as many times as you want! Notice the parentheses <code>()</code>
-                — they're required.
-              </p>
-            </div>
-          </div>
-
-          <div class="diagram-container scale-in">
-            <div class="diagram-title">Function Anatomy</div>
-            <div class="mermaid">
-              flowchart LR
-                subgraph DEFINE["📝 Define Once"]
-                  DEF["def greet():"]
-                  BODY["print('Hello!')"]
-                end
-
-                subgraph CALL["📞 Call Many Times"]
-                  C1["greet()"]
-                  C2["greet()"]
-                  C3["greet()"]
-                end
-
-                DEFINE --> CALL
-
-                style DEFINE fill:#2d2d44,stroke:#7986cb
-                style CALL fill:#2d2d44,stroke:#4caf50
+    <!-- Story 1: Functions - The Magic Machine -->
+    <section class="section" id="functions-section">
+      <h2>Functions: The Magic Machine</h2>
+      <p>Imagine a machine where you put something in, it does its magic, and something new comes out. That's exactly what functions are — reusable machines that save you from writing the same code over and over!</p>
+      
+      <div class="diagram-container" id="functions-container">
+        <div class="diagram-header">
+          <span class="diagram-title">✨ The Magic Machine</span>
+        </div>
+        <div id="functions-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="functions-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- PARAMETERS -->
-      <section class="section" data-section="parameters">
-        <div class="section-content">
-          <h2 class="fade-in">📥 Parameters: Giving Functions Data</h2>
-
-          <p class="fade-in">
-            Functions become powerful when you can give them <strong>inputs</strong>.
-            These inputs are called <strong>parameters</strong>.
-          </p>
-
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="comment"># Function with one parameter</span>
-<span class="keyword">def</span> <span class="function">greet</span>(name):
-    <span class="function">print</span>(<span class="string">f"Hello, </span>{name}<span class="string">!"</span>)
-
-greet(<span class="string">"Alex"</span>)    <span class="comment"># Output: Hello, Alex!</span>
-greet(<span class="string">"Jordan"</span>)  <span class="comment"># Output: Hello, Jordan!</span>
-greet(<span class="string">"Sam"</span>)     <span class="comment"># Output: Hello, Sam!</span></code></pre>
-            </div>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
           </div>
+          <div class="playback-center">
+            <div class="story-progress" id="functions-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
 
-          <h3 class="fade-in">Multiple Parameters</h3>
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="functions-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="functions-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="functions-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="comment"># Function with two parameters</span>
-<span class="keyword">def</span> <span class="function">add_numbers</span>(a, b):
-    result = a + b
-    <span class="function">print</span>(<span class="string">f"</span>{a}<span class="string"> + </span>{b}<span class="string"> = </span>{result}<span class="string">"</span>)
+      <div class="quiz-card" id="functions-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
 
-add_numbers(<span class="number">5</span>, <span class="number">3</span>)    <span class="comment"># Output: 5 + 3 = 8</span>
-add_numbers(<span class="number">10</span>, <span class="number">20</span>)  <span class="comment"># Output: 10 + 20 = 30</span></code></pre>
-            </div>
-            <div class="code-caption">
-              <p>
-                <span class="icon">💡</span>
-                <strong>Think of it like:</strong> The function is a recipe.
-                Parameters are the ingredients. You can use the same recipe with
-                different ingredients!
-              </p>
+    <!-- Story 2: Parameters -->
+    <section class="section" id="parameters-section">
+      <h2>Parameters: Giving Functions Data</h2>
+      <p>Functions become truly powerful when you can customize them with inputs. Parameters are like ingredients — the same recipe with different ingredients produces different results!</p>
+      
+      <div class="diagram-container" id="parameters-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📥 Parameters: The Ingredients</span>
+        </div>
+        <div id="parameters-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="parameters-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- RETURN VALUES -->
-      <section class="section" data-section="return">
-        <div class="section-content">
-          <h2 class="fade-in">📤 Return Values: Getting Data Back</h2>
-
-          <p class="fade-in">
-            Sometimes you don't just want to print something — you want the function
-            to give you back a value you can use. That's what <code>return</code> does!
-          </p>
-
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="keyword">def</span> <span class="function">add</span>(a, b):
-    <span class="keyword">return</span> a + b  <span class="comment"># Give back the result</span>
-
-<span class="comment"># Now we can SAVE the result in a variable!</span>
-<span class="variable">total</span> = add(<span class="number">5</span>, <span class="number">3</span>)
-<span class="function">print</span>(total)  <span class="comment"># Output: 8</span>
-
-<span class="comment"># Or use it directly</span>
-<span class="function">print</span>(add(<span class="number">10</span>, <span class="number">20</span>))  <span class="comment"># Output: 30</span></code></pre>
-            </div>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
           </div>
-
-          <div class="diagram-container scale-in">
-            <div class="diagram-title">Print vs. Return</div>
-            <div class="mermaid">
-              flowchart LR
-                subgraph PRINT["print() 📺"]
-                  P1["Shows on screen"]
-                  P2["Can't save the value"]
-                end
-
-                subgraph RETURN["return 📦"]
-                  R1["Gives value back"]
-                  R2["Can save in variable"]
-                  R3["Can use in calculations"]
-                end
-
-                style PRINT fill:#2d2d44,stroke:#ff9800
-                style RETURN fill:#2d2d44,stroke:#4caf50
-            </div>
+          <div class="playback-center">
+            <div class="story-progress" id="parameters-story-progress"></div>
           </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
 
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python - Real Example</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="keyword">def</span> <span class="function">calculate_area</span>(width, height):
-    <span class="string">"""Calculate the area of a rectangle."""</span>
-    <span class="keyword">return</span> width * height
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="parameters-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="parameters-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="parameters-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-<span class="comment"># Calculate areas of different rectangles</span>
-<span class="variable">room1</span> = calculate_area(<span class="number">10</span>, <span class="number">12</span>)
-<span class="variable">room2</span> = calculate_area(<span class="number">8</span>, <span class="number">8</span>)
+      <div class="quiz-card" id="parameters-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
 
-<span class="variable">total_area</span> = room1 + room2
-<span class="function">print</span>(<span class="string">f"Total area: </span>{total_area}<span class="string"> square feet"</span>)
-<span class="comment"># Output: Total area: 184 square feet</span></code></pre>
+    <!-- Story 3: Return Values -->
+    <section class="section" id="return-section">
+      <h2>Return Values: Getting Data Back</h2>
+      <p>There's a crucial difference between showing something on screen and actually getting a value back. Return values unlock the true power of functions — chaining, calculating, and building complex logic!</p>
+      
+      <div class="diagram-container" id="return-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📤 Print vs. Return</span>
+        </div>
+        <div id="return-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="return-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- QUIZ -->
-      <section class="section" data-section="quiz">
-        <div class="section-content">
-          <div 
-            class="quiz-container"
-            data-activity="quiz-ch3-functions"
-            data-type="quiz"
-            data-points="10"
-            data-answer="B"
-          >
-            <div class="quiz-header">
-              <span class="quiz-icon">🧠</span>
-              <h3 class="quiz-title">Knowledge Check</h3>
-            </div>
-
-            <p class="quiz-question">
-              What will this code print?
-              <br /><br />
-              <code>
-                def double(x):<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;return x * 2<br /><br />
-                result = double(5)<br />
-                print(result + 3)
-              </code>
-            </p>
-
-            <div class="quiz-options">
-              <div class="quiz-option" data-value="A">
-                <span class="quiz-option-letter">A</span>
-                <span>10</span>
-              </div>
-              <div class="quiz-option" data-value="B">
-                <span class="quiz-option-letter">B</span>
-                <span>13</span>
-              </div>
-              <div class="quiz-option" data-value="C">
-                <span class="quiz-option-letter">C</span>
-                <span>53</span>
-              </div>
-              <div class="quiz-option" data-value="D">
-                <span class="quiz-option-letter">D</span>
-                <span>Error</span>
-              </div>
-            </div>
-
-            <div
-              class="quiz-feedback"
-              data-correct-msg="double(5) returns 10, then 10 + 3 = 13!"
-              data-incorrect-msg="Trace it step by step: double(5) returns 5*2=10, then 10+3=13"
-            ></div>
-
-            <button class="quiz-btn" disabled>Check Answer</button>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="return-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
           </div>
         </div>
-      </section>
 
-      <!-- TRY IT -->
-      <section class="section" data-section="tryit">
-        <div class="section-content">
-          <div class="try-it-box">
-            <div class="try-it-header">
-              <span class="try-it-icon">🧲</span>
-              <h3 class="try-it-title">Try It Yourself!</h3>
-            </div>
-
-            <p>Build a simple calculator with functions:</p>
-
-            <ol class="try-it-steps">
-              <li>
-                <strong>Create a new file</strong><br />
-                Save it as <code>calculator.py</code>
-              </li>
-              <li>
-                <strong>Type this code</strong><br />
-                <div class="code-block" style="margin-top: 0.5rem">
-                  <div class="code-content">
-                    <pre><code><span class="keyword">def</span> <span class="function">add</span>(a, b):
-    <span class="keyword">return</span> a + b
-
-<span class="keyword">def</span> <span class="function">subtract</span>(a, b):
-    <span class="keyword">return</span> a - b
-
-<span class="keyword">def</span> <span class="function">multiply</span>(a, b):
-    <span class="keyword">return</span> a * b
-
-<span class="keyword">def</span> <span class="function">divide</span>(a, b):
-    <span class="keyword">if</span> b == <span class="number">0</span>:
-        <span class="keyword">return</span> <span class="string">"Can't divide by zero!"</span>
-    <span class="keyword">return</span> a / b
-
-<span class="comment"># Test them!</span>
-<span class="function">print</span>(add(<span class="number">10</span>, <span class="number">5</span>))      <span class="comment"># 15</span>
-<span class="function">print</span>(subtract(<span class="number">10</span>, <span class="number">5</span>)) <span class="comment"># 5</span>
-<span class="function">print</span>(multiply(<span class="number">10</span>, <span class="number">5</span>)) <span class="comment"># 50</span>
-<span class="function">print</span>(divide(<span class="number">10</span>, <span class="number">5</span>))   <span class="comment"># 2.0</span></code></pre>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <strong>Run it</strong><br />
-                <code>python calculator.py</code>
-              </li>
-              <li>
-                <strong>Challenge!</strong><br />
-                Add a <code>power(base, exponent)</code> function that calculates base^exponent
-              </li>
-            </ol>
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="return-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="return-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="return-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- PROJECT -->
-      <section class="section" data-section="project">
-        <div class="section-content">
-          <h2 class="fade-in">🔨 Chapter Project: Quiz Game</h2>
-
-          <div class="story-block fade-in">
-            <p>
-              Build a quiz game that asks questions, checks answers, and keeps score!
-              Use functions to organize your code neatly.
-            </p>
-          </div>
-
-          <div class="terminal fade-in">
-            <div class="terminal-header">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-            </div>
-            <div class="terminal-body">
-              <div class="terminal-line">
-                <span class="terminal-prompt">$</span>
-                <span class="terminal-input">python quiz_game.py</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">🧠 QUIZ TIME! 🧠</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">Question 1: What is the capital of France?</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">Your answer: </span>
-                <span class="terminal-input" style="color: #ffd54f">Paris</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output success">✓ Correct!</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">Question 2: What is 7 x 8?</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">Your answer: </span>
-                <span class="terminal-input" style="color: #ffd54f">56</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output success">✓ Correct!</span>
-              </div>
-              <div class="terminal-line">
-                <span class="terminal-output">🎉 Final Score: 2/2 (100%)</span>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="fade-in">Starter Code</h3>
-
-          <div class="code-block scale-in">
-            <div class="code-header">
-              <span class="code-language">Python - quiz_game.py</span>
-              <button class="code-copy">Copy</button>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="keyword">def</span> <span class="function">ask_question</span>(question, correct_answer):
-    <span class="string">"""Ask a question and check if the answer is correct."""</span>
-    answer = <span class="function">input</span>(question + <span class="string">" "</span>)
-    <span class="keyword">if</span> answer.lower() == correct_answer.lower():
-        <span class="function">print</span>(<span class="string">"✓ Correct!"</span>)
-        <span class="keyword">return</span> <span class="keyword">True</span>
-    <span class="keyword">else</span>:
-        <span class="function">print</span>(<span class="string">f"✗ Wrong! The answer was: </span>{correct_answer}<span class="string">"</span>)
-        <span class="keyword">return</span> <span class="keyword">False</span>
-
-<span class="keyword">def</span> <span class="function">calculate_score</span>(correct, total):
-    <span class="string">"""Calculate the percentage score."""</span>
-    <span class="keyword">return</span> (correct / total) * <span class="number">100</span>
-
-<span class="comment"># Main quiz</span>
-<span class="function">print</span>(<span class="string">"🧠 QUIZ TIME! 🧠\n"</span>)
-
-<span class="variable">score</span> = <span class="number">0</span>
-<span class="variable">questions</span> = [
-    (<span class="string">"What is the capital of France?"</span>, <span class="string">"Paris"</span>),
-    (<span class="string">"What is 7 x 8?"</span>, <span class="string">"56"</span>),
-    (<span class="string">"What color is the sky?"</span>, <span class="string">"blue"</span>),
-]
-
-<span class="keyword">for</span> i, (question, answer) <span class="keyword">in</span> <span class="function">enumerate</span>(questions, <span class="number">1</span>):
-    <span class="function">print</span>(<span class="string">f"Question </span>{i}<span class="string">:"</span>)
-    <span class="keyword">if</span> ask_question(question, answer):
-        score += <span class="number">1</span>
-    <span class="function">print</span>()
-
-<span class="variable">percentage</span> = calculate_score(score, <span class="function">len</span>(questions))
-<span class="function">print</span>(<span class="string">f"🎉 Final Score: </span>{score}<span class="string">/</span>{<span class="function">len</span>(questions)}<span class="string"> (</span>{percentage:.0f}<span class="string">%)"</span>)</code></pre>
-            </div>
-            <div class="code-caption">
-              <p>
-                <span class="icon">🚀</span>
-                <strong>Challenge:</strong> Add more questions! Add a function that
-                picks random questions from a larger list.
-              </p>
-            </div>
-          </div>
-
-          <div class="cta-box fade-in">
-            <h3>📦 Save Your Work!</h3>
-            <p>Create your project in:</p>
-            <div class="code-block" style="text-align: left; margin: 1rem 0">
-              <div class="code-content">
-                <pre><code>your-folder/ch3-magnetism/
-├── quiz_game.py      <span class="comment"># Your quiz</span>
-└── README.md         <span class="comment"># How it works</span></code></pre>
-              </div>
-            </div>
-            <a href="../ch4-architect/index.html" class="cta-btn">
-              <span>Continue to Chapter 4</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+      <div class="quiz-card" id="return-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- Bottom Navigation -->
-    <nav class="lesson-nav">
-      <button class="nav-btn" onclick="location.href='../ch2-lightning/index.html'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7" />
-        </svg>
-        Chapter 2
-      </button>
-      <button class="nav-btn primary" onclick="location.href='../ch4-architect/index.html'">
-        Chapter 4: Architects
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </button>
-    </nav>
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready for Chapter 4?</h2>
+      <p>You've learned how functions pull your code together — creating reusable machines that take inputs, do their magic, and return outputs. Now let's explore how to organize multiple functions into structured programs!</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../ch4-architect/" class="card">
+          <div class="card-icon">🏗️</div>
+          <h3>Chapter 4: The Architects</h3>
+          <p>Learn to structure programs with classes, objects, and clean architecture.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all chapters in The Apprentice's Path.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-    <script src="../../shared/js/lesson.js"></script>
-    
-    <!-- Lesson Integration -->
-    <script src="../../shared/js/firebase-config.js"></script>
-    <script src="../../shared/js/auth.js"></script>
-    <script src="../../shared/js/data-service.js"></script>
-    <script src="../../shared/js/lesson-integration.js"></script>
-    <script src="../../shared/js/progress-tracker.js"></script>
-    <script src="../../shared/js/activity-tracker.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        window.LessonIntegration.init("apprentice", "ch3-magnetism");
-        if (window.ProgressTracker) {
-          window.ProgressTracker.init("apprentice", "ch3-magnetism");
-        }
-        if (window.ActivityTracker) {
-          window.ActivityTracker.init("apprentice", "ch3-magnetism");
-        }
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#functions-section">The Magic Machine</a></li>
+      <li><a href="#parameters-section">Parameters</a></li>
+      <li><a href="#return-section">Return Values</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'functions': [
+          // The magic machine flow
+          { data: { id: 'magic-intro', label: '✨ Magic\nMachine', type: 'concept', description: 'A machine that does its magic' } },
+          { data: { id: 'input-output', label: '📦 Input\n→ Output', type: 'example', description: 'Put something in, get something out' } },
+          { data: { id: 'def-keyword', label: '🔧 def\nkeyword', type: 'service', description: 'Creates a function in Python' } },
+          { data: { id: 'calling', label: '📞 Call\ngreet()', type: 'auth', description: 'Use the function with parentheses' } },
+          { data: { id: 'dry-principle', label: '🎯 DRY\nPrinciple', type: 'page', description: "Don't Repeat Yourself" } },
+          // Edges
+          { data: { source: 'magic-intro', target: 'input-output' } },
+          { data: { source: 'input-output', target: 'def-keyword' } },
+          { data: { source: 'def-keyword', target: 'calling' } },
+          { data: { source: 'calling', target: 'dry-principle' } }
+        ],
+
+        'parameters': [
+          // Parameters flow
+          { data: { id: 'params-intro', label: '📥 Inputs\nNeeded', type: 'external', description: 'Functions need inputs to be powerful' } },
+          { data: { id: 'single-param', label: '👤 Single\nParameter', type: 'concept', description: 'greet(name)' } },
+          { data: { id: 'multiple-params', label: '👥 Multiple\nParameters', type: 'service', description: 'add(a, b)' } },
+          { data: { id: 'recipe-metaphor', label: '👨‍🍳 Recipe\nMetaphor', type: 'page', description: 'Same recipe, different ingredients' } },
+          // Edges
+          { data: { source: 'params-intro', target: 'single-param' } },
+          { data: { source: 'single-param', target: 'multiple-params' } },
+          { data: { source: 'multiple-params', target: 'recipe-metaphor' } }
+        ],
+
+        'return': [
+          // Return vs print flow
+          { data: { id: 'print-problem', label: '📺 print()\nShows Only', type: 'external', description: 'Displays but no value back' } },
+          { data: { id: 'return-keyword', label: '📤 return\nGives Back', type: 'concept', description: 'Returns actual value' } },
+          { data: { id: 'save-result', label: '💾 Save in\nVariables', type: 'data', description: 'total = add(5, 3)' } },
+          { data: { id: 'use-anywhere', label: '🔗 Use in\nCalculations', type: 'service', description: 'Chain and combine results' } },
+          { data: { id: 'real-example', label: '🏠 Real\nExample', type: 'page', description: 'Calculate total area' } },
+          // Edges
+          { data: { source: 'print-problem', target: 'return-keyword' } },
+          { data: { source: 'return-keyword', target: 'save-result' } },
+          { data: { source: 'save-result', target: 'use-anywhere' } },
+          { data: { source: 'use-anywhere', target: 'real-example' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      // Map story IDs to diagram element keys
+      const storyToDiagram = {
+        'functions-story': 'functions',
+        'parameters-story': 'parameters',
+        'return-story': 'return'
+      };
+
+      // Create storytelling diagrams for each story in the JSON
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
       });
-    </script>
-  </body>
-</html>
 
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      // Map story IDs to quiz container IDs
+      const storyToQuiz = {
+        'functions-story': 'functions-quiz',
+        'parameters-story': 'parameters-quiz',
+        'return-story': 'return-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>
