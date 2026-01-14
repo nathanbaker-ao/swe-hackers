@@ -159,37 +159,70 @@
       "storyId": "curiosity-story",
       "questions": [
         {
-          "question": "What determines the quality of your understanding?",
+          "question": "If intelligence is really about 'knowing how to find things out' rather than 'knowing things,' what does this suggest about how we should measure intellectual growth in ourselves and others?",
           "options": [
-            "How smart you are naturally",
-            "How many books you read",
-            "The quality of your questions",
-            "How good your teachers are"
+            "Track the number of questions we generate when encountering new information, as question-generation capacity indicates our intellectual engine's health",
+            "Count the facts we can recall, since finding things out still requires a foundation of knowledge to build upon",
+            "Measure how quickly we arrive at answers, as efficiency in knowledge acquisition demonstrates superior intelligence",
+            "Compare our understanding to experts in the field, using their knowledge as the benchmark for our progress"
           ],
-          "correct": 2,
-          "explanation": "The quality of your understanding depends entirely on the quality of your questions. Great questions lead to deep understanding; shallow questions lead to surface knowledge."
+          "correct": 0,
+          "explanation": "If intelligence is truly about 'knowing how to find things out,' then the most authentic metric is our question-generation capacity—the quality and depth of questions we naturally produce when encountering new concepts. While facts provide foundation and efficiency matters, the engine of intelligence is curiosity expressed through increasingly sophisticated questions. This suggests intellectual growth isn't about accumulating more answers, but about developing a more powerful questioning mechanism that drives deeper inquiry."
         },
         {
-          "question": "What do most people do when they get an answer?",
+          "question": "When someone consistently accepts surface-level answers, what psychological or social forces might be reinforcing this behavior beyond simple laziness or lack of intelligence?",
           "options": [
-            "Ask 6 more questions",
-            "Accept it and move on",
-            "Research it thoroughly",
-            "Challenge the source"
+            "Educational systems that reward correct answers over thoughtful questions, creating a conditioning loop where we learn to optimize for answer-acquisition rather than understanding-development",
+            "A natural human tendency to conserve cognitive energy, as our brains evolved to minimize unnecessary metabolic expenditure on thinking",
+            "Social pressure to appear knowledgeable rather than curious, as admitting confusion or asking 'obvious' questions risks status loss in group settings",
+            "Time scarcity in modern life that creates a genuine trade-off where going deep on every question would paralyze decision-making and action"
           ],
-          "correct": 1,
-          "explanation": "Most people accept the first answer they get and move on. That's surface thinking. Deep thinkers keep asking 'why?' to understand the full picture."
+          "correct": 0,
+          "explanation": "While all these forces play roles, educational conditioning creates the deepest pattern. When we're systematically rewarded for producing correct answers rather than asking penetrating questions, we develop a fundamental misunderstanding of what learning is. This conditioning shapes our identity around 'being right' rather than 'becoming curious,' making surface-level thinking a habit maintained by years of reinforcement. The other factors (cognitive conservation, social pressure, time constraints) are real but typically operate as rationalizations for this deeper conditioning pattern."
         },
         {
-          "question": "Who has the advantage: a 'smart' person or a curious person?",
+          "question": "The story claims that 'the people who change the world consistently choose to go deeper.' But doesn't going deep on everything risk analysis paralysis? How do world-changers know when to stop questioning and start acting?",
           "options": [
-            "Smart person always wins",
-            "Curious person who asks great questions",
-            "They're exactly equal",
-            "Neither—luck matters most"
+            "They develop intuition about which questions will yield actionable insights versus which will spiral into philosophical rabbit holes without practical value",
+            "They set arbitrary time limits for inquiry, forcing themselves to move from questioning to action regardless of depth of understanding",
+            "They alternate between deep questioning phases and action phases, using real-world feedback to determine if their questions were deep enough",
+            "They only go deep on foundational questions that unlock many doors, while accepting surface answers on implementation details they can learn along the way"
+          ],
+          "correct": 3,
+          "explanation": "World-changers distinguish between foundational questions (whose answers change everything) and implementation questions (whose answers can be discovered through action). Going six levels deep on 'What makes products useful to people?' transforms how you build; going six levels deep on 'What color should this button be?' is procrastination. The art is identifying which questions are foundational—the ones whose deep answers unlock entire problem spaces—versus which are better answered through experimentation. This strategic questioning creates momentum rather than paralysis."
+        },
+        {
+          "question": "If a 'surface thinker' hears 'pollution' as the answer to climate change and stops there, while a 'deep thinker' asks why six more times, what risk does the deep thinker face that the surface thinker avoids?",
+          "options": [
+            "Discovering that the problem is so complex and interconnected that individual action feels meaningless, potentially leading to despair or disengagement",
+            "Becoming so knowledgeable about the topic that they alienate others who can't follow their reasoning, limiting their ability to create change through social influence",
+            "Wasting time on intellectual understanding when immediate action—even based on surface understanding—might produce more real-world impact",
+            "Uncovering uncomfortable truths about their own complicity in the problem, creating cognitive dissonance that the surface thinker never experiences"
+          ],
+          "correct": 0,
+          "explanation": "The deep thinker's primary risk is discovering complexity that overwhelms agency. When you trace pollution back through industrial systems, economic incentives, political structures, and human psychology, you might conclude that meaningful change requires coordinated global transformation—something no individual can achieve. Surface thinkers maintain the psychological comfort of simple narratives and actionable steps ('recycle more!'). The paradox is that deep understanding is essential for systemic solutions, but the journey toward that understanding can pass through a valley of despair. The most effective change-makers push through this valley to reach 'complex optimism'—understanding the system deeply enough to identify actual leverage points."
+        },
+        {
+          "question": "The story defines intelligence as 'knowing how to find things out' rather than 'knowing things.' But if this is true, why do we still feel impressed by people who know many facts, and why do experts in fields command such respect?",
+          "options": [
+            "Because accumulated knowledge creates pattern recognition that enables experts to ask better questions faster—they've internalized thousands of answers that now generate new questions",
+            "Because society hasn't caught up to this new definition of intelligence, still operating on outdated metrics from when information scarcity made knowledge accumulation genuinely valuable",
+            "Because knowing many facts actually does demonstrate the superior questioning ability that gathered those facts in the first place—breadth of knowledge proves depth of curiosity",
+            "Because displays of knowledge serve social signaling functions beyond practical utility, demonstrating investment, dedication, and group membership regardless of whether the facts themselves matter"
+          ],
+          "correct": 0,
+          "explanation": "Experts command respect because their accumulated knowledge fundamentally transforms their questioning ability. When a doctor knows 10,000 disease patterns, they don't just 'know more'—they can ask better diagnostic questions because each piece of knowledge suggests new possibilities and connections. Their knowledge base becomes a question-generating engine. This is different from memorizing facts for social signaling. The novice asks 'What causes stomach pain?' The expert's knowledge enables questions like 'Given this pain location, timing, and associated symptoms, which of these eight mechanisms is most likely, and what would differentiate them?' Knowledge and questioning ability aren't opposed—accumulated knowledge creates the cognitive substrate for sophisticated questioning."
+        },
+        {
+          "question": "When you 'have a choice to accept the first answer or keep asking why,' what invisible factor most often determines which path you take in that moment?",
+          "options": [
+            "Your current emotional state—anxiety and stress push toward quick answers and closure, while calm curiosity enables deeper exploration",
+            "Whether you perceive the topic as within your identity—we go deep on things we see as 'ours' and stay surface on things outside our self-concept",
+            "The social context—we ask deeper questions when alone or with trusted peers, but accept surface answers when status is at stake or time is pressured",
+            "Your recent history of rewarded curiosity—if deep questions recently led to valuable insights, you question more; if they led to wasted time or social awkwardness, you question less"
           ],
           "correct": 1,
-          "explanation": "A curious person who asks great questions beats a 'smart' person who accepts surface answers. Intelligence isn't knowing things—it's knowing how to find things out!"
+          "explanation": "Identity is the invisible hand. We naturally go deep on topics we've internalized as 'who we are'—a person who identifies as a 'tech person' automatically questions deeply about technology, while accepting surface answers about fashion or sports. This happens unconsciously; we don't decide to be curious, we simply are curious about things within our identity boundaries. This reveals why 'becoming curious' isn't about trying harder—it's about expanding your identity to include more domains as legitimately yours to explore. The deep thinker isn't someone who forces themselves to ask more questions; they're someone who has developed an identity where questioning itself is central to who they are."
         }
       ]
     },
@@ -197,37 +230,70 @@
       "storyId": "six-levels-story",
       "questions": [
         {
-          "question": "How many times should you ask 'why?' to truly understand something?",
+          "question": "The framework says to ask 'why' at least six times. But why six specifically? What makes six the magic number rather than four or eight?",
           "options": [
-            "Once is enough",
-            "2-3 times",
-            "At least 6 times",
-            "Until you're bored"
+            "Six is arbitrary—a memorable heuristic that ensures you push past the 1-2 levels where most people stop, but the real principle is 'go until you hit fundamental mechanisms'",
+            "Six represents the typical depth required to move from immediate causes to evolutionary or physical first principles in most domains of inquiry",
+            "Six matches the cognitive limit of how many 'why' iterations the average person can hold in working memory before losing track of the original question",
+            "Six was chosen because research shows that the marginal insight gained from the seventh 'why' rarely justifies the cognitive cost in practical situations"
           ],
-          "correct": 2,
-          "explanation": "The 6 Levels Deep framework says to ask 'why?' at least 6 times. Each level reveals a new layer of truth that you'd miss if you stopped earlier."
+          "correct": 0,
+          "explanation": "Six is a heuristic, not a law of nature. The power isn't in the exact number—it's in pushing past the 1-2 levels where most people stop and reaching the zone where fundamental mechanisms reveal themselves. Some questions reach bedrock at level 4; others need 8+ to escape surface explanations. 'Six' works because it's specific enough to be actionable, large enough to force depth, but not so large as to feel overwhelming. The real skill is recognizing when you've hit a fundamentally different level of explanation—when you've moved from proximate causes to ultimate causes, from 'what happens' to 'why it must be this way.' Six teaches you to sense that transition."
         },
         {
-          "question": "Where do 90% of people stop when asking questions?",
+          "question": "When 90% of people stop at levels 1-2 and feel satisfied, what does this suggest about the relationship between feeling like you understand something and actually understanding it?",
           "options": [
-            "Levels 5-6",
-            "Levels 3-4",
-            "Levels 1-2",
-            "They don't ask at all"
+            "The feeling of understanding is an emotional state largely disconnected from actual comprehension depth—our brains reward us with satisfaction long before we've achieved real understanding",
+            "People who stop at levels 1-2 do actually understand what they need for their purposes—the 'deep' understanding is often academic rather than practically necessary",
+            "The satisfaction at levels 1-2 comes from social validation—when everyone around you stops there, continuing feels like overthinking rather than deeper thinking",
+            "Humans evolved to seek 'good enough' explanations that enable action, so the satisfaction signal triggers when we can make a decision, not when we've achieved complete understanding"
           ],
-          "correct": 2,
-          "explanation": "90% of people stop at levels 1-2. They get a surface answer and feel satisfied, missing the deeper understanding that comes from levels 3-6."
+          "correct": 0,
+          "explanation": "The feeling of understanding is a notoriously unreliable signal. Our brains generate 'aha!' sensations and satisfaction when we receive any coherent explanation, regardless of its depth. This disconnect is dangerous because we trust our feelings—when something 'makes sense,' we stop questioning. The satisfied feeling at level 2 feels identical to the satisfied feeling at level 6, but the understanding depth is vastly different. This is why the framework is valuable: it provides an external structure ('ask six times') that overrides your internal satisfaction signal. The skill of deep thinking requires learning to distrust your feeling of understanding and instead trust structural practices that force depth."
         },
         {
-          "question": "In the homework example, what did level 6 reveal?",
+          "question": "The homework example goes from 'Why homework?' to evolutionary neuroscience at level 6. But couldn't you take different paths at each level and end up somewhere completely different? What determines which 'why' path you follow?",
           "options": [
-            "Homework is unnecessary",
-            "Teachers are mean",
-            "Evolutionary neuroscience about survival",
-            "Schools need more funding"
+            "The path depends on which aspect you choose to question at each level—'why this specific mechanism?' leads to biology, 'why do schools require it?' leads to social history, 'why is this valued?' leads to philosophy",
+            "All paths eventually converge at deep enough levels—whether you go through biology, history, or philosophy, you'll reach the same fundamental truths about human nature and learning",
+            "The most valuable path is the one that moves from human decisions to natural laws—going 'down' through layers of abstraction until you hit physics or evolution",
+            "There is no 'correct' path; different paths develop different types of understanding, and the skill is learning to explore multiple branches rather than optimizing for one"
+          ],
+          "correct": 0,
+          "explanation": "At each level, you choose which dimension to question—the mechanism, the purpose, the origin, the value, or the alternatives. This creates a tree of possible inquiry paths, not a single depth ladder. 'Why homework?' → 'Why practice?' could branch to 'What brain mechanism?' (biology path), 'Who decided this?' (historical path), or 'Is this actually effective?' (empirical path). Each path reveals different dimensions of truth. The homework example follows the biological path to neuroscience, but the historical path would reveal educational philosophy, and the empirical path would question assumptions. Deep thinking isn't just going deep—it's recognizing these branches exist and strategically choosing which to explore based on what kind of understanding you need."
+        },
+        {
+          "question": "At levels 5-6, you reach 'evolutionary neuroscience' and understand that repetition mattered for survival. But now that you understand this, does homework feel more meaningful or less? What does this reveal about the relationship between deep understanding and motivation?",
+          "options": [
+            "More meaningful—connecting to evolutionary purpose reveals that learning mechanisms are fundamental to human nature, making the activity feel aligned with something larger than school requirements",
+            "Less meaningful—recognizing that your brain's learning mechanisms evolved for survival in ancestral environments suggests modern homework might be hijacking those systems for questionable purposes",
+            "Neither more nor less, but differently meaningful—deep understanding replaces extrinsic motivation ('do this because you're told') with intrinsic understanding ('I see how this works and can use it strategically')",
+            "The effect varies by person—some find meaning in connecting to evolutionary purpose, others feel alienated by mechanistic explanations that reduce learning to neural biochemistry"
           ],
           "correct": 2,
-          "explanation": "Level 6 revealed that our brains evolved to prioritize repeated information because remembering important patterns kept our ancestors alive. From 'why homework?' to evolutionary science!"
+          "explanation": "Deep understanding transforms the nature of your motivation rather than simply increasing or decreasing it. Before: 'I should do homework because teachers say so' (external, compliance-based). After: 'I understand that my brain strengthens what I repeatedly engage with, so I can strategically use homework to build capabilities I choose to develop' (internal, agency-based). The task doesn't change, but your relationship to it transforms. You're no longer blindly following instructions; you're using an understanding of learning mechanisms to achieve your own goals. This is why going six levels deep matters—it converts external impositions into personal tools. The deep thinker does homework differently than the surface thinker, even when doing the exact same problems."
+        },
+        {
+          "question": "The story shows a transformation from 'why homework?' to 'understanding how your brain works.' But what's the danger of this kind of reductionist thinking—of explaining human experiences through neurons and evolution?",
+          "options": [
+            "It can strip meaning from experiences by explaining them as 'just' biological mechanisms, reducing rich human experiences to chemical reactions and evolutionary adaptations",
+            "It can create a deterministic mindset where people feel their behaviors are mechanistically caused rather than chosen, undermining agency and personal responsibility",
+            "It can miss emergent properties—some aspects of learning and meaning might arise from social and cultural levels that can't be reduced to neuroscience without losing essential features",
+            "It can lead to overgeneralization where we assume evolutionary explanations from ancestral environments directly determine optimal behaviors in modern contexts where conditions have radically changed"
+          ],
+          "correct": 2,
+          "explanation": "All these risks exist, but the fundamental danger is missing emergence—the way higher-level patterns have properties that can't be fully understood by reducing them to lower-level components. Understanding neurons is valuable, but 'learning' also involves social dynamics, cultural meanings, and personal narratives that exist at different levels of explanation. A complete understanding requires moving between levels: neural mechanisms AND social contexts AND personal meaning. The homework example shows one powerful path (going 'down' to fundamentals), but mature thinking also goes 'up' and 'across,' exploring how biological mechanisms interact with social structures and personal agency. Deep thinking isn't just vertical depth—it's multidimensional exploration."
+        },
+        {
+          "question": "If this framework is so powerful—going from surface questions to deep understanding—why don't schools teach 'how to question' as a core subject, the way they teach math or reading?",
+          "options": [
+            "Because deep questioning is actually difficult to teach systematically—it's more of an apprenticeship skill learned through modeling than a codified curriculum",
+            "Because educational institutions evolved to transmit established knowledge efficiently, and deep questioning is inherently subversive to knowledge transmission—it slows things down and challenges authority",
+            "Because questioning skills develop naturally once you have enough domain knowledge—teaching questioning in isolation wouldn't work without content to question about",
+            "Because the economic value of deep questioning only matters for a small percentage of roles, while most work requires following procedures rather than questioning foundations"
+          ],
+          "correct": 1,
+          "explanation": "Schools evolved as knowledge transmission systems—their core function is moving information from teacher's mind to student's mind efficiently. Deep questioning is fundamentally at odds with this: it slows down transmission, questions the value of the knowledge being transmitted, and shifts authority from teacher (who knows answers) to student (who generates questions). A student who asks six levels of 'why?' in every class is disruptive. This isn't a failing of individual teachers; it's a structural tension. Teaching questioning as a core skill would require reimagining education around inquiry rather than content coverage—a transformation most systems resist. The irony is that in a world where knowledge is freely available, questioning skills matter more than ever, but our institutions remain optimized for an era when knowledge was scarce."
         }
       ]
     },
@@ -235,37 +301,70 @@
       "storyId": "comprehension-story",
       "questions": [
         {
-          "question": "How can you prove you really understand something?",
+          "question": "The story says if you can't explain something simply to a younger kid, you don't really understand it. But some concepts—like quantum mechanics or complex social systems—might be inherently difficult to simplify without distorting them. What does this reveal about the limits of the 'explain simply' test?",
           "options": [
-            "Recite the definition perfectly",
-            "Explain it simply to a younger kid",
-            "Use big words when discussing it",
-            "Read about it multiple times"
-          ],
-          "correct": 1,
-          "explanation": "If you can't explain something simply, you don't really understand it. Explaining to a younger kid forces you to use clear, simple language—which requires true comprehension."
-        },
-        {
-          "question": "What does 'transferable understanding' mean?",
-          "options": [
-            "You can move files between computers",
-            "You can teach others",
-            "You can apply knowledge to new situations",
-            "You can remember facts for tests"
+            "The test reveals the difference between inherent complexity (which requires sophisticated language) and fake complexity (which uses jargon to hide shallow understanding)—real experts can simplify without distorting, while novices simplify by oversimplifying",
+            "The test works for concrete concepts but fails for abstract ones—you can explain 'how cars work' to a kid, but concepts like 'ontological uncertainty' require cognitive development that simple language can't bypass",
+            "The test is actually about your ability to identify core principles versus surface details—experts can explain the essential insight simply while acknowledging that complete understanding requires more sophistication",
+            "The test assumes understanding is unitary, but there are actually different types of understanding—intuitive grasps that can be simplified versus technical precision that requires specific language"
           ],
           "correct": 2,
-          "explanation": "Transferable understanding means you can use your knowledge in completely new contexts. Real comprehension isn't memorizing—it's having insight that works everywhere."
+          "explanation": "The 'explain simply' test isn't about making everything simple—it's about distinguishing essential principles from implementation complexity. With quantum mechanics, you can say 'particles behave like waves and particles simultaneously, which is weird because big things don't do that' (simple), but calculating probability amplitudes requires math (complex). If you can't give the simple version, you probably don't grasp the core insight, even if you can manipulate the formulas. The test reveals whether you've identified the heart of the concept—the surprising central claim that everything else elaborates. True experts move fluidly between simple principles and technical details; they know which is which. Novices either oversimplify (losing essential features) or hide behind jargon (because they don't know what's essential)."
         },
         {
-          "question": "What's the ultimate result of mastering the art of questions?",
+          "question": "The story presents four tests of true comprehension: explain simply, find connections, predict outcomes, and apply to new situations. If you could only develop one of these four abilities, which would be most fundamental—which one enables the others?",
           "options": [
-            "You become annoying",
-            "Problems become puzzles to solve",
-            "You run out of things to ask",
-            "You know everything"
+            "Finding connections is most fundamental—once you see how a concept relates to multiple domains, the others follow naturally because connections reveal the underlying structure",
+            "Predicting outcomes is most fundamental—if you can accurately predict, you must understand the mechanism well enough to explain it, connect it, and apply it",
+            "Explaining simply is most fundamental—the act of simplifying forces you to identify core principles, which then enables connections, predictions, and applications",
+            "Applying to new situations is most fundamental—transfer is the ultimate test because it requires all the others: you must understand principles, see patterns, and predict how they'll work in novel contexts"
+          ],
+          "correct": 3,
+          "explanation": "Application to new situations is the deepest test because it requires integrated understanding—you can't apply without knowing principles (explain), seeing patterns (connect), and forecasting results (predict). You can explain without being able to apply (textbook knowledge), connect without applying (recognizing patterns without using them), and even predict in familiar domains without transferring to new ones. But you cannot apply to genuinely novel situations without the others. Application proves that your understanding isn't brittle—isn't dependent on specific contexts or framings. It shows you've grasped something at a level that transcends its original context. This is why problem-solving in new domains is the gold standard: it tests whether you have transferable insight rather than local knowledge."
+        },
+        {
+          "question": "When you 'find connections' between new knowledge and what you already know, there's a risk: you might force false connections that distort the new concept to fit your existing understanding. How do you find connections without distorting what you're learning?",
+          "options": [
+            "Start by understanding the new concept on its own terms before seeking connections—let it challenge your existing framework rather than immediately assimilating it into what you already believe",
+            "Look for structural connections (how mechanisms work) rather than surface connections (shared vocabulary)—similar underlying patterns are more reliable than superficial resemblances",
+            "Test your connections by prediction—if you've connected correctly, your existing knowledge should help predict new features of the concept; if predictions fail, the connection is likely false",
+            "Seek disconfirming connections—look for ways the new concept contradicts or limits your existing understanding, which reveals where your current framework is incomplete"
+          ],
+          "correct": 0,
+          "explanation": "The sequence matters: understand first, then connect. When you rush to connect new concepts to existing knowledge, you risk 'domesticating' them—forcing them into familiar categories where they lose their novel insights. This is how we miss paradigm shifts: we interpret revolutionary ideas as minor variations on what we already know. The practice is to sit with confusion, to let new concepts be genuinely strange before finding where they fit. Once you understand on the concept's own terms, connections emerge naturally and accurately. The other strategies (structural over surface, testing predictions, seeking contradictions) are all valuable, but they work best after you've done the harder work of letting new knowledge be new. Premature connection-making is a form of intellectual closure that protects existing beliefs from challenge."
+        },
+        {
+          "question": "The story says that prediction proves comprehension: 'If X happens, then Y will probably follow because...' But many expert predictions fail—economists miss recessions, doctors misdiagnose, engineers build things that break. What does this say about the relationship between understanding and prediction?",
+          "options": [
+            "Prediction requires understanding plus accurate information about initial conditions—experts understand the mechanisms but often lack the data needed to predict specific outcomes in complex systems",
+            "Prediction in complex systems is fundamentally limited by chaos and emergence—even perfect understanding can't predict outcomes when small differences get amplified or new properties emerge",
+            "Failed predictions often reveal incomplete understanding—what looks like 'prediction failure' is actually 'comprehension failure' where we thought we understood but missed crucial factors",
+            "Understanding and prediction are different types of knowledge—you can deeply understand without being able to predict (explanatory knowledge) or predict without understanding (pattern recognition in data)"
           ],
           "correct": 1,
-          "explanation": "When you master the art of questions, problems become puzzles to solve and confusion becomes curiosity. You see the world differently—and that's your superpower!"
+          "explanation": "Complex systems have inherent limits to predictability, even with complete understanding of components. An economist might perfectly understand individual human behavior and market mechanisms, yet still can't predict recessions because tiny variations in timing or confidence amplify unpredictably. A doctor understands disease processes but can't always predict which patient will respond to treatment because complex biological systems have emergent properties. This doesn't mean prediction is useless—it means we should evaluate predictions appropriately. In simple systems, understanding enables precise prediction. In complex systems, understanding enables understanding the distribution of possibilities, the conditions that make outcomes more likely, and the fundamental limits on predictability itself. Mature comprehension includes knowing what kind of system you're dealing with and what type of prediction is possible."
+        },
+        {
+          "question": "The story describes a transformation where 'problems become puzzles to solve' and 'confusion becomes curiosity.' But isn't there real value in feeling stuck, frustrated, or genuinely confused? What might be lost in this relentlessly positive framing?",
+          "options": [
+            "The framing creates pressure to always feel curious rather than acknowledging that confusion is often legitimately uncomfortable—it risks making people feel bad about natural emotional responses to difficulty",
+            "It underestimates how often problems are genuinely unsolvable with available resources—treating everything as a 'puzzle to solve' can lead to wasted effort on problems that require systemic change rather than individual cleverness",
+            "It can minimize the emotional and social dimensions of learning—sometimes confusion signals that something violates your values or existing commitments, and 'curiosity' might bypass important reflection",
+            "The transformation assumes intellectual engagement is always the appropriate response, but sometimes confusion is a signal to stop, step back, or question whether this is worth understanding at all"
+          ],
+          "correct": 2,
+          "explanation": "Confusion and frustration carry information beyond 'I don't understand yet.' Sometimes they signal value conflicts ('this solution violates something I care about'), misalignment with your goals ('why am I spending energy on this?'), or legitimate concerns ('this explanation doesn't account for harm'). The 'problems become puzzles' frame treats everything as a purely intellectual challenge, but learning happens in contexts of power, identity, and values. A student confused about homework might be sensing that the assignment is genuinely meaningless, not lacking curiosity. An employee confused about company strategy might be recognizing ethical problems, not lacking comprehension. The art of questions includes asking 'Should I understand this?' and 'What am I not questioning by accepting this framing?' Pure curiosity without critical judgment can lead you to understand deeply while missing entirely whether you should be participating at all."
+        },
+        {
+          "question": "If questions are the tool and comprehension is the result, what is the relationship between the two? Can you have great questions that don't lead to comprehension, or deep comprehension without having asked many questions?",
+          "options": [
+            "Questions and comprehension are directly linked—the quality of your comprehension is strictly determined by the quality of questions you asked, making questioning the reliable path to understanding",
+            "Great questions can fail to yield comprehension if you don't have access to good answers—questions are necessary but not sufficient; you need both question-generation ability and knowledge sources",
+            "Deep comprehension can arise without explicit questioning through immersion and practice—sometimes understanding develops tacitly through experience before you can articulate what questions you've answered",
+            "The relationship is bidirectional—questions lead to comprehension, but comprehension also enables better questions, creating a positive feedback loop where understanding and questioning ability co-evolve"
+          ],
+          "correct": 3,
+          "explanation": "Questions and comprehension form a feedback loop rather than a linear path. Better questions lead to deeper understanding, which enables you to ask even better questions, which leads to deeper understanding still. A novice asks 'What is photosynthesis?' An intermediate student asks 'Why do plants need both light and dark reactions?' An expert asks 'How did the energy-coupling mechanism between photosystems evolve?' Each level of understanding unlocks new questions impossible to ask before. This means 'learning to question' and 'building comprehension' aren't separate—they're intertwined. You don't master questioning and then apply it; you improve both simultaneously through cycles of questioning and sense-making. The framework of asking six levels deep is a scaffold for this process, forcing the loop to continue past where it would naturally stop."
         }
       ]
     }
