@@ -1,0 +1,54 @@
+{
+  "pageId": "challenge-intros",
+  "context": "challenge",
+  "stories": [
+    {
+      "id": "prompt-craft-intro",
+      "title": "Prompt Craft",
+      "steps": [
+        {
+          "nodeId": "thinking",
+          "title": "Your Thinking",
+          "narration": "The prompt is how you translate your thinking into AI instructions."
+        },
+        {
+          "nodeId": "output",
+          "title": "Great Output",
+          "narration": "A great prompt leads to a great output. Let's craft one."
+        }
+      ]
+    },
+    {
+      "id": "context-engineering-intro",
+      "title": "Context Engineering",
+      "steps": [
+        {
+          "nodeId": "raw-info",
+          "title": "The Right Context",
+          "narration": "AI can't read your mind. It needs the right context to understand your problem."
+        },
+        {
+          "nodeId": "accuracy",
+          "title": "Accuracy Follows",
+          "narration": "Structure your context well, and accuracy follows naturally."
+        }
+      ]
+    },
+    {
+      "id": "visual-challenge-intro",
+      "title": "Visual Challenge",
+      "steps": [
+        {
+          "nodeId": "concept",
+          "title": "Motion Stories",
+          "narration": "Every visualization tells a story through motion."
+        },
+        {
+          "nodeId": "animation",
+          "title": "Feel It",
+          "narration": "Transform your concept into something users can feel."
+        }
+      ]
+    }
+  ]
+}

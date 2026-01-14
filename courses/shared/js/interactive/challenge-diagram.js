@@ -407,8 +407,8 @@ class ChallengeDiagram {
       }
     }
 
-    // Play audio if enabled
-    if (this.options.audioEnabled && this.audioEngine && step.narration) {
+    // Play audio if enabled (check both narration and caption)
+    if (this.options.audioEnabled && this.audioEngine && (step.narration || step.caption)) {
       await this.narrateStep(step, stepIndex);
     } else {
       // Wait for step duration
@@ -466,11 +466,18 @@ class ChallengeDiagram {
   }
 
   async narrateStep(step, stepIndex) {
-    if (!this.audioEngine) return;
+    if (!this.audioEngine) {
+      console.log('ChallengeDiagram: No audio engine');
+      return;
+    }
+    
+    console.log('ChallengeDiagram: Playing audio for', this.story.id, 'step', stepIndex);
     
     try {
       await this.audioEngine.playStep(this.story.id, stepIndex);
+      console.log('ChallengeDiagram: Audio finished for step', stepIndex);
     } catch (e) {
+      console.error('ChallengeDiagram: Audio failed', e);
       // Audio failed, fall back to duration-based timing
       await this.wait(this.options.stepDuration);
     }

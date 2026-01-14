@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Challenges | AutoNateAI Learning Hub</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Critical styles - must load before body renders -->
+  <style>
+    .dashboard { display: none !important; }
+    .dashboard.ready { display: flex !important; }
+    .auth-loading {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0a0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .auth-loading.hidden { display: none; }
+    .loading-content { text-align: center; color: #e8e8f0; }
+    .loading-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .loading-spinner {
+      width: 40px; height: 40px;
+      border: 3px solid rgba(121, 134, 203, 0.3);
+      border-top-color: #7986cb;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  <link rel="stylesheet" href="../shared/css/challenge-interactive.css">
+  
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+</head>
+<body>
+  
+  <!-- Loading Screen -->
+  <div class="auth-loading" id="auth-loading">
+    <div class="loading-content">
+      <div class="loading-icon">⚡</div>
+      <div class="loading-spinner"></div>
+      <p>Loading challenges...</p>
+    </div>
+  </div>
+  
+  <div class="dashboard" id="dashboard-content">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <a href="../index.html" class="sidebar-logo">
+        <div class="logo-icon">🏛️</div>
+        <span class="logo-text">AutoNateAI</span>
+      </a>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Main</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="courses.html" class="nav-link">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Course Library</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="challenges.html" class="nav-link active">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Daily Challenges</span>
+                <span class="nav-badge" id="challenges-remaining">3</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Learning</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-text">Achievements</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Community</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
+                <span class="nav-icon">💬</span>
+                <span class="nav-text">Discord</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leaderboard.html" class="nav-link">
+                <span class="nav-icon">🏅</span>
+                <span class="nav-text">Leaderboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-section-title">Account</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="profile.html" class="nav-link">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="logout-link">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-card" id="user-card">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-streak">
+              <span>🔥</span>
+              <span id="user-streak">0</span> day streak
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="sidebar-toggle" id="sidebar-toggle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+    </aside>
+    
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h1 class="page-title">Daily Challenges</h1>
+        </div>
+        
+        <div class="header-right">
+          <div class="header-actions">
+            <button class="action-btn" title="Notifications">🔔</button>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Content -->
+      <div class="content-area">
+        
+        <!-- Streak Display -->
+        <div class="streak-display" id="streak-display">
+          <span class="streak-icon">🔥</span>
+          <div class="streak-info">
+            <div class="streak-count" id="streak-count">0 day streak</div>
+            <div class="streak-label">Complete all 3 daily challenges to continue your streak!</div>
+          </div>
+        </div>
+        
+        <!-- Today's Date Header -->
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" id="today-header">Today's Challenges</h2>
+          <div class="challenge-progress-indicator">
+            <span id="completed-count">0</span>/3 completed
+          </div>
+        </div>
+        
+        <!-- Challenges Grid -->
+        <div class="daily-challenges-grid" id="challenges-grid">
+          <!-- Challenge cards will be inserted here -->
+        </div>
+        
+        <!-- Previous Challenges Section -->
+        <div class="section-header" style="margin-top: 3rem; margin-bottom: 1rem;">
+          <h3 class="section-title">Challenge History</h3>
+        </div>
+        
+        <div class="challenge-history" id="challenge-history">
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Your past challenge completions will appear here.
+          </p>
+        </div>
+        
+      </div>
+    </main>
+    
+  </div>
+  
+  <!-- Scripts -->
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  <script src="../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../shared/js/interactive/audio-engine.js"></script>
+  <script src="../shared/js/interactive/challenge-diagram.js"></script>
+  <script src="../shared/js/activity-tracker.js"></script>
+  
+  <script>
+    // Today's date for challenge IDs
+    const today = new Date().toISOString().split('T')[0];
+    
+    // Challenge intro story data
+    const challengeIntros = {
+      'prompt-craft-intro': {
+        id: 'prompt-craft-intro',
+        elements: [
+          { data: { id: 'thinking', label: '🧠 Your Thinking', type: 'concept' } },
+          { data: { id: 'prompt', label: '📝 Prompt', type: 'data' } },
+          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
+          { data: { id: 'output', label: '✨ Output', type: 'example' } },
+          { data: { source: 'thinking', target: 'prompt' } },
+          { data: { source: 'prompt', target: 'ai' } },
+          { data: { source: 'ai', target: 'output' } }
+        ],
+        steps: [
+          { nodeId: 'thinking', caption: 'The prompt is how you translate your thinking into AI instructions.' },
+          { nodeId: 'output', edges: [{ from: 'thinking', to: 'prompt' }, { from: 'prompt', to: 'ai' }, { from: 'ai', to: 'output' }], caption: 'A great prompt leads to a great output. Let\'s craft one.' }
+        ]
+      },
+      'context-engineering-intro': {
+        id: 'context-engineering-intro',
+        elements: [
+          { data: { id: 'raw-info', label: '📚 Raw Information', type: 'external' } },
+          { data: { id: 'context', label: '🧩 Structured Context', type: 'concept' } },
+          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
+          { data: { id: 'accuracy', label: '🎯 Accurate Results', type: 'example' } },
+          { data: { source: 'raw-info', target: 'context' } },
+          { data: { source: 'context', target: 'ai' } },
+          { data: { source: 'ai', target: 'accuracy' } }
+        ],
+        steps: [
+          { nodeId: 'raw-info', caption: 'AI can\'t read your mind. It needs the right context.' },
+          { nodeId: 'accuracy', edges: [{ from: 'raw-info', to: 'context' }, { from: 'context', to: 'ai' }, { from: 'ai', to: 'accuracy' }], caption: 'Structure your context well, and accuracy follows.' }
+        ]
+      },
+      'visual-challenge-intro': {
+        id: 'visual-challenge-intro',
+        elements: [
+          { data: { id: 'concept', label: '💭 Concept', type: 'concept' } },
+          { data: { id: 'motion', label: '🎬 Motion Design', type: 'data' } },
+          { data: { id: 'animation', label: '✨ Animation', type: 'example' } },
+          { data: { source: 'concept', target: 'motion' } },
+          { data: { source: 'motion', target: 'animation' } }
+        ],
+        steps: [
+          { nodeId: 'concept', caption: 'Every visualization tells a story through motion.' },
+          { nodeId: 'animation', edges: [{ from: 'concept', to: 'motion' }, { from: 'motion', to: 'animation' }], caption: 'Transform your concept into something users can feel.' }
+        ]
+      }
+    };
+    
+    // Today's challenges data
+    const todaysChallenges = [
+      {
+        id: `challenge-prompt-${today}`,
+        category: 'prompt-craft',
+        categoryLabel: 'PROMPT CRAFT',
+        title: 'The Explanation Challenge',
+        description: 'Write a prompt that makes AI explain quantum computing using only cooking metaphors.',
+        xp: 50,
+        introStory: 'prompt-craft-intro',
+        evaluationType: 'length-check',
+        minLength: 50
+      },
+      {
+        id: `challenge-context-${today}`,
+        category: 'context-engineering',
+        categoryLabel: 'CONTEXT ENGINEERING',
+        title: 'The Refactor Brief',
+        description: 'Given a 200-line legacy function, write the minimal context needed for AI to refactor it safely.',
+        xp: 75,
+        introStory: 'context-engineering-intro',
+        evaluationType: 'keyword-match',
+        keywords: 'function,dependencies,constraints,expected behavior,edge cases'
+      },
+      {
+        id: `challenge-visual-${today}`,
+        category: 'visual',
+        categoryLabel: 'VISUAL',
+        title: 'The Animation Challenge',
+        description: 'Create an anime.js animation that visualizes a sorting algorithm in action.',
+        xp: 100,
+        introStory: 'visual-challenge-intro',
+        evaluationType: 'length-check',
+        minLength: 100
+      }
+    ];
+    
+    // Render challenge card (authenticated - full interactive)
+    function renderChallengeCard(challenge) {
+      return `
+        <div class="challenge-card" 
+             data-activity="${challenge.id}" 
+             data-type="challenge"
+             data-points="${challenge.xp}"
+             data-date="${today}"
+             data-category="${challenge.category}"
+             data-evaluation-type="${challenge.evaluationType}"
+             ${challenge.keywords ? `data-keywords="${challenge.keywords}"` : ''}
+             ${challenge.minLength ? `data-min-length="${challenge.minLength}"` : ''}>
+          
+          <!-- Challenge Intro Diagram -->
+          <div class="challenge-intro-container">
+            <div class="challenge-diagram" id="diagram-${challenge.id}" data-story="${challenge.introStory}"></div>
+            <div class="challenge-caption"></div>
+            <div class="audio-settings">
+              <label>🎤 Voice:</label>
+              <select class="voice-select">
+                <option value="ballad">Female Storyteller</option>
+                <option value="echo">Male UK Storyteller</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Challenge Header -->
+          <div class="challenge-header">
+            <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
+            <span class="challenge-xp">+${challenge.xp} XP</span>
+          </div>
+          
+          <!-- Challenge Content -->
+          <div class="challenge-content">
+            <h3 class="challenge-title">${challenge.title}</h3>
+            <p class="challenge-description">${challenge.description}</p>
+            
+            <!-- Challenge Input -->
+            <div class="challenge-input-area">
+              <textarea class="challenge-input" placeholder="Enter your response here..."></textarea>
+              <button class="challenge-submit" disabled>Submit Answer</button>
+            </div>
+            
+            <!-- Feedback Area -->
+            <div class="challenge-feedback"></div>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Initialize challenge diagrams
+    function initChallengeDiagrams() {
+      todaysChallenges.forEach(challenge => {
+        const diagramId = `diagram-${challenge.id}`;
+        const container = document.getElementById(diagramId);
+        if (!container) return;
+        
+        const story = challengeIntros[challenge.introStory];
+        if (!story) return;
+        
+        // Initialize audio engine - use relative path from dashboard folder
+        const audioEngine = new AudioNarrationEngine('../challenges/audio');
+        
+        // Create diagram
+        const diagram = new ChallengeDiagram(diagramId, story, {
+          audioEngine,
+          audioEnabled: true,
+          canvasHeight: 200
+        });
+        
+        // Store reference
+        container._challengeDiagram = diagram;
+      });
+    }
+    
+    // Update completed count
+    function updateCompletedCount() {
+      const completed = document.querySelectorAll('.challenge-card.challenge-complete').length;
+      document.getElementById('completed-count').textContent = completed;
+      document.getElementById('challenges-remaining').textContent = 3 - completed;
+      
+      if (completed === 3) {
+        document.querySelector('.streak-label').textContent = '🎉 All challenges complete! Streak continued!';
+      }
+    }
+    
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', async () => {
+      const loadingScreen = document.getElementById('auth-loading');
+      const dashboardContent = document.getElementById('dashboard-content');
+      
+      // Initialize Firebase
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        loadingScreen.innerHTML = '<div class="loading-content"><p>Error loading. Please refresh.</p></div>';
+        return;
+      }
+      
+      window.AuthService.init();
+      
+      // Wait for auth state
+      const user = await window.AuthService.waitForAuthState();
+      
+      if (!user) {
+        // Not logged in, redirect to login with return URL
+        window.AuthService.setRedirectUrl(window.location.href);
+        window.location.href = '../auth/login.html';
+        return;
+      }
+      
+      // User is logged in
+      loadingScreen.classList.add('hidden');
+      dashboardContent.classList.add('ready');
+      
+      // Load user info
+      loadUserInfo(user);
+      
+      // Set today's date in header
+      const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+      document.getElementById('today-header').textContent = 
+        `Today's Challenges — ${new Date().toLocaleDateString('en-US', dateOptions)}`;
+      
+      // Render challenges
+      const grid = document.getElementById('challenges-grid');
+      grid.innerHTML = todaysChallenges.map(renderChallengeCard).join('');
+      
+      // Initialize diagrams
+      setTimeout(() => {
+        initChallengeDiagrams();
+        
+        // Initialize Activity Tracker
+        if (window.ActivityTracker) {
+          ActivityTracker.init('daily', today);
+          
+          // Watch for completions
+          const observer = new MutationObserver(updateCompletedCount);
+          observer.observe(grid, { subtree: true, attributes: true, attributeFilter: ['class'] });
+        }
+      }, 100);
+      
+      // Load streak data
+      await loadStreakData();
+      
+      // Setup UI
+      setupSidebar();
+      setupLogout();
+      
+      // Animate cards
+      anime({
+        targets: '.challenge-card',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(100),
+        duration: 600,
+        easing: 'easeOutCubic'
+      });
+      
+      // Auth state listener
+      window.AuthService.onAuthStateChanged((user) => {
+        if (!user) {
+          window.location.href = '../auth/login.html';
+        }
+      });
+    });
+    
+    // Load user info
+    function loadUserInfo(user) {
+      const displayName = user.displayName || user.email.split('@')[0];
+      
+      document.getElementById('user-name').textContent = displayName;
+      
+      const avatar = document.getElementById('user-avatar');
+      if (user.photoURL) {
+        avatar.innerHTML = `<img src="${user.photoURL}" alt="Avatar">`;
+      } else {
+        avatar.textContent = displayName.charAt(0).toUpperCase();
+      }
+    }
+    
+    // Load streak data
+    async function loadStreakData() {
+      try {
+        if (window.DataService) {
+          const stats = await window.DataService.getUserStats();
+          const streak = stats?.currentStreak || 0;
+          
+          document.getElementById('user-streak').textContent = streak;
+          document.getElementById('streak-count').textContent = `${streak} day streak`;
+        }
+      } catch (error) {
+        console.error('Error loading streak:', error);
+      }
+    }
+    
+    // Setup sidebar
+    function setupSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.getElementById('sidebar-toggle');
+      const overlay = document.getElementById('sidebar-overlay');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      
+      toggle?.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+      });
+      
+      if (localStorage.getItem('sidebarCollapsed') === 'true') {
+        sidebar.classList.add('collapsed');
+      }
+      
+      mobileBtn?.addEventListener('click', () => sidebar.classList.add('open'));
+      overlay?.addEventListener('click', () => sidebar.classList.remove('open'));
+    }
+    
+    // Setup logout
+    function setupLogout() {
+      document.getElementById('logout-link')?.addEventListener('click', async (e) => {
+        e.preventDefault();
+        await window.AuthService.logout();
+        window.location.href = '../index.html';
+      });
+    }
+  </script>
+</body>
+</html>

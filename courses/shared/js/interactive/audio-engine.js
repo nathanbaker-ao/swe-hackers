@@ -32,19 +32,35 @@ class AudioNarrationEngine {
     this.resolvePromise = null;
     this.manifest = null;
     this.currentVoice = 'ballad'; // Default voice
+    this.manifestLoaded = false;
+    this.manifestPromise = null;
     
-    this.loadManifest();
+    this.manifestPromise = this.loadManifest();
   }
 
   async loadManifest() {
     try {
+      console.log('AudioEngine: Loading manifest from', `${this.audioBasePath}/manifest.json`);
       const response = await fetch(`${this.audioBasePath}/manifest.json`);
       this.manifest = await response.json();
       this.currentVoice = this.manifest.defaultVoice || 'ballad';
-      console.log('Audio manifest loaded. Voices:', Object.keys(this.manifest.voices || {}));
+      this.manifestLoaded = true;
+      console.log('AudioEngine: Manifest loaded successfully');
+      console.log('AudioEngine: Voices:', Object.keys(this.manifest.voices || {}));
+      console.log('AudioEngine: Stories:', this.manifest.stories);
+      console.log('AudioEngine: Current voice:', this.currentVoice);
     } catch (e) {
-      console.warn('Could not load audio manifest:', e);
+      console.error('AudioEngine: Failed to load manifest:', e);
+      this.manifestLoaded = true; // Mark as loaded even on error to prevent infinite waits
     }
+  }
+
+  /**
+   * Wait for the manifest to be loaded
+   */
+  async waitForManifest() {
+    if (this.manifestLoaded) return;
+    await this.manifestPromise;
   }
 
   getVoices() {
@@ -64,10 +80,26 @@ class AudioNarrationEngine {
   }
 
   getTimestamps(storyId, stepIndex) {
-    if (!this.manifest || !this.manifest[this.currentVoice]) return null;
+    console.log('AudioEngine: getTimestamps', { storyId, stepIndex, voice: this.currentVoice });
+    
+    if (!this.manifest) {
+      console.log('AudioEngine: No manifest loaded');
+      return null;
+    }
+    if (!this.manifest[this.currentVoice]) {
+      console.log('AudioEngine: Voice not found in manifest:', this.currentVoice);
+      return null;
+    }
+    
     const voiceData = this.manifest[this.currentVoice];
-    if (!voiceData[storyId]) return null;
-    return voiceData[storyId][stepIndex];
+    if (!voiceData[storyId]) {
+      console.log('AudioEngine: Story not found:', storyId, 'Available stories:', Object.keys(voiceData));
+      return null;
+    }
+    
+    const timestamps = voiceData[storyId][stepIndex];
+    console.log('AudioEngine: Found timestamps:', !!timestamps);
+    return timestamps;
   }
 
   setMuted(muted) {
@@ -123,11 +155,15 @@ class AudioNarrationEngine {
    * @param {number} stepIndex - The step index within the story
    * @returns {Promise} Resolves when audio finishes or is stopped
    */
-  playStep(storyId, stepIndex) {
+  async playStep(storyId, stepIndex) {
+    // Wait for manifest to load first
+    await this.waitForManifest();
+    
     return new Promise((resolve) => {
       const timestamps = this.getTimestamps(storyId, stepIndex);
       
       if (!timestamps || this.isMuted) {
+        console.log('Audio skipped:', { storyId, stepIndex, hasTimestamps: !!timestamps, isMuted: this.isMuted });
         resolve();
         return;
       }

@@ -1,0 +1,75 @@
+{
+  "storyId": "prompt-craft-intro",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Your Thinking. The prompt is how you translate your thinking into AI instructions.",
+  "duration": 7.650000095367432,
+  "words": [
+    {
+      "word": "Your",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "thinking",
+      "start": 0.8799999952316284,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "The",
+      "start": 2.180000066757202,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "prompt",
+      "start": 2.440000057220459,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "is",
+      "start": 2.7200000286102295,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "how",
+      "start": 3.200000047683716,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "you",
+      "start": 3.380000114440918,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "translate",
+      "start": 3.680000066757202,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "your",
+      "start": 4.179999828338623,
+      "end": 4.5
+    },
+    {
+      "word": "thinking",
+      "start": 4.5,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "into",
+      "start": 4.840000152587891,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "AI",
+      "start": 5.460000038146973,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "instructions",
+      "start": 5.920000076293945,
+      "end": 6.460000038146973
+    }
+  ]
+}

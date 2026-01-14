@@ -1,0 +1,95 @@
+{
+  "storyId": "context-engineering-intro",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Right Context. AI can't read your mind. It needs the right context to understand your problem.",
+  "duration": 8.0600004196167,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3799999952316284
+    },
+    {
+      "word": "right",
+      "start": 0.3799999952316284,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "context",
+      "start": 0.8799999952316284,
+      "end": 1.5
+    },
+    {
+      "word": "AI",
+      "start": 2.640000104904175,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "can't",
+      "start": 2.9000000953674316,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "read",
+      "start": 3.4000000953674316,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "your",
+      "start": 3.6600000858306885,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "mind",
+      "start": 4.139999866485596,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "It",
+      "start": 4.820000171661377,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "needs",
+      "start": 4.900000095367432,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "the",
+      "start": 5.119999885559082,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "right",
+      "start": 5.340000152587891,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "context",
+      "start": 5.840000152587891,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "to",
+      "start": 6.139999866485596,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "understand",
+      "start": 6.71999979019165,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "your",
+      "start": 7.239999771118164,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "problem",
+      "start": 7.519999980926514,
+      "end": 7.78000020980835
+    }
+  ]
+}

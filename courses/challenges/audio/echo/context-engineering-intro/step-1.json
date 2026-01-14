@@ -1,0 +1,60 @@
+{
+  "storyId": "context-engineering-intro",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Accuracy Follows. Structure your context well, and accuracy follows naturally.",
+  "duration": 6.5,
+  "words": [
+    {
+      "word": "Accuracy",
+      "start": 0,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "follows",
+      "start": 0.8999999761581421,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "Structure",
+      "start": 2.1600000858306885,
+      "end": 2.5
+    },
+    {
+      "word": "your",
+      "start": 2.5,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "context",
+      "start": 2.880000114440918,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "well",
+      "start": 3.299999952316284,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "and",
+      "start": 4.21999979019165,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "accuracy",
+      "start": 4.579999923706055,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "follows",
+      "start": 4.940000057220459,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "naturally",
+      "start": 5.519999980926514,
+      "end": 6
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "storyId": "visual-challenge-intro",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Motion Stories. Every visualization tells a story through motion.",
+  "duration": 5.349999904632568,
+  "words": [
+    {
+      "word": "Motion",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "stories",
+      "start": 0.6399999856948853,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Every",
+      "start": 1.840000033378601,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "visualization",
+      "start": 2.259999990463257,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "tells",
+      "start": 3.0999999046325684,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "a",
+      "start": 3.5799999237060547,
+      "end": 4
+    },
+    {
+      "word": "story",
+      "start": 4,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "through",
+      "start": 4.099999904632568,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "motion",
+      "start": 4.559999942779541,
+      "end": 4.940000057220459
+    }
+  ]
+}

@@ -10,15 +10,15 @@
     }
   },
   "defaultVoice": "ballad",
-  "generatedAt": "2026-01-14T05:04:10.261Z",
+  "generatedAt": "2026-01-14T05:04:32.632Z",
   "stories": [
     "prompt-craft-intro",
     "context-engineering-intro",
     "visual-challenge-intro"
   ],
   "ballad": {
-    "prompt-craft-intro": [
-      {
+    "prompt-craft-intro": {
+      "0": {
         "storyId": "prompt-craft-intro",
         "stepId": "step-0",
         "voice": "ballad",
@@ -93,7 +93,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "prompt-craft-intro",
         "stepId": "step-1",
         "voice": "ballad",
@@ -168,9 +168,9 @@
           }
         ]
       }
-    ],
-    "context-engineering-intro": [
-      {
+    },
+    "context-engineering-intro": {
+      "0": {
         "storyId": "context-engineering-intro",
         "stepId": "step-0",
         "voice": "ballad",
@@ -265,7 +265,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "context-engineering-intro",
         "stepId": "step-1",
         "voice": "ballad",
@@ -325,9 +325,9 @@
           }
         ]
       }
-    ],
-    "visual-challenge-intro": [
-      {
+    },
+    "visual-challenge-intro": {
+      "0": {
         "storyId": "visual-challenge-intro",
         "stepId": "step-0",
         "voice": "ballad",
@@ -382,7 +382,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "visual-challenge-intro",
         "stepId": "step-1",
         "voice": "ballad",
@@ -442,11 +442,11 @@
           }
         ]
       }
-    ]
+    }
   },
   "echo": {
-    "prompt-craft-intro": [
-      {
+    "prompt-craft-intro": {
+      "0": {
         "storyId": "prompt-craft-intro",
         "stepId": "step-0",
         "voice": "echo",
@@ -521,7 +521,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "prompt-craft-intro",
         "stepId": "step-1",
         "voice": "echo",
@@ -596,9 +596,9 @@
           }
         ]
       }
-    ],
-    "context-engineering-intro": [
-      {
+    },
+    "context-engineering-intro": {
+      "0": {
         "storyId": "context-engineering-intro",
         "stepId": "step-0",
         "voice": "echo",
@@ -693,7 +693,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "context-engineering-intro",
         "stepId": "step-1",
         "voice": "echo",
@@ -753,9 +753,9 @@
           }
         ]
       }
-    ],
-    "visual-challenge-intro": [
-      {
+    },
+    "visual-challenge-intro": {
+      "0": {
         "storyId": "visual-challenge-intro",
         "stepId": "step-0",
         "voice": "echo",
@@ -810,7 +810,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "visual-challenge-intro",
         "stepId": "step-1",
         "voice": "echo",
@@ -870,6 +870,6 @@
           }
         ]
       }
-    ]
+    }
   }
 }

@@ -1,0 +1,60 @@
+{
+  "storyId": "visual-challenge-intro",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Feel It. Transform your concept into something users can feel.",
+  "duration": 5.25,
+  "words": [
+    {
+      "word": "Feel",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "it",
+      "start": 0.5,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Transform",
+      "start": 2,
+      "end": 2
+    },
+    {
+      "word": "your",
+      "start": 2,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "concept",
+      "start": 2.319999933242798,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "into",
+      "start": 2.8399999141693115,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "something",
+      "start": 3.380000114440918,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "users",
+      "start": 3.759999990463257,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "can",
+      "start": 4.199999809265137,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "feel",
+      "start": 4.559999942779541,
+      "end": 4.840000152587891
+    }
+  ]
+}

@@ -69,6 +69,18 @@
     </div>
   </nav>
   
+  <!-- Loading Overlay (while checking auth) -->
+  <div id="auth-check-loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-primary, #0a0a0f); z-index: 9999; display: flex; align-items: center; justify-content: center;">
+    <div style="text-align: center; color: var(--text-primary, #e8e8f0);">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+      <div style="width: 40px; height: 40px; border: 3px solid rgba(121, 134, 203, 0.3); border-top-color: #7986cb; border-radius: 50%; margin: 0 auto 1rem; animation: spin 0.8s linear infinite;"></div>
+      <p>Loading challenges...</p>
+    </div>
+  </div>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+  
   <!-- Hero -->
   <section class="section blog-hero">
     <div class="section-container">
@@ -396,6 +408,12 @@
     </div>
   </footer>
   
+  <!-- Firebase (for auth check) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+  
   <!-- Interactive Components -->
   <script src="shared/js/interactive/diagram-utils.js"></script>
   <script src="shared/js/interactive/audio-engine.js"></script>
@@ -498,22 +516,47 @@
     function renderChallengeCard(challenge, isAuthenticated) {
       const introStory = challengeIntros[challenge.introStory];
       
+      // Common elements - intro video is always shown (it's the teaser!)
+      const introSection = `
+        <!-- Challenge Intro Diagram - Always visible as teaser -->
+        <div class="challenge-intro-container">
+          <div class="challenge-diagram" id="diagram-${challenge.id}" data-story="${challenge.introStory}"></div>
+          <div class="challenge-caption"></div>
+          <div class="audio-settings">
+            <label>🎤 Voice:</label>
+            <select class="voice-select">
+              <option value="ballad">Female Storyteller</option>
+              <option value="echo">Male UK Storyteller</option>
+            </select>
+          </div>
+        </div>
+      `;
+      
       if (!isAuthenticated) {
-        // Preview mode for unauthenticated users
+        // Preview mode - show intro video but lock the submission
         return `
-          <div class="challenge-card challenge-locked">
+          <div class="challenge-card">
+            ${introSection}
+            
+            <!-- Challenge Header -->
             <div class="challenge-header">
               <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
               <span class="challenge-xp">+${challenge.xp} XP</span>
             </div>
+            
+            <!-- Challenge Content -->
             <div class="challenge-content">
               <h3 class="challenge-title">${challenge.title}</h3>
               <p class="challenge-description">${challenge.description}</p>
-            </div>
-            <div class="challenge-lock-message">
-              <div class="lock-icon">🔒</div>
-              <p>Sign in to attempt this challenge</p>
-              <a href="auth/login.html" class="btn">Sign In</a>
+              
+              <!-- Locked Input Area -->
+              <div class="challenge-input-area challenge-locked-input">
+                <div class="lock-overlay">
+                  <span class="lock-icon">🔒</span>
+                  <p>Sign in to attempt this challenge</p>
+                  <a href="dashboard/challenges.html" class="btn btn-primary go-to-challenge-btn">Start Challenge</a>
+                </div>
+              </div>
             </div>
           </div>
         `;
@@ -531,18 +574,7 @@
              ${challenge.keywords ? `data-keywords="${challenge.keywords}"` : ''}
              ${challenge.minLength ? `data-min-length="${challenge.minLength}"` : ''}>
           
-          <!-- Challenge Intro Diagram -->
-          <div class="challenge-intro-container">
-            <div class="challenge-diagram" id="diagram-${challenge.id}" data-story="${challenge.introStory}"></div>
-            <div class="challenge-caption"></div>
-            <div class="audio-settings">
-              <label>🎤 Voice:</label>
-              <select class="voice-select">
-                <option value="ballad">Female Storyteller</option>
-                <option value="echo">Male UK Storyteller</option>
-              </select>
-            </div>
-          </div>
+          ${introSection}
           
           <!-- Challenge Header -->
           <div class="challenge-header">
@@ -602,47 +634,44 @@
       
       // Check if user is authenticated
       let isAuthenticated = false;
-      let userStreak = 0;
       
-      if (window.AuthService) {
+      // Initialize Firebase and check auth
+      if (window.FirebaseApp && window.AuthService) {
         try {
-          await window.AuthService.waitForAuthState?.();
-          const user = window.AuthService.getUser?.();
+          window.FirebaseApp.init();
+          window.AuthService.init();
+          
+          const user = await window.AuthService.waitForAuthState();
           isAuthenticated = !!user;
           
-          if (isAuthenticated && window.DataService) {
-            // Load user streak
-            const streakData = await window.DataService.getChallengeStreak?.();
-            userStreak = streakData?.currentStreak || 0;
+          if (isAuthenticated) {
+            // User is logged in - redirect to the dashboard challenges page
+            console.log('User is authenticated, redirecting to dashboard challenges...');
+            window.location.href = 'dashboard/challenges.html';
+            return;
           }
         } catch (e) {
           console.log('Auth check failed:', e);
         }
       }
       
-      // Render challenges
-      grid.innerHTML = todaysChallenges.map(c => renderChallengeCard(c, isAuthenticated)).join('');
+      // User is NOT authenticated - show preview/marketing page
+      grid.innerHTML = todaysChallenges.map(c => renderChallengeCard(c, false)).join('');
       
-      if (isAuthenticated) {
-        // Show authenticated UI
-        signupCta.style.display = 'none';
-        streakSection.style.display = 'block';
-        document.getElementById('streak-count').textContent = `${userStreak} day streak`;
-        subtitle.textContent = 'Complete all 3 challenges to continue your streak!';
-        
-        // Initialize diagrams after render
-        setTimeout(() => {
-          initChallengeDiagrams();
-          
-          // Initialize Activity Tracker
-          if (window.ActivityTracker) {
-            ActivityTracker.init('daily', today);
-          }
-        }, 100);
-      } else {
-        // Show unauthenticated preview UI
-        signupCta.style.display = 'block';
-        streakSection.style.display = 'none';
+      // Initialize diagrams (they're visible to everyone as teasers)
+      setTimeout(() => {
+        initChallengeDiagrams();
+      }, 100);
+      
+      // Show unauthenticated preview UI
+      signupCta.style.display = 'block';
+      streakSection.style.display = 'none';
+      subtitle.textContent = 'Sign in to attempt today\'s challenges and track your progress.';
+      
+      // Hide loading overlay
+      const loadingOverlay = document.getElementById('auth-check-loading');
+      if (loadingOverlay) {
+        loadingOverlay.style.display = 'none';
       }
     }
     
