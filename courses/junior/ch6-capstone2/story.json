@@ -1,0 +1,294 @@
+{
+  "pageId": "ch6-capstone2",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "AI-Paired Development",
+    "icon": "🌟",
+    "themeColor": "star"
+  },
+  "stories": [
+    {
+      "id": "skills-ai-story",
+      "diagramId": "skills-ai",
+      "title": "The 10x Multiplier",
+      "steps": [
+        {
+          "nodeId": "your-skills",
+          "icon": "🧠",
+          "title": "Your Hard-Won Skills",
+          "narration": "Over the past five weeks, you've learned what seniors know: codebase navigation, data flow tracing, integration patterns, and design-first thinking. These aren't just skills—they're superpowers.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "ai-capabilities",
+          "edges": [{ "from": "your-skills", "to": "ai-capabilities" }],
+          "icon": "🤖",
+          "title": "AI's Raw Power",
+          "narration": "AI can generate code, explain concepts, refactor patterns, and write tests at incredible speed. But without context, it's just guessing. It doesn't know your codebase or your requirements.",
+          "connectsTo": "Your Skills"
+        },
+        {
+          "nodeId": "context-bridge",
+          "edges": [{ "from": "your-skills", "to": "context-bridge" }],
+          "icon": "🔗",
+          "title": "You Provide Context",
+          "narration": "This is where you shine. You give AI the context it needs: codebase patterns, design constraints, edge cases, and integration requirements. Context transforms AI from guessing to executing.",
+          "connectsTo": "Your Skills"
+        },
+        {
+          "nodeId": "execution",
+          "edges": [{ "from": "ai-capabilities", "to": "execution" }, { "from": "context-bridge", "to": "execution" }],
+          "icon": "⚡",
+          "title": "AI Executes",
+          "narration": "With proper context, AI executes your vision at machine speed. Code generation, boilerplate, transformations—tasks that took hours now take minutes.",
+          "connectsTo": "Context + AI"
+        },
+        {
+          "nodeId": "senior-output",
+          "edges": [{ "from": "execution", "to": "senior-output" }],
+          "icon": "🚀",
+          "title": "Senior-Level Output",
+          "narration": "The result? Senior-level productivity. Your knowledge plus AI's speed equals work that would take others days compressed into hours. You're not replaced—you're amplified!",
+          "connectsTo": "Execution"
+        }
+      ]
+    },
+    {
+      "id": "workflow-story",
+      "diagramId": "workflow",
+      "title": "The Human-AI Loop",
+      "steps": [
+        {
+          "nodeId": "design-phase",
+          "icon": "📋",
+          "title": "Phase 1: You Design",
+          "narration": "Every great AI collaboration starts with you. Requirements, diagrams, edge cases—this is where your brain matters. AI can't know what the business needs. You do.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "prompt-phase",
+          "edges": [{ "from": "design-phase", "to": "prompt-phase" }],
+          "icon": "💬",
+          "title": "Phase 2: You Prompt",
+          "narration": "Break your design into clear, specific prompts. Include context from your codebase. Specify constraints and patterns to follow. A great prompt is half the work.",
+          "connectsTo": "Design"
+        },
+        {
+          "nodeId": "execute-phase",
+          "edges": [{ "from": "prompt-phase", "to": "execute-phase" }],
+          "icon": "🤖",
+          "title": "Phase 3: AI Executes",
+          "narration": "AI generates code based on your prompt. It's fast and often impressive. But here's the key: trust but verify. AI output is a first draft, not a final answer.",
+          "connectsTo": "Prompt"
+        },
+        {
+          "nodeId": "verify-phase",
+          "edges": [{ "from": "execute-phase", "to": "verify-phase" }],
+          "icon": "🔍",
+          "title": "Phase 4: You Verify",
+          "narration": "This is critical. Does the code match your design? Does it handle your edge cases? Does it follow your codebase patterns? Your verification catches what AI misses.",
+          "connectsTo": "Execute"
+        },
+        {
+          "nodeId": "integrate-phase",
+          "edges": [{ "from": "verify-phase", "to": "integrate-phase" }],
+          "icon": "🔧",
+          "title": "Phase 5: You Integrate",
+          "narration": "Adapt AI output to your codebase style. Connect it to existing code. Add what AI missed. This integration step is where your codebase knowledge pays off.",
+          "connectsTo": "Verify"
+        },
+        {
+          "nodeId": "test-phase",
+          "edges": [{ "from": "integrate-phase", "to": "test-phase" }],
+          "icon": "✅",
+          "title": "Phase 6: You Test",
+          "narration": "AI often misses edge cases. Write tests yourself, or have AI generate them—but verify every assertion. Testing is where you ensure quality matches your standards.",
+          "connectsTo": "Integrate"
+        },
+        {
+          "nodeId": "ship-phase",
+          "edges": [{ "from": "test-phase", "to": "ship-phase" }],
+          "icon": "🚢",
+          "title": "Ship It!",
+          "narration": "You direct, AI executes, you verify. That's the loop. Master it, and you'll ship features faster than anyone thought possible while maintaining quality.",
+          "connectsTo": "Test"
+        }
+      ]
+    },
+    {
+      "id": "journey-complete-story",
+      "diagramId": "journey-complete",
+      "title": "Your Transformation",
+      "steps": [
+        {
+          "nodeId": "week-zero",
+          "icon": "📅",
+          "title": "Week Zero: Where You Started",
+          "narration": "Six weeks ago, you wrote code for tickets. You debugged with print statements. You copied API examples. You coded first and thought later. Sound familiar?",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "learned-navigation",
+          "edges": [{ "from": "week-zero", "to": "learned-navigation" }],
+          "icon": "🪨",
+          "title": "You Learned Navigation",
+          "narration": "You can now read any codebase. Trace any call stack. Find any dependency. You're not lost in unfamiliar code anymore—you're at home.",
+          "connectsTo": "Week Zero"
+        },
+        {
+          "nodeId": "learned-dataflow",
+          "edges": [{ "from": "week-zero", "to": "learned-dataflow" }],
+          "icon": "⚡",
+          "title": "You Learned Data Flow",
+          "narration": "You trace data flows systematically now. From user click to database and back. No more guessing where bugs come from—you find them methodically.",
+          "connectsTo": "Week Zero"
+        },
+        {
+          "nodeId": "learned-integration",
+          "edges": [{ "from": "week-zero", "to": "learned-integration" }],
+          "icon": "🧲",
+          "title": "You Learned Integration",
+          "narration": "You integrate with resilience patterns. Timeouts, retries, circuit breakers. Your code doesn't just work—it handles failure gracefully.",
+          "connectsTo": "Week Zero"
+        },
+        {
+          "nodeId": "learned-design",
+          "edges": [{ "from": "week-zero", "to": "learned-design" }],
+          "icon": "🏛️",
+          "title": "You Learned Design",
+          "narration": "You design before coding now. Diagrams, edge cases, interfaces. When you open your IDE, you already know what you're building.",
+          "connectsTo": "Week Zero"
+        },
+        {
+          "nodeId": "week-six",
+          "edges": [
+            { "from": "learned-navigation", "to": "week-six" },
+            { "from": "learned-dataflow", "to": "week-six" },
+            { "from": "learned-integration", "to": "week-six" },
+            { "from": "learned-design", "to": "week-six" }
+          ],
+          "icon": "🌟",
+          "title": "Week Six: Who You've Become",
+          "narration": "You're an engineer who owns features end-to-end, partners with AI, and executes at ten-x speed. The title will catch up to the skills. Keep going—you've earned this!",
+          "connectsTo": "All Skills Combined"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "skills-ai-story",
+      "questions": [
+        {
+          "question": "What makes AI 10x more powerful when you use it?",
+          "options": [
+            "Using the most expensive AI model",
+            "Providing context: codebase patterns, constraints, and edge cases",
+            "Letting AI make all the decisions",
+            "Copying AI output without changes"
+          ],
+          "correct": 1,
+          "explanation": "Your context is what transforms AI from guessing to executing. Without your knowledge of the codebase and requirements, AI is just making educated guesses."
+        },
+        {
+          "question": "What is the 'magic formula' for senior-level productivity?",
+          "options": [
+            "More hours + more coffee",
+            "Your knowledge + AI's speed",
+            "AI alone without human input",
+            "Copying senior engineers' code"
+          ],
+          "correct": 1,
+          "explanation": "You provide the knowledge (context, patterns, constraints) and AI provides the speed (code generation, transformations). Together, you're faster than either alone."
+        },
+        {
+          "question": "Why can't AI replace engineers who use AI effectively?",
+          "options": [
+            "AI is too slow",
+            "AI doesn't understand business requirements or codebase context",
+            "AI costs too much",
+            "AI only works in certain languages"
+          ],
+          "correct": 1,
+          "explanation": "AI doesn't know what the business needs or how your specific codebase works. You provide that irreplaceable context—AI amplifies your capabilities, not replaces them."
+        }
+      ]
+    },
+    {
+      "storyId": "workflow-story",
+      "questions": [
+        {
+          "question": "In the AI-paired workflow, which phases are HUMAN responsibilities?",
+          "options": [
+            "Only design",
+            "Only testing",
+            "Design, prompt, verify, integrate, and test",
+            "None—AI handles everything"
+          ],
+          "correct": 2,
+          "explanation": "AI only executes (phase 3). You handle design, prompting, verification, integration, and testing. You're the architect; AI is the builder."
+        },
+        {
+          "question": "What does 'trust but verify' mean in AI-paired development?",
+          "options": [
+            "Trust AI completely and ship immediately",
+            "Never use AI because it makes mistakes",
+            "Let AI generate code, but always check it matches your design and handles edge cases",
+            "Only trust AI for simple tasks"
+          ],
+          "correct": 2,
+          "explanation": "AI output is a first draft, not a final answer. Always verify that generated code matches your design, handles edge cases, and follows codebase patterns."
+        },
+        {
+          "question": "Why is the 'prompt' phase so important?",
+          "options": [
+            "It's not important—AI figures it out",
+            "A clear prompt with context is half the work; it determines AI output quality",
+            "Prompts should be as short as possible",
+            "You should never include codebase context"
+          ],
+          "correct": 1,
+          "explanation": "A great prompt includes clear requirements, relevant context from your codebase, and constraints to follow. This guides AI to produce useful, accurate output."
+        }
+      ]
+    },
+    {
+      "storyId": "journey-complete-story",
+      "questions": [
+        {
+          "question": "What's the biggest mindset shift from junior to senior engineer?",
+          "options": [
+            "Writing more code faster",
+            "Owning outcomes end-to-end, not just completing tasks",
+            "Memorizing more documentation",
+            "Working longer hours"
+          ],
+          "correct": 1,
+          "explanation": "Seniors own features end-to-end—from design through deployment. They think about outcomes and impact, not just task completion."
+        },
+        {
+          "question": "According to the course, when will you get the 'senior' title?",
+          "options": [
+            "After exactly 5 years of experience",
+            "When you prove the skills—the title catches up",
+            "When you memorize all the frameworks",
+            "Never—titles don't matter"
+          ],
+          "correct": 1,
+          "explanation": "The title catches up to the skills. You've developed senior-level skills—now go prove them through your work, and the recognition will follow."
+        },
+        {
+          "question": "What should you do with every ticket going forward?",
+          "options": [
+            "Just write the code as fast as possible",
+            "Ask clarifying questions, draw diagrams, map data flows, use AI with context",
+            "Wait for detailed specifications",
+            "Copy code from similar features"
+          ],
+          "correct": 1,
+          "explanation": "Every ticket is a chance to practice senior-level skills: clarify before coding, diagram before implementing, trace data flows, and use AI with proper context and verification."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "storyId": "ai-power-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "You: The Architect. In this workflow, YOU are the architect. You clarify requirements, draw diagrams, identify edge cases, and write the approach. This is the creative, strategic thinking AI can't do.",
+  "duration": 17.110000610351562,
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "the",
+      "start": 0.8999999761581421,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "architect",
+      "start": 1.2999999523162842,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "In",
+      "start": 2.559999942779541,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "this",
+      "start": 2.640000104904175,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "workflow",
+      "start": 2.9600000381469727,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "you",
+      "start": 4.159999847412109,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "are",
+      "start": 4.340000152587891,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "the",
+      "start": 4.699999809265137,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "architect",
+      "start": 4.980000019073486,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "You",
+      "start": 6.380000114440918,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "clarify",
+      "start": 6.539999961853027,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "requirements",
+      "start": 7.099999904632568,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "draw",
+      "start": 8.5600004196167,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "diagrams",
+      "start": 8.5600004196167,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "identify",
+      "start": 10.140000343322754,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "edge",
+      "start": 10.140000343322754,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "cases",
+      "start": 10.520000457763672,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "and",
+      "start": 11.199999809265137,
+      "end": 11.420000076293945
+    },
+    {
+      "word": "write",
+      "start": 11.420000076293945,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "the",
+      "start": 11.640000343322754,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "approach",
+      "start": 12.180000305175781,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "This",
+      "start": 12.979999542236328,
+      "end": 13.180000305175781
+    },
+    {
+      "word": "is",
+      "start": 13.180000305175781,
+      "end": 13.399999618530273
+    },
+    {
+      "word": "the",
+      "start": 13.399999618530273,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "creative",
+      "start": 13.600000381469727,
+      "end": 14.140000343322754
+    },
+    {
+      "word": "strategic",
+      "start": 14.960000038146973,
+      "end": 14.960000038146973
+    },
+    {
+      "word": "thinking",
+      "start": 14.960000038146973,
+      "end": 15.399999618530273
+    },
+    {
+      "word": "AI",
+      "start": 15.399999618530273,
+      "end": 16.1200008392334
+    },
+    {
+      "word": "can't",
+      "start": 16.1200008392334,
+      "end": 16.739999771118164
+    },
+    {
+      "word": "do",
+      "start": 16.739999771118164,
+      "end": 16.979999542236328
+    }
+  ]
+}

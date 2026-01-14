@@ -4,680 +4,449 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 2: Lightning Paths | Junior Accelerator</title>
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="../../shared/css/lesson.css">
-  
-  <!-- Mermaid for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  
-  <style>
-    :root {
-      --chapter-color: var(--accent-lightning);
-    }
-    
-    .hero::before {
-      background: 
-        radial-gradient(ellipse at 30% 50%, rgba(255, 213, 79, 0.2) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 30%, rgba(255, 143, 0, 0.15) 0%, transparent 50%);
-    }
-    
-    .story-block {
-      border-left-color: var(--accent-lightning);
-    }
-    
-    .story-block::before {
-      color: var(--accent-lightning);
-    }
-
-    .bug-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: var(--bg-secondary);
-      border-radius: var(--radius-lg);
-    }
-
-    .bug-step {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 1rem;
-      background: var(--bg-tertiary);
-      border-radius: var(--radius-md);
-      position: relative;
-    }
-
-    .bug-step::before {
-      content: '';
-      position: absolute;
-      left: 2rem;
-      top: 100%;
-      height: 1rem;
-      width: 2px;
-      background: var(--accent-lightning);
-    }
-
-    .bug-step:last-child::before {
-      display: none;
-    }
-
-    .bug-step-icon {
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-
-    .bug-step.wrong {
-      border-left: 3px solid var(--error);
-    }
-
-    .bug-step.right {
-      border-left: 3px solid var(--success);
-    }
-
-    .flow-comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    @media (max-width: 768px) {
-      .flow-comparison {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .flow-box {
-      padding: 1.5rem;
-      background: var(--bg-secondary);
-      border-radius: var(--radius-lg);
-    }
-
-    .flow-box h4 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .flow-box.sync { border-top: 3px solid var(--success); }
-    .flow-box.async { border-top: 3px solid var(--warning); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
 </head>
-<body>
-  <!-- Progress Bar -->
-  <div class="progress-bar"></div>
+<body data-course="junior" data-lesson="ch2-lightning">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span>Lightning Paths</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Junior</a>
+        <a href="../ch1-stone/">Ch 1</a>
+        <a href="index.html" class="active">Ch 2</a>
+        <a href="../ch3-magnetism/">Ch 3: Integration</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Progress Tracker (Side) -->
-  <nav class="progress-tracker">
-    <div class="progress-dot active" data-section="hero" title="Start"></div>
-    <div class="progress-dot" data-section="trap" title="The Trap"></div>
-    <div class="progress-dot" data-section="tracing" title="Data Tracing"></div>
-    <div class="progress-dot" data-section="async" title="Async Flows"></div>
-    <div class="progress-dot" data-section="quiz" title="Quiz"></div>
-    <div class="progress-dot" data-section="project" title="Project"></div>
-  </nav>
-
-  <main class="lesson-container">
-    
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         HERO SECTION
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="hero section" data-section="hero">
-      <div class="hero-content">
-        <span class="hero-chapter">Chapter 2 • Week 2</span>
-        <div class="hero-icon">⚡</div>
-        <h1>Lightning Paths</h1>
-        <p class="hero-subtitle">
-          Juniors debug with print statements. Seniors debug by <strong>tracing the flow</strong>. 
-          Learn to follow data like electricity through wires.
-        </p>
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Junior Accelerator</a>
+        <span>/</span>
+        <span>Chapter 2: Lightning Paths</span>
       </div>
+      <h1>⚡ Lightning Paths</h1>
+      <p>Juniors debug with print statements. Seniors debug by <strong>tracing the flow</strong>. Learn to follow data like electricity through wires.</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 1: The Junior Debugging Trap -->
+    <section class="section" id="debugging-trap-section">
+      <h2>The Junior Debugging Trap</h2>
+      <p>Bug report: "The user's balance shows the wrong number." Watch how juniors waste hours while seniors find the bug in minutes—using completely different approaches.</p>
       
-      <div class="scroll-indicator">
-        <span>Trace the flow</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         THE JUNIOR TRAP
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="section" data-section="trap">
-      <div class="section-content">
-        <h2 class="fade-in">🪤 The Junior Debugging Trap</h2>
+      <div class="diagram-container" id="debugging-trap-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🪤 Junior vs Senior Debugging</span>
+        </div>
+        <div id="debugging-trap-story" class="diagram-canvas storytelling"></div>
         
-        <div class="story-block fade-in">
-          <p>
-            Bug report: "The user's balance shows the wrong number." You open the code. 
-            Four hours later, you've added 47 print statements and you're more confused than ever.
-          </p>
-        </div>
-
-        <h3 class="fade-in">What Juniors Do (The Slow Way)</h3>
-
-        <div class="bug-timeline fade-in">
-          <div class="bug-step wrong">
-            <span class="bug-step-icon">👀</span>
-            <div>
-              <strong>1. Stare at the display code</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                "The balance is shown here... but it looks fine..."
-              </p>
-            </div>
-          </div>
-          <div class="bug-step wrong">
-            <span class="bug-step-icon">🖨️</span>
-            <div>
-              <strong>2. Add print statements everywhere</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                print(balance), print("here"), print("wtf")
-              </p>
-            </div>
-          </div>
-          <div class="bug-step wrong">
-            <span class="bug-step-icon">😵</span>
-            <div>
-              <strong>3. Realize the bug is somewhere else</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                "The data must be corrupted before it gets here..."
-              </p>
-            </div>
-          </div>
-          <div class="bug-step wrong">
-            <span class="bug-step-icon">⏰</span>
-            <div>
-              <strong>4. Hours later: Find it's a race condition in a background job</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                Something runs at midnight that nobody remembers writing.
-              </p>
+        <div class="diagram-story" id="debugging-trap-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
             </div>
           </div>
         </div>
 
-        <h3 class="fade-in">What Seniors Do (The Fast Way)</h3>
-
-        <div class="bug-timeline fade-in">
-          <div class="bug-step right">
-            <span class="bug-step-icon">🗺️</span>
-            <div>
-              <strong>1. Map the data flow</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                "What writes to the balance field? Let me list every place."
-              </p>
-            </div>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
           </div>
-          <div class="bug-step right">
-            <span class="bug-step-icon">⚡</span>
-            <div>
-              <strong>2. Check async processes</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                "Any background jobs? Scheduled tasks? Event handlers?"
-              </p>
-            </div>
+          <div class="playback-center">
+            <div class="story-progress" id="debugging-trap-story-progress"></div>
           </div>
-          <div class="bug-step right">
-            <span class="bug-step-icon">🎯</span>
-            <div>
-              <strong>3. Found it in 20 minutes</strong>
-              <p style="color: var(--text-muted); margin-top: 0.5rem;">
-                "The nightly reconciliation job has a bug in its calculation."
-              </p>
-            </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
           </div>
         </div>
 
-        <div class="cta-box fade-in">
-          <h3>💡 The Senior Secret</h3>
-          <p>
-            Instead of searching for WHERE the bug happens, ask: <strong>WHAT touches this data?</strong>
-            Make a list. The bug is always in that list.
-          </p>
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="debugging-trap-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="debugging-trap-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="debugging-trap-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="debugging-trap-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         DATA FLOW TRACING
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="section" data-section="tracing">
-      <div class="section-content">
-        <h2 class="fade-in">🔍 The Data Flow Tracing Method</h2>
-
-        <p class="fade-in">
-          For any bug, answer these five questions in order:
-        </p>
-
-        <div class="diagram-container scale-in">
-          <div class="diagram-title">The Five Questions</div>
-          <div class="mermaid">
-            flowchart TB
-              Q1["1️⃣ WHERE is data displayed?"]
-              Q2["2️⃣ WHERE is data stored?"]
-              Q3["3️⃣ WHAT writes to storage?"]
-              Q4["4️⃣ WHEN does each write happen?"]
-              Q5["5️⃣ WHAT external data flows in?"]
-              
-              Q1 --> Q2
-              Q2 --> Q3
-              Q3 --> Q4
-              Q4 --> Q5
-              
-              Q5 --> BUG["🐛 Bug is in steps 3-5"]
-              
-              style Q1 fill:#4caf50,color:#fff
-              style Q2 fill:#2196f3,color:#fff
-              style Q3 fill:#ff9800,color:#fff
-              style Q4 fill:#9c27b0,color:#fff
-              style Q5 fill:#f44336,color:#fff
-              style BUG fill:#1a1a2e,stroke:#f44336,stroke-width:3px,color:#fff
+    <!-- Story 2: The Data Flow Tracing Method -->
+    <section class="section" id="data-flow-section">
+      <h2>The Data Flow Tracing Method</h2>
+      <p>For any bug, answer these five questions in order. The bug is almost always hiding in questions 3, 4, or 5.</p>
+      
+      <div class="diagram-container" id="data-flow-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔍 The Five Questions</span>
+        </div>
+        <div id="data-flow-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="data-flow-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <h3 class="fade-in">Example: Balance Bug Trace</h3>
-
-        <div class="diagram-container scale-in">
-          <div class="diagram-title">Tracing the Balance</div>
-          <div class="mermaid">
-            flowchart BT
-              DISPLAY["📱 Display (endpoint)"]
-              STORAGE["💾 Balance Field (database)"]
-              
-              CREATE["CreateAccount<br/>sets initial: 0"]
-              PAYMENT["ProcessPayment<br/>decrements"]
-              REFUND["ProcessRefund<br/>increments"]
-              NIGHTLY["⚠️ NightlyReconciliation<br/>adjusts balance"]
-              ADMIN["AdminOverride<br/>sets directly"]
-              
-              DISPLAY --> STORAGE
-              CREATE --> STORAGE
-              PAYMENT --> STORAGE
-              REFUND --> STORAGE
-              NIGHTLY --> STORAGE
-              ADMIN --> STORAGE
-              
-              style NIGHTLY fill:#f44336,color:#fff,stroke:#f44336,stroke-width:3px
-              style STORAGE fill:#2196f3,color:#fff
-              style DISPLAY fill:#4caf50,color:#fff
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="data-flow-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
           </div>
         </div>
 
-        <div class="code-block scale-in">
-          <div class="code-header">
-            <span class="code-language">Python - Tracing Script</span>
-            <button class="code-copy">Copy</button>
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="data-flow-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
           </div>
-          <div class="code-content">
-            <pre><code><span class="comment"># Quick script to find all writes to a field</span>
-<span class="comment"># Run this in your codebase with: grep -r "balance" --include="*.py"</span>
+          <div class="control-group">
+            <button class="audio-toggle" id="data-flow-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="data-flow-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-<span class="comment"># What you're looking for:</span>
-<span class="variable">patterns_to_find</span> = [
-    <span class="string">"balance ="</span>,        <span class="comment"># Direct assignment</span>
-    <span class="string">"balance +="</span>,       <span class="comment"># Increment</span>
-    <span class="string">"balance -="</span>,       <span class="comment"># Decrement</span>
-    <span class="string">".balance"</span>,         <span class="comment"># Attribute access</span>
-    <span class="string">"UPDATE.*balance"</span>, <span class="comment"># Raw SQL</span>
-    <span class="string">"set_balance"</span>,      <span class="comment"># Setter methods</span>
-]
-
-<span class="comment"># Also check for:</span>
-<span class="comment"># - Background jobs (celery tasks, cron jobs)</span>
-<span class="comment"># - Event handlers (webhooks, message consumers)</span>
-<span class="comment"># - Migration scripts</span>
-<span class="comment"># - Admin tools</span></code></pre>
+      <div class="quiz-card" id="data-flow-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
           </div>
-          <div class="code-caption">
-            <p>
-              <span class="icon">💡</span>
-              <strong>Pro tip:</strong> Ask Cursor: "Find all places in this codebase 
-              that modify the balance field" — AI can search faster than grep.
-            </p>
-          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         ASYNC FLOWS
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="section" data-section="async">
-      <div class="section-content">
-        <h2 class="fade-in">🌊 Async Flows: Where Bugs Hide</h2>
-
-        <div class="story-block fade-in">
-          <p>
-            The most elusive bugs aren't in your request handlers. They're in the 
-            background processes that run when nobody's watching.
-          </p>
+    <!-- Story 3: Async Flows -->
+    <section class="section" id="async-flows-section">
+      <h2>Async Flows: Where Bugs Hide</h2>
+      <p>The most elusive bugs aren't in your request handlers. They're in the background processes that run when nobody's watching.</p>
+      
+      <div class="diagram-container" id="async-flows-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🌊 Synchronous vs Asynchronous</span>
         </div>
-
-        <div class="flow-comparison fade-in">
-          <div class="flow-box sync">
-            <h4>🟢 Synchronous (Easy to Debug)</h4>
-            <div class="mermaid">
-              sequenceDiagram
-                participant U as User
-                participant A as API
-                participant D as Database
-                
-                U->>A: Request
-                A->>D: Query
-                D-->>A: Result
-                A-->>U: Response
-                
-                Note over U,D: Linear. Bugs are obvious.
-            </div>
-          </div>
-          
-          <div class="flow-box async">
-            <h4>🟡 Asynchronous (Bugs Hide Here)</h4>
-            <div class="mermaid">
-              sequenceDiagram
-                participant U as User
-                participant A as API
-                participant Q as Queue
-                participant W as Worker
-                participant D as Database
-                
-                U->>A: Request
-                A->>Q: Queue Job
-                A-->>U: "Processing..."
-                
-                Note over Q,W: ⏰ Later...
-                
-                Q->>W: Job
-                W->>D: Update
-                
-                Note over W,D: 🐛 Bug might be here!
+        <div id="async-flows-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="async-flows-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
             </div>
           </div>
         </div>
 
-        <h3 class="fade-in">Map Every Async Flow in Your Codebase</h3>
-
-        <div class="concept-grid fade-in">
-          <div class="concept-card" style="border-top: 3px solid var(--warning);">
-            <div class="concept-card-icon">⏰</div>
-            <h4>Scheduled Tasks</h4>
-            <p>Cron jobs, scheduled functions. Check: What runs at night?</p>
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
           </div>
-          
-          <div class="concept-card" style="border-top: 3px solid var(--warning);">
-            <div class="concept-card-icon">📬</div>
-            <h4>Message Queues</h4>
-            <p>Celery, RabbitMQ, SQS. Check: What's consuming these messages?</p>
+          <div class="playback-center">
+            <div class="story-progress" id="async-flows-story-progress"></div>
           </div>
-          
-          <div class="concept-card" style="border-top: 3px solid var(--warning);">
-            <div class="concept-card-icon">🔔</div>
-            <h4>Event Handlers</h4>
-            <p>Webhooks, pub/sub. Check: What happens when X event fires?</p>
-          </div>
-          
-          <div class="concept-card" style="border-top: 3px solid var(--warning);">
-            <div class="concept-card-icon">🔄</div>
-            <h4>Background Workers</h4>
-            <p>Sidekiq, Bull. Check: What jobs are in the queue?</p>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
           </div>
         </div>
 
-        <div class="code-block scale-in">
-          <div class="code-header">
-            <span class="code-language">Python - Async Flow Inventory</span>
-            <button class="code-copy">Copy</button>
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="async-flows-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
           </div>
-          <div class="code-content">
-            <pre><code><span class="comment"># Create this for YOUR codebase:</span>
-
-<span class="variable">ASYNC_FLOWS</span> = {
-    <span class="string">"scheduled_tasks"</span>: [
-        {<span class="string">"name"</span>: <span class="string">"nightly_reconciliation"</span>,
-         <span class="string">"schedule"</span>: <span class="string">"0 3 * * *"</span>,
-         <span class="string">"touches"</span>: [<span class="string">"balance"</span>, <span class="string">"transactions"</span>]},
-        {<span class="string">"name"</span>: <span class="string">"cleanup_old_sessions"</span>,
-         <span class="string">"schedule"</span>: <span class="string">"0 0 * * *"</span>,
-         <span class="string">"touches"</span>: [<span class="string">"sessions"</span>]},
-    ],
-    <span class="string">"event_handlers"</span>: [
-        {<span class="string">"event"</span>: <span class="string">"payment.succeeded"</span>,
-         <span class="string">"handler"</span>: <span class="string">"update_balance"</span>,
-         <span class="string">"touches"</span>: [<span class="string">"balance"</span>, <span class="string">"audit_log"</span>]},
-    ],
-    <span class="string">"background_jobs"</span>: [
-        {<span class="string">"name"</span>: <span class="string">"send_notification"</span>,
-         <span class="string">"queue"</span>: <span class="string">"notifications"</span>,
-         <span class="string">"touches"</span>: [<span class="string">"notification_log"</span>]},
-    ],
-}
-
-<span class="comment"># Now when debugging "balance" issues, you immediately know:</span>
-<span class="comment"># - nightly_reconciliation touches it</span>
-<span class="comment"># - payment.succeeded event touches it</span></code></pre>
+          <div class="control-group">
+            <button class="audio-toggle" id="async-flows-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
           </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="async-flows-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="async-flows-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         QUIZ
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="section" data-section="quiz">
-      <div class="section-content">
-        <div class="quiz-container" data-activity="quiz-junior-ch2-automation" data-type="quiz" data-points="10" data-answer="B">
-          <div class="quiz-header">
-            <span class="quiz-icon">🧠</span>
-            <h3 class="quiz-title">Knowledge Check</h3>
-          </div>
-
-          <p class="quiz-question">
-            A user reports their profile picture isn't updating. The upload seems to succeed, 
-            but the old image still shows. Where should you look FIRST?
-          </p>
-
-          <div class="quiz-options">
-            <div class="quiz-option" data-value="A">
-              <span class="quiz-option-letter">A</span>
-              <span>Add print statements in the upload handler</span>
-            </div>
-            <div class="quiz-option" data-value="B">
-              <span class="quiz-option-letter">B</span>
-              <span>List everything that processes uploaded images (resizing, CDN, cache)</span>
-            </div>
-            <div class="quiz-option" data-value="C">
-              <span class="quiz-option-letter">C</span>
-              <span>Check if the database field is updating</span>
-            </div>
-            <div class="quiz-option" data-value="D">
-              <span class="quiz-option-letter">D</span>
-              <span>Ask the user to clear their browser cache</span>
-            </div>
-          </div>
-
-          <div class="quiz-feedback" 
-               data-correct-msg="Map the flow first! Image uploads often have background processing (resize, CDN upload, cache invalidation). The bug is probably in an async step." 
-               data-incorrect-msg="Before diving into code, map what TOUCHES the data. For images: upload → storage → processing → CDN → cache. Find the broken step.">
-          </div>
-
-          <button class="quiz-btn" disabled>Check Answer</button>
-        </div>
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready for Chapter 3?</h2>
+      <p>You've learned to trace data flows and hunt bugs in async processes. Next, master the art of integrating with external systems—APIs, webhooks, and third-party services.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../ch3-magnetism/" class="card">
+          <div class="card-icon">🧲</div>
+          <h3>Chapter 3: Integration Mastery</h3>
+          <p>Connect with external APIs, handle webhooks, and build robust integrations.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all chapters in the Junior Accelerator.</p>
+        </a>
       </div>
     </section>
-
-    <!-- ═══════════════════════════════════════════════════════════════════════
-         PROJECT
-         ═══════════════════════════════════════════════════════════════════════ -->
-    <section class="section" data-section="project">
-      <div class="section-content">
-        <h2 class="fade-in">🔨 Chapter Project: Flow Mapping</h2>
-
-        <div class="story-block fade-in">
-          <p>
-            Choose 3 critical flows in your codebase. Map them completely — including 
-            every async process, external call, and potential failure point.
-          </p>
-        </div>
-
-        <div class="try-it-box fade-in">
-          <div class="try-it-header">
-            <span class="try-it-icon">🗺️</span>
-            <h3 class="try-it-title">Flow Mapping Template</h3>
-          </div>
-
-          <p>For each flow, document:</p>
-
-          <ol class="try-it-steps">
-            <li>
-              <strong>Sequence Diagram</strong><br>
-              Every step from user action to final result, including async handoffs.
-            </li>
-            <li>
-              <strong>Data Touchpoints</strong><br>
-              What data is read? What data is written? Where?
-            </li>
-            <li>
-              <strong>Async Inventory</strong><br>
-              What background jobs, events, or scheduled tasks are involved?
-            </li>
-            <li>
-              <strong>Failure Modes</strong><br>
-              What can go wrong? How do you know if it's broken?
-            </li>
-            <li>
-              <strong>Monitoring Gaps</strong><br>
-              What alerts would catch issues faster?
-            </li>
-          </ol>
-        </div>
-
-        <div class="code-block scale-in">
-          <div class="code-header">
-            <span class="code-language">Suggested Flows to Map</span>
-          </div>
-          <div class="code-content">
-            <pre><code><span class="comment"># Pick 3 from your actual codebase:</span>
-
-<span class="number">1.</span> User Registration
-   - Signup → validation → create user → send email → ...
-   
-<span class="number">2.</span> Your Core Business Flow
-   - Whatever the main thing your product does
-   
-<span class="number">3.</span> Money/Critical Flow
-   - Payments, billing, credits — anything financial
-
-<span class="comment"># Deliverables:</span>
-junior/ch2-lightning/
-├── flow-1-registration/
-│   ├── SEQUENCE_DIAGRAM.md
-│   ├── DATA_TOUCHPOINTS.md
-│   └── FAILURE_MODES.md
-├── flow-2-core/
-│   └── ...
-└── flow-3-critical/
-    └── ...</code></pre>
-          </div>
-        </div>
-
-        <div class="cta-box fade-in">
-          <h3>🏆 Bonus Points</h3>
-          <p>
-            Find a recent bug in your backlog. Trace it using this method. 
-            Document how long the flow mapping approach would have saved.
-          </p>
-          <a href="../ch3-magnetism/index.html" class="cta-btn">
-            <span>Continue to Chapter 3: Integration Mastery</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- Bottom Navigation -->
-  <nav class="lesson-nav">
-    <button class="nav-btn" onclick="location.href='../ch1-stone/index.html'">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-      </svg>
-      Chapter 1
-    </button>
-    <button class="nav-btn primary" onclick="location.href='../ch3-magnetism/index.html'">
-      Chapter 3: Magnetism
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M5 12h14M12 5l7 7-7 7"/>
-      </svg>
-    </button>
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#debugging-trap-section">The Debugging Trap</a></li>
+      <li><a href="#data-flow-section">Data Flow Tracing</a></li>
+      <li><a href="#async-flows-section">Async Flows</a></li>
+    </ul>
   </nav>
 
-  <!-- Scripts -->
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-  <script src="../../shared/js/lesson.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <script>
-    // Initialize Mermaid with dark theme
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'dark',
-      themeVariables: {
-        primaryColor: '#7986cb',
-        primaryTextColor: '#e8e8f0',
-        primaryBorderColor: '#7986cb',
-        lineColor: '#6a6a80',
-        secondaryColor: '#1a1a2e',
-        tertiaryColor: '#12121a',
-        background: '#16162a',
-        mainBkg: '#1a1a2e',
-        secondBkg: '#12121a',
-        fontFamily: 'Inter, sans-serif'
-      },
-      flowchart: {
-        useMaxWidth: false,
-        htmlLabels: true,
-        curve: 'basis'
-      },
-      sequence: {
-        useMaxWidth: false,
-        diagramMarginX: 30,
-        diagramMarginY: 20,
-        boxMargin: 10,
-        noteMargin: 10
-      }
-    });
-  </script>
-  
-  <!-- Lesson Integration -->
-  <script src="../../shared/js/firebase-config.js"></script>
-  <script src="../../shared/js/auth.js"></script>
-  <script src="../../shared/js/data-service.js"></script>
-  <script src="../../shared/js/lesson-integration.js"></script>
-  <script src="../../shared/js/progress-tracker.js"></script>
-  <script src="../../shared/js/activity-tracker.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      window.LessonIntegration.init("junior", "ch2-lightning");
-        // Initialize progress tracker immediately
-        if (window.ProgressTracker) {
-          window.ProgressTracker.init("junior", "ch2-lightning");
-        }
-        if (window.ActivityTracker) {
-          window.ActivityTracker.init("junior", "ch2-lightning");
-        }
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'debugging-trap': [
+          // Nodes
+          { data: { id: 'bug-report', label: '🐛 Bug Report\nWrong Balance', type: 'external', description: 'User reports wrong balance shown' } },
+          { data: { id: 'junior-stare', label: '👀 Stare at\nDisplay Code', type: 'concept', description: 'Junior starts at the symptom' } },
+          { data: { id: 'junior-lost', label: '😵 Hours Lost\n47 Print Stmts', type: 'external', description: 'Confused after 4 hours' } },
+          { data: { id: 'senior-map', label: '🗺️ Map the\nData Flow', type: 'data', description: 'Senior maps what writes to balance' } },
+          { data: { id: 'senior-async', label: '⚡ Check Async\nProcesses', type: 'auth', description: 'Background jobs, scheduled tasks' } },
+          { data: { id: 'senior-found', label: '🎯 Found!\n20 Minutes', type: 'page', description: 'Nightly reconciliation bug found' } },
+          // Edges
+          { data: { source: 'bug-report', target: 'junior-stare' } },
+          { data: { source: 'junior-stare', target: 'junior-lost' } },
+          { data: { source: 'bug-report', target: 'senior-map' } },
+          { data: { source: 'senior-map', target: 'senior-async' } },
+          { data: { source: 'senior-async', target: 'senior-found' } }
+        ],
+
+        'data-flow': [
+          // Nodes
+          { data: { id: 'question-1', label: '1️⃣ Where\nDisplayed?', type: 'concept', description: 'Find the endpoint showing wrong data' } },
+          { data: { id: 'question-2', label: '2️⃣ Where\nStored?', type: 'data', description: 'Database, cache, or file?' } },
+          { data: { id: 'question-3', label: '3️⃣ What\nWrites?', type: 'auth', description: 'Every function that modifies data' } },
+          { data: { id: 'question-4', label: '4️⃣ When\nWrites?', type: 'service', description: 'User action, midnight, external event?' } },
+          { data: { id: 'question-5', label: '5️⃣ External\nData?', type: 'external', description: 'Webhooks, APIs, file uploads' } },
+          { data: { id: 'bug-location', label: '🐛 Bug Here\nSteps 3-5', type: 'page', description: 'Bug is in writes, timing, or external' } },
+          // Edges
+          { data: { source: 'question-1', target: 'question-2' } },
+          { data: { source: 'question-2', target: 'question-3' } },
+          { data: { source: 'question-3', target: 'question-4' } },
+          { data: { source: 'question-4', target: 'question-5' } },
+          { data: { source: 'question-5', target: 'bug-location' } }
+        ],
+
+        'async-flows': [
+          // Nodes
+          { data: { id: 'sync-flow', label: '🟢 Synchronous\nLinear Flow', type: 'concept', description: 'Request → Process → Response' } },
+          { data: { id: 'async-flow', label: '🟡 Async\nBugs Hide', type: 'auth', description: 'Queue → Worker → Later' } },
+          { data: { id: 'scheduled-tasks', label: '⏰ Scheduled\nTasks', type: 'service', description: 'Cron jobs, 3 AM processes' } },
+          { data: { id: 'message-queues', label: '📬 Message\nQueues', type: 'service', description: 'Celery, RabbitMQ, SQS' } },
+          { data: { id: 'event-handlers', label: '🔔 Event\nHandlers', type: 'service', description: 'Webhooks, pub/sub, callbacks' } },
+          { data: { id: 'inventory', label: '📋 Build Your\nInventory', type: 'page', description: 'Map every async flow' } },
+          // Edges
+          { data: { source: 'sync-flow', target: 'async-flow' } },
+          { data: { source: 'async-flow', target: 'scheduled-tasks' } },
+          { data: { source: 'async-flow', target: 'message-queues' } },
+          { data: { source: 'async-flow', target: 'event-handlers' } },
+          { data: { source: 'scheduled-tasks', target: 'inventory' } },
+          { data: { source: 'message-queues', target: 'inventory' } },
+          { data: { source: 'event-handlers', target: 'inventory' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      // Map story IDs to diagram element keys
+      const storyToDiagram = {
+        'debugging-trap-story': 'debugging-trap',
+        'data-flow-story': 'data-flow',
+        'async-flows-story': 'async-flows'
+      };
+
+      // Create storytelling diagrams for each story in the JSON
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
+      });
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      // Map story IDs to quiz container IDs
+      const storyToQuiz = {
+        'debugging-trap-story': 'debugging-trap-quiz',
+        'data-flow-story': 'data-flow-quiz',
+        'async-flows-story': 'async-flows-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
     });
   </script>
 </body>
 </html>
-

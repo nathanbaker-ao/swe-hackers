@@ -1,0 +1,170 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Think Like an Architect. Stop just completing tasks. Understand systems. See patterns across codebases. Design before you build. Ask 'why are we building this?' before asking 'how do I implement this?'",
+  "duration": 18.1200008392334,
+  "words": [
+    {
+      "word": "Think",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "like",
+      "start": 0.47999998927116394,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "an",
+      "start": 1.0399999618530273,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "architect",
+      "start": 1.7999999523162842,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "Stop",
+      "start": 2.9800000190734863,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "just",
+      "start": 2.9800000190734863,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "completing",
+      "start": 3.819999933242798,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "tasks",
+      "start": 4.179999828338623,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "Understand",
+      "start": 6.239999771118164,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "systems",
+      "start": 6.239999771118164,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "See",
+      "start": 7.940000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "patterns",
+      "start": 7.940000057220459,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "across",
+      "start": 8.460000038146973,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "code",
+      "start": 8.819999694824219,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "bases",
+      "start": 9.140000343322754,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "Design",
+      "start": 10.800000190734863,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "before",
+      "start": 10.800000190734863,
+      "end": 11.220000267028809
+    },
+    {
+      "word": "you",
+      "start": 11.220000267028809,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "build",
+      "start": 11.779999732971191,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "Ask",
+      "start": 12.84000015258789,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "why",
+      "start": 13.260000228881836,
+      "end": 13.4399995803833
+    },
+    {
+      "word": "are",
+      "start": 13.4399995803833,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "we",
+      "start": 13.619999885559082,
+      "end": 13.819999694824219
+    },
+    {
+      "word": "building",
+      "start": 13.819999694824219,
+      "end": 14
+    },
+    {
+      "word": "this",
+      "start": 14,
+      "end": 14.640000343322754
+    },
+    {
+      "word": "Before",
+      "start": 15,
+      "end": 15.479999542236328
+    },
+    {
+      "word": "asking",
+      "start": 15.479999542236328,
+      "end": 16.040000915527344
+    },
+    {
+      "word": "how",
+      "start": 16.559999465942383,
+      "end": 16.739999771118164
+    },
+    {
+      "word": "do",
+      "start": 16.739999771118164,
+      "end": 16.959999084472656
+    },
+    {
+      "word": "I",
+      "start": 16.959999084472656,
+      "end": 17.299999237060547
+    },
+    {
+      "word": "implement",
+      "start": 17.299999237060547,
+      "end": 17.540000915527344
+    },
+    {
+      "word": "this",
+      "start": 17.540000915527344,
+      "end": 17.979999542236328
+    }
+  ]
+}

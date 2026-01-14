@@ -1,0 +1,5160 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T01:34:30.867Z",
+  "stories": [
+    "mindset-story",
+    "acceleration-story",
+    "skills-story"
+  ],
+  "ballad": {
+    "mindset-story": [
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Junior Trap. Most juniors get stuck in patterns that slow their growth. They immediately start coding when given a task, fix symptoms instead of root causes, and measure progress by lines of code.",
+        "duration": 14.760000228881836,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "junior",
+            "start": 0.41999998688697815,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "trap",
+            "start": 0.8600000143051147,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "Most",
+            "start": 2.200000047683716,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "juniors",
+            "start": 2.4200000762939453,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "get",
+            "start": 2.799999952316284,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "stuck",
+            "start": 3.119999885559082,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "in",
+            "start": 3.4000000953674316,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "patterns",
+            "start": 3.7799999713897705,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "that",
+            "start": 4.019999980926514,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "slow",
+            "start": 4.559999942779541,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "their",
+            "start": 4.840000152587891,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "growth",
+            "start": 5.460000038146973,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "They",
+            "start": 6.179999828338623,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "immediately",
+            "start": 6.260000228881836,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "start",
+            "start": 6.820000171661377,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "coding",
+            "start": 7.320000171661377,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "when",
+            "start": 7.599999904632568,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "given",
+            "start": 7.920000076293945,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "a",
+            "start": 8.100000381469727,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "task",
+            "start": 8.680000305175781,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "fix",
+            "start": 9.539999961853027,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "symptoms",
+            "start": 9.600000381469727,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "instead",
+            "start": 10.079999923706055,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "of",
+            "start": 10.640000343322754,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "root",
+            "start": 10.899999618530273,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "causes",
+            "start": 11.0600004196167,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 12.0600004196167,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "measure",
+            "start": 12.279999732971191,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "progress",
+            "start": 12.520000457763672,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "by",
+            "start": 13.039999961853027,
+            "end": 13.5
+          },
+          {
+            "word": "lines",
+            "start": 13.5,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "of",
+            "start": 13.84000015258789,
+            "end": 14.34000015258789
+          },
+          {
+            "word": "code",
+            "start": 14.34000015258789,
+            "end": 14.34000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Asking 'How?'. Juniors ask 'How do I do this?' first. They work in isolation, afraid to ask questions. They see AI as just a code generator. This keeps them stuck at the same level.",
+        "duration": 17.010000228881836,
+        "words": [
+          {
+            "word": "Asking",
+            "start": 0,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "how",
+            "start": 1.0800000429153442,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "Juniors",
+            "start": 3.059999942779541,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "ask",
+            "start": 3.059999942779541,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "how",
+            "start": 3.9200000762939453,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "do",
+            "start": 4.019999980926514,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "I",
+            "start": 4.239999771118164,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "do",
+            "start": 4.460000038146973,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "this",
+            "start": 4.619999885559082,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "first",
+            "start": 4.920000076293945,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "They",
+            "start": 6.039999961853027,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "work",
+            "start": 6.239999771118164,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "in",
+            "start": 6.539999961853027,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "isolation",
+            "start": 6.980000019073486,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "afraid",
+            "start": 8.300000190734863,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "to",
+            "start": 8.300000190734863,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "ask",
+            "start": 8.819999694824219,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "questions",
+            "start": 8.920000076293945,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "They",
+            "start": 10.279999732971191,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "see",
+            "start": 10.399999618530273,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "AI",
+            "start": 10.84000015258789,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "as",
+            "start": 11.239999771118164,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "just",
+            "start": 11.880000114440918,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "a",
+            "start": 12.140000343322754,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "code",
+            "start": 12.380000114440918,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "generator",
+            "start": 12.640000343322754,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "This",
+            "start": 13.819999694824219,
+            "end": 14.0600004196167
+          },
+          {
+            "word": "keeps",
+            "start": 14.0600004196167,
+            "end": 14.300000190734863
+          },
+          {
+            "word": "them",
+            "start": 14.300000190734863,
+            "end": 14.680000305175781
+          },
+          {
+            "word": "stuck",
+            "start": 14.680000305175781,
+            "end": 14.899999618530273
+          },
+          {
+            "word": "at",
+            "start": 14.899999618530273,
+            "end": 15.319999694824219
+          },
+          {
+            "word": "the",
+            "start": 15.319999694824219,
+            "end": 15.5
+          },
+          {
+            "word": "same",
+            "start": 15.5,
+            "end": 15.800000190734863
+          },
+          {
+            "word": "level",
+            "start": 15.800000190734863,
+            "end": 16.059999465942383
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Senior Approach. Seniors think differently. They understand the 'why' before writing code. They ask 'What problem are we really solving?' They design systems that prevent problems from happening.",
+        "duration": 13.75,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "CMEER",
+            "start": 0.6000000238418579,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "approach",
+            "start": 0.7599999904632568,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "CMEERS",
+            "start": 2.140000104904175,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "think",
+            "start": 2.380000114440918,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "differently",
+            "start": 2.700000047683716,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "They",
+            "start": 3.8399999141693115,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "understand",
+            "start": 4.019999980926514,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 4.579999923706055,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "why",
+            "start": 4.920000076293945,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "before",
+            "start": 5.21999979019165,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "writing",
+            "start": 5.800000190734863,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "code",
+            "start": 6.159999847412109,
+            "end": 6.5
+          },
+          {
+            "word": "They",
+            "start": 7.139999866485596,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "ask",
+            "start": 7.28000020980835,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "what",
+            "start": 7.940000057220459,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "problem",
+            "start": 8.079999923706055,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "are",
+            "start": 8.5600004196167,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "we",
+            "start": 8.84000015258789,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "really",
+            "start": 8.979999542236328,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "solving",
+            "start": 9.539999961853027,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "They",
+            "start": 10.359999656677246,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "design",
+            "start": 10.680000305175781,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "systems",
+            "start": 11.119999885559082,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "that",
+            "start": 11.5600004196167,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "prevent",
+            "start": 12.0600004196167,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "problems",
+            "start": 12.319999694824219,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "from",
+            "start": 12.800000190734863,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "happening",
+            "start": 13.359999656677246,
+            "end": 13.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Asking 'Why?'. Seniors communicate early, clarify requirements, and measure progress by impact delivered. They use AI as a thinking partner, not just a code generator. This is the mindset shift that accelerates growth.",
+        "duration": 18.309999465942383,
+        "words": [
+          {
+            "word": "asking",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "why",
+            "start": 0.699999988079071,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "Seniors",
+            "start": 2.640000104904175,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "communicate",
+            "start": 2.640000104904175,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "early",
+            "start": 3.299999952316284,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "clarify",
+            "start": 4.639999866485596,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "requirements",
+            "start": 4.639999866485596,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "and",
+            "start": 5.699999809265137,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "measure",
+            "start": 6.340000152587891,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "progress",
+            "start": 6.559999942779541,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "by",
+            "start": 7.21999979019165,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "impact",
+            "start": 7.820000171661377,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "delivered",
+            "start": 8.380000114440918,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "They",
+            "start": 9.699999809265137,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "use",
+            "start": 9.84000015258789,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "AI",
+            "start": 10.199999809265137,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "as",
+            "start": 10.680000305175781,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 11.119999885559082,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "thinking",
+            "start": 11.460000038146973,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "partner",
+            "start": 11.65999984741211,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "not",
+            "start": 12.699999809265137,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "just",
+            "start": 12.779999732971191,
+            "end": 13.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 13.119999885559082,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "code",
+            "start": 13.279999732971191,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "generator",
+            "start": 13.539999961853027,
+            "end": 13.979999542236328
+          },
+          {
+            "word": "This",
+            "start": 14.739999771118164,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "is",
+            "start": 14.960000038146973,
+            "end": 15.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 15.180000305175781,
+            "end": 15.4399995803833
+          },
+          {
+            "word": "mindset",
+            "start": 15.4399995803833,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "shift",
+            "start": 15.84000015258789,
+            "end": 16.239999771118164
+          },
+          {
+            "word": "that",
+            "start": 16.239999771118164,
+            "end": 16.84000015258789
+          },
+          {
+            "word": "accelerates",
+            "start": 16.84000015258789,
+            "end": 17.3799991607666
+          },
+          {
+            "word": "growth",
+            "start": 17.3799991607666,
+            "end": 17.860000610351562
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Real Difference. Here's the secret: A junior fixes bugs. A mid-level prevents bugs. A senior designs systems where certain classes of bugs can't exist. This course teaches you to think like the third type.",
+        "duration": 18.90999984741211,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "real",
+            "start": 0.3199999928474426,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "difference",
+            "start": 0.800000011920929,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "Here's",
+            "start": 2.4000000953674316,
+            "end": 2.5
+          },
+          {
+            "word": "the",
+            "start": 2.5,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "secret",
+            "start": 2.7799999713897705,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "A",
+            "start": 3.680000066757202,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "junior",
+            "start": 3.9000000953674316,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "fixes",
+            "start": 4.260000228881836,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "bugs",
+            "start": 4.960000038146973,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "A",
+            "start": 5.840000152587891,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "mid",
+            "start": 6.199999809265137,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "level",
+            "start": 6.440000057220459,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "prevents",
+            "start": 6.679999828338623,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "bugs",
+            "start": 7.300000190734863,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "A",
+            "start": 8.079999923706055,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "senior",
+            "start": 8.859999656677246,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "designs",
+            "start": 8.859999656677246,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "systems",
+            "start": 9.579999923706055,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "where",
+            "start": 10.0600004196167,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "certain",
+            "start": 10.619999885559082,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "classes",
+            "start": 11.100000381469727,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "of",
+            "start": 11.420000076293945,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "bugs",
+            "start": 12.079999923706055,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "can't",
+            "start": 12.079999923706055,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "exist",
+            "start": 12.619999885559082,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "This",
+            "start": 13.5,
+            "end": 14.140000343322754
+          },
+          {
+            "word": "course",
+            "start": 14.140000343322754,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "teaches",
+            "start": 14.520000457763672,
+            "end": 15.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 15.119999885559082,
+            "end": 15.380000114440918
+          },
+          {
+            "word": "to",
+            "start": 15.380000114440918,
+            "end": 15.859999656677246
+          },
+          {
+            "word": "think",
+            "start": 15.859999656677246,
+            "end": 16.020000457763672
+          },
+          {
+            "word": "like",
+            "start": 16.020000457763672,
+            "end": 16.440000534057617
+          },
+          {
+            "word": "the",
+            "start": 16.440000534057617,
+            "end": 16.68000030517578
+          },
+          {
+            "word": "third",
+            "start": 16.68000030517578,
+            "end": 16.959999084472656
+          },
+          {
+            "word": "type",
+            "start": 16.959999084472656,
+            "end": 17.31999969482422
+          }
+        ]
+      }
+    ],
+    "acceleration-story": [
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Traditional Timeline. The traditional path from junior to senior takes 5 to 10 years. You slowly accumulate experience, make mistakes, and eventually level up. But what if there was a shortcut?",
+        "duration": 16.239999771118164,
+        "words": [
+          {
+            "word": "TRADITIONAL",
+            "start": 0,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "TIMELINE",
+            "start": 1.2000000476837158,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "The",
+            "start": 2.0399999618530273,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "traditional",
+            "start": 2.9200000762939453,
+            "end": 3.5
+          },
+          {
+            "word": "path",
+            "start": 3.5,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "from",
+            "start": 3.940000057220459,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "junior",
+            "start": 4.300000190734863,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "to",
+            "start": 4.579999923706055,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "senior",
+            "start": 4.920000076293945,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "takes",
+            "start": 5.199999809265137,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "5",
+            "start": 5.78000020980835,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "to",
+            "start": 6.260000228881836,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "10",
+            "start": 6.480000019073486,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "years",
+            "start": 6.739999771118164,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "You",
+            "start": 8,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "slowly",
+            "start": 8.15999984741211,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "accumulate",
+            "start": 8.619999885559082,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "experience",
+            "start": 9.239999771118164,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "make",
+            "start": 10.699999809265137,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "mistakes",
+            "start": 10.779999732971191,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "and",
+            "start": 11.279999732971191,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "eventually",
+            "start": 11.84000015258789,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "level",
+            "start": 12.479999542236328,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "up",
+            "start": 12.979999542236328,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "But",
+            "start": 13.880000114440918,
+            "end": 14.279999732971191
+          },
+          {
+            "word": "what",
+            "start": 14.279999732971191,
+            "end": 14.5600004196167
+          },
+          {
+            "word": "if",
+            "start": 14.5600004196167,
+            "end": 14.760000228881836
+          },
+          {
+            "word": "there",
+            "start": 14.760000228881836,
+            "end": 14.899999618530273
+          },
+          {
+            "word": "was",
+            "start": 14.899999618530273,
+            "end": 15.100000381469727
+          },
+          {
+            "word": "a",
+            "start": 15.100000381469727,
+            "end": 15.279999732971191
+          },
+          {
+            "word": "shortcut",
+            "start": 15.279999732971191,
+            "end": 15.539999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "You Are Here. Right now, you're at the starting point. You might feel like senior-level thinking is years away. But with AI tools and the right approach, the timeline is about to compress dramatically.",
+        "duration": 13.600000381469727,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "are",
+            "start": 0.5400000214576721,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "here",
+            "start": 1.1799999475479126,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "Right",
+            "start": 2.240000009536743,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "now",
+            "start": 2.4000000953674316,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "you're",
+            "start": 3.0399999618530273,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "at",
+            "start": 3.2200000286102295,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "the",
+            "start": 3.359999895095825,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "starting",
+            "start": 3.559999942779541,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "point",
+            "start": 3.9000000953674316,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "You",
+            "start": 4.860000133514404,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "might",
+            "start": 4.940000057220459,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "feel",
+            "start": 5.159999847412109,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "like",
+            "start": 5.440000057220459,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "senior",
+            "start": 5.880000114440918,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "level",
+            "start": 6.059999942779541,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "thinking",
+            "start": 6.380000114440918,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "is",
+            "start": 6.659999847412109,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "years",
+            "start": 6.960000038146973,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "away",
+            "start": 7.260000228881836,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "but",
+            "start": 8.079999923706055,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "with",
+            "start": 8.199999809265137,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "AI",
+            "start": 8.460000038146973,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "tools",
+            "start": 8.84000015258789,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "and",
+            "start": 9.15999984741211,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "the",
+            "start": 9.4399995803833,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "right",
+            "start": 9.579999923706055,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "approach",
+            "start": 9.880000114440918,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 10.720000267028809,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "timeline",
+            "start": 10.800000190734863,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "is",
+            "start": 11.199999809265137,
+            "end": 11.5
+          },
+          {
+            "word": "about",
+            "start": 11.5,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "to",
+            "start": 11.720000267028809,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "compress",
+            "start": 12.600000381469727,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "dramatically",
+            "start": 12.600000381469727,
+            "end": 13.220000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "AI Acceleration. AI changes everything. Ten times faster learning. Eighty percent less time on boilerplate. You can focus on architecture and systems thinking while AI handles implementation details.",
+        "duration": 16.239999771118164,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "acceleration",
+            "start": 0.7599999904632568,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "AI",
+            "start": 2.4800000190734863,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "changes",
+            "start": 2.7799999713897705,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "everything",
+            "start": 3.4600000381469727,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "10",
+            "start": 5.019999980926514,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "times",
+            "start": 5.039999961853027,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "faster",
+            "start": 5.460000038146973,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "learning",
+            "start": 5.880000114440918,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "80",
+            "start": 7,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "",
+            "start": 7.21999979019165,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "less",
+            "start": 7.679999828338623,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "time",
+            "start": 7.940000057220459,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "on",
+            "start": 8.239999771118164,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "boilerplate",
+            "start": 8.520000457763672,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "You",
+            "start": 9.779999732971191,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "can",
+            "start": 9.899999618530273,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "focus",
+            "start": 10.199999809265137,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "on",
+            "start": 10.479999542236328,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "architecture",
+            "start": 10.819999694824219,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "and",
+            "start": 11.279999732971191,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "systems",
+            "start": 11.800000190734863,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "thinking",
+            "start": 12.15999984741211,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "while",
+            "start": 12.520000457763672,
+            "end": 13.239999771118164
+          },
+          {
+            "word": "AI",
+            "start": 13.239999771118164,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "handles",
+            "start": 13.800000190734863,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "implementation",
+            "start": 14.399999618530273,
+            "end": 15.279999732971191
+          },
+          {
+            "word": "details",
+            "start": 15.279999732971191,
+            "end": 15.84000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Mid-Level: 6-12 Months. With deliberate practice and AI collaboration, you can reach mid-level thinking in 6 to 12 months. You start seeing patterns, understanding codebases faster, and preventing bugs proactively.",
+        "duration": 18.450000762939453,
+        "words": [
+          {
+            "word": "Mid",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "level",
+            "start": 0.699999988079071,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "Six",
+            "start": 2.2200000286102295,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "to",
+            "start": 2.2799999713897705,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "12",
+            "start": 2.559999942779541,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "months",
+            "start": 2.880000114440918,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "with",
+            "start": 3.240000009536743,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "deliberate",
+            "start": 4.139999866485596,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "practice",
+            "start": 4.639999866485596,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "and",
+            "start": 5.21999979019165,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "AI",
+            "start": 5.820000171661377,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "collaboration",
+            "start": 6.260000228881836,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "you",
+            "start": 7.760000228881836,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "can",
+            "start": 7.900000095367432,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "reach",
+            "start": 8.119999885559082,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "mid",
+            "start": 8.34000015258789,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "level",
+            "start": 8.819999694824219,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "thinking",
+            "start": 8.920000076293945,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "in",
+            "start": 9.300000190734863,
+            "end": 10
+          },
+          {
+            "word": "six",
+            "start": 10,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 10.239999771118164,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "12",
+            "start": 10.5600004196167,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "months",
+            "start": 10.819999694824219,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "You",
+            "start": 11.640000343322754,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "start",
+            "start": 12.140000343322754,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "seeing",
+            "start": 12.4399995803833,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "patterns",
+            "start": 12.800000190734863,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "understanding",
+            "start": 14.520000457763672,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "code",
+            "start": 14.520000457763672,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "bases",
+            "start": 14.960000038146973,
+            "end": 15.300000190734863
+          },
+          {
+            "word": "faster",
+            "start": 15.300000190734863,
+            "end": 15.800000190734863
+          },
+          {
+            "word": "and",
+            "start": 16.219999313354492,
+            "end": 17.079999923706055
+          },
+          {
+            "word": "preventing",
+            "start": 17.079999923706055,
+            "end": 17.079999923706055
+          },
+          {
+            "word": "bugs",
+            "start": 17.079999923706055,
+            "end": 17.479999542236328
+          },
+          {
+            "word": "proactively",
+            "start": 17.479999542236328,
+            "end": 18.1200008392334
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior: 12-24 Months. By month 12 to 24, you're operating at senior level. You design systems, make architectural decisions, and lead features. The goal is to become an architect who thinks in systems.",
+        "duration": 18.360000610351562,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "12",
+            "start": 1.2799999713897705,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "to",
+            "start": 1.6200000047683716,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "24",
+            "start": 1.7999999523162842,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "months",
+            "start": 2.4000000953674316,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "By",
+            "start": 3.4800000190734863,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "month",
+            "start": 3.5799999237060547,
+            "end": 4
+          },
+          {
+            "word": "12",
+            "start": 4,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "to",
+            "start": 4.400000095367432,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "24",
+            "start": 4.619999885559082,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "you're",
+            "start": 5.659999847412109,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "operating",
+            "start": 6.099999904632568,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "at",
+            "start": 6.480000019073486,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "senior",
+            "start": 7.139999866485596,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "level",
+            "start": 7.340000152587891,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "You",
+            "start": 8.399999618530273,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "design",
+            "start": 8.520000457763672,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "systems",
+            "start": 8.880000114440918,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "make",
+            "start": 10.100000381469727,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "architectural",
+            "start": 10.260000228881836,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "decisions",
+            "start": 10.920000076293945,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 11.779999732971191,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "lead",
+            "start": 12.4399995803833,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "features",
+            "start": 12.739999771118164,
+            "end": 13.220000267028809
+          },
+          {
+            "word": "The",
+            "start": 13.420000076293945,
+            "end": 14.260000228881836
+          },
+          {
+            "word": "goal",
+            "start": 14.260000228881836,
+            "end": 14.640000343322754
+          },
+          {
+            "word": "is",
+            "start": 14.640000343322754,
+            "end": 14.920000076293945
+          },
+          {
+            "word": "to",
+            "start": 14.920000076293945,
+            "end": 15.300000190734863
+          },
+          {
+            "word": "become",
+            "start": 15.300000190734863,
+            "end": 15.300000190734863
+          },
+          {
+            "word": "an",
+            "start": 15.300000190734863,
+            "end": 16.079999923706055
+          },
+          {
+            "word": "architect",
+            "start": 16.079999923706055,
+            "end": 16.079999923706055
+          },
+          {
+            "word": "who",
+            "start": 16.079999923706055,
+            "end": 16.760000228881836
+          },
+          {
+            "word": "thinks",
+            "start": 16.760000228881836,
+            "end": 17.059999465942383
+          },
+          {
+            "word": "in",
+            "start": 17.059999465942383,
+            "end": 17.639999389648438
+          },
+          {
+            "word": "systems",
+            "start": 17.639999389648438,
+            "end": 17.979999542236328
+          }
+        ]
+      }
+    ],
+    "skills-story": [
+      {
+        "storyId": "skills-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Not About More Code. Here's what nobody tells you: the skills that accelerate your growth are not about writing more code. They're about how you think. Let's look at what actually matters.",
+        "duration": 12.720000267028809,
+        "words": [
+          {
+            "word": "Not",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "about",
+            "start": 0.46000000834465027,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "more",
+            "start": 0.8999999761581421,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "code",
+            "start": 1.2999999523162842,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "Here's",
+            "start": 2.259999990463257,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "what",
+            "start": 2.4600000381469727,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "nobody",
+            "start": 2.680000066757202,
+            "end": 3
+          },
+          {
+            "word": "tells",
+            "start": 3,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "you",
+            "start": 3.3399999141693115,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "The",
+            "start": 4.139999866485596,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "skills",
+            "start": 4.340000152587891,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "that",
+            "start": 4.599999904632568,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "accelerate",
+            "start": 4.960000038146973,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "your",
+            "start": 5.340000152587891,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "growth",
+            "start": 5.739999771118164,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "are",
+            "start": 5.960000038146973,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "not",
+            "start": 6.300000190734863,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "about",
+            "start": 6.519999980926514,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "writing",
+            "start": 6.840000152587891,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "more",
+            "start": 7.139999866485596,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "code",
+            "start": 7.559999942779541,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "They're",
+            "start": 8.5,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "about",
+            "start": 8.699999809265137,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "how",
+            "start": 9.039999961853027,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "you",
+            "start": 9.359999656677246,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "think",
+            "start": 9.640000343322754,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "Let's",
+            "start": 10.680000305175781,
+            "end": 11
+          },
+          {
+            "word": "look",
+            "start": 11,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "at",
+            "start": 11.15999984741211,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "what",
+            "start": 11.300000190734863,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "actually",
+            "start": 11.539999961853027,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "matters",
+            "start": 12.039999961853027,
+            "end": 12.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Codebase Navigation. Understanding large codebases quickly is critical. Seniors can jump into million-line codebases and find what they need in hours, not weeks. We'll cover this in Chapter 1.",
+        "duration": 15.5,
+        "words": [
+          {
+            "word": "Codebase",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "navigation",
+            "start": 0.8399999737739563,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "Understanding",
+            "start": 3.059999942779541,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "large",
+            "start": 3.059999942779541,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "codebases",
+            "start": 3.7200000286102295,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "quickly",
+            "start": 4.239999771118164,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "is",
+            "start": 4.78000020980835,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "critical",
+            "start": 5.300000190734863,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "Seniors",
+            "start": 6.800000190734863,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "can",
+            "start": 6.800000190734863,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "jump",
+            "start": 7.159999847412109,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "into",
+            "start": 7.480000019073486,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "million",
+            "start": 7.860000133514404,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "line",
+            "start": 8.199999809265137,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "codebases",
+            "start": 8.520000457763672,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "and",
+            "start": 9.119999885559082,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "find",
+            "start": 9.84000015258789,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "what",
+            "start": 10.15999984741211,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "they",
+            "start": 10.359999656677246,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "need",
+            "start": 10.520000457763672,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "in",
+            "start": 10.800000190734863,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "hours",
+            "start": 11.319999694824219,
+            "end": 11.5
+          },
+          {
+            "word": "not",
+            "start": 11.9399995803833,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "weeks",
+            "start": 12.140000343322754,
+            "end": 12.5
+          },
+          {
+            "word": "We'll",
+            "start": 13.279999732971191,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "cover",
+            "start": 13.579999923706055,
+            "end": 13.779999732971191
+          },
+          {
+            "word": "this",
+            "start": 13.779999732971191,
+            "end": 14.100000381469727
+          },
+          {
+            "word": "in",
+            "start": 14.100000381469727,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "Chapter",
+            "start": 14.800000190734863,
+            "end": 15.020000457763672
+          },
+          {
+            "word": "1",
+            "start": 15.020000457763672,
+            "end": 15.34000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Data Flow Tracing. Following data through systems is another critical skill. Where does data come from? Where does it go? What transforms it along the way? Chapter 2 is all about this.",
+        "duration": 14.710000038146973,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "flow",
+            "start": 0.699999988079071,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "tracing",
+            "start": 1.059999942779541,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "Following",
+            "start": 2.680000066757202,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "data",
+            "start": 2.680000066757202,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "through",
+            "start": 3.119999885559082,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "systems",
+            "start": 3.4600000381469727,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "is",
+            "start": 3.859999895095825,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "another",
+            "start": 4.260000228881836,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "critical",
+            "start": 4.599999904632568,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "skill",
+            "start": 5.039999961853027,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "Where",
+            "start": 6.300000190734863,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "does",
+            "start": 6.300000190734863,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "data",
+            "start": 6.519999980926514,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "come",
+            "start": 6.820000171661377,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "from",
+            "start": 7.099999904632568,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "Where",
+            "start": 8.260000228881836,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "does",
+            "start": 8.260000228881836,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "it",
+            "start": 8.460000038146973,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "go",
+            "start": 8.619999885559082,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "What",
+            "start": 9.720000267028809,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "transforms",
+            "start": 9.9399995803833,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "it",
+            "start": 10.520000457763672,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "along",
+            "start": 10.84000015258789,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "the",
+            "start": 11.100000381469727,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "way",
+            "start": 11.319999694824219,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "Chapter",
+            "start": 12.5,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "2",
+            "start": 12.5600004196167,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "is",
+            "start": 12.9399995803833,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "all",
+            "start": 13.359999656677246,
+            "end": 13.760000228881836
+          },
+          {
+            "word": "about",
+            "start": 13.760000228881836,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "this",
+            "start": 14.020000457763672,
+            "end": 14.4399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Design First. Planning before coding is what separates seniors from juniors. Taking 30 minutes to design can save 30 hours of rework. This becomes second nature in Chapter 4.",
+        "duration": 14.800000190734863,
+        "words": [
+          {
+            "word": "Design",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "first",
+            "start": 0.800000011920929,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "Planning",
+            "start": 2.5799999237060547,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "before",
+            "start": 2.5799999237060547,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "coding",
+            "start": 3.119999885559082,
+            "end": 3.5
+          },
+          {
+            "word": "is",
+            "start": 3.5,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "what",
+            "start": 3.940000057220459,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "separates",
+            "start": 4.260000228881836,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "seniors",
+            "start": 4.739999771118164,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "from",
+            "start": 5.260000228881836,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "juniors",
+            "start": 5.920000076293945,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "Taking",
+            "start": 7.420000076293945,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "30",
+            "start": 7.440000057220459,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "minutes",
+            "start": 7.960000038146973,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "to",
+            "start": 8.140000343322754,
+            "end": 8.5
+          },
+          {
+            "word": "design",
+            "start": 8.5,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "can",
+            "start": 8.819999694824219,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "save",
+            "start": 9.420000076293945,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "30",
+            "start": 9.65999984741211,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "hours",
+            "start": 10.199999809265137,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "of",
+            "start": 10.479999542236328,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "rework",
+            "start": 10.720000267028809,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "This",
+            "start": 11.9399995803833,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "becomes",
+            "start": 12.140000343322754,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "second",
+            "start": 12.579999923706055,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "nature",
+            "start": 13.020000457763672,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "in",
+            "start": 13.380000114440918,
+            "end": 14
+          },
+          {
+            "word": "Chapter",
+            "start": 14,
+            "end": 14.279999732971191
+          },
+          {
+            "word": "4",
+            "start": 14.279999732971191,
+            "end": 14.640000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "AI Collaboration. The master skill: using AI as a thinking partner. Not just for code generation, but for exploring designs, catching blind spots, and accelerating every other skill. This runs through the entire course.",
+        "duration": 18.040000915527344,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "collaboration",
+            "start": 1.159999966621399,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "The",
+            "start": 2.5999999046325684,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "master",
+            "start": 2.799999952316284,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "skill",
+            "start": 3.2200000286102295,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "Using",
+            "start": 4.539999961853027,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "AI",
+            "start": 4.539999961853027,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "as",
+            "start": 5.079999923706055,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "a",
+            "start": 5.460000038146973,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "thinking",
+            "start": 5.940000057220459,
+            "end": 6
+          },
+          {
+            "word": "partner",
+            "start": 6,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "Not",
+            "start": 7.079999923706055,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "just",
+            "start": 7.300000190734863,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "for",
+            "start": 7.579999923706055,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "code",
+            "start": 7.840000152587891,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "generation",
+            "start": 8.079999923706055,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "but",
+            "start": 8.859999656677246,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "for",
+            "start": 9.180000305175781,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "exploring",
+            "start": 9.960000038146973,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "designs",
+            "start": 9.960000038146973,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "catching",
+            "start": 11.359999656677246,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "blind",
+            "start": 11.359999656677246,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "spots",
+            "start": 11.819999694824219,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "and",
+            "start": 12.0600004196167,
+            "end": 12.680000305175781
+          },
+          {
+            "word": "accelerating",
+            "start": 12.680000305175781,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "every",
+            "start": 13.319999694824219,
+            "end": 13.979999542236328
+          },
+          {
+            "word": "other",
+            "start": 13.979999542236328,
+            "end": 14.319999694824219
+          },
+          {
+            "word": "skill",
+            "start": 14.319999694824219,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "This",
+            "start": 15,
+            "end": 15.4399995803833
+          },
+          {
+            "word": "runs",
+            "start": 15.4399995803833,
+            "end": 15.760000228881836
+          },
+          {
+            "word": "through",
+            "start": 15.760000228881836,
+            "end": 16.31999969482422
+          },
+          {
+            "word": "the",
+            "start": 16.31999969482422,
+            "end": 16.579999923706055
+          },
+          {
+            "word": "entire",
+            "start": 16.579999923706055,
+            "end": 17.100000381469727
+          },
+          {
+            "word": "course",
+            "start": 17.100000381469727,
+            "end": 17.559999465942383
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "mindset-story": [
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Junior Trap. Most juniors get stuck in patterns that slow their growth. They immediately start coding when given a task, fix symptoms instead of root causes, and measure progress by lines of code.",
+        "duration": 12.720000267028809,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "Junior",
+            "start": 0.3199999928474426,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "Trap",
+            "start": 0.6800000071525574,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "Most",
+            "start": 1.2400000095367432,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "juniors",
+            "start": 1.840000033378601,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "get",
+            "start": 2.200000047683716,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "stuck",
+            "start": 2.4800000190734863,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "in",
+            "start": 2.740000009536743,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "patterns",
+            "start": 3.0999999046325684,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "that",
+            "start": 3.299999952316284,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "slow",
+            "start": 3.5999999046325684,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "their",
+            "start": 3.859999895095825,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "growth",
+            "start": 4.139999866485596,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "They",
+            "start": 5.119999885559082,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "immediately",
+            "start": 5.199999809265137,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "start",
+            "start": 5.659999847412109,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "coding",
+            "start": 6.079999923706055,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "when",
+            "start": 6.360000133514404,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "given",
+            "start": 6.639999866485596,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "a",
+            "start": 6.820000171661377,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "task",
+            "start": 7.21999979019165,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "fix",
+            "start": 8,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "symptoms",
+            "start": 8.140000343322754,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "instead",
+            "start": 8.539999961853027,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "of",
+            "start": 8.9399995803833,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "root",
+            "start": 9.260000228881836,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "causes",
+            "start": 9.399999618530273,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "and",
+            "start": 10.5,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "measure",
+            "start": 10.739999771118164,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "progress",
+            "start": 10.979999542236328,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "by",
+            "start": 11.479999542236328,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "lines",
+            "start": 11.779999732971191,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "of",
+            "start": 12.079999923706055,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "code",
+            "start": 12.539999961853027,
+            "end": 12.539999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Asking 'How?'. Juniors ask 'How do I do this?' first. They work in isolation, afraid to ask questions. They see AI as just a code generator. This keeps them stuck at the same level.",
+        "duration": 14.399999618530273,
+        "words": [
+          {
+            "word": "Asking",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "How",
+            "start": 0.5799999833106995,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "Juniors",
+            "start": 1.3799999952316284,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "ask",
+            "start": 2.5399999618530273,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "How",
+            "start": 3.440000057220459,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "do",
+            "start": 3.5399999618530273,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "I",
+            "start": 3.680000066757202,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "do",
+            "start": 3.859999895095825,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "this",
+            "start": 4.039999961853027,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "First",
+            "start": 4.840000152587891,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "They",
+            "start": 6,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "work",
+            "start": 6.099999904632568,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "in",
+            "start": 6.320000171661377,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "isolation",
+            "start": 6.679999828338623,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "afraid",
+            "start": 7.820000171661377,
+            "end": 8
+          },
+          {
+            "word": "to",
+            "start": 8,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "ask",
+            "start": 8.260000228881836,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "questions",
+            "start": 8.539999961853027,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "They",
+            "start": 9.460000038146973,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "see",
+            "start": 9.619999885559082,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "AI",
+            "start": 9.84000015258789,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "as",
+            "start": 10.199999809265137,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "just",
+            "start": 10.460000038146973,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "a",
+            "start": 10.619999885559082,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "code",
+            "start": 10.800000190734863,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "generator",
+            "start": 11.119999885559082,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "This",
+            "start": 12.180000305175781,
+            "end": 12.460000038146973
+          },
+          {
+            "word": "keeps",
+            "start": 12.460000038146973,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "them",
+            "start": 12.699999809265137,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "stuck",
+            "start": 12.979999542236328,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "at",
+            "start": 13.279999732971191,
+            "end": 13.4399995803833
+          },
+          {
+            "word": "the",
+            "start": 13.4399995803833,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "same",
+            "start": 13.579999923706055,
+            "end": 13.859999656677246
+          },
+          {
+            "word": "level",
+            "start": 13.859999656677246,
+            "end": 14.079999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Senior Approach. Seniors think differently. They understand the 'why' before writing code. They ask 'What problem are we really solving?' They design systems that prevent problems from happening.",
+        "duration": 15.5,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "Senior",
+            "start": 0.41999998688697815,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Approach",
+            "start": 0.8999999761581421,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "Seniors",
+            "start": 1.8200000524520874,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "think",
+            "start": 2.6600000858306885,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "differently",
+            "start": 2.940000057220459,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "They",
+            "start": 4.320000171661377,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "understand",
+            "start": 4.400000095367432,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "the",
+            "start": 4.840000152587891,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "why",
+            "start": 5.139999866485596,
+            "end": 5.5
+          },
+          {
+            "word": "before",
+            "start": 5.5,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "writing",
+            "start": 6.179999828338623,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "code",
+            "start": 6.579999923706055,
+            "end": 7
+          },
+          {
+            "word": "They",
+            "start": 7.900000095367432,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "ask",
+            "start": 8.0600004196167,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "what",
+            "start": 8.899999618530273,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "problem",
+            "start": 9.039999961853027,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "are",
+            "start": 9.5600004196167,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "we",
+            "start": 9.819999694824219,
+            "end": 10
+          },
+          {
+            "word": "really",
+            "start": 10,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "solving",
+            "start": 10.479999542236328,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "They",
+            "start": 11.420000076293945,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "design",
+            "start": 11.779999732971191,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "systems",
+            "start": 12.199999809265137,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "that",
+            "start": 12.619999885559082,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "prevent",
+            "start": 12.920000076293945,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "problems",
+            "start": 13.300000190734863,
+            "end": 13.859999656677246
+          },
+          {
+            "word": "from",
+            "start": 13.859999656677246,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "happening",
+            "start": 14.399999618530273,
+            "end": 14.5600004196167
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Asking 'Why?'. Seniors communicate early, clarify requirements, and measure progress by impact delivered. They use AI as a thinking partner, not just a code generator. This is the mindset shift that accelerates growth.",
+        "duration": 17.059999465942383,
+        "words": [
+          {
+            "word": "Asking",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "why",
+            "start": 0.6200000047683716,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "Seniors",
+            "start": 2.5199999809265137,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "communicate",
+            "start": 2.5199999809265137,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "early",
+            "start": 3.140000104904175,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "clarify",
+            "start": 4.880000114440918,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "requirements",
+            "start": 4.880000114440918,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "and",
+            "start": 6.059999942779541,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "measure",
+            "start": 6.420000076293945,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "progress",
+            "start": 6.480000019073486,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "by",
+            "start": 7.039999961853027,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "impact",
+            "start": 7.360000133514404,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "delivered",
+            "start": 7.860000133514404,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "They",
+            "start": 9.300000190734863,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "use",
+            "start": 9.359999656677246,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "AI",
+            "start": 9.65999984741211,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "as",
+            "start": 10.020000457763672,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "a",
+            "start": 10.239999771118164,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "thinking",
+            "start": 10.520000457763672,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "partner",
+            "start": 10.699999809265137,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "not",
+            "start": 11.819999694824219,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "just",
+            "start": 11.899999618530273,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "a",
+            "start": 12.140000343322754,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "code",
+            "start": 12.380000114440918,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "generator",
+            "start": 12.640000343322754,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "This",
+            "start": 13.800000190734863,
+            "end": 14
+          },
+          {
+            "word": "is",
+            "start": 14,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 14.180000305175781,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "mindset",
+            "start": 14.4399995803833,
+            "end": 14.84000015258789
+          },
+          {
+            "word": "shift",
+            "start": 14.84000015258789,
+            "end": 15.260000228881836
+          },
+          {
+            "word": "that",
+            "start": 15.260000228881836,
+            "end": 15.739999771118164
+          },
+          {
+            "word": "accelerates",
+            "start": 15.739999771118164,
+            "end": 16.420000076293945
+          },
+          {
+            "word": "growth",
+            "start": 16.420000076293945,
+            "end": 16.780000686645508
+          }
+        ]
+      },
+      {
+        "storyId": "mindset-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Real Difference. Here's the secret: A junior fixes bugs. A mid-level prevents bugs. A senior designs systems where certain classes of bugs can't exist. This course teaches you to think like the third type.",
+        "duration": 16.600000381469727,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "real",
+            "start": 0.3199999928474426,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "difference",
+            "start": 0.7400000095367432,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "Here's",
+            "start": 1.9199999570846558,
+            "end": 2
+          },
+          {
+            "word": "the",
+            "start": 2,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "secret",
+            "start": 2.2799999713897705,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "A",
+            "start": 3.180000066757202,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "junior",
+            "start": 3.3399999141693115,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "fixes",
+            "start": 3.6600000858306885,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "bugs",
+            "start": 4.059999942779541,
+            "end": 4.5
+          },
+          {
+            "word": "A",
+            "start": 5.019999980926514,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "mid",
+            "start": 5.239999771118164,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "level",
+            "start": 5.480000019073486,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "prevents",
+            "start": 5.860000133514404,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "bugs",
+            "start": 6.380000114440918,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "A",
+            "start": 7.380000114440918,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "senior",
+            "start": 7.739999771118164,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "designs",
+            "start": 7.980000019073486,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "systems",
+            "start": 8.899999618530273,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "where",
+            "start": 9.399999618530273,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "certain",
+            "start": 9.800000190734863,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "classes",
+            "start": 10.180000305175781,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "of",
+            "start": 10.539999961853027,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "bugs",
+            "start": 11.15999984741211,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "can't",
+            "start": 11.15999984741211,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "exist",
+            "start": 11.739999771118164,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "This",
+            "start": 12.920000076293945,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "course",
+            "start": 13.180000305175781,
+            "end": 13.5600004196167
+          },
+          {
+            "word": "teaches",
+            "start": 13.5600004196167,
+            "end": 14.079999923706055
+          },
+          {
+            "word": "you",
+            "start": 14.079999923706055,
+            "end": 14.319999694824219
+          },
+          {
+            "word": "to",
+            "start": 14.319999694824219,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "think",
+            "start": 14.699999809265137,
+            "end": 14.739999771118164
+          },
+          {
+            "word": "like",
+            "start": 14.739999771118164,
+            "end": 15
+          },
+          {
+            "word": "the",
+            "start": 15,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "third",
+            "start": 15.399999618530273,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "type",
+            "start": 15.5600004196167,
+            "end": 15.899999618530273
+          }
+        ]
+      }
+    ],
+    "acceleration-story": [
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Traditional Timeline. The traditional path from junior to senior takes 5 to 10 years. You slowly accumulate experience, make mistakes, and eventually level up. But what if there was a shortcut?",
+        "duration": 14.010000228881836,
+        "words": [
+          {
+            "word": "Traditional",
+            "start": 0,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Timeline",
+            "start": 0.8999999761581421,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "The",
+            "start": 1.6200000047683716,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "traditional",
+            "start": 2.3399999141693115,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "path",
+            "start": 2.799999952316284,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "from",
+            "start": 3.2200000286102295,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "junior",
+            "start": 3.5399999618530273,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "to",
+            "start": 3.819999933242798,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "senior",
+            "start": 4.159999847412109,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "takes",
+            "start": 4.420000076293945,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "5",
+            "start": 4.980000019073486,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "to",
+            "start": 5.440000057220459,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "10",
+            "start": 5.619999885559082,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "years",
+            "start": 5.880000114440918,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "You",
+            "start": 6.960000038146973,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "slowly",
+            "start": 7.139999866485596,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "accumulate",
+            "start": 7.539999961853027,
+            "end": 8
+          },
+          {
+            "word": "experience",
+            "start": 8,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "make",
+            "start": 9.15999984741211,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "mistakes",
+            "start": 9.199999809265137,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "and",
+            "start": 10.039999961853027,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "eventually",
+            "start": 10.199999809265137,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "level",
+            "start": 10.739999771118164,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "up",
+            "start": 11.239999771118164,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "But",
+            "start": 12.079999923706055,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "what",
+            "start": 12.300000190734863,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "if",
+            "start": 12.4399995803833,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "there",
+            "start": 12.600000381469727,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "was",
+            "start": 12.699999809265137,
+            "end": 12.859999656677246
+          },
+          {
+            "word": "a",
+            "start": 12.859999656677246,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "shortcut",
+            "start": 13.0600004196167,
+            "end": 13.359999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "You Are Here. Right now, you're at the starting point. You might feel like senior-level thinking is years away. But with AI tools and the right approach, the timeline is about to compress dramatically.",
+        "duration": 12.210000038146973,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "are",
+            "start": 0.3199999928474426,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "here",
+            "start": 0.5600000023841858,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "Right",
+            "start": 1.4800000190734863,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "now",
+            "start": 1.659999966621399,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "you're",
+            "start": 1.940000057220459,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "at",
+            "start": 2.0999999046325684,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "the",
+            "start": 2.200000047683716,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "starting",
+            "start": 2.4200000762939453,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "point",
+            "start": 2.740000009536743,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "You",
+            "start": 3.7799999713897705,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "might",
+            "start": 3.8399999141693115,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "feel",
+            "start": 4.079999923706055,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "like",
+            "start": 4.360000133514404,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "senior",
+            "start": 4.639999866485596,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "level",
+            "start": 4.920000076293945,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "thinking",
+            "start": 5.199999809265137,
+            "end": 5.5
+          },
+          {
+            "word": "is",
+            "start": 5.5,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "years",
+            "start": 5.78000020980835,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "away",
+            "start": 6.059999942779541,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "but",
+            "start": 6.860000133514404,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "with",
+            "start": 6.960000038146973,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "AI",
+            "start": 7.179999828338623,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "tools",
+            "start": 7.579999923706055,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "and",
+            "start": 7.900000095367432,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 8.15999984741211,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "right",
+            "start": 8.279999732971191,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "approach",
+            "start": 8.539999961853027,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "the",
+            "start": 9.380000114440918,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "timeline",
+            "start": 9.4399995803833,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "is",
+            "start": 9.920000076293945,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "about",
+            "start": 10.15999984741211,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "to",
+            "start": 10.380000114440918,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "compress",
+            "start": 11.079999923706055,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "dramatically",
+            "start": 11.140000343322754,
+            "end": 11.699999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "AI Acceleration. AI changes everything. Ten times faster learning. Eighty percent less time on boilerplate. You can focus on architecture and systems thinking while AI handles implementation details.",
+        "duration": 17.520000457763672,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "acceleration",
+            "start": 0.6200000047683716,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "AI",
+            "start": 3.359999895095825,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "changes",
+            "start": 3.359999895095825,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "everything",
+            "start": 3.940000057220459,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "10",
+            "start": 5.260000228881836,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "times",
+            "start": 5.380000114440918,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "faster",
+            "start": 5.840000152587891,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "learning",
+            "start": 6.28000020980835,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "80",
+            "start": 7.360000133514404,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "",
+            "start": 7.619999885559082,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "less",
+            "start": 8.0600004196167,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "time",
+            "start": 8.34000015258789,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "on",
+            "start": 8.720000267028809,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "boilerplate",
+            "start": 9.0600004196167,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "You",
+            "start": 10.220000267028809,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "can",
+            "start": 10.279999732971191,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "focus",
+            "start": 10.5600004196167,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "on",
+            "start": 10.819999694824219,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "architecture",
+            "start": 11.34000015258789,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "and",
+            "start": 11.800000190734863,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "systems",
+            "start": 12.399999618530273,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "thinking",
+            "start": 12.779999732971191,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "while",
+            "start": 13.180000305175781,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "AI",
+            "start": 13.800000190734863,
+            "end": 14.239999771118164
+          },
+          {
+            "word": "handles",
+            "start": 14.239999771118164,
+            "end": 14.760000228881836
+          },
+          {
+            "word": "implementation",
+            "start": 14.760000228881836,
+            "end": 15.520000457763672
+          },
+          {
+            "word": "details",
+            "start": 15.520000457763672,
+            "end": 16.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Mid-Level: 6-12 Months. With deliberate practice and AI collaboration, you can reach mid-level thinking in 6 to 12 months. You start seeing patterns, understanding codebases faster, and preventing bugs proactively.",
+        "duration": 15.449999809265137,
+        "words": [
+          {
+            "word": "Mid",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "Level",
+            "start": 0.5199999809265137,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "6",
+            "start": 1.0199999809265137,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "12",
+            "start": 1.7000000476837158,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Months",
+            "start": 2.200000047683716,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "With",
+            "start": 3.1600000858306885,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "deliberate",
+            "start": 3.740000009536743,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "practice",
+            "start": 4.199999809265137,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "and",
+            "start": 4.699999809265137,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "AI",
+            "start": 4.980000019073486,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "collaboration",
+            "start": 5.340000152587891,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "you",
+            "start": 6.519999980926514,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "can",
+            "start": 6.519999980926514,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "reach",
+            "start": 6.739999771118164,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "mid",
+            "start": 6.940000057220459,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "level",
+            "start": 7.300000190734863,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "thinking",
+            "start": 7.460000038146973,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "in",
+            "start": 7.820000171661377,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "6",
+            "start": 8.180000305175781,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "12",
+            "start": 8.460000038146973,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "months",
+            "start": 9.020000457763672,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "You",
+            "start": 10.140000343322754,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "start",
+            "start": 10.239999771118164,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "seeing",
+            "start": 10.460000038146973,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "patterns",
+            "start": 10.779999732971191,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "understanding",
+            "start": 12.15999984741211,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "codebases",
+            "start": 12.15999984741211,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "faster",
+            "start": 12.720000267028809,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "and",
+            "start": 13.619999885559082,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "preventing",
+            "start": 14.15999984741211,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "bugs",
+            "start": 14.15999984741211,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "proactively",
+            "start": 14.520000457763672,
+            "end": 15.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "acceleration-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior: 12-24 Months. By month 12 to 24, you're operating at senior level. You design systems, make architectural decisions, and lead features. The goal is to become an architect who thinks in systems.",
+        "duration": 15.3100004196167,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "12",
+            "start": 1.0800000429153442,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "to",
+            "start": 1.399999976158142,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "24",
+            "start": 1.5800000429153442,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "months",
+            "start": 2.059999942779541,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "By",
+            "start": 2.9800000190734863,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "month",
+            "start": 3.140000104904175,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "12",
+            "start": 3.4200000762939453,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "to",
+            "start": 3.7799999713897705,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "24",
+            "start": 3.9600000381469727,
+            "end": 4.5
+          },
+          {
+            "word": "you're",
+            "start": 4.940000057220459,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "operating",
+            "start": 5.239999771118164,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "at",
+            "start": 5.559999942779541,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "senior",
+            "start": 6.059999942779541,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "level",
+            "start": 6.199999809265137,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "You",
+            "start": 7.21999979019165,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "design",
+            "start": 7.340000152587891,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "systems",
+            "start": 7.739999771118164,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "make",
+            "start": 8.800000190734863,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "architectural",
+            "start": 8.920000076293945,
+            "end": 9.5
+          },
+          {
+            "word": "decisions",
+            "start": 9.5,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "and",
+            "start": 10.34000015258789,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "lead",
+            "start": 10.779999732971191,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "features",
+            "start": 10.899999618530273,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "The",
+            "start": 11.9399995803833,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "goal",
+            "start": 12.300000190734863,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "is",
+            "start": 12.539999961853027,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "to",
+            "start": 12.720000267028809,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "become",
+            "start": 12.979999542236328,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "an",
+            "start": 13.020000457763672,
+            "end": 13.4399995803833
+          },
+          {
+            "word": "architect",
+            "start": 13.4399995803833,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "who",
+            "start": 13.579999923706055,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "thinks",
+            "start": 14.4399995803833,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "in",
+            "start": 14.4399995803833,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "systems",
+            "start": 14.800000190734863,
+            "end": 14.979999542236328
+          }
+        ]
+      }
+    ],
+    "skills-story": [
+      {
+        "storyId": "skills-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Not About More Code. Here's what nobody tells you: the skills that accelerate your growth are not about writing more code. They're about how you think. Let's look at what actually matters.",
+        "duration": 12.3100004196167,
+        "words": [
+          {
+            "word": "Not",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "about",
+            "start": 0.47999998927116394,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "more",
+            "start": 0.8399999737739563,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "code",
+            "start": 1.3200000524520874,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "Here's",
+            "start": 2.240000009536743,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "what",
+            "start": 2.3399999141693115,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "nobody",
+            "start": 2.5199999809265137,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "tells",
+            "start": 2.859999895095825,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "you",
+            "start": 3.180000066757202,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "The",
+            "start": 3.9200000762939453,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "skills",
+            "start": 4.119999885559082,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "that",
+            "start": 4.380000114440918,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "accelerate",
+            "start": 4.659999847412109,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "your",
+            "start": 5.139999866485596,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "growth",
+            "start": 5.480000019073486,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "are",
+            "start": 5.760000228881836,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "not",
+            "start": 6.199999809265137,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "about",
+            "start": 6.639999866485596,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "writing",
+            "start": 7.039999961853027,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "more",
+            "start": 7.320000171661377,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "code",
+            "start": 7.760000228881836,
+            "end": 8
+          },
+          {
+            "word": "They're",
+            "start": 8.579999923706055,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "about",
+            "start": 8.779999732971191,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "how",
+            "start": 9.020000457763672,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "you",
+            "start": 9.279999732971191,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "think",
+            "start": 9.539999961853027,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "Let's",
+            "start": 10.380000114440918,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "look",
+            "start": 10.680000305175781,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "at",
+            "start": 10.800000190734863,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "what",
+            "start": 10.960000038146973,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "actually",
+            "start": 11.140000343322754,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "matters",
+            "start": 11.65999984741211,
+            "end": 11.9399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Codebase Navigation. Understanding large codebases quickly is critical. Seniors can jump into million-line codebases and find what they need in hours, not weeks. We'll cover this in Chapter 1.",
+        "duration": 13.100000381469727,
+        "words": [
+          {
+            "word": "Codebase",
+            "start": 0.8799999952316284,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "navigation",
+            "start": 1.5399999618530273,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "Understanding",
+            "start": 3.200000047683716,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "large",
+            "start": 3.200000047683716,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "codebases",
+            "start": 3.7200000286102295,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "quickly",
+            "start": 4.21999979019165,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "is",
+            "start": 4.659999847412109,
+            "end": 5
+          },
+          {
+            "word": "critical",
+            "start": 5,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "Seniors",
+            "start": 6.21999979019165,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "can",
+            "start": 6.21999979019165,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "jump",
+            "start": 6.519999980926514,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "into",
+            "start": 6.739999771118164,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "million",
+            "start": 7.019999980926514,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "line",
+            "start": 7.380000114440918,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "codebases",
+            "start": 7.699999809265137,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "and",
+            "start": 8.180000305175781,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "find",
+            "start": 8.479999542236328,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "what",
+            "start": 8.65999984741211,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "they",
+            "start": 8.84000015258789,
+            "end": 9
+          },
+          {
+            "word": "need",
+            "start": 9,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "in",
+            "start": 9.15999984741211,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "hours",
+            "start": 9.859999656677246,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "not",
+            "start": 10.319999694824219,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "weeks",
+            "start": 10.460000038146973,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "We'll",
+            "start": 11.479999542236328,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "cover",
+            "start": 11.720000267028809,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "this",
+            "start": 11.899999618530273,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "in",
+            "start": 12.140000343322754,
+            "end": 12.5
+          },
+          {
+            "word": "Chapter",
+            "start": 12.5,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "1",
+            "start": 12.65999984741211,
+            "end": 12.9399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Data Flow Tracing. Following data through systems is another critical skill. Where does data come from? Where does it go? What transforms it along the way? Chapter 2 is all about this.",
+        "duration": 11.760000228881836,
+        "words": [
+          {
+            "word": "Data",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "flow",
+            "start": 0.6399999856948853,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "tracing",
+            "start": 1.2200000286102295,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "Following",
+            "start": 2.9200000762939453,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "data",
+            "start": 2.9200000762939453,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "through",
+            "start": 3.259999990463257,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "systems",
+            "start": 3.619999885559082,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "is",
+            "start": 3.9800000190734863,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "another",
+            "start": 4.420000076293945,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "critical",
+            "start": 4.860000133514404,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "skill",
+            "start": 5.340000152587891,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "Where",
+            "start": 6.460000038146973,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "does",
+            "start": 6.460000038146973,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "data",
+            "start": 6.679999828338623,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "come",
+            "start": 6.940000057220459,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "from",
+            "start": 7.239999771118164,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "Where",
+            "start": 8.0600004196167,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "does",
+            "start": 8.100000381469727,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "it",
+            "start": 8.279999732971191,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "go",
+            "start": 8.460000038146973,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "What",
+            "start": 9.4399995803833,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "transforms",
+            "start": 9.600000381469727,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "it",
+            "start": 10.199999809265137,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "along",
+            "start": 10.539999961853027,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "the",
+            "start": 10.760000228881836,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "way",
+            "start": 10.9399995803833,
+            "end": 11.119999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Design First. Planning before coding is what separates seniors from juniors. Taking 30 minutes to design can save 30 hours of rework. This becomes second nature in Chapter 4.",
+        "duration": 12.210000038146973,
+        "words": [
+          {
+            "word": "Design",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "first",
+            "start": 0.6399999856948853,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "Planning",
+            "start": 1.7799999713897705,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "before",
+            "start": 1.7799999713897705,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "coding",
+            "start": 2.180000066757202,
+            "end": 2.5
+          },
+          {
+            "word": "is",
+            "start": 2.5,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "what",
+            "start": 2.7200000286102295,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "separates",
+            "start": 2.940000057220459,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "seniors",
+            "start": 3.359999895095825,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "from",
+            "start": 3.799999952316284,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "juniors",
+            "start": 4.159999847412109,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "Taking",
+            "start": 5.360000133514404,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "30",
+            "start": 5.360000133514404,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "minutes",
+            "start": 5.800000190734863,
+            "end": 6
+          },
+          {
+            "word": "to",
+            "start": 6,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "design",
+            "start": 6.739999771118164,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "can",
+            "start": 6.739999771118164,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "save",
+            "start": 7.119999885559082,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "30",
+            "start": 7.360000133514404,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "hours",
+            "start": 7.78000020980835,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "of",
+            "start": 8.079999923706055,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "rework",
+            "start": 8.399999618530273,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "This",
+            "start": 9.779999732971191,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "becomes",
+            "start": 9.899999618530273,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "second",
+            "start": 10.279999732971191,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "nature",
+            "start": 10.699999809265137,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "in",
+            "start": 10.979999542236328,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "Chapter",
+            "start": 11.4399995803833,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "4",
+            "start": 11.699999809265137,
+            "end": 12.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "skills-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "AI Collaboration. The master skill: using AI as a thinking partner. Not just for code generation, but for exploring designs, catching blind spots, and accelerating every other skill. This runs through the entire course.",
+        "duration": 16.920000076293945,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "collaboration",
+            "start": 0.47999998927116394,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "the",
+            "start": 1.899999976158142,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "master",
+            "start": 2.0799999237060547,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "skill",
+            "start": 2.4800000190734863,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "using",
+            "start": 3.5999999046325684,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "AI",
+            "start": 3.619999885559082,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "as",
+            "start": 4.099999904632568,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "a",
+            "start": 4.340000152587891,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "thinking",
+            "start": 4.619999885559082,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "partner",
+            "start": 4.820000171661377,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "not",
+            "start": 5.820000171661377,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "just",
+            "start": 5.980000019073486,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "for",
+            "start": 6.159999847412109,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "code",
+            "start": 6.380000114440918,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "generation",
+            "start": 6.599999904632568,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "but",
+            "start": 7.300000190734863,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "for",
+            "start": 7.619999885559082,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "exploring",
+            "start": 8.279999732971191,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "designs",
+            "start": 8.279999732971191,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "catching",
+            "start": 9.479999542236328,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "blind",
+            "start": 9.479999542236328,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "spots",
+            "start": 9.899999618530273,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "and",
+            "start": 10.279999732971191,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "accelerating",
+            "start": 10.880000114440918,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "every",
+            "start": 11.300000190734863,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "other",
+            "start": 11.880000114440918,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "skill",
+            "start": 12.239999771118164,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "This",
+            "start": 12.880000114440918,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "runs",
+            "start": 13.260000228881836,
+            "end": 13.5600004196167
+          },
+          {
+            "word": "through",
+            "start": 13.5600004196167,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 13.800000190734863,
+            "end": 14.039999961853027
+          },
+          {
+            "word": "entire",
+            "start": 14.039999961853027,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "course",
+            "start": 14.4399995803833,
+            "end": 14.84000015258789
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,293 @@
+{
+  "pageId": "ch2-lightning",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "Lightning Paths",
+    "icon": "⚡",
+    "themeColor": "lightning"
+  },
+  "stories": [
+    {
+      "id": "debugging-trap-story",
+      "diagramId": "debugging-trap",
+      "title": "The Junior Debugging Trap",
+      "steps": [
+        {
+          "nodeId": "bug-report",
+          "icon": "🐛",
+          "title": "The Bug Report",
+          "narration": "A bug report arrives: The user's balance shows the wrong number. You open the code. What do you do next? Your approach here separates juniors from seniors.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "junior-stare",
+          "edges": [{ "from": "bug-report", "to": "junior-stare" }],
+          "icon": "👀",
+          "title": "Junior: Stare at Code",
+          "narration": "Juniors start by staring at the display code. It looks fine. So they add print statements everywhere. Four hours later, they're more confused than ever.",
+          "connectsTo": "Bug Report"
+        },
+        {
+          "nodeId": "junior-lost",
+          "edges": [{ "from": "junior-stare", "to": "junior-lost" }],
+          "icon": "😵",
+          "title": "Junior: Hours Lost",
+          "narration": "Eventually they realize the bug is somewhere else entirely. A race condition in a background job that nobody remembers writing. Time wasted: four hours.",
+          "connectsTo": "Stare at Code"
+        },
+        {
+          "nodeId": "senior-map",
+          "edges": [{ "from": "bug-report", "to": "senior-map" }],
+          "icon": "🗺️",
+          "title": "Senior: Map the Flow",
+          "narration": "Seniors take a different approach. First question: What writes to the balance field? They make a list of every place in the codebase that touches it.",
+          "connectsTo": "Bug Report"
+        },
+        {
+          "nodeId": "senior-async",
+          "edges": [{ "from": "senior-map", "to": "senior-async" }],
+          "icon": "⚡",
+          "title": "Senior: Check Async",
+          "narration": "Second question: Any background jobs? Scheduled tasks? Event handlers? Seniors know bugs love to hide in code that runs when nobody's watching.",
+          "connectsTo": "Map the Flow"
+        },
+        {
+          "nodeId": "senior-found",
+          "edges": [{ "from": "senior-async", "to": "senior-found" }],
+          "icon": "🎯",
+          "title": "Senior: Found in 20 Minutes",
+          "narration": "The nightly reconciliation job has a bug in its calculation. Found in twenty minutes. The secret? Instead of asking WHERE the bug is, ask WHAT touches this data.",
+          "connectsTo": "Check Async"
+        }
+      ]
+    },
+    {
+      "id": "data-flow-story",
+      "diagramId": "data-flow",
+      "title": "The Data Flow Tracing Method",
+      "steps": [
+        {
+          "nodeId": "question-1",
+          "icon": "1️⃣",
+          "title": "Question 1: Where Displayed?",
+          "narration": "For any bug, start with five questions. First: Where is the data displayed? Find the endpoint, the UI component, the API response that shows the wrong value.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "question-2",
+          "edges": [{ "from": "question-1", "to": "question-2" }],
+          "icon": "2️⃣",
+          "title": "Question 2: Where Stored?",
+          "narration": "Second: Where is the data stored? Is it in a database field? A cache? A file? Trace backwards from the display to the source of truth.",
+          "connectsTo": "Question 1"
+        },
+        {
+          "nodeId": "question-3",
+          "edges": [{ "from": "question-2", "to": "question-3" }],
+          "icon": "3️⃣",
+          "title": "Question 3: What Writes?",
+          "narration": "Third: What writes to this storage? This is the critical question. Make a complete list. Every function, every job, every external system that can modify this data.",
+          "connectsTo": "Question 2"
+        },
+        {
+          "nodeId": "question-4",
+          "edges": [{ "from": "question-3", "to": "question-4" }],
+          "icon": "4️⃣",
+          "title": "Question 4: When?",
+          "narration": "Fourth: When does each write happen? Some happen on user action. Some happen at midnight. Some happen when external events fire. Timing matters.",
+          "connectsTo": "Question 3"
+        },
+        {
+          "nodeId": "question-5",
+          "edges": [{ "from": "question-4", "to": "question-5" }],
+          "icon": "5️⃣",
+          "title": "Question 5: External Data?",
+          "narration": "Fifth: What external data flows in? Webhooks, API calls, file uploads, message queues. External data is unpredictable and often the source of bugs.",
+          "connectsTo": "Question 4"
+        },
+        {
+          "nodeId": "bug-location",
+          "edges": [{ "from": "question-5", "to": "bug-location" }],
+          "icon": "🐛",
+          "title": "Bug Is in Steps 3-5",
+          "narration": "Here's the pattern: The bug is almost always in questions three, four, or five. Something that writes data, runs at an unexpected time, or comes from outside. Your list is your treasure map.",
+          "connectsTo": "Question 5"
+        }
+      ]
+    },
+    {
+      "id": "async-flows-story",
+      "diagramId": "async-flows",
+      "title": "Async Flows: Where Bugs Hide",
+      "steps": [
+        {
+          "nodeId": "sync-flow",
+          "icon": "🟢",
+          "title": "Synchronous: Easy to Debug",
+          "narration": "Synchronous code is linear. User makes a request, server processes it, database responds, user gets the result. When it breaks, you can follow the path step by step.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "async-flow",
+          "edges": [{ "from": "sync-flow", "to": "async-flow" }],
+          "icon": "🟡",
+          "title": "Asynchronous: Bugs Hide Here",
+          "narration": "Asynchronous code is different. User makes a request, server queues a job, user gets 'processing'. Later, a worker picks up the job. Much later, the database updates. Bugs love these gaps.",
+          "connectsTo": "Synchronous"
+        },
+        {
+          "nodeId": "scheduled-tasks",
+          "edges": [{ "from": "async-flow", "to": "scheduled-tasks" }],
+          "icon": "⏰",
+          "title": "Scheduled Tasks",
+          "narration": "First hiding spot: scheduled tasks. Cron jobs, scheduled functions, things that run at three AM. Ask yourself: What runs at night in this codebase? Who maintains it?",
+          "connectsTo": "Async Flow"
+        },
+        {
+          "nodeId": "message-queues",
+          "edges": [{ "from": "async-flow", "to": "message-queues" }],
+          "icon": "📬",
+          "title": "Message Queues",
+          "narration": "Second hiding spot: message queues. Celery, RabbitMQ, SQS. Messages go in, workers process them. What happens when a message fails? When the queue backs up?",
+          "connectsTo": "Async Flow"
+        },
+        {
+          "nodeId": "event-handlers",
+          "edges": [{ "from": "async-flow", "to": "event-handlers" }],
+          "icon": "🔔",
+          "title": "Event Handlers",
+          "narration": "Third hiding spot: event handlers. Webhooks, pub/sub, callbacks. When an external event fires, what code runs? These are often forgotten and rarely tested.",
+          "connectsTo": "Async Flow"
+        },
+        {
+          "nodeId": "inventory",
+          "edges": [
+            { "from": "scheduled-tasks", "to": "inventory" },
+            { "from": "message-queues", "to": "inventory" },
+            { "from": "event-handlers", "to": "inventory" }
+          ],
+          "icon": "📋",
+          "title": "Build Your Inventory",
+          "narration": "Senior engineers keep an inventory: every async flow, what data it touches, when it runs. When a bug hits, they check the inventory first. Build yours today.",
+          "connectsTo": "All Async Sources"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "debugging-trap-story",
+      "questions": [
+        {
+          "question": "A user reports their balance is wrong. What should you do FIRST?",
+          "options": [
+            "Add print statements to the balance display code",
+            "List everything that writes to the balance field",
+            "Ask the user to refresh their browser",
+            "Check the database directly"
+          ],
+          "correct": 1,
+          "explanation": "Map the flow first! Before diving into code, identify EVERYTHING that touches the balance field. The bug is always in that list."
+        },
+        {
+          "question": "Why do junior developers waste hours debugging?",
+          "options": [
+            "They don't know the programming language well enough",
+            "They start at the symptom instead of mapping the data flow",
+            "They don't use debuggers",
+            "They don't ask for help"
+          ],
+          "correct": 1,
+          "explanation": "Juniors focus on WHERE the bug appears. Seniors focus on WHAT touches the data. Mapping the flow first saves hours."
+        },
+        {
+          "question": "The 'senior secret' to debugging is to ask:",
+          "options": [
+            "Where does the bug happen?",
+            "What error message appears?",
+            "What touches this data?",
+            "Who wrote this code?"
+          ],
+          "correct": 2,
+          "explanation": "Instead of searching for WHERE the bug happens, ask WHAT touches this data. Make a list. The bug is always in that list."
+        }
+      ]
+    },
+    {
+      "storyId": "data-flow-story",
+      "questions": [
+        {
+          "question": "In the Five Questions method, which questions usually contain the bug?",
+          "options": [
+            "Questions 1 and 2 (display and storage)",
+            "Questions 3, 4, and 5 (writes, timing, external data)",
+            "Only Question 1 (display)",
+            "All questions equally"
+          ],
+          "correct": 1,
+          "explanation": "Bugs are almost always in what writes to data, when it writes, or what external data flows in. Questions 3-5 are your focus."
+        },
+        {
+          "question": "What does 'trace backwards from display' mean?",
+          "options": [
+            "Delete the display code and rewrite it",
+            "Follow the data path from where it's shown to where it's stored",
+            "Print the call stack",
+            "Use a time machine debugger"
+          ],
+          "correct": 1,
+          "explanation": "Start where the wrong data appears, then trace back through the code to find where the data comes from and what modifies it."
+        },
+        {
+          "question": "Why is 'What writes to storage?' the critical question?",
+          "options": [
+            "Because storage is always slow",
+            "Because it identifies every possible source of data corruption",
+            "Because databases are hard to use",
+            "Because writes are more expensive than reads"
+          ],
+          "correct": 1,
+          "explanation": "If data is wrong, something wrote it wrong. By listing every write path, you create a finite list of suspects. The bug is in that list."
+        }
+      ]
+    },
+    {
+      "storyId": "async-flows-story",
+      "questions": [
+        {
+          "question": "A user reports their profile picture isn't updating. The upload succeeds but the old image shows. Where should you look FIRST?",
+          "options": [
+            "Add print statements in the upload handler",
+            "List everything that processes uploaded images (resizing, CDN, cache)",
+            "Check if the database field is updating",
+            "Ask the user to clear their browser cache"
+          ],
+          "correct": 1,
+          "explanation": "Map the flow first! Image uploads often have background processing (resize, CDN upload, cache invalidation). The bug is probably in an async step."
+        },
+        {
+          "question": "Why are scheduled tasks a common source of bugs?",
+          "options": [
+            "They run too fast",
+            "They run when nobody's watching and are often forgotten",
+            "They use too much memory",
+            "They can't access the database"
+          ],
+          "correct": 1,
+          "explanation": "Code that runs at 3 AM is rarely tested and often forgotten. When it breaks, nobody notices until data is already corrupted."
+        },
+        {
+          "question": "What is an 'async flow inventory'?",
+          "options": [
+            "A list of all JavaScript promises in your code",
+            "A document listing every background process, what it touches, and when it runs",
+            "A performance monitoring tool",
+            "A queue management system"
+          ],
+          "correct": 1,
+          "explanation": "An async flow inventory maps every scheduled task, event handler, and background job. When debugging, check this list first."
+        }
+      ]
+    }
+  ]
+}

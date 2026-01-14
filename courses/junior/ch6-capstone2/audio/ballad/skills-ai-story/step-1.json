@@ -1,0 +1,170 @@
+{
+  "storyId": "skills-ai-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "AI's Raw Power. AI can generate code, explain concepts, refactor patterns, and write tests at incredible speed. But without context, it's just guessing. It doesn't know your codebase or your requirements.",
+  "duration": 16.510000228881836,
+  "words": [
+    {
+      "word": "AI's",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "raw",
+      "start": 0.7799999713897705,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "power",
+      "start": 1.2999999523162842,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "AI",
+      "start": 2.8399999141693115,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "can",
+      "start": 2.9200000762939453,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "generate",
+      "start": 3.299999952316284,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "code",
+      "start": 3.700000047683716,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "explain",
+      "start": 4.78000020980835,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "concepts",
+      "start": 4.860000133514404,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "refactor",
+      "start": 6,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "patterns",
+      "start": 6.28000020980835,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "and",
+      "start": 7.28000020980835,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "write",
+      "start": 7.440000057220459,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "tests",
+      "start": 7.78000020980835,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "at",
+      "start": 8.079999923706055,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "incredible",
+      "start": 8.399999618530273,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "speed",
+      "start": 9.020000457763672,
+      "end": 9.5
+    },
+    {
+      "word": "But",
+      "start": 9.920000076293945,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "without",
+      "start": 10.420000076293945,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "context",
+      "start": 10.720000267028809,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "it's",
+      "start": 11.760000228881836,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "just",
+      "start": 12.020000457763672,
+      "end": 12.359999656677246
+    },
+    {
+      "word": "guessing",
+      "start": 12.359999656677246,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "It",
+      "start": 13.319999694824219,
+      "end": 13.4399995803833
+    },
+    {
+      "word": "doesn't",
+      "start": 13.4399995803833,
+      "end": 13.84000015258789
+    },
+    {
+      "word": "know",
+      "start": 13.84000015258789,
+      "end": 14.0600004196167
+    },
+    {
+      "word": "your",
+      "start": 14.0600004196167,
+      "end": 14.420000076293945
+    },
+    {
+      "word": "code",
+      "start": 14.420000076293945,
+      "end": 14.680000305175781
+    },
+    {
+      "word": "base",
+      "start": 14.680000305175781,
+      "end": 15
+    },
+    {
+      "word": "or",
+      "start": 15,
+      "end": 15.399999618530273
+    },
+    {
+      "word": "your",
+      "start": 15.399999618530273,
+      "end": 15.760000228881836
+    },
+    {
+      "word": "requirements",
+      "start": 15.760000228881836,
+      "end": 16.079999923706055
+    }
+  ]
+}

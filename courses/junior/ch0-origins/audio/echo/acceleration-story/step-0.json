@@ -1,0 +1,165 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Traditional Timeline. The traditional path from junior to senior takes 5 to 10 years. You slowly accumulate experience, make mistakes, and eventually level up. But what if there was a shortcut?",
+  "duration": 14.010000228881836,
+  "words": [
+    {
+      "word": "Traditional",
+      "start": 0,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Timeline",
+      "start": 0.8999999761581421,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "The",
+      "start": 1.6200000047683716,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "traditional",
+      "start": 2.3399999141693115,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "path",
+      "start": 2.799999952316284,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "from",
+      "start": 3.2200000286102295,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "junior",
+      "start": 3.5399999618530273,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "to",
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "senior",
+      "start": 4.159999847412109,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "takes",
+      "start": 4.420000076293945,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "5",
+      "start": 4.980000019073486,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "to",
+      "start": 5.440000057220459,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "10",
+      "start": 5.619999885559082,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "years",
+      "start": 5.880000114440918,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "You",
+      "start": 6.960000038146973,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "slowly",
+      "start": 7.139999866485596,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "accumulate",
+      "start": 7.539999961853027,
+      "end": 8
+    },
+    {
+      "word": "experience",
+      "start": 8,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "make",
+      "start": 9.15999984741211,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "mistakes",
+      "start": 9.199999809265137,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "and",
+      "start": 10.039999961853027,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "eventually",
+      "start": 10.199999809265137,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "level",
+      "start": 10.739999771118164,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "up",
+      "start": 11.239999771118164,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "But",
+      "start": 12.079999923706055,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "what",
+      "start": 12.300000190734863,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "if",
+      "start": 12.4399995803833,
+      "end": 12.600000381469727
+    },
+    {
+      "word": "there",
+      "start": 12.600000381469727,
+      "end": 12.699999809265137
+    },
+    {
+      "word": "was",
+      "start": 12.699999809265137,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "a",
+      "start": 12.859999656677246,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "shortcut",
+      "start": 13.0600004196167,
+      "end": 13.359999656677246
+    }
+  ]
+}

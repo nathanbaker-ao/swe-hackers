@@ -1,0 +1,165 @@
+{
+  "storyId": "resilience-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Why Resilience Matters. In distributed systems, failure isn't a possibility — it's a certainty. Networks drop packets. Services crash. APIs hit limits. Resilience isn't about preventing failures; it's about surviving them gracefully.",
+  "duration": 18.1200008392334,
+  "words": [
+    {
+      "word": "Why",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "resilience",
+      "start": 0.5199999809265137,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "matters",
+      "start": 1.1200000047683716,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "In",
+      "start": 2.559999942779541,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "distributed",
+      "start": 2.619999885559082,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "systems",
+      "start": 3.119999885559082,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "failure",
+      "start": 4.360000133514404,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "isn't",
+      "start": 4.360000133514404,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "a",
+      "start": 4.739999771118164,
+      "end": 5
+    },
+    {
+      "word": "possibility",
+      "start": 5,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "it's",
+      "start": 6.039999961853027,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "a",
+      "start": 6.179999828338623,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "certainty",
+      "start": 6.539999961853027,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "Networks",
+      "start": 7.820000171661377,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "drop",
+      "start": 8.319999694824219,
+      "end": 8.520000457763672
+    },
+    {
+      "word": "packets",
+      "start": 8.520000457763672,
+      "end": 9
+    },
+    {
+      "word": "services",
+      "start": 9.579999923706055,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "crash",
+      "start": 9.960000038146973,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "APIs",
+      "start": 11.260000228881836,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "hit",
+      "start": 11.539999961853027,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "limits",
+      "start": 12.039999961853027,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "Resilience",
+      "start": 13.359999656677246,
+      "end": 13.579999923706055
+    },
+    {
+      "word": "isn't",
+      "start": 13.579999923706055,
+      "end": 13.979999542236328
+    },
+    {
+      "word": "about",
+      "start": 13.979999542236328,
+      "end": 14.300000190734863
+    },
+    {
+      "word": "preventing",
+      "start": 14.300000190734863,
+      "end": 14.680000305175781
+    },
+    {
+      "word": "failures",
+      "start": 14.680000305175781,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "it's",
+      "start": 15.739999771118164,
+      "end": 15.920000076293945
+    },
+    {
+      "word": "about",
+      "start": 15.920000076293945,
+      "end": 16.299999237060547
+    },
+    {
+      "word": "surviving",
+      "start": 16.299999237060547,
+      "end": 16.719999313354492
+    },
+    {
+      "word": "them",
+      "start": 16.719999313354492,
+      "end": 17.280000686645508
+    },
+    {
+      "word": "gracefully",
+      "start": 17.280000686645508,
+      "end": 17.780000686645508
+    }
+  ]
+}

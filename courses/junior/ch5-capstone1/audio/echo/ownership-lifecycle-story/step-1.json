@@ -1,0 +1,140 @@
+{
+  "storyId": "ownership-lifecycle-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Requirements Phase. Meet with stakeholders—PMs, designers, other engineers. Write a requirements doc with clear success criteria. This is your north star for everything that follows.",
+  "duration": 13.40999984741211,
+  "words": [
+    {
+      "word": "Requirements",
+      "start": 0,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "phase",
+      "start": 0.800000011920929,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Meet",
+      "start": 1.840000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "with",
+      "start": 1.840000033378601,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "stakeholders",
+      "start": 2.1600000858306885,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "PMs",
+      "start": 3.5799999237060547,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "designers",
+      "start": 4.579999923706055,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "other",
+      "start": 5,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "engineers",
+      "start": 5.260000228881836,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "Write",
+      "start": 6.400000095367432,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "a",
+      "start": 6.400000095367432,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "requirements",
+      "start": 7.099999904632568,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "doc",
+      "start": 7.099999904632568,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "with",
+      "start": 7.420000076293945,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "clear",
+      "start": 7.699999809265137,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "success",
+      "start": 8.079999923706055,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "criteria",
+      "start": 8.539999961853027,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "This",
+      "start": 9.819999694824219,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "is",
+      "start": 9.979999542236328,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "your",
+      "start": 10.199999809265137,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "North",
+      "start": 10.460000038146973,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "Star",
+      "start": 10.859999656677246,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "for",
+      "start": 11.0600004196167,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "everything",
+      "start": 11.520000457763672,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "that",
+      "start": 12.0600004196167,
+      "end": 12.520000457763672
+    },
+    {
+      "word": "follows",
+      "start": 12.520000457763672,
+      "end": 12.699999809265137
+    }
+  ]
+}

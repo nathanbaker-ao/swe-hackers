@@ -1,0 +1,170 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Mid-Level: 6-12 Months. With deliberate practice and AI collaboration, you can reach mid-level thinking in 6 to 12 months. You start seeing patterns, understanding codebases faster, and preventing bugs proactively.",
+  "duration": 15.449999809265137,
+  "words": [
+    {
+      "word": "Mid",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "Level",
+      "start": 0.5199999809265137,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "6",
+      "start": 1.0199999809265137,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "12",
+      "start": 1.7000000476837158,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "Months",
+      "start": 2.200000047683716,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "With",
+      "start": 3.1600000858306885,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "deliberate",
+      "start": 3.740000009536743,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "practice",
+      "start": 4.199999809265137,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "and",
+      "start": 4.699999809265137,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "AI",
+      "start": 4.980000019073486,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "collaboration",
+      "start": 5.340000152587891,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "you",
+      "start": 6.519999980926514,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "can",
+      "start": 6.519999980926514,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "reach",
+      "start": 6.739999771118164,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "mid",
+      "start": 6.940000057220459,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "level",
+      "start": 7.300000190734863,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "thinking",
+      "start": 7.460000038146973,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "in",
+      "start": 7.820000171661377,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "6",
+      "start": 8.180000305175781,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "12",
+      "start": 8.460000038146973,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "months",
+      "start": 9.020000457763672,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "You",
+      "start": 10.140000343322754,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "start",
+      "start": 10.239999771118164,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "seeing",
+      "start": 10.460000038146973,
+      "end": 10.779999732971191
+    },
+    {
+      "word": "patterns",
+      "start": 10.779999732971191,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "understanding",
+      "start": 12.15999984741211,
+      "end": 12.15999984741211
+    },
+    {
+      "word": "codebases",
+      "start": 12.15999984741211,
+      "end": 12.720000267028809
+    },
+    {
+      "word": "faster",
+      "start": 12.720000267028809,
+      "end": 13.15999984741211
+    },
+    {
+      "word": "and",
+      "start": 13.619999885559082,
+      "end": 14.15999984741211
+    },
+    {
+      "word": "preventing",
+      "start": 14.15999984741211,
+      "end": 14.15999984741211
+    },
+    {
+      "word": "bugs",
+      "start": 14.15999984741211,
+      "end": 14.520000457763672
+    },
+    {
+      "word": "proactively",
+      "start": 14.520000457763672,
+      "end": 15.15999984741211
+    }
+  ]
+}

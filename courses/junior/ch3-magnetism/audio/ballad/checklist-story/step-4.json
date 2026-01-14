@@ -1,0 +1,160 @@
+{
+  "storyId": "checklist-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Testing. Finally, testing. Use mocks for unit tests — don't hit real APIs. Use sandbox environments for integration tests. And critically: test failure scenarios. What happens when the API returns 500? Simulate it.",
+  "duration": 17.65999984741211,
+  "words": [
+    {
+      "word": "Testing",
+      "start": 0,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Finally",
+      "start": 2.359999895095825,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "testing",
+      "start": 2.9800000190734863,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "Use",
+      "start": 4.059999942779541,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "mocks",
+      "start": 4.139999866485596,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "for",
+      "start": 4.440000057220459,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "unit",
+      "start": 4.760000228881836,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "tests",
+      "start": 5.099999904632568,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "Don't",
+      "start": 6.019999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "hit",
+      "start": 6.019999980926514,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "real",
+      "start": 6.340000152587891,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "APIs",
+      "start": 6.71999979019165,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "Use",
+      "start": 8.119999885559082,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "sandbox",
+      "start": 8.359999656677246,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "environments",
+      "start": 8.859999656677246,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "for",
+      "start": 9.359999656677246,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "integration",
+      "start": 9.779999732971191,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "tests",
+      "start": 10.220000267028809,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "And",
+      "start": 11.279999732971191,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "critically",
+      "start": 11.5600004196167,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "test",
+      "start": 12.4399995803833,
+      "end": 12.800000190734863
+    },
+    {
+      "word": "failure",
+      "start": 12.800000190734863,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "scenarios",
+      "start": 13.300000190734863,
+      "end": 13.84000015258789
+    },
+    {
+      "word": "What",
+      "start": 14.619999885559082,
+      "end": 14.800000190734863
+    },
+    {
+      "word": "happens",
+      "start": 14.800000190734863,
+      "end": 15.140000343322754
+    },
+    {
+      "word": "when",
+      "start": 15.140000343322754,
+      "end": 15.34000015258789
+    },
+    {
+      "word": "the",
+      "start": 15.34000015258789,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "API",
+      "start": 15.800000190734863,
+      "end": 15.920000076293945
+    },
+    {
+      "word": "returns",
+      "start": 15.920000076293945,
+      "end": 16.459999084472656
+    },
+    {
+      "word": "500",
+      "start": 16.459999084472656,
+      "end": 17.15999984741211
+    }
+  ]
+}

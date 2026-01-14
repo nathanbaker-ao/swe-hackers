@@ -1,0 +1,135 @@
+{
+  "storyId": "debugging-trap-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Senior: Check Async. Second question: Any background jobs? Scheduled tasks? Event handlers? Seniors know bugs love to hide in code that runs when nobody's watching.",
+  "duration": 13,
+  "words": [
+    {
+      "word": "Senior",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "check",
+      "start": 0.8799999952316284,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "async",
+      "start": 1.1399999856948853,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "Second",
+      "start": 2.259999990463257,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "question",
+      "start": 2.4000000953674316,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "Any",
+      "start": 3.6600000858306885,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "background",
+      "start": 3.819999933242798,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "jobs",
+      "start": 4.340000152587891,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "Scheduled",
+      "start": 5.539999961853027,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "tasks",
+      "start": 5.659999847412109,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "Event",
+      "start": 6.900000095367432,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "handlers",
+      "start": 6.960000038146973,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "Seniors",
+      "start": 8.359999656677246,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "know",
+      "start": 8.579999923706055,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "bugs",
+      "start": 8.960000038146973,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "love",
+      "start": 9.260000228881836,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "to",
+      "start": 9.680000305175781,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "hide",
+      "start": 10.199999809265137,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "in",
+      "start": 10.199999809265137,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "code",
+      "start": 10.84000015258789,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "that",
+      "start": 10.84000015258789,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "runs",
+      "start": 11.119999885559082,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "when",
+      "start": 11.34000015258789,
+      "end": 11.65999984741211
+    },
+    {
+      "word": "nobody's",
+      "start": 11.65999984741211,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "watching",
+      "start": 12.199999809265137,
+      "end": 12.460000038146973
+    }
+  ]
+}

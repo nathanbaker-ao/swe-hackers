@@ -1,0 +1,165 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Question 3: What Writes?. Third: What writes to this storage? This is the critical question. Make a complete list. Every function, every job, every external system that can modify this data.",
+  "duration": 17.610000610351562,
+  "words": [
+    {
+      "word": "Question",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "3",
+      "start": 0.5400000214576721,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "What",
+      "start": 1.9800000190734863,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "writes",
+      "start": 2.140000104904175,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "Third",
+      "start": 3.5799999237060547,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "what",
+      "start": 4.579999923706055,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "writes",
+      "start": 4.860000133514404,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "to",
+      "start": 5.28000020980835,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "this",
+      "start": 5.480000019073486,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "storage",
+      "start": 5.78000020980835,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "This",
+      "start": 6.800000190734863,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "is",
+      "start": 7.28000020980835,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "the",
+      "start": 7.519999980926514,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "critical",
+      "start": 7.760000228881836,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "question",
+      "start": 8.100000381469727,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "Make",
+      "start": 9.699999809265137,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "a",
+      "start": 9.739999771118164,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "complete",
+      "start": 10.15999984741211,
+      "end": 10.5
+    },
+    {
+      "word": "list",
+      "start": 10.5,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "Every",
+      "start": 11.720000267028809,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "function",
+      "start": 11.960000038146973,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "every",
+      "start": 12.899999618530273,
+      "end": 13.279999732971191
+    },
+    {
+      "word": "job",
+      "start": 13.279999732971191,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "every",
+      "start": 14.319999694824219,
+      "end": 14.539999961853027
+    },
+    {
+      "word": "external",
+      "start": 14.539999961853027,
+      "end": 15.0600004196167
+    },
+    {
+      "word": "system",
+      "start": 15.0600004196167,
+      "end": 15.5
+    },
+    {
+      "word": "that",
+      "start": 15.5,
+      "end": 15.899999618530273
+    },
+    {
+      "word": "can",
+      "start": 15.899999618530273,
+      "end": 16.15999984741211
+    },
+    {
+      "word": "modify",
+      "start": 16.15999984741211,
+      "end": 16.5
+    },
+    {
+      "word": "this",
+      "start": 16.5,
+      "end": 16.979999542236328
+    },
+    {
+      "word": "data",
+      "start": 16.979999542236328,
+      "end": 17.1200008392334
+    }
+  ]
+}

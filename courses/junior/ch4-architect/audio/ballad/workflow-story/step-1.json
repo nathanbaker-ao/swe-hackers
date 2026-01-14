@@ -1,0 +1,160 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Step 2: Diagram. Spend an hour drawing. Data flow: what data goes where? Component diagram: what pieces are involved? Sequence diagram: what happens in what order? Make the invisible visible.",
+  "duration": 16,
+  "words": [
+    {
+      "word": "Step",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "two",
+      "start": 0.5799999833106995,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "diagram",
+      "start": 1.940000057220459,
+      "end": 2.5
+    },
+    {
+      "word": "Spend",
+      "start": 3.5999999046325684,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "an",
+      "start": 3.619999885559082,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "hour",
+      "start": 3.880000114440918,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "drawing",
+      "start": 4.21999979019165,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "Data",
+      "start": 5.619999885559082,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "flow",
+      "start": 5.619999885559082,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "what",
+      "start": 6.320000171661377,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "data",
+      "start": 6.460000038146973,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "goes",
+      "start": 6.760000228881836,
+      "end": 7
+    },
+    {
+      "word": "where",
+      "start": 7,
+      "end": 7.5
+    },
+    {
+      "word": "Component",
+      "start": 8.239999771118164,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "diagram",
+      "start": 8.359999656677246,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "what",
+      "start": 9.260000228881836,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "pieces",
+      "start": 9.420000076293945,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "are",
+      "start": 9.760000228881836,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "involved",
+      "start": 10.380000114440918,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "Sequence",
+      "start": 11.199999809265137,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "diagram",
+      "start": 11.539999961853027,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "what",
+      "start": 12.399999618530273,
+      "end": 12.5
+    },
+    {
+      "word": "happens",
+      "start": 12.5,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "in",
+      "start": 12.819999694824219,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "what",
+      "start": 13.0600004196167,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "order",
+      "start": 13.300000190734863,
+      "end": 13.579999923706055
+    },
+    {
+      "word": "Make",
+      "start": 14.180000305175781,
+      "end": 14.359999656677246
+    },
+    {
+      "word": "the",
+      "start": 14.359999656677246,
+      "end": 14.699999809265137
+    },
+    {
+      "word": "invisible",
+      "start": 14.699999809265137,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "visible",
+      "start": 15.15999984741211,
+      "end": 15.739999771118164
+    }
+  ]
+}

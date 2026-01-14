@@ -1,0 +1,6150 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T01:43:39.129Z",
+  "stories": [
+    "code-trap-story",
+    "workflow-story",
+    "ai-power-story"
+  ],
+  "ballad": {
+    "code-trap-story": [
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "New Feature Request. A new feature lands on your desk. The junior instinct is powerful—open the IDE, start typing, figure it out as you go. But this is a trap that costs days of rework.",
+        "duration": 14.609999656677246,
+        "words": [
+          {
+            "word": "New",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "feature",
+            "start": 0.6000000238418579,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "request",
+            "start": 0.9399999976158142,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "A",
+            "start": 2.299999952316284,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "new",
+            "start": 2.359999895095825,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "feature",
+            "start": 2.640000104904175,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "lands",
+            "start": 2.940000057220459,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "on",
+            "start": 3.299999952316284,
+            "end": 3.5
+          },
+          {
+            "word": "your",
+            "start": 3.5,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "desk",
+            "start": 3.700000047683716,
+            "end": 4
+          },
+          {
+            "word": "The",
+            "start": 4.579999923706055,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "junior",
+            "start": 4.739999771118164,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "instinct",
+            "start": 5.119999885559082,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "is",
+            "start": 5.579999923706055,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "powerful",
+            "start": 5.920000076293945,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "Open",
+            "start": 7.159999847412109,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "the",
+            "start": 7.159999847412109,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "IDE",
+            "start": 7.380000114440918,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "start",
+            "start": 8.399999618530273,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "typing",
+            "start": 8.619999885559082,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "figure",
+            "start": 9.800000190734863,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "it",
+            "start": 9.819999694824219,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "out",
+            "start": 10.039999961853027,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "as",
+            "start": 10.180000305175781,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "you",
+            "start": 10.34000015258789,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "go",
+            "start": 10.539999961853027,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "But",
+            "start": 11.079999923706055,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "this",
+            "start": 11.600000381469727,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "is",
+            "start": 11.880000114440918,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 12.119999885559082,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "trap",
+            "start": 12.34000015258789,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "that",
+            "start": 12.5600004196167,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "costs",
+            "start": 13.039999961853027,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "days",
+            "start": 13.300000190734863,
+            "end": 13.779999732971191
+          },
+          {
+            "word": "of",
+            "start": 13.779999732971191,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "rework",
+            "start": 14.020000457763672,
+            "end": 14.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Junior Starts Coding. The junior approach: read the ticket, open the IDE, start coding immediately. It feels productive! But halfway through, you realize your approach won't work.",
+        "duration": 13.84000015258789,
+        "words": [
+          {
+            "word": "Junia",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "starts",
+            "start": 0.6000000238418579,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "coding",
+            "start": 1.1200000047683716,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "The",
+            "start": 2.059999942779541,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Junia",
+            "start": 2.200000047683716,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "approach",
+            "start": 2.5399999618530273,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "read",
+            "start": 3.4000000953674316,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "the",
+            "start": 3.5399999618530273,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "ticket",
+            "start": 4.019999980926514,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "open",
+            "start": 4.599999904632568,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "the",
+            "start": 4.599999904632568,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "IDE",
+            "start": 4.940000057220459,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "start",
+            "start": 5.739999771118164,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "coding",
+            "start": 5.940000057220459,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "immediately",
+            "start": 6.260000228881836,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "It",
+            "start": 7.559999942779541,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "feels",
+            "start": 8.140000343322754,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "productive",
+            "start": 8.5600004196167,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "but",
+            "start": 9.880000114440918,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "halfway",
+            "start": 10.0600004196167,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "through",
+            "start": 10.4399995803833,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "you",
+            "start": 11.579999923706055,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "realise",
+            "start": 11.699999809265137,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "your",
+            "start": 12.140000343322754,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "approach",
+            "start": 12.479999542236328,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "won't",
+            "start": 12.819999694824219,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "work",
+            "start": 13.319999694824219,
+            "end": 13.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Hit a Wall. Problems emerge. Edge cases you didn't consider. Architecture that doesn't fit. You start over, then start over again. Days pass in this cycle of discovery and rework.",
+        "duration": 13.920000076293945,
+        "words": [
+          {
+            "word": "Hit",
+            "start": 0,
+            "end": 0.30000001192092896
+          },
+          {
+            "word": "a",
+            "start": 0.30000001192092896,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "wall",
+            "start": 0.6000000238418579,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "Problems",
+            "start": 1.4199999570846558,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "emerge",
+            "start": 1.8799999952316284,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "Edge",
+            "start": 3.180000066757202,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "cases",
+            "start": 3.240000009536743,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "you",
+            "start": 3.5799999237060547,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "didn't",
+            "start": 3.9000000953674316,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "consider",
+            "start": 4.239999771118164,
+            "end": 4.760000228881836
+          },
+          {
+            "word": "Architecture",
+            "start": 6.119999885559082,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "that",
+            "start": 6.119999885559082,
+            "end": 6.5
+          },
+          {
+            "word": "doesn't",
+            "start": 6.5,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "fit",
+            "start": 6.880000114440918,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "You",
+            "start": 7.800000190734863,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "start",
+            "start": 7.980000019073486,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "over",
+            "start": 8.239999771118164,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "then",
+            "start": 8.84000015258789,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "start",
+            "start": 9.0600004196167,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "over",
+            "start": 9.34000015258789,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "again",
+            "start": 9.600000381469727,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "Days",
+            "start": 10.880000114440918,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "pass",
+            "start": 10.880000114440918,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "in",
+            "start": 11.319999694824219,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "this",
+            "start": 11.460000038146973,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "cycle",
+            "start": 11.739999771118164,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "of",
+            "start": 11.979999542236328,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "discovery",
+            "start": 12.699999809265137,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "and",
+            "start": 12.699999809265137,
+            "end": 13.199999809265137
+          },
+          {
+            "word": "rework",
+            "start": 13.199999809265137,
+            "end": 13.640000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior Thinks First. The senior approach is different. Before touching code, they ask clarifying questions, draw the data flow, and identify edge cases on paper. This feels slower—but it's not.",
+        "duration": 15.720000267028809,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "thinks",
+            "start": 0.699999988079071,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "first",
+            "start": 1.159999966621399,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "The",
+            "start": 2.7200000286102295,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "senior",
+            "start": 2.759999990463257,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "approach",
+            "start": 3.180000066757202,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "is",
+            "start": 3.640000104904175,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "different",
+            "start": 4.139999866485596,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "Before",
+            "start": 5.559999942779541,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "touching",
+            "start": 5.559999942779541,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "code",
+            "start": 5.960000038146973,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "they",
+            "start": 6.840000152587891,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "ask",
+            "start": 6.920000076293945,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "clarifying",
+            "start": 7.320000171661377,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "questions",
+            "start": 7.880000114440918,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "draw",
+            "start": 9.279999732971191,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "the",
+            "start": 9.279999732971191,
+            "end": 9.5
+          },
+          {
+            "word": "data",
+            "start": 9.5,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "flow",
+            "start": 9.819999694824219,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "and",
+            "start": 10.380000114440918,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "identify",
+            "start": 10.800000190734863,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "edge",
+            "start": 11.260000228881836,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "cases",
+            "start": 11.699999809265137,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "on",
+            "start": 12.039999961853027,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "paper",
+            "start": 12.4399995803833,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "This",
+            "start": 13.279999732971191,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "feels",
+            "start": 13.619999885559082,
+            "end": 13.960000038146973
+          },
+          {
+            "word": "slower",
+            "start": 13.960000038146973,
+            "end": 14.34000015258789
+          },
+          {
+            "word": "but",
+            "start": 14.84000015258789,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "it's",
+            "start": 14.960000038146973,
+            "end": 15.239999771118164
+          },
+          {
+            "word": "not",
+            "start": 15.239999771118164,
+            "end": 15.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior Plans on Paper. The senior writes their approach in plain English, gets quick feedback from the team, and catches problems when they're cheap to fix—before any code exists.",
+        "duration": 13.149999618530273,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "plans",
+            "start": 0.7599999904632568,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "on",
+            "start": 1.3600000143051147,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "paper",
+            "start": 1.940000057220459,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "The",
+            "start": 3.1600000858306885,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "senior",
+            "start": 3.2200000286102295,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "writes",
+            "start": 3.5199999809265137,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "their",
+            "start": 3.9200000762939453,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "approach",
+            "start": 4.239999771118164,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "in",
+            "start": 4.579999923706055,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "plain",
+            "start": 4.980000019073486,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "English",
+            "start": 5.320000171661377,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "gets",
+            "start": 6.519999980926514,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "quick",
+            "start": 6.559999942779541,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "feedback",
+            "start": 6.940000057220459,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "from",
+            "start": 7.260000228881836,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "the",
+            "start": 7.519999980926514,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "team",
+            "start": 7.760000228881836,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "and",
+            "start": 7.960000038146973,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "catches",
+            "start": 8.5600004196167,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "problems",
+            "start": 8.899999618530273,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "when",
+            "start": 9.34000015258789,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "they're",
+            "start": 9.600000381469727,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "cheap",
+            "start": 9.899999618530273,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "to",
+            "start": 10.0600004196167,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "fix",
+            "start": 10.5600004196167,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "before",
+            "start": 11.34000015258789,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "any",
+            "start": 11.640000343322754,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "code",
+            "start": 12.140000343322754,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "exists",
+            "start": 12.380000114440918,
+            "end": 12.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Code Once, Done Right. When the senior finally codes, they code once and code right. No rework cycles. Smooth code reviews. Half the total time, better results. This is the architect's way.",
+        "duration": 16.239999771118164,
+        "words": [
+          {
+            "word": "Code",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "once",
+            "start": 0.5,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "Done",
+            "start": 1.5399999618530273,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "right",
+            "start": 1.659999966621399,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "When",
+            "start": 2.740000009536743,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "the",
+            "start": 2.8399999141693115,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "senior",
+            "start": 3.119999885559082,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "finally",
+            "start": 3.4200000762939453,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "codes",
+            "start": 4.039999961853027,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "they",
+            "start": 5.059999942779541,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "code",
+            "start": 5.300000190734863,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "once",
+            "start": 5.519999980926514,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "and",
+            "start": 5.960000038146973,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "code",
+            "start": 6.320000171661377,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "right",
+            "start": 6.599999904632568,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "No",
+            "start": 7.900000095367432,
+            "end": 8
+          },
+          {
+            "word": "rework",
+            "start": 8,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "cycles",
+            "start": 8.420000076293945,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "Smooth",
+            "start": 9.979999542236328,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "code",
+            "start": 10.020000457763672,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "reviews",
+            "start": 10.380000114440918,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "Half",
+            "start": 11.760000228881836,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 11.800000190734863,
+            "end": 12
+          },
+          {
+            "word": "total",
+            "start": 12,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "time",
+            "start": 12.300000190734863,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "better",
+            "start": 13.100000381469727,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "results",
+            "start": 13.279999732971191,
+            "end": 13.699999809265137
+          },
+          {
+            "word": "This",
+            "start": 14.5,
+            "end": 14.819999694824219
+          },
+          {
+            "word": "is",
+            "start": 14.819999694824219,
+            "end": 15.0600004196167
+          },
+          {
+            "word": "the",
+            "start": 15.0600004196167,
+            "end": 15.380000114440918
+          },
+          {
+            "word": "architect's",
+            "start": 15.380000114440918,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "way",
+            "start": 15.84000015258789,
+            "end": 16.079999923706055
+          }
+        ]
+      }
+    ],
+    "workflow-story": [
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Step 1: Clarify. What EXACTLY is the requirement? Spend thirty minutes asking questions. What's in scope? What's not included? What are the success criteria? Vague requirements equal wasted work.",
+        "duration": 17.950000762939453,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "1",
+            "start": 0.5799999833106995,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "Clarify",
+            "start": 2.0199999809265137,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "What",
+            "start": 3.299999952316284,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "exactly",
+            "start": 3.3399999141693115,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "is",
+            "start": 4.139999866485596,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "the",
+            "start": 4.559999942779541,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "requirement",
+            "start": 4.78000020980835,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "Spend",
+            "start": 6.420000076293945,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "30",
+            "start": 6.480000019073486,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "minutes",
+            "start": 7.039999961853027,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "asking",
+            "start": 7.360000133514404,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "questions",
+            "start": 7.820000171661377,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "What's",
+            "start": 9.239999771118164,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "in",
+            "start": 9.460000038146973,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "scope",
+            "start": 9.960000038146973,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "What's",
+            "start": 10.539999961853027,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "not",
+            "start": 10.920000076293945,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "included",
+            "start": 11.260000228881836,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "What",
+            "start": 12.300000190734863,
+            "end": 12.680000305175781
+          },
+          {
+            "word": "are",
+            "start": 12.680000305175781,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "the",
+            "start": 12.920000076293945,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "success",
+            "start": 13.15999984741211,
+            "end": 13.520000457763672
+          },
+          {
+            "word": "criteria",
+            "start": 13.520000457763672,
+            "end": 14
+          },
+          {
+            "word": "Vague",
+            "start": 15.140000343322754,
+            "end": 15.300000190734863
+          },
+          {
+            "word": "requirements",
+            "start": 15.300000190734863,
+            "end": 15.880000114440918
+          },
+          {
+            "word": "equal",
+            "start": 15.880000114440918,
+            "end": 16.639999389648438
+          },
+          {
+            "word": "wasted",
+            "start": 16.639999389648438,
+            "end": 17.059999465942383
+          },
+          {
+            "word": "work",
+            "start": 17.059999465942383,
+            "end": 17.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Step 2: Diagram. Spend an hour drawing. Data flow: what data goes where? Component diagram: what pieces are involved? Sequence diagram: what happens in what order? Make the invisible visible.",
+        "duration": 16,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "two",
+            "start": 0.5799999833106995,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "diagram",
+            "start": 1.940000057220459,
+            "end": 2.5
+          },
+          {
+            "word": "Spend",
+            "start": 3.5999999046325684,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "an",
+            "start": 3.619999885559082,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "hour",
+            "start": 3.880000114440918,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "drawing",
+            "start": 4.21999979019165,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "Data",
+            "start": 5.619999885559082,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "flow",
+            "start": 5.619999885559082,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "what",
+            "start": 6.320000171661377,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "data",
+            "start": 6.460000038146973,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "goes",
+            "start": 6.760000228881836,
+            "end": 7
+          },
+          {
+            "word": "where",
+            "start": 7,
+            "end": 7.5
+          },
+          {
+            "word": "Component",
+            "start": 8.239999771118164,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "diagram",
+            "start": 8.359999656677246,
+            "end": 8.760000228881836
+          },
+          {
+            "word": "what",
+            "start": 9.260000228881836,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "pieces",
+            "start": 9.420000076293945,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "are",
+            "start": 9.760000228881836,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "involved",
+            "start": 10.380000114440918,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "Sequence",
+            "start": 11.199999809265137,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "diagram",
+            "start": 11.539999961853027,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "what",
+            "start": 12.399999618530273,
+            "end": 12.5
+          },
+          {
+            "word": "happens",
+            "start": 12.5,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "in",
+            "start": 12.819999694824219,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "what",
+            "start": 13.0600004196167,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "order",
+            "start": 13.300000190734863,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "Make",
+            "start": 14.180000305175781,
+            "end": 14.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 14.359999656677246,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "invisible",
+            "start": 14.699999809265137,
+            "end": 15.15999984741211
+          },
+          {
+            "word": "visible",
+            "start": 15.15999984741211,
+            "end": 15.739999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Step 3: Edge Cases. Thirty minutes on what could go wrong. Invalid input? External service failures? User does something unexpected? Race conditions? Finding these on paper is free—finding them in code is expensive.",
+        "duration": 17.709999084472656,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "3",
+            "start": 0.47999998927116394,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "Edge",
+            "start": 1.9800000190734863,
+            "end": 2.119999885559082
+          },
+          {
+            "word": "cases",
+            "start": 2.119999885559082,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "30",
+            "start": 3.5399999618530273,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "minutes",
+            "start": 3.859999895095825,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "on",
+            "start": 4.139999866485596,
+            "end": 4.5
+          },
+          {
+            "word": "what",
+            "start": 4.5,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "could",
+            "start": 4.699999809265137,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "go",
+            "start": 4.900000095367432,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "wrong",
+            "start": 5.139999866485596,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "Invalid",
+            "start": 6.28000020980835,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "input",
+            "start": 6.519999980926514,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "External",
+            "start": 7.940000057220459,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "service",
+            "start": 7.940000057220459,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "failures",
+            "start": 8.399999618530273,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "User",
+            "start": 9.699999809265137,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "does",
+            "start": 9.720000267028809,
+            "end": 10
+          },
+          {
+            "word": "something",
+            "start": 10,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "unexpected",
+            "start": 10.359999656677246,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "Race",
+            "start": 11.619999885559082,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "conditions",
+            "start": 11.720000267028809,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "Finding",
+            "start": 13.300000190734863,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "these",
+            "start": 13.300000190734863,
+            "end": 13.65999984741211
+          },
+          {
+            "word": "on",
+            "start": 13.65999984741211,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "paper",
+            "start": 13.920000076293945,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "is",
+            "start": 14.15999984741211,
+            "end": 14.479999542236328
+          },
+          {
+            "word": "free",
+            "start": 14.479999542236328,
+            "end": 14.779999732971191
+          },
+          {
+            "word": "Finding",
+            "start": 15.600000381469727,
+            "end": 15.640000343322754
+          },
+          {
+            "word": "them",
+            "start": 15.640000343322754,
+            "end": 15.819999694824219
+          },
+          {
+            "word": "in",
+            "start": 15.819999694824219,
+            "end": 16.360000610351562
+          },
+          {
+            "word": "code",
+            "start": 16.360000610351562,
+            "end": 16.360000610351562
+          },
+          {
+            "word": "is",
+            "start": 16.360000610351562,
+            "end": 16.920000076293945
+          },
+          {
+            "word": "expensive",
+            "start": 16.920000076293945,
+            "end": 17.360000610351562
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Step 4: Approach Doc. Write it out in plain English. What's your plan? What key decisions did you make and why? What are the risks and how will you mitigate them? This becomes your north star.",
+        "duration": 15.210000038146973,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "4",
+            "start": 0.47999998927116394,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "Approach",
+            "start": 1.9600000381469727,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Doc",
+            "start": 2.200000047683716,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "Write",
+            "start": 3.319999933242798,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "it",
+            "start": 3.319999933242798,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "out",
+            "start": 3.5399999618530273,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "in",
+            "start": 3.7200000286102295,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "plain",
+            "start": 3.9800000190734863,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "English",
+            "start": 4.260000228881836,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "What's",
+            "start": 5.260000228881836,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "your",
+            "start": 5.440000057220459,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "plan",
+            "start": 5.639999866485596,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "What",
+            "start": 6.460000038146973,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "key",
+            "start": 6.699999809265137,
+            "end": 7
+          },
+          {
+            "word": "decisions",
+            "start": 7,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "did",
+            "start": 7.420000076293945,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "you",
+            "start": 7.679999828338623,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "make",
+            "start": 7.820000171661377,
+            "end": 8
+          },
+          {
+            "word": "and",
+            "start": 8,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "why",
+            "start": 8.359999656677246,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "What",
+            "start": 9.4399995803833,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "are",
+            "start": 9.640000343322754,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "the",
+            "start": 9.739999771118164,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "risks",
+            "start": 10.180000305175781,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "and",
+            "start": 10.180000305175781,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "how",
+            "start": 10.739999771118164,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "will",
+            "start": 10.960000038146973,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 11.119999885559082,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "mitigate",
+            "start": 11.380000114440918,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "them",
+            "start": 11.539999961853027,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "This",
+            "start": 12.479999542236328,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "becomes",
+            "start": 12.800000190734863,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "your",
+            "start": 13.260000228881836,
+            "end": 13.760000228881836
+          },
+          {
+            "word": "North",
+            "start": 13.760000228881836,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "Star",
+            "start": 14.220000267028809,
+            "end": 14.4399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Step 5: Quick Review. Fifteen minutes with a senior. Show them your plan, get feedback BEFORE you code. Their experience catches problems you can't see yet. This is the cheapest feedback you'll ever get.",
+        "duration": 16.360000610351562,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "5",
+            "start": 0.46000000834465027,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "Quick",
+            "start": 1.600000023841858,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "review",
+            "start": 1.9199999570846558,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "15",
+            "start": 3.3399999141693115,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "minutes",
+            "start": 3.7799999713897705,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "with",
+            "start": 4.099999904632568,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "a",
+            "start": 4.300000190734863,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "senior",
+            "start": 4.860000133514404,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "Show",
+            "start": 5.760000228881836,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "them",
+            "start": 5.760000228881836,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "your",
+            "start": 5.920000076293945,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "plan",
+            "start": 6.159999847412109,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "get",
+            "start": 6.960000038146973,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "feedback",
+            "start": 7.159999847412109,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "before",
+            "start": 7.619999885559082,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "you",
+            "start": 8.300000190734863,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "code",
+            "start": 8.600000381469727,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "Their",
+            "start": 9.65999984741211,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "experience",
+            "start": 9.84000015258789,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "catches",
+            "start": 10.520000457763672,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "problems",
+            "start": 10.979999542236328,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "you",
+            "start": 11.460000038146973,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "can't",
+            "start": 12.020000457763672,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "see",
+            "start": 12.359999656677246,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "yet",
+            "start": 12.579999923706055,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "This",
+            "start": 13.640000343322754,
+            "end": 13.819999694824219
+          },
+          {
+            "word": "is",
+            "start": 13.819999694824219,
+            "end": 13.979999542236328
+          },
+          {
+            "word": "the",
+            "start": 13.979999542236328,
+            "end": 14.199999809265137
+          },
+          {
+            "word": "cheapest",
+            "start": 14.199999809265137,
+            "end": 14.579999923706055
+          },
+          {
+            "word": "feedback",
+            "start": 14.579999923706055,
+            "end": 15.0600004196167
+          },
+          {
+            "word": "you'll",
+            "start": 15.0600004196167,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "ever",
+            "start": 15.5600004196167,
+            "end": 15.920000076293945
+          },
+          {
+            "word": "get",
+            "start": 15.920000076293945,
+            "end": 16.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "2.5 Hours That Save Days. Total investment: about two and a half hours. This 'wastes' half a day, but saves you three to five days of rework. You spend less total time AND produce better code. That's the architect's advantage.",
+        "duration": 18.809999465942383,
+        "words": [
+          {
+            "word": "2",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "5",
+            "start": 0.4399999976158142,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "hours",
+            "start": 1.2200000286102295,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "that",
+            "start": 1.4600000381469727,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "save",
+            "start": 2.1600000858306885,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "days",
+            "start": 2.5199999809265137,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "total",
+            "start": 3.059999942779541,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "investment",
+            "start": 4.119999885559082,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "about",
+            "start": 4.639999866485596,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "two",
+            "start": 5.400000095367432,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "and",
+            "start": 5.71999979019165,
+            "end": 6
+          },
+          {
+            "word": "a",
+            "start": 6,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "half",
+            "start": 6.079999923706055,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "hours",
+            "start": 6.260000228881836,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "this",
+            "start": 6.659999847412109,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "wastes",
+            "start": 7.820000171661377,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "half",
+            "start": 8.319999694824219,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "a",
+            "start": 8.699999809265137,
+            "end": 9
+          },
+          {
+            "word": "day",
+            "start": 9,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "but",
+            "start": 9.079999923706055,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "saves",
+            "start": 9.960000038146973,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "you",
+            "start": 10.260000228881836,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "three",
+            "start": 10.619999885559082,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "to",
+            "start": 10.859999656677246,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "five",
+            "start": 11.100000381469727,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "days",
+            "start": 11.359999656677246,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "of",
+            "start": 11.600000381469727,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "rework",
+            "start": 11.819999694824219,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "you",
+            "start": 12.220000267028809,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "spend",
+            "start": 13.140000343322754,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "less",
+            "start": 13.380000114440918,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "total",
+            "start": 13.720000267028809,
+            "end": 14.039999961853027
+          },
+          {
+            "word": "time",
+            "start": 14.039999961853027,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 14.4399995803833,
+            "end": 15.079999923706055
+          },
+          {
+            "word": "produce",
+            "start": 15.079999923706055,
+            "end": 15.4399995803833
+          },
+          {
+            "word": "better",
+            "start": 15.4399995803833,
+            "end": 15.859999656677246
+          },
+          {
+            "word": "code",
+            "start": 15.859999656677246,
+            "end": 16.200000762939453
+          },
+          {
+            "word": "that's",
+            "start": 16.540000915527344,
+            "end": 17.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 17.260000228881836,
+            "end": 17.540000915527344
+          },
+          {
+            "word": "architect's",
+            "start": 17.540000915527344,
+            "end": 18.559999465942383
+          },
+          {
+            "word": "advantage",
+            "start": 18.559999465942383,
+            "end": 18.559999465942383
+          }
+        ]
+      }
+    ],
+    "ai-power-story": [
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The AI Secret. Here's the secret that separates those who leverage AI from those who don't: AI is amazing at coding but terrible at design. It needs YOU to do the thinking.",
+        "duration": 14.010000228881836,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "AI",
+            "start": 0.4399999976158142,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "secret",
+            "start": 0.9599999785423279,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "Here's",
+            "start": 2.440000057220459,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "the",
+            "start": 2.5399999618530273,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "secret",
+            "start": 2.859999895095825,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "that",
+            "start": 3.0999999046325684,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "separates",
+            "start": 3.5799999237060547,
+            "end": 4
+          },
+          {
+            "word": "those",
+            "start": 4,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "who",
+            "start": 4.340000152587891,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "leverage",
+            "start": 4.619999885559082,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "AI",
+            "start": 4.960000038146973,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "from",
+            "start": 5.400000095367432,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "those",
+            "start": 5.78000020980835,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "who",
+            "start": 6.039999961853027,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "don't",
+            "start": 6.260000228881836,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "AI",
+            "start": 7.420000076293945,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "is",
+            "start": 7.659999847412109,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "amazing",
+            "start": 7.960000038146973,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "at",
+            "start": 8.520000457763672,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "coding",
+            "start": 9.180000305175781,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "but",
+            "start": 9.619999885559082,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "terrible",
+            "start": 9.859999656677246,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "at",
+            "start": 10.220000267028809,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "design",
+            "start": 10.739999771118164,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "It",
+            "start": 11.800000190734863,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "needs",
+            "start": 11.920000076293945,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "you",
+            "start": 12.15999984741211,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "to",
+            "start": 12.640000343322754,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "do",
+            "start": 12.979999542236328,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 13.15999984741211,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "thinking",
+            "start": 13.380000114440918,
+            "end": 13.680000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Vague Prompts, Vague Code. Give AI a vague request like 'write code to handle payments' and you get generic code. It misses edge cases, doesn't fit your architecture, and needs heavy rework.",
+        "duration": 13.5600004196167,
+        "words": [
+          {
+            "word": "Vague",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "prompts",
+            "start": 0.5799999833106995,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "Vague",
+            "start": 1.899999976158142,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "code",
+            "start": 1.899999976158142,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "Give",
+            "start": 3.0799999237060547,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "AI",
+            "start": 3.140000104904175,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "a",
+            "start": 3.440000057220459,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "vague",
+            "start": 3.6600000858306885,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "request",
+            "start": 3.940000057220459,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "like",
+            "start": 4.340000152587891,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "write",
+            "start": 5.159999847412109,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "code",
+            "start": 5.21999979019165,
+            "end": 5.5
+          },
+          {
+            "word": "to",
+            "start": 5.5,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "handle",
+            "start": 5.71999979019165,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "payments",
+            "start": 5.960000038146973,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "and",
+            "start": 6.980000019073486,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "you",
+            "start": 7.079999923706055,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "get",
+            "start": 7.260000228881836,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "generic",
+            "start": 7.480000019073486,
+            "end": 8
+          },
+          {
+            "word": "code",
+            "start": 8,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "It",
+            "start": 9.039999961853027,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "misses",
+            "start": 9.199999809265137,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "edge",
+            "start": 9.399999618530273,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "cases",
+            "start": 9.760000228881836,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "doesn't",
+            "start": 10.600000381469727,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "fit",
+            "start": 10.720000267028809,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "your",
+            "start": 10.9399995803833,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "architecture",
+            "start": 11.199999809265137,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "and",
+            "start": 12.0600004196167,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "needs",
+            "start": 12.420000076293945,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "heavy",
+            "start": 12.520000457763672,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "rework",
+            "start": 12.920000076293945,
+            "end": 13.319999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Design Docs = Perfect Prompts. But give AI your design doc with sequence diagrams, edge cases, and your patterns? It generates exactly what you need. Your design work becomes the ultimate AI prompt.",
+        "duration": 18.860000610351562,
+        "words": [
+          {
+            "word": "Design",
+            "start": 0,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "Docs",
+            "start": 0.8600000143051147,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "equals",
+            "start": 1.2599999904632568,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "perfect",
+            "start": 2.4600000381469727,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "prompts",
+            "start": 3.259999990463257,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "but",
+            "start": 4.679999828338623,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "give",
+            "start": 4.920000076293945,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "AI",
+            "start": 5.639999866485596,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "your",
+            "start": 6.119999885559082,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "design",
+            "start": 6.659999847412109,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "doc",
+            "start": 7.019999980926514,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "with",
+            "start": 7.340000152587891,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "sequence",
+            "start": 8.0600004196167,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "diagrams",
+            "start": 8.579999923706055,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "edge",
+            "start": 9.920000076293945,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "cases",
+            "start": 10.079999923706055,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 10.800000190734863,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "your",
+            "start": 10.960000038146973,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "patterns",
+            "start": 11.34000015258789,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "It",
+            "start": 12.479999542236328,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "generates",
+            "start": 12.640000343322754,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "exactly",
+            "start": 13.140000343322754,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "what",
+            "start": 13.920000076293945,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "you",
+            "start": 14.15999984741211,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "need",
+            "start": 14.399999618530273,
+            "end": 14.600000381469727
+          },
+          {
+            "word": "Your",
+            "start": 15.319999694824219,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "design",
+            "start": 15.5600004196167,
+            "end": 16.020000457763672
+          },
+          {
+            "word": "work",
+            "start": 16.020000457763672,
+            "end": 16.3799991607666
+          },
+          {
+            "word": "becomes",
+            "start": 16.3799991607666,
+            "end": 16.979999542236328
+          },
+          {
+            "word": "the",
+            "start": 16.979999542236328,
+            "end": 17.84000015258789
+          },
+          {
+            "word": "ultimate",
+            "start": 17.84000015258789,
+            "end": 17.84000015258789
+          },
+          {
+            "word": "AI",
+            "start": 17.84000015258789,
+            "end": 18.360000610351562
+          },
+          {
+            "word": "prompt",
+            "start": 18.360000610351562,
+            "end": 18.700000762939453
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "You: The Architect. In this workflow, YOU are the architect. You clarify requirements, draw diagrams, identify edge cases, and write the approach. This is the creative, strategic thinking AI can't do.",
+        "duration": 17.110000610351562,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "the",
+            "start": 0.8999999761581421,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "architect",
+            "start": 1.2999999523162842,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "In",
+            "start": 2.559999942779541,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "this",
+            "start": 2.640000104904175,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "workflow",
+            "start": 2.9600000381469727,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "you",
+            "start": 4.159999847412109,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "are",
+            "start": 4.340000152587891,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "the",
+            "start": 4.699999809265137,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "architect",
+            "start": 4.980000019073486,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "You",
+            "start": 6.380000114440918,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "clarify",
+            "start": 6.539999961853027,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "requirements",
+            "start": 7.099999904632568,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "draw",
+            "start": 8.5600004196167,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "diagrams",
+            "start": 8.5600004196167,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "identify",
+            "start": 10.140000343322754,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "edge",
+            "start": 10.140000343322754,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "cases",
+            "start": 10.520000457763672,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "and",
+            "start": 11.199999809265137,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "write",
+            "start": 11.420000076293945,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "the",
+            "start": 11.640000343322754,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "approach",
+            "start": 12.180000305175781,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "This",
+            "start": 12.979999542236328,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "is",
+            "start": 13.180000305175781,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "the",
+            "start": 13.399999618530273,
+            "end": 13.600000381469727
+          },
+          {
+            "word": "creative",
+            "start": 13.600000381469727,
+            "end": 14.140000343322754
+          },
+          {
+            "word": "strategic",
+            "start": 14.960000038146973,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "thinking",
+            "start": 14.960000038146973,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "AI",
+            "start": 15.399999618530273,
+            "end": 16.1200008392334
+          },
+          {
+            "word": "can't",
+            "start": 16.1200008392334,
+            "end": 16.739999771118164
+          },
+          {
+            "word": "do",
+            "start": 16.739999771118164,
+            "end": 16.979999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "AI: The Builder. AI becomes your builder—executing your vision with speed and precision. You give it clear context, it generates code, you review and refine. Human strategy, machine execution.",
+        "duration": 16.799999237060547,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "The",
+            "start": 1.1399999856948853,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "Builder",
+            "start": 1.3600000143051147,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "AI",
+            "start": 2.740000009536743,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "becomes",
+            "start": 2.740000009536743,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "your",
+            "start": 3.200000047683716,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "builder",
+            "start": 3.5799999237060547,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "executing",
+            "start": 4.699999809265137,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "your",
+            "start": 4.940000057220459,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "vision",
+            "start": 5.340000152587891,
+            "end": 5.5
+          },
+          {
+            "word": "with",
+            "start": 5.5,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "speed",
+            "start": 5.920000076293945,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "and",
+            "start": 6.260000228881836,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "precision",
+            "start": 6.71999979019165,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "You",
+            "start": 8.140000343322754,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "give",
+            "start": 8.220000267028809,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "it",
+            "start": 8.399999618530273,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "clear",
+            "start": 8.65999984741211,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "context",
+            "start": 8.979999542236328,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "It",
+            "start": 10.100000381469727,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "generates",
+            "start": 10.239999771118164,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "code",
+            "start": 10.680000305175781,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "You",
+            "start": 11.720000267028809,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "review",
+            "start": 11.880000114440918,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "and",
+            "start": 12.260000228881836,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "refine",
+            "start": 12.739999771118164,
+            "end": 13.119999885559082
+          },
+          {
+            "word": "Human",
+            "start": 14.100000381469727,
+            "end": 14.279999732971191
+          },
+          {
+            "word": "strategy",
+            "start": 14.279999732971191,
+            "end": 14.819999694824219
+          },
+          {
+            "word": "Machine",
+            "start": 15.460000038146973,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "execution",
+            "start": 15.84000015258789,
+            "end": 16.440000534057617
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Superpower. The result? Senior-level output in junior-level time. You're not just coding faster—you're thinking better. Design-first plus AI equals genuine superpowers. This is the future of software development.",
+        "duration": 18.209999084472656,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "superpower",
+            "start": 0.3199999928474426,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "The",
+            "start": 1.7000000476837158,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "result",
+            "start": 1.9199999570846558,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "Senior",
+            "start": 3.200000047683716,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "level",
+            "start": 3.200000047683716,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "output",
+            "start": 3.5399999618530273,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "in",
+            "start": 3.9600000381469727,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "junior",
+            "start": 4.559999942779541,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "level",
+            "start": 4.880000114440918,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "time",
+            "start": 5.260000228881836,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "You're",
+            "start": 6.579999923706055,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "not",
+            "start": 6.71999979019165,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "just",
+            "start": 6.920000076293945,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "coding",
+            "start": 7.619999885559082,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "faster",
+            "start": 7.619999885559082,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "you're",
+            "start": 8.640000343322754,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "thinking",
+            "start": 8.880000114440918,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "better",
+            "start": 9.279999732971191,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "Design",
+            "start": 10.760000228881836,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "first",
+            "start": 10.819999694824219,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "plus",
+            "start": 11.239999771118164,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "AI",
+            "start": 11.819999694824219,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "equals",
+            "start": 12.279999732971191,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "genuine",
+            "start": 12.9399995803833,
+            "end": 13.600000381469727
+          },
+          {
+            "word": "superpowers",
+            "start": 13.600000381469727,
+            "end": 14.260000228881836
+          },
+          {
+            "word": "This",
+            "start": 15,
+            "end": 15.260000228881836
+          },
+          {
+            "word": "is",
+            "start": 15.260000228881836,
+            "end": 15.479999542236328
+          },
+          {
+            "word": "the",
+            "start": 15.479999542236328,
+            "end": 15.680000305175781
+          },
+          {
+            "word": "future",
+            "start": 15.680000305175781,
+            "end": 16.020000457763672
+          },
+          {
+            "word": "of",
+            "start": 16.020000457763672,
+            "end": 16.719999313354492
+          },
+          {
+            "word": "software",
+            "start": 16.719999313354492,
+            "end": 17.020000457763672
+          },
+          {
+            "word": "development",
+            "start": 17.020000457763672,
+            "end": 17.459999084472656
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "code-trap-story": [
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "New Feature Request. A new feature lands on your desk. The junior instinct is powerful—open the IDE, start typing, figure it out as you go. But this is a trap that costs days of rework.",
+        "duration": 13.359999656677246,
+        "words": [
+          {
+            "word": "New",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "Feature",
+            "start": 0.46000000834465027,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "Request",
+            "start": 0.7599999904632568,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "A",
+            "start": 1.6200000047683716,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "new",
+            "start": 2.180000066757202,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "feature",
+            "start": 2.4600000381469727,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "lands",
+            "start": 2.7200000286102295,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "on",
+            "start": 3.0799999237060547,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "your",
+            "start": 3.240000009536743,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "desk",
+            "start": 3.440000057220459,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "The",
+            "start": 4.139999866485596,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "junior",
+            "start": 4.300000190734863,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "instinct",
+            "start": 4.639999866485596,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "is",
+            "start": 5.039999961853027,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "powerful",
+            "start": 5.300000190734863,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "Open",
+            "start": 6.539999961853027,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "the",
+            "start": 6.559999942779541,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "IDE",
+            "start": 6.860000133514404,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "start",
+            "start": 7.880000114440918,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "typing",
+            "start": 7.980000019073486,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "figure",
+            "start": 8.899999618530273,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "it",
+            "start": 8.9399995803833,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "out",
+            "start": 9.100000381469727,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "as",
+            "start": 9.239999771118164,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "you",
+            "start": 9.34000015258789,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "go",
+            "start": 9.520000457763672,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "But",
+            "start": 10.199999809265137,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "this",
+            "start": 10.460000038146973,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "is",
+            "start": 10.600000381469727,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "a",
+            "start": 10.739999771118164,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "trap",
+            "start": 10.920000076293945,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "that",
+            "start": 11.180000305175781,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "costs",
+            "start": 11.600000381469727,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "days",
+            "start": 11.899999618530273,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "of",
+            "start": 12.380000114440918,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "rework",
+            "start": 12.65999984741211,
+            "end": 13.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Junior Starts Coding. The junior approach: read the ticket, open the IDE, start coding immediately. It feels productive! But halfway through, you realize your approach won't work.",
+        "duration": 13.239999771118164,
+        "words": [
+          {
+            "word": "Junior",
+            "start": 0,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "starts",
+            "start": 1.0800000429153442,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "coding",
+            "start": 1.5800000429153442,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "The",
+            "start": 2.9800000190734863,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "Junior",
+            "start": 3.0999999046325684,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "Approach",
+            "start": 3.4200000762939453,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "Read",
+            "start": 4.579999923706055,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 4.579999923706055,
+            "end": 5
+          },
+          {
+            "word": "ticket",
+            "start": 5,
+            "end": 5
+          },
+          {
+            "word": "open",
+            "start": 5.679999828338623,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "the",
+            "start": 5.679999828338623,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "IDE",
+            "start": 5.980000019073486,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "start",
+            "start": 6.880000114440918,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "coding",
+            "start": 7.019999980926514,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "immediately",
+            "start": 7.260000228881836,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "It",
+            "start": 8.260000228881836,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "feels",
+            "start": 8.899999618530273,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "productive",
+            "start": 9.15999984741211,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "but",
+            "start": 9.9399995803833,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "halfway",
+            "start": 10.420000076293945,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "through",
+            "start": 10.720000267028809,
+            "end": 11.039999961853027
+          },
+          {
+            "word": "you",
+            "start": 11.039999961853027,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "realize",
+            "start": 11.460000038146973,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "your",
+            "start": 11.859999656677246,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "approach",
+            "start": 12.119999885559082,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "won't",
+            "start": 12.380000114440918,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "work",
+            "start": 12.65999984741211,
+            "end": 12.979999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Hit a Wall. Problems emerge. Edge cases you didn't consider. Architecture that doesn't fit. You start over, then start over again. Days pass in this cycle of discovery and rework.",
+        "duration": 12.960000038146973,
+        "words": [
+          {
+            "word": "Hit",
+            "start": 0,
+            "end": 0.2800000011920929
+          },
+          {
+            "word": "a",
+            "start": 0.2800000011920929,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "wall",
+            "start": 0.5799999833106995,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "Problems",
+            "start": 1.7200000286102295,
+            "end": 2
+          },
+          {
+            "word": "emerge",
+            "start": 2,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "Edge",
+            "start": 3.180000066757202,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "cases",
+            "start": 3.240000009536743,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "you",
+            "start": 3.5799999237060547,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "didn't",
+            "start": 3.819999933242798,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "consider",
+            "start": 4.079999923706055,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "Architecture",
+            "start": 5.599999904632568,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "that",
+            "start": 5.599999904632568,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "doesn't",
+            "start": 5.980000019073486,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "fit",
+            "start": 6.320000171661377,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "You",
+            "start": 7.179999828338623,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "start",
+            "start": 7.340000152587891,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "over",
+            "start": 7.579999923706055,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "then",
+            "start": 8.279999732971191,
+            "end": 8.5
+          },
+          {
+            "word": "start",
+            "start": 8.5,
+            "end": 8.760000228881836
+          },
+          {
+            "word": "over",
+            "start": 8.760000228881836,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "again",
+            "start": 9.0600004196167,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "Days",
+            "start": 10.260000228881836,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "pass",
+            "start": 10.260000228881836,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "in",
+            "start": 10.699999809265137,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "this",
+            "start": 10.859999656677246,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "cycle",
+            "start": 11.079999923706055,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "of",
+            "start": 11.319999694824219,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "discovery",
+            "start": 12.039999961853027,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "and",
+            "start": 12.039999961853027,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "rework",
+            "start": 12.399999618530273,
+            "end": 12.699999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior Thinks First. The senior approach is different. Before touching code, they ask clarifying questions, draw the data flow, and identify edge cases on paper. This feels slower—but it's not.",
+        "duration": 10.649999618530273,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "thinks",
+            "start": 1.0800000429153442,
+            "end": 1.399999976158142
+          },
+          {
+            "word": "first",
+            "start": 1.399999976158142,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "The",
+            "start": 2.2200000286102295,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "senior",
+            "start": 2.359999895095825,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "approach",
+            "start": 2.640000104904175,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "is",
+            "start": 2.9800000190734863,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "different",
+            "start": 3.240000009536743,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "Before",
+            "start": 4.320000171661377,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "touching",
+            "start": 4.360000133514404,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "code",
+            "start": 4.659999847412109,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "they",
+            "start": 5.400000095367432,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "ask",
+            "start": 5.480000019073486,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "clarifying",
+            "start": 5.760000228881836,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "questions",
+            "start": 6.300000190734863,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "draw",
+            "start": 7.440000057220459,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 7.440000057220459,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "data",
+            "start": 7.679999828338623,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "flow",
+            "start": 7.940000057220459,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "and",
+            "start": 8.539999961853027,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "identify",
+            "start": 8.739999771118164,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "edge",
+            "start": 9.119999885559082,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "cases",
+            "start": 9.579999923706055,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "on",
+            "start": 9.84000015258789,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "paper",
+            "start": 10.140000343322754,
+            "end": 10.380000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior Plans on Paper. The senior writes their approach in plain English, gets quick feedback from the team, and catches problems when they're cheap to fix—before any code exists.",
+        "duration": 11.0600004196167,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "plans",
+            "start": 0.6200000047683716,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "on",
+            "start": 1.0199999809265137,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "paper",
+            "start": 1.5800000429153442,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "The",
+            "start": 2.2200000286102295,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "senior",
+            "start": 2.3399999141693115,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "writes",
+            "start": 2.5399999618530273,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "their",
+            "start": 2.880000114440918,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "approach",
+            "start": 3.180000066757202,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "in",
+            "start": 3.4600000381469727,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "plain",
+            "start": 3.740000009536743,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "English",
+            "start": 3.9600000381469727,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "gets",
+            "start": 4.880000114440918,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "quick",
+            "start": 4.880000114440918,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "feedback",
+            "start": 5.239999771118164,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "from",
+            "start": 5.559999942779541,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 5.800000190734863,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "team",
+            "start": 6.019999980926514,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "and",
+            "start": 6.599999904632568,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "catches",
+            "start": 6.800000190734863,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "problems",
+            "start": 7.099999904632568,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "when",
+            "start": 7.579999923706055,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "they're",
+            "start": 7.78000020980835,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "cheap",
+            "start": 8.0600004196167,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "to",
+            "start": 8.199999809265137,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "fix",
+            "start": 8.600000381469727,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "before",
+            "start": 8.760000228881836,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "any",
+            "start": 9.359999656677246,
+            "end": 9.819999694824219
+          },
+          {
+            "word": "code",
+            "start": 9.819999694824219,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "exists",
+            "start": 10.0600004196167,
+            "end": 10.579999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "code-trap-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Code Once, Done Right. When the senior finally codes, they code once and code right. No rework cycles. Smooth code reviews. Half the total time, better results. This is the architect's way.",
+        "duration": 13.649999618530273,
+        "words": [
+          {
+            "word": "Code",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "once",
+            "start": 0.41999998688697815,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "done",
+            "start": 1.100000023841858,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "right",
+            "start": 1.4600000381469727,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "When",
+            "start": 3.1600000858306885,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "the",
+            "start": 3.200000047683716,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "senior",
+            "start": 3.4600000381469727,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "finally",
+            "start": 3.740000009536743,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "codes",
+            "start": 4.300000190734863,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "they",
+            "start": 5.079999923706055,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "code",
+            "start": 5.380000114440918,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "once",
+            "start": 5.440000057220459,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "and",
+            "start": 5.860000133514404,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "code",
+            "start": 6.300000190734863,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "right",
+            "start": 6.539999961853027,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "No",
+            "start": 7.440000057220459,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "rework",
+            "start": 7.659999847412109,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "cycles",
+            "start": 8.079999923706055,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "Smooth",
+            "start": 9.479999542236328,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "code",
+            "start": 9.520000457763672,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "reviews",
+            "start": 9.880000114440918,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "Half",
+            "start": 11.039999961853027,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "the",
+            "start": 11.079999923706055,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "total",
+            "start": 11.319999694824219,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "time",
+            "start": 11.5600004196167,
+            "end": 12
+          },
+          {
+            "word": "better",
+            "start": 12.460000038146973,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "results",
+            "start": 12.640000343322754,
+            "end": 13.0600004196167
+          }
+        ]
+      }
+    ],
+    "workflow-story": [
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Step 1: Clarify. What EXACTLY is the requirement? Spend thirty minutes asking questions. What's in scope? What's not included? What are the success criteria? Vague requirements equal wasted work.",
+        "duration": 14.609999656677246,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "1",
+            "start": 0.47999998927116394,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "Clarify",
+            "start": 1.4199999570846558,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "What",
+            "start": 2.4000000953674316,
+            "end": 2.5
+          },
+          {
+            "word": "exactly",
+            "start": 2.5,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "is",
+            "start": 3.200000047683716,
+            "end": 3.5
+          },
+          {
+            "word": "the",
+            "start": 3.5,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "requirement",
+            "start": 3.740000009536743,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "Spend",
+            "start": 4.980000019073486,
+            "end": 5
+          },
+          {
+            "word": "30",
+            "start": 5,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "minutes",
+            "start": 5.480000019073486,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "asking",
+            "start": 5.78000020980835,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "questions",
+            "start": 6.21999979019165,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "What's",
+            "start": 7.320000171661377,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "in",
+            "start": 7.519999980926514,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "scope",
+            "start": 7.820000171661377,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "What's",
+            "start": 8.34000015258789,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "not",
+            "start": 8.640000343322754,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "included",
+            "start": 8.859999656677246,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "What",
+            "start": 9.800000190734863,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "are",
+            "start": 9.9399995803833,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "the",
+            "start": 10.119999885559082,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "success",
+            "start": 10.399999618530273,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "criteria",
+            "start": 10.699999809265137,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "Vague",
+            "start": 12.100000381469727,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "requirements",
+            "start": 12.199999809265137,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "equal",
+            "start": 12.819999694824219,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "wasted",
+            "start": 13.34000015258789,
+            "end": 13.760000228881836
+          },
+          {
+            "word": "work",
+            "start": 13.760000228881836,
+            "end": 14.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Step 2: Diagram. Spend an hour drawing. Data flow: what data goes where? Component diagram: what pieces are involved? Sequence diagram: what happens in what order? Make the invisible visible.",
+        "duration": 15.859999656677246,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "2",
+            "start": 0.4399999976158142,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "Diagram",
+            "start": 1.7599999904632568,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "Spend",
+            "start": 2.8399999141693115,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "an",
+            "start": 2.9000000953674316,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "hour",
+            "start": 3.140000104904175,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "drawing",
+            "start": 3.3399999141693115,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "Data",
+            "start": 4.360000133514404,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "flow",
+            "start": 4.599999904632568,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "What",
+            "start": 5.5,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "data",
+            "start": 5.599999904632568,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "goes",
+            "start": 5.940000057220459,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "where",
+            "start": 6.260000228881836,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "Component",
+            "start": 7.679999828338623,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "diagram",
+            "start": 7.679999828338623,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "What",
+            "start": 8.800000190734863,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "pieces",
+            "start": 8.920000076293945,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "are",
+            "start": 9.260000228881836,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "involved",
+            "start": 9.619999885559082,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "Sequence",
+            "start": 10.699999809265137,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "diagram",
+            "start": 11.020000457763672,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "What",
+            "start": 12.140000343322754,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "happens",
+            "start": 12.239999771118164,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "in",
+            "start": 12.5600004196167,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "what",
+            "start": 12.800000190734863,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "order",
+            "start": 13.039999961853027,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "Make",
+            "start": 14.199999809265137,
+            "end": 14.380000114440918
+          },
+          {
+            "word": "the",
+            "start": 14.380000114440918,
+            "end": 14.680000305175781
+          },
+          {
+            "word": "invisible",
+            "start": 14.680000305175781,
+            "end": 15.119999885559082
+          },
+          {
+            "word": "visible",
+            "start": 15.119999885559082,
+            "end": 15.539999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Step 3: Edge Cases. Thirty minutes on what could go wrong. Invalid input? External service failures? User does something unexpected? Race conditions? Finding these on paper is free—finding them in code is expensive.",
+        "duration": 15.550000190734863,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "three",
+            "start": 0.4399999976158142,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "edge",
+            "start": 1.399999976158142,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "cases",
+            "start": 1.5399999618530273,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "30",
+            "start": 2.559999942779541,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "minutes",
+            "start": 2.799999952316284,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "on",
+            "start": 3.059999942779541,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "what",
+            "start": 3.319999933242798,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "could",
+            "start": 3.5199999809265137,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "go",
+            "start": 3.759999990463257,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "wrong",
+            "start": 3.9800000190734863,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "Invalid",
+            "start": 5.059999942779541,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "input",
+            "start": 5.320000171661377,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "external",
+            "start": 6.659999847412109,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "service",
+            "start": 6.659999847412109,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "failures",
+            "start": 7.039999961853027,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "user",
+            "start": 7.960000038146973,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "does",
+            "start": 8.039999961853027,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "something",
+            "start": 8.279999732971191,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "unexpected",
+            "start": 8.579999923706055,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "race",
+            "start": 9.819999694824219,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "conditions",
+            "start": 9.960000038146973,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "Finding",
+            "start": 11.220000267028809,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "these",
+            "start": 11.220000267028809,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "on",
+            "start": 11.579999923706055,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "paper",
+            "start": 11.979999542236328,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "is",
+            "start": 12.079999923706055,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "free",
+            "start": 12.4399995803833,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "Finding",
+            "start": 13.579999923706055,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "them",
+            "start": 13.579999923706055,
+            "end": 13.779999732971191
+          },
+          {
+            "word": "in",
+            "start": 13.779999732971191,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "code",
+            "start": 14.220000267028809,
+            "end": 14.300000190734863
+          },
+          {
+            "word": "is",
+            "start": 14.300000190734863,
+            "end": 14.819999694824219
+          },
+          {
+            "word": "expensive",
+            "start": 14.819999694824219,
+            "end": 15.220000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Step 4: Approach Doc. Write it out in plain English. What's your plan? What key decisions did you make and why? What are the risks and how will you mitigate them? This becomes your north star.",
+        "duration": 13.100000381469727,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "4",
+            "start": 0.6200000047683716,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "Approach",
+            "start": 1.7000000476837158,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Doc",
+            "start": 1.840000033378601,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "Write",
+            "start": 2.9200000762939453,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "it",
+            "start": 2.940000057220459,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "out",
+            "start": 3.119999885559082,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "in",
+            "start": 3.2799999713897705,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "plain",
+            "start": 3.619999885559082,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "English",
+            "start": 3.940000057220459,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "What's",
+            "start": 5,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "your",
+            "start": 5.059999942779541,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "plan",
+            "start": 5.239999771118164,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "What",
+            "start": 5.940000057220459,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "key",
+            "start": 6.119999885559082,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "decisions",
+            "start": 6.340000152587891,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "did",
+            "start": 6.760000228881836,
+            "end": 7
+          },
+          {
+            "word": "you",
+            "start": 7,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "make",
+            "start": 7.159999847412109,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "and",
+            "start": 7.320000171661377,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "why",
+            "start": 7.599999904632568,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "What",
+            "start": 8.539999961853027,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "are",
+            "start": 8.65999984741211,
+            "end": 8.760000228881836
+          },
+          {
+            "word": "the",
+            "start": 8.760000228881836,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "risks",
+            "start": 9.260000228881836,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "and",
+            "start": 9.260000228881836,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "how",
+            "start": 9.739999771118164,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "will",
+            "start": 9.960000038146973,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "you",
+            "start": 10.140000343322754,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "mitigate",
+            "start": 10.420000076293945,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "them",
+            "start": 10.5600004196167,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "This",
+            "start": 11.380000114440918,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "becomes",
+            "start": 11.600000381469727,
+            "end": 12
+          },
+          {
+            "word": "your",
+            "start": 12,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "North",
+            "start": 12.239999771118164,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "Star",
+            "start": 12.600000381469727,
+            "end": 12.800000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Step 5: Quick Review. Fifteen minutes with a senior. Show them your plan, get feedback BEFORE you code. Their experience catches problems you can't see yet. This is the cheapest feedback you'll ever get.",
+        "duration": 16,
+        "words": [
+          {
+            "word": "Step",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "5",
+            "start": 0.4399999976158142,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "Quick",
+            "start": 1.3200000524520874,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "review",
+            "start": 1.600000023841858,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "15",
+            "start": 3.0399999618530273,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "minutes",
+            "start": 3.380000114440918,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "with",
+            "start": 3.680000066757202,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "a",
+            "start": 3.8399999141693115,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "senior",
+            "start": 4.340000152587891,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "Show",
+            "start": 5.260000228881836,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "them",
+            "start": 5.260000228881836,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "your",
+            "start": 5.400000095367432,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "plan",
+            "start": 5.599999904632568,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "Get",
+            "start": 6.460000038146973,
+            "end": 6.5
+          },
+          {
+            "word": "feedback",
+            "start": 6.5,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "before",
+            "start": 6.920000076293945,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "you",
+            "start": 7.400000095367432,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "code",
+            "start": 7.659999847412109,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "Their",
+            "start": 8.640000343322754,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "experience",
+            "start": 8.779999732971191,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "catches",
+            "start": 9.479999542236328,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "problems",
+            "start": 9.880000114440918,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "you",
+            "start": 10.359999656677246,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "can't",
+            "start": 10.600000381469727,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "see",
+            "start": 10.899999618530273,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "yet",
+            "start": 11.079999923706055,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "This",
+            "start": 11.920000076293945,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "is",
+            "start": 12.119999885559082,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "the",
+            "start": 12.34000015258789,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "cheapest",
+            "start": 12.600000381469727,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "feedback",
+            "start": 12.920000076293945,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "you'll",
+            "start": 13.34000015258789,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "ever",
+            "start": 13.720000267028809,
+            "end": 14
+          },
+          {
+            "word": "get",
+            "start": 14,
+            "end": 14.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "workflow-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "2.5 Hours That Save Days. Total investment: about two and a half hours. This 'wastes' half a day, but saves you three to five days of rework. You spend less total time AND produce better code. That's the architect's advantage.",
+        "duration": 16.459999084472656,
+        "words": [
+          {
+            "word": "2",
+            "start": 0,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "5",
+            "start": 0.8199999928474426,
+            "end": 1.5
+          },
+          {
+            "word": "hours",
+            "start": 1.5,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "that",
+            "start": 1.7400000095367432,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "save",
+            "start": 2.0999999046325684,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "days",
+            "start": 2.4200000762939453,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "Total",
+            "start": 3.5,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "investment",
+            "start": 3.5399999618530273,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "about",
+            "start": 4.019999980926514,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "two",
+            "start": 4.639999866485596,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "and",
+            "start": 4.880000114440918,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "a",
+            "start": 5.039999961853027,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "half",
+            "start": 5.119999885559082,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "hours",
+            "start": 5.28000020980835,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "This",
+            "start": 6.559999942779541,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "wastes",
+            "start": 6.699999809265137,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "half",
+            "start": 7.119999885559082,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "a",
+            "start": 7.440000057220459,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "day",
+            "start": 7.800000190734863,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "but",
+            "start": 7.980000019073486,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "saves",
+            "start": 8.34000015258789,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "you",
+            "start": 8.539999961853027,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "three",
+            "start": 8.819999694824219,
+            "end": 9
+          },
+          {
+            "word": "to",
+            "start": 9,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "five",
+            "start": 9.220000267028809,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "days",
+            "start": 9.4399995803833,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "of",
+            "start": 9.680000305175781,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "rework",
+            "start": 9.979999542236328,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "You",
+            "start": 11.180000305175781,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "spend",
+            "start": 11.300000190734863,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "less",
+            "start": 11.460000038146973,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "total",
+            "start": 11.760000228881836,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "time",
+            "start": 12.079999923706055,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "and",
+            "start": 12.4399995803833,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "produce",
+            "start": 12.9399995803833,
+            "end": 13.239999771118164
+          },
+          {
+            "word": "better",
+            "start": 13.239999771118164,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "code",
+            "start": 13.619999885559082,
+            "end": 13.979999542236328
+          },
+          {
+            "word": "That's",
+            "start": 14.600000381469727,
+            "end": 14.859999656677246
+          },
+          {
+            "word": "the",
+            "start": 14.859999656677246,
+            "end": 15.079999923706055
+          },
+          {
+            "word": "architect's",
+            "start": 15.079999923706055,
+            "end": 15.65999984741211
+          },
+          {
+            "word": "advantage",
+            "start": 15.65999984741211,
+            "end": 15.979999542236328
+          }
+        ]
+      }
+    ],
+    "ai-power-story": [
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The AI Secret. Here's the secret that separates those who leverage AI from those who don't: AI is amazing at coding but terrible at design. It needs YOU to do the thinking.",
+        "duration": 12.550000190734863,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "AI",
+            "start": 0.3799999952316284,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "secret",
+            "start": 0.8999999761581421,
+            "end": 1.5
+          },
+          {
+            "word": "Here's",
+            "start": 2.319999933242798,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "the",
+            "start": 2.4000000953674316,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "secret",
+            "start": 2.700000047683716,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "that",
+            "start": 2.859999895095825,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "separates",
+            "start": 3.200000047683716,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "those",
+            "start": 3.640000104904175,
+            "end": 4
+          },
+          {
+            "word": "who",
+            "start": 4,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "leverage",
+            "start": 4.519999980926514,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "AI",
+            "start": 4.519999980926514,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "from",
+            "start": 4.980000019073486,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "those",
+            "start": 5.260000228881836,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "who",
+            "start": 5.539999961853027,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "don't",
+            "start": 5.78000020980835,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "AI",
+            "start": 6.880000114440918,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "is",
+            "start": 7.079999923706055,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "amazing",
+            "start": 7.320000171661377,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "at",
+            "start": 7.820000171661377,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "coding",
+            "start": 8.319999694824219,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "but",
+            "start": 8.760000228881836,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "terrible",
+            "start": 9.079999923706055,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "at",
+            "start": 9.4399995803833,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "design",
+            "start": 9.779999732971191,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "It",
+            "start": 10.720000267028809,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "needs",
+            "start": 10.800000190734863,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "you",
+            "start": 11.079999923706055,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "to",
+            "start": 11.479999542236328,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "do",
+            "start": 11.760000228881836,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 11.880000114440918,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "thinking",
+            "start": 12.300000190734863,
+            "end": 12.300000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Vague Prompts, Vague Code. Give AI a vague request like 'write code to handle payments' and you get generic code. It misses edge cases, doesn't fit your architecture, and needs heavy rework.",
+        "duration": 12.859999656677246,
+        "words": [
+          {
+            "word": "Vague",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "prompts",
+            "start": 0.5199999809265137,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "vague",
+            "start": 1.5,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "code",
+            "start": 1.559999942779541,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "Give",
+            "start": 3.059999942779541,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "AI",
+            "start": 3.0999999046325684,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "a",
+            "start": 3.4200000762939453,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "vague",
+            "start": 3.6600000858306885,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "request",
+            "start": 3.859999895095825,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "like",
+            "start": 4.28000020980835,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "write",
+            "start": 5.119999885559082,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "code",
+            "start": 5.199999809265137,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "to",
+            "start": 5.460000038146973,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "handle",
+            "start": 5.880000114440918,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "payments",
+            "start": 5.880000114440918,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "and",
+            "start": 6.760000228881836,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "you",
+            "start": 6.920000076293945,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "get",
+            "start": 7.039999961853027,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "generic",
+            "start": 7.21999979019165,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "code",
+            "start": 7.659999847412109,
+            "end": 8
+          },
+          {
+            "word": "It",
+            "start": 8.520000457763672,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "misses",
+            "start": 8.819999694824219,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "edge",
+            "start": 8.920000076293945,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "cases",
+            "start": 9.319999694824219,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "doesn't",
+            "start": 10.15999984741211,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "fit",
+            "start": 10.279999732971191,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "your",
+            "start": 10.460000038146973,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "architecture",
+            "start": 10.720000267028809,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "and",
+            "start": 11.539999961853027,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "needs",
+            "start": 11.779999732971191,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "heavy",
+            "start": 11.880000114440918,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "rework",
+            "start": 12.220000267028809,
+            "end": 12.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Design Docs = Perfect Prompts. But give AI your design doc with sequence diagrams, edge cases, and your patterns? It generates exactly what you need. Your design work becomes the ultimate AI prompt.",
+        "duration": 14.4399995803833,
+        "words": [
+          {
+            "word": "Design",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "docs",
+            "start": 0.6600000262260437,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "equals",
+            "start": 0.9200000166893005,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "perfect",
+            "start": 1.600000023841858,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "prompts",
+            "start": 2.4000000953674316,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "but",
+            "start": 3.240000009536743,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "give",
+            "start": 3.4200000762939453,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "AI",
+            "start": 3.619999885559082,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "your",
+            "start": 3.9200000762939453,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "design",
+            "start": 4.21999979019165,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "doc",
+            "start": 4.579999923706055,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "with",
+            "start": 4.820000171661377,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "sequence",
+            "start": 5.099999904632568,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "diagrams",
+            "start": 5.519999980926514,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "edge",
+            "start": 6.78000020980835,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "cases",
+            "start": 6.920000076293945,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "and",
+            "start": 7.639999866485596,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "your",
+            "start": 7.760000228881836,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "patterns",
+            "start": 8.140000343322754,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "It",
+            "start": 8.920000076293945,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "generates",
+            "start": 9.140000343322754,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "exactly",
+            "start": 9.5600004196167,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "what",
+            "start": 10.300000190734863,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "you",
+            "start": 10.539999961853027,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "need",
+            "start": 10.739999771118164,
+            "end": 11
+          },
+          {
+            "word": "Your",
+            "start": 11.4399995803833,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "design",
+            "start": 11.600000381469727,
+            "end": 12
+          },
+          {
+            "word": "work",
+            "start": 12,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "becomes",
+            "start": 12.260000228881836,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 12.579999923706055,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "ultimate",
+            "start": 13.319999694824219,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "AI",
+            "start": 13.319999694824219,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "prompt",
+            "start": 13.84000015258789,
+            "end": 14.140000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "You: The Architect. In this workflow, YOU are the architect. You clarify requirements, draw diagrams, identify edge cases, and write the approach. This is the creative, strategic thinking AI can't do.",
+        "duration": 15.600000381469727,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "the",
+            "start": 0.9200000166893005,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "architect",
+            "start": 1.340000033378601,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "In",
+            "start": 2.2200000286102295,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "this",
+            "start": 2.2799999713897705,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "workflow",
+            "start": 2.5399999618530273,
+            "end": 3
+          },
+          {
+            "word": "you",
+            "start": 3.7200000286102295,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "are",
+            "start": 3.799999952316284,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "the",
+            "start": 4.039999961853027,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "architect",
+            "start": 4.340000152587891,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "You",
+            "start": 5.400000095367432,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "clarify",
+            "start": 5.579999923706055,
+            "end": 6
+          },
+          {
+            "word": "requirements",
+            "start": 6,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "draw",
+            "start": 7.400000095367432,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "diagrams",
+            "start": 7.400000095367432,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "identify",
+            "start": 8.9399995803833,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "edge",
+            "start": 8.9399995803833,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "cases",
+            "start": 9.34000015258789,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "and",
+            "start": 9.779999732971191,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "write",
+            "start": 10.300000190734863,
+            "end": 10.5
+          },
+          {
+            "word": "the",
+            "start": 10.5,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "approach",
+            "start": 11.0600004196167,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "This",
+            "start": 11.779999732971191,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "is",
+            "start": 11.899999618530273,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "the",
+            "start": 12.0600004196167,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "creative",
+            "start": 12.239999771118164,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "strategic",
+            "start": 13.579999923706055,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "thinking",
+            "start": 13.579999923706055,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "AI",
+            "start": 14.020000457763672,
+            "end": 14.65999984741211
+          },
+          {
+            "word": "can't",
+            "start": 14.65999984741211,
+            "end": 15.15999984741211
+          },
+          {
+            "word": "do",
+            "start": 15.15999984741211,
+            "end": 15.380000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "AI: The Builder. AI becomes your builder—executing your vision with speed and precision. You give it clear context, it generates code, you review and refine. Human strategy, machine execution.",
+        "duration": 15.550000190734863,
+        "words": [
+          {
+            "word": "AI",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "The",
+            "start": 1.3600000143051147,
+            "end": 1.5
+          },
+          {
+            "word": "builder",
+            "start": 1.5,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "AI",
+            "start": 2.5799999237060547,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "becomes",
+            "start": 2.5799999237060547,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "your",
+            "start": 2.940000057220459,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "builder",
+            "start": 3.180000066757202,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "Executing",
+            "start": 4.360000133514404,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "your",
+            "start": 4.480000019073486,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "vision",
+            "start": 4.840000152587891,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "with",
+            "start": 4.980000019073486,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "speed",
+            "start": 5.380000114440918,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "and",
+            "start": 5.699999809265137,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "precision",
+            "start": 6.119999885559082,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "You",
+            "start": 7.440000057220459,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "give",
+            "start": 7.460000038146973,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "it",
+            "start": 7.619999885559082,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "clear",
+            "start": 7.860000133514404,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "context",
+            "start": 8.119999885559082,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "It",
+            "start": 9.15999984741211,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "generates",
+            "start": 9.34000015258789,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "code",
+            "start": 9.640000343322754,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "You",
+            "start": 10.479999542236328,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "review",
+            "start": 10.579999923706055,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "and",
+            "start": 10.920000076293945,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "refine",
+            "start": 11.279999732971191,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "Human",
+            "start": 12.199999809265137,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "strategy",
+            "start": 12.399999618530273,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "Machine",
+            "start": 13.279999732971191,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "execution",
+            "start": 13.579999923706055,
+            "end": 14.119999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "ai-power-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Superpower. The result? Senior-level output in junior-level time. You're not just coding faster—you're thinking better. Design-first plus AI equals genuine superpowers. This is the future of software development.",
+        "duration": 14.949999809265137,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "superpower",
+            "start": 0.3799999952316284,
+            "end": 1
+          },
+          {
+            "word": "The",
+            "start": 1.600000023841858,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "result",
+            "start": 1.7400000095367432,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "Senior",
+            "start": 2.799999952316284,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "level",
+            "start": 2.880000114440918,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "output",
+            "start": 3.140000104904175,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "in",
+            "start": 3.4600000381469727,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "junior",
+            "start": 3.9800000190734863,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "level",
+            "start": 4.059999942779541,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "time",
+            "start": 4.380000114440918,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "You're",
+            "start": 5.340000152587891,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "not",
+            "start": 5.440000057220459,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "just",
+            "start": 5.579999923706055,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "coding",
+            "start": 6.099999904632568,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "faster",
+            "start": 6.099999904632568,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "you're",
+            "start": 6.920000076293945,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "thinking",
+            "start": 7.460000038146973,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "better",
+            "start": 7.460000038146973,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "Design",
+            "start": 8.9399995803833,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "First",
+            "start": 8.979999542236328,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "plus",
+            "start": 9.300000190734863,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "AI",
+            "start": 9.760000228881836,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "equals",
+            "start": 10.199999809265137,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "genuine",
+            "start": 10.800000190734863,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "superpowers",
+            "start": 11.319999694824219,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "This",
+            "start": 12.699999809265137,
+            "end": 12.859999656677246
+          },
+          {
+            "word": "is",
+            "start": 12.859999656677246,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "the",
+            "start": 13.079999923706055,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "future",
+            "start": 13.260000228881836,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "of",
+            "start": 13.539999961853027,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "software",
+            "start": 14.220000267028809,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "development",
+            "start": 14.220000267028809,
+            "end": 14.619999885559082
+          }
+        ]
+      }
+    ]
+  }
+}

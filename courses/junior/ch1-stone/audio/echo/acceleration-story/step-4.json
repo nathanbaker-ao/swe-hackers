@@ -1,0 +1,170 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Learn Deliberately. Read senior engineers' code. Ask 'why' not just 'how.' Seek feedback actively. Every PR review is a free lesson from someone more experienced. Don't just fix the comment—understand it.",
+  "duration": 18.1200008392334,
+  "words": [
+    {
+      "word": "Learn",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "deliberately",
+      "start": 0.5400000214576721,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Read",
+      "start": 2.3399999141693115,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "senior",
+      "start": 2.3399999141693115,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "engineers",
+      "start": 2.7799999713897705,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "code",
+      "start": 3.5,
+      "end": 3.5
+    },
+    {
+      "word": "Ask",
+      "start": 4.199999809265137,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "why",
+      "start": 4.199999809265137,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "not",
+      "start": 5.059999942779541,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "just",
+      "start": 5.260000228881836,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "how",
+      "start": 5.579999923706055,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "Seek",
+      "start": 6.940000057220459,
+      "end": 7
+    },
+    {
+      "word": "feedback",
+      "start": 7,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "actively",
+      "start": 7.260000228881836,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "Every",
+      "start": 8.859999656677246,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "PR",
+      "start": 9.020000457763672,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "review",
+      "start": 9.420000076293945,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "is",
+      "start": 9.800000190734863,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "a",
+      "start": 10.039999961853027,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "free",
+      "start": 10.260000228881836,
+      "end": 10.5
+    },
+    {
+      "word": "lesson",
+      "start": 10.5,
+      "end": 10.779999732971191
+    },
+    {
+      "word": "from",
+      "start": 10.779999732971191,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "someone",
+      "start": 11.079999923706055,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "more",
+      "start": 11.380000114440918,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "experienced",
+      "start": 11.84000015258789,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "Don't",
+      "start": 13.180000305175781,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "just",
+      "start": 13.300000190734863,
+      "end": 13.579999923706055
+    },
+    {
+      "word": "fix",
+      "start": 13.579999923706055,
+      "end": 13.699999809265137
+    },
+    {
+      "word": "the",
+      "start": 13.699999809265137,
+      "end": 14.239999771118164
+    },
+    {
+      "word": "comment",
+      "start": 14.239999771118164,
+      "end": 14.239999771118164
+    },
+    {
+      "word": "Understand",
+      "start": 14.739999771118164,
+      "end": 15.0600004196167
+    },
+    {
+      "word": "it",
+      "start": 15.0600004196167,
+      "end": 15.34000015258789
+    }
+  ]
+}

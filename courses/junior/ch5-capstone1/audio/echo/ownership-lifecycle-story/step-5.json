@@ -1,0 +1,160 @@
+{
+  "storyId": "ownership-lifecycle-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Deploy and Retrospective. Deploy to production. Monitor the initial metrics. Then write your retrospective: what went well, what you'd do differently, what you learned. Share those learnings with your team!",
+  "duration": 15.600000381469727,
+  "words": [
+    {
+      "word": "Deploy",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "and",
+      "start": 0.6399999856948853,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "retrospective",
+      "start": 1.1799999475479126,
+      "end": 2
+    },
+    {
+      "word": "Deploy",
+      "start": 3.4800000190734863,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "to",
+      "start": 3.4800000190734863,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "production",
+      "start": 3.740000009536743,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "Monitor",
+      "start": 5.420000076293945,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "the",
+      "start": 5.420000076293945,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "initial",
+      "start": 5.78000020980835,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "metrics",
+      "start": 6.079999923706055,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "Then",
+      "start": 7.559999942779541,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "write",
+      "start": 7.739999771118164,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "your",
+      "start": 7.940000057220459,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "retrospective",
+      "start": 8.199999809265137,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "What",
+      "start": 9.520000457763672,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "went",
+      "start": 9.619999885559082,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "well",
+      "start": 9.819999694824219,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "What",
+      "start": 10.899999618530273,
+      "end": 11
+    },
+    {
+      "word": "you",
+      "start": 11,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "do",
+      "start": 11.15999984741211,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "differently",
+      "start": 11.359999656677246,
+      "end": 11.800000190734863
+    },
+    {
+      "word": "What",
+      "start": 12.579999923706055,
+      "end": 12.680000305175781
+    },
+    {
+      "word": "you",
+      "start": 12.680000305175781,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "learned",
+      "start": 12.880000114440918,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "Share",
+      "start": 14.140000343322754,
+      "end": 14.140000343322754
+    },
+    {
+      "word": "those",
+      "start": 14.140000343322754,
+      "end": 14.4399995803833
+    },
+    {
+      "word": "learnings",
+      "start": 14.4399995803833,
+      "end": 14.859999656677246
+    },
+    {
+      "word": "with",
+      "start": 14.859999656677246,
+      "end": 14.960000038146973
+    },
+    {
+      "word": "your",
+      "start": 14.960000038146973,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "team",
+      "start": 15.15999984741211,
+      "end": 15.380000114440918
+    }
+  ]
+}

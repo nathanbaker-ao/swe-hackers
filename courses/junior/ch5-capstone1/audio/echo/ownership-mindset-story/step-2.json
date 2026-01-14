@@ -1,0 +1,160 @@
+{
+  "storyId": "ownership-mindset-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Designing the Solution. Write the design doc. Draw the diagrams. Plan for edge cases. Get buy-in from stakeholders before you start coding. This saves massive time and rework later.",
+  "duration": 13.84000015258789,
+  "words": [
+    {
+      "word": "Designing",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "the",
+      "start": 0.6600000262260437,
+      "end": 1
+    },
+    {
+      "word": "solution",
+      "start": 1,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "Write",
+      "start": 2.200000047683716,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "the",
+      "start": 2.200000047683716,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "design",
+      "start": 2.440000057220459,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "doc",
+      "start": 2.7200000286102295,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "Draw",
+      "start": 3.7200000286102295,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "the",
+      "start": 3.7200000286102295,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "diagrams",
+      "start": 4.199999809265137,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "Plan",
+      "start": 5.679999828338623,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "for",
+      "start": 5.679999828338623,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "edge",
+      "start": 6.079999923706055,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "cases",
+      "start": 6.199999809265137,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "Get",
+      "start": 7.320000171661377,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "buy",
+      "start": 7.400000095367432,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "in",
+      "start": 7.840000152587891,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "from",
+      "start": 7.920000076293945,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "stakeholders",
+      "start": 8.199999809265137,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "before",
+      "start": 8.699999809265137,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "you",
+      "start": 9.260000228881836,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "start",
+      "start": 9.520000457763672,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "coding",
+      "start": 9.819999694824219,
+      "end": 10.100000381469727
+    },
+    {
+      "word": "This",
+      "start": 10.520000457763672,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "saves",
+      "start": 11.239999771118164,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "massive",
+      "start": 11.479999542236328,
+      "end": 12.079999923706055
+    },
+    {
+      "word": "time",
+      "start": 12.079999923706055,
+      "end": 12.5
+    },
+    {
+      "word": "and",
+      "start": 12.5,
+      "end": 13
+    },
+    {
+      "word": "rework",
+      "start": 13,
+      "end": 13.399999618530273
+    },
+    {
+      "word": "later",
+      "start": 13.399999618530273,
+      "end": 13.699999809265137
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Use AI Strategically. AI isn't just for code generation. Use it for explanations on demand, code review assistance, and exploring alternative approaches. Make AI your 24/7 senior mentor.",
+  "duration": 15.550000190734863,
+  "words": [
+    {
+      "word": "Use",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "AI",
+      "start": 0.6600000262260437,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "strategically",
+      "start": 1.440000057220459,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "AI",
+      "start": 3.5799999237060547,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "isn't",
+      "start": 3.5799999237060547,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "just",
+      "start": 3.8399999141693115,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "for",
+      "start": 4.099999904632568,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "code",
+      "start": 4.340000152587891,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "generation",
+      "start": 4.559999942779541,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "Use",
+      "start": 5.800000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "it",
+      "start": 5.800000190734863,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "for",
+      "start": 5.900000095367432,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "explanations",
+      "start": 6.28000020980835,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "on",
+      "start": 6.71999979019165,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "demand",
+      "start": 7.079999923706055,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "code",
+      "start": 8.0600004196167,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "review",
+      "start": 8.100000381469727,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "assistance",
+      "start": 8.380000114440918,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "and",
+      "start": 9.34000015258789,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "exploring",
+      "start": 9.520000457763672,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "alternative",
+      "start": 10.15999984741211,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "approaches",
+      "start": 10.899999618530273,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "Make",
+      "start": 12.279999732971191,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "AI",
+      "start": 12.399999618530273,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "your",
+      "start": 12.84000015258789,
+      "end": 13.380000114440918
+    },
+    {
+      "word": "24",
+      "start": 13.380000114440918,
+      "end": 13.800000190734863
+    },
+    {
+      "word": "7",
+      "start": 13.800000190734863,
+      "end": 14.279999732971191
+    },
+    {
+      "word": "senior",
+      "start": 14.279999732971191,
+      "end": 14.979999542236328
+    },
+    {
+      "word": "mentor",
+      "start": 14.979999542236328,
+      "end": 15.260000228881836
+    }
+  ]
+}

@@ -1,0 +1,5700 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T01:36:10.378Z",
+  "stories": [
+    "debugging-trap-story",
+    "data-flow-story",
+    "async-flows-story"
+  ],
+  "ballad": {
+    "debugging-trap-story": [
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Bug Report. A bug report arrives: The user's balance shows the wrong number. You open the code. What do you do next? Your approach here separates juniors from seniors.",
+        "duration": 13.960000038146973,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "bug",
+            "start": 0.47999998927116394,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "report",
+            "start": 0.7799999713897705,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "A",
+            "start": 2.059999942779541,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "bug",
+            "start": 2.0999999046325684,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "report",
+            "start": 2.299999952316284,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "arrives",
+            "start": 2.680000066757202,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "The",
+            "start": 3.8399999141693115,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "user's",
+            "start": 3.9800000190734863,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "balance",
+            "start": 4.480000019073486,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "shows",
+            "start": 4.840000152587891,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "the",
+            "start": 5.340000152587891,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "wrong",
+            "start": 5.559999942779541,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "number",
+            "start": 5.78000020980835,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "You",
+            "start": 6.800000190734863,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "open",
+            "start": 6.960000038146973,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "the",
+            "start": 7.239999771118164,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "code",
+            "start": 7.760000228881836,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "What",
+            "start": 8.420000076293945,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "do",
+            "start": 8.579999923706055,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "you",
+            "start": 8.84000015258789,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "do",
+            "start": 8.880000114440918,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "next",
+            "start": 9.140000343322754,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "Your",
+            "start": 10.319999694824219,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "approach",
+            "start": 10.5600004196167,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "here",
+            "start": 10.9399995803833,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "separates",
+            "start": 12.079999923706055,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "juniors",
+            "start": 12.079999923706055,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "from",
+            "start": 12.600000381469727,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "seniors",
+            "start": 13.279999732971191,
+            "end": 13.720000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Junior: Stare at Code. Juniors start by staring at the display code. It looks fine. So they add print statements everywhere. Four hours later, they're more confused than ever.",
+        "duration": 13.75,
+        "words": [
+          {
+            "word": "JUNIOR",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "Stare",
+            "start": 1.5199999809265137,
+            "end": 1.559999942779541
+          },
+          {
+            "word": "at",
+            "start": 1.559999942779541,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "code",
+            "start": 1.9800000190734863,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "Juniors",
+            "start": 3.4000000953674316,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "start",
+            "start": 3.4000000953674316,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "by",
+            "start": 3.8399999141693115,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "staring",
+            "start": 4.239999771118164,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "at",
+            "start": 4.539999961853027,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "the",
+            "start": 4.820000171661377,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "display",
+            "start": 4.980000019073486,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "code",
+            "start": 5.340000152587891,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "It",
+            "start": 6.440000057220459,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "looks",
+            "start": 6.539999961853027,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "fine",
+            "start": 6.760000228881836,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "so",
+            "start": 7.519999980926514,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "they",
+            "start": 7.900000095367432,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "add",
+            "start": 8.079999923706055,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "print",
+            "start": 8.380000114440918,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "statements",
+            "start": 8.720000267028809,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "everywhere",
+            "start": 9.140000343322754,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "Four",
+            "start": 10.699999809265137,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "hours",
+            "start": 10.819999694824219,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "later",
+            "start": 11.0600004196167,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "they're",
+            "start": 11.800000190734863,
+            "end": 12
+          },
+          {
+            "word": "more",
+            "start": 12,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "confused",
+            "start": 12.319999694824219,
+            "end": 12.84000015258789
+          },
+          {
+            "word": "than",
+            "start": 12.84000015258789,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "ever",
+            "start": 13.319999694824219,
+            "end": 13.579999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Junior: Hours Lost. Eventually they realize the bug is somewhere else entirely. A race condition in a background job that nobody remembers writing. Time wasted: four hours.",
+        "duration": 15.15999984741211,
+        "words": [
+          {
+            "word": "Junior",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "Hours",
+            "start": 1.5199999809265137,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "lost",
+            "start": 1.5199999809265137,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "Eventually",
+            "start": 2.9600000381469727,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "they",
+            "start": 3.059999942779541,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "realise",
+            "start": 3.5199999809265137,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "the",
+            "start": 4.099999904632568,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "bug",
+            "start": 4.559999942779541,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "is",
+            "start": 4.78000020980835,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "somewhere",
+            "start": 5.159999847412109,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "else",
+            "start": 5.519999980926514,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "entirely",
+            "start": 6.019999980926514,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "A",
+            "start": 7.440000057220459,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "race",
+            "start": 7.639999866485596,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "condition",
+            "start": 7.960000038146973,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "in",
+            "start": 8.359999656677246,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "a",
+            "start": 8.880000114440918,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "background",
+            "start": 9.220000267028809,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "job",
+            "start": 9.520000457763672,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "that",
+            "start": 9.84000015258789,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "nobody",
+            "start": 10.4399995803833,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "remembers",
+            "start": 10.84000015258789,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "writing",
+            "start": 11.319999694824219,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "Time",
+            "start": 12.880000114440918,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "wasted",
+            "start": 12.979999542236328,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "Four",
+            "start": 14.020000457763672,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "hours",
+            "start": 14.399999618530273,
+            "end": 14.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior: Map the Flow. Seniors take a different approach. First question: What writes to the balance field? They make a list of every place in the codebase that touches it.",
+        "duration": 11.520000457763672,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "Map",
+            "start": 1.159999966621399,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "the",
+            "start": 1.3799999952316284,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "flow",
+            "start": 1.6399999856948853,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "Seniors",
+            "start": 2.9800000190734863,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "take",
+            "start": 2.9800000190734863,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "a",
+            "start": 3.299999952316284,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "different",
+            "start": 3.5199999809265137,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "approach",
+            "start": 3.880000114440918,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "First",
+            "start": 5.099999904632568,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "question",
+            "start": 5.159999847412109,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "what",
+            "start": 6.139999866485596,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "writes",
+            "start": 6.260000228881836,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "to",
+            "start": 6.539999961853027,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 6.71999979019165,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "balance",
+            "start": 6.840000152587891,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "field",
+            "start": 7.119999885559082,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "They",
+            "start": 8.020000457763672,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "make",
+            "start": 8.180000305175781,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "a",
+            "start": 8.359999656677246,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "list",
+            "start": 8.680000305175781,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "of",
+            "start": 8.680000305175781,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "every",
+            "start": 8.960000038146973,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "place",
+            "start": 9.260000228881836,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "in",
+            "start": 9.539999961853027,
+            "end": 9.65999984741211
+          },
+          {
+            "word": "the",
+            "start": 9.65999984741211,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "codebase",
+            "start": 9.84000015258789,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "that",
+            "start": 10.199999809265137,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "touches",
+            "start": 10.65999984741211,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "it",
+            "start": 10.9399995803833,
+            "end": 11.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior: Check Async. Second question: Any background jobs? Scheduled tasks? Event handlers? Seniors know bugs love to hide in code that runs when nobody's watching.",
+        "duration": 13.359999656677246,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "Check",
+            "start": 1.4600000381469727,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "async",
+            "start": 1.7599999904632568,
+            "end": 2.5
+          },
+          {
+            "word": "Second",
+            "start": 3.4000000953674316,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "question",
+            "start": 3.4000000953674316,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "Any",
+            "start": 4.460000038146973,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "background",
+            "start": 4.639999866485596,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "jobs",
+            "start": 5.039999961853027,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "Scheduled",
+            "start": 6.320000171661377,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "tasks",
+            "start": 6.420000076293945,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "Event",
+            "start": 7.659999847412109,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "handlers",
+            "start": 7.659999847412109,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "Seniors",
+            "start": 9.199999809265137,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "know",
+            "start": 9.199999809265137,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "bugs",
+            "start": 9.640000343322754,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "love",
+            "start": 9.899999618530273,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 10.239999771118164,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "hide",
+            "start": 10.619999885559082,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "in",
+            "start": 10.640000343322754,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "code",
+            "start": 11.079999923706055,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "that",
+            "start": 11.140000343322754,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "runs",
+            "start": 11.720000267028809,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "when",
+            "start": 11.720000267028809,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "nobody's",
+            "start": 12.140000343322754,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "watching",
+            "start": 12.600000381469727,
+            "end": 12.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Senior: Found in 20 Minutes. The nightly reconciliation job has a bug in its calculation. Found in twenty minutes. The secret? Instead of asking WHERE the bug is, ask WHAT touches this data.",
+        "duration": 15.640000343322754,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "Found",
+            "start": 1.659999966621399,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "in",
+            "start": 1.659999966621399,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "20",
+            "start": 1.8600000143051147,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "minutes",
+            "start": 2.2799999713897705,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "The",
+            "start": 3.240000009536743,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "nightly",
+            "start": 3.4200000762939453,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "reconciliation",
+            "start": 3.819999933242798,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "job",
+            "start": 4.380000114440918,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "has",
+            "start": 4.980000019073486,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "a",
+            "start": 5.400000095367432,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "bug",
+            "start": 5.78000020980835,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "in",
+            "start": 5.78000020980835,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "its",
+            "start": 5.980000019073486,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "calculation",
+            "start": 6.239999771118164,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "Found",
+            "start": 7.78000020980835,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "in",
+            "start": 7.800000190734863,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "20",
+            "start": 8.039999961853027,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "minutes",
+            "start": 8.399999618530273,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "The",
+            "start": 9.4399995803833,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "secret",
+            "start": 9.600000381469727,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "Instead",
+            "start": 10.779999732971191,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "of",
+            "start": 10.880000114440918,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "asking",
+            "start": 11.100000381469727,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "where",
+            "start": 11.479999542236328,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "the",
+            "start": 12.039999961853027,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "bug",
+            "start": 12.34000015258789,
+            "end": 12.34000015258789
+          },
+          {
+            "word": "is",
+            "start": 12.34000015258789,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "ask",
+            "start": 13.460000038146973,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "what",
+            "start": 13.579999923706055,
+            "end": 14.359999656677246
+          },
+          {
+            "word": "touches",
+            "start": 14.359999656677246,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "this",
+            "start": 14.800000190734863,
+            "end": 15.100000381469727
+          },
+          {
+            "word": "data",
+            "start": 15.100000381469727,
+            "end": 15.399999618530273
+          }
+        ]
+      }
+    ],
+    "data-flow-story": [
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Question 1: Where Displayed?. For any bug, start with five questions. First: Where is the data displayed? Find the endpoint, the UI component, the API response that shows the wrong value.",
+        "duration": 17.559999465942383,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "one",
+            "start": 0.6000000238418579,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "where",
+            "start": 1.9600000381469727,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "displayed",
+            "start": 2.140000104904175,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "For",
+            "start": 3.6600000858306885,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "any",
+            "start": 3.819999933242798,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "bug",
+            "start": 4.260000228881836,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "start",
+            "start": 5.019999980926514,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "with",
+            "start": 5.320000171661377,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "five",
+            "start": 5.619999885559082,
+            "end": 6
+          },
+          {
+            "word": "questions",
+            "start": 6,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "First",
+            "start": 7.199999809265137,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "where",
+            "start": 8.079999923706055,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "is",
+            "start": 8.539999961853027,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "the",
+            "start": 8.720000267028809,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "data",
+            "start": 8.899999618530273,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "displayed",
+            "start": 9.180000305175781,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "Find",
+            "start": 10.539999961853027,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "the",
+            "start": 10.600000381469727,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "endpoint",
+            "start": 10.979999542236328,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "the",
+            "start": 11.720000267028809,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "UI",
+            "start": 12.020000457763672,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "component",
+            "start": 12.279999732971191,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 13.359999656677246,
+            "end": 13.699999809265137
+          },
+          {
+            "word": "API",
+            "start": 13.699999809265137,
+            "end": 13.960000038146973
+          },
+          {
+            "word": "response",
+            "start": 13.960000038146973,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "that",
+            "start": 14.539999961853027,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "shows",
+            "start": 15.039999961853027,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "the",
+            "start": 15.399999618530273,
+            "end": 15.640000343322754
+          },
+          {
+            "word": "wrong",
+            "start": 15.640000343322754,
+            "end": 15.9399995803833
+          },
+          {
+            "word": "value",
+            "start": 15.9399995803833,
+            "end": 16.31999969482422
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Question 2: Where Stored?. Second: Where is the data stored? Is it in a database field? A cache? A file? Trace backwards from the display to the source of truth.",
+        "duration": 13.460000038146973,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "2",
+            "start": 0.5799999833106995,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "Where",
+            "start": 1.8200000524520874,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "stored",
+            "start": 1.940000057220459,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "Second",
+            "start": 3.759999990463257,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "where",
+            "start": 4.400000095367432,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "is",
+            "start": 4.619999885559082,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 4.800000190734863,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "data",
+            "start": 4.940000057220459,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "stored",
+            "start": 5.21999979019165,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "Is",
+            "start": 6.28000020980835,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "it",
+            "start": 6.340000152587891,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "in",
+            "start": 6.460000038146973,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "a",
+            "start": 6.579999923706055,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "database",
+            "start": 6.820000171661377,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "field",
+            "start": 7.119999885559082,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "a",
+            "start": 7.920000076293945,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "cache",
+            "start": 8.420000076293945,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "a",
+            "start": 8.819999694824219,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "file",
+            "start": 9.319999694824219,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "Trace",
+            "start": 10.279999732971191,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "backwards",
+            "start": 10.359999656677246,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "from",
+            "start": 10.800000190734863,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "the",
+            "start": 11.0600004196167,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "display",
+            "start": 11.359999656677246,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "to",
+            "start": 11.640000343322754,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "the",
+            "start": 12.140000343322754,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "source",
+            "start": 12.399999618530273,
+            "end": 12.640000343322754
+          },
+          {
+            "word": "of",
+            "start": 12.640000343322754,
+            "end": 13.119999885559082
+          },
+          {
+            "word": "truth",
+            "start": 13.119999885559082,
+            "end": 13.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Question 3: What Writes?. Third: What writes to this storage? This is the critical question. Make a complete list. Every function, every job, every external system that can modify this data.",
+        "duration": 17.610000610351562,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "3",
+            "start": 0.5400000214576721,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "What",
+            "start": 1.9800000190734863,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "writes",
+            "start": 2.140000104904175,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "Third",
+            "start": 3.5799999237060547,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "what",
+            "start": 4.579999923706055,
+            "end": 4.860000133514404
+          },
+          {
+            "word": "writes",
+            "start": 4.860000133514404,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "to",
+            "start": 5.28000020980835,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "this",
+            "start": 5.480000019073486,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "storage",
+            "start": 5.78000020980835,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "This",
+            "start": 6.800000190734863,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "is",
+            "start": 7.28000020980835,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "the",
+            "start": 7.519999980926514,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "critical",
+            "start": 7.760000228881836,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "question",
+            "start": 8.100000381469727,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "Make",
+            "start": 9.699999809265137,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "a",
+            "start": 9.739999771118164,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "complete",
+            "start": 10.15999984741211,
+            "end": 10.5
+          },
+          {
+            "word": "list",
+            "start": 10.5,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "Every",
+            "start": 11.720000267028809,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "function",
+            "start": 11.960000038146973,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "every",
+            "start": 12.899999618530273,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "job",
+            "start": 13.279999732971191,
+            "end": 13.600000381469727
+          },
+          {
+            "word": "every",
+            "start": 14.319999694824219,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "external",
+            "start": 14.539999961853027,
+            "end": 15.0600004196167
+          },
+          {
+            "word": "system",
+            "start": 15.0600004196167,
+            "end": 15.5
+          },
+          {
+            "word": "that",
+            "start": 15.5,
+            "end": 15.899999618530273
+          },
+          {
+            "word": "can",
+            "start": 15.899999618530273,
+            "end": 16.15999984741211
+          },
+          {
+            "word": "modify",
+            "start": 16.15999984741211,
+            "end": 16.5
+          },
+          {
+            "word": "this",
+            "start": 16.5,
+            "end": 16.979999542236328
+          },
+          {
+            "word": "data",
+            "start": 16.979999542236328,
+            "end": 17.1200008392334
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Question 4: When?. Fourth: When does each write happen? Some happen on user action. Some happen at midnight. Some happen when external events fire. Timing matters.",
+        "duration": 13.5600004196167,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "four",
+            "start": 0.5199999809265137,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "when",
+            "start": 1.5199999809265137,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Fourth",
+            "start": 2.9800000190734863,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "when",
+            "start": 3.5799999237060547,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "does",
+            "start": 3.680000066757202,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "each",
+            "start": 3.9200000762939453,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "write",
+            "start": 4.239999771118164,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "happen",
+            "start": 4.440000057220459,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "Some",
+            "start": 5.599999904632568,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "happen",
+            "start": 5.71999979019165,
+            "end": 6
+          },
+          {
+            "word": "on",
+            "start": 6,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "user",
+            "start": 6.28000020980835,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "action",
+            "start": 6.579999923706055,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "some",
+            "start": 7.599999904632568,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "happen",
+            "start": 7.739999771118164,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "at",
+            "start": 7.980000019073486,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "midnight",
+            "start": 8.220000267028809,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "some",
+            "start": 9.319999694824219,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "happen",
+            "start": 9.460000038146973,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "when",
+            "start": 9.779999732971191,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "external",
+            "start": 10.0600004196167,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "events",
+            "start": 10.520000457763672,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "fire",
+            "start": 10.859999656677246,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "Timing",
+            "start": 12.199999809265137,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "matters",
+            "start": 12.399999618530273,
+            "end": 12.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Question 5: External Data?. Fifth: What external data flows in? Webhooks, API calls, file uploads, message queues. External data is unpredictable and often the source of bugs.",
+        "duration": 14.609999656677246,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "five",
+            "start": 0.5400000214576721,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "external",
+            "start": 2.0199999809265137,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "data",
+            "start": 2.0199999809265137,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "Fifth",
+            "start": 3.299999952316284,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "what",
+            "start": 3.8399999141693115,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "external",
+            "start": 4.159999847412109,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "data",
+            "start": 4.599999904632568,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "flows",
+            "start": 5.059999942779541,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "in",
+            "start": 5.360000133514404,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "Webhooks",
+            "start": 6.539999961853027,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "API",
+            "start": 7.360000133514404,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "calls",
+            "start": 7.360000133514404,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "file",
+            "start": 8.279999732971191,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "uploads",
+            "start": 8.34000015258789,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "message",
+            "start": 9.260000228881836,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "queues",
+            "start": 9.279999732971191,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "External",
+            "start": 10.739999771118164,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "data",
+            "start": 10.819999694824219,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "is",
+            "start": 11.15999984741211,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "unpredictable",
+            "start": 11.5600004196167,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "and",
+            "start": 12.180000305175781,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "often",
+            "start": 12.800000190734863,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 13.15999984741211,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "source",
+            "start": 13.420000076293945,
+            "end": 13.699999809265137
+          },
+          {
+            "word": "of",
+            "start": 13.699999809265137,
+            "end": 14.239999771118164
+          },
+          {
+            "word": "bugs",
+            "start": 14.239999771118164,
+            "end": 14.239999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Bug Is in Steps 3-5. Here's the pattern: The bug is almost always in questions three, four, or five. Something that writes data, runs at an unexpected time, or comes from outside. Your list is your treasure map.",
+        "duration": 17.350000381469727,
+        "words": [
+          {
+            "word": "Bug",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "is",
+            "start": 0.5,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "in",
+            "start": 0.800000011920929,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "steps",
+            "start": 1.4199999570846558,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "three",
+            "start": 1.4199999570846558,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "to",
+            "start": 1.7799999713897705,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "five",
+            "start": 2.0399999618530273,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "Here's",
+            "start": 3.0999999046325684,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "the",
+            "start": 3.200000047683716,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "pattern",
+            "start": 3.5199999809265137,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "The",
+            "start": 4.199999809265137,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "bug",
+            "start": 4.539999961853027,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "is",
+            "start": 4.559999942779541,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "almost",
+            "start": 4.900000095367432,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "always",
+            "start": 5.300000190734863,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "in",
+            "start": 5.840000152587891,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "questions",
+            "start": 6.179999828338623,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "three",
+            "start": 6.619999885559082,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "four",
+            "start": 7.860000133514404,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "or",
+            "start": 7.860000133514404,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "five",
+            "start": 8.220000267028809,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "Something",
+            "start": 9.34000015258789,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "that",
+            "start": 9.619999885559082,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "writes",
+            "start": 9.960000038146973,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "data",
+            "start": 10.220000267028809,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "runs",
+            "start": 11.4399995803833,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "at",
+            "start": 11.4399995803833,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "an",
+            "start": 11.65999984741211,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "unexpected",
+            "start": 11.979999542236328,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "time",
+            "start": 12.359999656677246,
+            "end": 12.899999618530273
+          },
+          {
+            "word": "or",
+            "start": 12.899999618530273,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "comes",
+            "start": 13.34000015258789,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "from",
+            "start": 13.680000305175781,
+            "end": 14.039999961853027
+          },
+          {
+            "word": "outside",
+            "start": 14.039999961853027,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "Your",
+            "start": 14.960000038146973,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "list",
+            "start": 15.5600004196167,
+            "end": 15.880000114440918
+          },
+          {
+            "word": "is",
+            "start": 15.880000114440918,
+            "end": 16.360000610351562
+          },
+          {
+            "word": "your",
+            "start": 16.360000610351562,
+            "end": 16.68000030517578
+          },
+          {
+            "word": "treasure",
+            "start": 16.68000030517578,
+            "end": 16.979999542236328
+          },
+          {
+            "word": "map",
+            "start": 16.979999542236328,
+            "end": 17.219999313354492
+          }
+        ]
+      }
+    ],
+    "async-flows-story": [
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Synchronous: Easy to Debug. Synchronous code is linear. User makes a request, server processes it, database responds, user gets the result. When it breaks, you can follow the path step by step.",
+        "duration": 15.550000190734863,
+        "words": [
+          {
+            "word": "Synchronous",
+            "start": 0,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "Easy",
+            "start": 2.059999942779541,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "to",
+            "start": 2.140000104904175,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "debug",
+            "start": 2.700000047683716,
+            "end": 3
+          },
+          {
+            "word": "Synchronous",
+            "start": 4.039999961853027,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "code",
+            "start": 4.239999771118164,
+            "end": 4.5
+          },
+          {
+            "word": "is",
+            "start": 4.5,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "linear",
+            "start": 4.78000020980835,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "User",
+            "start": 5.900000095367432,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "makes",
+            "start": 5.900000095367432,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 6.119999885559082,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "request",
+            "start": 6.320000171661377,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "server",
+            "start": 7.519999980926514,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "processes",
+            "start": 7.519999980926514,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "it",
+            "start": 7.960000038146973,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "database",
+            "start": 8.960000038146973,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "responds",
+            "start": 9.15999984741211,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "user",
+            "start": 10.539999961853027,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "gets",
+            "start": 10.539999961853027,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "the",
+            "start": 10.760000228881836,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "result",
+            "start": 11.300000190734863,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "When",
+            "start": 11.920000076293945,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "it",
+            "start": 12.0600004196167,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "breaks",
+            "start": 12.279999732971191,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "you",
+            "start": 12.979999542236328,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "can",
+            "start": 13.079999923706055,
+            "end": 13.380000114440918
+          },
+          {
+            "word": "follow",
+            "start": 13.380000114440918,
+            "end": 13.5
+          },
+          {
+            "word": "the",
+            "start": 13.5,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "path",
+            "start": 13.720000267028809,
+            "end": 14.0600004196167
+          },
+          {
+            "word": "step",
+            "start": 14.0600004196167,
+            "end": 14.65999984741211
+          },
+          {
+            "word": "by",
+            "start": 14.65999984741211,
+            "end": 15.100000381469727
+          },
+          {
+            "word": "step",
+            "start": 15.100000381469727,
+            "end": 15.319999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Asynchronous: Bugs Hide Here. Asynchronous code is different. User makes a request, server queues a job, user gets 'processing'. Later, a worker picks up the job. Much later, the database updates. Bugs love these gaps.",
+        "duration": 17.25,
+        "words": [
+          {
+            "word": "Asynchronous",
+            "start": 0,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Bugs",
+            "start": 1.5199999809265137,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "hide",
+            "start": 1.5199999809265137,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "here",
+            "start": 1.9600000381469727,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "Asynchronous",
+            "start": 3.259999990463257,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "code",
+            "start": 3.619999885559082,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "is",
+            "start": 3.9200000762939453,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "different",
+            "start": 4.199999809265137,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "User",
+            "start": 5.440000057220459,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "makes",
+            "start": 5.440000057220459,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "a",
+            "start": 5.659999847412109,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "request",
+            "start": 5.880000114440918,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "Server",
+            "start": 6.940000057220459,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "queues",
+            "start": 7.019999980926514,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "a",
+            "start": 7.320000171661377,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "job",
+            "start": 7.800000190734863,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "User",
+            "start": 8.640000343322754,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "gets",
+            "start": 8.640000343322754,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "processing",
+            "start": 9.020000457763672,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "Later",
+            "start": 10.520000457763672,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "a",
+            "start": 10.779999732971191,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "worker",
+            "start": 11.199999809265137,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "picks",
+            "start": 11.199999809265137,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "up",
+            "start": 11.520000457763672,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "the",
+            "start": 11.720000267028809,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "job",
+            "start": 12.079999923706055,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "Much",
+            "start": 12.84000015258789,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "later",
+            "start": 12.920000076293945,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 13.520000457763672,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "database",
+            "start": 13.800000190734863,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "updates",
+            "start": 14.15999984741211,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "Bugs",
+            "start": 15.619999885559082,
+            "end": 15.619999885559082
+          },
+          {
+            "word": "love",
+            "start": 15.619999885559082,
+            "end": 16.31999969482422
+          },
+          {
+            "word": "these",
+            "start": 16.31999969482422,
+            "end": 16.920000076293945
+          },
+          {
+            "word": "gaps",
+            "start": 16.920000076293945,
+            "end": 16.920000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Scheduled Tasks. First hiding spot: scheduled tasks. Cron jobs, scheduled functions, things that run at three AM. Ask yourself: What runs at night in this codebase? Who maintains it?",
+        "duration": 15.600000381469727,
+        "words": [
+          {
+            "word": "Scheduled",
+            "start": 0,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "tasks",
+            "start": 0.9399999976158142,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "First",
+            "start": 2.819999933242798,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "hiding",
+            "start": 2.9000000953674316,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "spot",
+            "start": 3.359999895095825,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "Scheduled",
+            "start": 4.860000133514404,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "tasks",
+            "start": 4.940000057220459,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "Cron",
+            "start": 6.480000019073486,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "jobs",
+            "start": 6.480000019073486,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "Scheduled",
+            "start": 7.519999980926514,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "functions",
+            "start": 7.599999904632568,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "Things",
+            "start": 8.859999656677246,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "that",
+            "start": 8.859999656677246,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "run",
+            "start": 9.15999984741211,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "at",
+            "start": 9.300000190734863,
+            "end": 9.5
+          },
+          {
+            "word": "3",
+            "start": 9.5,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "a",
+            "start": 9.800000190734863,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "m",
+            "start": 9.859999656677246,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "Ask",
+            "start": 10.619999885559082,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "yourself",
+            "start": 10.920000076293945,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "what",
+            "start": 11.680000305175781,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "runs",
+            "start": 12.020000457763672,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "at",
+            "start": 12.359999656677246,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "night",
+            "start": 12.65999984741211,
+            "end": 12.84000015258789
+          },
+          {
+            "word": "in",
+            "start": 12.84000015258789,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "this",
+            "start": 13.039999961853027,
+            "end": 13.199999809265137
+          },
+          {
+            "word": "codebase",
+            "start": 13,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "Who",
+            "start": 14.220000267028809,
+            "end": 14.720000267028809
+          },
+          {
+            "word": "maintains",
+            "start": 14.720000267028809,
+            "end": 15.100000381469727
+          },
+          {
+            "word": "it",
+            "start": 15.100000381469727,
+            "end": 15.479999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Message Queues. Second hiding spot: message queues. Celery, RabbitMQ, SQS. Messages go in, workers process them. What happens when a message fails? When the queue backs up?",
+        "duration": 17.709999084472656,
+        "words": [
+          {
+            "word": "Message",
+            "start": 0,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "queues",
+            "start": 0.800000011920929,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "Second",
+            "start": 2.4200000762939453,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "hiding",
+            "start": 2.700000047683716,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "spot",
+            "start": 3.140000104904175,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "Message",
+            "start": 4.679999828338623,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "queues",
+            "start": 4.679999828338623,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "Salary",
+            "start": 6.420000076293945,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "RabbitMQ",
+            "start": 7.059999942779541,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "SQS",
+            "start": 8.5600004196167,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "Messages",
+            "start": 10.300000190734863,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "go",
+            "start": 10.300000190734863,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "in",
+            "start": 10.680000305175781,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "workers",
+            "start": 11.800000190734863,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "process",
+            "start": 11.800000190734863,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "them",
+            "start": 12.359999656677246,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "What",
+            "start": 13.079999923706055,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "happens",
+            "start": 13.680000305175781,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "when",
+            "start": 14.020000457763672,
+            "end": 14.260000228881836
+          },
+          {
+            "word": "a",
+            "start": 14.260000228881836,
+            "end": 14.779999732971191
+          },
+          {
+            "word": "message",
+            "start": 14.779999732971191,
+            "end": 14.779999732971191
+          },
+          {
+            "word": "fails",
+            "start": 14.779999732971191,
+            "end": 15.199999809265137
+          },
+          {
+            "word": "When",
+            "start": 15.600000381469727,
+            "end": 16
+          },
+          {
+            "word": "the",
+            "start": 16,
+            "end": 16.239999771118164
+          },
+          {
+            "word": "queue",
+            "start": 16.239999771118164,
+            "end": 16.559999465942383
+          },
+          {
+            "word": "backs",
+            "start": 16.559999465942383,
+            "end": 16.899999618530273
+          },
+          {
+            "word": "up",
+            "start": 16.899999618530273,
+            "end": 17.219999313354492
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Event Handlers. Third hiding spot: event handlers. Webhooks, pub/sub, callbacks. When an external event fires, what code runs? These are often forgotten and rarely tested.",
+        "duration": 15.600000381469727,
+        "words": [
+          {
+            "word": "Event",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "handlers",
+            "start": 0.8399999737739563,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "Third",
+            "start": 2.700000047683716,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "hiding",
+            "start": 2.740000009536743,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "spot",
+            "start": 3.140000104904175,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "event",
+            "start": 4.300000190734863,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "handlers",
+            "start": 4.300000190734863,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "Webhooks",
+            "start": 5.71999979019165,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "PubSub",
+            "start": 6.659999847412109,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "callbacks",
+            "start": 7.539999961853027,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "When",
+            "start": 8.579999923706055,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "an",
+            "start": 8.65999984741211,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "external",
+            "start": 9.460000038146973,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "event",
+            "start": 9.460000038146973,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "fires",
+            "start": 9.920000076293945,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "what",
+            "start": 10.760000228881836,
+            "end": 11
+          },
+          {
+            "word": "code",
+            "start": 11,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "runs",
+            "start": 11.319999694824219,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "These",
+            "start": 12.4399995803833,
+            "end": 12.760000228881836
+          },
+          {
+            "word": "are",
+            "start": 12.760000228881836,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "often",
+            "start": 12.979999542236328,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "forgotten",
+            "start": 13.319999694824219,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "and",
+            "start": 13.720000267028809,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "rarely",
+            "start": 14.4399995803833,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "tested",
+            "start": 14.800000190734863,
+            "end": 15.220000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Build Your Inventory. Senior engineers keep an inventory: every async flow, what data it touches, when it runs. When a bug hits, they check the inventory first. Build yours today.",
+        "duration": 14.15999984741211,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "your",
+            "start": 0.5799999833106995,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "inventory",
+            "start": 1.3600000143051147,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Senior",
+            "start": 3.0199999809265137,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "engineers",
+            "start": 3.0799999237060547,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "keep",
+            "start": 3.640000104904175,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "an",
+            "start": 4.139999866485596,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "inventory",
+            "start": 4.980000019073486,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "Every",
+            "start": 5.71999979019165,
+            "end": 6
+          },
+          {
+            "word": "async",
+            "start": 6,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "flow",
+            "start": 6.519999980926514,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "what",
+            "start": 7.579999923706055,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "data",
+            "start": 7.71999979019165,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "it",
+            "start": 8.039999961853027,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "touches",
+            "start": 8.479999542236328,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "when",
+            "start": 9.279999732971191,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "it",
+            "start": 9.380000114440918,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "runs",
+            "start": 9.9399995803833,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "When",
+            "start": 10.579999923706055,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "a",
+            "start": 10.640000343322754,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "bug",
+            "start": 11.0600004196167,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "hits",
+            "start": 11.0600004196167,
+            "end": 11.380000114440918
+          },
+          {
+            "word": "they",
+            "start": 11.800000190734863,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "check",
+            "start": 11.960000038146973,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 12.199999809265137,
+            "end": 12.960000038146973
+          },
+          {
+            "word": "inventory",
+            "start": 12.960000038146973,
+            "end": 12.960000038146973
+          },
+          {
+            "word": "first",
+            "start": 12.960000038146973,
+            "end": 13.680000305175781
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "debugging-trap-story": [
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Bug Report. A bug report arrives: The user's balance shows the wrong number. You open the code. What do you do next? Your approach here separates juniors from seniors.",
+        "duration": 10.5600004196167,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "bug",
+            "start": 0.3199999928474426,
+            "end": 0.5
+          },
+          {
+            "word": "report",
+            "start": 0.5,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "A",
+            "start": 1.399999976158142,
+            "end": 1.5
+          },
+          {
+            "word": "bug",
+            "start": 1.5,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "report",
+            "start": 1.659999966621399,
+            "end": 2
+          },
+          {
+            "word": "arrives",
+            "start": 2,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "The",
+            "start": 2.8399999141693115,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "user's",
+            "start": 2.940000057220459,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "balance",
+            "start": 3.380000114440918,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "shows",
+            "start": 3.6600000858306885,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "the",
+            "start": 3.9800000190734863,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "wrong",
+            "start": 4.340000152587891,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "number",
+            "start": 4.420000076293945,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "You",
+            "start": 5.159999847412109,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "open",
+            "start": 5.239999771118164,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 5.440000057220459,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "code",
+            "start": 5.880000114440918,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "What",
+            "start": 6.440000057220459,
+            "end": 6.5
+          },
+          {
+            "word": "do",
+            "start": 6.5,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "you",
+            "start": 6.639999866485596,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "do",
+            "start": 6.71999979019165,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "next",
+            "start": 6.880000114440918,
+            "end": 7.199999809265137
+          },
+          {
+            "word": "Your",
+            "start": 7.800000190734863,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "approach",
+            "start": 7.960000038146973,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "here",
+            "start": 8.260000228881836,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "separates",
+            "start": 9.119999885559082,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "juniors",
+            "start": 9.119999885559082,
+            "end": 9.5
+          },
+          {
+            "word": "from",
+            "start": 9.5,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "seniors",
+            "start": 9.899999618530273,
+            "end": 10.239999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Junior: Stare at Code. Juniors start by staring at the display code. It looks fine. So they add print statements everywhere. Four hours later, they're more confused than ever.",
+        "duration": 12.640000343322754,
+        "words": [
+          {
+            "word": "Junior",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "stare",
+            "start": 1.0399999618530273,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "at",
+            "start": 1.340000033378601,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "code",
+            "start": 1.7200000286102295,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "Juniors",
+            "start": 2.940000057220459,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "start",
+            "start": 2.940000057220459,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "by",
+            "start": 3.259999990463257,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "staring",
+            "start": 3.680000066757202,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "at",
+            "start": 3.9800000190734863,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "the",
+            "start": 4.380000114440918,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "display",
+            "start": 4.539999961853027,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "code",
+            "start": 4.940000057220459,
+            "end": 5.320000171661377
+          },
+          {
+            "word": "It",
+            "start": 6.019999980926514,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "looks",
+            "start": 6.159999847412109,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "fine",
+            "start": 6.300000190734863,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "So",
+            "start": 7.440000057220459,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "they",
+            "start": 7.679999828338623,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "add",
+            "start": 7.800000190734863,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "print",
+            "start": 8.0600004196167,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "statements",
+            "start": 8.34000015258789,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "everywhere",
+            "start": 8.65999984741211,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "Four",
+            "start": 10.020000457763672,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "hours",
+            "start": 10.140000343322754,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "later",
+            "start": 10.4399995803833,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "they're",
+            "start": 10.979999542236328,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "more",
+            "start": 11.15999984741211,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "confused",
+            "start": 11.460000038146973,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "than",
+            "start": 11.960000038146973,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "ever",
+            "start": 12.279999732971191,
+            "end": 12.420000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Junior: Hours Lost. Eventually they realize the bug is somewhere else entirely. A race condition in a background job that nobody remembers writing. Time wasted: four hours.",
+        "duration": 12.5,
+        "words": [
+          {
+            "word": "Junior",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "Hours",
+            "start": 1.3799999952316284,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "lost",
+            "start": 1.3799999952316284,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "Eventually",
+            "start": 2.740000009536743,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "they",
+            "start": 2.740000009536743,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "realize",
+            "start": 3.0399999618530273,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "the",
+            "start": 3.4200000762939453,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "bug",
+            "start": 3.759999990463257,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "is",
+            "start": 3.759999990463257,
+            "end": 4
+          },
+          {
+            "word": "somewhere",
+            "start": 4,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "else",
+            "start": 4.320000171661377,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "entirely",
+            "start": 4.71999979019165,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "A",
+            "start": 5.920000076293945,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "race",
+            "start": 6.079999923706055,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "condition",
+            "start": 6.380000114440918,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "in",
+            "start": 6.800000190734863,
+            "end": 7
+          },
+          {
+            "word": "a",
+            "start": 7,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "background",
+            "start": 7.300000190734863,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "job",
+            "start": 7.539999961853027,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "that",
+            "start": 7.920000076293945,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "nobody",
+            "start": 8.460000038146973,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "remembers",
+            "start": 8.819999694824219,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "writing",
+            "start": 9.199999809265137,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "Time",
+            "start": 10.279999732971191,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "wasted",
+            "start": 10.420000076293945,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "Four",
+            "start": 11.220000267028809,
+            "end": 11.5
+          },
+          {
+            "word": "hours",
+            "start": 11.5,
+            "end": 11.800000190734863
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior: Map the Flow. Seniors take a different approach. First question: What writes to the balance field? They make a list of every place in the codebase that touches it.",
+        "duration": 10.920000076293945,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "Map",
+            "start": 1.600000023841858,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "the",
+            "start": 1.6200000047683716,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "flow",
+            "start": 1.940000057220459,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "Seniors",
+            "start": 3.3399999141693115,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "take",
+            "start": 3.3399999141693115,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "a",
+            "start": 3.619999885559082,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "different",
+            "start": 3.9200000762939453,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "approach",
+            "start": 4.079999923706055,
+            "end": 4.5
+          },
+          {
+            "word": "First",
+            "start": 5.340000152587891,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "question",
+            "start": 5.340000152587891,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "What",
+            "start": 6.28000020980835,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "rights",
+            "start": 6.400000095367432,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "to",
+            "start": 6.639999866485596,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "the",
+            "start": 6.840000152587891,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "balance",
+            "start": 6.960000038146973,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "field",
+            "start": 7.260000228881836,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "They",
+            "start": 8.020000457763672,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "make",
+            "start": 8.15999984741211,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "a",
+            "start": 8.300000190734863,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "list",
+            "start": 8.579999923706055,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "of",
+            "start": 8.579999923706055,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "every",
+            "start": 8.880000114440918,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "place",
+            "start": 9.199999809265137,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "in",
+            "start": 9.479999542236328,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "the",
+            "start": 9.640000343322754,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "codebase",
+            "start": 9.800000190734863,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "that",
+            "start": 10.119999885559082,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "touches",
+            "start": 10.399999618530273,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "it",
+            "start": 10.600000381469727,
+            "end": 10.819999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior: Check Async. Second question: Any background jobs? Scheduled tasks? Event handlers? Seniors know bugs love to hide in code that runs when nobody's watching.",
+        "duration": 13,
+        "words": [
+          {
+            "word": "Senior",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "check",
+            "start": 0.8799999952316284,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "async",
+            "start": 1.1399999856948853,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "Second",
+            "start": 2.259999990463257,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "question",
+            "start": 2.4000000953674316,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "Any",
+            "start": 3.6600000858306885,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "background",
+            "start": 3.819999933242798,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "jobs",
+            "start": 4.340000152587891,
+            "end": 4.760000228881836
+          },
+          {
+            "word": "Scheduled",
+            "start": 5.539999961853027,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "tasks",
+            "start": 5.659999847412109,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "Event",
+            "start": 6.900000095367432,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "handlers",
+            "start": 6.960000038146973,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "Seniors",
+            "start": 8.359999656677246,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "know",
+            "start": 8.579999923706055,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "bugs",
+            "start": 8.960000038146973,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "love",
+            "start": 9.260000228881836,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "to",
+            "start": 9.680000305175781,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "hide",
+            "start": 10.199999809265137,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "in",
+            "start": 10.199999809265137,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "code",
+            "start": 10.84000015258789,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "that",
+            "start": 10.84000015258789,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "runs",
+            "start": 11.119999885559082,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "when",
+            "start": 11.34000015258789,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "nobody's",
+            "start": 11.65999984741211,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "watching",
+            "start": 12.199999809265137,
+            "end": 12.460000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "debugging-trap-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Senior: Found in 20 Minutes. The nightly reconciliation job has a bug in its calculation. Found in twenty minutes. The secret? Instead of asking WHERE the bug is, ask WHAT touches this data.",
+        "duration": 13.649999618530273,
+        "words": [
+          {
+            "word": "Found",
+            "start": 1.5,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "in",
+            "start": 2.140000104904175,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "20",
+            "start": 2.319999933242798,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "minutes",
+            "start": 2.640000104904175,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "the",
+            "start": 3.259999990463257,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "nightly",
+            "start": 3.440000057220459,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "reconciliation",
+            "start": 3.819999933242798,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "job",
+            "start": 4.440000057220459,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "has",
+            "start": 4.940000057220459,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "a",
+            "start": 5.119999885559082,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "bug",
+            "start": 5.480000019073486,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "in",
+            "start": 5.480000019073486,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "its",
+            "start": 5.619999885559082,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "calculation",
+            "start": 5.840000152587891,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "Found",
+            "start": 7.21999979019165,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "in",
+            "start": 7.239999771118164,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "20",
+            "start": 7.460000038146973,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "minutes",
+            "start": 7.800000190734863,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "The",
+            "start": 8.699999809265137,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "secret",
+            "start": 8.819999694824219,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "Instead",
+            "start": 9.899999618530273,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "of",
+            "start": 9.899999618530273,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "asking",
+            "start": 10.140000343322754,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "where",
+            "start": 10.380000114440918,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "the",
+            "start": 10.680000305175781,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "bug",
+            "start": 11.079999923706055,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "is",
+            "start": 11.079999923706055,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "ask",
+            "start": 11.880000114440918,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "what",
+            "start": 11.920000076293945,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "touches",
+            "start": 12.279999732971191,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "this",
+            "start": 12.600000381469727,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "data",
+            "start": 13.020000457763672,
+            "end": 13.260000228881836
+          }
+        ]
+      }
+    ],
+    "data-flow-story": [
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Question 1: Where Displayed?. For any bug, start with five questions. First: Where is the data displayed? Find the endpoint, the UI component, the API response that shows the wrong value.",
+        "duration": 13.84000015258789,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "1",
+            "start": 0.6600000262260437,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "Where",
+            "start": 1.5,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "displayed",
+            "start": 1.7200000286102295,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "For",
+            "start": 2.799999952316284,
+            "end": 2.799999952316284
+          },
+          {
+            "word": "any",
+            "start": 2.799999952316284,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "bug",
+            "start": 3.1600000858306885,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "start",
+            "start": 3.7200000286102295,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "with",
+            "start": 3.7200000286102295,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "5",
+            "start": 3.9600000381469727,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "questions",
+            "start": 4.380000114440918,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "First",
+            "start": 5.800000190734863,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "where",
+            "start": 6.039999961853027,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "is",
+            "start": 6.360000133514404,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 6.539999961853027,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "data",
+            "start": 6.900000095367432,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "displayed",
+            "start": 6.900000095367432,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "Find",
+            "start": 7.960000038146973,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 8.199999809265137,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "endpoint",
+            "start": 8.5600004196167,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "the",
+            "start": 9.279999732971191,
+            "end": 9.5
+          },
+          {
+            "word": "UI",
+            "start": 9.5,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "component",
+            "start": 9.779999732971191,
+            "end": 10.239999771118164
+          },
+          {
+            "word": "the",
+            "start": 10.739999771118164,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "API",
+            "start": 10.960000038146973,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "response",
+            "start": 11.34000015258789,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "that",
+            "start": 11.779999732971191,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "shows",
+            "start": 12.079999923706055,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "the",
+            "start": 12.319999694824219,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "wrong",
+            "start": 12.520000457763672,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "value",
+            "start": 12.800000190734863,
+            "end": 13.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Question 2: Where Stored?. Second: Where is the data stored? Is it in a database field? A cache? A file? Trace backwards from the display to the source of truth.",
+        "duration": 13.800000190734863,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "2",
+            "start": 0.5,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "Where",
+            "start": 1.6399999856948853,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "stored",
+            "start": 1.7200000286102295,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "Second",
+            "start": 3.0799999237060547,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "where",
+            "start": 3.5399999618530273,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "is",
+            "start": 3.740000009536743,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "the",
+            "start": 4.139999866485596,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "data",
+            "start": 4.380000114440918,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "stored",
+            "start": 4.659999847412109,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "Is",
+            "start": 5.760000228881836,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "it",
+            "start": 6.039999961853027,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "in",
+            "start": 6.199999809265137,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "a",
+            "start": 6.360000133514404,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "database",
+            "start": 6.639999866485596,
+            "end": 7
+          },
+          {
+            "word": "field",
+            "start": 7,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "a",
+            "start": 7.739999771118164,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "cache",
+            "start": 8.380000114440918,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "a",
+            "start": 8.760000228881836,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "file",
+            "start": 9.300000190734863,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "Trace",
+            "start": 10.460000038146973,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "backwards",
+            "start": 10.579999923706055,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "from",
+            "start": 11.020000457763672,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "the",
+            "start": 11.34000015258789,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "display",
+            "start": 11.699999809265137,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 11.9399995803833,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 12.359999656677246,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "source",
+            "start": 12.819999694824219,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "of",
+            "start": 12.819999694824219,
+            "end": 13.100000381469727
+          },
+          {
+            "word": "truth",
+            "start": 13.100000381469727,
+            "end": 13.319999694824219
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Question 3: What Writes?. Third: What writes to this storage? This is the critical question. Make a complete list. Every function, every job, every external system that can modify this data.",
+        "duration": 14.520000457763672,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "3",
+            "start": 0.46000000834465027,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "What",
+            "start": 1.6200000047683716,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "rights",
+            "start": 1.6799999475479126,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "Third",
+            "start": 2.819999933242798,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "what",
+            "start": 3.5,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "rights",
+            "start": 3.680000066757202,
+            "end": 4
+          },
+          {
+            "word": "to",
+            "start": 4,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "this",
+            "start": 4.179999828338623,
+            "end": 4.5
+          },
+          {
+            "word": "storage",
+            "start": 4.5,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "This",
+            "start": 5.239999771118164,
+            "end": 5.5
+          },
+          {
+            "word": "is",
+            "start": 5.5,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "the",
+            "start": 5.78000020980835,
+            "end": 6
+          },
+          {
+            "word": "critical",
+            "start": 6,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "question",
+            "start": 6.320000171661377,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "Make",
+            "start": 7.539999961853027,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "a",
+            "start": 7.539999961853027,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "complete",
+            "start": 7.820000171661377,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "list",
+            "start": 8.140000343322754,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "Every",
+            "start": 9.34000015258789,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "function",
+            "start": 9.420000076293945,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "every",
+            "start": 10.380000114440918,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "job",
+            "start": 10.65999984741211,
+            "end": 11
+          },
+          {
+            "word": "every",
+            "start": 11.539999961853027,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "external",
+            "start": 11.720000267028809,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "system",
+            "start": 12.119999885559082,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "that",
+            "start": 12.5600004196167,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "can",
+            "start": 12.979999542236328,
+            "end": 13.199999809265137
+          },
+          {
+            "word": "modify",
+            "start": 13.199999809265137,
+            "end": 13.600000381469727
+          },
+          {
+            "word": "this",
+            "start": 13.600000381469727,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "data",
+            "start": 14.020000457763672,
+            "end": 14.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Question 4: When?. Fourth: When does each write happen? Some happen on user action. Some happen at midnight. Some happen when external events fire. Timing matters.",
+        "duration": 12.600000381469727,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0.8999999761581421,
+            "end": 1.5
+          },
+          {
+            "word": "4",
+            "start": 1.5,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "When",
+            "start": 2.880000114440918,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "Fourth",
+            "start": 3.4600000381469727,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "when",
+            "start": 4.119999885559082,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "does",
+            "start": 4.199999809265137,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "each",
+            "start": 4.380000114440918,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "write",
+            "start": 4.679999828338623,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "happen",
+            "start": 4.820000171661377,
+            "end": 5.179999828338623
+          },
+          {
+            "word": "Some",
+            "start": 5.71999979019165,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "happen",
+            "start": 5.880000114440918,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "on",
+            "start": 6.139999866485596,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "user",
+            "start": 6.360000133514404,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "action",
+            "start": 6.639999866485596,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "Some",
+            "start": 7.760000228881836,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "happen",
+            "start": 7.760000228881836,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "at",
+            "start": 8.020000457763672,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "midnight",
+            "start": 8.239999771118164,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "Some",
+            "start": 9.220000267028809,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "happen",
+            "start": 9.34000015258789,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "when",
+            "start": 9.619999885559082,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "external",
+            "start": 9.84000015258789,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "events",
+            "start": 10.300000190734863,
+            "end": 10.65999984741211
+          },
+          {
+            "word": "fire",
+            "start": 10.65999984741211,
+            "end": 11.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Question 5: External Data?. Fifth: What external data flows in? Webhooks, API calls, file uploads, message queues. External data is unpredictable and often the source of bugs.",
+        "duration": 14.109999656677246,
+        "words": [
+          {
+            "word": "Question",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "5",
+            "start": 0.47999998927116394,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "External",
+            "start": 1.940000057220459,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "data",
+            "start": 1.940000057220459,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "Fifth",
+            "start": 3.319999933242798,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "what",
+            "start": 3.9200000762939453,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "external",
+            "start": 4.059999942779541,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "data",
+            "start": 4.559999942779541,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "flows",
+            "start": 4.960000038146973,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "in",
+            "start": 5.28000020980835,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "Webhooks",
+            "start": 6.460000038146973,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "API",
+            "start": 7.360000133514404,
+            "end": 7.360000133514404
+          },
+          {
+            "word": "calls",
+            "start": 7.360000133514404,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "file",
+            "start": 8.239999771118164,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "uploads",
+            "start": 8.279999732971191,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "message",
+            "start": 9.260000228881836,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "queues",
+            "start": 9.300000190734863,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "External",
+            "start": 10.739999771118164,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "data",
+            "start": 10.739999771118164,
+            "end": 11.039999961853027
+          },
+          {
+            "word": "is",
+            "start": 11.039999961853027,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "unpredictable",
+            "start": 11.399999618530273,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "and",
+            "start": 11.960000038146973,
+            "end": 12.619999885559082
+          },
+          {
+            "word": "often",
+            "start": 12.619999885559082,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "the",
+            "start": 12.9399995803833,
+            "end": 13.239999771118164
+          },
+          {
+            "word": "source",
+            "start": 13.239999771118164,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "of",
+            "start": 13.399999618530273,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "bugs",
+            "start": 13.920000076293945,
+            "end": 13.920000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "data-flow-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Bug Is in Steps 3-5. Here's the pattern: The bug is almost always in questions three, four, or five. Something that writes data, runs at an unexpected time, or comes from outside. Your list is your treasure map.",
+        "duration": 14.399999618530273,
+        "words": [
+          {
+            "word": "Bug",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "is",
+            "start": 0.46000000834465027,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "in",
+            "start": 0.6800000071525574,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "steps",
+            "start": 1.2200000286102295,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "3",
+            "start": 1.2200000286102295,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "to",
+            "start": 1.6799999475479126,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "5",
+            "start": 1.899999976158142,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "Here's",
+            "start": 2.799999952316284,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "the",
+            "start": 2.859999895095825,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "pattern",
+            "start": 3.119999885559082,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "The",
+            "start": 3.799999952316284,
+            "end": 4
+          },
+          {
+            "word": "bug",
+            "start": 4,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "is",
+            "start": 4.28000020980835,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "almost",
+            "start": 4.579999923706055,
+            "end": 5
+          },
+          {
+            "word": "always",
+            "start": 5,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "in",
+            "start": 5.539999961853027,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "questions",
+            "start": 5.71999979019165,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "3",
+            "start": 6.059999942779541,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "4",
+            "start": 6.519999980926514,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "or",
+            "start": 6.78000020980835,
+            "end": 7
+          },
+          {
+            "word": "5",
+            "start": 7,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "Something",
+            "start": 7.860000133514404,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "that",
+            "start": 8.100000381469727,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "writes",
+            "start": 8.579999923706055,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "data",
+            "start": 8.619999885559082,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "runs",
+            "start": 9.640000343322754,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "at",
+            "start": 9.640000343322754,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "an",
+            "start": 9.800000190734863,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "unexpected",
+            "start": 10.039999961853027,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "time",
+            "start": 10.399999618530273,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "or",
+            "start": 11.199999809265137,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "comes",
+            "start": 11.399999618530273,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "from",
+            "start": 11.600000381469727,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "outside",
+            "start": 11.859999656677246,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "Your",
+            "start": 12.680000305175781,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "list",
+            "start": 13.020000457763672,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "is",
+            "start": 13.319999694824219,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "your",
+            "start": 13.579999923706055,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "treasure",
+            "start": 13.800000190734863,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "map",
+            "start": 14.020000457763672,
+            "end": 14.279999732971191
+          }
+        ]
+      }
+    ],
+    "async-flows-story": [
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Synchronous: Easy to Debug. Synchronous code is linear. User makes a request, server processes it, database responds, user gets the result. When it breaks, you can follow the path step by step.",
+        "duration": 15.8100004196167,
+        "words": [
+          {
+            "word": "Synchronous",
+            "start": 0,
+            "end": 0.7200000286102295
+          },
+          {
+            "word": "Easy",
+            "start": 1.5800000429153442,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "to",
+            "start": 1.659999966621399,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "debug",
+            "start": 2.0399999618530273,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "Synchronous",
+            "start": 3.259999990463257,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "code",
+            "start": 3.5199999809265137,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "is",
+            "start": 3.819999933242798,
+            "end": 4.159999847412109
+          },
+          {
+            "word": "linear",
+            "start": 4.159999847412109,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "User",
+            "start": 5.340000152587891,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "makes",
+            "start": 5.340000152587891,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "a",
+            "start": 5.539999961853027,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "request",
+            "start": 5.78000020980835,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "server",
+            "start": 6.900000095367432,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "processes",
+            "start": 6.940000057220459,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "it",
+            "start": 7.440000057220459,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "database",
+            "start": 8.34000015258789,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "responds",
+            "start": 8.579999923706055,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "user",
+            "start": 9.960000038146973,
+            "end": 10
+          },
+          {
+            "word": "gets",
+            "start": 10,
+            "end": 10.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 10.199999809265137,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "result",
+            "start": 10.779999732971191,
+            "end": 10.779999732971191
+          },
+          {
+            "word": "When",
+            "start": 11.739999771118164,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "it",
+            "start": 11.84000015258789,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "breaks",
+            "start": 12.0600004196167,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "you",
+            "start": 12.720000267028809,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "can",
+            "start": 12.819999694824219,
+            "end": 13.100000381469727
+          },
+          {
+            "word": "follow",
+            "start": 13.100000381469727,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "the",
+            "start": 13.300000190734863,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "path",
+            "start": 13.800000190734863,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "step",
+            "start": 13.800000190734863,
+            "end": 14.420000076293945
+          },
+          {
+            "word": "by",
+            "start": 14.420000076293945,
+            "end": 14.680000305175781
+          },
+          {
+            "word": "step",
+            "start": 14.680000305175781,
+            "end": 14.920000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Asynchronous: Bugs Hide Here. Asynchronous code is different. User makes a request, server queues a job, user gets 'processing'. Later, a worker picks up the job. Much later, the database updates. Bugs love these gaps.",
+        "duration": 15.720000267028809,
+        "words": [
+          {
+            "word": "Asynchronous",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "Bugs",
+            "start": 1.5800000429153442,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "hide",
+            "start": 1.5800000429153442,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "here",
+            "start": 2.0399999618530273,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "Asynchronous",
+            "start": 3.200000047683716,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "code",
+            "start": 3.619999885559082,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "is",
+            "start": 3.9000000953674316,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "different",
+            "start": 4.260000228881836,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "User",
+            "start": 5.539999961853027,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "makes",
+            "start": 5.539999961853027,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "a",
+            "start": 5.78000020980835,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "request",
+            "start": 6.019999980926514,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "server",
+            "start": 7.039999961853027,
+            "end": 7.199999809265137
+          },
+          {
+            "word": "queues",
+            "start": 7.199999809265137,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "a",
+            "start": 7.519999980926514,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "job",
+            "start": 8.039999961853027,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "user",
+            "start": 8.699999809265137,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "gets",
+            "start": 8.800000190734863,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "processing",
+            "start": 9.140000343322754,
+            "end": 10.020000457763672
+          },
+          {
+            "word": "Later",
+            "start": 10.579999923706055,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "a",
+            "start": 11.239999771118164,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "worker",
+            "start": 11.640000343322754,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "picks",
+            "start": 11.640000343322754,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "up",
+            "start": 11.899999618530273,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "the",
+            "start": 12.100000381469727,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "job",
+            "start": 12.579999923706055,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "Much",
+            "start": 13.220000267028809,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "later",
+            "start": 13.359999656677246,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "the",
+            "start": 13.979999542236328,
+            "end": 14.199999809265137
+          },
+          {
+            "word": "database",
+            "start": 14.199999809265137,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "updates",
+            "start": 14.539999961853027,
+            "end": 15.020000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Scheduled Tasks. First hiding spot: scheduled tasks. Cron jobs, scheduled functions, things that run at three AM. Ask yourself: What runs at night in this codebase? Who maintains it?",
+        "duration": 13,
+        "words": [
+          {
+            "word": "Scheduled",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "tasks",
+            "start": 0.6600000262260437,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "First",
+            "start": 2.0399999618530273,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "hiding",
+            "start": 2.180000066757202,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "spot",
+            "start": 2.5199999809265137,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "Scheduled",
+            "start": 3.759999990463257,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "tasks",
+            "start": 3.799999952316284,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "Cron",
+            "start": 5.300000190734863,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "jobs",
+            "start": 5.300000190734863,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "Scheduled",
+            "start": 6.579999923706055,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "functions",
+            "start": 6.619999885559082,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "Things",
+            "start": 7.820000171661377,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "that",
+            "start": 7.820000171661377,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "run",
+            "start": 8.180000305175781,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "at",
+            "start": 8.260000228881836,
+            "end": 8.5
+          },
+          {
+            "word": "3am",
+            "start": 8.5,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "Ask",
+            "start": 9.84000015258789,
+            "end": 9.880000114440918
+          },
+          {
+            "word": "yourself",
+            "start": 9.880000114440918,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "what",
+            "start": 10.800000190734863,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "runs",
+            "start": 11.119999885559082,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "at",
+            "start": 11.359999656677246,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "night",
+            "start": 11.699999809265137,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "in",
+            "start": 11.760000228881836,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "this",
+            "start": 11.979999542236328,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "codebase",
+            "start": 12.199999809265137,
+            "end": 12.640000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Message Queues. Second hiding spot: message queues. Celery, RabbitMQ, SQS. Messages go in, workers process them. What happens when a message fails? When the queue backs up?",
+        "duration": 13.149999618530273,
+        "words": [
+          {
+            "word": "Message",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "queues",
+            "start": 0.6600000262260437,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "Second",
+            "start": 1.9600000381469727,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "hiding",
+            "start": 1.9600000381469727,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "spot",
+            "start": 2.299999952316284,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "Message",
+            "start": 3.5999999046325684,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "queues",
+            "start": 3.5999999046325684,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "Celery",
+            "start": 4.820000171661377,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "RabbitMQ",
+            "start": 5.340000152587891,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "SQS",
+            "start": 6.360000133514404,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "Messages",
+            "start": 7.71999979019165,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "go",
+            "start": 7.739999771118164,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "in",
+            "start": 8.039999961853027,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "workers",
+            "start": 8.84000015258789,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "process",
+            "start": 8.84000015258789,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "them",
+            "start": 9.319999694824219,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "What",
+            "start": 10.0600004196167,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "happens",
+            "start": 10.220000267028809,
+            "end": 10.5
+          },
+          {
+            "word": "when",
+            "start": 10.5,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "a",
+            "start": 10.680000305175781,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "message",
+            "start": 11.079999923706055,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "fails",
+            "start": 11.079999923706055,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "When",
+            "start": 11.720000267028809,
+            "end": 12.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 12.15999984741211,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "queue",
+            "start": 12.300000190734863,
+            "end": 12.5
+          },
+          {
+            "word": "backs",
+            "start": 12.5,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "up",
+            "start": 12.720000267028809,
+            "end": 12.979999542236328
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Event Handlers. Third hiding spot: event handlers. Webhooks, pub/sub, callbacks. When an external event fires, what code runs? These are often forgotten and rarely tested.",
+        "duration": 13.649999618530273,
+        "words": [
+          {
+            "word": "Event",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "handlers",
+            "start": 0.5400000214576721,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "Third",
+            "start": 1.8200000524520874,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "hiding",
+            "start": 1.840000033378601,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "spot",
+            "start": 2.200000047683716,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "Event",
+            "start": 3.4800000190734863,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "handlers",
+            "start": 3.559999942779541,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "Webhooks",
+            "start": 5.039999961853027,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "pubsub",
+            "start": 5.860000133514404,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "callbacks",
+            "start": 6.659999847412109,
+            "end": 7
+          },
+          {
+            "word": "When",
+            "start": 7.71999979019165,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "an",
+            "start": 7.820000171661377,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "external",
+            "start": 8.100000381469727,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "event",
+            "start": 8.380000114440918,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "fires",
+            "start": 8.720000267028809,
+            "end": 9.100000381469727
+          },
+          {
+            "word": "what",
+            "start": 9.520000457763672,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "code",
+            "start": 9.699999809265137,
+            "end": 10
+          },
+          {
+            "word": "runs",
+            "start": 10,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "These",
+            "start": 11.100000381469727,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "are",
+            "start": 11.300000190734863,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "often",
+            "start": 11.460000038146973,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "forgotten",
+            "start": 11.779999732971191,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "and",
+            "start": 12.180000305175781,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "rarely",
+            "start": 12.739999771118164,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "tested",
+            "start": 13.0600004196167,
+            "end": 13.420000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "async-flows-story",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Build Your Inventory. Senior engineers keep an inventory: every async flow, what data it touches, when it runs. When a bug hits, they check the inventory first. Build yours today.",
+        "duration": 13.600000381469727,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "your",
+            "start": 0.5600000023841858,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "inventory",
+            "start": 1.059999942779541,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "Senior",
+            "start": 2.440000057220459,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "engineers",
+            "start": 2.7200000286102295,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "keep",
+            "start": 3.1600000858306885,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "an",
+            "start": 3.559999942779541,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "inventory",
+            "start": 4.179999828338623,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "Every",
+            "start": 4.739999771118164,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "async",
+            "start": 4.980000019073486,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "flow",
+            "start": 5.400000095367432,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "what",
+            "start": 6.099999904632568,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "data",
+            "start": 6.239999771118164,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "it",
+            "start": 6.460000038146973,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "touches",
+            "start": 6.960000038146973,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "when",
+            "start": 7.380000114440918,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "it",
+            "start": 7.460000038146973,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "runs",
+            "start": 7.920000076293945,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "When",
+            "start": 8.399999618530273,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "a",
+            "start": 8.4399995803833,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "bug",
+            "start": 8.779999732971191,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "hits",
+            "start": 8.779999732971191,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "they",
+            "start": 9.359999656677246,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "check",
+            "start": 9.539999961853027,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "the",
+            "start": 9.739999771118164,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "inventory",
+            "start": 10.300000190734863,
+            "end": 10.300000190734863
+          },
+          {
+            "word": "first",
+            "start": 10.300000190734863,
+            "end": 10.739999771118164
+          },
+          {
+            "word": "Build",
+            "start": 11.619999885559082,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "yours",
+            "start": 11.619999885559082,
+            "end": 12
+          },
+          {
+            "word": "today",
+            "start": 12,
+            "end": 12.34000015258789
+          }
+        ]
+      }
+    ]
+  }
+}

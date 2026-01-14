@@ -1,0 +1,160 @@
+{
+  "storyId": "ownership-lifecycle-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Complete Journey. Owning a feature means owning every phase of its lifecycle. From the first requirements conversation to the post-deployment retrospective, you're the one driving it forward.",
+  "duration": 12.5,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.2199999988079071
+    },
+    {
+      "word": "complete",
+      "start": 0.2199999988079071,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "journey",
+      "start": 0.7200000286102295,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Owning",
+      "start": 2.259999990463257,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "a",
+      "start": 2.259999990463257,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "feature",
+      "start": 2.5199999809265137,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "means",
+      "start": 2.7799999713897705,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "owning",
+      "start": 3.200000047683716,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "every",
+      "start": 3.559999942779541,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "phase",
+      "start": 4.139999866485596,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "of",
+      "start": 4.460000038146973,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "its",
+      "start": 4.639999866485596,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "life",
+      "start": 4.800000190734863,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "cycle",
+      "start": 5.039999961853027,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "From",
+      "start": 6.159999847412109,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "the",
+      "start": 6.239999771118164,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "first",
+      "start": 6.480000019073486,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "requirements",
+      "start": 6.739999771118164,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "conversation",
+      "start": 7.300000190734863,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "to",
+      "start": 7.980000019073486,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "the",
+      "start": 8.479999542236328,
+      "end": 8.699999809265137
+    },
+    {
+      "word": "post",
+      "start": 8.699999809265137,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "deployment",
+      "start": 9.0600004196167,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "retrospective",
+      "start": 9.5600004196167,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "you're",
+      "start": 10.760000228881836,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 10.920000076293945,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "one",
+      "start": 11.100000381469727,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "driving",
+      "start": 11.34000015258789,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "it",
+      "start": 11.699999809265137,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "forward",
+      "start": 12.100000381469727,
+      "end": 12.260000228881836
+    }
+  ]
+}

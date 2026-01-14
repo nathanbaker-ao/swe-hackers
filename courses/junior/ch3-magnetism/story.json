@@ -1,0 +1,265 @@
+{
+  "pageId": "ch3-magnetism",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "The Pull Between",
+    "icon": "🧲",
+    "themeColor": "magnetism"
+  },
+  "stories": [
+    {
+      "id": "integration-trap-story",
+      "diagramId": "integration-trap",
+      "title": "The Integration Trap",
+      "steps": [
+        {
+          "nodeId": "task-arrives",
+          "icon": "📋",
+          "title": "The Task Arrives",
+          "narration": "Picture this: your manager says integrate with Stripe for payments. Seems straightforward, right? The docs have examples. Stack Overflow has answers. What could go wrong?",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "junior-approach",
+          "edges": [{ "from": "task-arrives", "to": "junior-approach" }],
+          "icon": "👶",
+          "title": "The Junior Approach",
+          "narration": "The junior reads the docs, copies the example code, tests it locally — it works! Ship it. Pull request merged. Feature deployed. Everyone's happy... for now.",
+          "connectsTo": "The Task Arrives"
+        },
+        {
+          "nodeId": "three-am-page",
+          "edges": [{ "from": "junior-approach", "to": "three-am-page" }],
+          "icon": "🚨",
+          "title": "The 3am Wake-Up Call",
+          "narration": "Two weeks later, 3am. Your phone explodes. Payments are failing. Stripe is rate-limiting you because a marketing campaign drove 10x traffic. No retry logic. No alerts. Just angry customers.",
+          "connectsTo": "Junior Approach"
+        },
+        {
+          "nodeId": "senior-approach",
+          "edges": [{ "from": "three-am-page", "to": "senior-approach" }],
+          "icon": "🧓",
+          "title": "The Senior Approach",
+          "narration": "Seniors don't just think about the happy path. They ask: What if the API is slow? What if it fails? What if we hit rate limits? What if it's completely down? Each question becomes a layer of protection.",
+          "connectsTo": "3am Wake-Up"
+        },
+        {
+          "nodeId": "mindset-shift",
+          "edges": [{ "from": "senior-approach", "to": "mindset-shift" }],
+          "icon": "🧠",
+          "title": "The Mindset Shift",
+          "narration": "The difference between junior and senior isn't years of experience — it's asking what could go wrong before it does. Juniors hope APIs work. Seniors plan for when they don't.",
+          "connectsTo": "Senior Approach"
+        }
+      ]
+    },
+    {
+      "id": "checklist-story",
+      "diagramId": "checklist",
+      "title": "The Integration Checklist",
+      "steps": [
+        {
+          "nodeId": "auth-security",
+          "icon": "🔐",
+          "title": "Authentication & Security",
+          "narration": "First, security. API keys belong in a vault, not your code. Different keys for dev, staging, and production. And document how to rotate them — because you will need to rotate them eventually.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "error-handling",
+          "edges": [{ "from": "auth-security", "to": "error-handling" }],
+          "icon": "⚠️",
+          "title": "Error Handling",
+          "narration": "Next, errors. Implement retry with exponential backoff — wait longer between each attempt. Add a circuit breaker to stop cascading failures. Plan graceful degradation. And always set timeouts — never wait forever.",
+          "connectsTo": "Authentication"
+        },
+        {
+          "nodeId": "rate-limiting",
+          "edges": [{ "from": "error-handling", "to": "rate-limiting" }],
+          "icon": "🚦",
+          "title": "Rate Limiting",
+          "narration": "Know their rate limits — actually read the docs. Implement client-side throttling so you never hit those limits. Add a queue for handling traffic bursts. Don't let a marketing email take down your payments.",
+          "connectsTo": "Error Handling"
+        },
+        {
+          "nodeId": "monitoring",
+          "edges": [{ "from": "rate-limiting", "to": "monitoring" }],
+          "icon": "📊",
+          "title": "Monitoring",
+          "narration": "Track latency — not just average, but p50, p95, p99. Alert on error rate spikes. Correlate with business metrics. You want to know about problems before your customers tell you.",
+          "connectsTo": "Rate Limiting"
+        },
+        {
+          "nodeId": "testing",
+          "edges": [{ "from": "monitoring", "to": "testing" }],
+          "icon": "🧪",
+          "title": "Testing",
+          "narration": "Finally, testing. Use mocks for unit tests — don't hit real APIs. Use sandbox environments for integration tests. And critically: test failure scenarios. What happens when the API returns 500? Simulate it.",
+          "connectsTo": "Monitoring"
+        }
+      ]
+    },
+    {
+      "id": "resilience-story",
+      "diagramId": "resilience",
+      "title": "Resilience Patterns",
+      "steps": [
+        {
+          "nodeId": "why-resilience",
+          "icon": "🛡️",
+          "title": "Why Resilience Matters",
+          "narration": "In distributed systems, failure isn't a possibility — it's a certainty. Networks drop packets. Services crash. APIs hit limits. Resilience isn't about preventing failures; it's about surviving them gracefully.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "retry-backoff",
+          "edges": [{ "from": "why-resilience", "to": "retry-backoff" }],
+          "icon": "🔄",
+          "title": "Retry with Exponential Backoff",
+          "narration": "When a call fails, don't immediately retry — you'll make things worse. Wait one second, then two, then four. This exponential backoff gives overloaded systems time to recover. Set a max attempts limit so you don't retry forever.",
+          "connectsTo": "Why Resilience"
+        },
+        {
+          "nodeId": "circuit-closed",
+          "edges": [{ "from": "retry-backoff", "to": "circuit-closed" }],
+          "icon": "✅",
+          "title": "Circuit Breaker: Closed State",
+          "narration": "A circuit breaker starts closed — requests flow through normally. It tracks failures. If everything works, great. But if failures start piling up, it's watching, counting, ready to act.",
+          "connectsTo": "Retry with Backoff"
+        },
+        {
+          "nodeId": "circuit-open",
+          "edges": [{ "from": "circuit-closed", "to": "circuit-open" }],
+          "icon": "🚫",
+          "title": "Circuit Breaker: Open State",
+          "narration": "When failures exceed a threshold, the circuit opens. Now it fails fast — requests don't even try to reach the broken service. This protects your system from cascading failures and gives the external service time to recover.",
+          "connectsTo": "Closed State"
+        },
+        {
+          "nodeId": "circuit-recovery",
+          "edges": [{ "from": "circuit-open", "to": "circuit-recovery" }],
+          "icon": "🔧",
+          "title": "Recovery: Half-Open State",
+          "narration": "After a timeout, the circuit enters half-open state. It allows a few test requests through. If they succeed, the circuit closes — back to normal. If they fail, it opens again. This automatic recovery means you don't need manual intervention at 3am.",
+          "connectsTo": "Open State"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "integration-trap-story",
+      "questions": [
+        {
+          "question": "What's the fundamental difference between junior and senior API integration approaches?",
+          "options": [
+            "Seniors write more code",
+            "Seniors use fancier libraries",
+            "Seniors plan for failures before they happen",
+            "Seniors have memorized all API documentation"
+          ],
+          "correct": 2,
+          "explanation": "The senior mindset is proactive: anticipating what could go wrong (rate limits, timeouts, failures) and building protection before deploying, not after the 3am page."
+        },
+        {
+          "question": "Your payment integration works perfectly in development. What should you check before deploying to production?",
+          "options": [
+            "Nothing — if it works in dev, it works in prod",
+            "Only that the production API key is set",
+            "Error handling, rate limiting, monitoring, and failure scenarios",
+            "Just make sure the tests pass"
+          ],
+          "correct": 2,
+          "explanation": "Production traffic is different — higher volume, real money, real consequences. You need retry logic, rate limit awareness, monitoring, and tested failure paths."
+        },
+        {
+          "question": "Why is 'copy the example from docs' a junior approach?",
+          "options": [
+            "Examples in docs are always wrong",
+            "Examples show the happy path, not production edge cases",
+            "Seniors never read documentation",
+            "You should always write code from scratch"
+          ],
+          "correct": 1,
+          "explanation": "Documentation examples demonstrate the API works. They don't show error handling, retry logic, monitoring, or rate limiting — the things that matter in production."
+        }
+      ]
+    },
+    {
+      "storyId": "checklist-story",
+      "questions": [
+        {
+          "question": "Where should API keys be stored?",
+          "options": [
+            "In the source code for easy access",
+            "In a .env file committed to git",
+            "In a secrets vault, with different keys per environment",
+            "In a shared team document"
+          ],
+          "correct": 2,
+          "explanation": "API keys in code or git are security risks. Use a secrets vault (AWS Secrets Manager, HashiCorp Vault, etc.) with separate keys for dev/staging/prod."
+        },
+        {
+          "question": "What is 'graceful degradation' in the context of integrations?",
+          "options": [
+            "Slowly removing features over time",
+            "Having a fallback behavior when an external service is down",
+            "Gradually increasing API calls",
+            "Deprecating old API versions"
+          ],
+          "correct": 1,
+          "explanation": "Graceful degradation means your app still works (possibly with reduced functionality) when a dependency fails. Example: showing cached data when the API is down."
+        },
+        {
+          "question": "Why track p95 and p99 latency, not just average?",
+          "options": [
+            "Because averages are always wrong",
+            "To impress management with numbers",
+            "Because averages hide bad experiences — 1% of users might wait 10 seconds",
+            "Only for very large systems"
+          ],
+          "correct": 2,
+          "explanation": "Average latency of 100ms can hide that 1% of requests take 5 seconds. p95/p99 show the experience of your slowest users — often the ones who complain."
+        }
+      ]
+    },
+    {
+      "storyId": "resilience-story",
+      "questions": [
+        {
+          "question": "Your app calls a payment API. The API starts returning errors for 5% of requests. What should happen?",
+          "options": [
+            "Show error to user immediately",
+            "Retry infinitely until it works",
+            "Stop all requests (circuit breaker opens)",
+            "Retry with backoff, track error rate, alert if threshold exceeded"
+          ],
+          "correct": 3,
+          "explanation": "5% errors is annoying but not catastrophic. Retry with backoff handles transient failures. Track the rate and alert humans if it persists — but don't over-react to temporary blips."
+        },
+        {
+          "question": "Why does exponential backoff use increasing delays (1s, 2s, 4s) instead of fixed delays?",
+          "options": [
+            "It's more mathematically elegant",
+            "Fixed delays are against API terms of service",
+            "It gives overloaded systems progressively more time to recover",
+            "To make the code more complex"
+          ],
+          "correct": 2,
+          "explanation": "If a service is overloaded, hammering it with retries every second makes things worse. Exponential backoff spreads out retry attempts, giving the system breathing room to recover."
+        },
+        {
+          "question": "What's the purpose of the 'half-open' state in a circuit breaker?",
+          "options": [
+            "To save memory",
+            "To test if the service has recovered before fully reopening",
+            "To process requests at half speed",
+            "It's an error state that shouldn't happen"
+          ],
+          "correct": 1,
+          "explanation": "Half-open allows a few test requests through to check if the external service recovered. Success means close the circuit; failure means stay open. This enables automatic recovery."
+        }
+      ]
+    }
+  ]
+}

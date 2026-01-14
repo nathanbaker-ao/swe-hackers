@@ -1,0 +1,115 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "You Learned Integration. You integrate with resilience patterns. Timeouts, retries, circuit breakers. Your code doesn't just work—it handles failure gracefully.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "learned",
+      "start": 0.5199999809265137,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "integration",
+      "start": 1.0800000429153442,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "You",
+      "start": 2.9200000762939453,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "integrate",
+      "start": 2.9600000381469727,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "with",
+      "start": 3.440000057220459,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "resilience",
+      "start": 3.9800000190734863,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "patterns",
+      "start": 4.440000057220459,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "timeouts",
+      "start": 6,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "retries",
+      "start": 7.019999980926514,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "circuit",
+      "start": 8.119999885559082,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "breakers",
+      "start": 8.140000343322754,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "Your",
+      "start": 9.319999694824219,
+      "end": 9.5
+    },
+    {
+      "word": "code",
+      "start": 9.5,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "doesn't",
+      "start": 9.84000015258789,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "just",
+      "start": 10.140000343322754,
+      "end": 10.5
+    },
+    {
+      "word": "work",
+      "start": 10.5,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "It",
+      "start": 11.239999771118164,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "handles",
+      "start": 11.380000114440918,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "failure",
+      "start": 11.720000267028809,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "gracefully",
+      "start": 12.300000190734863,
+      "end": 13.100000381469727
+    }
+  ]
+}

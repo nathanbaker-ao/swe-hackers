@@ -1,0 +1,170 @@
+{
+  "storyId": "skills-ai-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "You Provide Context. This is where you shine. You give AI the context it needs: codebase patterns, design constraints, edge cases, and integration requirements. Context transforms AI from guessing to executing.",
+  "duration": 15.640000343322754,
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "provide",
+      "start": 0.4399999976158142,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "context",
+      "start": 0.9599999785423279,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "This",
+      "start": 2.140000104904175,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "is",
+      "start": 2.299999952316284,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "where",
+      "start": 2.5399999618530273,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "you",
+      "start": 2.7200000286102295,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "shine",
+      "start": 2.9800000190734863,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "You",
+      "start": 4.019999980926514,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "give",
+      "start": 4.079999923706055,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "AI",
+      "start": 4.340000152587891,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "the",
+      "start": 4.699999809265137,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "context",
+      "start": 5.159999847412109,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "it",
+      "start": 5.420000076293945,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "needs",
+      "start": 5.739999771118164,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "Code",
+      "start": 6.579999923706055,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "based",
+      "start": 6.579999923706055,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "patterns",
+      "start": 6.880000114440918,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "design",
+      "start": 7.980000019073486,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "constraints",
+      "start": 8.020000457763672,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "edge",
+      "start": 9.0600004196167,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "cases",
+      "start": 9.199999809265137,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "and",
+      "start": 9.9399995803833,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "integration",
+      "start": 10.239999771118164,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "requirements",
+      "start": 10.640000343322754,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "Context",
+      "start": 12.399999618530273,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "transforms",
+      "start": 12.65999984741211,
+      "end": 13.4399995803833
+    },
+    {
+      "word": "AI",
+      "start": 13.4399995803833,
+      "end": 13.899999618530273
+    },
+    {
+      "word": "from",
+      "start": 13.899999618530273,
+      "end": 14.279999732971191
+    },
+    {
+      "word": "guessing",
+      "start": 14.279999732971191,
+      "end": 14.5600004196167
+    },
+    {
+      "word": "to",
+      "start": 14.5600004196167,
+      "end": 15.079999923706055
+    },
+    {
+      "word": "executing",
+      "start": 15.079999923706055,
+      "end": 15.479999542236328
+    }
+  ]
+}

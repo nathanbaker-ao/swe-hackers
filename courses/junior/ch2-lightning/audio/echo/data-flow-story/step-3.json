@@ -1,0 +1,130 @@
+{
+  "storyId": "data-flow-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Question 4: When?. Fourth: When does each write happen? Some happen on user action. Some happen at midnight. Some happen when external events fire. Timing matters.",
+  "duration": 12.600000381469727,
+  "words": [
+    {
+      "word": "Question",
+      "start": 0.8999999761581421,
+      "end": 1.5
+    },
+    {
+      "word": "4",
+      "start": 1.5,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "When",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Fourth",
+      "start": 3.4600000381469727,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "when",
+      "start": 4.119999885559082,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "does",
+      "start": 4.199999809265137,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "each",
+      "start": 4.380000114440918,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "write",
+      "start": 4.679999828338623,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "happen",
+      "start": 4.820000171661377,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "Some",
+      "start": 5.71999979019165,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "happen",
+      "start": 5.880000114440918,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "on",
+      "start": 6.139999866485596,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "user",
+      "start": 6.360000133514404,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "action",
+      "start": 6.639999866485596,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "Some",
+      "start": 7.760000228881836,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "happen",
+      "start": 7.760000228881836,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "at",
+      "start": 8.020000457763672,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "midnight",
+      "start": 8.239999771118164,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "Some",
+      "start": 9.220000267028809,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "happen",
+      "start": 9.34000015258789,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "when",
+      "start": 9.619999885559082,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "external",
+      "start": 9.84000015258789,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "events",
+      "start": 10.300000190734863,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "fire",
+      "start": 10.65999984741211,
+      "end": 11.039999961853027
+    }
+  ]
+}

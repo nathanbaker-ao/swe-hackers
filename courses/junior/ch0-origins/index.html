@@ -4,1186 +4,443 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 0: The Acceleration Point | The Junior Accelerator</title>
-  
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="../../shared/css/lesson.css">
-  
-  <style>
-    /* Chapter 0 Specific Styles */
-    .origin-hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, #0a0a0f 0%, #0d1117 50%, #161b22 100%);
-    }
-    
-    .particles-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-    }
-    
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: var(--accent-primary);
-      border-radius: 50%;
-      opacity: 0;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 2rem;
-    }
-    
-    .chapter-badge {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: rgba(88, 166, 255, 0.15);
-      border: 1px solid rgba(88, 166, 255, 0.3);
-      border-radius: 30px;
-      color: #58a6ff;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 2rem;
-    }
-    
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, #58a6ff, #a371f7, #58a6ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-    
-    .scroll-indicator {
-      position: absolute;
-      bottom: 3rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    
-    .scroll-arrow {
-      width: 24px;
-      height: 24px;
-      border-right: 2px solid var(--text-muted);
-      border-bottom: 2px solid var(--text-muted);
-      transform: rotate(45deg);
-      animation: bounce 2s infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(10px); }
-    }
-    
-    /* Career Path Visualization */
-    .career-path {
-      position: relative;
-      padding: 3rem 0;
-      margin: 2rem 0;
-    }
-    
-    .path-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-    }
-    
-    .path-line {
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      right: 10%;
-      height: 4px;
-      background: linear-gradient(90deg, #333, #58a6ff, #a371f7);
-      transform: translateY(-50%);
-      border-radius: 2px;
-    }
-    
-    .path-node {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .node-circle {
-      width: 80px;
-      height: 80px;
-      background: var(--bg-card);
-      border: 3px solid #333;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      transition: all 0.5s ease;
-    }
-    
-    .node-circle.active {
-      border-color: #58a6ff;
-      box-shadow: 0 0 30px rgba(88, 166, 255, 0.3);
-    }
-    
-    .node-circle.future {
-      border-color: #a371f7;
-      box-shadow: 0 0 30px rgba(163, 113, 247, 0.3);
-    }
-    
-    .node-label {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      text-align: center;
-    }
-    
-    .node-time {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    
-    /* Comparison Cards */
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    
-    .comparison-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-xl);
-      padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.5s ease;
-    }
-    
-    .comparison-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .comparison-card.old {
-      border-left: 4px solid #f85149;
-    }
-    
-    .comparison-card.new {
-      border-left: 4px solid #3fb950;
-    }
-    
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .card-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-    
-    .comparison-card.old .card-icon {
-      background: rgba(248, 81, 73, 0.15);
-    }
-    
-    .comparison-card.new .card-icon {
-      background: rgba(63, 185, 80, 0.15);
-    }
-    
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-    }
-    
-    .card-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    
-    .card-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .card-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-    
-    .card-list li:last-child {
-      border-bottom: none;
-    }
-    
-    .list-icon {
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    
-    /* Stats Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    .stat-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      opacity: 0;
-      transform: scale(0.9);
-      transition: all 0.5s ease;
-    }
-    
-    .stat-card.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-    
-    .stat-value {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #58a6ff, #a371f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .stat-label {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-    }
-    
-    /* Interactive Timeline */
-    .evolution-timeline {
-      position: relative;
-      padding: 2rem 0;
-    }
-    
-    .timeline-track {
-      position: relative;
-      height: 4px;
-      background: #1a1a2e;
-      border-radius: 2px;
-      margin: 3rem 0;
-    }
-    
-    .timeline-progress {
-      position: absolute;
-      height: 100%;
-      background: linear-gradient(90deg, #f85149, #f0883e, #58a6ff, #a371f7);
-      border-radius: 2px;
-      width: 0%;
-      transition: width 1s ease;
-    }
-    
-    .timeline-markers {
-      display: flex;
-      justify-content: space-between;
-      margin-top: -12px;
-    }
-    
-    .timeline-marker {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-    }
-    
-    .marker-dot {
-      width: 24px;
-      height: 24px;
-      background: var(--bg-card);
-      border: 3px solid #333;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      z-index: 1;
-    }
-    
-    .timeline-marker.active .marker-dot {
-      border-color: #58a6ff;
-      background: #58a6ff;
-    }
-    
-    .marker-label {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-    
-    .timeline-marker.active .marker-label {
-      color: var(--text-primary);
-    }
-    
-    .era-description {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 2rem;
-      margin-top: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      min-height: 150px;
-    }
-    
-    .era-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .era-text {
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-    
-    /* Skill Matrix */
-    .skill-matrix {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    .skill-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease;
-    }
-    
-    .skill-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .skill-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    
-    .skill-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-    }
-    
-    .skill-level {
-      font-size: 0.8rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      background: rgba(88, 166, 255, 0.15);
-      color: #58a6ff;
-    }
-    
-    .skill-bar-container {
-      height: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 0.75rem;
-    }
-    
-    .skill-bar {
-      height: 100%;
-      background: linear-gradient(90deg, #58a6ff, #a371f7);
-      border-radius: 4px;
-      width: 0%;
-      transition: width 1s ease;
-    }
-    
-    .skill-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    
-    /* Quiz Styles */
-    .origin-quiz {
-      background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.05));
-      border: 1px solid rgba(88, 166, 255, 0.3);
-      border-radius: var(--radius-xl);
-      padding: 2rem;
-      margin: 2rem 0;
-    }
-    
-    .quiz-question {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .quiz-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    
-    .quiz-option {
-      padding: 1rem 1.5rem;
-      background: var(--bg-card);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      transition: all 0.2s;
-      text-align: left;
-      font-size: 0.95rem;
-    }
-    
-    .quiz-option:hover {
-      border-color: var(--accent-primary);
-      background: rgba(121, 134, 203, 0.1);
-    }
-    
-    .quiz-option.correct {
-      border-color: #3fb950;
-      background: rgba(63, 185, 80, 0.15);
-    }
-    
-    .quiz-option.incorrect {
-      border-color: #f85149;
-      background: rgba(248, 81, 73, 0.15);
-    }
-    
-    /* Continue Button */
-    .continue-section {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
-    }
-    
-    .continue-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 2.5rem;
-      background: linear-gradient(135deg, #58a6ff, #a371f7);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius-lg);
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(88, 166, 255, 0.3);
-    }
-    
-    .continue-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(88, 166, 255, 0.4);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title { font-size: 2.25rem; }
-      .comparison-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .skill-matrix { grid-template-columns: 1fr; }
-      .path-container { flex-direction: column; gap: 2rem; }
-      .path-line { display: none; }
-    }
-  </style>
-  
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  
-  <!-- Anime.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
-  <!-- Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
 </head>
-<body>
-  
-  <!-- Hero Section -->
-  <section class="origin-hero">
-    <div class="particles-container" id="particles"></div>
-    
-    <div class="hero-content">
-      <span class="chapter-badge">🚀 Pre-Quest</span>
-      <h1 class="hero-title">The Acceleration Point</h1>
-      <p class="hero-subtitle">
-        You're not here to spend 5-10 years becoming a senior engineer. You're here to 
-        compress that timeline into 1-2 years. This is your unfair advantage.
-      </p>
-    </div>
-    
-    <div class="scroll-indicator">
-      <span>Discover the shortcut</span>
-      <div class="scroll-arrow"></div>
-    </div>
-  </section>
-  
-  <!-- Main Content -->
-  <div class="lesson-container">
-    
-    <!-- Section 1: The Truth -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">💡</span>
-        The Secret They Don't Tell Juniors
-      </h2>
-      
-      <div class="section-content">
-        <p>
-          Here's what nobody tells you: <strong>The gap between junior and senior isn't about 
-          years of experience.</strong> It's about how you think.
-        </p>
-        
-        <p>
-          Senior engineers don't just know more code. They see systems where juniors see 
-          files. They see patterns where juniors see problems. They ask "why" before "how."
-        </p>
-        
-        <div class="callout callout-insight">
-          <div class="callout-title">🎯 The Real Difference</div>
-          <p>
-            A junior fixes bugs. A mid-level prevents bugs. A senior designs systems 
-            where certain classes of bugs <em>can't exist</em>. This course teaches you 
-            to think like the third type.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Career Path Visualization -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">📈</span>
-        Your Accelerated Path
-      </h2>
-      
-      <div class="section-content">
-        <p>Traditional career progression takes 5-10 years. Here's how AI changes that:</p>
-        
-        <div class="career-path">
-          <div class="path-container">
-            <div class="path-line"></div>
-            
-            <div class="path-node">
-              <div class="node-circle active">👶</div>
-              <div class="node-label">Junior<br><span class="node-time">You are here</span></div>
-            </div>
-            
-            <div class="path-node">
-              <div class="node-circle">🧑‍💻</div>
-              <div class="node-label">Mid-Level<br><span class="node-time">6-12 months</span></div>
-            </div>
-            
-            <div class="path-node">
-              <div class="node-circle future">🏗️</div>
-              <div class="node-label">Senior<br><span class="node-time">12-24 months</span></div>
-            </div>
-            
-            <div class="path-node">
-              <div class="node-circle future">🏛️</div>
-              <div class="node-label">Architect<br><span class="node-time">The goal</span></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">10x</div>
-            <div class="stat-label">Faster learning with AI tools</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">80%</div>
-            <div class="stat-label">Less time on boilerplate</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">1-2</div>
-            <div class="stat-label">Years to senior level</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">∞</div>
-            <div class="stat-label">Potential to unlock</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 2: Old vs New -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">⚔️</span>
-        The Junior Trap vs. The Senior Approach
-      </h2>
-      
-      <div class="section-content">
-        <p>
-          Most juniors get stuck in patterns that slow their growth. Here's what separates 
-          those who accelerate from those who stagnate:
-        </p>
-        
-        <div class="comparison-grid">
-          <div class="comparison-card old">
-            <div class="card-header">
-              <div class="card-icon">🐢</div>
-              <div>
-                <div class="card-title">The Junior Trap</div>
-                <div class="card-subtitle">Why you stay stuck</div>
-              </div>
-            </div>
-            <ul class="card-list">
-              <li><span class="list-icon">❌</span> Immediately start coding when given a task</li>
-              <li><span class="list-icon">❌</span> Ask "How do I do this?" first</li>
-              <li><span class="list-icon">❌</span> Fix the symptom, not the root cause</li>
-              <li><span class="list-icon">❌</span> Work in isolation, afraid to ask questions</li>
-              <li><span class="list-icon">❌</span> Measure progress by lines of code written</li>
-              <li><span class="list-icon">❌</span> See AI as a code generator only</li>
-            </ul>
-          </div>
-          
-          <div class="comparison-card new">
-            <div class="card-header">
-              <div class="card-icon">🚀</div>
-              <div>
-                <div class="card-title">The Senior Approach</div>
-                <div class="card-subtitle">What accelerates growth</div>
-              </div>
-            </div>
-            <ul class="card-list">
-              <li><span class="list-icon">✅</span> Understand the "why" before writing code</li>
-              <li><span class="list-icon">✅</span> Ask "What problem are we really solving?"</li>
-              <li><span class="list-icon">✅</span> Design systems that prevent problems</li>
-              <li><span class="list-icon">✅</span> Communicate early, clarify requirements</li>
-              <li><span class="list-icon">✅</span> Measure progress by impact delivered</li>
-              <li><span class="list-icon">✅</span> Use AI as a thinking partner</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="origin-quiz">
-          <div class="quiz-question">
-            🧠 Quick Check: A senior engineer is asked to add a new feature. What do they do first?
-          </div>
-          <div class="quiz-options">
-            <button class="quiz-option" onclick="checkAnswer(this, false)">Open their IDE and start coding</button>
-            <button class="quiz-option" onclick="checkAnswer(this, false)">Look for similar code to copy</button>
-            <button class="quiz-option" onclick="checkAnswer(this, true)">Ask clarifying questions about the requirements</button>
-            <button class="quiz-option" onclick="checkAnswer(this, false)">Estimate how long it will take</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 3: Evolution Timeline -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🕐</span>
-        The Evolution of Software Engineering
-      </h2>
-      
-      <div class="section-content">
-        <p>
-          Understanding how the industry evolved helps you see where it's going—and 
-          position yourself ahead of the curve.
-        </p>
-        
-        <div class="evolution-timeline">
-          <div class="timeline-track">
-            <div class="timeline-progress" id="timeline-progress"></div>
-          </div>
-          
-          <div class="timeline-markers">
-            <div class="timeline-marker active" onclick="showEra(0)">
-              <div class="marker-dot"></div>
-              <div class="marker-label">2000s<br>Code Craftsman</div>
-            </div>
-            <div class="timeline-marker" onclick="showEra(1)">
-              <div class="marker-dot"></div>
-              <div class="marker-label">2010s<br>Stack Specialist</div>
-            </div>
-            <div class="timeline-marker" onclick="showEra(2)">
-              <div class="marker-dot"></div>
-              <div class="marker-label">2020s<br>Systems Thinker</div>
-            </div>
-            <div class="timeline-marker" onclick="showEra(3)">
-              <div class="marker-dot"></div>
-              <div class="marker-label">Now<br>AI Architect</div>
-            </div>
-          </div>
-          
-          <div class="era-description" id="era-description">
-            <div class="era-title">🔨 The Code Craftsman Era</div>
-            <div class="era-text">
-              Engineers were valued for raw coding ability. "10x engineer" meant typing faster 
-              and knowing obscure syntax. Success = lines of code produced. The more you could 
-              write from scratch, the better.
-            </div>
-          </div>
-        </div>
-        
-        <div class="diagram-container">
-          <pre class="mermaid">
-graph LR
-    subgraph "Then: Code Craftsman"
-        A1[📝 Write everything<br/>from scratch] --> B1[🔍 Debug for hours]
-        B1 --> C1[📚 Memorize syntax]
-    end
-    
-    subgraph "Now: AI Architect"
-        A2[🎯 Design the system] --> B2[🤖 AI generates code]
-        B2 --> C2[👀 Review & refine]
-    end
-    
-    style A1 fill:#1a1a2e,stroke:#f85149
-    style B1 fill:#1a1a2e,stroke:#f85149
-    style C1 fill:#1a1a2e,stroke:#f85149
-    style A2 fill:#1a1a2e,stroke:#3fb950
-    style B2 fill:#1a1a2e,stroke:#3fb950
-    style C2 fill:#1a1a2e,stroke:#3fb950
-          </pre>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 4: The Skills That Matter -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🎯</span>
-        Skills That Accelerate Your Growth
-      </h2>
-      
-      <div class="section-content">
-        <p>
-          These are the skills we'll develop throughout this course. Notice how few of 
-          them are about "writing more code."
-        </p>
-        
-        <div class="skill-matrix">
-          <div class="skill-card" data-level="90">
-            <div class="skill-header">
-              <span class="skill-name">🗺️ Codebase Navigation</span>
-              <span class="skill-level">Critical</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Understanding large codebases quickly. Chapter 1.</div>
-          </div>
-          
-          <div class="skill-card" data-level="85">
-            <div class="skill-header">
-              <span class="skill-name">⚡ Data Flow Tracing</span>
-              <span class="skill-level">Critical</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Following data through systems. Chapter 2.</div>
-          </div>
-          
-          <div class="skill-card" data-level="80">
-            <div class="skill-header">
-              <span class="skill-name">🔌 Integration Thinking</span>
-              <span class="skill-level">High</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Connecting systems robustly. Chapter 3.</div>
-          </div>
-          
-          <div class="skill-card" data-level="95">
-            <div class="skill-header">
-              <span class="skill-name">📐 Design First</span>
-              <span class="skill-level">Critical</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Planning before coding. Chapter 4.</div>
-          </div>
-          
-          <div class="skill-card" data-level="75">
-            <div class="skill-header">
-              <span class="skill-name">👥 Technical Communication</span>
-              <span class="skill-level">High</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Explaining technical decisions. Capstones.</div>
-          </div>
-          
-          <div class="skill-card" data-level="90">
-            <div class="skill-header">
-              <span class="skill-name">🤖 AI Collaboration</span>
-              <span class="skill-level">Critical</span>
-            </div>
-            <div class="skill-bar-container">
-              <div class="skill-bar"></div>
-            </div>
-            <div class="skill-desc">Leveraging AI as a partner. Throughout.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 5: Your Toolkit -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🛠️</span>
-        Your Acceleration Toolkit
-      </h2>
-      
-      <div class="section-content">
-        <p>
-          Throughout this course, you'll use these tools to think and build at a senior level:
-        </p>
-        
-        <div class="diagram-container">
-          <pre class="mermaid">
-mindmap
-  root((Your Toolkit))
-    🎯 Thinking Tools
-      System diagrams
-      Data flow maps
-      Decision trees
-      Architecture docs
-    🤖 AI Partners
-      Cursor / Copilot
-      Claude / ChatGPT
-      Code explainers
-      Review assistants
-    📊 Visualization
-      Mermaid diagrams
-      Sequence charts
-      Component maps
-      ER diagrams
-    🔍 Analysis
-      Codebase search
-      Dependency graphs
-      Performance profiling
-      Error tracing
-          </pre>
-        </div>
-        
-        <div class="callout callout-tip">
-          <div class="callout-title">🚀 Pro Tip: Start Today</div>
-          <p>
-            If you haven't already, install <a href="https://cursor.sh" target="_blank" style="color: var(--accent-primary);">Cursor</a> 
-            (AI-powered IDE) or enable GitHub Copilot. These tools will 10x your learning speed as you 
-            work through this course.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 6: What's Next -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🗺️</span>
-        Your 6-Week Journey
-      </h2>
-      
-      <div class="section-content">
-        <p>Here's what you'll master in the coming weeks:</p>
-        
-        <div class="diagram-container">
-          <pre class="mermaid">
-gantt
-    title Your Acceleration Timeline
-    dateFormat  YYYY-MM-DD
-    section Foundation
-    Ch1: Codebase Mastery       :a1, 2024-01-01, 7d
-    Ch2: Data Flow Mapping      :a2, after a1, 7d
-    section Integration
-    Ch3: System Integration     :a3, after a2, 7d
-    Ch4: Design First Thinking  :a4, after a3, 7d
-    section Capstones
-    Ch5: Lead a Feature         :a5, after a4, 7d
-    Ch6: AI-Paired Development  :a6, after a5, 7d
-          </pre>
-        </div>
-        
-        <div class="callout callout-success">
-          <div class="callout-title">✅ Pre-Quest Complete!</div>
-          <p>
-            You understand the mindset shift required. You know what separates juniors from 
-            seniors. Now it's time to start developing those skills. In Chapter 1, we dive 
-            into the first critical skill: <strong>mastering any codebase quickly</strong>.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Continue Section -->
-    <section class="continue-section">
-      <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">
-        Ready to Accelerate?
-      </h2>
-      <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-        The foundation is set. Let's learn how to understand any codebase in hours instead of weeks.
-      </p>
-      <a href="../ch1-stone/" class="continue-btn">
-        Continue to Chapter 1: Codebase Mastery →
+<body data-course="junior" data-lesson="ch0-origins">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">🚀</div>
+        <span>Acceleration Point</span>
       </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Junior Accelerator</a>
+        <a href="index.html" class="active">Ch 0</a>
+        <a href="../ch1-stone/">Ch 1: Codebase Mastery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Junior Accelerator</a>
+        <span>/</span>
+        <span>Chapter 0: The Acceleration Point</span>
+      </div>
+      <h1>🚀 The Acceleration Point</h1>
+      <p>You're not here to spend 5-10 years becoming a senior engineer. You're here to compress that timeline into 1-2 years. This is your unfair advantage.</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
     </section>
-    
-  </div>
-  
-  <!-- Bottom Navigation -->
-  <nav class="lesson-nav">
-    <a class="nav-btn" href="../ch6-capstone2/">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M19 12H5M12 19l-7-7 7-7" />
-      </svg>
-      ← Capstone II (Loop)
-    </a>
-    <a class="nav-btn primary" href="../ch1-stone/">
-      Chapter 1: Stone →
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M5 12h14M12 5l7 7-7 7" />
-      </svg>
-    </a>
+
+    <!-- Story 1: The Mindset Shift -->
+    <section class="section" id="mindset-section">
+      <h2>The Mindset Shift</h2>
+      <p>The gap between junior and senior isn't about years of experience—it's about how you think. Discover what separates those who accelerate from those who stagnate.</p>
+      
+      <div class="diagram-container" id="mindset-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🧠 Junior Trap vs Senior Approach</span>
+        </div>
+        <div id="mindset-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="mindset-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="mindset-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="mindset-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="mindset-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="mindset-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="mindset-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: Your Accelerated Path -->
+    <section class="section" id="acceleration-section">
+      <h2>Your Accelerated Path</h2>
+      <p>Traditional career progression takes 5-10 years. Here's how AI changes that timeline—and what you can achieve in just 1-2 years with the right approach.</p>
+      
+      <div class="diagram-container" id="acceleration-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📈 From Junior to Senior</span>
+        </div>
+        <div id="acceleration-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="acceleration-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="acceleration-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="acceleration-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="acceleration-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="acceleration-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="acceleration-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Skills That Matter -->
+    <section class="section" id="skills-section">
+      <h2>Skills That Matter</h2>
+      <p>Notice how few of the skills that accelerate growth are about "writing more code." These are the skills we'll develop throughout this course.</p>
+      
+      <div class="diagram-container" id="skills-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🎯 Critical Skills for Growth</span>
+        </div>
+        <div id="skills-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="skills-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="skills-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="skills-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="skills-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="skills-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="skills-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready to Accelerate?</h2>
+      <p>The foundation is set. You understand the mindset shift required. Now let's learn how to understand any codebase in hours instead of weeks.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../ch1-stone/" class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>Chapter 1: Codebase Mastery</h3>
+          <p>Learn to navigate any codebase quickly—the first superpower of senior engineers.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all chapters in The Junior Accelerator.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#mindset-section">The Mindset Shift</a></li>
+      <li><a href="#acceleration-section">Your Accelerated Path</a></li>
+      <li><a href="#skills-section">Skills That Matter</a></li>
+    </ul>
   </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
   
-  <!-- Scripts -->
-  <script src="../../shared/js/firebase-config.js"></script>
-  <script src="../../shared/js/auth.js"></script>
-  <script src="../../shared/js/data-service.js"></script>
-  <script src="../../shared/js/lesson-integration.js"></script>
-  <script src="../../shared/js/progress-tracker.js"></script>
-  <script src="../../shared/js/activity-tracker.js"></script>
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <script>
-    // Initialize Mermaid
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'dark',
-      themeVariables: {
-        primaryColor: '#58a6ff',
-        primaryTextColor: '#e8e8f0',
-        primaryBorderColor: '#388bfd',
-        lineColor: '#6a6a80',
-        secondaryColor: '#1a1a2e',
-        tertiaryColor: '#12121a',
-        background: '#161b22',
-        mainBkg: '#161b22',
-        nodeBorder: '#388bfd',
-        clusterBkg: '#1a1a2e',
-        titleColor: '#e8e8f0',
-        edgeLabelBackground: '#1a1a2e'
-      },
-      flowchart: {
-        curve: 'basis',
-        padding: 20,
-        htmlLabels: true,
-        nodeSpacing: 50,
-        rankSpacing: 50
-      }
-    });
-    
-    // Era descriptions
-    const eras = [
-      {
-        title: '🔨 The Code Craftsman Era',
-        text: 'Engineers were valued for raw coding ability. "10x engineer" meant typing faster and knowing obscure syntax. Success = lines of code produced. The more you could write from scratch, the better.'
-      },
-      {
-        title: '📚 The Stack Specialist Era',
-        text: 'Frameworks and stacks became king. Value = depth of knowledge in React, Node, Django, etc. Engineers specialized narrowly. The full-stack developer emerged but was spread thin across technologies.'
-      },
-      {
-        title: '🧠 The Systems Thinker Era',
-        text: 'Complexity exploded. Microservices, cloud, distributed systems. Value shifted to understanding how pieces fit together. Architects became essential. Pure coders hit walls.'
-      },
-      {
-        title: '🤖 The AI Architect Era',
-        text: 'AI handles implementation. Value = directing AI effectively, designing systems, reviewing output, and understanding the "why." Those who think in systems and leverage AI become unstoppable.'
-      }
-    ];
-    
-    let currentEra = 0;
-    
-    function showEra(index) {
-      currentEra = index;
-      
-      // Update markers
-      document.querySelectorAll('.timeline-marker').forEach((marker, i) => {
-        marker.classList.toggle('active', i <= index);
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'mindset': [
+          // Junior trap side
+          { data: { id: 'junior-trap', label: '🐢 Junior Trap', type: 'external', description: 'Patterns that slow growth' } },
+          { data: { id: 'ask-how', label: '❓ Ask "How?"', type: 'external', description: 'Focus on implementation first' } },
+          // Senior side
+          { data: { id: 'senior-mindset', label: '🚀 Senior Approach', type: 'concept', description: 'Patterns that accelerate growth' } },
+          { data: { id: 'ask-why', label: '💡 Ask "Why?"', type: 'concept', description: 'Understand before building' } },
+          // Result
+          { data: { id: 'real-difference', label: '🎯 The Real\nDifference', type: 'service', description: 'Design systems where bugs cannot exist' } },
+          // Edges
+          { data: { source: 'junior-trap', target: 'ask-how' } },
+          { data: { source: 'junior-trap', target: 'senior-mindset' } },
+          { data: { source: 'senior-mindset', target: 'ask-why' } },
+          { data: { source: 'ask-how', target: 'real-difference' } },
+          { data: { source: 'ask-why', target: 'real-difference' } }
+        ],
+
+        'acceleration': [
+          { data: { id: 'traditional-path', label: '📅 Traditional\n5-10 Years', type: 'external', description: 'The slow path most take' } },
+          { data: { id: 'you-are-here', label: '👶 You Are\nHere', type: 'concept', description: 'Starting point' } },
+          { data: { id: 'ai-acceleration', label: '⚡ AI\nAcceleration', type: 'auth', description: '10x faster learning' } },
+          { data: { id: 'mid-level', label: '🧑‍💻 Mid-Level\n6-12 mo', type: 'data', description: 'Pattern recognition' } },
+          { data: { id: 'senior-architect', label: '🏗️ Senior\n12-24 mo', type: 'service', description: 'Systems thinking' } },
+          // Edges
+          { data: { source: 'traditional-path', target: 'you-are-here' } },
+          { data: { source: 'you-are-here', target: 'ai-acceleration' } },
+          { data: { source: 'ai-acceleration', target: 'mid-level' } },
+          { data: { source: 'mid-level', target: 'senior-architect' } }
+        ],
+
+        'skills': [
+          { data: { id: 'not-more-code', label: '📝 Not About\nMore Code', type: 'external', description: 'Skills beyond syntax' } },
+          { data: { id: 'codebase-nav', label: '🗺️ Codebase\nNavigation', type: 'concept', description: 'Ch 1: Understand any codebase' } },
+          { data: { id: 'data-flow', label: '⚡ Data Flow\nTracing', type: 'data', description: 'Ch 2: Follow data through systems' } },
+          { data: { id: 'design-first', label: '📐 Design\nFirst', type: 'auth', description: 'Ch 4: Plan before coding' } },
+          { data: { id: 'ai-collab', label: '🤖 AI\nCollaboration', type: 'service', description: 'Throughout: AI as thinking partner' } },
+          // Edges
+          { data: { source: 'not-more-code', target: 'codebase-nav' } },
+          { data: { source: 'not-more-code', target: 'data-flow' } },
+          { data: { source: 'not-more-code', target: 'design-first' } },
+          { data: { source: 'codebase-nav', target: 'ai-collab' } },
+          { data: { source: 'data-flow', target: 'ai-collab' } },
+          { data: { source: 'design-first', target: 'ai-collab' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      // Map story IDs to diagram element keys
+      const storyToDiagram = {
+        'mindset-story': 'mindset',
+        'acceleration-story': 'acceleration',
+        'skills-story': 'skills'
+      };
+
+      // Create storytelling diagrams for each story in the JSON
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
       });
-      
-      // Update progress bar
-      const progress = (index / (eras.length - 1)) * 100;
-      document.getElementById('timeline-progress').style.width = `${progress}%`;
-      
-      // Update description
-      const desc = document.getElementById('era-description');
-      desc.innerHTML = `
-        <div class="era-title">${eras[index].title}</div>
-        <div class="era-text">${eras[index].text}</div>
-      `;
-    }
-    
-    // Create particles
-    function createParticles() {
-      const container = document.getElementById('particles');
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        container.appendChild(particle);
-      }
-      
-      anime({
-        targets: '.particle',
-        opacity: [0, 0.6, 0],
-        scale: [0, 1.5, 0],
-        delay: anime.stagger(100, { from: 'random' }),
-        duration: 3000,
-        easing: 'easeInOutQuad',
-        loop: true
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      // Map story IDs to quiz container IDs
+      const storyToQuiz = {
+        'mindset-story': 'mindset-quiz',
+        'acceleration-story': 'acceleration-quiz',
+        'skills-story': 'skills-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
       });
-    }
-    
-    // Quiz
-    function checkAnswer(btn, isCorrect) {
-      document.querySelectorAll('.quiz-option').forEach(opt => {
-        opt.disabled = true;
-        opt.classList.remove('correct', 'incorrect');
-      });
-      
-      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
-      
-      if (!isCorrect) {
-        document.querySelectorAll('.quiz-option')[2].classList.add('correct');
-      }
-    }
-    
-    // Animate on scroll
-    function setupScrollAnimations() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            
-            // Animate skill bars
-            if (entry.target.classList.contains('skill-card')) {
-              const level = entry.target.dataset.level;
-              const bar = entry.target.querySelector('.skill-bar');
-              setTimeout(() => {
-                bar.style.width = level + '%';
-              }, 300);
-            }
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      // Observe elements
-      document.querySelectorAll('.comparison-card, .stat-card, .skill-card').forEach((item, i) => {
-        item.style.transitionDelay = `${i * 0.1}s`;
-        observer.observe(item);
-      });
-    }
-    
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      createParticles();
-      setupScrollAnimations();
-      
-      // Hero animation
-      anime({
-        targets: '.hero-content > *',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        delay: anime.stagger(200, { start: 500 }),
-        duration: 800,
-        easing: 'easeOutQuad'
-      });
-      
-      // Career path animation
-      anime({
-        targets: '.node-circle',
-        scale: [0, 1],
-        delay: anime.stagger(200, { start: 1000 }),
-        duration: 500,
-        easing: 'easeOutBack'
-      });
-      
-      // Initialize lesson integration (handles Firebase, auth, and header)
-      if (window.LessonIntegration) {
-        window.LessonIntegration.init('junior', 'ch0-origins');
-      }
-      
-      // Initialize progress tracker after a short delay for auth
-      // Initialize progress tracker immediately
-      if (window.ProgressTracker) {
-        window.ProgressTracker.init('junior', 'ch0-origins');
-      }
-      if (window.ActivityTracker) {
-        window.ActivityTracker.init('junior', 'ch0-origins');
-      }
     });
   </script>
 </body>
 </html>
-

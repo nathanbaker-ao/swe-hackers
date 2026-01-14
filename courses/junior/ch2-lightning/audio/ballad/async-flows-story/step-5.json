@@ -1,0 +1,145 @@
+{
+  "storyId": "async-flows-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Build Your Inventory. Senior engineers keep an inventory: every async flow, what data it touches, when it runs. When a bug hits, they check the inventory first. Build yours today.",
+  "duration": 14.15999984741211,
+  "words": [
+    {
+      "word": "Build",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "your",
+      "start": 0.5799999833106995,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "inventory",
+      "start": 1.3600000143051147,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "Senior",
+      "start": 3.0199999809265137,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "engineers",
+      "start": 3.0799999237060547,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "keep",
+      "start": 3.640000104904175,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "an",
+      "start": 4.139999866485596,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "inventory",
+      "start": 4.980000019073486,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "Every",
+      "start": 5.71999979019165,
+      "end": 6
+    },
+    {
+      "word": "async",
+      "start": 6,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "flow",
+      "start": 6.519999980926514,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "what",
+      "start": 7.579999923706055,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "data",
+      "start": 7.71999979019165,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "it",
+      "start": 8.039999961853027,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "touches",
+      "start": 8.479999542236328,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "when",
+      "start": 9.279999732971191,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "it",
+      "start": 9.380000114440918,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "runs",
+      "start": 9.9399995803833,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "When",
+      "start": 10.579999923706055,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "a",
+      "start": 10.640000343322754,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "bug",
+      "start": 11.0600004196167,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "hits",
+      "start": 11.0600004196167,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "they",
+      "start": 11.800000190734863,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "check",
+      "start": 11.960000038146973,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "the",
+      "start": 12.199999809265137,
+      "end": 12.960000038146973
+    },
+    {
+      "word": "inventory",
+      "start": 12.960000038146973,
+      "end": 12.960000038146973
+    },
+    {
+      "word": "first",
+      "start": 12.960000038146973,
+      "end": 13.680000305175781
+    }
+  ]
+}

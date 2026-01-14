@@ -1,0 +1,155 @@
+{
+  "storyId": "ownership-mindset-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Mindset Shift. Junior mindset: I write code for tickets assigned to me. Senior mindset: I'm responsible for this feature succeeding, from idea to production. That's the ownership difference.",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "mindset",
+      "start": 0.4000000059604645,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "shift",
+      "start": 0.8600000143051147,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "Junior",
+      "start": 2.3399999141693115,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "mindset",
+      "start": 2.3399999141693115,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "I",
+      "start": 3.2200000286102295,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "write",
+      "start": 3.4000000953674316,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "code",
+      "start": 3.5999999046325684,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "for",
+      "start": 3.9000000953674316,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "tickets",
+      "start": 4.199999809265137,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "assigned",
+      "start": 4.440000057220459,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "to",
+      "start": 4.840000152587891,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "me",
+      "start": 5.019999980926514,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "Senior",
+      "start": 5.980000019073486,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "mindset",
+      "start": 6.099999904632568,
+      "end": 6.5
+    },
+    {
+      "word": "I'm",
+      "start": 6.980000019073486,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "responsible",
+      "start": 7.260000228881836,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "for",
+      "start": 7.739999771118164,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "this",
+      "start": 8.0600004196167,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "feature",
+      "start": 8.300000190734863,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "succeeding",
+      "start": 8.600000381469727,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "from",
+      "start": 9.100000381469727,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "idea",
+      "start": 9.779999732971191,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "to",
+      "start": 10.15999984741211,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "production",
+      "start": 10.899999618530273,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "That's",
+      "start": 11.4399995803833,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "the",
+      "start": 11.979999542236328,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "ownership",
+      "start": 12.199999809265137,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "difference",
+      "start": 12.5600004196167,
+      "end": 13.039999961853027
+    }
+  ]
+}

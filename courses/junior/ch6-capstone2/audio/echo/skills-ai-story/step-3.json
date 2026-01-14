@@ -1,0 +1,125 @@
+{
+  "storyId": "skills-ai-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "AI Executes. With proper context, AI executes your vision at machine speed. Code generation, boilerplate, transformations—tasks that took hours now take minutes.",
+  "duration": 13.510000228881836,
+  "words": [
+    {
+      "word": "AI",
+      "start": 0,
+      "end": 0.6000000238418579
+    },
+    {
+      "word": "Executes",
+      "start": 0.6000000238418579,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "With",
+      "start": 2.240000009536743,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "proper",
+      "start": 2.299999952316284,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "context",
+      "start": 2.680000066757202,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "AI",
+      "start": 3.819999933242798,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "executes",
+      "start": 4.039999961853027,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "your",
+      "start": 4.639999866485596,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "vision",
+      "start": 4.940000057220459,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "at",
+      "start": 5.159999847412109,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "machine",
+      "start": 5.539999961853027,
+      "end": 6
+    },
+    {
+      "word": "speed",
+      "start": 6,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "Code",
+      "start": 7.340000152587891,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "generation",
+      "start": 7.340000152587891,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "boilerplate",
+      "start": 8.460000038146973,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "transformations",
+      "start": 9.4399995803833,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "tasks",
+      "start": 11.039999961853027,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "that",
+      "start": 11.039999961853027,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "took",
+      "start": 11.279999732971191,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "hours",
+      "start": 11.520000457763672,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "now",
+      "start": 12.020000457763672,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "take",
+      "start": 12.619999885559082,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "minutes",
+      "start": 12.920000076293945,
+      "end": 13.300000190734863
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "storyId": "ownership-mindset-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Clarifying Requirements. Owners don't just accept vague specs. They ask questions, push back on unclear requirements, and define exactly what 'done' looks like before writing a single line of code.",
+  "duration": 12.399999618530273,
+  "words": [
+    {
+      "word": "Clarifying",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "requirements",
+      "start": 0.7799999713897705,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Owners",
+      "start": 2.4000000953674316,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "don't",
+      "start": 2.440000057220459,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "just",
+      "start": 2.740000009536743,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "accept",
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "vague",
+      "start": 3.4600000381469727,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "specs",
+      "start": 3.8399999141693115,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "They",
+      "start": 4.760000228881836,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "ask",
+      "start": 4.900000095367432,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "questions",
+      "start": 5.139999866485596,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "push",
+      "start": 6.199999809265137,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "back",
+      "start": 6.199999809265137,
+      "end": 6.5
+    },
+    {
+      "word": "on",
+      "start": 6.5,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "unclear",
+      "start": 6.880000114440918,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "requirements",
+      "start": 7.099999904632568,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "and",
+      "start": 8.119999885559082,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "define",
+      "start": 8.359999656677246,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "exactly",
+      "start": 8.680000305175781,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "what",
+      "start": 9.199999809265137,
+      "end": 9.5
+    },
+    {
+      "word": "done",
+      "start": 9.5,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "looks",
+      "start": 9.720000267028809,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "like",
+      "start": 9.979999542236328,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "before",
+      "start": 10.460000038146973,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "writing",
+      "start": 10.859999656677246,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "a",
+      "start": 11.140000343322754,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "single",
+      "start": 11.4399995803833,
+      "end": 11.619999885559082
+    },
+    {
+      "word": "line",
+      "start": 11.619999885559082,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "of",
+      "start": 11.84000015258789,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "code",
+      "start": 12.220000267028809,
+      "end": 12.220000267028809
+    }
+  ]
+}

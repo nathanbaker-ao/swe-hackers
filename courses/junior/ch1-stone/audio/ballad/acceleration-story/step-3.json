@@ -1,0 +1,165 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Build Visible Impact. Ship features. Fix production bugs. Document systems that confuse others. Your work should be visible to your team and leadership. Impact that nobody sees doesn't advance your career.",
+  "duration": 19.649999618530273,
+  "words": [
+    {
+      "word": "Build",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "visible",
+      "start": 0.7400000095367432,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "impact",
+      "start": 1.7400000095367432,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "Ship",
+      "start": 3.880000114440918,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "features",
+      "start": 3.880000114440918,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "Fix",
+      "start": 5.760000228881836,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "production",
+      "start": 5.760000228881836,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "bugs",
+      "start": 6.460000038146973,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "Document",
+      "start": 8.220000267028809,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "systems",
+      "start": 8.220000267028809,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "that",
+      "start": 8.859999656677246,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "confuse",
+      "start": 9.380000114440918,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "others",
+      "start": 9.920000076293945,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "Your",
+      "start": 11.319999694824219,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "work",
+      "start": 11.539999961853027,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "should",
+      "start": 11.899999618530273,
+      "end": 12.319999694824219
+    },
+    {
+      "word": "be",
+      "start": 12.319999694824219,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "visible",
+      "start": 12.65999984741211,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "to",
+      "start": 12.920000076293945,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "your",
+      "start": 13.300000190734863,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "team",
+      "start": 13.600000381469727,
+      "end": 13.859999656677246
+    },
+    {
+      "word": "and",
+      "start": 13.859999656677246,
+      "end": 14.5
+    },
+    {
+      "word": "leadership",
+      "start": 14.5,
+      "end": 14.819999694824219
+    },
+    {
+      "word": "Impact",
+      "start": 16.18000030517578,
+      "end": 16.18000030517578
+    },
+    {
+      "word": "that",
+      "start": 16.18000030517578,
+      "end": 16.780000686645508
+    },
+    {
+      "word": "nobody",
+      "start": 16.780000686645508,
+      "end": 17.219999313354492
+    },
+    {
+      "word": "sees",
+      "start": 17.219999313354492,
+      "end": 17.700000762939453
+    },
+    {
+      "word": "doesn't",
+      "start": 17.700000762939453,
+      "end": 18.360000610351562
+    },
+    {
+      "word": "advance",
+      "start": 18.360000610351562,
+      "end": 18.760000228881836
+    },
+    {
+      "word": "your",
+      "start": 18.760000228881836,
+      "end": 19.299999237060547
+    },
+    {
+      "word": "career",
+      "start": 19.299999237060547,
+      "end": 19.299999237060547
+    }
+  ]
+}

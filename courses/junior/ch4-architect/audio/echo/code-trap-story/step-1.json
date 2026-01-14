@@ -1,0 +1,145 @@
+{
+  "storyId": "code-trap-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Junior Starts Coding. The junior approach: read the ticket, open the IDE, start coding immediately. It feels productive! But halfway through, you realize your approach won't work.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "Junior",
+      "start": 0,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "starts",
+      "start": 1.0800000429153442,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "coding",
+      "start": 1.5800000429153442,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "The",
+      "start": 2.9800000190734863,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "Junior",
+      "start": 3.0999999046325684,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "Approach",
+      "start": 3.4200000762939453,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "Read",
+      "start": 4.579999923706055,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 4.579999923706055,
+      "end": 5
+    },
+    {
+      "word": "ticket",
+      "start": 5,
+      "end": 5
+    },
+    {
+      "word": "open",
+      "start": 5.679999828338623,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "the",
+      "start": 5.679999828338623,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "IDE",
+      "start": 5.980000019073486,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "start",
+      "start": 6.880000114440918,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "coding",
+      "start": 7.019999980926514,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "immediately",
+      "start": 7.260000228881836,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "It",
+      "start": 8.260000228881836,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "feels",
+      "start": 8.899999618530273,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "productive",
+      "start": 9.15999984741211,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "but",
+      "start": 9.9399995803833,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "halfway",
+      "start": 10.420000076293945,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "through",
+      "start": 10.720000267028809,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "you",
+      "start": 11.039999961853027,
+      "end": 11.460000038146973
+    },
+    {
+      "word": "realize",
+      "start": 11.460000038146973,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "your",
+      "start": 11.859999656677246,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "approach",
+      "start": 12.119999885559082,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "won't",
+      "start": 12.380000114440918,
+      "end": 12.65999984741211
+    },
+    {
+      "word": "work",
+      "start": 12.65999984741211,
+      "end": 12.979999542236328
+    }
+  ]
+}

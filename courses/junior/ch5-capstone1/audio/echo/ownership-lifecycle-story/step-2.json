@@ -1,0 +1,150 @@
+{
+  "storyId": "ownership-lifecycle-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Design Phase. Create your design document with architecture diagrams, data flows, and API contracts. List every edge case you can think of. Get this approved before you code.",
+  "duration": 12.449999809265137,
+  "words": [
+    {
+      "word": "Design",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "phase",
+      "start": 0.699999988079071,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Create",
+      "start": 1.9800000190734863,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "your",
+      "start": 1.9800000190734863,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "design",
+      "start": 2.299999952316284,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "document",
+      "start": 2.7200000286102295,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "with",
+      "start": 3.140000104904175,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "architecture",
+      "start": 3.5199999809265137,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "diagrams",
+      "start": 4.119999885559082,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "data",
+      "start": 5.300000190734863,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "flows",
+      "start": 5.460000038146973,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "and",
+      "start": 6.119999885559082,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "API",
+      "start": 6.460000038146973,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "contracts",
+      "start": 6.71999979019165,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "List",
+      "start": 8.100000381469727,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "every",
+      "start": 8.100000381469727,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "edge",
+      "start": 8.640000343322754,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "case",
+      "start": 8.9399995803833,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "you",
+      "start": 9.180000305175781,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "can",
+      "start": 9.319999694824219,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "think",
+      "start": 9.539999961853027,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "of",
+      "start": 9.720000267028809,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "Get",
+      "start": 10.600000381469727,
+      "end": 10.600000381469727
+    },
+    {
+      "word": "this",
+      "start": 10.600000381469727,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "approved",
+      "start": 10.9399995803833,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "before",
+      "start": 11.279999732971191,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "you",
+      "start": 11.699999809265137,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "code",
+      "start": 12.140000343322754,
+      "end": 12.180000305175781
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Step 1: Clarify. What EXACTLY is the requirement? Spend thirty minutes asking questions. What's in scope? What's not included? What are the success criteria? Vague requirements equal wasted work.",
+  "duration": 17.950000762939453,
+  "words": [
+    {
+      "word": "Step",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "1",
+      "start": 0.5799999833106995,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "Clarify",
+      "start": 2.0199999809265137,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "What",
+      "start": 3.299999952316284,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "exactly",
+      "start": 3.3399999141693115,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "is",
+      "start": 4.139999866485596,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "the",
+      "start": 4.559999942779541,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "requirement",
+      "start": 4.78000020980835,
+      "end": 5.179999828338623
+    },
+    {
+      "word": "Spend",
+      "start": 6.420000076293945,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "30",
+      "start": 6.480000019073486,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "minutes",
+      "start": 7.039999961853027,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "asking",
+      "start": 7.360000133514404,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "questions",
+      "start": 7.820000171661377,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "What's",
+      "start": 9.239999771118164,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "in",
+      "start": 9.460000038146973,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "scope",
+      "start": 9.960000038146973,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "What's",
+      "start": 10.539999961853027,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "not",
+      "start": 10.920000076293945,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "included",
+      "start": 11.260000228881836,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "What",
+      "start": 12.300000190734863,
+      "end": 12.680000305175781
+    },
+    {
+      "word": "are",
+      "start": 12.680000305175781,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "the",
+      "start": 12.920000076293945,
+      "end": 13.15999984741211
+    },
+    {
+      "word": "success",
+      "start": 13.15999984741211,
+      "end": 13.520000457763672
+    },
+    {
+      "word": "criteria",
+      "start": 13.520000457763672,
+      "end": 14
+    },
+    {
+      "word": "Vague",
+      "start": 15.140000343322754,
+      "end": 15.300000190734863
+    },
+    {
+      "word": "requirements",
+      "start": 15.300000190734863,
+      "end": 15.880000114440918
+    },
+    {
+      "word": "equal",
+      "start": 15.880000114440918,
+      "end": 16.639999389648438
+    },
+    {
+      "word": "wasted",
+      "start": 16.639999389648438,
+      "end": 17.059999465942383
+    },
+    {
+      "word": "work",
+      "start": 17.059999465942383,
+      "end": 17.520000457763672
+    }
+  ]
+}

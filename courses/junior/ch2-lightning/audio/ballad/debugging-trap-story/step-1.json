@@ -1,0 +1,155 @@
+{
+  "storyId": "debugging-trap-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Junior: Stare at Code. Juniors start by staring at the display code. It looks fine. So they add print statements everywhere. Four hours later, they're more confused than ever.",
+  "duration": 13.75,
+  "words": [
+    {
+      "word": "JUNIOR",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "Stare",
+      "start": 1.5199999809265137,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "at",
+      "start": 1.559999942779541,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "code",
+      "start": 1.9800000190734863,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "Juniors",
+      "start": 3.4000000953674316,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "start",
+      "start": 3.4000000953674316,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "by",
+      "start": 3.8399999141693115,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "staring",
+      "start": 4.239999771118164,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "at",
+      "start": 4.539999961853027,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "the",
+      "start": 4.820000171661377,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "display",
+      "start": 4.980000019073486,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "code",
+      "start": 5.340000152587891,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "It",
+      "start": 6.440000057220459,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "looks",
+      "start": 6.539999961853027,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "fine",
+      "start": 6.760000228881836,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "so",
+      "start": 7.519999980926514,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "they",
+      "start": 7.900000095367432,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "add",
+      "start": 8.079999923706055,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "print",
+      "start": 8.380000114440918,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "statements",
+      "start": 8.720000267028809,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "everywhere",
+      "start": 9.140000343322754,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "Four",
+      "start": 10.699999809265137,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "hours",
+      "start": 10.819999694824219,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "later",
+      "start": 11.0600004196167,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "they're",
+      "start": 11.800000190734863,
+      "end": 12
+    },
+    {
+      "word": "more",
+      "start": 12,
+      "end": 12.319999694824219
+    },
+    {
+      "word": "confused",
+      "start": 12.319999694824219,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "than",
+      "start": 12.84000015258789,
+      "end": 13.319999694824219
+    },
+    {
+      "word": "ever",
+      "start": 13.319999694824219,
+      "end": 13.579999923706055
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "storyId": "checklist-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Error Handling. Next, errors. Implement retry with exponential backoff — wait longer between each attempt. Add a circuit breaker to stop cascading failures. Plan graceful degradation. And always set timeouts — never wait forever.",
+  "duration": 17.110000610351562,
+  "words": [
+    {
+      "word": "Error",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "handling",
+      "start": 0.46000000834465027,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "Next",
+      "start": 1.7599999904632568,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "errors",
+      "start": 2.200000047683716,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "Implement",
+      "start": 3.4800000190734863,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "retry",
+      "start": 3.4800000190734863,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "with",
+      "start": 4.079999923706055,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "exponential",
+      "start": 4.460000038146973,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "backoff",
+      "start": 5.019999980926514,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "Wait",
+      "start": 6.440000057220459,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "longer",
+      "start": 6.440000057220459,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "between",
+      "start": 6.78000020980835,
+      "end": 7.079999923706055
+    },
+    {
+      "word": "each",
+      "start": 7.079999923706055,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "attempt",
+      "start": 7.460000038146973,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "Add",
+      "start": 8.34000015258789,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "a",
+      "start": 8.399999618530273,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "circuit",
+      "start": 8.800000190734863,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "breaker",
+      "start": 8.800000190734863,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "to",
+      "start": 9.119999885559082,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "stop",
+      "start": 9.539999961853027,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "cascading",
+      "start": 9.859999656677246,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "failures",
+      "start": 10.380000114440918,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "Plan",
+      "start": 11.819999694824219,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "graceful",
+      "start": 11.859999656677246,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "degradation",
+      "start": 12.380000114440918,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "And",
+      "start": 13.579999923706055,
+      "end": 13.760000228881836
+    },
+    {
+      "word": "always",
+      "start": 13.760000228881836,
+      "end": 14.100000381469727
+    },
+    {
+      "word": "set",
+      "start": 14.100000381469727,
+      "end": 14.420000076293945
+    },
+    {
+      "word": "timeouts",
+      "start": 14.420000076293945,
+      "end": 14.920000076293945
+    },
+    {
+      "word": "Never",
+      "start": 15.619999885559082,
+      "end": 15.680000305175781
+    },
+    {
+      "word": "wait",
+      "start": 15.680000305175781,
+      "end": 16
+    },
+    {
+      "word": "forever",
+      "start": 16,
+      "end": 16.31999969482422
+    }
+  ]
+}

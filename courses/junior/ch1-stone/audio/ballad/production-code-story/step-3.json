@@ -1,0 +1,115 @@
+{
+  "storyId": "production-code-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Add Input Validation. Never trust input. Validate parameters. Use parameterized queries to prevent SQL injection. Raise meaningful errors for invalid inputs. Defense in depth.",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "Add",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "input",
+      "start": 0.5400000214576721,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "validation",
+      "start": 1.0399999618530273,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "Never",
+      "start": 2.7799999713897705,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "trust",
+      "start": 2.7799999713897705,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "input",
+      "start": 3.180000066757202,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "Validate",
+      "start": 4.519999980926514,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "parameters",
+      "start": 4.800000190734863,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "Use",
+      "start": 6.28000020980835,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "parameterized",
+      "start": 6.300000190734863,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "queries",
+      "start": 7.199999809265137,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "to",
+      "start": 7.539999961853027,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "prevent",
+      "start": 8.0600004196167,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "SQL",
+      "start": 8.300000190734863,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "injection",
+      "start": 8.859999656677246,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "Raise",
+      "start": 10.579999923706055,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "meaningful",
+      "start": 10.579999923706055,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "errors",
+      "start": 11.180000305175781,
+      "end": 11.579999923706055
+    },
+    {
+      "word": "for",
+      "start": 11.579999923706055,
+      "end": 12.260000228881836
+    },
+    {
+      "word": "invalid",
+      "start": 12.260000228881836,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "inputs",
+      "start": 12.619999885559082,
+      "end": 13
+    }
+  ]
+}

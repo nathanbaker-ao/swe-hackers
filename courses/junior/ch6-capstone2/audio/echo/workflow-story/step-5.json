@@ -1,0 +1,160 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Phase 6: You Test. AI often misses edge cases. Write tests yourself, or have AI generate them—but verify every assertion. Testing is where you ensure quality matches your standards.",
+  "duration": 13.84000015258789,
+  "words": [
+    {
+      "word": "Phase",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "6",
+      "start": 0.5,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "You",
+      "start": 1.600000023841858,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "test",
+      "start": 1.7599999904632568,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "AI",
+      "start": 2.9800000190734863,
+      "end": 3
+    },
+    {
+      "word": "often",
+      "start": 3,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "misses",
+      "start": 3.4600000381469727,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "edge",
+      "start": 3.740000009536743,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "cases",
+      "start": 4.159999847412109,
+      "end": 4.5
+    },
+    {
+      "word": "Write",
+      "start": 5.239999771118164,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "tests",
+      "start": 5.320000171661377,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "yourself",
+      "start": 5.639999866485596,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "or",
+      "start": 6.179999828338623,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "have",
+      "start": 6.739999771118164,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "AI",
+      "start": 6.980000019073486,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "generate",
+      "start": 7.380000114440918,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "them",
+      "start": 7.860000133514404,
+      "end": 8.119999885559082
+    },
+    {
+      "word": "but",
+      "start": 8.5,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "verify",
+      "start": 8.720000267028809,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "every",
+      "start": 9.119999885559082,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "assertion",
+      "start": 9.680000305175781,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "Testing",
+      "start": 10.979999542236328,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "is",
+      "start": 10.979999542236328,
+      "end": 11.220000267028809
+    },
+    {
+      "word": "where",
+      "start": 11.220000267028809,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "you",
+      "start": 11.34000015258789,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "ensure",
+      "start": 11.539999961853027,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "quality",
+      "start": 11.819999694824219,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "matches",
+      "start": 12.399999618530273,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "your",
+      "start": 12.739999771118164,
+      "end": 13.100000381469727
+    },
+    {
+      "word": "standards",
+      "start": 13.100000381469727,
+      "end": 13.420000076293945
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "storyId": "production-code-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Add Input Validation. Never trust input. Validate parameters. Use parameterized queries to prevent SQL injection. Raise meaningful errors for invalid inputs. Defense in depth.",
+  "duration": 13.319999694824219,
+  "words": [
+    {
+      "word": "Add",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "input",
+      "start": 0.5199999809265137,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "validation",
+      "start": 0.8999999761581421,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "Never",
+      "start": 2.359999895095825,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "trust",
+      "start": 2.359999895095825,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "input",
+      "start": 2.799999952316284,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "Validate",
+      "start": 4.019999980926514,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "parameters",
+      "start": 4.21999979019165,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "Use",
+      "start": 5.440000057220459,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "parameterized",
+      "start": 5.460000038146973,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "queries",
+      "start": 6.320000171661377,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "to",
+      "start": 6.599999904632568,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "prevent",
+      "start": 6.940000057220459,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "SQL",
+      "start": 7.179999828338623,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "injection",
+      "start": 7.800000190734863,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "Raise",
+      "start": 9.4399995803833,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "meaningful",
+      "start": 9.4399995803833,
+      "end": 10
+    },
+    {
+      "word": "errors",
+      "start": 10,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "for",
+      "start": 10.4399995803833,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "invalid",
+      "start": 10.899999618530273,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "inputs",
+      "start": 11.260000228881836,
+      "end": 11.640000343322754
+    },
+    {
+      "word": "Defense",
+      "start": 12.5600004196167,
+      "end": 12.579999923706055
+    },
+    {
+      "word": "in",
+      "start": 12.579999923706055,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "depth",
+      "start": 12.84000015258789,
+      "end": 13.0600004196167
+    }
+  ]
+}

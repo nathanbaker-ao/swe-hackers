@@ -1,0 +1,150 @@
+{
+  "storyId": "integration-trap-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Task Arrives. Picture this: your manager says integrate with Stripe for payments. Seems straightforward, right? The docs have examples. Stack Overflow has answers. What could go wrong?",
+  "duration": 15.039999961853027,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.36000001430511475
+    },
+    {
+      "word": "task",
+      "start": 0.36000001430511475,
+      "end": 1
+    },
+    {
+      "word": "arrives",
+      "start": 1,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "Picture",
+      "start": 2.799999952316284,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "this",
+      "start": 2.940000057220459,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "Your",
+      "start": 3.9000000953674316,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "manager",
+      "start": 4.139999866485596,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "says",
+      "start": 4.460000038146973,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "integrate",
+      "start": 5.199999809265137,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "with",
+      "start": 5.539999961853027,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "Stripe",
+      "start": 6.139999866485596,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "for",
+      "start": 6.420000076293945,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "Payments",
+      "start": 6.820000171661377,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "Seems",
+      "start": 7.920000076293945,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "straightforward",
+      "start": 8.140000343322754,
+      "end": 8.779999732971191
+    },
+    {
+      "word": "right",
+      "start": 8.920000076293945,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "The",
+      "start": 9.720000267028809,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "docs",
+      "start": 10.039999961853027,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "have",
+      "start": 10.319999694824219,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "examples",
+      "start": 10.640000343322754,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "Stack",
+      "start": 11.979999542236328,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "Overflow",
+      "start": 12.180000305175781,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "has",
+      "start": 12.460000038146973,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "answers",
+      "start": 12.819999694824219,
+      "end": 13.220000267028809
+    },
+    {
+      "word": "What",
+      "start": 13.819999694824219,
+      "end": 14.020000457763672
+    },
+    {
+      "word": "could",
+      "start": 14.020000457763672,
+      "end": 14.300000190734863
+    },
+    {
+      "word": "go",
+      "start": 14.300000190734863,
+      "end": 14.5600004196167
+    },
+    {
+      "word": "wrong",
+      "start": 14.5600004196167,
+      "end": 14.819999694824219
+    }
+  ]
+}

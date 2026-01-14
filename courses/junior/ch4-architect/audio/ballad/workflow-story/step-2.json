@@ -1,0 +1,180 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Step 3: Edge Cases. Thirty minutes on what could go wrong. Invalid input? External service failures? User does something unexpected? Race conditions? Finding these on paper is free—finding them in code is expensive.",
+  "duration": 17.709999084472656,
+  "words": [
+    {
+      "word": "Step",
+      "start": 0,
+      "end": 0.47999998927116394
+    },
+    {
+      "word": "3",
+      "start": 0.47999998927116394,
+      "end": 0.9800000190734863
+    },
+    {
+      "word": "Edge",
+      "start": 1.9800000190734863,
+      "end": 2.119999885559082
+    },
+    {
+      "word": "cases",
+      "start": 2.119999885559082,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "30",
+      "start": 3.5399999618530273,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "minutes",
+      "start": 3.859999895095825,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "on",
+      "start": 4.139999866485596,
+      "end": 4.5
+    },
+    {
+      "word": "what",
+      "start": 4.5,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "could",
+      "start": 4.699999809265137,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "go",
+      "start": 4.900000095367432,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "wrong",
+      "start": 5.139999866485596,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "Invalid",
+      "start": 6.28000020980835,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "input",
+      "start": 6.519999980926514,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "External",
+      "start": 7.940000057220459,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "service",
+      "start": 7.940000057220459,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "failures",
+      "start": 8.399999618530273,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "User",
+      "start": 9.699999809265137,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "does",
+      "start": 9.720000267028809,
+      "end": 10
+    },
+    {
+      "word": "something",
+      "start": 10,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "unexpected",
+      "start": 10.359999656677246,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "Race",
+      "start": 11.619999885559082,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "conditions",
+      "start": 11.720000267028809,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "Finding",
+      "start": 13.300000190734863,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "these",
+      "start": 13.300000190734863,
+      "end": 13.65999984741211
+    },
+    {
+      "word": "on",
+      "start": 13.65999984741211,
+      "end": 13.920000076293945
+    },
+    {
+      "word": "paper",
+      "start": 13.920000076293945,
+      "end": 14.15999984741211
+    },
+    {
+      "word": "is",
+      "start": 14.15999984741211,
+      "end": 14.479999542236328
+    },
+    {
+      "word": "free",
+      "start": 14.479999542236328,
+      "end": 14.779999732971191
+    },
+    {
+      "word": "Finding",
+      "start": 15.600000381469727,
+      "end": 15.640000343322754
+    },
+    {
+      "word": "them",
+      "start": 15.640000343322754,
+      "end": 15.819999694824219
+    },
+    {
+      "word": "in",
+      "start": 15.819999694824219,
+      "end": 16.360000610351562
+    },
+    {
+      "word": "code",
+      "start": 16.360000610351562,
+      "end": 16.360000610351562
+    },
+    {
+      "word": "is",
+      "start": 16.360000610351562,
+      "end": 16.920000076293945
+    },
+    {
+      "word": "expensive",
+      "start": 16.920000076293945,
+      "end": 17.360000610351562
+    }
+  ]
+}

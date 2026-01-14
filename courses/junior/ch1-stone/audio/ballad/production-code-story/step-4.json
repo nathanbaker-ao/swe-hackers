@@ -1,0 +1,170 @@
+{
+  "storyId": "production-code-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Senior Code: Production Ready. The result is production-ready code. It's secure, maintainable, and self-documenting. And here's the secret: you can ask AI to transform junior code into senior code instantly!",
+  "duration": 18.15999984741211,
+  "words": [
+    {
+      "word": "Senior",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "Code",
+      "start": 0.6800000071525574,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "production",
+      "start": 1.7599999904632568,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "ready",
+      "start": 2.2200000286102295,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "The",
+      "start": 3.4200000762939453,
+      "end": 3.5
+    },
+    {
+      "word": "result",
+      "start": 3.5,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "is",
+      "start": 3.9200000762939453,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "production",
+      "start": 4.559999942779541,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "ready",
+      "start": 5.119999885559082,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "code",
+      "start": 5.519999980926514,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "It's",
+      "start": 6.78000020980835,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "secure",
+      "start": 6.920000076293945,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "maintainable",
+      "start": 8.279999732971191,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "and",
+      "start": 8.819999694824219,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "self",
+      "start": 9.15999984741211,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "documenting",
+      "start": 9.420000076293945,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "And",
+      "start": 10.619999885559082,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "here's",
+      "start": 11.020000457763672,
+      "end": 11.279999732971191
+    },
+    {
+      "word": "the",
+      "start": 11.279999732971191,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "secret",
+      "start": 11.859999656677246,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "You",
+      "start": 12.5,
+      "end": 12.699999809265137
+    },
+    {
+      "word": "can",
+      "start": 12.699999809265137,
+      "end": 12.9399995803833
+    },
+    {
+      "word": "ask",
+      "start": 12.9399995803833,
+      "end": 13.15999984741211
+    },
+    {
+      "word": "AI",
+      "start": 13.15999984741211,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "to",
+      "start": 13.600000381469727,
+      "end": 14.199999809265137
+    },
+    {
+      "word": "transform",
+      "start": 14.199999809265137,
+      "end": 14.640000343322754
+    },
+    {
+      "word": "junior",
+      "start": 14.640000343322754,
+      "end": 15.140000343322754
+    },
+    {
+      "word": "code",
+      "start": 15.140000343322754,
+      "end": 15.5
+    },
+    {
+      "word": "into",
+      "start": 15.5,
+      "end": 16.200000762939453
+    },
+    {
+      "word": "senior",
+      "start": 16.200000762939453,
+      "end": 16.579999923706055
+    },
+    {
+      "word": "code",
+      "start": 16.579999923706055,
+      "end": 17.239999771118164
+    },
+    {
+      "word": "instantly",
+      "start": 17.239999771118164,
+      "end": 17.84000015258789
+    }
+  ]
+}

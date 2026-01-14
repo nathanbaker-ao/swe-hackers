@@ -1,0 +1,125 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "You Learned Design. You design before coding now. Diagrams, edge cases, interfaces. When you open your IDE, you already know what you're building.",
+  "duration": 11.65999984741211,
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "learned",
+      "start": 0.5,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "design",
+      "start": 0.9599999785423279,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "You",
+      "start": 2.119999885559082,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "design",
+      "start": 2.1600000858306885,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "before",
+      "start": 2.740000009536743,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "coding",
+      "start": 3.259999990463257,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "now",
+      "start": 3.619999885559082,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "Diagrams",
+      "start": 4.840000152587891,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "edge",
+      "start": 5.820000171661377,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "cases",
+      "start": 5.900000095367432,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "interfaces",
+      "start": 6.860000133514404,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "When",
+      "start": 7.940000057220459,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "you",
+      "start": 7.980000019073486,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "open",
+      "start": 8.239999771118164,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "your",
+      "start": 8.539999961853027,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "IDE",
+      "start": 8.960000038146973,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "you",
+      "start": 9.800000190734863,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "already",
+      "start": 9.920000076293945,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "know",
+      "start": 10.380000114440918,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "what",
+      "start": 10.65999984741211,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "you're",
+      "start": 10.9399995803833,
+      "end": 11.420000076293945
+    },
+    {
+      "word": "building",
+      "start": 11.420000076293945,
+      "end": 11.420000076293945
+    }
+  ]
+}

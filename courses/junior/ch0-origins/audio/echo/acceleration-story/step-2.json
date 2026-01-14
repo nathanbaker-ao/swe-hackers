@@ -1,0 +1,150 @@
+{
+  "storyId": "acceleration-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "AI Acceleration. AI changes everything. Ten times faster learning. Eighty percent less time on boilerplate. You can focus on architecture and systems thinking while AI handles implementation details.",
+  "duration": 17.520000457763672,
+  "words": [
+    {
+      "word": "AI",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "acceleration",
+      "start": 0.6200000047683716,
+      "end": 1.7200000286102295
+    },
+    {
+      "word": "AI",
+      "start": 3.359999895095825,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "changes",
+      "start": 3.359999895095825,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "everything",
+      "start": 3.940000057220459,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "10",
+      "start": 5.260000228881836,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "times",
+      "start": 5.380000114440918,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "faster",
+      "start": 5.840000152587891,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "learning",
+      "start": 6.28000020980835,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "80",
+      "start": 7.360000133514404,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "",
+      "start": 7.619999885559082,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "less",
+      "start": 8.0600004196167,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "time",
+      "start": 8.34000015258789,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "on",
+      "start": 8.720000267028809,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "boilerplate",
+      "start": 9.0600004196167,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "You",
+      "start": 10.220000267028809,
+      "end": 10.279999732971191
+    },
+    {
+      "word": "can",
+      "start": 10.279999732971191,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "focus",
+      "start": 10.5600004196167,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "on",
+      "start": 10.819999694824219,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "architecture",
+      "start": 11.34000015258789,
+      "end": 11.800000190734863
+    },
+    {
+      "word": "and",
+      "start": 11.800000190734863,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "systems",
+      "start": 12.399999618530273,
+      "end": 12.779999732971191
+    },
+    {
+      "word": "thinking",
+      "start": 12.779999732971191,
+      "end": 13.180000305175781
+    },
+    {
+      "word": "while",
+      "start": 13.180000305175781,
+      "end": 13.800000190734863
+    },
+    {
+      "word": "AI",
+      "start": 13.800000190734863,
+      "end": 14.239999771118164
+    },
+    {
+      "word": "handles",
+      "start": 14.239999771118164,
+      "end": 14.760000228881836
+    },
+    {
+      "word": "implementation",
+      "start": 14.760000228881836,
+      "end": 15.520000457763672
+    },
+    {
+      "word": "details",
+      "start": 15.520000457763672,
+      "end": 16.020000457763672
+    }
+  ]
+}
