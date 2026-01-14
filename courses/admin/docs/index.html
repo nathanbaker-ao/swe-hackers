@@ -341,42 +341,15 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      // Wait for Firebase auth to fully restore session
-      const user = await new Promise((resolve) => {
-        const checkAuth = () => {
-          // Initialize Firebase if not done
-          if (window.FirebaseApp && !window.FirebaseApp.getAuth()) {
-            window.FirebaseApp.init();
-          }
-          const auth = window.FirebaseApp?.getAuth();
-          if (!auth) {
-            setTimeout(checkAuth, 100);
-            return;
-          }
-          
-          // Listen for auth state - Firebase fires this after checking persisted session
-          let resolved = false;
-          const unsubscribe = auth.onAuthStateChanged((user) => {
-            if (resolved) return;
-            
-            if (user) {
-              // User found, resolve immediately
-              resolved = true;
-              unsubscribe();
-              resolve(user);
-            } else {
-              // No user yet - wait a bit for session restoration
-              setTimeout(() => {
-                if (resolved) return;
-                resolved = true;
-                unsubscribe();
-                resolve(auth.currentUser); // Check one more time
-              }, 500);
-            }
-          });
-        };
-        checkAuth();
-      });
+      // Initialize Firebase and Auth
+      if (!window.FirebaseApp.init()) {
+        console.error('Firebase initialization failed');
+        return;
+      }
+      window.AuthService.init();
+      
+      // Wait for auth state
+      const user = await window.AuthService.waitForAuthState();
       
       if (!user) {
         sessionStorage.setItem('redirectAfterLogin', window.location.href);
@@ -386,11 +359,9 @@
       
       console.log('👤 Team Docs - User authenticated:', user.email);
       
-      // Check if user is admin (super admin list check)
-      const SUPER_ADMIN_EMAILS = ['autonate.ai@gmail.com', 'autonateai@gmail.com'];
-      const isAdmin = SUPER_ADMIN_EMAILS.includes(user.email?.toLowerCase());
-      
-      if (!isAdmin) {
+      // Check admin access via Firestore RBAC
+      const permissions = await RBACService.getUserPermissions();
+      if (!permissions.isAdmin) {
         console.warn('Admin access denied for:', user.email);
         window.location.href = '../../catalog.html?access=denied';
         return;

@@ -319,27 +319,17 @@
   <script src="shared/quiz-system.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
-      // Wait for Firebase auth to fully restore session
-      const user = await new Promise((resolve) => {
-        const checkAuth = () => {
-          if (window.FirebaseApp && !window.FirebaseApp.getAuth()) { window.FirebaseApp.init(); }
-          const auth = window.FirebaseApp?.getAuth();
-          if (!auth) { setTimeout(checkAuth, 100); return; }
-          let resolved = false;
-          const unsubscribe = auth.onAuthStateChanged((u) => {
-            if (resolved) return;
-            if (u) { resolved = true; unsubscribe(); resolve(u); }
-            else { setTimeout(() => { if (!resolved) { resolved = true; unsubscribe(); resolve(auth.currentUser); } }, 500); }
-          });
-        };
-        checkAuth();
-      });
+      // Initialize Firebase and Auth
+      if (!window.FirebaseApp.init()) { console.error('Firebase initialization failed'); return; }
+      window.AuthService.init();
       
+      // Wait for auth state
+      const user = await window.AuthService.waitForAuthState();
       if (!user) { sessionStorage.setItem('redirectAfterLogin', window.location.href); window.location.href = '../../auth/login.html'; return; }
       
-      // Check admin access
-      const SUPER_ADMIN_EMAILS = ['autonate.ai@gmail.com', 'autonateai@gmail.com'];
-      if (!SUPER_ADMIN_EMAILS.includes(user.email?.toLowerCase())) { window.location.href = '../../catalog.html?access=denied'; return; }
+      // Check admin access via Firestore RBAC
+      const permissions = await RBACService.getUserPermissions();
+      if (!permissions.isAdmin) { window.location.href = '../../catalog.html?access=denied'; return; }
 
       DiagramUtils.initPageAnimations();
       DiagramUtils.setupBackToTop();
