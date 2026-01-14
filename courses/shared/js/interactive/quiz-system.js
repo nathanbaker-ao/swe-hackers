@@ -23,18 +23,40 @@
  */
 
 class Quiz {
-  constructor(containerId, questions) {
+  constructor(containerId, questions, options = {}) {
     this.containerId = containerId;
     this.container = document.getElementById(containerId);
     this.questions = questions;
     this.currentIndex = 0;
     this.answers = this.loadAnswers();
+    this.courseId = options.courseId || this.extractCourseId();
+    this.lessonId = options.lessonId || this.extractLessonId();
+    this.storyId = options.storyId || containerId.replace('-quiz', '');
+    this.startTime = Date.now();
     
     if (this.container) {
       this.init();
     } else {
       console.warn(`Quiz container '${containerId}' not found`);
     }
+  }
+  
+  extractCourseId() {
+    // Extract from body data attribute or URL
+    const bodyEl = document.querySelector('[data-course]');
+    if (bodyEl) return bodyEl.dataset.course;
+    
+    const pathMatch = window.location.pathname.match(/courses\/([^\/]+)/);
+    return pathMatch ? pathMatch[1] : 'unknown';
+  }
+  
+  extractLessonId() {
+    // Extract from body data attribute or URL  
+    const bodyEl = document.querySelector('[data-lesson]');
+    if (bodyEl) return bodyEl.dataset.lesson;
+    
+    const pathMatch = window.location.pathname.match(/\/([^\/]+)\/index\.html/);
+    return pathMatch ? pathMatch[1] : 'unknown';
   }
 
   loadAnswers() {
@@ -157,10 +179,114 @@ class Quiz {
     this.applyAnswer(questionIndex, this.answers[questionIndex]);
     this.updateProgress();
     this.updateDots();
+    
+    // Log to Firebase via DataService
+    this.logQuizAnswer(questionIndex, selectedOption, isCorrect);
 
     // Auto-advance after a delay
     if (this.currentIndex < this.questions.length - 1) {
       setTimeout(() => this.showQuestion(this.currentIndex + 1), 1500);
+    } else {
+      // Quiz complete - log final summary
+      this.logQuizCompletion();
+    }
+  }
+  
+  async logQuizAnswer(questionIndex, selectedOption, isCorrect) {
+    try {
+      // Check if DataService is available
+      if (!window.DataService || !window.FirebaseApp) {
+        console.log('🎯 DataService not available, skipping Firebase logging');
+        return;
+      }
+      
+      // Check if user is authenticated
+      const auth = window.FirebaseApp.getAuth();
+      if (!auth || !auth.currentUser) {
+        console.log('🎯 User not authenticated, skipping Firebase logging');
+        return;
+      }
+      
+      const question = this.questions[questionIndex];
+      const timeSpentMs = Date.now() - this.startTime;
+      
+      const attemptData = {
+        activityId: `${this.storyId}-q${questionIndex + 1}`,
+        activityType: 'quiz',
+        courseId: this.courseId,
+        lessonId: this.lessonId,
+        storyId: this.storyId,
+        questionIndex,
+        questionText: question.question,
+        attemptNumber: 1, // Could enhance to track retries
+        correct: isCorrect,
+        score: isCorrect ? 1.0 : 0.0,
+        timeSpentMs,
+        response: {
+          selected: selectedOption,
+          selectedText: question.options[selectedOption],
+          correctOption: question.correct,
+          correctText: question.options[question.correct]
+        },
+        metadata: {
+          totalQuestions: this.questions.length,
+          currentProgress: questionIndex + 1
+        },
+        startedAt: new Date(this.startTime).toISOString(),
+        completedAt: new Date().toISOString()
+      };
+      
+      console.log('🎯 Logging quiz answer:', attemptData);
+      await window.DataService.saveActivityAttempt(attemptData);
+      
+    } catch (error) {
+      console.error('🎯 Error logging quiz answer:', error);
+      // Don't throw - continue even if logging fails
+    }
+  }
+  
+  async logQuizCompletion() {
+    try {
+      if (!window.DataService || !window.FirebaseApp) return;
+      
+      const auth = window.FirebaseApp.getAuth();
+      if (!auth || !auth.currentUser) return;
+      
+      const score = this.getScore();
+      const timeSpentMs = Date.now() - this.startTime;
+      
+      const summaryData = {
+        activityId: `${this.storyId}-complete`,
+        activityType: 'quiz-summary',
+        courseId: this.courseId,
+        lessonId: this.lessonId,
+        storyId: this.storyId,
+        attemptNumber: 1,
+        correct: score.correct === score.total,
+        score: score.correct / score.total,
+        timeSpentMs,
+        response: {
+          totalQuestions: score.total,
+          correctAnswers: score.correct,
+          incorrectAnswers: score.total - score.correct,
+          percentageScore: Math.round((score.correct / score.total) * 100)
+        },
+        startedAt: new Date(this.startTime).toISOString(),
+        completedAt: new Date().toISOString()
+      };
+      
+      console.log('🎯 Logging quiz completion:', summaryData);
+      await window.DataService.saveActivityAttempt(summaryData);
+      
+      // Show completion toast
+      if (window.ActivityTracker?.showToast) {
+        window.ActivityTracker.showToast(
+          `🎉 Quiz complete! ${score.correct}/${score.total} correct`
+        );
+      }
+      
+    } catch (error) {
+      console.error('🎯 Error logging quiz completion:', error);
     }
   }
 

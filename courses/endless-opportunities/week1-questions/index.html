@@ -327,6 +327,15 @@
   <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
   
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  
+  <!-- Firebase & Data Services -->
+  <script src="../../shared/js/firebase-config.js"></script>
+  <script src="../../shared/js/data-service.js"></script>
+  
   <!-- Interactive Engines -->
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
@@ -335,6 +344,12 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize Firebase
+      if (window.FirebaseApp) {
+        window.FirebaseApp.init();
+        console.log('✅ Firebase initialized');
+      }
+      
       // Initialize page animations
       DiagramUtils.initPageAnimations();
       DiagramUtils.setupBackToTop();
