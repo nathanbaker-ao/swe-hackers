@@ -1,0 +1,140 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Find Insights. Patterns in your data reveal opportunities. What's missing? What could be better? Your insights guide what to build. Data without insight is just noise.",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Find",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "insights",
+      "start": 0.6600000262260437,
+      "end": 1.2799999713897705
+    },
+    {
+      "word": "Patterns",
+      "start": 2.4800000190734863,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "in",
+      "start": 2.4800000190734863,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "your",
+      "start": 2.7200000286102295,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "data",
+      "start": 2.9200000762939453,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "reveal",
+      "start": 3.1600000858306885,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "opportunities",
+      "start": 3.5999999046325684,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "What's",
+      "start": 5.079999923706055,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "missing",
+      "start": 5.579999923706055,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "What",
+      "start": 6.119999885559082,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "could",
+      "start": 6.179999828338623,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "be",
+      "start": 6.340000152587891,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "better",
+      "start": 6.579999923706055,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "Your",
+      "start": 7.679999828338623,
+      "end": 8
+    },
+    {
+      "word": "insights",
+      "start": 8,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "guide",
+      "start": 8.4399995803833,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "what",
+      "start": 8.859999656677246,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "to",
+      "start": 9.079999923706055,
+      "end": 9.5
+    },
+    {
+      "word": "build",
+      "start": 9.5,
+      "end": 9.5
+    },
+    {
+      "word": "Data",
+      "start": 10.539999961853027,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "without",
+      "start": 10.5600004196167,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "insight",
+      "start": 10.9399995803833,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "is",
+      "start": 11.319999694824219,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "just",
+      "start": 11.819999694824219,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "noise",
+      "start": 12.220000267028809,
+      "end": 12.539999961853027
+    }
+  ]
+}

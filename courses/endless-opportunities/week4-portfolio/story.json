@@ -1,0 +1,265 @@
+{
+  "pageId": "week4-portfolio",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Problem Solver Portfolio",
+    "icon": "🏆",
+    "themeColor": "capstone"
+  },
+  "stories": [
+    {
+      "id": "problem-solving-process-story",
+      "diagramId": "problem-solving-process",
+      "title": "The Problem-Solving Process",
+      "steps": [
+        {
+          "nodeId": "all-pieces",
+          "icon": "🎯",
+          "title": "You Have All the Pieces",
+          "narration": "You've learned to ask deep questions. You've learned to see and analyze data. You've learned to build real things. Now it's time to put it all together and solve a real problem.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "questions-step",
+          "edges": [{ "from": "all-pieces", "to": "questions-step" }],
+          "icon": "❓",
+          "title": "Start with Questions",
+          "narration": "Every solution starts with understanding. Go six levels deep to truly understand the problem. Don't jump to solutions—understand the root causes first.",
+          "connectsTo": "All the Pieces"
+        },
+        {
+          "nodeId": "data-step",
+          "edges": [{ "from": "questions-step", "to": "data-step" }],
+          "icon": "📊",
+          "title": "Gather Data",
+          "narration": "Collect information about your problem. What resources exist? What do people say? What specific data would help? Organize what you find and look for patterns.",
+          "connectsTo": "Questions"
+        },
+        {
+          "nodeId": "insight-step",
+          "edges": [{ "from": "data-step", "to": "insight-step" }],
+          "icon": "💡",
+          "title": "Find Insights",
+          "narration": "Patterns in your data reveal opportunities. What's missing? What could be better? Your insights guide what to build. Data without insight is just noise.",
+          "connectsTo": "Data"
+        },
+        {
+          "nodeId": "build-step",
+          "edges": [{ "from": "insight-step", "to": "build-step" }],
+          "icon": "🛠️",
+          "title": "Build the Solution",
+          "narration": "Now you build! Use Cursor and AI to create something that addresses the problem. Iterate—build a first version, test it, then improve. Real solutions evolve.",
+          "connectsTo": "Insights"
+        }
+      ]
+    },
+    {
+      "id": "capstone-journey-story",
+      "diagramId": "capstone-journey",
+      "title": "Building Your Capstone",
+      "steps": [
+        {
+          "nodeId": "choose-problem",
+          "icon": "🎯",
+          "title": "Choose Your Problem",
+          "narration": "Pick one problem to solve. It should be real—something you've actually observed. Specific—not too broad. And solvable—something you can actually address with a tool or resource.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "deep-understanding",
+          "edges": [{ "from": "choose-problem", "to": "deep-understanding" }],
+          "icon": "🔍",
+          "title": "Deep Understanding",
+          "narration": "Use ChatGPT to go six levels deep. Keep asking why about each answer. Document all six levels. This helps you build a better solution because you truly understand the problem.",
+          "connectsTo": "Choose Problem"
+        },
+        {
+          "nodeId": "gather-data",
+          "edges": [{ "from": "deep-understanding", "to": "gather-data" }],
+          "icon": "📊",
+          "title": "Gather Your Data",
+          "narration": "What resources or solutions already exist? What do people say about this problem? What specific data would help—locations, prices, reviews? Organize everything you find.",
+          "connectsTo": "Deep Understanding"
+        },
+        {
+          "nodeId": "build-with-ai",
+          "edges": [{ "from": "gather-data", "to": "build-with-ai" }],
+          "icon": "🤖",
+          "title": "Build with AI",
+          "narration": "Use Cursor to build your solution. Describe what you want, explain the problem, list the features. Make it professional and easy to use. Then iterate—improve based on what works.",
+          "connectsTo": "Gather Data"
+        },
+        {
+          "nodeId": "deploy-test",
+          "edges": [{ "from": "build-with-ai", "to": "deploy-test" }],
+          "icon": "🚀",
+          "title": "Deploy and Test",
+          "narration": "Put your solution on GitHub Pages so it's live on the internet. Share it with two or three people who might use it. Get their feedback, then make improvements. Real solutions need real users.",
+          "connectsTo": "Build with AI"
+        }
+      ]
+    },
+    {
+      "id": "portfolio-celebration-story",
+      "diagramId": "portfolio-celebration",
+      "title": "Your Complete Portfolio",
+      "steps": [
+        {
+          "nodeId": "portfolio-showcase",
+          "icon": "📁",
+          "title": "Your Portfolio",
+          "narration": "Your portfolio showcases everything you've learned. It includes work from each week plus your capstone project. This is proof that you can solve real problems.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "present-work",
+          "edges": [{ "from": "portfolio-showcase", "to": "present-work" }],
+          "icon": "🎤",
+          "title": "Present Your Work",
+          "narration": "You'll present your capstone to the group. Cover the problem, your research, the data you gathered, demo your solution, and share what you learned. Keep it short—three to five minutes.",
+          "connectsTo": "Portfolio"
+        },
+        {
+          "nodeId": "show-dont-tell",
+          "edges": [{ "from": "present-work", "to": "show-dont-tell" }],
+          "icon": "👀",
+          "title": "Show, Don't Tell",
+          "narration": "Demo your actual project. Let them see it work. Quality over quantity. Be proud—you built something real. That's something most people never do.",
+          "connectsTo": "Present"
+        },
+        {
+          "nodeId": "youre-a-builder",
+          "edges": [{ "from": "show-dont-tell", "to": "youre-a-builder" }],
+          "icon": "🎓",
+          "title": "You're a Builder Now",
+          "narration": "Congratulations! You've completed the academy. You're not just a consumer of technology anymore. You're a builder. You're a problem solver. The world needs more people like you.",
+          "connectsTo": "Show Don't Tell"
+        },
+        {
+          "nodeId": "keep-going",
+          "edges": [{ "from": "youre-a-builder", "to": "keep-going" }],
+          "icon": "🚀",
+          "title": "Keep Going",
+          "narration": "This is just the beginning. Keep building, stay curious, help others, and level up. The best time to start solving problems was yesterday. The second best time is right now. You have the skills—now go use them!",
+          "connectsTo": "You're a Builder"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "problem-solving-process-story",
+      "questions": [
+        {
+          "question": "What's the first step in the problem-solving process?",
+          "options": [
+            "Jump straight to building a solution",
+            "Ask deep questions to understand the problem",
+            "Copy what others have done",
+            "Wait for someone to tell you what to do"
+          ],
+          "correct": 1,
+          "explanation": "Understanding comes before building. Go six levels deep with questions to truly understand the root causes before designing a solution."
+        },
+        {
+          "question": "Why do we gather data before building?",
+          "options": [
+            "To make the project take longer",
+            "Data isn't really necessary",
+            "To find patterns and insights that guide what to build",
+            "To impress our teachers"
+          ],
+          "correct": 2,
+          "explanation": "Data reveals patterns and opportunities. Without insights from data, you might build the wrong thing. Data without insight is just noise."
+        },
+        {
+          "question": "What's the relationship between insight and building?",
+          "options": [
+            "They're not related",
+            "Insights guide what to build—they show what's missing or could be better",
+            "Building comes first, insights come later",
+            "You only need one or the other"
+          ],
+          "correct": 1,
+          "explanation": "Insights from your data guide what to build. They reveal what's missing, what could be better, and where opportunities exist."
+        }
+      ]
+    },
+    {
+      "storyId": "capstone-journey-story",
+      "questions": [
+        {
+          "question": "What makes a good capstone problem?",
+          "options": [
+            "It should be as broad as possible, like 'fix education'",
+            "It should be real, specific, and solvable",
+            "It should be something nobody has ever thought of",
+            "It should require no research"
+          ],
+          "correct": 1,
+          "explanation": "Good capstone problems are real (actually observed), specific (not too broad), and solvable (you can address them with a tool or resource)."
+        },
+        {
+          "question": "Why go six levels deep on your capstone problem?",
+          "options": [
+            "To waste time before building",
+            "Because six is a lucky number",
+            "To truly understand root causes and build a better solution",
+            "Teachers require it"
+          ],
+          "correct": 2,
+          "explanation": "Going six levels deep helps you understand the real root causes. This leads to a better solution because you're addressing the actual problem, not just symptoms."
+        },
+        {
+          "question": "After building your first version, what should you do?",
+          "options": [
+            "Consider it done and move on",
+            "Delete it and start over",
+            "Test it, get feedback, and make improvements",
+            "Hide it from everyone"
+          ],
+          "correct": 2,
+          "explanation": "Real solutions evolve through iteration. Share with 2-3 potential users, get their feedback, and improve based on what works and what's confusing."
+        }
+      ]
+    },
+    {
+      "storyId": "portfolio-celebration-story",
+      "questions": [
+        {
+          "question": "What should your capstone presentation include?",
+          "options": [
+            "Just show the code",
+            "The problem, research, data, demo of solution, and what you learned",
+            "Only talk about what went wrong",
+            "Read directly from a script for 30 minutes"
+          ],
+          "correct": 1,
+          "explanation": "A good presentation covers the problem, your research (6 levels deep), data and patterns you found, a demo of your solution, and what you learned."
+        },
+        {
+          "question": "What does 'show, don't tell' mean for your presentation?",
+          "options": [
+            "Use lots of words on your slides",
+            "Demo your actual project and let them see it work",
+            "Don't speak at all",
+            "Only use pictures"
+          ],
+          "correct": 1,
+          "explanation": "Instead of just describing your project, demo it! Let the audience see it actually work. A working demo is more powerful than any description."
+        },
+        {
+          "question": "After completing this academy, what are you now?",
+          "options": [
+            "Just another student",
+            "A consumer of technology",
+            "A builder and problem solver",
+            "Someone who needs to wait for permission"
+          ],
+          "correct": 2,
+          "explanation": "You're not just a consumer anymore—you're a builder and a problem solver. You have skills most adults don't have. The world needs more people like you!"
+        }
+      ]
+    }
+  ]
+}

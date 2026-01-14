@@ -1,0 +1,289 @@
+{
+  "pageId": "week0-intro",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "The Game We Live In",
+    "icon": "🎮",
+    "themeColor": "green"
+  },
+  "stories": [
+    {
+      "id": "problem-game-story",
+      "diagramId": "problem-game",
+      "title": "Life is a Game of Problems",
+      "steps": [
+        {
+          "nodeId": "world-problems",
+          "icon": "🌍",
+          "title": "Problems Everywhere",
+          "narration": "Here's something most people never realize: the world is full of problems waiting to be solved. Every single day, everywhere you look, there are problems. Some are small, some are huge.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "secret",
+          "edges": [{ "from": "world-problems", "to": "secret" }],
+          "icon": "🔑",
+          "title": "The Secret",
+          "narration": "The people who make the most money, have the most impact, and live the most interesting lives are the ones who get really good at solving problems. That's the secret.",
+          "connectsTo": "Problems Everywhere"
+        },
+        {
+          "nodeId": "simple-problems",
+          "edges": [{ "from": "secret", "to": "simple-problems" }],
+          "icon": "🍔",
+          "title": "Simple Problems",
+          "narration": "Someone's hungry? That's a problem. Make them food, problem solved. Small reward, but real value created. This is where everyone starts.",
+          "connectsTo": "The Secret"
+        },
+        {
+          "nodeId": "medium-problems",
+          "edges": [{ "from": "simple-problems", "to": "medium-problems" }],
+          "icon": "💻",
+          "title": "Medium Problems",
+          "narration": "A business needs a website? That's a bigger problem. Build it, problem solved. Bigger reward, more value created. Now you're moving up.",
+          "connectsTo": "Simple Problems"
+        },
+        {
+          "nodeId": "hard-problems",
+          "edges": [{ "from": "medium-problems", "to": "hard-problems" }],
+          "icon": "🏆",
+          "title": "Hard Problems",
+          "narration": "A community needs better education? That's a hard problem. Solve it and you get massive reward, massive impact. The harder the problem you can solve, the bigger the reward. Simple as that.",
+          "connectsTo": "Medium Problems"
+        }
+      ]
+    },
+    {
+      "id": "ai-revolution-story",
+      "diagramId": "ai-revolution",
+      "title": "AI Changes Everything",
+      "steps": [
+        {
+          "nodeId": "old-way",
+          "icon": "📜",
+          "title": "The Old Way",
+          "narration": "Historically, solving hard problems required years of education, expensive degrees, and lucky opportunities. Only certain people got access. That was the old game, and the deck was stacked against most people.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "old-years",
+          "edges": [{ "from": "old-way", "to": "old-years" }],
+          "icon": "📚",
+          "title": "Years of School",
+          "narration": "First you needed years of school. Then an expensive degree. Then you had to hope for a lucky opportunity. And maybe, just maybe, you could solve the problem. Most people never got that chance.",
+          "connectsTo": "The Old Way"
+        },
+        {
+          "nodeId": "new-way",
+          "edges": [{ "from": "old-years", "to": "new-way" }],
+          "icon": "⚡",
+          "title": "The New Way",
+          "narration": "AI changes everything. Now the path is shorter. You see a problem, you ask questions, you use AI, you build a solution. No fancy degree required. No waiting years.",
+          "connectsTo": "Years of School"
+        },
+        {
+          "nodeId": "real-skill",
+          "edges": [{ "from": "new-way", "to": "real-skill" }],
+          "icon": "🧠",
+          "title": "The Real Skill",
+          "narration": "AI is like having access to all the world's knowledge. But knowledge alone doesn't solve problems. The real skill is knowing what questions to ask. That's what separates problem solvers from everyone else.",
+          "connectsTo": "The New Way"
+        },
+        {
+          "nodeId": "patient-teacher",
+          "edges": [{ "from": "real-skill", "to": "patient-teacher" }],
+          "icon": "🤖",
+          "title": "Infinitely Patient Teacher",
+          "narration": "Here's something beautiful: AI never gets tired of your questions. It never gets irritated. Ask it a thousand questions in a row and it doesn't care. For the first time in history, you have access to an infinitely patient teacher.",
+          "connectsTo": "The Real Skill"
+        },
+        {
+          "nodeId": "your-power",
+          "edges": [{ "from": "patient-teacher", "to": "your-power" }],
+          "icon": "💪",
+          "title": "Your New Superpower",
+          "narration": "This is revolutionary. You can learn things faster, understand problems deeper, and build real solutions. All you need is curiosity and the willingness to ask questions. That's your new superpower.",
+          "connectsTo": "Infinitely Patient Teacher"
+        }
+      ]
+    },
+    {
+      "id": "six-levels-story",
+      "diagramId": "six-levels",
+      "title": "The Art of Questions: 6 Levels Deep",
+      "steps": [
+        {
+          "nodeId": "surface-level",
+          "icon": "🏊",
+          "title": "Most People Stop Here",
+          "narration": "Most people ask one or two questions about something and think they understand it. They don't. They're swimming at the surface while the real insights are deep below.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "level-1",
+          "edges": [{ "from": "surface-level", "to": "level-1" }],
+          "icon": "1️⃣",
+          "title": "Level 1: Why?",
+          "narration": "Let's say a business is struggling. Level one: Why is the business struggling? Answer: because they don't have enough customers. Most people would stop here. Not you.",
+          "connectsTo": "Most People Stop Here"
+        },
+        {
+          "nodeId": "level-2",
+          "edges": [{ "from": "level-1", "to": "level-2" }],
+          "icon": "2️⃣",
+          "title": "Level 2: Why?",
+          "narration": "Level two: Why don't they have enough customers? Answer: because people don't know about them. We're going deeper. Keep asking.",
+          "connectsTo": "Level 1"
+        },
+        {
+          "nodeId": "level-3",
+          "edges": [{ "from": "level-2", "to": "level-3" }],
+          "icon": "3️⃣",
+          "title": "Level 3: Why?",
+          "narration": "Level three: Why don't people know about them? Answer: because they have no online presence. Now we're starting to see the real problem.",
+          "connectsTo": "Level 2"
+        },
+        {
+          "nodeId": "level-4-5",
+          "edges": [{ "from": "level-3", "to": "level-4-5" }],
+          "icon": "4️⃣",
+          "title": "Levels 4 & 5: Going Deeper",
+          "narration": "Levels four and five: Why no online presence? Because they don't know how to build one. Why not? Because it seems too technical and expensive. We're almost at the root.",
+          "connectsTo": "Level 3"
+        },
+        {
+          "nodeId": "level-6",
+          "edges": [{ "from": "level-4-5", "to": "level-6" }],
+          "icon": "6️⃣",
+          "title": "Level 6: The Real Problem",
+          "narration": "Level six: Why does it seem too technical and expensive? Because they don't know about AI tools that make it easy and free. Now we've found a problem we can actually solve!",
+          "connectsTo": "Levels 4 & 5"
+        },
+        {
+          "nodeId": "key-insight",
+          "edges": [{ "from": "level-6", "to": "key-insight" }],
+          "icon": "🎯",
+          "title": "The Key Insight",
+          "narration": "If you can get just two or three levels deeper than most people, you're already ahead of ninety-nine percent of the world. Most people accept surface-level answers. You won't.",
+          "connectsTo": "Level 6"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "problem-game-story",
+      "questions": [
+        {
+          "question": "According to the lesson, what determines how much reward you get for solving a problem?",
+          "options": [
+            "How fast you solve it",
+            "How hard the problem is",
+            "How many people know about it",
+            "How much education you have"
+          ],
+          "correct": 1,
+          "explanation": "The harder the problem you can solve, the bigger the reward. Simple problems = small rewards, hard problems = massive rewards."
+        },
+        {
+          "question": "What's 'the secret' that the most successful people understand?",
+          "options": [
+            "They have special connections",
+            "They got lucky",
+            "They're really good at solving problems",
+            "They work harder than everyone else"
+          ],
+          "correct": 2,
+          "explanation": "The secret is that people who make the most impact and have the most interesting lives are those who get really good at solving problems."
+        },
+        {
+          "question": "What's an example of a 'hard problem' mentioned in the lesson?",
+          "options": [
+            "Making someone food when they're hungry",
+            "Building a website for a business",
+            "A community needing better education",
+            "Fixing a broken computer"
+          ],
+          "correct": 2,
+          "explanation": "A community needing better education is a hard problem - solving it leads to massive reward and massive impact."
+        }
+      ]
+    },
+    {
+      "storyId": "ai-revolution-story",
+      "questions": [
+        {
+          "question": "What was required to solve hard problems in 'the old way'?",
+          "options": [
+            "Just curiosity and determination",
+            "Years of education, expensive degrees, and lucky opportunities",
+            "Access to AI tools",
+            "Knowing the right questions to ask"
+          ],
+          "correct": 1,
+          "explanation": "Historically, solving hard problems required years of education, expensive degrees, and lucky opportunities - only certain people got access."
+        },
+        {
+          "question": "According to the lesson, what's 'the real skill' needed to solve problems with AI?",
+          "options": [
+            "Being able to code",
+            "Having a computer science degree",
+            "Knowing what questions to ask",
+            "Having expensive software"
+          ],
+          "correct": 2,
+          "explanation": "AI gives you access to knowledge, but the real skill is knowing what questions to ask. That's what separates problem solvers from everyone else."
+        },
+        {
+          "question": "Why is AI described as an 'infinitely patient teacher'?",
+          "options": [
+            "It always gives perfect answers",
+            "It never gets tired or irritated by your questions",
+            "It has a teaching certificate",
+            "It was designed by teachers"
+          ],
+          "correct": 1,
+          "explanation": "Unlike humans who have limits and can get irritated, AI will answer any question without getting tired or frustrated - even if you ask a thousand questions in a row."
+        }
+      ]
+    },
+    {
+      "storyId": "six-levels-story",
+      "questions": [
+        {
+          "question": "How many levels deep do most people go when asking questions?",
+          "options": [
+            "6 levels",
+            "1-2 levels",
+            "10+ levels",
+            "They never ask questions"
+          ],
+          "correct": 1,
+          "explanation": "Most people ask 1-2 questions about something and think they understand it. Real understanding comes from going 6 levels deep."
+        },
+        {
+          "question": "In the business example, what was discovered at level 6?",
+          "options": [
+            "The business needed more money",
+            "The owners should go back to school",
+            "They didn't know about AI tools that make building an online presence easy and free",
+            "They needed to hire more employees"
+          ],
+          "correct": 2,
+          "explanation": "At level 6, we discovered that the real root problem was that they didn't know about AI tools that could help them build an online presence easily and for free."
+        },
+        {
+          "question": "According to the lesson, how many levels deeper than most people do you need to go to be ahead of 99% of the world?",
+          "options": [
+            "10 levels deeper",
+            "Just 1 level deeper",
+            "2-3 levels deeper",
+            "6 levels deeper"
+          ],
+          "correct": 2,
+          "explanation": "If you can get just 2-3 levels deeper than most people, you're already ahead of 99% of the world. Most people accept surface-level answers."
+        }
+      ]
+    }
+  ]
+}

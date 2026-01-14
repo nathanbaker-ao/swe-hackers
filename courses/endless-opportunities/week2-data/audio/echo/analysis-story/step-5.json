@@ -1,0 +1,165 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Draw Conclusions. Based on the patterns, what can you conclude? What would you recommend? This is where data becomes useful — when it informs action. Analysis without action is just trivia.",
+  "duration": 14.350000381469727,
+  "words": [
+    {
+      "word": "Draw",
+      "start": 0,
+      "end": 0.7599999904632568
+    },
+    {
+      "word": "conclusions",
+      "start": 0.7599999904632568,
+      "end": 2
+    },
+    {
+      "word": "Based",
+      "start": 2.9000000953674316,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "on",
+      "start": 2.9000000953674316,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.0799999237060547,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "patterns",
+      "start": 3.640000104904175,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "what",
+      "start": 4.059999942779541,
+      "end": 4.260000228881836
+    },
+    {
+      "word": "can",
+      "start": 4.260000228881836,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "you",
+      "start": 4.460000038146973,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "conclude",
+      "start": 4.739999771118164,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "What",
+      "start": 5.71999979019165,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "would",
+      "start": 5.900000095367432,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "you",
+      "start": 6.059999942779541,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "recommend",
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "This",
+      "start": 7.300000190734863,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "is",
+      "start": 7.619999885559082,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "where",
+      "start": 7.840000152587891,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "data",
+      "start": 7.980000019073486,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "becomes",
+      "start": 8.380000114440918,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "useful",
+      "start": 8.819999694824219,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "–",
+      "start": 9.279999732971191,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "when",
+      "start": 9.84000015258789,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "it",
+      "start": 9.880000114440918,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "informs",
+      "start": 10.199999809265137,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "action",
+      "start": 10.460000038146973,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "Analysis",
+      "start": 11.720000267028809,
+      "end": 12.15999984741211
+    },
+    {
+      "word": "without",
+      "start": 12.15999984741211,
+      "end": 12.5
+    },
+    {
+      "word": "action",
+      "start": 12.5,
+      "end": 12.899999618530273
+    },
+    {
+      "word": "is",
+      "start": 12.899999618530273,
+      "end": 13.460000038146973
+    },
+    {
+      "word": "just",
+      "start": 13.460000038146973,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "trivia",
+      "start": 13.880000114440918,
+      "end": 14.100000381469727
+    }
+  ]
+}

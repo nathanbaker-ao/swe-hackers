@@ -1,0 +1,180 @@
+{
+  "storyId": "ai-revolution-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Old Way. Historically, solving hard problems required years of education, expensive degrees, and lucky opportunities. Only certain people got access. That was the old game, and the deck was stacked against most people.",
+  "duration": 16.459999084472656,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "old",
+      "start": 0.4000000059604645,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "way",
+      "start": 0.8999999761581421,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Historically",
+      "start": 2.0399999618530273,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "solving",
+      "start": 3.380000114440918,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "hard",
+      "start": 3.4200000762939453,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "problems",
+      "start": 4.019999980926514,
+      "end": 4.5
+    },
+    {
+      "word": "required",
+      "start": 4.5,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "years",
+      "start": 5.039999961853027,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "of",
+      "start": 5.559999942779541,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "education",
+      "start": 5.860000133514404,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "expensive",
+      "start": 6.940000057220459,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "degrees",
+      "start": 7.320000171661377,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "and",
+      "start": 8.239999771118164,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "lucky",
+      "start": 8.619999885559082,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "opportunities",
+      "start": 8.760000228881836,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "Only",
+      "start": 10.119999885559082,
+      "end": 10.380000114440918
+    },
+    {
+      "word": "certain",
+      "start": 10.380000114440918,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "people",
+      "start": 10.739999771118164,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "got",
+      "start": 11.100000381469727,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "access",
+      "start": 11.34000015258789,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "That",
+      "start": 12.34000015258789,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "was",
+      "start": 12.5600004196167,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "the",
+      "start": 12.739999771118164,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "old",
+      "start": 12.920000076293945,
+      "end": 13.319999694824219
+    },
+    {
+      "word": "game",
+      "start": 13.319999694824219,
+      "end": 13.680000305175781
+    },
+    {
+      "word": "and",
+      "start": 13.899999618530273,
+      "end": 14.220000267028809
+    },
+    {
+      "word": "the",
+      "start": 14.220000267028809,
+      "end": 14.600000381469727
+    },
+    {
+      "word": "deck",
+      "start": 14.600000381469727,
+      "end": 14.619999885559082
+    },
+    {
+      "word": "was",
+      "start": 14.619999885559082,
+      "end": 15.180000305175781
+    },
+    {
+      "word": "stacked",
+      "start": 15.180000305175781,
+      "end": 15.180000305175781
+    },
+    {
+      "word": "against",
+      "start": 15.180000305175781,
+      "end": 15.539999961853027
+    },
+    {
+      "word": "most",
+      "start": 15.539999961853027,
+      "end": 15.9399995803833
+    },
+    {
+      "word": "people",
+      "start": 15.9399995803833,
+      "end": 16.280000686645508
+    }
+  ]
+}

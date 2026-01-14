@@ -1,0 +1,160 @@
+{
+  "storyId": "comprehension-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Find Connections. True understanding means seeing how things connect to other things you know. Ask: how does this relate to history? To science? To my own life? Connections deepen understanding.",
+  "duration": 14.350000381469727,
+  "words": [
+    {
+      "word": "Find",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "connections",
+      "start": 0.6200000047683716,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "True",
+      "start": 2.059999942779541,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "understanding",
+      "start": 2.140000104904175,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "means",
+      "start": 2.740000009536743,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "seeing",
+      "start": 3.0999999046325684,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "how",
+      "start": 3.440000057220459,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "things",
+      "start": 3.700000047683716,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "connect",
+      "start": 3.9800000190734863,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "to",
+      "start": 4.480000019073486,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "other",
+      "start": 4.900000095367432,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "things",
+      "start": 5.159999847412109,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "you",
+      "start": 5.380000114440918,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "know",
+      "start": 5.559999942779541,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "Ask",
+      "start": 6.579999923706055,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "how",
+      "start": 7,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "does",
+      "start": 7.239999771118164,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "this",
+      "start": 7.420000076293945,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "relate",
+      "start": 7.699999809265137,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "to",
+      "start": 7.900000095367432,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "history",
+      "start": 8.180000305175781,
+      "end": 8.520000457763672
+    },
+    {
+      "word": "to",
+      "start": 8.65999984741211,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "science",
+      "start": 9.739999771118164,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "to",
+      "start": 10.180000305175781,
+      "end": 10.319999694824219
+    },
+    {
+      "word": "my",
+      "start": 10.319999694824219,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "own",
+      "start": 10.520000457763672,
+      "end": 10.960000038146973
+    },
+    {
+      "word": "life",
+      "start": 10.960000038146973,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "Connections",
+      "start": 12.220000267028809,
+      "end": 12.779999732971191
+    },
+    {
+      "word": "deepen",
+      "start": 12.779999732971191,
+      "end": 13.420000076293945
+    },
+    {
+      "word": "understanding",
+      "start": 13.420000076293945,
+      "end": 14.15999984741211
+    }
+  ]
+}

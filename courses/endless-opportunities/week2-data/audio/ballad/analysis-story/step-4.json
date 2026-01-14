@@ -1,0 +1,170 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Find the Gaps. What's missing? What are people asking for that doesn't exist? Gaps equal opportunities. Every unmet need is a potential solution waiting to be built. Data reveals where to focus.",
+  "duration": 17.350000381469727,
+  "words": [
+    {
+      "word": "Find",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "the",
+      "start": 0.6600000262260437,
+      "end": 1.5
+    },
+    {
+      "word": "gaps",
+      "start": 1.5,
+      "end": 1.5
+    },
+    {
+      "word": "What's",
+      "start": 2.4000000953674316,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "missing",
+      "start": 2.559999942779541,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "What",
+      "start": 3.5999999046325684,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "are",
+      "start": 3.740000009536743,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "people",
+      "start": 3.9000000953674316,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "asking",
+      "start": 4.300000190734863,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "for",
+      "start": 4.739999771118164,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "that",
+      "start": 5.139999866485596,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "doesn't",
+      "start": 5.599999904632568,
+      "end": 6
+    },
+    {
+      "word": "exist",
+      "start": 6,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "Gaps",
+      "start": 7.699999809265137,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "equal",
+      "start": 7.699999809265137,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "opportunities",
+      "start": 8.4399995803833,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "Every",
+      "start": 10.220000267028809,
+      "end": 10.539999961853027
+    },
+    {
+      "word": "unmet",
+      "start": 10.539999961853027,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "need",
+      "start": 11.100000381469727,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "is",
+      "start": 11.4399995803833,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "a",
+      "start": 11.84000015258789,
+      "end": 12.079999923706055
+    },
+    {
+      "word": "potential",
+      "start": 12.079999923706055,
+      "end": 12.479999542236328
+    },
+    {
+      "word": "solution",
+      "start": 12.479999542236328,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "waiting",
+      "start": 13.0600004196167,
+      "end": 13.680000305175781
+    },
+    {
+      "word": "to",
+      "start": 13.680000305175781,
+      "end": 13.859999656677246
+    },
+    {
+      "word": "be",
+      "start": 13.859999656677246,
+      "end": 14.239999771118164
+    },
+    {
+      "word": "built",
+      "start": 14.239999771118164,
+      "end": 14.239999771118164
+    },
+    {
+      "word": "Data",
+      "start": 15.34000015258789,
+      "end": 15.399999618530273
+    },
+    {
+      "word": "reveals",
+      "start": 15.399999618530273,
+      "end": 15.859999656677246
+    },
+    {
+      "word": "where",
+      "start": 15.859999656677246,
+      "end": 16.440000534057617
+    },
+    {
+      "word": "to",
+      "start": 16.440000534057617,
+      "end": 16.979999542236328
+    },
+    {
+      "word": "focus",
+      "start": 16.979999542236328,
+      "end": 16.979999542236328
+    }
+  ]
+}

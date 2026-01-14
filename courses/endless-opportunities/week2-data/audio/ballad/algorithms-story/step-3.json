@@ -1,0 +1,190 @@
+{
+  "storyId": "algorithms-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Critical Difference. Search: you're in control, you choose what to find. Recommendation: the algorithm chooses what you see. Problem solvers use search more than recommendation. They know what they're looking for and go get it.",
+  "duration": 16.149999618530273,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3400000035762787
+    },
+    {
+      "word": "critical",
+      "start": 0.3400000035762787,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "difference",
+      "start": 0.8799999952316284,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Search",
+      "start": 2.640000104904175,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "You're",
+      "start": 3.299999952316284,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "in",
+      "start": 3.359999895095825,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "control",
+      "start": 3.700000047683716,
+      "end": 4
+    },
+    {
+      "word": "You",
+      "start": 4.480000019073486,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "choose",
+      "start": 4.639999866485596,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "what",
+      "start": 4.860000133514404,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "to",
+      "start": 5.039999961853027,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "find",
+      "start": 5.260000228881836,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "Recommendation",
+      "start": 6.320000171661377,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "The",
+      "start": 7.28000020980835,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "algorithm",
+      "start": 7.519999980926514,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "chooses",
+      "start": 7.960000038146973,
+      "end": 8.380000114440918
+    },
+    {
+      "word": "what",
+      "start": 8.380000114440918,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "you",
+      "start": 8.680000305175781,
+      "end": 9
+    },
+    {
+      "word": "see",
+      "start": 9,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "Problem",
+      "start": 10.15999984741211,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "solvers",
+      "start": 10.260000228881836,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "use",
+      "start": 10.640000343322754,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "search",
+      "start": 11.020000457763672,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "more",
+      "start": 11.34000015258789,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "than",
+      "start": 11.680000305175781,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "recommendation",
+      "start": 11.920000076293945,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "They",
+      "start": 13.100000381469727,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "know",
+      "start": 13.300000190734863,
+      "end": 13.5600004196167
+    },
+    {
+      "word": "what",
+      "start": 13.5600004196167,
+      "end": 13.739999771118164
+    },
+    {
+      "word": "they're",
+      "start": 13.739999771118164,
+      "end": 14.100000381469727
+    },
+    {
+      "word": "looking",
+      "start": 14.100000381469727,
+      "end": 14.100000381469727
+    },
+    {
+      "word": "for",
+      "start": 14.100000381469727,
+      "end": 14.520000457763672
+    },
+    {
+      "word": "And",
+      "start": 14.920000076293945,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "go",
+      "start": 15.15999984741211,
+      "end": 15.359999656677246
+    },
+    {
+      "word": "get",
+      "start": 15.359999656677246,
+      "end": 15.579999923706055
+    },
+    {
+      "word": "it",
+      "start": 15.579999923706055,
+      "end": 15.800000190734863
+    }
+  ]
+}

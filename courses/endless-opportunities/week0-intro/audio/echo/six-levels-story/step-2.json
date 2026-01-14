@@ -1,0 +1,115 @@
+{
+  "storyId": "six-levels-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Level 2: Why?. Level two: Why don't they have enough customers? Answer: because people don't know about them. We're going deeper. Keep asking.",
+  "duration": 9.600000381469727,
+  "words": [
+    {
+      "word": "Level",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "2",
+      "start": 0.4399999976158142,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Why",
+      "start": 2.0999999046325684,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "Level",
+      "start": 2.759999990463257,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "2",
+      "start": 2.940000057220459,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "Why",
+      "start": 4.039999961853027,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "don't",
+      "start": 4.039999961853027,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "they",
+      "start": 4.28000020980835,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "have",
+      "start": 4.420000076293945,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "enough",
+      "start": 4.639999866485596,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "customers",
+      "start": 4.920000076293945,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "Answer",
+      "start": 6.300000190734863,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "because",
+      "start": 6.380000114440918,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "people",
+      "start": 6.78000020980835,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "don't",
+      "start": 7.019999980926514,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "know",
+      "start": 7.320000171661377,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "about",
+      "start": 7.519999980926514,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "them",
+      "start": 7.800000190734863,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "We're",
+      "start": 8.739999771118164,
+      "end": 8.859999656677246
+    },
+    {
+      "word": "going",
+      "start": 8.859999656677246,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "deeper",
+      "start": 9.039999961853027,
+      "end": 9.34000015258789
+    }
+  ]
+}

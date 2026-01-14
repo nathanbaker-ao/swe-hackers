@@ -1,0 +1,175 @@
+{
+  "storyId": "problem-game-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Problems Everywhere. Here's something most people never realize: the world is full of problems waiting to be solved. Every single day, everywhere you look, there are problems. Some are small, some are huge.",
+  "duration": 13.239999771118164,
+  "words": [
+    {
+      "word": "Problems",
+      "start": 0,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "everywhere",
+      "start": 1.1200000047683716,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Here's",
+      "start": 2.0799999237060547,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "something",
+      "start": 2.259999990463257,
+      "end": 2.5
+    },
+    {
+      "word": "most",
+      "start": 2.5,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "people",
+      "start": 2.819999933242798,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "never",
+      "start": 3.140000104904175,
+      "end": 3.5
+    },
+    {
+      "word": "realize",
+      "start": 3.5,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "The",
+      "start": 4.539999961853027,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "world",
+      "start": 4.619999885559082,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "is",
+      "start": 4.820000171661377,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "full",
+      "start": 5.119999885559082,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "of",
+      "start": 5.21999979019165,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "problems",
+      "start": 5.840000152587891,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "waiting",
+      "start": 5.840000152587891,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "to",
+      "start": 6.139999866485596,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "be",
+      "start": 6.320000171661377,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "solved",
+      "start": 7.039999961853027,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "Every",
+      "start": 7.5,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "single",
+      "start": 7.619999885559082,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "day",
+      "start": 7.940000057220459,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "everywhere",
+      "start": 8.460000038146973,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "you",
+      "start": 8.680000305175781,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "look",
+      "start": 8.899999618530273,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "there",
+      "start": 9.619999885559082,
+      "end": 9.699999809265137
+    },
+    {
+      "word": "are",
+      "start": 9.699999809265137,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "problems",
+      "start": 9.979999542236328,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "Some",
+      "start": 11.039999961853027,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "are",
+      "start": 11.140000343322754,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "small",
+      "start": 11.399999618530273,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "some",
+      "start": 12.0600004196167,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "are",
+      "start": 12.399999618530273,
+      "end": 12.640000343322754
+    },
+    {
+      "word": "huge",
+      "start": 12.640000343322754,
+      "end": 12.979999542236328
+    }
+  ]
+}

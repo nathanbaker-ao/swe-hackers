@@ -1,0 +1,135 @@
+{
+  "storyId": "comprehension-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Apply to New Situations. Real comprehension lets you use knowledge in completely new contexts. Understanding isn't memorizing facts—it's having transferable insight that works everywhere.",
+  "duration": 13.84000015258789,
+  "words": [
+    {
+      "word": "Apply",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "to",
+      "start": 0.5,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "new",
+      "start": 0.8399999737739563,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "situations",
+      "start": 1.1399999856948853,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "Real",
+      "start": 2.9800000190734863,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "comprehension",
+      "start": 3.0999999046325684,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "lets",
+      "start": 3.6600000858306885,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "you",
+      "start": 4.320000171661377,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "use",
+      "start": 4.599999904632568,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "knowledge",
+      "start": 4.78000020980835,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "in",
+      "start": 5.159999847412109,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "completely",
+      "start": 5.460000038146973,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "new",
+      "start": 6.019999980926514,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "contexts",
+      "start": 6.380000114440918,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "Understanding",
+      "start": 8.039999961853027,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "isn't",
+      "start": 8.359999656677246,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "memorizing",
+      "start": 8.819999694824219,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "facts",
+      "start": 9.359999656677246,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "It's",
+      "start": 10.399999618530273,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "having",
+      "start": 10.520000457763672,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "transferable",
+      "start": 10.819999694824219,
+      "end": 11.600000381469727
+    },
+    {
+      "word": "insight",
+      "start": 11.600000381469727,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "that",
+      "start": 11.979999542236328,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "works",
+      "start": 12.5600004196167,
+      "end": 12.899999618530273
+    },
+    {
+      "word": "everywhere",
+      "start": 12.899999618530273,
+      "end": 13.619999885559082
+    }
+  ]
+}

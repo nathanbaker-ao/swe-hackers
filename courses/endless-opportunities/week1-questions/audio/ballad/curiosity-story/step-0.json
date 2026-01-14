@@ -1,0 +1,180 @@
+{
+  "storyId": "curiosity-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "A Truth That Changes Everything. Here's a truth that will change how you see the world: the quality of your understanding depends entirely on the quality of your questions. Most people never realize this.",
+  "duration": 14.0600004196167,
+  "words": [
+    {
+      "word": "A",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "truth",
+      "start": 0.5400000214576721,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "that",
+      "start": 0.6600000262260437,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "changes",
+      "start": 1.2000000476837158,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "everything",
+      "start": 1.6200000047683716,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "Here's",
+      "start": 3.059999942779541,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "a",
+      "start": 3.0799999237060547,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "truth",
+      "start": 3.299999952316284,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "that",
+      "start": 3.4800000190734863,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "will",
+      "start": 3.7799999713897705,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "change",
+      "start": 3.9800000190734863,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "how",
+      "start": 4.300000190734863,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "you",
+      "start": 4.480000019073486,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "see",
+      "start": 4.699999809265137,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "the",
+      "start": 4.840000152587891,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "world",
+      "start": 5.039999961853027,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "The",
+      "start": 6,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "quality",
+      "start": 6.099999904632568,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "of",
+      "start": 6.480000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "your",
+      "start": 6.699999809265137,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "understanding",
+      "start": 7.059999942779541,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "depends",
+      "start": 7.679999828338623,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "entirely",
+      "start": 8.359999656677246,
+      "end": 9
+    },
+    {
+      "word": "on",
+      "start": 9,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "the",
+      "start": 9.4399995803833,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "quality",
+      "start": 9.640000343322754,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "of",
+      "start": 9.960000038146973,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "your",
+      "start": 10.199999809265137,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "questions",
+      "start": 10.399999618530273,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "Most",
+      "start": 11.5600004196167,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "people",
+      "start": 11.779999732971191,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "never",
+      "start": 12.199999809265137,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "realise",
+      "start": 12.859999656677246,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "this",
+      "start": 13.300000190734863,
+      "end": 13.619999885559082
+    }
+  ]
+}

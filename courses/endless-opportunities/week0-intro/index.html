@@ -1,865 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome | AI Freelancing Bootcamp</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="../../shared/css/lesson.css">
-  
-  <style>
-    :root {
-      --chapter-color: #4CAF50;
-      --chapter-gradient: linear-gradient(135deg, #2E7D32, #4CAF50);
-    }
-    
-    /* Hero section */
-    .intro-hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(180deg, #0a0a0f 0%, #0f1f0f 50%, #1a2e1a 100%);
-    }
-    
-    .particles-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-    }
-    
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #4CAF50;
-      border-radius: 50%;
-      opacity: 0;
-    }
-    
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 2rem;
-    }
-    
-    .partner-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem 1.5rem;
-      background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(76, 175, 80, 0.2));
-      border: 1px solid rgba(76, 175, 80, 0.5);
-      border-radius: 30px;
-      color: #4CAF50;
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 2rem;
-    }
-    
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 4rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(135deg, #4CAF50, #81C784, #4CAF50);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-    
-    .scroll-indicator {
-      position: absolute;
-      bottom: 3rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    
-    .scroll-arrow {
-      width: 24px;
-      height: 24px;
-      border-right: 2px solid var(--text-muted);
-      border-bottom: 2px solid var(--text-muted);
-      transform: rotate(45deg);
-      animation: bounce 2s infinite;
-    }
-    
-    @keyframes bounce {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(10px); }
-    }
-    
-    /* Journey Map */
-    .journey-section {
-      padding: 4rem 0;
-      background: linear-gradient(180deg, #1a2e1a, var(--bg-secondary));
-    }
-    
-    .journey-map {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
-    
-    @media (max-width: 900px) {
-      .journey-map {
-        grid-template-columns: repeat(2, 1fr);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game We Live In | Endless Opportunities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <style>
+      :root {
+        --chapter-color: #4caf50;
+        --chapter-gradient: linear-gradient(135deg, #2e7d32, #4caf50);
       }
-    }
-    
-    @media (max-width: 500px) {
-      .journey-map {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .journey-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    
-    .journey-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .journey-card:hover {
-      border-color: var(--chapter-color);
-      transform: translateY(-5px);
-    }
-    
-    .journey-week {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--chapter-color);
-      margin-bottom: 0.75rem;
-    }
-    
-    .journey-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .journey-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .journey-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    
-    /* Stats */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-    
-    @media (max-width: 768px) {
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    .stat-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      text-align: center;
-      border: 1px solid rgba(76, 175, 80, 0.2);
-    }
-    
-    .stat-value {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--chapter-color);
-      margin-bottom: 0.5rem;
-    }
-    
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-    
-    /* Why AI Section */
-    .why-ai-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    @media (max-width: 768px) {
-      .why-ai-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .why-ai-card {
-      background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary));
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      border-left: 4px solid var(--chapter-color);
-    }
-    
-    .why-ai-card h4 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
-      color: var(--chapter-color);
-    }
-    
-    .why-ai-card p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-    
-    /* About EO Section */
-    .about-section {
-      background: linear-gradient(135deg, rgba(46, 125, 50, 0.1), rgba(76, 175, 80, 0.05));
-      border-radius: var(--radius-xl);
-      padding: 3rem;
-      margin: 2rem 0;
-      border: 1px solid rgba(76, 175, 80, 0.2);
-    }
-    
-    .about-section h3 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .about-section p {
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 1rem;
-    }
-    
-    .about-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .about-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--chapter-color);
-      font-weight: 500;
-    }
-    
-    /* Expectations */
-    .expectations-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    
-    @media (max-width: 768px) {
-      .expectations-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .expectations-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    .expectations-card h4 {
-      font-family: var(--font-display);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .expectations-card ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .expectations-card li {
-      padding: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-    
-    .expectations-card li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--chapter-color);
-      font-weight: bold;
-    }
-    
-    .expectations-card.bring li::before {
-      content: '📌';
-    }
-    
-    /* Continue Button */
-    .continue-section {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
-    }
-    
-    .continue-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 2.5rem;
-      background: var(--chapter-gradient);
-      color: white;
-      text-decoration: none;
-      border-radius: var(--radius-lg);
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
-    }
-    
-    .continue-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-    }
-  </style>
-  
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  
-  <!-- Anime.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
-  <!-- Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  
-  <!-- Hero Section -->
-  <section class="intro-hero">
-    <div class="particles-container" id="particles"></div>
-    
-    <div class="hero-content">
-      <span class="partner-badge">🌟 Endless Opportunities Partnership</span>
-      <h1 class="hero-title">Welcome to the Future</h1>
-      <p class="hero-subtitle">
-        You're about to learn the most powerful skill of the 21st century: 
-        how to harness AI to create real value, earn real money, and build 
-        your own freelance business — all in just 4 weeks.
-      </p>
-    </div>
-    
-    <div class="scroll-indicator">
-      <span>Scroll to explore</span>
-      <div class="scroll-arrow"></div>
-    </div>
-  </section>
-  
-  <!-- Main Content -->
-  <div class="lesson-container">
-    
-    <!-- The Opportunity Section -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">💡</span>
-        The Opportunity in Front of You
-      </h2>
-      
-      <div class="section-content">
+    </style>
+  </head>
+  <body data-course="endless-opportunities" data-lesson="week0-intro">
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">🎮</div>
+          <span>Week 0</span>
+        </a>
+        <nav class="nav-links">
+          <a href="../../course/endless-opportunities.html"
+            >← Endless Opportunities</a
+          >
+          <a href="index.html" class="active">Week 0</a>
+          <a href="../week1-questions/">Week 1: Art of Questions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-header">
+        <div class="breadcrumb">
+          <a href="../../course/endless-opportunities.html"
+            >Endless Opportunities</a
+          >
+          <span>/</span>
+          <span>The Game We Live In</span>
+        </div>
+        <h1>🎮 The Game We Live In</h1>
         <p>
-          Here's a secret that most adults don't even know yet: <strong>AI is changing everything</strong>.
-          The way we work, the way we create, the way businesses operate — it's all transforming 
-          faster than ever before.
+          Learn the most powerful skill of the 21st century: how to identify
+          problems, ask the right questions, and use AI to build real solutions.
         </p>
-        
+      </div>
+
+      <!-- Audio Info -->
+      <section class="section audio-info-section">
+        <div class="info-box compact">
+          <div class="info-header">
+            <span class="info-icon">🎙️</span>
+            <div>
+              <h4>Interactive Learning Experience</h4>
+              <p>
+                Watch diagrams come alive with AI narration • Click dots to jump
+                • Test your understanding with quizzes
+              </p>
+            </div>
+          </div>
+          <div class="voice-options">
+            <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+            <span class="voice-badge">🎩 Male UK Storyteller</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story 1: Life is a Game of Problems -->
+      <section class="section" id="problem-game-story-section">
+        <h2>Life is a Game of Problems</h2>
         <p>
-          Right now, companies are <em>desperate</em> for people who know how to use AI tools. 
-          They need content. They need designs. They need help. And most people have no idea 
-          how to deliver it.
+          The world is full of problems waiting to be solved. The harder the
+          problem, the bigger the reward.
         </p>
-        
+
+        <div class="diagram-container" id="problem-game-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🎮 The Problem-Solving Game</span>
+          </div>
+          <div
+            id="problem-game-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="problem-game-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="problem-game-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="settings-bar">
+            <div class="control-group">
+              <label>⏱️</label>
+              <select id="problem-game-story-speed-select">
+                <option value="1000">1s</option>
+                <option value="2000" selected>2s</option>
+                <option value="5000">5s</option>
+                <option value="10000">10s</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <button
+                class="audio-toggle"
+                id="problem-game-story-audio-toggle"
+                title="Toggle audio narration"
+              >
+                <span class="audio-icon">🔊</span>
+              </button>
+            </div>
+            <div class="control-group">
+              <label>🎤</label>
+              <select id="problem-game-story-voice-select" class="voice-select">
+                <option value="">Loading...</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-card" id="problem-game-story-quiz">
+          <div class="quiz-header">
+            <h4>📝 Check Your Understanding</h4>
+            <div class="quiz-progress">
+              <span class="answered">0</span>/<span class="total">3</span>
+              answered
+              <span class="score"></span>
+            </div>
+          </div>
+          <div class="quiz-carousel"></div>
+          <div class="quiz-nav">
+            <button class="quiz-nav-btn prev" disabled>← Prev</button>
+            <div class="quiz-dots"></div>
+            <button class="quiz-nav-btn next">Next →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story 2: AI Changes Everything -->
+      <section class="section" id="ai-revolution-story-section">
+        <h2>AI Changes Everything</h2>
         <p>
-          <strong>That's where you come in.</strong>
+          The old path required years of school and expensive degrees. AI
+          creates a faster way for everyone.
         </p>
-        
-        <div class="callout callout-story">
-          <div class="callout-title">🎯 The Reality</div>
-          <p>
-            In the next 4 weeks, you'll learn skills that professionals are paying thousands of 
-            dollars to acquire. You'll be able to offer services that businesses need RIGHT NOW. 
-            And you'll have something most people your age don't have: a portfolio of real work 
-            and the confidence to get paid for it.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Journey Map Section -->
-    <section class="journey-section">
-      <div class="lesson-container">
-        <h2 class="section-title" style="text-align: center;">
-          <span class="title-icon">🗺️</span>
-          Your 4-Week Journey
-        </h2>
-        
-        <div class="journey-map">
-          <div class="journey-card">
-            <div class="journey-week">Week 1</div>
-            <div class="journey-icon">✍️</div>
-            <div class="journey-title">ChatGPT Mastery</div>
-            <div class="journey-desc">Master AI text generation & offer content creation services</div>
+
+        <div class="diagram-container" id="ai-revolution-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">⚡ The AI Revolution</span>
           </div>
-          
-          <div class="journey-card">
-            <div class="journey-week">Week 2</div>
-            <div class="journey-icon">🎨</div>
-            <div class="journey-title">Visual AI</div>
-            <div class="journey-desc">Create stunning graphics, logos, and videos with AI</div>
+          <div
+            id="ai-revolution-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="ai-revolution-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="journey-card">
-            <div class="journey-week">Week 3</div>
-            <div class="journey-icon">🧠</div>
-            <div class="journey-title">Claude & Analysis</div>
-            <div class="journey-desc">Research, business planning, and high-value consulting</div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="ai-revolution-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
           </div>
-          
-          <div class="journey-card">
-            <div class="journey-week">Week 4</div>
-            <div class="journey-icon">🚀</div>
-            <div class="journey-title">Business Launch</div>
-            <div class="journey-desc">Build your portfolio, find clients, get PAID</div>
-          </div>
-        </div>
-        
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">5+</div>
-            <div class="stat-label">AI Tools Mastered</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">10+</div>
-            <div class="stat-label">Portfolio Pieces</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">18</div>
-            <div class="stat-label">Service Guides</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-value">$</div>
-            <div class="stat-label">Real Earnings</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Why AI Section -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🤖</span>
-        Why AI? Why Now?
-      </h2>
-      
-      <div class="section-content">
-        <div class="why-ai-grid">
-          <div class="why-ai-card">
-            <h4>⚡ Speed</h4>
-            <p>
-              Tasks that took hours now take minutes. A week of social media content? 
-              10 minutes. A professional blog post? 5 minutes. You become 10x faster.
-            </p>
-          </div>
-          
-          <div class="why-ai-card">
-            <h4>🎯 Quality</h4>
-            <p>
-              AI helps you produce professional-grade work. No more "good for a student" — 
-              your output will compete with expensive agencies.
-            </p>
-          </div>
-          
-          <div class="why-ai-card">
-            <h4>💰 Opportunity</h4>
-            <p>
-              Businesses are willing to pay for AI-powered services right now. The market 
-              is wide open, and you're getting in early.
-            </p>
+
+          <div class="settings-bar">
+            <div class="control-group">
+              <label>⏱️</label>
+              <select id="ai-revolution-story-speed-select">
+                <option value="1000">1s</option>
+                <option value="2000" selected>2s</option>
+                <option value="5000">5s</option>
+                <option value="10000">10s</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <button
+                class="audio-toggle"
+                id="ai-revolution-story-audio-toggle"
+                title="Toggle audio narration"
+              >
+                <span class="audio-icon">🔊</span>
+              </button>
+            </div>
+            <div class="control-group">
+              <label>🎤</label>
+              <select
+                id="ai-revolution-story-voice-select"
+                class="voice-select"
+              >
+                <option value="">Loading...</option>
+              </select>
+            </div>
           </div>
         </div>
-        
-        <div class="diagram-container">
-          <pre class="mermaid">
-flowchart LR
-    subgraph "The Old Way"
-        O1[💡 Idea] --> O2[📚 Learn for Years]
-        O2 --> O3[💼 Get Experience]
-        O3 --> O4[🏢 Maybe Get Hired]
-    end
-    
-    subgraph "The AI Way"
-        N1[💡 Idea] --> N2[🤖 Learn AI Tools]
-        N2 --> N3[📦 Build Portfolio]
-        N3 --> N4[💵 Start Earning]
-    end
-    
-    style O1 fill:#1a1a2e,stroke:#666
-    style O2 fill:#1a1a2e,stroke:#666
-    style O3 fill:#1a1a2e,stroke:#666
-    style O4 fill:#1a1a2e,stroke:#666
-    style N1 fill:#1a1a2e,stroke:#4CAF50
-    style N2 fill:#1a1a2e,stroke:#4CAF50
-    style N3 fill:#1a1a2e,stroke:#4CAF50
-    style N4 fill:#1a1a2e,stroke:#4CAF50
-          </pre>
-        </div>
-      </div>
-    </section>
-    
-    <!-- About Endless Opportunities -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🌟</span>
-        About Endless Opportunities
-      </h2>
-      
-      <div class="section-content">
-        <div class="about-section">
-          <h3>🌱 Our Mission</h3>
-          <p>
-            <strong>Endless Opportunities</strong> has been empowering first-generation students 
-            in Greater Grand Rapids since 2011. We believe that every young person deserves access 
-            to the skills and opportunities that lead to economic success.
-          </p>
-          <p>
-            This AI Freelancing Bootcamp is a collaboration between Endless Opportunities and 
-            AutoNateAI — combining youth development expertise with cutting-edge AI education.
-          </p>
-          
-          <div class="about-stats">
-            <div class="about-stat">📅 Founded 2011</div>
-            <div class="about-stat">🎓 100+ Students Served</div>
-            <div class="about-stat">🏙️ Grand Rapids, MI</div>
+
+        <div class="quiz-card" id="ai-revolution-story-quiz">
+          <div class="quiz-header">
+            <h4>📝 Check Your Understanding</h4>
+            <div class="quiz-progress">
+              <span class="answered">0</span>/<span class="total">3</span>
+              answered
+              <span class="score"></span>
+            </div>
+          </div>
+          <div class="quiz-carousel"></div>
+          <div class="quiz-nav">
+            <button class="quiz-nav-btn prev" disabled>← Prev</button>
+            <div class="quiz-dots"></div>
+            <button class="quiz-nav-btn next">Next →</button>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- What to Expect -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">📋</span>
-        What to Expect
-      </h2>
-      
-      <div class="section-content">
-        <div class="expectations-grid">
-          <div class="expectations-card">
-            <h4>✅ You Will Get</h4>
-            <ul>
-              <li>Hands-on practice with real AI tools</li>
-              <li>A portfolio of professional work</li>
-              <li>Service guides with pricing strategies</li>
-              <li>Client acquisition techniques</li>
-              <li>Community support and feedback</li>
-              <li>Certificate of completion</li>
-            </ul>
-          </div>
-          
-          <div class="expectations-card bring">
-            <h4>📌 You Will Bring</h4>
-            <ul>
-              <li>A laptop with internet access</li>
-              <li>Curiosity and willingness to learn</li>
-              <li>2 hours per week for live sessions</li>
-              <li>Time for homework and projects</li>
-              <li>An open mind about AI</li>
-              <li>The drive to build something real</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="callout callout-success">
-          <div class="callout-title">🎯 By the End of This Program</div>
-          <p>
-            You'll be able to offer professional services to local businesses, create content 
-            faster than most adults, and have the confidence to pitch yourself as an AI-powered 
-            freelancer. Some of you may even land your first paying client before week 4 is over!
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Rules & Guidelines -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">📜</span>
-        Ground Rules
-      </h2>
-      
-      <div class="section-content">
-        <div class="diagram-container">
-          <pre class="mermaid">
-mindmap
-  root((Our Values))
-    🤝 Respect
-      Listen when others share
-      Give constructive feedback
-      Celebrate wins together
-    💪 Effort
-      Complete your projects
-      Ask questions
-      Help your peers
-    🎯 Integrity
-      Be honest about your work
-      Credit AI assistance
-      Deliver quality
-    🚀 Growth
-      Embrace challenges
-      Learn from mistakes
-      Keep improving
-          </pre>
-        </div>
-        
-        <div class="callout callout-warning">
-          <div class="callout-title">⚠️ Important: AI Ethics</div>
-          <p>
-            AI is a powerful tool, but with power comes responsibility. We'll teach you how to 
-            use AI ethically — being transparent with clients about AI assistance, not 
-            misrepresenting your work, and understanding the limitations of these tools. 
-            Your reputation matters!
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Ready Section -->
-    <section class="lesson-section">
-      <h2 class="section-title">
-        <span class="title-icon">🔥</span>
-        Are You Ready?
-      </h2>
-      
-      <div class="section-content">
-        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
-          The next 4 weeks could change your life. Not because AI is magic, but because 
-          <strong>you're about to learn skills that give you an unfair advantage</strong>.
+      </section>
+
+      <!-- Story 3: 6 Levels Deep -->
+      <section class="section" id="six-levels-story-section">
+        <h2>The Art of Questions: 6 Levels Deep</h2>
+        <p>
+          Real understanding comes from going deeper than surface-level answers.
+          Learn to ask "why?" again and again.
         </p>
-        
-        <p style="text-align: center; color: var(--text-secondary);">
-          While others are wondering what AI is, you'll be using it to build your future.
-        </p>
-        
-        <div class="callout callout-story" style="text-align: center; margin-top: 2rem;">
-          <p style="font-size: 1.25rem; font-style: italic;">
-            "The best time to learn AI was yesterday. The second best time is right now."
-          </p>
+
+        <div class="diagram-container" id="six-levels-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">❓ 6 Levels Deep Framework</span>
+          </div>
+          <div id="six-levels-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="six-levels-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="six-levels-story-progress"></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="settings-bar">
+            <div class="control-group">
+              <label>⏱️</label>
+              <select id="six-levels-story-speed-select">
+                <option value="1000">1s</option>
+                <option value="2000" selected>2s</option>
+                <option value="5000">5s</option>
+                <option value="10000">10s</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <button
+                class="audio-toggle"
+                id="six-levels-story-audio-toggle"
+                title="Toggle audio narration"
+              >
+                <span class="audio-icon">🔊</span>
+              </button>
+            </div>
+            <div class="control-group">
+              <label>🎤</label>
+              <select id="six-levels-story-voice-select" class="voice-select">
+                <option value="">Loading...</option>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    
-    <!-- Continue Section -->
-    <section class="continue-section">
-      <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem;">
-        Let's Begin!
-      </h2>
-      <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-        Week 1 awaits. Time to master ChatGPT and start building your first portfolio pieces.
-      </p>
-      <a href="../week1-chatgpt/" class="continue-btn">
-        Start Week 1: ChatGPT Mastery →
-      </a>
-    </section>
-    
-  </div>
-  
-  <!-- Bottom Navigation -->
-  <nav class="lesson-nav">
-    <a class="nav-btn" href="../../course/endless-opportunities.html">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M19 12H5M12 19l-7-7 7-7" />
-      </svg>
-      ← Course Overview
-    </a>
-    <a class="nav-btn primary" href="../week1-chatgpt/">
-      Week 1: ChatGPT →
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M5 12h14M12 5l7 7-7 7" />
-      </svg>
-    </a>
-  </nav>
-  
-  <!-- Scripts -->
-  <script src="../../shared/js/firebase-config.js"></script>
-  <script src="../../shared/js/auth.js"></script>
-  <script src="../../shared/js/data-service.js"></script>
-  <script src="../../shared/js/rbac.js"></script>
-  <script src="../../shared/js/route-guard.js"></script>
-  <script src="../../shared/js/progress-tracker.js"></script>
-  
-  <script>
-    // Initialize Mermaid
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: 'dark',
-      themeVariables: {
-        primaryColor: '#4CAF50',
-        primaryTextColor: '#fff',
-        primaryBorderColor: '#2E7D32',
-        lineColor: '#4CAF50',
-        secondaryColor: '#1a1a2e',
-        tertiaryColor: '#16161a'
-      }
-    });
-    
-    // Create particles
-    function createParticles() {
-      const container = document.getElementById('particles');
-      for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        container.appendChild(particle);
-      }
-      
-      anime({
-        targets: '.particle',
-        opacity: [0, 0.6, 0],
-        scale: [0, 1, 0],
-        translateY: [-100, 100],
-        delay: anime.stagger(100, { from: 'random' }),
-        duration: 4000,
-        loop: true,
-        easing: 'easeOutQuad'
-      });
-    }
-    
-    // Scroll animations
-    function setupScrollAnimations() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+
+        <div class="quiz-card" id="six-levels-story-quiz">
+          <div class="quiz-header">
+            <h4>📝 Check Your Understanding</h4>
+            <div class="quiz-progress">
+              <span class="answered">0</span>/<span class="total">3</span>
+              answered
+              <span class="score"></span>
+            </div>
+          </div>
+          <div class="quiz-carousel"></div>
+          <div class="quiz-nav">
+            <button class="quiz-nav-btn prev" disabled>← Prev</button>
+            <div class="quiz-dots"></div>
+            <button class="quiz-nav-btn next">Next →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Next Steps -->
+      <section class="section">
+        <h2>Next Steps</h2>
+        <p>
+          You've learned the foundation. Now it's time to master the Art of
+          Questions and become a world-class problem finder.
+        </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a href="../week1-questions/" class="card">
+            <div class="card-icon">❓</div>
+            <h3>Week 1: The Art of Questions</h3>
+            <p>
+              Master the 6 Levels Deep framework and become a world-class
+              questioner.
+            </p>
+          </a>
+          <a href="../../course/endless-opportunities.html" class="card">
+            <div class="card-icon">📚</div>
+            <h3>Course Overview</h3>
+            <p>See all weeks in Endless Opportunities.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="page-nav">
+      <h4>On This Page</h4>
+      <ul>
+        <li>
+          <a href="#problem-game-story-section">Life is a Game of Problems</a>
+        </li>
+        <li>
+          <a href="#ai-revolution-story-section">AI Changes Everything</a>
+        </li>
+        <li><a href="#six-levels-story-section">6 Levels Deep</a></li>
+      </ul>
+    </nav>
+
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+    <!-- Interactive Engines -->
+    <script src="../../shared/js/interactive/diagram-utils.js"></script>
+    <script src="../../shared/js/interactive/audio-engine.js"></script>
+    <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+    <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Initialize page animations
+        DiagramUtils.initPageAnimations();
+        DiagramUtils.setupBackToTop();
+
+        // Load story and quiz data from JSON
+        const response = await fetch("story.json");
+        const pageData = await response.json();
+
+        // Create a shared audio engine pointing to the audio folder
+        const audioEngine = new AudioNarrationEngine("audio");
+
+        // ============================================
+        // DIAGRAM ELEMENTS (Cytoscape data)
+        // ============================================
+
+        const diagramElements = {
+          "problem-game": [
+            {
+              data: {
+                id: "world-problems",
+                label: "🌍 Problems Everywhere",
+                type: "concept",
+                description:
+                  "The world is full of problems waiting to be solved",
+              },
+            },
+            {
+              data: {
+                id: "secret",
+                label: "🔑 The Secret",
+                type: "concept",
+                description: "Getting good at solving problems = success",
+              },
+            },
+            {
+              data: {
+                id: "simple-problems",
+                label: "🍔 Simple Problems",
+                type: "example",
+                description: "Small problems = small rewards",
+              },
+            },
+            {
+              data: {
+                id: "medium-problems",
+                label: "💻 Medium Problems",
+                type: "example",
+                description: "Bigger problems = bigger rewards",
+              },
+            },
+            {
+              data: {
+                id: "hard-problems",
+                label: "🏆 Hard Problems",
+                type: "service",
+                description: "Hardest problems = massive rewards",
+              },
+            },
+            // Edges
+            { data: { source: "world-problems", target: "secret" } },
+            { data: { source: "secret", target: "simple-problems" } },
+            { data: { source: "simple-problems", target: "medium-problems" } },
+            { data: { source: "medium-problems", target: "hard-problems" } },
+          ],
+          "ai-revolution": [
+            {
+              data: {
+                id: "old-way",
+                label: "📜 The Old Way",
+                type: "external",
+                description:
+                  "Years of education, expensive degrees, lucky breaks",
+              },
+            },
+            {
+              data: {
+                id: "old-years",
+                label: "📚 Years of School",
+                type: "external",
+                description: "The long, expensive path",
+              },
+            },
+            {
+              data: {
+                id: "new-way",
+                label: "⚡ The New Way",
+                type: "concept",
+                description: "Problem → Questions → AI → Solution",
+              },
+            },
+            {
+              data: {
+                id: "real-skill",
+                label: "🧠 The Real Skill",
+                type: "concept",
+                description: "Knowing what questions to ask",
+              },
+            },
+            {
+              data: {
+                id: "patient-teacher",
+                label: "🤖 Infinitely Patient",
+                type: "service",
+                description: "AI never gets tired of questions",
+              },
+            },
+            {
+              data: {
+                id: "your-power",
+                label: "💪 Your Superpower",
+                type: "auth",
+                description: "Curiosity + questions = unlimited potential",
+              },
+            },
+            // Edges
+            { data: { source: "old-way", target: "old-years" } },
+            { data: { source: "old-years", target: "new-way" } },
+            { data: { source: "new-way", target: "real-skill" } },
+            { data: { source: "real-skill", target: "patient-teacher" } },
+            { data: { source: "patient-teacher", target: "your-power" } },
+          ],
+          "six-levels": [
+            {
+              data: {
+                id: "surface-level",
+                label: "🏊 Surface Level",
+                type: "external",
+                description: "Where most people stop",
+              },
+            },
+            {
+              data: {
+                id: "level-1",
+                label: "1️⃣ Level 1: Why?",
+                type: "concept",
+                description: "First question reveals surface problem",
+              },
+            },
+            {
+              data: {
+                id: "level-2",
+                label: "2️⃣ Level 2: Why?",
+                type: "concept",
+                description: "Going deeper",
+              },
+            },
+            {
+              data: {
+                id: "level-3",
+                label: "3️⃣ Level 3: Why?",
+                type: "concept",
+                description: "Starting to see real problem",
+              },
+            },
+            {
+              data: {
+                id: "level-4-5",
+                label: "4️⃣ Levels 4 & 5",
+                type: "concept",
+                description: "Almost at the root",
+              },
+            },
+            {
+              data: {
+                id: "level-6",
+                label: "6️⃣ Level 6: Root",
+                type: "service",
+                description: "The solvable problem!",
+              },
+            },
+            {
+              data: {
+                id: "key-insight",
+                label: "🎯 Key Insight",
+                type: "auth",
+                description: "2-3 levels deeper = ahead of 99%",
+              },
+            },
+            // Edges
+            { data: { source: "surface-level", target: "level-1" } },
+            { data: { source: "level-1", target: "level-2" } },
+            { data: { source: "level-2", target: "level-3" } },
+            { data: { source: "level-3", target: "level-4-5" } },
+            { data: { source: "level-4-5", target: "level-6" } },
+            { data: { source: "level-6", target: "key-insight" } },
+          ],
+        };
+
+        // ============================================
+        // INITIALIZE STORYTELLING DIAGRAMS
+        // ============================================
+
+        const storyToDiagram = {
+          "problem-game-story": "problem-game",
+          "ai-revolution-story": "ai-revolution",
+          "six-levels-story": "six-levels",
+        };
+
+        pageData.stories.forEach((story) => {
+          const diagramKey = storyToDiagram[story.id];
+          if (!diagramKey) return;
+
+          const elements = diagramElements[diagramKey];
+          if (!elements) return;
+
+          new StorytellingDiagram(story.id, elements, story.steps, {
+            audioEngine,
+            storyId: story.id,
+          });
         });
-      }, { threshold: 0.1 });
-      
-      document.querySelectorAll('.journey-card').forEach((item, i) => {
-        item.style.transitionDelay = `${i * 0.1}s`;
-        observer.observe(item);
+
+        // ============================================
+        // INITIALIZE QUIZZES
+        // ============================================
+
+        const storyToQuiz = {
+          "problem-game-story": "problem-game-story-quiz",
+          "ai-revolution-story": "ai-revolution-story-quiz",
+          "six-levels-story": "six-levels-story-quiz",
+        };
+
+        pageData.quizzes.forEach((quiz) => {
+          const containerId = storyToQuiz[quiz.storyId];
+          if (!containerId) return;
+          new Quiz(containerId, quiz.questions);
+        });
       });
-    }
-    
-    // Initialize
-    document.addEventListener('DOMContentLoaded', async () => {
-      createParticles();
-      setupScrollAnimations();
-      
-      // Hero animation
-      anime({
-        targets: '.hero-content > *',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        delay: anime.stagger(200, { start: 500 }),
-        duration: 800,
-        easing: 'easeOutQuad'
-      });
-      
-      // Firebase init
-      if (window.FirebaseApp.init()) {
-        window.AuthService.init();
-        
-        const user = await window.AuthService.waitForAuthState();
-        
-        if (!user) {
-          window.AuthService.setRedirectUrl(window.location.href);
-          window.location.href = '../../auth/login.html';
-          return;
-        }
-        
-        // Check RBAC access
-        if (window.RBACService) {
-          const canAccess = await window.RBACService.canAccessCourse('endless-opportunities');
-          if (!canAccess) {
-            window.RBACService.handleAccessDenied('organization');
-            return;
-          }
-        }
-        
-        // Initialize progress tracking
-        if (window.ProgressTracker) {
-          window.ProgressTracker.init('endless-opportunities', 'week0-intro');
-        }
-      }
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
-
-

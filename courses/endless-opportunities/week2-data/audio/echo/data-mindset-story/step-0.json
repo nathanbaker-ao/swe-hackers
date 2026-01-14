@@ -1,0 +1,180 @@
+{
+  "storyId": "data-mindset-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Superpower. Here's a superpower most people don't have: the ability to see data everywhere. Right now, you're surrounded by information. Every post, every review, every comment — it's all data waiting to be discovered.",
+  "duration": 16.40999984741211,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3799999952316284
+    },
+    {
+      "word": "superpower",
+      "start": 0.3799999952316284,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "Here's",
+      "start": 2.0399999618530273,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "a",
+      "start": 2.1600000858306885,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "superpower",
+      "start": 2.440000057220459,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "most",
+      "start": 2.9600000381469727,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "people",
+      "start": 3.4200000762939453,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "don't",
+      "start": 3.7799999713897705,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "have",
+      "start": 4.039999961853027,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "The",
+      "start": 5.059999942779541,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "ability",
+      "start": 5.139999866485596,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "to",
+      "start": 5.460000038146973,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "see",
+      "start": 5.800000190734863,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "data",
+      "start": 6.059999942779541,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "everywhere",
+      "start": 6.28000020980835,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "Right",
+      "start": 7.460000038146973,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "now",
+      "start": 7.599999904632568,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "you're",
+      "start": 8.34000015258789,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "surrounded",
+      "start": 8.579999923706055,
+      "end": 9
+    },
+    {
+      "word": "by",
+      "start": 9,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "information",
+      "start": 9.380000114440918,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "Every",
+      "start": 10.5,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "post",
+      "start": 10.680000305175781,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "Every",
+      "start": 11.619999885559082,
+      "end": 11.739999771118164
+    },
+    {
+      "word": "review",
+      "start": 11.739999771118164,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "Every",
+      "start": 12.640000343322754,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "comment",
+      "start": 12.84000015258789,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "It's",
+      "start": 13.699999809265137,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "all",
+      "start": 13.880000114440918,
+      "end": 14.180000305175781
+    },
+    {
+      "word": "data",
+      "start": 14.180000305175781,
+      "end": 14.520000457763672
+    },
+    {
+      "word": "waiting",
+      "start": 14.520000457763672,
+      "end": 14.9399995803833
+    },
+    {
+      "word": "to",
+      "start": 14.9399995803833,
+      "end": 15.140000343322754
+    },
+    {
+      "word": "be",
+      "start": 15.140000343322754,
+      "end": 15.739999771118164
+    },
+    {
+      "word": "discovered",
+      "start": 15.739999771118164,
+      "end": 15.739999771118164
+    }
+  ]
+}

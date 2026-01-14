@@ -1,0 +1,150 @@
+{
+  "storyId": "capstone-journey-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Gather Your Data. What resources or solutions already exist? What do people say about this problem? What specific data would help—locations, prices, reviews? Organize everything you find.",
+  "duration": 18.549999237060547,
+  "words": [
+    {
+      "word": "Gather",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "your",
+      "start": 0.5799999833106995,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "data",
+      "start": 1.1399999856948853,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "What",
+      "start": 2.5199999809265137,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "resources",
+      "start": 2.619999885559082,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "or",
+      "start": 3.299999952316284,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "solutions",
+      "start": 4.619999885559082,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "already",
+      "start": 4.739999771118164,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "exist",
+      "start": 5.619999885559082,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "What",
+      "start": 6.980000019073486,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "do",
+      "start": 7.119999885559082,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "people",
+      "start": 7.340000152587891,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "say",
+      "start": 7.599999904632568,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "about",
+      "start": 8.039999961853027,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "this",
+      "start": 8.420000076293945,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "problem",
+      "start": 8.680000305175781,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "What",
+      "start": 9.920000076293945,
+      "end": 10.15999984741211
+    },
+    {
+      "word": "specific",
+      "start": 10.15999984741211,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "data",
+      "start": 10.84000015258789,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "would",
+      "start": 11.260000228881836,
+      "end": 11.680000305175781
+    },
+    {
+      "word": "help",
+      "start": 11.680000305175781,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "Locations",
+      "start": 13,
+      "end": 13.239999771118164
+    },
+    {
+      "word": "prices",
+      "start": 14.220000267028809,
+      "end": 14.220000267028809
+    },
+    {
+      "word": "reviews",
+      "start": 15.260000228881836,
+      "end": 15.420000076293945
+    },
+    {
+      "word": "Organise",
+      "start": 16.299999237060547,
+      "end": 16.600000381469727
+    },
+    {
+      "word": "everything",
+      "start": 16.600000381469727,
+      "end": 17.219999313354492
+    },
+    {
+      "word": "you",
+      "start": 17.219999313354492,
+      "end": 17.520000457763672
+    },
+    {
+      "word": "find",
+      "start": 17.520000457763672,
+      "end": 17.81999969482422
+    }
+  ]
+}

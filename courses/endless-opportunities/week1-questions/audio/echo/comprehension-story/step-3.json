@@ -1,0 +1,135 @@
+{
+  "storyId": "comprehension-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Predict Outcomes. When you deeply understand something, you can predict what will happen. 'If X happens, then Y will probably follow because...' Prediction proves comprehension.",
+  "duration": 11.710000038146973,
+  "words": [
+    {
+      "word": "Predict",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "outcomes",
+      "start": 0.5600000023841858,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "When",
+      "start": 1.7000000476837158,
+      "end": 1.7000000476837158
+    },
+    {
+      "word": "you",
+      "start": 1.7000000476837158,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "deeply",
+      "start": 1.9600000381469727,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "understand",
+      "start": 2.3399999141693115,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "something",
+      "start": 2.880000114440918,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "you",
+      "start": 3.4600000381469727,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "can",
+      "start": 3.5199999809265137,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "predict",
+      "start": 3.759999990463257,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "what",
+      "start": 4.119999885559082,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "will",
+      "start": 4.480000019073486,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "happen",
+      "start": 4.71999979019165,
+      "end": 5
+    },
+    {
+      "word": "If",
+      "start": 5.460000038146973,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "x",
+      "start": 5.559999942779541,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "happens",
+      "start": 5.960000038146973,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "then",
+      "start": 6.539999961853027,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "y",
+      "start": 7.059999942779541,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "will",
+      "start": 7.360000133514404,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "probably",
+      "start": 7.559999942779541,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "follow",
+      "start": 8.140000343322754,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "because",
+      "start": 8.359999656677246,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "prediction",
+      "start": 8.920000076293945,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "proves",
+      "start": 9.859999656677246,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "comprehension",
+      "start": 10.399999618530273,
+      "end": 10.979999542236328
+    }
+  ]
+}

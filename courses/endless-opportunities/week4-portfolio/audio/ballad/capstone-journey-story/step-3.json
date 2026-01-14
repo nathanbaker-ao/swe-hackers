@@ -1,0 +1,175 @@
+{
+  "storyId": "capstone-journey-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Build with AI. Use Cursor to build your solution. Describe what you want, explain the problem, list the features. Make it professional and easy to use. Then iterate—improve based on what works.",
+  "duration": 16.559999465942383,
+  "words": [
+    {
+      "word": "Build",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "with",
+      "start": 0.6200000047683716,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "AI",
+      "start": 0.9399999976158142,
+      "end": 1.5
+    },
+    {
+      "word": "Use",
+      "start": 2.4600000381469727,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "cursor",
+      "start": 2.4600000381469727,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "to",
+      "start": 2.9000000953674316,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "build",
+      "start": 3.5399999618530273,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "your",
+      "start": 3.9600000381469727,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "solution",
+      "start": 4.300000190734863,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "Describe",
+      "start": 5.960000038146973,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "what",
+      "start": 5.960000038146973,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "you",
+      "start": 6.239999771118164,
+      "end": 6.5
+    },
+    {
+      "word": "want",
+      "start": 6.5,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "explain",
+      "start": 7.760000228881836,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "the",
+      "start": 7.78000020980835,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "problem",
+      "start": 8.15999984741211,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "list",
+      "start": 8.960000038146973,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 8.960000038146973,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "features",
+      "start": 9.600000381469727,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "Make",
+      "start": 10.5,
+      "end": 10.5
+    },
+    {
+      "word": "it",
+      "start": 10.5,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "professional",
+      "start": 10.819999694824219,
+      "end": 11.220000267028809
+    },
+    {
+      "word": "and",
+      "start": 11.220000267028809,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "easy",
+      "start": 11.720000267028809,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "to",
+      "start": 11.960000038146973,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "use",
+      "start": 12.399999618530273,
+      "end": 12.479999542236328
+    },
+    {
+      "word": "Then",
+      "start": 13.260000228881836,
+      "end": 13.539999961853027
+    },
+    {
+      "word": "iterate",
+      "start": 13.539999961853027,
+      "end": 14.020000457763672
+    },
+    {
+      "word": "Improve",
+      "start": 15.199999809265137,
+      "end": 15.199999809265137
+    },
+    {
+      "word": "based",
+      "start": 15.199999809265137,
+      "end": 15.579999923706055
+    },
+    {
+      "word": "on",
+      "start": 15.579999923706055,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "what",
+      "start": 15.800000190734863,
+      "end": 16.059999465942383
+    },
+    {
+      "word": "works",
+      "start": 16.059999465942383,
+      "end": 16.360000610351562
+    }
+  ]
+}

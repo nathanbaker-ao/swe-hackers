@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3: Building Real Things | AI Problem Solving Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="endless-opportunities" data-lesson="week3-building">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">🛠️</div>
+        <span>Building Real Things</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Course</a>
+        <a href="../week2-data/">Week 2</a>
+        <a href="index.html" class="active">Week 3</a>
+        <a href="../week4-portfolio/">Week 4</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Endless Opportunities</a>
+        <span>/</span>
+        <span>Week 3: Building Real Things</span>
+      </div>
+      <h1>🛠️ Building Real Things</h1>
+      <p>You've learned to ask questions and see data. Now comes the exciting part: building actual websites, tools, and interactive experiences with AI. No coding experience needed!</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 1: Builder Mindset -->
+    <section class="section" id="builder-mindset-section">
+      <h2>The Builder Mindset</h2>
+      <p>Here's what most people don't realize: you don't need to learn coding to build websites and tools anymore. With AI, you describe what you want and it builds it for you.</p>
+      
+      <div class="diagram-container" id="builder-mindset-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🚀 Think It → Describe It → AI Builds It → It's Live!</span>
+        </div>
+        <div id="builder-mindset-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="builder-mindset-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="builder-mindset-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="builder-mindset-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="builder-mindset-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="builder-mindset-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="builder-mindset-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: Art of Building -->
+    <section class="section" id="art-of-building-section">
+      <h2>The Art of AI Building</h2>
+      <p>Building with AI is like having a conversation with a super-smart helper. You describe, it creates, you refine, repeat until it's perfect.</p>
+      
+      <div class="diagram-container" id="art-of-building-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔄 Describe → Preview → Refine → Iterate</span>
+        </div>
+        <div id="art-of-building-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="art-of-building-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="art-of-building-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="art-of-building-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="art-of-building-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="art-of-building-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="art-of-building-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Clear Prompts -->
+    <section class="section" id="clear-prompts-section">
+      <h2>Clear vs Vague Prompts</h2>
+      <p>The quality of what AI builds depends entirely on how well you describe it. Master the art of clear, specific descriptions.</p>
+      
+      <div class="diagram-container" id="clear-prompts-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🎯 Vague → Specific: What + Features + Style</span>
+        </div>
+        <div id="clear-prompts-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="clear-prompts-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="clear-prompts-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="clear-prompts-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="clear-prompts-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="clear-prompts-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="clear-prompts-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready for Week 4?</h2>
+      <p>You've learned to build real things with AI! In the final week, you'll put everything together—questions, data, and building—to complete your Problem Solver Portfolio.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../week4-portfolio/" class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Week 4: Problem Solver Portfolio</h3>
+          <p>Put it all together and create your showcase portfolio.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all weeks in Endless Opportunities.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#builder-mindset-section">Builder Mindset</a></li>
+      <li><a href="#art-of-building-section">Art of Building</a></li>
+      <li><a href="#clear-prompts-section">Clear Prompts</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'builder-mindset': [
+          // Old way
+          { data: { id: 'old-way', label: '📚 Old Way\nYears of Learning', type: 'external', description: 'Traditional path to building' } },
+          // New reality
+          { data: { id: 'new-reality', label: '✨ New Reality\nAI Changes Everything', type: 'concept', description: 'No coding required' } },
+          // Think it
+          { data: { id: 'think-it', label: '💭 Think It\nImagine', type: 'service', description: 'Ideas are seeds' } },
+          // Describe it
+          { data: { id: 'describe-it', label: '💬 Describe It\nPlain English', type: 'auth', description: 'Clear communication' } },
+          // AI builds
+          { data: { id: 'ai-builds', label: '🤖 AI Builds\nCode Generated', type: 'data', description: 'Technical details handled' } },
+          // Live
+          { data: { id: 'its-live', label: '🚀 It\'s Live!\nYou\'re a Creator', type: 'page', description: 'Share your creation' } },
+          // Edges
+          { data: { source: 'old-way', target: 'new-reality' } },
+          { data: { source: 'new-reality', target: 'think-it' } },
+          { data: { source: 'think-it', target: 'describe-it' } },
+          { data: { source: 'describe-it', target: 'ai-builds' } },
+          { data: { source: 'ai-builds', target: 'its-live' } }
+        ],
+
+        'art-of-building': [
+          // Conversation
+          { data: { id: 'conversation', label: '💬 Conversation\nWith AI', type: 'external', description: 'Collaborative building' } },
+          // Describe
+          { data: { id: 'describe-step', label: '📝 Describe\nYour Vision', type: 'concept', description: 'What, how, look' } },
+          // Preview
+          { data: { id: 'preview-step', label: '👀 Preview\nIn Browser', type: 'service', description: 'See what AI created' } },
+          // Refine
+          { data: { id: 'refine-step', label: '🔧 Refine\nAsk for Changes', type: 'auth', description: 'AI remembers context' } },
+          // Iterate
+          { data: { id: 'iterate-step', label: '🔄 Iterate\nKeep Improving', type: 'page', description: 'Pros do this too!' } },
+          // Edges
+          { data: { source: 'conversation', target: 'describe-step' } },
+          { data: { source: 'describe-step', target: 'preview-step' } },
+          { data: { source: 'preview-step', target: 'refine-step' } },
+          { data: { source: 'refine-step', target: 'iterate-step' } }
+        ],
+
+        'clear-prompts': [
+          // Quality matters
+          { data: { id: 'quality-matters', label: '⚡ Quality\nMatters', type: 'external', description: 'Clear in = clear out' } },
+          // Bad example
+          { data: { id: 'bad-example', label: '❌ Vague\n"Make a website"', type: 'concept', description: 'AI has to guess' } },
+          // Good: what
+          { data: { id: 'good-what', label: '🎯 WHAT\nType + Topic', type: 'service', description: 'Quiz about GR history' } },
+          // Good: features
+          { data: { id: 'good-features', label: '📋 FEATURES\nFunctionality', type: 'auth', description: '5 questions, scoring' } },
+          // Good: style
+          { data: { id: 'good-style', label: '🎨 STYLE\nLook & Feel', type: 'page', description: 'Modern, blue, clean' } },
+          // Edges
+          { data: { source: 'quality-matters', target: 'bad-example' } },
+          { data: { source: 'bad-example', target: 'good-what' } },
+          { data: { source: 'good-what', target: 'good-features' } },
+          { data: { source: 'good-features', target: 'good-style' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      const storyToDiagram = {
+        'builder-mindset-story': 'builder-mindset',
+        'art-of-building-story': 'art-of-building',
+        'clear-prompts-story': 'clear-prompts'
+      };
+
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
+      });
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      const storyToQuiz = {
+        'builder-mindset-story': 'builder-mindset-quiz',
+        'art-of-building-story': 'art-of-building-quiz',
+        'clear-prompts-story': 'clear-prompts-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+{
+  "storyId": "data-mindset-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Data Sources Everywhere. Social media shows opinions and trends. Reviews reveal what people love and hate. Comments show real reactions. Local listings, news, public stats — data is literally everywhere once you learn to see it.",
+  "duration": 16.920000076293945,
+  "words": [
+    {
+      "word": "Data",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "sources",
+      "start": 0.5600000023841858,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "everywhere",
+      "start": 1.059999942779541,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "Social",
+      "start": 2.5799999237060547,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "media",
+      "start": 2.7200000286102295,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "shows",
+      "start": 3.0799999237060547,
+      "end": 3.4200000762939453
+    },
+    {
+      "word": "opinions",
+      "start": 3.4200000762939453,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "and",
+      "start": 3.9000000953674316,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "trends",
+      "start": 4.460000038146973,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "Reviews",
+      "start": 5.599999904632568,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "reveal",
+      "start": 5.940000057220459,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "what",
+      "start": 6.139999866485596,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "people",
+      "start": 6.360000133514404,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "love",
+      "start": 6.659999847412109,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "and",
+      "start": 7.059999942779541,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "hate",
+      "start": 7.440000057220459,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "Comments",
+      "start": 8.739999771118164,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "show",
+      "start": 8.739999771118164,
+      "end": 9.0600004196167
+    },
+    {
+      "word": "real",
+      "start": 9.0600004196167,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "reactions",
+      "start": 9.380000114440918,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "Local",
+      "start": 10.619999885559082,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "listings",
+      "start": 10.739999771118164,
+      "end": 11.100000381469727
+    },
+    {
+      "word": "news",
+      "start": 11.880000114440918,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "public",
+      "start": 12.300000190734863,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "stats",
+      "start": 12.5600004196167,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "Data",
+      "start": 13.739999771118164,
+      "end": 13.739999771118164
+    },
+    {
+      "word": "is",
+      "start": 13.739999771118164,
+      "end": 14.079999923706055
+    },
+    {
+      "word": "literally",
+      "start": 14.079999923706055,
+      "end": 14.520000457763672
+    },
+    {
+      "word": "everywhere",
+      "start": 14.520000457763672,
+      "end": 15.15999984741211
+    },
+    {
+      "word": "once",
+      "start": 15.15999984741211,
+      "end": 15.779999732971191
+    },
+    {
+      "word": "you",
+      "start": 15.779999732971191,
+      "end": 15.9399995803833
+    },
+    {
+      "word": "learn",
+      "start": 15.9399995803833,
+      "end": 16.1200008392334
+    },
+    {
+      "word": "to",
+      "start": 16.1200008392334,
+      "end": 16.360000610351562
+    },
+    {
+      "word": "see",
+      "start": 16.360000610351562,
+      "end": 16.459999084472656
+    },
+    {
+      "word": "it",
+      "start": 16.459999084472656,
+      "end": 16.639999389648438
+    }
+  ]
+}

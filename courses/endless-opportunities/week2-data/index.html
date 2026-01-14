@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2: Data is Everywhere | AI Problem Solving Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="endless-opportunities" data-lesson="week2-data">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">📊</div>
+        <span>Data is Everywhere</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Endless Opportunities</a>
+        <a href="../week1-questions/">Week 1</a>
+        <a href="index.html" class="active">Week 2</a>
+        <a href="../week3-building/">Week 3: Building</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">AI Problem Solving Academy</a>
+        <span>/</span>
+        <span>Week 2: Data is Everywhere</span>
+      </div>
+      <h1>📊 Data is Everywhere</h1>
+      <p>Learn to see the world as information waiting to be discovered. Every post, review, and comment is data — and data, when you know how to collect and analyze it, becomes <strong>insight</strong>.</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 1: The Data Mindset -->
+    <section class="section" id="data-mindset-section">
+      <h2>The Data Mindset</h2>
+      <p>Most people scroll past information without seeing it. Problem solvers see data everywhere — in reviews, comments, social posts, and conversations. This is a superpower you can learn.</p>
+      
+      <div class="diagram-container" id="data-mindset-container">
+        <div class="diagram-header">
+          <span class="diagram-title">👁️ Seeing Data Everywhere</span>
+        </div>
+        <div id="data-mindset-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="data-mindset-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="data-mindset-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="data-mindset-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="data-mindset-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="data-mindset-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="data-mindset-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: Two Algorithms -->
+    <section class="section" id="algorithms-section">
+      <h2>Two Algorithms That Rule Your Life</h2>
+      <p>Search vs Recommendation — one puts you in control, the other puts the platform in control. Understanding this difference changes how you consume information.</p>
+      
+      <div class="diagram-container" id="algorithms-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔍 Search vs 📲 Recommendation</span>
+        </div>
+        <div id="algorithms-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="algorithms-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="algorithms-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="algorithms-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="algorithms-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="algorithms-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="algorithms-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Collecting and Analyzing Data -->
+    <section class="section" id="analysis-section">
+      <h2>Collecting and Analyzing Data</h2>
+      <p>Data collection isn't complicated — it's being intentional about gathering information. The real skill is turning raw data into insights through pattern recognition and asking "why."</p>
+      
+      <div class="diagram-container" id="analysis-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔬 From Data to Insight</span>
+        </div>
+        <div id="analysis-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="analysis-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="analysis-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="analysis-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="analysis-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="analysis-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="analysis-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>Ready for Week 3?</h2>
+      <p>You've learned to see data everywhere and turn it into insights. Now let's build something real! Week 3 teaches you to create websites, tools, and interactive experiences using Cursor AI — no coding experience required.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../week3-building/" class="card">
+          <div class="card-icon">🔨</div>
+          <h3>Week 3: Building Real Things</h3>
+          <p>Use Cursor AI to create websites and tools — no coding experience required.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all weeks in AI Problem Solving Academy.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#data-mindset-section">Data Mindset</a></li>
+      <li><a href="#algorithms-section">Two Algorithms</a></li>
+      <li><a href="#analysis-section">Collecting & Analyzing</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'data-mindset': [
+          // Data mindset flow
+          { data: { id: 'superpower', label: '👁️ The\nSuperpower', type: 'external', description: 'See data everywhere' } },
+          { data: { id: 'phone-book', label: '📱 Social as\nPhone Book', type: 'concept', description: 'Free data source' } },
+          { data: { id: 'data-sources', label: '🌐 Data\nSources', type: 'service', description: 'Reviews, comments, stats' } },
+          { data: { id: 'data-to-insight', label: '💡 Data →\nInsight', type: 'page', description: 'Understanding leads to solutions' } },
+          // Edges
+          { data: { source: 'superpower', target: 'phone-book' } },
+          { data: { source: 'phone-book', target: 'data-sources' } },
+          { data: { source: 'data-sources', target: 'data-to-insight' } }
+        ],
+
+        'algorithms': [
+          // Two algorithms
+          { data: { id: 'two-algorithms', label: '🔍 Two\nAlgorithms', type: 'external', description: 'Control vs controlled' } },
+          { data: { id: 'search-algorithm', label: '🎯 Search\nYou Control', type: 'concept', description: 'You decide what to find' } },
+          { data: { id: 'recommendation-algorithm', label: '📲 Recommend\nThey Control', type: 'auth', description: 'Platform decides' } },
+          { data: { id: 'the-difference', label: '⚖️ Critical\nDifference', type: 'service', description: 'Intentional vs passive' } },
+          { data: { id: 'be-intentional', label: '🧠 Be\nIntentional', type: 'page', description: 'Search > Recommendation' } },
+          // Edges
+          { data: { source: 'two-algorithms', target: 'search-algorithm' } },
+          { data: { source: 'two-algorithms', target: 'recommendation-algorithm' } },
+          { data: { source: 'search-algorithm', target: 'the-difference' } },
+          { data: { source: 'recommendation-algorithm', target: 'the-difference' } },
+          { data: { source: 'the-difference', target: 'be-intentional' } }
+        ],
+
+        'analysis': [
+          // Analysis process
+          { data: { id: 'collection-simple', label: '📥 Collection\nis Simple', type: 'external', description: 'Be intentional' } },
+          { data: { id: 'the-pattern', label: '🔄 The\nPattern', type: 'concept', description: 'Define → Find → Collect' } },
+          { data: { id: 'look-for-patterns', label: '🔬 Find\nPatterns', type: 'service', description: 'Patterns reveal truth' } },
+          { data: { id: 'ask-why', label: '❓ Ask\nWhy', type: 'data', description: 'Root causes' } },
+          { data: { id: 'find-gaps', label: '🕳️ Find\nGaps', type: 'auth', description: 'Gaps = Opportunities' } },
+          { data: { id: 'draw-conclusions', label: '📝 Draw\nConclusions', type: 'page', description: 'Data → Action' } },
+          // Edges
+          { data: { source: 'collection-simple', target: 'the-pattern' } },
+          { data: { source: 'the-pattern', target: 'look-for-patterns' } },
+          { data: { source: 'look-for-patterns', target: 'ask-why' } },
+          { data: { source: 'ask-why', target: 'find-gaps' } },
+          { data: { source: 'find-gaps', target: 'draw-conclusions' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      const storyToDiagram = {
+        'data-mindset-story': 'data-mindset',
+        'algorithms-story': 'algorithms',
+        'analysis-story': 'analysis'
+      };
+
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
+      });
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      const storyToQuiz = {
+        'data-mindset-story': 'data-mindset-quiz',
+        'algorithms-story': 'algorithms-quiz',
+        'analysis-story': 'analysis-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>

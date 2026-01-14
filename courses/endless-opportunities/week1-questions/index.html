@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Questions | Endless Opportunities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="endless-opportunities" data-lesson="week1-questions">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">❓</div>
+        <span>Questions</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Course</a>
+        <a href="../week0-intro/">Week 0</a>
+        <a href="index.html" class="active">Week 1</a>
+        <a href="../week2-data/">Week 2</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Endless Opportunities</a>
+        <span>/</span>
+        <span>The Art of Questions</span>
+      </div>
+      <h1>❓ The Art of Questions</h1>
+      <p>Master the 6 Levels Deep framework and become a world-class thinker.</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 1: Why Questions Matter -->
+    <section class="section" id="curiosity-section">
+      <h2>💡 Why Questions Matter</h2>
+      <p>The difference between surface thinking and deep understanding.</p>
+      
+      <div class="diagram-container" id="curiosity-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🧠 Surface vs Deep Thinking</span>
+        </div>
+        <div id="curiosity-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="curiosity-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="curiosity-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="curiosity-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="curiosity-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="curiosity-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="curiosity-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: The 6 Levels Deep Framework -->
+    <section class="section" id="six-levels-section">
+      <h2>🎯 The 6 Levels Deep Framework</h2>
+      <p>Ask "why?" six times to transform surface knowledge into deep understanding.</p>
+      
+      <div class="diagram-container" id="six-levels-container">
+        <div class="diagram-header">
+          <span class="diagram-title">📊 Going Deeper with Each Why</span>
+        </div>
+        <div id="six-levels-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="six-levels-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="six-levels-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="six-levels-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="six-levels-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="six-levels-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="six-levels-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Building Real Comprehension -->
+    <section class="section" id="comprehension-section">
+      <h2>🏆 Building Real Comprehension</h2>
+      <p>Four powerful skills that prove you truly understand.</p>
+      
+      <div class="diagram-container" id="comprehension-container">
+        <div class="diagram-header">
+          <span class="diagram-title">✨ The 4 Comprehension Skills</span>
+        </div>
+        <div id="comprehension-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="comprehension-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="comprehension-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="comprehension-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="comprehension-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="comprehension-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="comprehension-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>🚀 Ready for Week 2?</h2>
+      <p>Next up: Data is Everywhere. Learn to see the world as information waiting to be discovered.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../week2-data/" class="card">
+          <div class="card-icon">📊</div>
+          <h3>Week 2: Data is Everywhere</h3>
+          <p>Learn to see the world as a collection of information waiting to be discovered and analyzed.</p>
+        </a>
+        <a href="../week0-intro/" class="card">
+          <div class="card-icon">🌟</div>
+          <h3>Back to Introduction</h3>
+          <p>Review the course introduction and goals.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#curiosity-section">Why Questions Matter</a></li>
+      <li><a href="#six-levels-section">6 Levels Deep</a></li>
+      <li><a href="#comprehension-section">Building Comprehension</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'curiosity': [
+          // Why questions matter
+          { data: { id: 'truth', label: '💡 The Truth\nQuestions = Understanding', type: 'concept', description: 'A truth that changes everything' } },
+          { data: { id: 'surface-thinker', label: '😐 Surface\nThinker', type: 'external', description: 'Accepts first answer' } },
+          { data: { id: 'deep-thinker', label: '🧠 Deep\nThinker', type: 'example', description: 'Keeps asking why' } },
+          { data: { id: 'curiosity-advantage', label: '🏆 Curiosity\nAdvantage', type: 'concept', description: 'Beats raw intelligence' } },
+          { data: { id: 'your-choice', label: '🎯 Your\nChoice', type: 'page', description: 'Go deeper every time' } },
+          // Edges
+          { data: { source: 'truth', target: 'surface-thinker' } },
+          { data: { source: 'truth', target: 'deep-thinker' } },
+          { data: { source: 'surface-thinker', target: 'curiosity-advantage' } },
+          { data: { source: 'deep-thinker', target: 'curiosity-advantage' } },
+          { data: { source: 'curiosity-advantage', target: 'your-choice' } }
+        ],
+        'six-levels': [
+          // The 6 levels framework
+          { data: { id: 'the-framework', label: '🎯 The Framework\n6 Whys', type: 'concept', description: 'Simple but powerful' } },
+          { data: { id: 'level-1-2', label: '1️⃣ Levels 1-2\n90% Stop Here', type: 'external', description: 'Surface answers' } },
+          { data: { id: 'level-3-4', label: '3️⃣ Levels 3-4\nGetting Interesting', type: 'auth', description: 'Neural pathways' } },
+          { data: { id: 'level-5-6', label: '6️⃣ Levels 5-6\nReal Understanding', type: 'data', description: 'Evolution & survival' } },
+          { data: { id: 'transformation', label: '✨ Transformation\nMind Blown', type: 'example', description: 'True comprehension' } },
+          // Edges
+          { data: { source: 'the-framework', target: 'level-1-2' } },
+          { data: { source: 'level-1-2', target: 'level-3-4' } },
+          { data: { source: 'level-3-4', target: 'level-5-6' } },
+          { data: { source: 'level-5-6', target: 'transformation' } }
+        ],
+        'comprehension': [
+          // Building comprehension
+          { data: { id: 'questions-tool', label: '🔧 Questions\nAre the Tool', type: 'concept', description: 'Comprehension is the result' } },
+          { data: { id: 'explain-simply', label: '👶 Explain\nSimply', type: 'data', description: 'To a younger kid' } },
+          { data: { id: 'find-connections', label: '🔗 Find\nConnections', type: 'service', description: 'How things relate' } },
+          { data: { id: 'predict-outcomes', label: '🔮 Predict\nOutcomes', type: 'auth', description: 'If X then Y' } },
+          { data: { id: 'apply-new', label: '🚀 Apply to\nNew Situations', type: 'external', description: 'Transferable insight' } },
+          { data: { id: 'master-questioner', label: '🏆 Master\nQuestioner', type: 'page', description: 'Your superpower' } },
+          // Edges
+          { data: { source: 'questions-tool', target: 'explain-simply' } },
+          { data: { source: 'questions-tool', target: 'find-connections' } },
+          { data: { source: 'questions-tool', target: 'predict-outcomes' } },
+          { data: { source: 'questions-tool', target: 'apply-new' } },
+          { data: { source: 'explain-simply', target: 'master-questioner' } },
+          { data: { source: 'find-connections', target: 'master-questioner' } },
+          { data: { source: 'predict-outcomes', target: 'master-questioner' } },
+          { data: { source: 'apply-new', target: 'master-questioner' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      const storyToDiagram = {
+        'curiosity-story': 'curiosity',
+        'six-levels-story': 'six-levels',
+        'comprehension-story': 'comprehension'
+      };
+
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
+      });
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      const storyToQuiz = {
+        'curiosity-story': 'curiosity-quiz',
+        'six-levels-story': 'six-levels-quiz',
+        'comprehension-story': 'comprehension-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Build the Solution. Now you build! Use Cursor and AI to create something that addresses the problem. Iterate—build a first version, test it, then improve. Real solutions evolve.",
+  "duration": 14.0600004196167,
+  "words": [
+    {
+      "word": "Build",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "the",
+      "start": 0.5799999833106995,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "solution",
+      "start": 0.8600000143051147,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Now",
+      "start": 2.200000047683716,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "you",
+      "start": 2.319999933242798,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "build",
+      "start": 2.640000104904175,
+      "end": 2.9600000381469727
+    },
+    {
+      "word": "Use",
+      "start": 3.680000066757202,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "cursor",
+      "start": 3.680000066757202,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "and",
+      "start": 4.099999904632568,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "AI",
+      "start": 4.460000038146973,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "to",
+      "start": 4.840000152587891,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "create",
+      "start": 5.239999771118164,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "something",
+      "start": 5.599999904632568,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "that",
+      "start": 5.980000019073486,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "addresses",
+      "start": 6.239999771118164,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "the",
+      "start": 6.599999904632568,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "problem",
+      "start": 6.880000114440918,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "Iterate",
+      "start": 8.420000076293945,
+      "end": 8.479999542236328
+    },
+    {
+      "word": "build",
+      "start": 8.960000038146973,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "a",
+      "start": 8.979999542236328,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "first",
+      "start": 9.140000343322754,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "version",
+      "start": 9.479999542236328,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "test",
+      "start": 10.4399995803833,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "it",
+      "start": 10.4399995803833,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "then",
+      "start": 10.979999542236328,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "improve",
+      "start": 11.15999984741211,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "Real",
+      "start": 12.279999732971191,
+      "end": 12.579999923706055
+    },
+    {
+      "word": "solutions",
+      "start": 12.579999923706055,
+      "end": 13.119999885559082
+    },
+    {
+      "word": "evolve",
+      "start": 13.119999885559082,
+      "end": 13.779999732971191
+    }
+  ]
+}

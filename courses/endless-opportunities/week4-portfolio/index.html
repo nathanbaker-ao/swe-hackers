@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 4: Problem Solver Portfolio | AI Problem Solving Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+</head>
+<body data-course="endless-opportunities" data-lesson="week4-portfolio">
+  <header class="header">
+    <div class="header-content">
+      <a href="../../index.html" class="logo">
+        <div class="logo-icon">🏆</div>
+        <span>Portfolio</span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">← Endless Opportunities</a>
+        <a href="../week3-building/">Week 3</a>
+        <a href="index.html" class="active">Week 4</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div class="breadcrumb">
+        <a href="../index.html">Endless Opportunities</a>
+        <span>/</span>
+        <span>Week 4: Problem Solver Portfolio</span>
+      </div>
+      <h1>🏆 Problem Solver Portfolio</h1>
+      <p>Combine everything you've learned to solve a real problem. This is your capstone—the moment where questions, data, and building come together.</p>
+    </div>
+
+    <!-- Audio Info -->
+    <section class="section audio-info-section">
+      <div class="info-box compact">
+        <div class="info-header">
+          <span class="info-icon">🎙️</span>
+          <div>
+            <h4>Interactive Learning Experience</h4>
+            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
+          </div>
+        </div>
+        <div class="voice-options">
+          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
+          <span class="voice-badge">🎩 Male UK Storyteller</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 1: The Problem-Solving Process -->
+    <section class="section" id="problem-solving-process-section">
+      <h2>The Problem-Solving Process</h2>
+      <p>You've learned all the pieces. Now see how questions, data, insights, and building come together into a complete problem-solving framework.</p>
+      
+      <div class="diagram-container" id="problem-solving-process-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🔄 From Problem to Solution</span>
+        </div>
+        <div id="problem-solving-process-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="problem-solving-process-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="problem-solving-process-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="problem-solving-process-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="problem-solving-process-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="problem-solving-process-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="problem-solving-process-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 2: Building Your Capstone -->
+    <section class="section" id="capstone-journey-section">
+      <h2>Building Your Capstone</h2>
+      <p>Your capstone is a real solution to a real problem. Follow this journey from choosing a problem to deploying a working solution.</p>
+      
+      <div class="diagram-container" id="capstone-journey-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🚀 Your Capstone Journey</span>
+        </div>
+        <div id="capstone-journey-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="capstone-journey-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="capstone-journey-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="capstone-journey-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="capstone-journey-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="capstone-journey-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="capstone-journey-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story 3: Portfolio & Celebration -->
+    <section class="section" id="portfolio-celebration-section">
+      <h2>Your Complete Portfolio</h2>
+      <p>Your portfolio showcases everything you've learned. Present your work with pride—you've become a builder and problem solver.</p>
+      
+      <div class="diagram-container" id="portfolio-celebration-container">
+        <div class="diagram-header">
+          <span class="diagram-title">🎓 From Student to Builder</span>
+        </div>
+        <div id="portfolio-celebration-story" class="diagram-canvas storytelling"></div>
+        
+        <div class="diagram-story" id="portfolio-celebration-story-caption">
+          <div class="story-step">
+            <div class="story-icon visible">🚀</div>
+            <div class="story-content">
+              <div class="story-title visible">Ready to Explore</div>
+              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
+              <div class="story-connection" style="display: none;">
+                <span class="arrow">→</span>
+                <span class="connection-text"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playback-controls">
+          <div class="playback-left">
+            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+          </div>
+          <div class="playback-center">
+            <div class="story-progress" id="portfolio-celebration-story-progress"></div>
+          </div>
+          <div class="playback-right">
+            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
+            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
+          </div>
+        </div>
+
+        <div class="settings-bar">
+          <div class="control-group">
+            <label>⏱️</label>
+            <select id="portfolio-celebration-speed-select">
+              <option value="1000">1s</option>
+              <option value="2000" selected>2s</option>
+              <option value="5000">5s</option>
+              <option value="10000">10s</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <button class="audio-toggle" id="portfolio-celebration-audio-toggle" title="Toggle audio narration">
+              <span class="audio-icon">🔊</span>
+            </button>
+          </div>
+          <div class="control-group">
+            <label>🎤</label>
+            <select id="portfolio-celebration-voice-select" class="voice-select">
+              <option value="">Loading...</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-card" id="portfolio-celebration-quiz">
+        <div class="quiz-header">
+          <h4>📝 Check Your Understanding</h4>
+          <div class="quiz-progress">
+            <span class="answered">0</span>/<span class="total">3</span> answered
+            <span class="score"></span>
+          </div>
+        </div>
+        <div class="quiz-carousel"></div>
+        <div class="quiz-nav">
+          <button class="quiz-nav-btn prev" disabled>← Prev</button>
+          <div class="quiz-dots"></div>
+          <button class="quiz-nav-btn next">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="section">
+      <h2>🎓 Congratulations, Problem Solver!</h2>
+      <p>You've completed the AI Problem Solving Academy! You now have skills that most adults don't have. Keep building, stay curious, help others, and level up. The world needs more builders like you.</p>
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <a href="../week3-building/" class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Week 3: Building</h3>
+          <p>Review what you learned about building real things with AI.</p>
+        </a>
+        <a href="../index.html" class="card">
+          <div class="card-icon">📚</div>
+          <h3>Course Overview</h3>
+          <p>See all weeks in Endless Opportunities.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-nav">
+    <h4>On This Page</h4>
+    <ul>
+      <li><a href="#problem-solving-process-section">Problem-Solving Process</a></li>
+      <li><a href="#capstone-journey-section">Building Your Capstone</a></li>
+      <li><a href="#portfolio-celebration-section">Your Complete Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <button class="back-to-top" title="Back to top">↑</button>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+  
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize page animations
+      DiagramUtils.initPageAnimations();
+      DiagramUtils.setupBackToTop();
+
+      // Load story and quiz data from JSON
+      const response = await fetch('story.json');
+      const pageData = await response.json();
+
+      // Create a shared audio engine pointing to the audio folder
+      const audioEngine = new AudioNarrationEngine('audio');
+
+      // ============================================
+      // DIAGRAM ELEMENTS (Cytoscape data)
+      // ============================================
+
+      const diagramElements = {
+        'problem-solving-process': [
+          // Nodes
+          { data: { id: 'all-pieces', label: '🎯 All the Pieces\nYou\'re Ready', type: 'concept', description: 'Everything comes together' } },
+          { data: { id: 'questions-step', label: '❓ Questions\n6 Levels Deep', type: 'example', description: 'Understand first' } },
+          { data: { id: 'data-step', label: '📊 Data\nGather Info', type: 'data', description: 'Find patterns' } },
+          { data: { id: 'insight-step', label: '💡 Insights\nOpportunities', type: 'auth', description: 'What to build' } },
+          { data: { id: 'build-step', label: '🛠️ Build\nCreate Solution', type: 'page', description: 'Real solutions' } },
+          // Edges
+          { data: { source: 'all-pieces', target: 'questions-step' } },
+          { data: { source: 'questions-step', target: 'data-step' } },
+          { data: { source: 'data-step', target: 'insight-step' } },
+          { data: { source: 'insight-step', target: 'build-step' } }
+        ],
+
+        'capstone-journey': [
+          // Nodes
+          { data: { id: 'choose-problem', label: '🎯 Choose\nYour Problem', type: 'concept', description: 'Real, specific, solvable' } },
+          { data: { id: 'deep-understanding', label: '🔍 Go Deep\n6 Levels', type: 'example', description: 'Root causes' } },
+          { data: { id: 'gather-data', label: '📊 Gather\nData', type: 'data', description: 'Research & organize' } },
+          { data: { id: 'build-with-ai', label: '🤖 Build\nwith AI', type: 'service', description: 'Cursor + iterate' } },
+          { data: { id: 'deploy-test', label: '🚀 Deploy\n& Test', type: 'page', description: 'Real users' } },
+          // Edges
+          { data: { source: 'choose-problem', target: 'deep-understanding' } },
+          { data: { source: 'deep-understanding', target: 'gather-data' } },
+          { data: { source: 'gather-data', target: 'build-with-ai' } },
+          { data: { source: 'build-with-ai', target: 'deploy-test' } }
+        ],
+
+        'portfolio-celebration': [
+          // Nodes
+          { data: { id: 'portfolio-showcase', label: '📁 Portfolio\nShowcase', type: 'concept', description: 'Your work' } },
+          { data: { id: 'present-work', label: '🎤 Present\nYour Work', type: 'example', description: '3-5 minutes' } },
+          { data: { id: 'show-dont-tell', label: '👀 Show\nDon\'t Tell', type: 'service', description: 'Demo it!' } },
+          { data: { id: 'youre-a-builder', label: '🎓 You\'re a\nBuilder', type: 'auth', description: 'Problem solver' } },
+          { data: { id: 'keep-going', label: '🚀 Keep\nGoing', type: 'page', description: 'This is just the start' } },
+          // Edges
+          { data: { source: 'portfolio-showcase', target: 'present-work' } },
+          { data: { source: 'present-work', target: 'show-dont-tell' } },
+          { data: { source: 'show-dont-tell', target: 'youre-a-builder' } },
+          { data: { source: 'youre-a-builder', target: 'keep-going' } }
+        ]
+      };
+
+      // ============================================
+      // INITIALIZE STORYTELLING DIAGRAMS
+      // ============================================
+
+      // Map story IDs to diagram element keys
+      const storyToDiagram = {
+        'problem-solving-process-story': 'problem-solving-process',
+        'capstone-journey-story': 'capstone-journey',
+        'portfolio-celebration-story': 'portfolio-celebration'
+      };
+
+      // Create storytelling diagrams for each story in the JSON
+      pageData.stories.forEach(story => {
+        const diagramKey = storyToDiagram[story.id];
+        if (!diagramKey) return;
+
+        const elements = diagramElements[diagramKey];
+        if (!elements) return;
+
+        new StorytellingDiagram(
+          story.id,
+          elements,
+          story.steps,
+          { audioEngine, storyId: story.id }
+        );
+      });
+
+      // ============================================
+      // INITIALIZE QUIZZES
+      // ============================================
+
+      // Map story IDs to quiz container IDs
+      const storyToQuiz = {
+        'problem-solving-process-story': 'problem-solving-process-quiz',
+        'capstone-journey-story': 'capstone-journey-quiz',
+        'portfolio-celebration-story': 'portfolio-celebration-quiz'
+      };
+
+      pageData.quizzes.forEach(quiz => {
+        const containerId = storyToQuiz[quiz.storyId];
+        if (!containerId) return;
+
+        new Quiz(containerId, quiz.questions);
+      });
+    });
+  </script>
+</body>
+</html>

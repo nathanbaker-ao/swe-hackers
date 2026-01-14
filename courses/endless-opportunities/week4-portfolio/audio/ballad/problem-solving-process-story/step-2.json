@@ -1,0 +1,145 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Gather Data. Collect information about your problem. What resources exist? What do people say? What specific data would help? Organize what you find and look for patterns.",
+  "duration": 13.050000190734863,
+  "words": [
+    {
+      "word": "Gather",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "data",
+      "start": 0.5400000214576721,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Collect",
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "information",
+      "start": 2.180000066757202,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "about",
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "your",
+      "start": 3.2200000286102295,
+      "end": 3.5
+    },
+    {
+      "word": "problem",
+      "start": 3.5,
+      "end": 4
+    },
+    {
+      "word": "What",
+      "start": 4.579999923706055,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "resources",
+      "start": 4.599999904632568,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "exist",
+      "start": 5.079999923706055,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "What",
+      "start": 6.059999942779541,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "do",
+      "start": 6.199999809265137,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "people",
+      "start": 6.360000133514404,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "say",
+      "start": 6.579999923706055,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "What",
+      "start": 7.539999961853027,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "specific",
+      "start": 7.739999771118164,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "data",
+      "start": 8.260000228881836,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "would",
+      "start": 8.600000381469727,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "help",
+      "start": 8.84000015258789,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "Organize",
+      "start": 10.0600004196167,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "what",
+      "start": 10.359999656677246,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "you",
+      "start": 10.5600004196167,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "find",
+      "start": 10.760000228881836,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "and",
+      "start": 11.079999923706055,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "look",
+      "start": 11.720000267028809,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "for",
+      "start": 11.979999542236328,
+      "end": 12.720000267028809
+    },
+    {
+      "word": "patterns",
+      "start": 12.720000267028809,
+      "end": 12.720000267028809
+    }
+  ]
+}

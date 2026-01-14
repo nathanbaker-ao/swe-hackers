@@ -1,0 +1,4850 @@
+{
+  "voices": {
+    "ballad": {
+      "name": "ballad",
+      "label": "Storyteller (Female)"
+    },
+    "echo": {
+      "name": "echo",
+      "label": "Storyteller (Male UK)"
+    }
+  },
+  "defaultVoice": "ballad",
+  "generatedAt": "2026-01-14T04:06:43.669Z",
+  "stories": [
+    "problem-solving-process-story",
+    "capstone-journey-story",
+    "portfolio-celebration-story"
+  ],
+  "ballad": {
+    "problem-solving-process-story": [
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "You Have All the Pieces. You've learned to ask deep questions. You've learned to see and analyze data. You've learned to build real things. Now it's time to put it all together and solve a real problem.",
+        "duration": 14.800000190734863,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "have",
+            "start": 0.47999998927116394,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "all",
+            "start": 0.8399999737739563,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "the",
+            "start": 1.3200000524520874,
+            "end": 1.5
+          },
+          {
+            "word": "pieces",
+            "start": 1.5,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "You've",
+            "start": 2.940000057220459,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "learned",
+            "start": 3.059999942779541,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "to",
+            "start": 3.200000047683716,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "ask",
+            "start": 3.619999885559082,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "deep",
+            "start": 3.799999952316284,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "questions",
+            "start": 4.300000190734863,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "You've",
+            "start": 5.599999904632568,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "learned",
+            "start": 5.760000228881836,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "to",
+            "start": 5.880000114440918,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "see",
+            "start": 6.340000152587891,
+            "end": 6.380000114440918
+          },
+          {
+            "word": "and",
+            "start": 6.380000114440918,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "analyze",
+            "start": 6.739999771118164,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "data",
+            "start": 6.840000152587891,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "You've",
+            "start": 8.260000228881836,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "learned",
+            "start": 8.579999923706055,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "to",
+            "start": 8.680000305175781,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "build",
+            "start": 9.220000267028809,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "real",
+            "start": 9.220000267028809,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "things",
+            "start": 9.699999809265137,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "Now",
+            "start": 10.880000114440918,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "it's",
+            "start": 11.0600004196167,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "time",
+            "start": 11.300000190734863,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "to",
+            "start": 11.520000457763672,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "put",
+            "start": 11.720000267028809,
+            "end": 11.859999656677246
+          },
+          {
+            "word": "it",
+            "start": 11.859999656677246,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "all",
+            "start": 12.039999961853027,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "together",
+            "start": 12.220000267028809,
+            "end": 12.5
+          },
+          {
+            "word": "and",
+            "start": 12.5,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "solve",
+            "start": 13.180000305175781,
+            "end": 13.5
+          },
+          {
+            "word": "a",
+            "start": 13.5,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "real",
+            "start": 13.880000114440918,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "problem",
+            "start": 14.220000267028809,
+            "end": 14.5
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Start with Questions. Every solution starts with understanding. Go six levels deep to truly understand the problem. Don't jump to solutions—understand the root causes first.",
+        "duration": 14.0600004196167,
+        "words": [
+          {
+            "word": "Start",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "with",
+            "start": 0.6800000071525574,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "questions",
+            "start": 1.1799999475479126,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "Every",
+            "start": 3.0999999046325684,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "solution",
+            "start": 3.1600000858306885,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "starts",
+            "start": 3.740000009536743,
+            "end": 4.400000095367432
+          },
+          {
+            "word": "with",
+            "start": 4.400000095367432,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "understanding",
+            "start": 4.699999809265137,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "Go",
+            "start": 6.260000228881836,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "six",
+            "start": 6.260000228881836,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "levels",
+            "start": 6.699999809265137,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "deep",
+            "start": 6.980000019073486,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "to",
+            "start": 7.380000114440918,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "truly",
+            "start": 7.78000020980835,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "understand",
+            "start": 8.220000267028809,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "the",
+            "start": 8.65999984741211,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "problem",
+            "start": 9.239999771118164,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "Don't",
+            "start": 10.140000343322754,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "jump",
+            "start": 10.34000015258789,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "to",
+            "start": 10.520000457763672,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "solutions",
+            "start": 11.300000190734863,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "Understand",
+            "start": 12.460000038146973,
+            "end": 12.460000038146973
+          },
+          {
+            "word": "the",
+            "start": 12.460000038146973,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "root",
+            "start": 12.880000114440918,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "causes",
+            "start": 12.979999542236328,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "first",
+            "start": 13.359999656677246,
+            "end": 13.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Gather Data. Collect information about your problem. What resources exist? What do people say? What specific data would help? Organize what you find and look for patterns.",
+        "duration": 13.050000190734863,
+        "words": [
+          {
+            "word": "Gather",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "data",
+            "start": 0.5400000214576721,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "Collect",
+            "start": 2.180000066757202,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "information",
+            "start": 2.180000066757202,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "about",
+            "start": 2.880000114440918,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "your",
+            "start": 3.2200000286102295,
+            "end": 3.5
+          },
+          {
+            "word": "problem",
+            "start": 3.5,
+            "end": 4
+          },
+          {
+            "word": "What",
+            "start": 4.579999923706055,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "resources",
+            "start": 4.599999904632568,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "exist",
+            "start": 5.079999923706055,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "What",
+            "start": 6.059999942779541,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "do",
+            "start": 6.199999809265137,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "people",
+            "start": 6.360000133514404,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "say",
+            "start": 6.579999923706055,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "What",
+            "start": 7.539999961853027,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "specific",
+            "start": 7.739999771118164,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "data",
+            "start": 8.260000228881836,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "would",
+            "start": 8.600000381469727,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "help",
+            "start": 8.84000015258789,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "Organize",
+            "start": 10.0600004196167,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "what",
+            "start": 10.359999656677246,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "you",
+            "start": 10.5600004196167,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "find",
+            "start": 10.760000228881836,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "and",
+            "start": 11.079999923706055,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "look",
+            "start": 11.720000267028809,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "for",
+            "start": 11.979999542236328,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "patterns",
+            "start": 12.720000267028809,
+            "end": 12.720000267028809
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Find Insights. Patterns in your data reveal opportunities. What's missing? What could be better? Your insights guide what to build. Data without insight is just noise.",
+        "duration": 12.8100004196167,
+        "words": [
+          {
+            "word": "Find",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "insights",
+            "start": 0.699999988079071,
+            "end": 1.5
+          },
+          {
+            "word": "Patterns",
+            "start": 2.4600000381469727,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "in",
+            "start": 2.4600000381469727,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "your",
+            "start": 2.700000047683716,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "data",
+            "start": 2.9000000953674316,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "reveal",
+            "start": 3.2200000286102295,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "opportunities",
+            "start": 3.759999990463257,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "What's",
+            "start": 5.179999828338623,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "missing",
+            "start": 5.579999923706055,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "What",
+            "start": 6.099999904632568,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "could",
+            "start": 6.179999828338623,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "be",
+            "start": 6.340000152587891,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "better",
+            "start": 6.539999961853027,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "Your",
+            "start": 7.599999904632568,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "insights",
+            "start": 7.920000076293945,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "guide",
+            "start": 8.34000015258789,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "what",
+            "start": 8.739999771118164,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "to",
+            "start": 8.9399995803833,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "build",
+            "start": 9.359999656677246,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "Data",
+            "start": 10.239999771118164,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "without",
+            "start": 10.34000015258789,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "insight",
+            "start": 10.699999809265137,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "is",
+            "start": 11.15999984741211,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "just",
+            "start": 11.640000343322754,
+            "end": 12.0600004196167
+          },
+          {
+            "word": "noise",
+            "start": 12.0600004196167,
+            "end": 12.359999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Build the Solution. Now you build! Use Cursor and AI to create something that addresses the problem. Iterate—build a first version, test it, then improve. Real solutions evolve.",
+        "duration": 14.0600004196167,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "the",
+            "start": 0.5799999833106995,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "solution",
+            "start": 0.8600000143051147,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "Now",
+            "start": 2.200000047683716,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "you",
+            "start": 2.319999933242798,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "build",
+            "start": 2.640000104904175,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "Use",
+            "start": 3.680000066757202,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "cursor",
+            "start": 3.680000066757202,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "and",
+            "start": 4.099999904632568,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "AI",
+            "start": 4.460000038146973,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "to",
+            "start": 4.840000152587891,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "create",
+            "start": 5.239999771118164,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "something",
+            "start": 5.599999904632568,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "that",
+            "start": 5.980000019073486,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "addresses",
+            "start": 6.239999771118164,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "the",
+            "start": 6.599999904632568,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "problem",
+            "start": 6.880000114440918,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "Iterate",
+            "start": 8.420000076293945,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "build",
+            "start": 8.960000038146973,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "a",
+            "start": 8.979999542236328,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "first",
+            "start": 9.140000343322754,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "version",
+            "start": 9.479999542236328,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "test",
+            "start": 10.4399995803833,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "it",
+            "start": 10.4399995803833,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "then",
+            "start": 10.979999542236328,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "improve",
+            "start": 11.15999984741211,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "Real",
+            "start": 12.279999732971191,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "solutions",
+            "start": 12.579999923706055,
+            "end": 13.119999885559082
+          },
+          {
+            "word": "evolve",
+            "start": 13.119999885559082,
+            "end": 13.779999732971191
+          }
+        ]
+      }
+    ],
+    "capstone-journey-story": [
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Choose Your Problem. Pick one problem to solve. It should be real—something you've actually observed. Specific—not too broad. And solvable—something you can actually address with a tool or resource.",
+        "duration": 15.960000038146973,
+        "words": [
+          {
+            "word": "Choose",
+            "start": 0,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "your",
+            "start": 0.8600000143051147,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "problem",
+            "start": 1.2799999713897705,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "Pick",
+            "start": 2.819999933242798,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "one",
+            "start": 2.819999933242798,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "problem",
+            "start": 3.4200000762939453,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "to",
+            "start": 3.700000047683716,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "solve",
+            "start": 4.019999980926514,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "It",
+            "start": 5.039999961853027,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "should",
+            "start": 5.039999961853027,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "be",
+            "start": 5.199999809265137,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "real",
+            "start": 5.480000019073486,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "something",
+            "start": 6.480000019073486,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "you've",
+            "start": 6.619999885559082,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "actually",
+            "start": 6.900000095367432,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "observed",
+            "start": 7.440000057220459,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "Specific",
+            "start": 8.680000305175781,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "not",
+            "start": 9.399999618530273,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "too",
+            "start": 9.539999961853027,
+            "end": 9.859999656677246
+          },
+          {
+            "word": "broad",
+            "start": 9.859999656677246,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "And",
+            "start": 10.819999694824219,
+            "end": 11.119999885559082
+          },
+          {
+            "word": "solvable",
+            "start": 11.119999885559082,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "something",
+            "start": 12.15999984741211,
+            "end": 12.199999809265137
+          },
+          {
+            "word": "you",
+            "start": 12.199999809265137,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "can",
+            "start": 12.380000114440918,
+            "end": 12.5600004196167
+          },
+          {
+            "word": "actually",
+            "start": 12.5600004196167,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "address",
+            "start": 13.079999923706055,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "with",
+            "start": 13.34000015258789,
+            "end": 13.520000457763672
+          },
+          {
+            "word": "a",
+            "start": 13.520000457763672,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "tool",
+            "start": 13.920000076293945,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "or",
+            "start": 13.920000076293945,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "resource",
+            "start": 14.220000267028809,
+            "end": 14.579999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Deep Understanding. Use ChatGPT to go six levels deep. Keep asking why about each answer. Document all six levels. This helps you build a better solution because you truly understand the problem.",
+        "duration": 14.760000228881836,
+        "words": [
+          {
+            "word": "Deep",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "understanding",
+            "start": 0.6399999856948853,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "Use",
+            "start": 2.5,
+            "end": 2.5
+          },
+          {
+            "word": "ChatGPT",
+            "start": 2.5,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "to",
+            "start": 3.299999952316284,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "go",
+            "start": 3.5399999618530273,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "six",
+            "start": 3.799999952316284,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "levels",
+            "start": 4.179999828338623,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "deep",
+            "start": 4.420000076293945,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "Keep",
+            "start": 5.639999866485596,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "asking",
+            "start": 5.639999866485596,
+            "end": 6
+          },
+          {
+            "word": "why",
+            "start": 6,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "about",
+            "start": 6.420000076293945,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "each",
+            "start": 6.760000228881836,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "answer",
+            "start": 7.159999847412109,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "Document",
+            "start": 8.5600004196167,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "all",
+            "start": 8.5600004196167,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "six",
+            "start": 8.9399995803833,
+            "end": 9.239999771118164
+          },
+          {
+            "word": "levels",
+            "start": 9.239999771118164,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "This",
+            "start": 10.180000305175781,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "helps",
+            "start": 10.34000015258789,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "you",
+            "start": 10.5600004196167,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "build",
+            "start": 10.859999656677246,
+            "end": 11
+          },
+          {
+            "word": "a",
+            "start": 11,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "better",
+            "start": 11.300000190734863,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "solution",
+            "start": 11.539999961853027,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "because",
+            "start": 11.920000076293945,
+            "end": 12.579999923706055
+          },
+          {
+            "word": "you",
+            "start": 12.579999923706055,
+            "end": 12.84000015258789
+          },
+          {
+            "word": "truly",
+            "start": 12.84000015258789,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "understand",
+            "start": 13.359999656677246,
+            "end": 13.920000076293945
+          },
+          {
+            "word": "the",
+            "start": 13.920000076293945,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "problem",
+            "start": 14.220000267028809,
+            "end": 14.460000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Gather Your Data. What resources or solutions already exist? What do people say about this problem? What specific data would help—locations, prices, reviews? Organize everything you find.",
+        "duration": 18.549999237060547,
+        "words": [
+          {
+            "word": "Gather",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "your",
+            "start": 0.5799999833106995,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "data",
+            "start": 1.1399999856948853,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "What",
+            "start": 2.5199999809265137,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "resources",
+            "start": 2.619999885559082,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "or",
+            "start": 3.299999952316284,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "solutions",
+            "start": 4.619999885559082,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "already",
+            "start": 4.739999771118164,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "exist",
+            "start": 5.619999885559082,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "What",
+            "start": 6.980000019073486,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "do",
+            "start": 7.119999885559082,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "people",
+            "start": 7.340000152587891,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "say",
+            "start": 7.599999904632568,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "about",
+            "start": 8.039999961853027,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "this",
+            "start": 8.420000076293945,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "problem",
+            "start": 8.680000305175781,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "What",
+            "start": 9.920000076293945,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "specific",
+            "start": 10.15999984741211,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "data",
+            "start": 10.84000015258789,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "would",
+            "start": 11.260000228881836,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "help",
+            "start": 11.680000305175781,
+            "end": 11.979999542236328
+          },
+          {
+            "word": "Locations",
+            "start": 13,
+            "end": 13.239999771118164
+          },
+          {
+            "word": "prices",
+            "start": 14.220000267028809,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "reviews",
+            "start": 15.260000228881836,
+            "end": 15.420000076293945
+          },
+          {
+            "word": "Organise",
+            "start": 16.299999237060547,
+            "end": 16.600000381469727
+          },
+          {
+            "word": "everything",
+            "start": 16.600000381469727,
+            "end": 17.219999313354492
+          },
+          {
+            "word": "you",
+            "start": 17.219999313354492,
+            "end": 17.520000457763672
+          },
+          {
+            "word": "find",
+            "start": 17.520000457763672,
+            "end": 17.81999969482422
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Build with AI. Use Cursor to build your solution. Describe what you want, explain the problem, list the features. Make it professional and easy to use. Then iterate—improve based on what works.",
+        "duration": 16.559999465942383,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "with",
+            "start": 0.6200000047683716,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "AI",
+            "start": 0.9399999976158142,
+            "end": 1.5
+          },
+          {
+            "word": "Use",
+            "start": 2.4600000381469727,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "cursor",
+            "start": 2.4600000381469727,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "to",
+            "start": 2.9000000953674316,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "build",
+            "start": 3.5399999618530273,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "your",
+            "start": 3.9600000381469727,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "solution",
+            "start": 4.300000190734863,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "Describe",
+            "start": 5.960000038146973,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "what",
+            "start": 5.960000038146973,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "you",
+            "start": 6.239999771118164,
+            "end": 6.5
+          },
+          {
+            "word": "want",
+            "start": 6.5,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "explain",
+            "start": 7.760000228881836,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "the",
+            "start": 7.78000020980835,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "problem",
+            "start": 8.15999984741211,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "list",
+            "start": 8.960000038146973,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "the",
+            "start": 8.960000038146973,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "features",
+            "start": 9.600000381469727,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "Make",
+            "start": 10.5,
+            "end": 10.5
+          },
+          {
+            "word": "it",
+            "start": 10.5,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "professional",
+            "start": 10.819999694824219,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "and",
+            "start": 11.220000267028809,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "easy",
+            "start": 11.720000267028809,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "to",
+            "start": 11.960000038146973,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "use",
+            "start": 12.399999618530273,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "Then",
+            "start": 13.260000228881836,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "iterate",
+            "start": 13.539999961853027,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "Improve",
+            "start": 15.199999809265137,
+            "end": 15.199999809265137
+          },
+          {
+            "word": "based",
+            "start": 15.199999809265137,
+            "end": 15.579999923706055
+          },
+          {
+            "word": "on",
+            "start": 15.579999923706055,
+            "end": 15.800000190734863
+          },
+          {
+            "word": "what",
+            "start": 15.800000190734863,
+            "end": 16.059999465942383
+          },
+          {
+            "word": "works",
+            "start": 16.059999465942383,
+            "end": 16.360000610351562
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Deploy and Test. Put your solution on GitHub Pages so it's live on the internet. Share it with two or three people who might use it. Get their feedback, then make improvements. Real solutions need real users.",
+        "duration": 16.649999618530273,
+        "words": [
+          {
+            "word": "Deploy",
+            "start": 0,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "and",
+            "start": 0.7799999713897705,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "test",
+            "start": 1.4800000190734863,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "Put",
+            "start": 2.880000114440918,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "your",
+            "start": 2.880000114440918,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "solution",
+            "start": 3.259999990463257,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "on",
+            "start": 3.5999999046325684,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "GitHub",
+            "start": 4.099999904632568,
+            "end": 4.5
+          },
+          {
+            "word": "pages",
+            "start": 4.5,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "so",
+            "start": 4.980000019073486,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "it's",
+            "start": 5.480000019073486,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "live",
+            "start": 5.739999771118164,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "on",
+            "start": 6.039999961853027,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 6.21999979019165,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "internet",
+            "start": 6.300000190734863,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "Share",
+            "start": 7.679999828338623,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "it",
+            "start": 7.679999828338623,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "with",
+            "start": 7.860000133514404,
+            "end": 8.140000343322754
+          },
+          {
+            "word": "two",
+            "start": 8.140000343322754,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "or",
+            "start": 8.319999694824219,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "three",
+            "start": 8.539999961853027,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "people",
+            "start": 8.739999771118164,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "who",
+            "start": 9.0600004196167,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "might",
+            "start": 9.4399995803833,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "use",
+            "start": 9.699999809265137,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "it",
+            "start": 9.979999542236328,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "Get",
+            "start": 10.9399995803833,
+            "end": 10.960000038146973
+          },
+          {
+            "word": "their",
+            "start": 10.960000038146973,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "feedback",
+            "start": 11.300000190734863,
+            "end": 11.65999984741211
+          },
+          {
+            "word": "then",
+            "start": 12.100000381469727,
+            "end": 12.319999694824219
+          },
+          {
+            "word": "make",
+            "start": 12.319999694824219,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "improvements",
+            "start": 12.779999732971191,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "Real",
+            "start": 14.239999771118164,
+            "end": 14.5
+          },
+          {
+            "word": "solutions",
+            "start": 14.5,
+            "end": 15
+          },
+          {
+            "word": "need",
+            "start": 15,
+            "end": 15.600000381469727
+          },
+          {
+            "word": "real",
+            "start": 15.600000381469727,
+            "end": 16.040000915527344
+          },
+          {
+            "word": "users",
+            "start": 16.040000915527344,
+            "end": 16.360000610351562
+          }
+        ]
+      }
+    ],
+    "portfolio-celebration-story": [
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Your Portfolio. Your portfolio showcases everything you've learned. It includes work from each week plus your capstone project. This is proof that you can solve real problems.",
+        "duration": 12.600000381469727,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "portfolio",
+            "start": 0.46000000834465027,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "Your",
+            "start": 3,
+            "end": 3
+          },
+          {
+            "word": "portfolio",
+            "start": 3,
+            "end": 3
+          },
+          {
+            "word": "showcases",
+            "start": 3,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "everything",
+            "start": 3.4800000190734863,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "you've",
+            "start": 4.099999904632568,
+            "end": 4.5
+          },
+          {
+            "word": "learned",
+            "start": 4.5,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "It",
+            "start": 5.440000057220459,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "includes",
+            "start": 5.440000057220459,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "work",
+            "start": 5.71999979019165,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "from",
+            "start": 6.059999942779541,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "each",
+            "start": 6.260000228881836,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "week",
+            "start": 6.639999866485596,
+            "end": 6.860000133514404
+          },
+          {
+            "word": "plus",
+            "start": 6.860000133514404,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "your",
+            "start": 7.440000057220459,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "capstone",
+            "start": 7.71999979019165,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "project",
+            "start": 8.15999984741211,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "This",
+            "start": 9.380000114440918,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "is",
+            "start": 9.479999542236328,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "proof",
+            "start": 9.739999771118164,
+            "end": 10
+          },
+          {
+            "word": "that",
+            "start": 10,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "you",
+            "start": 10.4399995803833,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "can",
+            "start": 10.579999923706055,
+            "end": 10.84000015258789
+          },
+          {
+            "word": "solve",
+            "start": 10.84000015258789,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "real",
+            "start": 11.079999923706055,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "problems",
+            "start": 11.539999961853027,
+            "end": 11.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Present Your Work. You'll present your capstone to the group. Cover the problem, your research, the data you gathered, demo your solution, and share what you learned. Keep it short—three to five minutes.",
+        "duration": 14.609999656677246,
+        "words": [
+          {
+            "word": "Present",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "your",
+            "start": 0.8399999737739563,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "work",
+            "start": 1.2799999713897705,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "You'll",
+            "start": 2.440000057220459,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "present",
+            "start": 2.7200000286102295,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "your",
+            "start": 2.9600000381469727,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "capstone",
+            "start": 3.2799999713897705,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "to",
+            "start": 3.680000066757202,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "the",
+            "start": 3.9200000762939453,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "group",
+            "start": 4.119999885559082,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "cover",
+            "start": 5.21999979019165,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 5.21999979019165,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "problem",
+            "start": 5.800000190734863,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "your",
+            "start": 6.239999771118164,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "research",
+            "start": 6.579999923706055,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 7.380000114440918,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "data",
+            "start": 7.599999904632568,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "you",
+            "start": 7.71999979019165,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "gathered",
+            "start": 8.319999694824219,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "demo",
+            "start": 9.119999885559082,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "your",
+            "start": 9.119999885559082,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "solution",
+            "start": 9.4399995803833,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "and",
+            "start": 9.760000228881836,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "share",
+            "start": 10.579999923706055,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "what",
+            "start": 10.880000114440918,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "you",
+            "start": 11.15999984741211,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "learned",
+            "start": 11.359999656677246,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "Keep",
+            "start": 12.399999618530273,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "it",
+            "start": 12.399999618530273,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "short",
+            "start": 12.699999809265137,
+            "end": 12.880000114440918
+          },
+          {
+            "word": "three",
+            "start": 13.4399995803833,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "to",
+            "start": 13.539999961853027,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "five",
+            "start": 13.800000190734863,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "minutes",
+            "start": 14.020000457763672,
+            "end": 14.34000015258789
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Show, Don't Tell. Demo your actual project. Let them see it work. Quality over quantity. Be proud—you built something real. That's something most people never do.",
+        "duration": 15.210000038146973,
+        "words": [
+          {
+            "word": "Show",
+            "start": 0,
+            "end": 0.7599999904632568
+          },
+          {
+            "word": "don't",
+            "start": 0.8799999952316284,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "tell",
+            "start": 1.4800000190734863,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "Demo",
+            "start": 3.059999942779541,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "your",
+            "start": 3.2200000286102295,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "actual",
+            "start": 3.5199999809265137,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "project",
+            "start": 4.119999885559082,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "Let",
+            "start": 5.480000019073486,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "them",
+            "start": 5.480000019073486,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "see",
+            "start": 5.699999809265137,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "it",
+            "start": 5.940000057220459,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "work",
+            "start": 6.199999809265137,
+            "end": 6.5
+          },
+          {
+            "word": "Quantity",
+            "start": 7.420000076293945,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "over",
+            "start": 7.699999809265137,
+            "end": 8.199999809265137
+          },
+          {
+            "word": "quantity",
+            "start": 8.199999809265137,
+            "end": 8.640000343322754
+          },
+          {
+            "word": "Be",
+            "start": 9.600000381469727,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "proud",
+            "start": 9.739999771118164,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 10.619999885559082,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "built",
+            "start": 10.819999694824219,
+            "end": 11.039999961853027
+          },
+          {
+            "word": "something",
+            "start": 11.039999961853027,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "real",
+            "start": 11.479999542236328,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "That's",
+            "start": 12.359999656677246,
+            "end": 12.960000038146973
+          },
+          {
+            "word": "something",
+            "start": 12.960000038146973,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "most",
+            "start": 13.279999732971191,
+            "end": 13.65999984741211
+          },
+          {
+            "word": "people",
+            "start": 13.65999984741211,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "never",
+            "start": 14.180000305175781,
+            "end": 14.5600004196167
+          },
+          {
+            "word": "do",
+            "start": 14.5600004196167,
+            "end": 14.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "You're a Builder Now. Congratulations! You've completed the academy. You're not just a consumer of technology anymore. You're a builder. You're a problem solver. The world needs more people like you.",
+        "duration": 13.960000038146973,
+        "words": [
+          {
+            "word": "You're",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "a",
+            "start": 0.41999998688697815,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "builder",
+            "start": 0.9599999785423279,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "now",
+            "start": 0.9599999785423279,
+            "end": 1.5199999809265137
+          },
+          {
+            "word": "Congratulations",
+            "start": 2.180000066757202,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "You've",
+            "start": 3.259999990463257,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "completed",
+            "start": 3.5199999809265137,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "the",
+            "start": 3.9800000190734863,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "academy",
+            "start": 4.260000228881836,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "You're",
+            "start": 5.21999979019165,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "not",
+            "start": 5.420000076293945,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "just",
+            "start": 5.659999847412109,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "a",
+            "start": 5.880000114440918,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "consumer",
+            "start": 6.460000038146973,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "of",
+            "start": 6.519999980926514,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "technology",
+            "start": 7.239999771118164,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "anymore",
+            "start": 7.239999771118164,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "You're",
+            "start": 8.079999923706055,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "a",
+            "start": 8.279999732971191,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "builder",
+            "start": 8.5600004196167,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "You're",
+            "start": 9.399999618530273,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "a",
+            "start": 9.600000381469727,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "problem",
+            "start": 9.9399995803833,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "solver",
+            "start": 10.15999984741211,
+            "end": 10.819999694824219
+          },
+          {
+            "word": "The",
+            "start": 11.300000190734863,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "world",
+            "start": 11.479999542236328,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "needs",
+            "start": 11.819999694824219,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "more",
+            "start": 12.239999771118164,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "people",
+            "start": 12.65999984741211,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "like",
+            "start": 12.979999542236328,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "you",
+            "start": 13.34000015258789,
+            "end": 13.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Keep Going. This is just the beginning. Keep building, stay curious, help others, and level up. The best time to start solving problems was yesterday. The second best time is right now. You have the skills—now go use them!",
+        "duration": 16.200000762939453,
+        "words": [
+          {
+            "word": "Keep",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "going",
+            "start": 0.41999998688697815,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "This",
+            "start": 1.4600000381469727,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "is",
+            "start": 1.6799999475479126,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "just",
+            "start": 1.899999976158142,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "the",
+            "start": 2.240000009536743,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "beginning",
+            "start": 2.4800000190734863,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "Keep",
+            "start": 3.5399999618530273,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "building",
+            "start": 3.559999942779541,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "stay",
+            "start": 4.400000095367432,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "curious",
+            "start": 4.579999923706055,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "help",
+            "start": 5.480000019073486,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "others",
+            "start": 5.519999980926514,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "and",
+            "start": 5.820000171661377,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "level",
+            "start": 6.320000171661377,
+            "end": 6.5
+          },
+          {
+            "word": "up",
+            "start": 6.5,
+            "end": 7.019999980926514
+          },
+          {
+            "word": "The",
+            "start": 7.559999942779541,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "best",
+            "start": 7.679999828338623,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "time",
+            "start": 7.980000019073486,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "to",
+            "start": 8.239999771118164,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "start",
+            "start": 8.4399995803833,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "solving",
+            "start": 8.779999732971191,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "problems",
+            "start": 9.039999961853027,
+            "end": 9.5
+          },
+          {
+            "word": "was",
+            "start": 9.5,
+            "end": 10
+          },
+          {
+            "word": "yesterday",
+            "start": 10,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "The",
+            "start": 11,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "second",
+            "start": 11.15999984741211,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "best",
+            "start": 11.460000038146973,
+            "end": 11.699999809265137
+          },
+          {
+            "word": "time",
+            "start": 11.699999809265137,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "is",
+            "start": 12.020000457763672,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "right",
+            "start": 12.380000114440918,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "now",
+            "start": 12.720000267028809,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "You",
+            "start": 13.619999885559082,
+            "end": 13.760000228881836
+          },
+          {
+            "word": "have",
+            "start": 13.760000228881836,
+            "end": 13.9399995803833
+          },
+          {
+            "word": "the",
+            "start": 13.9399995803833,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "skills",
+            "start": 14.4399995803833,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "now",
+            "start": 14.779999732971191,
+            "end": 15.0600004196167
+          },
+          {
+            "word": "go",
+            "start": 15.0600004196167,
+            "end": 15.34000015258789
+          },
+          {
+            "word": "use",
+            "start": 15.34000015258789,
+            "end": 15.600000381469727
+          },
+          {
+            "word": "them",
+            "start": 15.600000381469727,
+            "end": 15.779999732971191
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "problem-solving-process-story": [
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "You Have All the Pieces. You've learned to ask deep questions. You've learned to see and analyze data. You've learned to build real things. Now it's time to put it all together and solve a real problem.",
+        "duration": 14.800000190734863,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "have",
+            "start": 0.3199999928474426,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "all",
+            "start": 0.5400000214576721,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "the",
+            "start": 1.0199999809265137,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "pieces",
+            "start": 1.2400000095367432,
+            "end": 1.6399999856948853
+          },
+          {
+            "word": "You've",
+            "start": 2.380000114440918,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "learned",
+            "start": 2.5399999618530273,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "to",
+            "start": 2.680000066757202,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "ask",
+            "start": 3.0999999046325684,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "deep",
+            "start": 3.119999885559082,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "questions",
+            "start": 3.4800000190734863,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "You've",
+            "start": 4.71999979019165,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "learned",
+            "start": 4.960000038146973,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "to",
+            "start": 4.980000019073486,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "see",
+            "start": 5.420000076293945,
+            "end": 5.5
+          },
+          {
+            "word": "and",
+            "start": 5.5,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "analyze",
+            "start": 5.880000114440918,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "data",
+            "start": 5.880000114440918,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "You've",
+            "start": 7.340000152587891,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "learned",
+            "start": 7.659999847412109,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "to",
+            "start": 7.760000228881836,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "build",
+            "start": 8.380000114440918,
+            "end": 8.380000114440918
+          },
+          {
+            "word": "real",
+            "start": 8.380000114440918,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "things",
+            "start": 8.899999618530273,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "Now",
+            "start": 10.020000457763672,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "it's",
+            "start": 10.140000343322754,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "time",
+            "start": 10.380000114440918,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "to",
+            "start": 10.619999885559082,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "put",
+            "start": 10.9399995803833,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "it",
+            "start": 11.020000457763672,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "all",
+            "start": 11.220000267028809,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "together",
+            "start": 11.420000076293945,
+            "end": 11.720000267028809
+          },
+          {
+            "word": "and",
+            "start": 11.720000267028809,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "solve",
+            "start": 12.300000190734863,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "a",
+            "start": 12.539999961853027,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "real",
+            "start": 12.800000190734863,
+            "end": 13.100000381469727
+          },
+          {
+            "word": "problem",
+            "start": 13.100000381469727,
+            "end": 13.460000038146973
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Start with Questions. Every solution starts with understanding. Go six levels deep to truly understand the problem. Don't jump to solutions—understand the root causes first.",
+        "duration": 12.640000343322754,
+        "words": [
+          {
+            "word": "Start",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "with",
+            "start": 0.5799999833106995,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "questions",
+            "start": 0.8799999952316284,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "Every",
+            "start": 2.240000009536743,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "solution",
+            "start": 2.4000000953674316,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "starts",
+            "start": 2.940000057220459,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "with",
+            "start": 3.359999895095825,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "understanding",
+            "start": 3.700000047683716,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "Go",
+            "start": 5.260000228881836,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "six",
+            "start": 5.260000228881836,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "levels",
+            "start": 5.71999979019165,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "deep",
+            "start": 6.019999980926514,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "to",
+            "start": 6.400000095367432,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "truly",
+            "start": 6.679999828338623,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "understand",
+            "start": 7.099999904632568,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "the",
+            "start": 7.519999980926514,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "problem",
+            "start": 7.880000114440918,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "Don't",
+            "start": 8.720000267028809,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "jump",
+            "start": 8.859999656677246,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "to",
+            "start": 9.039999961853027,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "solutions",
+            "start": 9.800000190734863,
+            "end": 9.800000190734863
+          },
+          {
+            "word": "Understand",
+            "start": 10.899999618530273,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "the",
+            "start": 10.899999618530273,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "root",
+            "start": 11.300000190734863,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "causes",
+            "start": 11.420000076293945,
+            "end": 11.800000190734863
+          },
+          {
+            "word": "first",
+            "start": 11.800000190734863,
+            "end": 12.260000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Gather Data. Collect information about your problem. What resources exist? What do people say? What specific data would help? Organize what you find and look for patterns.",
+        "duration": 11.300000190734863,
+        "words": [
+          {
+            "word": "Gather",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "data",
+            "start": 0.5,
+            "end": 1
+          },
+          {
+            "word": "Collect",
+            "start": 1.7400000095367432,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "information",
+            "start": 1.7400000095367432,
+            "end": 2.299999952316284
+          },
+          {
+            "word": "about",
+            "start": 2.299999952316284,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "your",
+            "start": 2.5799999237060547,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "problem",
+            "start": 2.7799999713897705,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "What",
+            "start": 3.6600000858306885,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "resources",
+            "start": 3.7200000286102295,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "exist",
+            "start": 4.21999979019165,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "What",
+            "start": 5.159999847412109,
+            "end": 5.300000190734863
+          },
+          {
+            "word": "do",
+            "start": 5.300000190734863,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "people",
+            "start": 5.480000019073486,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "say",
+            "start": 5.739999771118164,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "What",
+            "start": 6.619999885559082,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "specific",
+            "start": 6.760000228881836,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "data",
+            "start": 7.260000228881836,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "would",
+            "start": 7.559999942779541,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "help",
+            "start": 7.800000190734863,
+            "end": 8.0600004196167
+          },
+          {
+            "word": "Organize",
+            "start": 8.760000228881836,
+            "end": 9
+          },
+          {
+            "word": "what",
+            "start": 9,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "you",
+            "start": 9.140000343322754,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "find",
+            "start": 9.319999694824219,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "and",
+            "start": 9.600000381469727,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "look",
+            "start": 10.180000305175781,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "for",
+            "start": 10.34000015258789,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "patterns",
+            "start": 10.720000267028809,
+            "end": 10.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Find Insights. Patterns in your data reveal opportunities. What's missing? What could be better? Your insights guide what to build. Data without insight is just noise.",
+        "duration": 12.8100004196167,
+        "words": [
+          {
+            "word": "Find",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "insights",
+            "start": 0.6600000262260437,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "Patterns",
+            "start": 2.4800000190734863,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "in",
+            "start": 2.4800000190734863,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "your",
+            "start": 2.7200000286102295,
+            "end": 2.9200000762939453
+          },
+          {
+            "word": "data",
+            "start": 2.9200000762939453,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "reveal",
+            "start": 3.1600000858306885,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "opportunities",
+            "start": 3.5999999046325684,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "What's",
+            "start": 5.079999923706055,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "missing",
+            "start": 5.579999923706055,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "What",
+            "start": 6.119999885559082,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "could",
+            "start": 6.179999828338623,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "be",
+            "start": 6.340000152587891,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "better",
+            "start": 6.579999923706055,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "Your",
+            "start": 7.679999828338623,
+            "end": 8
+          },
+          {
+            "word": "insights",
+            "start": 8,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "guide",
+            "start": 8.4399995803833,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "what",
+            "start": 8.859999656677246,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "to",
+            "start": 9.079999923706055,
+            "end": 9.5
+          },
+          {
+            "word": "build",
+            "start": 9.5,
+            "end": 9.5
+          },
+          {
+            "word": "Data",
+            "start": 10.539999961853027,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "without",
+            "start": 10.5600004196167,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "insight",
+            "start": 10.9399995803833,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "is",
+            "start": 11.319999694824219,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "just",
+            "start": 11.819999694824219,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "noise",
+            "start": 12.220000267028809,
+            "end": 12.539999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Build the Solution. Now you build! Use Cursor and AI to create something that addresses the problem. Iterate—build a first version, test it, then improve. Real solutions evolve.",
+        "duration": 14.109999656677246,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.6000000238418579
+          },
+          {
+            "word": "the",
+            "start": 0.6000000238418579,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "solution",
+            "start": 1.100000023841858,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "Now",
+            "start": 2.3399999141693115,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "you",
+            "start": 2.440000057220459,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "build",
+            "start": 2.7799999713897705,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "Use",
+            "start": 3.9000000953674316,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "cursor",
+            "start": 3.9000000953674316,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "and",
+            "start": 4.28000020980835,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "AI",
+            "start": 4.619999885559082,
+            "end": 5
+          },
+          {
+            "word": "to",
+            "start": 5,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "create",
+            "start": 5.28000020980835,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "something",
+            "start": 5.579999923706055,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "that",
+            "start": 5.960000038146973,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "addresses",
+            "start": 6.239999771118164,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "the",
+            "start": 6.519999980926514,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "problem",
+            "start": 6.820000171661377,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "Iterate",
+            "start": 8.020000457763672,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "Build",
+            "start": 8.960000038146973,
+            "end": 8.960000038146973
+          },
+          {
+            "word": "a",
+            "start": 8.960000038146973,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "first",
+            "start": 9.15999984741211,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "version",
+            "start": 9.4399995803833,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "test",
+            "start": 10.399999618530273,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "it",
+            "start": 10.399999618530273,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "then",
+            "start": 10.979999542236328,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "improve",
+            "start": 11.199999809265137,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "Real",
+            "start": 12.279999732971191,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "solutions",
+            "start": 12.600000381469727,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "evolve",
+            "start": 13.15999984741211,
+            "end": 13.779999732971191
+          }
+        ]
+      }
+    ],
+    "capstone-journey-story": [
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Choose Your Problem. Pick one problem to solve. It should be real—something you've actually observed. Specific—not too broad. And solvable—something you can actually address with a tool or resource.",
+        "duration": 0.36000001430511475,
+        "words": [
+          {
+            "word": "MBC",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "뉴스",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "이덕영입니다",
+            "start": 0,
+            "end": 0.25999999046325684
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Deep Understanding. Use ChatGPT to go six levels deep. Keep asking why about each answer. Document all six levels. This helps you build a better solution because you truly understand the problem.",
+        "duration": 13.050000190734863,
+        "words": [
+          {
+            "word": "Deep",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "understanding",
+            "start": 0.47999998927116394,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "Use",
+            "start": 2.0799999237060547,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "ChatGPT",
+            "start": 2.0799999237060547,
+            "end": 3
+          },
+          {
+            "word": "to",
+            "start": 3,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "go",
+            "start": 3.200000047683716,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "six",
+            "start": 3.4200000762939453,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "levels",
+            "start": 3.740000009536743,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "deep",
+            "start": 3.9600000381469727,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "Keep",
+            "start": 4.840000152587891,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "asking",
+            "start": 4.840000152587891,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "why",
+            "start": 5.159999847412109,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "about",
+            "start": 5.639999866485596,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "each",
+            "start": 5.960000038146973,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "answer",
+            "start": 6.260000228881836,
+            "end": 6.559999942779541
+          },
+          {
+            "word": "Document",
+            "start": 7.480000019073486,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "all",
+            "start": 7.480000019073486,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "six",
+            "start": 7.900000095367432,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "levels",
+            "start": 8.220000267028809,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "This",
+            "start": 9.020000457763672,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "helps",
+            "start": 9.140000343322754,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "you",
+            "start": 9.34000015258789,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "build",
+            "start": 9.600000381469727,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "a",
+            "start": 9.680000305175781,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "better",
+            "start": 9.920000076293945,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "solution",
+            "start": 10.140000343322754,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "because",
+            "start": 11.020000457763672,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "you",
+            "start": 11.180000305175781,
+            "end": 11.399999618530273
+          },
+          {
+            "word": "truly",
+            "start": 11.399999618530273,
+            "end": 11.880000114440918
+          },
+          {
+            "word": "understand",
+            "start": 11.880000114440918,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 12.359999656677246,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "problem",
+            "start": 12.720000267028809,
+            "end": 12.920000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Gather Your Data. What resources or solutions already exist? What do people say about this problem? What specific data would help—locations, prices, reviews? Organize everything you find.",
+        "duration": 14.300000190734863,
+        "words": [
+          {
+            "word": "Gather",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "your",
+            "start": 0.5400000214576721,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "data",
+            "start": 0.9800000190734863,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "What",
+            "start": 2.180000066757202,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "resources",
+            "start": 2.200000047683716,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "or",
+            "start": 2.8399999141693115,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "solutions",
+            "start": 3.1600000858306885,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "already",
+            "start": 3.619999885559082,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "exist",
+            "start": 4.21999979019165,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "What",
+            "start": 5.28000020980835,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "do",
+            "start": 5.400000095367432,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "people",
+            "start": 5.619999885559082,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "say",
+            "start": 5.820000171661377,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "about",
+            "start": 6.119999885559082,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "this",
+            "start": 6.340000152587891,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "problem",
+            "start": 6.579999923706055,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "What",
+            "start": 7.599999904632568,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "specific",
+            "start": 7.800000190734863,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "data",
+            "start": 8.359999656677246,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "would",
+            "start": 8.739999771118164,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "help",
+            "start": 9.020000457763672,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "Locations",
+            "start": 10.020000457763672,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "Prices",
+            "start": 10.979999542236328,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "Reviews",
+            "start": 11.380000114440918,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "Organize",
+            "start": 12.779999732971191,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "everything",
+            "start": 13.079999923706055,
+            "end": 13.5600004196167
+          },
+          {
+            "word": "you",
+            "start": 13.5600004196167,
+            "end": 13.800000190734863
+          },
+          {
+            "word": "find",
+            "start": 13.800000190734863,
+            "end": 14.119999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Build with AI. Use Cursor to build your solution. Describe what you want, explain the problem, list the features. Make it professional and easy to use. Then iterate—improve based on what works.",
+        "duration": 15,
+        "words": [
+          {
+            "word": "Build",
+            "start": 0,
+            "end": 0.5199999809265137
+          },
+          {
+            "word": "with",
+            "start": 0.5199999809265137,
+            "end": 0.800000011920929
+          },
+          {
+            "word": "AI",
+            "start": 0.800000011920929,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "Use",
+            "start": 2.259999990463257,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "cursor",
+            "start": 2.259999990463257,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "to",
+            "start": 2.619999885559082,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "build",
+            "start": 3.180000066757202,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "your",
+            "start": 3.4000000953674316,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "solution",
+            "start": 3.6600000858306885,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "Describe",
+            "start": 5.039999961853027,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "what",
+            "start": 5.039999961853027,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "you",
+            "start": 5.239999771118164,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "want",
+            "start": 5.420000076293945,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "Explain",
+            "start": 6.480000019073486,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "the",
+            "start": 6.480000019073486,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "problem",
+            "start": 6.840000152587891,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "List",
+            "start": 7.659999847412109,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "the",
+            "start": 7.659999847412109,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "features",
+            "start": 8.260000228881836,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "Make",
+            "start": 8.899999618530273,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "it",
+            "start": 8.920000076293945,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "professional",
+            "start": 9.180000305175781,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "and",
+            "start": 9.579999923706055,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "easy",
+            "start": 10.279999732971191,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "to",
+            "start": 10.579999923706055,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "use",
+            "start": 11.100000381469727,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "Then",
+            "start": 11.699999809265137,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "iterate",
+            "start": 12.079999923706055,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "Improve",
+            "start": 13.420000076293945,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "based",
+            "start": 13.420000076293945,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "on",
+            "start": 13.720000267028809,
+            "end": 13.9399995803833
+          },
+          {
+            "word": "what",
+            "start": 13.9399995803833,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "works",
+            "start": 14.180000305175781,
+            "end": 14.420000076293945
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Deploy and Test. Put your solution on GitHub Pages so it's live on the internet. Share it with two or three people who might use it. Get their feedback, then make improvements. Real solutions need real users.",
+        "duration": 14.520000457763672,
+        "words": [
+          {
+            "word": "Deploy",
+            "start": 0,
+            "end": 0.47999998927116394
+          },
+          {
+            "word": "and",
+            "start": 0.47999998927116394,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "test",
+            "start": 0.8199999928474426,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "Put",
+            "start": 2.1600000858306885,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "your",
+            "start": 2.1600000858306885,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "solution",
+            "start": 2.380000114440918,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "on",
+            "start": 2.7200000286102295,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "GitHub",
+            "start": 3.0199999809265137,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "pages",
+            "start": 3.4000000953674316,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "so",
+            "start": 3.799999952316284,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "it's",
+            "start": 4.28000020980835,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "live",
+            "start": 4.519999980926514,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "on",
+            "start": 4.78000020980835,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "the",
+            "start": 4.920000076293945,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "internet",
+            "start": 5.059999942779541,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "Share",
+            "start": 6.239999771118164,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "it",
+            "start": 6.239999771118164,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "with",
+            "start": 6.360000133514404,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "two",
+            "start": 6.599999904632568,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "or",
+            "start": 6.760000228881836,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "three",
+            "start": 6.920000076293945,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "people",
+            "start": 7.139999866485596,
+            "end": 7.5
+          },
+          {
+            "word": "who",
+            "start": 7.5,
+            "end": 7.920000076293945
+          },
+          {
+            "word": "might",
+            "start": 7.920000076293945,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "use",
+            "start": 8.119999885559082,
+            "end": 8.359999656677246
+          },
+          {
+            "word": "it",
+            "start": 8.359999656677246,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "Get",
+            "start": 9.359999656677246,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "their",
+            "start": 9.380000114440918,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "feedback",
+            "start": 9.680000305175781,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "then",
+            "start": 10.520000457763672,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "make",
+            "start": 10.699999809265137,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "improvements",
+            "start": 10.920000076293945,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "Real",
+            "start": 12.300000190734863,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "solutions",
+            "start": 12.479999542236328,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "need",
+            "start": 12.920000076293945,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "real",
+            "start": 13.34000015258789,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "users",
+            "start": 13.680000305175781,
+            "end": 13.960000038146973
+          }
+        ]
+      }
+    ],
+    "portfolio-celebration-story": [
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Your Portfolio. Your portfolio showcases everything you've learned. It includes work from each week plus your capstone project. This is proof that you can solve real problems.",
+        "duration": 11.25,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "Portfolio",
+            "start": 0.41999998688697815,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "Your",
+            "start": 1.559999942779541,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "Portfolio",
+            "start": 1.7400000095367432,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "showcases",
+            "start": 2.380000114440918,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "everything",
+            "start": 3.0399999618530273,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "you've",
+            "start": 3.640000104904175,
+            "end": 4
+          },
+          {
+            "word": "learned",
+            "start": 4,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "It",
+            "start": 4.71999979019165,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "includes",
+            "start": 4.800000190734863,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "work",
+            "start": 5.099999904632568,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "from",
+            "start": 5.400000095367432,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "each",
+            "start": 5.639999866485596,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "week",
+            "start": 5.960000038146973,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "plus",
+            "start": 6.599999904632568,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "your",
+            "start": 6.760000228881836,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "capstone",
+            "start": 6.940000057220459,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "project",
+            "start": 7.340000152587891,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "This",
+            "start": 8.4399995803833,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "is",
+            "start": 8.539999961853027,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "proof",
+            "start": 8.800000190734863,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "that",
+            "start": 9.079999923706055,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "you",
+            "start": 9.279999732971191,
+            "end": 9.380000114440918
+          },
+          {
+            "word": "can",
+            "start": 9.380000114440918,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "solve",
+            "start": 9.640000343322754,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "real",
+            "start": 9.899999618530273,
+            "end": 10.34000015258789
+          },
+          {
+            "word": "problems",
+            "start": 10.34000015258789,
+            "end": 10.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Present Your Work. You'll present your capstone to the group. Cover the problem, your research, the data you gathered, demo your solution, and share what you learned. Keep it short—three to five minutes.",
+        "duration": 12.15999984741211,
+        "words": [
+          {
+            "word": "Present",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "your",
+            "start": 0.5600000023841858,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "work",
+            "start": 0.8999999761581421,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "You'll",
+            "start": 2.059999942779541,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "present",
+            "start": 2.2799999713897705,
+            "end": 2.4800000190734863
+          },
+          {
+            "word": "your",
+            "start": 2.4800000190734863,
+            "end": 2.700000047683716
+          },
+          {
+            "word": "capstone",
+            "start": 2.700000047683716,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "to",
+            "start": 3.119999885559082,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "the",
+            "start": 3.319999933242798,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "group",
+            "start": 3.5199999809265137,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "Cover",
+            "start": 4.179999828338623,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "the",
+            "start": 4.179999828338623,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "problem",
+            "start": 4.739999771118164,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "your",
+            "start": 5.039999961853027,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "research",
+            "start": 5.340000152587891,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "the",
+            "start": 5.960000038146973,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "data",
+            "start": 6.139999866485596,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "you",
+            "start": 6.340000152587891,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "gathered",
+            "start": 6.699999809265137,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "demo",
+            "start": 7.460000038146973,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "your",
+            "start": 7.460000038146973,
+            "end": 7.760000228881836
+          },
+          {
+            "word": "solution",
+            "start": 7.760000228881836,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "and",
+            "start": 8.4399995803833,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "share",
+            "start": 8.720000267028809,
+            "end": 8.859999656677246
+          },
+          {
+            "word": "what",
+            "start": 8.859999656677246,
+            "end": 9.0600004196167
+          },
+          {
+            "word": "you",
+            "start": 9.0600004196167,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "learned",
+            "start": 9.279999732971191,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "Keep",
+            "start": 9.979999542236328,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "it",
+            "start": 10.0600004196167,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "short",
+            "start": 10.399999618530273,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "three",
+            "start": 10.979999542236328,
+            "end": 11.0600004196167
+          },
+          {
+            "word": "to",
+            "start": 11.0600004196167,
+            "end": 11.319999694824219
+          },
+          {
+            "word": "five",
+            "start": 11.319999694824219,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "minutes",
+            "start": 11.539999961853027,
+            "end": 11.859999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Show, Don't Tell. Demo your actual project. Let them see it work. Quality over quantity. Be proud—you built something real. That's something most people never do.",
+        "duration": 14.25,
+        "words": [
+          {
+            "word": "Show",
+            "start": 0,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "Don't",
+            "start": 1.6799999475479126,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "tell",
+            "start": 1.7000000476837158,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "Demo",
+            "start": 2.9600000381469727,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "your",
+            "start": 3.119999885559082,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "actual",
+            "start": 3.3399999141693115,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "project",
+            "start": 3.9000000953674316,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "Let",
+            "start": 4.940000057220459,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "them",
+            "start": 4.940000057220459,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "see",
+            "start": 5.119999885559082,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "it",
+            "start": 5.420000076293945,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "work",
+            "start": 5.659999847412109,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "Quality",
+            "start": 6.920000076293945,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "over",
+            "start": 6.920000076293945,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "quantity",
+            "start": 7.400000095367432,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "Be",
+            "start": 9.020000457763672,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "proud",
+            "start": 9.079999923706055,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "You",
+            "start": 10.020000457763672,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "built",
+            "start": 10.220000267028809,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "something",
+            "start": 10.4399995803833,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "real",
+            "start": 10.880000114440918,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "That's",
+            "start": 11.859999656677246,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "something",
+            "start": 12.300000190734863,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "most",
+            "start": 12.600000381469727,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "people",
+            "start": 13.020000457763672,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "never",
+            "start": 13.359999656677246,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "do",
+            "start": 13.680000305175781,
+            "end": 14
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "You're a Builder Now. Congratulations! You've completed the academy. You're not just a consumer of technology anymore. You're a builder. You're a problem solver. The world needs more people like you.",
+        "duration": 12.760000228881836,
+        "words": [
+          {
+            "word": "You're",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "a",
+            "start": 0.41999998688697815,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "builder",
+            "start": 0.699999988079071,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "now",
+            "start": 0.8799999952316284,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "Congratulations",
+            "start": 2.059999942779541,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "You've",
+            "start": 3.119999885559082,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "completed",
+            "start": 3.299999952316284,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "the",
+            "start": 3.7799999713897705,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "academy",
+            "start": 4.079999923706055,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "You're",
+            "start": 5.099999904632568,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "not",
+            "start": 5.199999809265137,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "just",
+            "start": 5.340000152587891,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "a",
+            "start": 5.559999942779541,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "consumer",
+            "start": 5.699999809265137,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "of",
+            "start": 6.059999942779541,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "technology",
+            "start": 6.360000133514404,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "anymore",
+            "start": 6.840000152587891,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "You're",
+            "start": 7.800000190734863,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "a",
+            "start": 8.020000457763672,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "builder",
+            "start": 8.220000267028809,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "You're",
+            "start": 9.100000381469727,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "a",
+            "start": 9.279999732971191,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "problem",
+            "start": 9.539999961853027,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "solver",
+            "start": 9.779999732971191,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "The",
+            "start": 10.739999771118164,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "world",
+            "start": 10.899999618530273,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "needs",
+            "start": 11.15999984741211,
+            "end": 11.460000038146973
+          },
+          {
+            "word": "more",
+            "start": 11.460000038146973,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "people",
+            "start": 11.819999694824219,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "like",
+            "start": 12.079999923706055,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "you",
+            "start": 12.380000114440918,
+            "end": 12.5600004196167
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Keep Going. This is just the beginning. Keep building, stay curious, help others, and level up. The best time to start solving problems was yesterday. The second best time is right now. You have the skills—now go use them!",
+        "duration": 15.359999656677246,
+        "words": [
+          {
+            "word": "Keep",
+            "start": 0,
+            "end": 0.41999998688697815
+          },
+          {
+            "word": "going",
+            "start": 0.41999998688697815,
+            "end": 0.8199999928474426
+          },
+          {
+            "word": "This",
+            "start": 1.3600000143051147,
+            "end": 1.4600000381469727
+          },
+          {
+            "word": "is",
+            "start": 1.4600000381469727,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "just",
+            "start": 1.6799999475479126,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "the",
+            "start": 2.0399999618530273,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "beginning",
+            "start": 2.259999990463257,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "Keep",
+            "start": 3.2200000286102295,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "building",
+            "start": 3.240000009536743,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "stay",
+            "start": 4.159999847412109,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "curious",
+            "start": 4.320000171661377,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "help",
+            "start": 5.340000152587891,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "others",
+            "start": 5.380000114440918,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "and",
+            "start": 6.039999961853027,
+            "end": 6.5
+          },
+          {
+            "word": "level",
+            "start": 6.5,
+            "end": 6.5
+          },
+          {
+            "word": "up",
+            "start": 6.5,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "The",
+            "start": 7.199999809265137,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "best",
+            "start": 7.300000190734863,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "time",
+            "start": 7.599999904632568,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "to",
+            "start": 7.840000152587891,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "start",
+            "start": 8.020000457763672,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "solving",
+            "start": 8.300000190734863,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "problems",
+            "start": 8.619999885559082,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "was",
+            "start": 9.140000343322754,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "yesterday",
+            "start": 9.420000076293945,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "The",
+            "start": 10.420000076293945,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "second",
+            "start": 10.600000381469727,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "best",
+            "start": 10.899999618530273,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "time",
+            "start": 11.180000305175781,
+            "end": 11.5
+          },
+          {
+            "word": "is",
+            "start": 11.5,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "right",
+            "start": 11.739999771118164,
+            "end": 12.079999923706055
+          },
+          {
+            "word": "now",
+            "start": 12.079999923706055,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "You",
+            "start": 12.84000015258789,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "have",
+            "start": 12.979999542236328,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 13.180000305175781,
+            "end": 13.460000038146973
+          },
+          {
+            "word": "skills",
+            "start": 13.460000038146973,
+            "end": 13.720000267028809
+          },
+          {
+            "word": "Now",
+            "start": 14.119999885559082,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "go",
+            "start": 14.399999618530273,
+            "end": 14.680000305175781
+          },
+          {
+            "word": "use",
+            "start": 14.680000305175781,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "them",
+            "start": 14.960000038146973,
+            "end": 15.15999984741211
+          }
+        ]
+      }
+    ]
+  }
+}
