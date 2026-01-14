@@ -450,6 +450,9 @@
                   <button class="video-play-btn" data-target="intro-${challenge.id}">
                     <span class="play-icon">▶</span> Watch Intro
                   </button>
+                  <button class="fullscreen-btn" data-fullscreen="video" data-challenge="${challenge.id}" title="Fullscreen">
+                    ⛶
+                  </button>
                 </div>
               </div>
               
@@ -506,7 +509,7 @@
       todaysChallenges.forEach(challenge => {
         const containerId = `puzzle-${challenge.id}`;
         
-        new ChallengePuzzle(containerId, challenge, {
+        const puzzle = new ChallengePuzzle(containerId, challenge, {
           onComplete: (result) => {
             completedChallenges.add(challenge.id);
             updateCompletedCount();
@@ -520,6 +523,9 @@
             }
           }
         });
+        
+        // Store for fullscreen access
+        window.puzzleInstances[challenge.id] = puzzle;
       });
     }
     
@@ -632,6 +638,7 @@
         initIntroDiagrams();
         initPuzzles();
         initVideoControls();
+        initFullscreenControls();
         scrollToChallengeFromURL();
       }, 150);
       
@@ -706,6 +713,209 @@
         window.location.href = '../index.html';
       });
     }
+    
+    // ============================================
+    // Fullscreen Mode (Native Browser API)
+    // ============================================
+    
+    function initFullscreenControls() {
+      // Listen for fullscreen change events
+      document.addEventListener('fullscreenchange', handleFullscreenChange);
+      document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+      
+      // Video fullscreen buttons
+      document.querySelectorAll('.fullscreen-btn[data-fullscreen="video"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const challengeId = btn.dataset.challenge;
+          openVideoFullscreen(challengeId);
+        });
+      });
+      
+      // Add fullscreen buttons to puzzles after they render
+      setTimeout(() => {
+        todaysChallenges.forEach(challenge => {
+          const puzzleControls = document.querySelector(`#puzzle-${challenge.id} .puzzle-controls`);
+          if (puzzleControls && !puzzleControls.querySelector('.puzzle-fullscreen')) {
+            const btn = document.createElement('button');
+            btn.className = 'puzzle-btn puzzle-fullscreen';
+            btn.innerHTML = '⛶ Fullscreen';
+            btn.addEventListener('click', () => openPuzzleFullscreen(challenge.id));
+            puzzleControls.insertBefore(btn, puzzleControls.querySelector('.puzzle-check'));
+          }
+        });
+      }, 300);
+    }
+    
+    function openVideoFullscreen(challengeId) {
+      const container = document.querySelector(`#intro-${challengeId}`).closest('.challenge-video-container');
+      if (!container) return;
+      
+      container.dataset.challengeId = challengeId;
+      container.dataset.fullscreenType = 'video';
+      
+      // Request native fullscreen
+      if (container.requestFullscreen) {
+        container.requestFullscreen();
+      } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen();
+      }
+    }
+    
+    function openPuzzleFullscreen(challengeId) {
+      const puzzleArea = document.querySelector(`#puzzle-${challengeId}`);
+      if (!puzzleArea) return;
+      
+      puzzleArea.dataset.challengeId = challengeId;
+      puzzleArea.dataset.fullscreenType = 'puzzle';
+      
+      // Request native fullscreen
+      if (puzzleArea.requestFullscreen) {
+        puzzleArea.requestFullscreen();
+      } else if (puzzleArea.webkitRequestFullscreen) {
+        puzzleArea.webkitRequestFullscreen();
+      }
+    }
+    
+    function exitFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+    
+    function handleFullscreenChange() {
+      const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
+      
+      if (fullscreenElement) {
+        // Entering fullscreen
+        const challengeId = fullscreenElement.dataset.challengeId;
+        const type = fullscreenElement.dataset.fullscreenType;
+        
+        fullscreenElement.classList.add('native-fullscreen');
+        
+        // Add exit button with clearer text
+        if (!fullscreenElement.querySelector('.exit-fullscreen-btn')) {
+          const exitBtn = document.createElement('button');
+          exitBtn.className = 'exit-fullscreen-btn';
+          exitBtn.innerHTML = '✕ Exit Fullscreen';
+          exitBtn.onclick = exitFullscreen;
+          fullscreenElement.appendChild(exitBtn);
+        }
+        
+        // Resize after entering fullscreen with viewport-aware padding
+        setTimeout(() => {
+          const viewportWidth = window.innerWidth;
+          const viewportHeight = window.innerHeight;
+          
+          if (type === 'video') {
+            const diagram = document.getElementById(`intro-${challengeId}`)?._challengeDiagram;
+            if (diagram?.cy) {
+              diagram.cy.resize();
+              
+              // Calculate padding based on viewport dimensions
+              // Wider screens need more horizontal padding to keep diagram centered nicely
+              const horizontalPadding = Math.max(80, viewportWidth * 0.12);
+              const verticalPadding = Math.max(50, viewportHeight * 0.08);
+              const padding = Math.max(horizontalPadding, verticalPadding);
+              
+              diagram.cy.fit(padding);
+              diagram.cy.center();
+            }
+          } else if (type === 'puzzle') {
+            const puzzleInstance = window.puzzleInstances?.[challengeId];
+            if (puzzleInstance?.cy) {
+              puzzleInstance.cy.resize();
+              // Puzzles can use more space
+              const padding = Math.max(40, Math.min(viewportWidth, viewportHeight) * 0.06);
+              puzzleInstance.cy.fit(padding);
+              puzzleInstance.cy.center();
+            }
+          }
+        }, 100);
+      } else {
+        // Exiting fullscreen - find element that was fullscreen and reset it
+        const wasFullscreen = document.querySelector('.native-fullscreen');
+        if (wasFullscreen) {
+          const challengeId = wasFullscreen.dataset.challengeId;
+          const type = wasFullscreen.dataset.fullscreenType;
+          
+          // Remove exit button first
+          const exitBtn = wasFullscreen.querySelector('.exit-fullscreen-btn');
+          if (exitBtn) exitBtn.remove();
+          
+          // Remove fullscreen class
+          wasFullscreen.classList.remove('native-fullscreen');
+          
+          // Clear any inline styles that might have been set during fullscreen
+          const clearInlineStyles = (element) => {
+            if (!element) return;
+            // Clear common inline styles that might persist
+            element.style.width = '';
+            element.style.height = '';
+            element.style.position = '';
+            element.style.top = '';
+            element.style.left = '';
+            element.style.right = '';
+            element.style.bottom = '';
+            
+            // Also clear Cytoscape's canvas container
+            const cyContainer = element.querySelector('[style*="width"]');
+            if (cyContainer) {
+              cyContainer.style.width = '';
+              cyContainer.style.height = '';
+            }
+          };
+          
+          // Force proper reset
+          const resetCytoscape = (cy, containerEl, padding) => {
+            // Clear any inline styles on the container
+            clearInlineStyles(containerEl);
+            
+            // Force Cytoscape to recalculate dimensions
+            cy.resize();
+            
+            // Reset zoom and pan
+            cy.zoom(1);
+            cy.pan({ x: 0, y: 0 });
+            
+            // Fit to container
+            cy.fit(padding);
+            cy.center();
+          };
+          
+          // Use setTimeout for more reliable timing after fullscreen exit
+          setTimeout(() => {
+            if (type === 'video') {
+              const diagramEl = document.getElementById(`intro-${challengeId}`);
+              const diagram = diagramEl?._challengeDiagram;
+              if (diagram?.cy) {
+                resetCytoscape(diagram.cy, diagramEl, 20);
+                // Final check
+                setTimeout(() => {
+                  diagram.cy.resize();
+                  diagram.cy.fit(20);
+                }, 50);
+              }
+            } else if (type === 'puzzle') {
+              const puzzleCanvas = document.querySelector(`#puzzle-${challengeId} .puzzle-canvas`);
+              const puzzleInstance = window.puzzleInstances?.[challengeId];
+              if (puzzleInstance?.cy) {
+                resetCytoscape(puzzleInstance.cy, puzzleCanvas, 25);
+                // Final check
+                setTimeout(() => {
+                  puzzleInstance.cy.resize();
+                  puzzleInstance.cy.fit(25);
+                }, 50);
+              }
+            }
+          }, 100);
+        }
+      }
+    }
+    
+    // Store puzzle instances globally for fullscreen access
+    window.puzzleInstances = {};
   </script>
 </body>
 </html>

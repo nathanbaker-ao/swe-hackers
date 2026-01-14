@@ -87,17 +87,37 @@ class ChallengeDiagram {
         rankSep: 80,
         padding: 30
       },
-      minZoom: 0.5,
-      maxZoom: 2,
-      userZoomingEnabled: false,
-      userPanningEnabled: false,
+      minZoom: 0.4,
+      maxZoom: 2.5,
+      userZoomingEnabled: true,  // Enable zoom
+      userPanningEnabled: true,  // Enable pan
       boxSelectionEnabled: false
     });
 
     // Fit after layout
     setTimeout(() => cy.fit(20), 100);
+    
+    // Double-tap to fit
+    cy.on('dbltap', (e) => {
+      if (e.target === cy) {
+        cy.animate({
+          fit: { padding: 30 },
+          duration: 400,
+          easing: 'ease-out-cubic'
+        });
+      }
+    });
 
     return cy;
+  }
+  
+  // Resize and center - call when container size changes (e.g., fullscreen)
+  resize() {
+    if (this.cy) {
+      this.cy.resize();
+      this.cy.fit(30);
+      this.cy.center();
+    }
   }
 
   getStylesheet() {
@@ -406,11 +426,14 @@ class ChallengeDiagram {
     // Update caption
     this.updateCaption(step);
 
-    // Highlight node
+    // Highlight node with zoom effect
     if (step.nodeId) {
       const node = this.cy.getElementById(step.nodeId);
       if (node.length) {
         node.removeClass('challenge-dimmed').addClass('challenge-active');
+        
+        // Zoom in on the active node
+        await this.zoomToNode(node);
         this.animateNodeGlow(node);
       }
     }
@@ -433,6 +456,10 @@ class ChallengeDiagram {
           }
         }
       }
+      
+      // Ease out slightly to show connected context
+      await this.wait(200);
+      this.zoomOutToFit();
     }
 
     // Play audio if enabled (check both narration and caption)
@@ -477,6 +504,48 @@ class ChallengeDiagram {
     
     this.activeAnimations.push(glowAnim);
   }
+  
+  // Check if container is in fullscreen
+  isFullscreen() {
+    const diagramContainer = document.getElementById(this.containerId);
+    const videoContainer = diagramContainer?.closest('.challenge-video-container');
+    return videoContainer && (
+      document.fullscreenElement === videoContainer ||
+      document.webkitFullscreenElement === videoContainer
+    );
+  }
+  
+  // Zoom to the active node for focus effect
+  zoomToNode(node) {
+    return new Promise(resolve => {
+      // Use lower zoom in fullscreen (wider viewport shows more context)
+      const zoomLevel = this.isFullscreen() ? 1.2 : 1.4;
+      this.cy.animate({
+        center: { eles: node },
+        zoom: zoomLevel,
+        duration: 500,
+        easing: 'ease-out-cubic',
+        complete: resolve
+      });
+    });
+  }
+  
+  // Ease out to show all visible elements
+  zoomOutToFit() {
+    return new Promise(resolve => {
+      // Use less padding in fullscreen for better use of space
+      const padding = this.isFullscreen() ? 80 : 50;
+      this.cy.animate({
+        fit: { 
+          eles: this.cy.elements().not('.challenge-dimmed'),
+          padding: padding 
+        },
+        duration: 600,
+        easing: 'ease-out-cubic',
+        complete: resolve
+      });
+    });
+  }
 
   animateEdgeFlow(edge) {
     let dashOffset = 0;
@@ -495,17 +564,23 @@ class ChallengeDiagram {
 
   async narrateStep(step, stepIndex) {
     if (!this.audioEngine) {
-      console.log('ChallengeDiagram: No audio engine');
+      console.log('ChallengeDiagram: No audio engine available');
       return;
     }
     
-    console.log('ChallengeDiagram: Playing audio for', this.story.id, 'step', stepIndex);
+    console.log('ChallengeDiagram: Attempting to play audio for', this.story.id, 'step', stepIndex);
+    console.log('ChallengeDiagram: Audio engine state:', {
+      hasEngine: !!this.audioEngine,
+      manifestLoaded: this.audioEngine.manifestLoaded,
+      currentVoice: this.audioEngine.currentVoice,
+      isMuted: this.audioEngine.isMuted
+    });
     
     try {
       await this.audioEngine.playStep(this.story.id, stepIndex);
       console.log('ChallengeDiagram: Audio finished for step', stepIndex);
     } catch (e) {
-      console.error('ChallengeDiagram: Audio failed', e);
+      console.error('ChallengeDiagram: Audio playback failed:', e);
       // Audio failed, fall back to duration-based timing
       await this.wait(this.options.stepDuration);
     }

@@ -156,19 +156,23 @@ class AudioNarrationEngine {
    * @returns {Promise} Resolves when audio finishes or is stopped
    */
   async playStep(storyId, stepIndex) {
+    console.log('AudioEngine.playStep called:', { storyId, stepIndex });
+    
     // Wait for manifest to load first
     await this.waitForManifest();
+    console.log('AudioEngine: Manifest ready');
     
     return new Promise((resolve) => {
       const timestamps = this.getTimestamps(storyId, stepIndex);
       
       if (!timestamps || this.isMuted) {
-        console.log('Audio skipped:', { storyId, stepIndex, hasTimestamps: !!timestamps, isMuted: this.isMuted });
+        console.log('AudioEngine: Audio skipped:', { storyId, stepIndex, hasTimestamps: !!timestamps, isMuted: this.isMuted });
         resolve();
         return;
       }
 
       const audioPath = `${this.audioBasePath}/${this.currentVoice}/${storyId}/step-${stepIndex}.mp3`;
+      console.log('AudioEngine: Loading audio from:', audioPath);
       
       this.stop(); // Stop any current playback
       this.resolvePromise = resolve;
@@ -177,7 +181,7 @@ class AudioNarrationEngine {
       const audio = new Audio(audioPath);
       this.currentAudio = audio;
       audio.volume = this.isMuted ? 0 : 1;
-
+      
       let lastHighlightedIndex = -1;
 
       // Word highlighting loop using requestAnimationFrame
@@ -218,6 +222,7 @@ class AudioNarrationEngine {
       };
 
       audio.onplay = () => {
+        console.log('AudioEngine: Audio playback started');
         this.isSpeaking = true;
         this.isPaused = false;
         if (this.onSpeakingChange) this.onSpeakingChange(true);
@@ -249,7 +254,7 @@ class AudioNarrationEngine {
       };
 
       audio.onerror = (e) => {
-        console.warn('Audio error:', e);
+        console.error('AudioEngine: Audio error:', e, 'Error code:', audio.error?.code, 'Message:', audio.error?.message);
         this.isSpeaking = false;
         this.isPaused = false;
         if (this.onSpeakingChange) this.onSpeakingChange(false);
@@ -257,8 +262,9 @@ class AudioNarrationEngine {
         resolve();
       };
 
+      console.log('AudioEngine: Calling audio.play()');
       audio.play().catch(e => {
-        console.warn('Audio play failed:', e);
+        console.error('AudioEngine: audio.play() rejected:', e.name, e.message);
         resolve();
       });
     });

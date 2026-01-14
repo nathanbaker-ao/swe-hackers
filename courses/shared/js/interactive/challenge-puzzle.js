@@ -135,6 +135,13 @@ class ChallengePuzzle {
     return this.challengeData.solution.positions.length;
   }
   
+  isTouchDevice() {
+    return ('ontouchstart' in window) || 
+           (navigator.maxTouchPoints > 0) || 
+           (navigator.msMaxTouchPoints > 0) ||
+           (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+  }
+  
   // ============================================
   // Edge Connection Challenge
   // ============================================
@@ -184,16 +191,37 @@ class ChallengePuzzle {
       this.cy.fit(undefined, 25);
     });
     
-    // Node interactions
+    // Node interactions - use tap for touch-friendly interaction
     this.cy.on('tap', 'node', (e) => this.handleNodeTap(e));
     this.cy.on('tap', (e) => {
       if (e.target === this.cy) this.clearSelection();
     });
     this.cy.on('tap', 'edge', (e) => this.handleEdgeTap(e));
     
-    // Hover tooltips
-    this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
-    this.cy.on('mouseout', 'node', () => this.hideTooltip());
+    // Hover tooltips (desktop only - touch devices use tap)
+    if (!this.isTouchDevice()) {
+      this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
+      this.cy.on('mouseout', 'node', () => this.hideTooltip());
+    }
+    
+    // Long press for tooltip on touch devices
+    let longPressTimer = null;
+    this.cy.on('taphold', 'node', (e) => {
+      e.preventDefault();
+      this.showTooltip(e.target, e);
+      setTimeout(() => this.hideTooltip(), 2000);
+    });
+    
+    // Double-tap background to fit view
+    this.cy.on('dbltap', (e) => {
+      if (e.target === this.cy) {
+        this.cy.animate({
+          fit: { padding: 40 },
+          duration: 400,
+          easing: 'ease-out-cubic'
+        });
+      }
+    });
     
     // Setup control buttons
     this.container.querySelector('.puzzle-clear')?.addEventListener('click', () => this.clearAllEdges());
@@ -305,9 +333,29 @@ class ChallengePuzzle {
     
     this.cy.on('dragfree', 'node', () => this.updateProgress());
     
-    // Hover tooltips
-    this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
-    this.cy.on('mouseout', 'node', () => this.hideTooltip());
+    // Hover tooltips (desktop only)
+    if (!this.isTouchDevice()) {
+      this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
+      this.cy.on('mouseout', 'node', () => this.hideTooltip());
+    }
+    
+    // Long press for tooltip on touch
+    this.cy.on('taphold', 'node', (e) => {
+      e.preventDefault();
+      this.showTooltip(e.target, e);
+      setTimeout(() => this.hideTooltip(), 2000);
+    });
+    
+    // Double-tap background to fit view
+    this.cy.on('dbltap', (e) => {
+      if (e.target === this.cy) {
+        this.cy.animate({
+          fit: { padding: 40 },
+          duration: 400,
+          easing: 'ease-out-cubic'
+        });
+      }
+    });
     
     this.container.querySelector('.puzzle-reset')?.addEventListener('click', () => this.resetPositions());
     this.container.querySelector('.puzzle-fit')?.addEventListener('click', () => {
@@ -540,6 +588,15 @@ class ChallengePuzzle {
         }
       }
     ];
+  }
+  
+  // Resize and fit - useful when container size changes (e.g., fullscreen)
+  resize() {
+    if (this.cy) {
+      this.cy.resize();
+      this.cy.fit(undefined, 30);
+      this.cy.center();
+    }
   }
   
   getPlacementChallengeStyles() {

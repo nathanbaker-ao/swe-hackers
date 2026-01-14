@@ -150,9 +150,133 @@
       opacity: 0.9;
     }
     
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
       .daily-challenges-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .challenge-preview-card {
+        border-radius: var(--radius-md, 8px);
+      }
+      
+      .challenge-preview-header {
+        padding: 0.75rem 1rem;
+      }
+      
+      .challenge-badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+      }
+      
+      .challenge-xp {
+        font-size: 0.85rem;
+      }
+      
+      .challenge-preview-content {
+        padding: 1rem;
+      }
+      
+      .challenge-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.35rem;
+      }
+      
+      .challenge-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+      
+      .challenge-nodes-preview {
+        gap: 0.35rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .preview-node {
+        padding: 0.35rem 0.6rem;
+        font-size: 0.8rem;
+      }
+      
+      .challenge-preview-hint {
+        font-size: 0.8rem;
+      }
+      
+      .challenge-start-btn {
+        padding: 0.85rem 1.25rem;
+        font-size: 0.9rem;
+        min-height: 48px;
+      }
+    }
+    
+    /* How It Works section mobile */
+    @media (max-width: 900px) {
+      .how-it-works-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .how-it-works-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .challenge-preview-header {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    
+    /* Extra small devices */
+    @media (max-width: 380px) {
+      .challenge-preview-content {
+        padding: 0.85rem;
+      }
+      
+      .challenge-title {
+        font-size: 1rem;
+      }
+      
+      .challenge-description {
+        font-size: 0.85rem;
+      }
+      
+      .preview-node {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+    
+    /* Leaderboard mobile */
+    @media (max-width: 600px) {
+      .leaderboard-row {
+        grid-template-columns: 40px 1fr 70px 60px !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.85rem;
+      }
+      
+      .leaderboard-header {
+        grid-template-columns: 40px 1fr 70px 60px !important;
+        padding: 0.75rem 1rem !important;
+      }
+    }
+    
+    /* Features grid mobile */
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .feature-card {
+        padding: 1.25rem;
       }
     }
   </style>
@@ -374,7 +498,7 @@
         <h2 class="section-title">Daily Challenge Mechanics</h2>
       </div>
       
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
+      <div class="how-it-works-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
         <div>
           <div style="font-size: 3rem; margin-bottom: 1rem;">🌅</div>
           <h4 style="margin-bottom: 0.5rem;">New Challenges Daily</h4>
@@ -408,49 +532,49 @@
       </div>
       
       <div style="max-width: 600px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; background: var(--bg-tertiary); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+        <div class="leaderboard-header" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; background: var(--bg-tertiary); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
           <span>Rank</span>
           <span>Player</span>
           <span style="text-align: right;">Streak</span>
           <span style="text-align: right;">XP</span>
         </div>
         
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥇</span>
           <span style="font-weight: 500;">CodeArchitect42</span>
-          <span style="text-align: right; color: var(--accent-warning);">🔥 23 days</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 23</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">4,250</span>
         </div>
         
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥈</span>
           <span style="font-weight: 500;">PromptMaster</span>
-          <span style="text-align: right; color: var(--accent-warning);">🔥 19 days</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 19</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,875</span>
         </div>
         
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥉</span>
           <span style="font-weight: 500;">AIWhisperer</span>
-          <span style="text-align: right; color: var(--accent-warning);">🔥 15 days</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 15</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,650</span>
         </div>
         
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.25rem; color: var(--text-muted);">4</span>
           <span style="font-weight: 500;">SystemsThinker</span>
-          <span style="text-align: right; color: var(--accent-warning);">🔥 12 days</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 12</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,200</span>
         </div>
         
-        <div style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center;">
+        <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center;">
           <span style="font-size: 1.25rem; color: var(--text-muted);">5</span>
           <span style="font-weight: 500;">AgenticDev</span>
-          <span style="text-align: right; color: var(--accent-warning);">🔥 10 days</span>
+          <span style="text-align: right; color: var(--accent-warning);">🔥 10</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">2,950</span>
         </div>
         
-        <div style="padding: 1.5rem; background: var(--bg-tertiary); text-align: center;">
+        <div style="padding: 1.25rem; background: var(--bg-tertiary); text-align: center;">
           <a href="auth/register.html" style="color: var(--accent-primary); text-decoration: none; font-weight: 500;">
             Sign up to see your rank →
           </a>
