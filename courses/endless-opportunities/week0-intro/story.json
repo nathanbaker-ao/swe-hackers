@@ -175,37 +175,70 @@
       "storyId": "problem-game-story",
       "questions": [
         {
-          "question": "According to the lesson, what determines how much reward you get for solving a problem?",
+          "question": "Why might someone who solves 'simple problems' consistently create more long-term value than someone who occasionally solves 'hard problems'?",
           "options": [
-            "How fast you solve it",
-            "How hard the problem is",
-            "How many people know about it",
-            "How much education you have"
+            "Simple problems build relationships and trust over time, creating networks that amplify future problem-solving capacity",
+            "Simple problems are actually harder than they seem because they require emotional intelligence",
+            "Hard problems often require teams, diluting individual impact and reducing personal reward",
+            "Simple problems compound faster because they can be solved more frequently"
+          ],
+          "correct": 0,
+          "explanation": "While all options contain elements of truth, the deepest insight is that consistent problem-solving builds social capital—trust, reputation, and relationships. These networks eventually enable you to tackle harder problems with collaborative resources. The person who feeds their neighbors daily may eventually mobilize that community to address systemic food insecurity. It's not just about problem difficulty; it's about the compounding effects of demonstrated reliability and the relationships formed through consistent value creation."
+        },
+        {
+          "question": "The lesson states 'the harder the problem you can solve, the bigger the reward.' What critical nuance does this leave out that could mislead aspiring problem-solvers?",
+          "options": [
+            "Hard problems might not have market demand—difficulty doesn't guarantee value unless people care about the solution",
+            "Some hard problems are actually just simple problems made complicated by inefficient systems",
+            "The biggest rewards come from making hard problems look easy, not from visibly struggling with difficulty",
+            "Hard problems often take so long to solve that by completion, the world has moved on to different problems"
+          ],
+          "correct": 0,
+          "explanation": "The most critical nuance is that problem difficulty and problem value are separate dimensions. You can spend years solving an incredibly complex problem that nobody cares about, yielding minimal reward. True problem-solvers must balance difficulty with demand—understanding not just what's hard, but what's hard AND matters to people willing to invest in solutions. The other options touch on important considerations (complexity vs. complication, perception vs. reality, timing), but miss the fundamental point that difficulty alone doesn't create value. The market ultimately decides reward based on perceived value, not technical difficulty."
+        },
+        {
+          "question": "Consider two people: One solves the same medium-complexity problem for 100 different clients. Another solves 100 different medium-complexity problems for one client. Who develops greater problem-solving capacity, and why?",
+          "options": [
+            "The specialist (same problem, 100 clients) develops deeper pattern recognition and becomes the definitive expert, commanding premium pricing",
+            "The generalist (100 problems, one client) develops transferable meta-skills for recognizing problem structures across domains",
+            "Both develop equal capacity but in different dimensions—depth vs. breadth—making comparison meaningless without context",
+            "The generalist builds greater capacity because diverse problem exposure trains the mind to find novel connections and solutions"
           ],
           "correct": 1,
-          "explanation": "The harder the problem you can solve, the bigger the reward. Simple problems = small rewards, hard problems = massive rewards."
+          "explanation": "While specialization has economic advantages (option A is true for marketability), the question asks about problem-solving capacity—the fundamental ability to approach new problems. The generalist develops something more valuable: the ability to see structural similarities across seemingly different problems. They learn that a marketing problem might have the same underlying structure as a logistics problem, enabling creative solution transfer. This meta-cognition—recognizing problem patterns rather than memorizing domain-specific solutions—represents deeper capacity. Option C seems wise but dodges the question. Option D is partially correct but misses that the real value isn't just diversity but the meta-skill of recognizing abstract problem structures that transcend specific domains."
         },
         {
-          "question": "What's 'the secret' that the most successful people understand?",
+          "question": "When the lesson says 'the world is full of problems waiting to be solved,' what potentially dangerous assumption might students internalize without critical examination?",
           "options": [
-            "They have special connections",
-            "They got lucky",
-            "They're really good at solving problems",
-            "They work harder than everyone else"
+            "That all problems can be solved, leading to frustration when facing truly intractable problems that require acceptance rather than solution",
+            "That problems exist independently of perception, ignoring that one person's 'problem' might be another's acceptable reality or even preferred state",
+            "That solving problems is always valuable, missing that some problems serve important functions and solving them creates worse problems",
+            "That problems are objective facts rather than subjective interpretations shaped by cultural values and individual perspectives"
           ],
           "correct": 2,
-          "explanation": "The secret is that people who make the most impact and have the most interesting lives are those who get really good at solving problems."
+          "explanation": "While all options identify real dangers, option C captures the most sophisticated trap. Many 'problems' exist in dynamic equilibrium—they're symptoms of larger system designs where 'solving' them without understanding their function can cause catastrophic unintended consequences. For example, eliminating all forest fires (the 'problem') leads to catastrophic mega-fires later. Removing all business friction might eliminate important quality controls. The dangerous assumption is that problem = bad, solution = good. Mature problem-solvers ask: 'What function does this problem serve? What am I not seeing? What happens when I remove this?' Options A, B, and D are valid concerns but miss this deeper systems-thinking insight about problems as potentially functional components of complex systems."
         },
         {
-          "question": "What's an example of a 'hard problem' mentioned in the lesson?",
+          "question": "The lesson presents a linear progression from simple to medium to hard problems. What evidence from real-world problem-solving would challenge this linear model?",
           "options": [
-            "Making someone food when they're hungry",
-            "Building a website for a business",
-            "A community needing better education",
-            "Fixing a broken computer"
+            "Many breakthrough innovations come from people who skip 'medium problems' entirely and tackle hard problems with beginner's mind, unconstrained by conventional approaches",
+            "The skills for solving simple problems don't necessarily transfer to hard problems—they're often entirely different skill sets requiring complete mindset shifts",
+            "Hard problems often decompose into many simple problems, meaning the progression is circular rather than linear—you need mastery of simple problems to solve hard ones",
+            "Problem difficulty is contextual and relative—what's 'hard' for one community might be 'simple' for another depending on available resources and expertise"
           ],
-          "correct": 2,
-          "explanation": "A community needing better education is a hard problem - solving it leads to massive reward and massive impact."
+          "correct": 0,
+          "explanation": "Option A captures something profound that challenges the lesson's implied developmental model: sometimes naivety is a strategic advantage. Experts in 'medium problems' often can't see solutions to hard problems because they're constrained by years of learning what 'doesn't work.' Beginners, lacking these constraints, sometimes find solutions experts never considered. This is why founders without industry experience sometimes disrupt entire industries, or why mathematicians solve biology problems experts missed. Option C is appealing but actually supports the linear model rather than challenging it. Option D is true but situational rather than structural. Option B is partially true but misses the deeper point about how mental models can become obstacles. The real challenge to linearity is that experience can become a cage."
+        },
+        {
+          "question": "If 'the people who make the most money' are indeed 'the ones who get really good at solving problems,' why do so many skilled problem-solvers remain financially unrewarded while others with lesser skills become wealthy?",
+          "options": [
+            "Problem-solving ability is necessary but not sufficient—wealth also requires understanding value capture, negotiation, and market positioning",
+            "The premise is flawed—wealth correlates more with solving problems for wealthy people than with problem-solving skill itself",
+            "Many skilled problem-solvers optimize for interesting problems rather than valuable ones, prioritizing intellectual satisfaction over market demand",
+            "Systemic barriers (access to capital, networks, education) create friction that prevents skill from translating directly into wealth"
+          ],
+          "correct": 0,
+          "explanation": "Option A identifies the critical gap: problem-solving is one variable in a multi-variable equation. You must not only solve problems but also capture the value you create—knowing how to price your work, negotiate contracts, market your solutions, and position yourself strategically. Many brilliant problem-solvers give away value, undercharge, or solve problems in contexts where value capture is difficult. Option B is cynical and partially true but incomplete—solving problems for the wealthy is one strategy, not the only path. Option C is true for some but doesn't explain the broader pattern. Option D identifies real barriers but treats them as external obstacles rather than problems to be solved. The deepest answer is that wealth requires meta-skills beyond problem-solving: understanding how value flows, how to negotiate, how to position yourself in value chains. Problem-solving gets you in the game; value capture wins it."
         }
       ]
     },
@@ -213,37 +246,70 @@
       "storyId": "ai-revolution-story",
       "questions": [
         {
-          "question": "What was required to solve hard problems in 'the old way'?",
+          "question": "The lesson claims AI democratizes problem-solving by removing barriers like expensive degrees and lucky opportunities. What new barriers might AI inadvertently create that could be equally exclusionary?",
           "options": [
-            "Just curiosity and determination",
-            "Years of education, expensive degrees, and lucky opportunities",
-            "Access to AI tools",
-            "Knowing the right questions to ask"
+            "The ability to craft effective prompts becomes the new gatekeeping skill, potentially favoring those with strong verbal and metacognitive abilities",
+            "Access to electricity, internet, and computing devices creates a digital divide that mirrors or exceeds previous educational barriers",
+            "The overwhelming abundance of AI-generated information creates a new problem: distinguishing truth from hallucination requires sophisticated critical thinking skills",
+            "Those who already have domain expertise will use AI as a force multiplier, accelerating inequality rather than reducing it"
           ],
-          "correct": 1,
-          "explanation": "Historically, solving hard problems required years of education, expensive degrees, and lucky opportunities - only certain people got access."
+          "correct": 3,
+          "explanation": "While all options identify real barriers, option D captures the most profound paradox: AI doesn't level the playing field—it tilts it further. Those with existing expertise, resources, and networks can leverage AI to increase their advantage at a rate that widens the gap faster than newcomers can catch up. An experienced developer with AI might 10x their output, while a beginner with AI might 2x theirs—the absolute gap grows. This challenges the lesson's optimistic framing. Options A and C identify real but learnable barriers. Option B is true but doesn't represent a new barrier—it's a restatement of existing digital divide issues. Option D reveals that the revolution might amplify existing inequalities rather than eliminate them, making it the deepest critique of the lesson's premise."
         },
         {
-          "question": "According to the lesson, what's 'the real skill' needed to solve problems with AI?",
+          "question": "The lesson says 'AI is like having access to all the world's knowledge.' What critical distinction does this metaphor obscure about how AI actually works?",
           "options": [
-            "Being able to code",
-            "Having a computer science degree",
-            "Knowing what questions to ask",
-            "Having expensive software"
+            "AI doesn't 'have' knowledge—it recognizes statistical patterns in training data, which can reproduce biases and errors without understanding",
+            "Knowledge implies truth, but AI generates plausible-sounding text that may be completely fabricated without any indication of confidence",
+            "Access to information is not the same as internalized understanding—using AI might prevent the deep learning that comes from struggling with concepts",
+            "The 'world's knowledge' is actually a curated subset filtered by what's digitized, English-dominant, and included in training data, excluding vast domains of human knowledge"
           ],
-          "correct": 2,
-          "explanation": "AI gives you access to knowledge, but the real skill is knowing what questions to ask. That's what separates problem solvers from everyone else."
+          "correct": 0,
+          "explanation": "Option A captures the fundamental misunderstanding the metaphor creates: AI doesn't 'know' anything in the way humans know. It predicts likely next tokens based on statistical patterns. This distinction matters because it affects how you should interact with AI. Treating AI like a knowledgeable expert leads to trusting hallucinations. Understanding it as a pattern-recognition system helps you develop appropriate verification strategies. Option B is a consequence of A but doesn't explain the underlying mechanism. Option C raises valid concerns about learning but accepts the metaphor's framing. Option D is true but focuses on breadth rather than the nature of AI's operation. The deepest insight is understanding that AI doesn't possess knowledge—it performs sophisticated pattern matching that mimics knowledge, requiring completely different evaluation and trust strategies than consulting an actual expert."
         },
         {
-          "question": "Why is AI described as an 'infinitely patient teacher'?",
+          "question": "The lesson presents 'knowing what questions to ask' as the critical skill. But what if you don't know enough to know what questions to ask? How does one bootstrap this process?",
           "options": [
-            "It always gives perfect answers",
-            "It never gets tired or irritated by your questions",
-            "It has a teaching certificate",
-            "It was designed by teachers"
+            "Start with meta-questions: ask AI what questions you should be asking about a topic, then evaluate and refine those questions iteratively",
+            "Begin by solving small concrete problems where gaps in understanding become immediately obvious through failure, revealing what you don't know",
+            "Study how experts in the field frame problems and structure their inquiry, learning question patterns before applying them independently",
+            "Accept that without domain knowledge, you'll ask poor questions initially—iterate quickly, learning from each interaction what better questions look like"
           ],
           "correct": 1,
-          "explanation": "Unlike humans who have limits and can get irritated, AI will answer any question without getting tired or frustrated - even if you ask a thousand questions in a row."
+          "explanation": "Option B identifies the most reliable escape from the 'not knowing what you don't know' trap: concrete action reveals ignorance. When you try to build something or solve a specific problem, gaps in understanding manifest as failures, errors, and confusion—these reveal precisely what questions you need to ask. Option A seems clever but has a fatal flaw: if you can't evaluate question quality, you can't judge whether AI's suggested questions are good. It's circular. Option C is valuable but slow and assumes access to expert thinking. Option D is honest but vague—'iterate quickly' without a compass often leads nowhere. Option B provides the compass: reality. Attempting to solve concrete problems creates immediate feedback loops that highlight gaps, naturally generating relevant questions. This is why project-based learning outperforms abstract study—reality is an unforgiving teacher that shows you exactly what you don't know."
+        },
+        {
+          "question": "If AI is truly an 'infinitely patient teacher,' what crucial element of human teaching does this framing suggest AI replaces—and what does it fundamentally misunderstand about learning?",
+          "options": [
+            "Human teachers don't just answer questions—they challenge students with questions that students don't know to ask, provoking growth beyond current understanding",
+            "Patience is overrated in teaching; frustration and struggle are often necessary for deep learning, which AI's endless accommodation might eliminate",
+            "Human teachers model thinking processes through their own uncertainty and problem-solving, demonstrating that not-knowing is part of expertise",
+            "The emotional relationship between teacher and student creates accountability and motivation that AI's infinite patience cannot replicate"
+          ],
+          "correct": 0,
+          "explanation": "Option A captures the deepest issue: great teaching isn't responsive, it's proactive and provocative. The best teachers don't wait for students to ask questions—they strategically push students beyond their current conceptual boundaries with challenges, questions, and problems the student doesn't yet have framework to formulate. AI, being reactive, can only respond to what you ask. It can't know what question would crack your understanding open or what challenge would force conceptual growth you didn't know you needed. Option B has merit but conflates productive struggle with teacher impatience—these are separate issues. Option C is true but situational—some great teachers project confidence, not uncertainty. Option D is important but secondary to the cognitive function of teaching. The fundamental misunderstanding is that teaching is answering questions. Teaching is knowing what questions, challenges, and provocations will catalyze growth beyond the learner's current conception of what they need to learn."
+        },
+        {
+          "question": "The 'old way' required years of education before solving hard problems. The 'new way' claims you can go straight to solving problems. What does this shortcut potentially eliminate that might actually be valuable?",
+          "options": [
+            "The deep pattern recognition that comes from sustained immersion in a domain, enabling experts to see solutions that seem like intuition but are actually compressed experience",
+            "The network of relationships built through educational institutions, which provide collaboration opportunities, mentorship, and social proof of competence",
+            "The struggle and failure that build resilience, persistence, and accurate self-assessment of abilities—character development disguised as education",
+            "The theoretical foundations that prevent you from solving problems in ways that work once but fail catastrophically at scale or in edge cases"
+          ],
+          "correct": 0,
+          "explanation": "All options identify real losses, but option A captures the most cognitively significant: true expertise isn't just knowledge, it's pattern recognition developed through thousands of hours of exposure. Expert radiologists don't methodically analyze X-rays—they see anomalies instantly through pattern-matching their brain developed over years. This intuitive competence can't be shortcut by asking AI questions. You might solve a problem with AI's help, but you won't develop the deep pattern recognition that lets you see problems and solutions others miss. Options B, C, and D are valuable but replaceable (networks can form elsewhere, resilience builds through other challenges, AI can check theoretical edge cases). But the compressed experience that manifests as expert intuition—knowing what to try first, sensing when something's wrong, seeing connections across domains—only comes from deep time with material. The 'new way' might solve problems faster but may not create experts who can see beyond the obvious."
+        },
+        {
+          "question": "Consider the statement: 'This is revolutionary. You can learn things faster, understand problems deeper, and build real solutions.' Which word in this claim most deserves critical examination?",
+          "options": [
+            "'Faster'—because speed of information access might be confused with speed of learning, which requires time for neural consolidation and practice",
+            "'Deeper'—because AI might actually enable surface-level understanding at scale while creating the illusion of depth through sophisticated explanations",
+            "'Real'—because solutions built primarily through AI assistance might work but lack the robustness that comes from understanding foundational principles",
+            "'Revolutionary'—because while tools change, the fundamental cognitive processes of learning and problem-solving remain evolutionarily unchanged"
+          ],
+          "correct": 1,
+          "explanation": "Option B identifies the most dangerous trap: AI can explain anything at any level of sophistication, which can create false confidence in understanding. You can receive a beautiful explanation of quantum mechanics or system architecture that feels like deep understanding but dissolves when you try to apply it without AI. This 'illusion of explanatory depth' is particularly insidious because the learner can't distinguish it from real understanding. Option A is true but obvious—most people recognize that reading fast ≠ learning fast. Option C is important but detectable through testing. Option D is philosophically interesting but doesn't challenge the practical claim. Option B reveals the core risk: AI's ability to generate convincing explanations at any depth level means you can feel like you understand deeply while actually remaining at surface level. True depth means being able to operate independently, generate novel insights, and recognize when something is wrong—capabilities that require internalized understanding, not access to explanations. The revolution might make us all feel smarter while actually preventing depth."
         }
       ]
     },
@@ -251,37 +317,70 @@
       "storyId": "six-levels-story",
       "questions": [
         {
-          "question": "How many levels deep do most people go when asking questions?",
+          "question": "The lesson uses a business struggling due to lack of customers as an example of going 6 levels deep. What alternative root cause might you discover by asking different 'why' questions at each level?",
           "options": [
-            "6 levels",
-            "1-2 levels",
-            "10+ levels",
-            "They never ask questions"
+            "That the business actually has a retention problem, not an acquisition problem—customers try them once but never return due to poor service quality",
+            "That the business owners are solving a problem the market doesn't actually care about—the product itself is fundamentally misaligned with customer needs",
+            "That local competitors have strong relationships with the community built over decades, making 'awareness' irrelevant compared to trust and loyalty",
+            "That the business owners fear success and unconsciously sabotage growth because scaling would require skills or commitments they're unwilling to develop"
           ],
           "correct": 1,
-          "explanation": "Most people ask 1-2 questions about something and think they understand it. Real understanding comes from going 6 levels deep."
+          "explanation": "All options reveal valid alternative root causes, but option B identifies the most fundamental issue that challenges the entire diagnostic approach: you can ask 'why' six times about customer acquisition and build a perfect solution—but if the underlying product doesn't match market demand, no amount of online presence solves the real problem. The lesson's example assumes the business model is sound and just needs visibility. But what if going six levels deep on a different branch reveals the business shouldn't exist in its current form? This teaches a meta-lesson: the depth of questioning matters less than the direction. You can go infinitely deep down the wrong path. Option A is detectable through different questions but doesn't challenge the approach. Option C is situational. Option D introduces psychology but is hard to validate. Option B reveals that problem diagnosis requires not just depth but strategic direction—knowing which 'why' branch to follow."
         },
         {
-          "question": "In the business example, what was discovered at level 6?",
+          "question": "The lesson claims 'if you can get just 2-3 levels deeper than most people, you're ahead of 99% of the world.' What evidence would challenge this optimistic claim?",
           "options": [
-            "The business needed more money",
-            "The owners should go back to school",
-            "They didn't know about AI tools that make building an online presence easy and free",
-            "They needed to hire more employees"
+            "Many people in specialized fields routinely go 10+ levels deep in their domains but remain unremarkable because depth alone doesn't equal impact or value creation",
+            "Going deeper requires exponentially more time at each level, meaning 2-3 levels might represent months of investigation—a pace that misses time-sensitive opportunities",
+            "Most successful innovations come from lateral thinking across domains rather than vertical depth within one domain—breadth beats depth for breakthrough value",
+            "The ability to go deep is common; what's rare is knowing when to stop digging and start building—execution beats analysis regardless of depth"
           ],
           "correct": 2,
-          "explanation": "At level 6, we discovered that the real root problem was that they didn't know about AI tools that could help them build an online presence easily and for free."
+          "explanation": "Option C reveals the most significant challenge to the lesson's premise: the assumption that depth is the primary vector of competitive advantage. History's breakthrough innovations often come from people who connected ideas across fields (lateral thinking) rather than those who went deepest in one field (vertical thinking). The iPhone wasn't the deepest phone—it connected phones, music players, and internet devices. Airbnb didn't go deepest into hospitality—it connected housing with software platforms. The lesson risks creating 'local maxima' thinkers who optimize within frameworks rather than questioning frameworks themselves. Option A is true but supports depth's limits in specific contexts. Option B identifies practical constraints but doesn't challenge the core claim. Option D is motivational wisdom but oversimplifies. Option C fundamentally challenges whether depth is the right dimension of advantage. In a world where information is abundant, seeing connections others miss (lateral thinking) might matter more than seeing deeper into known paths (vertical thinking)."
         },
         {
-          "question": "According to the lesson, how many levels deeper than most people do you need to go to be ahead of 99% of the world?",
+          "question": "At each level of 'why,' you receive an answer that prompts the next why. But how do you know if you're receiving accurate answers at each level, or if you're building a logical chain on false premises?",
           "options": [
-            "10 levels deeper",
-            "Just 1 level deeper",
-            "2-3 levels deeper",
-            "6 levels deeper"
+            "Test each level's answer empirically before proceeding—survey customers, analyze data, observe behavior—ensuring each 'why' is evidence-based not assumed",
+            "Ask parallel 'why' questions at each level to explore multiple causal chains, looking for consistency and contradiction across different lines of inquiry",
+            "Work backwards from level 6 to level 1, checking if the chain of causation makes sense in reverse and if solving level 6 would actually address level 1",
+            "Consult domain experts at key levels to validate assumptions, leveraging specialized knowledge to avoid naive or incorrect causal attributions"
           ],
-          "correct": 2,
-          "explanation": "If you can get just 2-3 levels deeper than most people, you're already ahead of 99% of the world. Most people accept surface-level answers."
+          "correct": 0,
+          "explanation": "Option A provides the most rigorous epistemological foundation: ground each level in evidence before building on it. Without empirical validation, the six-level technique becomes a framework for elaborately justifying whatever you initially assumed. You might go six levels deep into complete fiction. The lesson presents the questioning process but omits the verification process—potentially teaching people to build sophisticated but false narratives. Option B is valuable but without validation, parallel false chains don't reveal truth. Option C is useful for logical consistency but doesn't catch collectively consistent falsehoods. Option D has value but experts can be wrong or biased. Option A ensures each link in your causal chain is anchored to reality, not just logically connected to the previous link. This teaches a crucial meta-lesson: depth without verification is just sophisticated speculation. True problem diagnosis requires both deep questioning AND empirical validation at each level—a marriage of curiosity and rigor that the lesson overlooks."
+        },
+        {
+          "question": "The lesson states 'Most people stop at 1-2 levels and think they understand.' Why might stopping at level 2 sometimes be strategically superior to going to level 6?",
+          "options": [
+            "Level 2 problems often have known, proven solutions while level 6 problems might require inventing novel solutions—speed of implementation beats theoretical comprehensiveness",
+            "Organizations and people have limited capacity for change; solving a level 2 problem they understand might succeed where solving a level 6 problem they don't understand fails",
+            "The confidence from solving a level 2 problem creates momentum and resources that eventually enable tackling level 6, while going directly to level 6 might result in failure due to insufficient capability",
+            "Level 6 analysis might reveal that the problem is unsolvable or that solving it creates worse problems, leading to analysis paralysis where level 2 action would have created value"
+          ],
+          "correct": 1,
+          "explanation": "Option B captures a sophisticated reality often missed by analytical types: human systems have implementation constraints that pure logic ignores. You might correctly diagnose that a business needs AI tools (level 6), but if the owners don't trust technology and won't use it, your perfect solution fails. Meanwhile, solving their level 2 problem (hiring someone to manage social media) might actually work because it matches their mental model and capacity. This reveals a meta-insight: the 'correct' problem to solve isn't just the deepest root cause—it's the intersection of root cause AND implementability. Option A is valid but situational—sometimes level 6 has faster solutions. Option C is true but sequential rather than comparative—you can do both. Option D is important but doesn't explain when level 2 is superior, just when level 6 is counterproductive. Option B teaches that problem-solving wisdom includes reading the system's capacity for change and meeting it where it is, not just finding the deepest truth."
+        },
+        {
+          "question": "Imagine asking 'why' six levels deep about a different question: 'Why do I want to solve this problem?' How might this perpendicular line of inquiry change your approach to the business problem?",
+          "options": [
+            "You might discover you're projecting your own values onto someone else's situation—they might not actually want to grow their business but feel they 'should'",
+            "You might find you're attracted to this problem because it's solvable with your existing skills, not because it's the most important problem to solve",
+            "You might realize you're avoiding harder personal problems by focusing on other people's external problems that feel safer to engage with",
+            "You might uncover that solving this problem serves your identity ('I'm a problem solver') more than it serves the business owner's actual wellbeing or goals"
+          ],
+          "correct": 0,
+          "explanation": "All options reveal valuable introspective insights, but option A identifies the most critical error in problem-solving: assuming your framework defines the problem. Maybe the business owner is content with their current size and prefers life balance over growth. Your elaborate six-level analysis of how to scale might be solving a problem they don't have, imposing your definition of 'success' onto their life. This teaches a profound meta-lesson: before asking 'why is there a problem?' six times, ask 'why do I think this is a problem?' six times. Problem definition is subjective, culturally constructed, and value-laden. Options B, C, and D are psychologically astute but focus on your motivations; option A questions whether the problem exists at all in the other person's framework. The deepest skill isn't just drilling down into problems—it's interrogating whether the problem as framed is even the right question, which requires examining your own assumptions and potential imposition of values onto others' situations."
+        },
+        {
+          "question": "The lesson presents going 6 levels deep as discovering 'the real problem.' But in complex systems, problems often don't have single root causes—they emerge from multiple interacting factors. How should this change your questioning approach?",
+          "options": [
+            "Ask 'why' six times on multiple parallel threads simultaneously, mapping a causal network rather than a linear chain, looking for leverage points where interventions affect multiple causal factors",
+            "Abandon the search for root causes entirely and instead focus on identifying feedback loops and system dynamics that perpetuate the problem regardless of origin",
+            "Accept that you'll never find 'the' root cause; instead, identify the most actionable cause within your sphere of influence, even if it's not the deepest",
+            "Use the six-level technique to map one primary causal chain while remaining aware it's a simplified model, then test interventions and let results reveal what you missed"
+          ],
+          "correct": 0,
+          "explanation": "Option A represents the most sophisticated evolution of the technique: from linear to networked thinking. Real problems rarely have single causes—they're emergence from interacting factors. The business might struggle because of weak online presence AND poor product-market fit AND founder burnout AND market timing AND competition. Going six levels deep on one thread might miss that solving that thread alone changes nothing because the other threads keep the problem alive. Option A teaches systems thinking: map multiple causal chains, look for nodes where they intersect, identify leverage points that influence multiple causes. Option B is valuable but throws out useful diagnostic techniques entirely. Option C is pragmatic but accepts too much ignorance. Option D maintains linear thinking while acknowledging its limits. Option A fundamentally upgrades the tool from a linear drill to a systems mapper, matching technique to reality. This transforms 'six levels deep' from a single excavation to a multi-dimensional excavation that reveals the true topology of causation."
         }
       ]
     }

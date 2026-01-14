@@ -159,37 +159,70 @@
       "storyId": "builder-mindset-story",
       "questions": [
         {
-          "question": "What's the 'new reality' of building websites and tools?",
+          "question": "The lesson claims 'you don't need years of coding anymore.' But if AI does all the building, what exactly is YOUR role in the creation process? What makes something 'yours' if AI wrote the code?",
           "options": [
-            "You need years of coding classes first",
-            "You describe what you want in plain English and AI builds it",
-            "Only professional programmers can build things",
-            "It takes months to make a simple website"
+            "Your ownership comes from typing the commands and saving the files—physical action creates ownership regardless of who generates the content",
+            "Your creative vision, problem identification, and iterative refinement decisions define authorship—AI is a tool executing your intellectual direction, like a brush executing a painter's vision",
+            "There is no real ownership when AI generates code—you're just a consumer of AI output pretending to be a creator",
+            "Ownership is shared 50/50 between you and the AI since both contributed to the final product equally"
           ],
           "correct": 1,
-          "explanation": "With AI tools like Cursor, you describe your vision in plain English and AI handles the technical coding. No programming experience required!"
+          "explanation": "The essence of creation lies in intentionality and decision-making. When a photographer uses a camera, the camera captures the image, but the photographer chooses the subject, composition, timing, and post-processing. Similarly, you conceive the idea, articulate requirements, evaluate results, and direct iterations. AI handles implementation details, but you drive the creative and strategic decisions. The tool's sophistication doesn't diminish the creator's authorship—it amplifies their capacity to manifest ideas."
         },
         {
-          "question": "What's the first step in your new superpower workflow?",
+          "question": "The story presents a 4-step process: Think It → Describe It → AI Builds It → It's Live. Which step actually requires the most sophisticated cognitive skill, and why does that matter for your future?",
           "options": [
-            "Write code",
-            "Think it - imagine what you want to create",
-            "Learn a programming language",
-            "Buy expensive software"
+            "Step 3 (AI Builds) because understanding what the AI is doing ensures you catch errors and maintain quality control in the technical implementation",
+            "Step 1 (Think It) because imagination and problem identification are the scarcest skills—AI can't decide what's worth building or identify problems worth solving",
+            "Step 4 (It's Live) because deployment and sharing require understanding of platforms, audiences, and distribution strategies that determine impact",
+            "Step 2 (Describe It) because communication precision is valuable but can be learned through templates and examples, making it a mechanical skill"
           ],
           "correct": 1,
-          "explanation": "It all starts with your imagination! Think about what would be useful, cool, or solve a problem. The idea is the seed of everything."
+          "explanation": "As AI handles more technical execution, the bottleneck shifts to human judgment about what to create. Anyone can ask AI to build a website, but identifying a meaningful problem, envisioning a solution people actually need, and recognizing opportunities others miss—these require empathy, domain knowledge, and creative thinking. Technical skills become commoditized when automated; strategic thinking and problem identification become more valuable. The person who identifies that senior citizens need a simpler way to schedule rides to appointments is more valuable than someone who can code that solution. This reframes education: instead of spending years learning syntax, invest in understanding human needs, system thinking, and creative problem-solving."
         },
         {
-          "question": "What changes when you go from 'consumer to creator'?",
+          "question": "Consider two students: Maya learns to use AI tools to build projects, while Jordan learns traditional programming. Three years from now, who has the better foundation, and what does that reveal about the nature of 'foundational knowledge' in a rapidly changing field?",
           "options": [
-            "You have to pay for the internet",
-            "You can share a link and say 'I made this' - you build the internet, not just use it",
-            "You become a professional programmer",
-            "Nothing really changes"
+            "Jordan, because traditional programming teaches computational thinking and problem decomposition that remains relevant regardless of tools—these cognitive frameworks transfer to AI-assisted development while Maya may struggle to debug or understand limitations",
+            "Maya, because she's practiced the actual workflow of modern development and can iterate rapidly on ideas while Jordan wastes time on syntax—the market rewards shipping products, not understanding theory",
+            "Both equally, but for different reasons: Jordan understands the 'why' behind decisions while Maya understands the 'how' of execution; ideal teams need both perspectives for robust solutions",
+            "Neither has an advantage because AI advancement will make both approaches obsolete within three years—the real foundation should be learning how to learn continuously"
           ],
-          "correct": 1,
-          "explanation": "Most people just consume the internet. When you can share a link to something YOU built, you've become a creator. That's powerful!"
+          "correct": 0,
+          "explanation": "This reveals a crucial tension in education: tools change rapidly, but cognitive frameworks persist. Traditional programming teaches algorithmic thinking, debugging methodology, pattern recognition, and understanding of computational constraints—skills that transfer to AI-assisted work. When AI generates buggy code or produces inefficient solutions, Jordan can diagnose why; Maya might only know it 'doesn't work.' However, this doesn't invalidate Maya's approach entirely. The ideal path combines both: use AI to build rapidly while simultaneously learning WHY certain approaches work. The lesson isn't 'ignore fundamentals' but rather 'don't let fundamentals paralyze you from creating.' Start building with AI today AND cultivate deeper understanding over time. The false choice between 'learn to code' and 'use AI' misses the point—do both, but don't delay creation waiting for perfect understanding."
+        },
+        {
+          "question": "The narrative says 'Most people just use the internet—you build it!' But in what way does using AI to generate websites make you fundamentally different from someone using Wix, Squarespace, or WordPress templates? Where's the line between 'builder' and 'user'?",
+          "options": [
+            "There's no meaningful difference—both are using pre-built tools to assemble components; calling yourself a 'builder' with AI is just rebranding template usage with fancier technology",
+            "The difference is customization depth: Wix/Squarespace users select from predetermined options while AI users can request any modification, giving effectively unlimited customization within the tool's capabilities",
+            "The distinction is in understanding: a builder comprehends the underlying structure and constraints of their medium; a user simply consumes the interface without understanding the system beneath",
+            "The line is intentionality and problem-solving: builders identify problems and craft solutions; users consume pre-packaged solutions to common problems, regardless of the sophistication of their tools"
+          ],
+          "correct": 3,
+          "explanation": "The essence of 'building' isn't about the tools or the code you personally write—it's about the problem-solving mindset and intentional creation. Someone using Squarespace templates to make 'another generic portfolio' is consuming a pre-packaged solution. Someone using AI to create a custom tool for their grandmother to track medications is building—they identified a specific problem, designed a solution, and brought something new into existence. The builder mindset involves: (1) Problem identification (2) Solution design (3) Iterative refinement (4) Acceptance of creative responsibility. You can have this mindset with any tool—or lack it with the most sophisticated technology. The danger of easy AI tools is that they might encourage superficial creation without deep thinking. The opportunity is that they lower barriers for people with great ideas but limited technical skills. What matters is whether you're thinking critically about problems worth solving or just generating stuff because you can."
+        },
+        {
+          "question": "If AI makes building 'easy,' what happens to the value proposition of being able to build? When everyone can create websites, what becomes scarce and valuable?",
+          "options": [
+            "Technical building becomes worthless—the new valuable skills are marketing, distribution, and audience-building since everyone can make products but reaching people remains hard",
+            "Advanced technical skills become MORE valuable as a differentiator—when everyone uses AI for basics, deep expertise in optimization, security, and architecture separates professionals from amateurs",
+            "Taste and judgment become paramount—when technical execution is commoditized, the ability to make good decisions about what to build, how it should work, and what constitutes quality distinguishes great work",
+            "Nothing changes fundamentally—easier tools always emerge, but human creativity and problem-solving remain constant; the internet made publishing easy but great writers still matter"
+          ],
+          "correct": 2,
+          "explanation": "History offers clues: photography didn't make painters obsolete, but it changed what made painting valuable. Similarly, AI-assisted building doesn't make creation worthless—it changes what differentiates good from bad. When execution becomes easy, judgment becomes critical. Anyone can ask AI to make a website, but knowing what to build, what features actually matter, what user experience feels right—this requires taste developed through experience and deep thinking. Consider: a thousand people could use AI to build a quiz app, but most would be mediocre. The person with good judgment about question design, pacing, feedback, and user psychology creates something compelling. Technical democratization raises the floor (anyone can make something functional) but doesn't eliminate the ceiling (exceptional work still requires exceptional judgment). This shifts the learning focus: spend less time on syntax memorization, more on user psychology, system design, quality evaluation, and strategic thinking about problems worth solving."
+        },
+        {
+          "question": "The lesson frames AI as 'empowering' non-technical people to build. But could this actually be disempowering in the long term? What cognitive or economic dependencies might emerge from relying on AI for creation?",
+          "options": [
+            "Disempowering because you become dependent on AI companies' tools, pricing, and priorities—your creative capacity is externalized to infrastructure you don't control, similar to sharecropping",
+            "Disempowering because without understanding the underlying systems, you can't debug complex problems, optimize performance, or innovate beyond what AI can generate from existing patterns",
+            "Empowering because increased creative output accelerates learning—building 100 projects with AI teaches more about what works than building 5 manually, even if you understand the 5 more deeply",
+            "Both empowering AND disempowering depending on how it's used—AI as a learning scaffold that you eventually transcend is empowering; AI as a permanent crutch that prevents learning is disempowering"
+          ],
+          "correct": 3,
+          "explanation": "The answer reveals an important nuance about technology and empowerment: tools can liberate or trap depending on relationship and trajectory. A calculator empowers mathematical thinking if it allows you to tackle complex problems while still developing number sense; it disempowers if it prevents learning basic arithmetic. Similarly, AI-assisted building is empowering when: (1) It removes tedious barriers to rapid creation and iteration (2) It serves as scaffolding while you learn fundamentals (3) You maintain agency over goals and evaluation. It becomes disempowering when: (1) You can't function without it (2) You don't develop judgment about code quality (3) You accept all AI output uncritically (4) Economic or access barriers prevent you from creating. The key is intentional use: leverage AI to build and ship rapidly, but also cultivate curiosity about how things work. Read the generated code, ask why certain approaches were chosen, gradually develop technical intuition. The goal isn't to reject AI but to avoid arrested development—use the tool to accelerate, not replace, learning."
         }
       ]
     },
@@ -197,37 +230,70 @@
       "storyId": "art-of-building-story",
       "questions": [
         {
-          "question": "Building with AI is best described as:",
+          "question": "The lesson frames AI building as a 'conversation' with iterative refinement. But in a conversation between equals, both parties learn and adapt. Is AI actually learning from YOUR feedback during your session, or are you the only one adapting? What does this asymmetry mean for the 'conversation' metaphor?",
           "options": [
-            "A one-time magic spell",
-            "A conversation where you describe, preview, and refine",
-            "Pure luck",
-            "Impossible without coding knowledge"
-          ],
-          "correct": 1,
-          "explanation": "Building with AI is iterative - describe what you want, see what it creates, ask for changes, repeat. It's a collaborative conversation!"
-        },
-        {
-          "question": "What should you do if AI creates something that's not quite right?",
-          "options": [
-            "Give up and start over",
-            "Accept it as-is",
-            "Tell AI exactly what to change and iterate",
-            "Learn to code yourself"
+            "AI learns from each interaction and remembers your preferences across sessions, so it's truly conversational—each exchange makes it better at understanding your style and needs for future projects",
+            "AI doesn't learn from you; it pattern-matches against training data to respond to your prompts—you're adapting to communicate effectively with a static system, not having a mutual conversation",
+            "AI learns within a single session by maintaining context but forgets everything after, so it's conversational during the project but transactional across projects—memory defines the relationship",
+            "The learning asymmetry doesn't matter because 'conversation' is just a useful metaphor for iterative refinement—whether AI learns is less important than whether the process produces useful results"
           ],
           "correct": 2,
-          "explanation": "Just ask for changes! AI remembers your conversation and builds on previous work. Professional developers iterate too - nobody gets it perfect first try."
+          "explanation": "This reveals an important truth about AI interaction: within a session, AI maintains context and builds on previous exchanges—it 'remembers' what you said earlier and adapts responses accordingly. This creates the feeling of conversation. However, once the session ends, that context vanishes. The AI doesn't remember you, your preferences, or your past projects. You are learning its communication patterns and constraints, but it's not learning yours across sessions. This matters for several reasons: (1) You must become skilled at prompt engineering—the burden of effective communication rests on you (2) Each new project starts fresh—you can't assume it learned from previous work (3) The relationship is fundamentally transactional despite feeling collaborative. Understanding this helps set realistic expectations: you're not teaching the AI about your style; you're learning to communicate within its framework. The iterative refinement is powerful, but the apprenticeship is one-directional—you're learning to collaborate with AI; it's not learning to collaborate with you."
         },
         {
-          "question": "After AI generates code, what's your next step?",
+          "question": "The process is: Describe → Preview → Refine → Iterate. But when do you STOP iterating? If you can always ask for more changes, how do you know when something is 'done'? What skill does this require?",
           "options": [
-            "Delete everything and try again",
-            "Save it and preview in your browser to see if it matches your vision",
-            "Send it to a programmer for review",
-            "Memorize all the code"
+            "You stop when the code executes without errors—functional correctness is the objective standard for 'done' in software development, removing subjective ambiguity about completion",
+            "You stop when it matches your initial vision—the first description defines the target, and iteration continues until reality matches that specification precisely",
+            "You stop when further changes provide diminishing returns relative to effort—this requires judgment about opportunity cost, good-enough solutions, and knowing when to ship versus polish",
+            "You never truly stop—software is never 'done,' only abandoned—the iterative mindset means always seeing potential improvements and accepting that shipping is a choice, not a completion state"
+          ],
+          "correct": 2,
+          "explanation": "This question exposes a critical skill that's often overlooked: knowing when to stop. Easy iteration is both a blessing and a curse—you CAN always make one more change, add one more feature, adjust one more color. But infinite iteration prevents shipping, and unshipped work has zero impact. The skill of judgment includes: (1) Distinguishing must-have from nice-to-have features (2) Recognizing when a solution is good enough for current goals (3) Understanding opportunity cost—time spent perfecting Project A is time not spent starting Project B (4) Accepting that real-world feedback is more valuable than hypothetical perfection. Perfectionism is often fear disguised as quality standards—fear of judgment, fear of failure, fear of something being 'out there' with your name on it. The antidote is developing conviction about 'good enough' and bias toward shipping. Professional developers ship 'good enough' constantly, then iterate based on user feedback. The iteration loop isn't just Describe→Preview→Refine; it's Describe→Preview→Refine→SHIP→Learn→Refine. Stopping is a skill. Shipping is a skill. Both require judgment that only develops through practice."
+        },
+        {
+          "question": "Consider this scenario: You ask AI to build a quiz app. It works perfectly but the code is messy, inefficient, and uses outdated approaches. However, you don't know this because you can't read code. Does this matter? What are the consequences of 'working' but 'bad' code?",
+          "options": [
+            "It doesn't matter at all—if it works for your needs and your users can't tell the difference, code quality is irrelevant; 'working' is the only metric that counts for non-commercial projects",
+            "It matters significantly because bad code becomes technical debt: it's harder to modify later, may break under stress, could have security vulnerabilities, and won't teach you good patterns if you study it",
+            "It matters only for performance—messy code that runs fast enough is fine; efficiency issues only become relevant at scale, which most learner projects never reach",
+            "It matters for learning but not for outcomes—shipping messy code that works teaches you what's possible and builds confidence; you can learn quality standards later as you develop discernment"
           ],
           "correct": 1,
-          "explanation": "Save the file, open it in your browser, and see what AI created. Does it work? What would you change? That's your feedback moment!"
+          "explanation": "This is one of the most important tensions in AI-assisted development: the invisible quality problem. When you can't evaluate code quality, you can't tell good AI output from bad. The consequences include: (1) Technical debt: messy code is harder to modify, so your 'easy to change with AI' project becomes progressively harder to iterate on (2) Security vulnerabilities: AI might use patterns with known security issues that you can't recognize (3) Performance problems: inefficient code might work fine with 3 users but crash with 30 (4) Learning bad patterns: if you eventually study the code, you're learning from a poor example (5) Maintenance burden: when AI generates poor architecture, future changes require major refactoring. However, there's nuance: for a one-time personal project that works and won't be maintained, quality matters less. But for anything you'll iterate on, share, or learn from, quality matters significantly. The solution isn't to abandon AI or learn to code first—it's to develop evaluation skills alongside building. Ask AI to explain its code, research best practices, learn to spot common issues, gradually build discernment. The danger isn't using AI; it's using AI without cultivating judgment about the output quality."
+        },
+        {
+          "question": "The lesson says 'Professional developers iterate too—nobody gets it perfect first try.' But there's a difference between iterating because of external feedback versus iterating because you're learning to communicate with AI. What does this difference reveal about your development?",
+          "options": [
+            "No meaningful difference—iteration is iteration regardless of cause; both paths lead to working software through refinement, so the learning process is equivalent",
+            "Professional iteration (based on user feedback and requirements evolution) teaches market awareness and user psychology; AI iteration (based on prompt refinement) teaches tool communication but not product sense",
+            "AI iteration is actually superior for learning because faster feedback loops accelerate understanding—professionals iterate slowly due to implementation time; you iterate rapidly, compressing learning timelines",
+            "The difference matters early but disappears over time—beginners iterate to learn AI communication; experienced users iterate based on product judgment, converging with professional development practices"
+          ],
+          "correct": 1,
+          "explanation": "This distinction exposes a potential learning trap: confusing tool proficiency with product development skill. When professionals iterate, it's typically because: (1) Users revealed needs they didn't anticipate (2) Requirements changed based on business realities (3) Technical constraints emerged during implementation (4) They're A/B testing to optimize outcomes. This teaches product sense, user empathy, market awareness, and strategic thinking. When you iterate with AI, you're often refining because: (1) Your prompt wasn't clear enough (2) AI misinterpreted your intent (3) You discovered you wanted something different than what you described. This teaches prompt engineering and tool communication—valuable, but narrower. The risk is spending all your iteration cycles on AI communication rather than user value. The solution is intentional practice: (1) Show your AI-built projects to real users and iterate based on their feedback (2) Study existing products to understand why they made certain decisions (3) Practice articulating user needs, not just features (4) Ask 'why does this matter?' before implementing features. Use AI to accelerate building, but don't let prompt refinement become a substitute for product thinking. Iterate fast with AI, but make sure at least some iteration is driven by user insight, not just tool communication."
+        },
+        {
+          "question": "You're building a project and hit a frustrating loop: you describe what you want, AI builds it wrong, you clarify, AI fixes one thing but breaks another, repeat. At what point should you stop iterating and start learning to code? Or should you never?",
+          "options": [
+            "Never learn to code—the loop means your prompts aren't clear enough; invest in better communication and prompt engineering rather than learning outdated technical skills",
+            "Learn to code immediately when this happens—the loop signals you've hit AI's capability limits; understanding code lets you fix issues directly rather than indirectly through prompts",
+            "Use the frustration as a learning trigger: ask AI to explain what's going wrong and why certain fixes break other things; learn enough to understand the constraints without full coding proficiency",
+            "It depends on your goals: if you want to build professionally, learn to code; if you're creating personal projects, develop better prompting skills and accept AI limitations"
+          ],
+          "correct": 2,
+          "explanation": "This scenario reveals a crucial learning opportunity disguised as frustration. The 'fix one thing, break another' loop usually indicates: (1) Conflicting requirements in your prompt (2) AI making assumptions about architecture that don't fit your needs (3) You lacking mental model of how components interact. Each points to a knowledge gap, but not necessarily 'learn to code from scratch.' The optimal path is: (1) Ask AI to explain WHY the fix broke something else (2) Request that AI show you the relationships between components (3) Learn just enough to understand the constraints and dependencies (4) Develop a mental model without necessarily learning to implement from scratch. This is 'learning to read code' rather than 'learning to write code'—understanding enough to direct AI effectively and debug issues conceptually. Think of it like understanding car mechanics: you don't need to rebuild an engine, but knowing how parts interact helps you diagnose problems and communicate with mechanics effectively. Similarly, understanding basic programming concepts (data flow, state, dependencies) helps you collaborate with AI without needing years of syntax training. The frustration is feedback: your mental model needs refinement. Let AI teach you through explanation, not just execution."
+        },
+        {
+          "question": "Imagine two parallel universes: In Universe A, you spend 6 months learning traditional programming. In Universe B, you spend 6 months building projects with AI. Which version of you is more prepared for an uncertain technological future, and what does that reveal about education?",
+          "options": [
+            "Universe A: Traditional programming teaches algorithmic thinking, debugging methodology, and understanding of computational constraints—foundational cognition that remains relevant regardless of tools",
+            "Universe B: AI-assisted building teaches modern workflows, rapid prototyping, user feedback integration, and shipping real products—practical skills that matter more than theoretical knowledge",
+            "Both are equally prepared but with different strengths: A has depth without breadth (understands fundamentals but hasn't shipped); B has breadth without depth (ships projects but lacks deep understanding)",
+            "Neither is optimally prepared—the best path combines both: build with AI to learn what's possible while simultaneously studying fundamentals to understand why; the synthesis matters more than either alone"
+          ],
+          "correct": 3,
+          "explanation": "This is perhaps the most important question in the entire lesson because it challenges the false dichotomy between 'traditional learning' and 'AI-assisted creation.' The truth is that optimal learning integrates both: (1) Build with AI to maintain motivation through tangible progress (2) Study fundamentals to develop mental models and debugging intuition (3) Ship projects to learn from real user feedback (4) Understand theory to make better architectural decisions (5) Iterate rapidly to compress learning cycles (6) Dive deep selectively on concepts relevant to your projects. Universe A's programmer understands fundamentals but may lack shipping experience, product sense, and confidence to create. Universe B's builder ships rapidly but may struggle with complex debugging, optimization, or innovation beyond AI's patterns. The synthesis path: Start building with AI immediately (maintain motivation, learn what's possible), but cultivate curiosity about how things work. Read the generated code, ask questions, study patterns, eventually take on small coding challenges to cement concepts. Treat AI as a scaffold, not a crutch—use it to reach heights you couldn't otherwise, but also build the capability to stand independently. The uncertain future requires both rapid adaptation to new tools AND deep understanding of enduring principles. Don't choose; integrate."
         }
       ]
     },
@@ -235,37 +301,70 @@
       "storyId": "clear-prompts-story",
       "questions": [
         {
-          "question": "Why does 'Make me a website' produce poor results?",
+          "question": "The lesson demonstrates that 'Make me a website' is too vague, while specifying type, features, and style produces better results. But how much specification is TOO much? Can over-detailed prompts actually constrain AI and produce worse outcomes than moderate detail?",
           "options": [
-            "AI doesn't understand websites",
-            "It's too vague - AI has to guess the type, features, and style",
-            "You have to say please",
-            "Websites are too complex"
+            "More detail is always better—the more constraints and specifications you provide, the closer AI output matches your vision; vagueness is the only source of poor results",
+            "Over-specification can produce worse results by constraining AI's pattern-matching and preventing it from suggesting optimizations or better approaches you hadn't considered",
+            "Optimal specificity is domain-dependent: creative projects benefit from less detail to allow AI exploration; technical projects require maximum detail to ensure correctness and functionality",
+            "The quality of specification matters more than quantity—clear, well-organized requirements work better than exhaustive but poorly-structured details; communication architecture trumps detail volume"
           ],
-          "correct": 1,
-          "explanation": "Vague descriptions get vague results. Without knowing what kind of website, what it should do, or how it should look, AI is just guessing."
+          "correct": 3,
+          "explanation": "This question reveals a sophisticated truth about communication with AI: it's not about maximum detail, but rather clear, well-structured communication. Over-specification can cause problems: (1) Conflicting requirements that constrain AI into impossible corners (2) Premature optimization that prevents exploration of better approaches (3) Cognitive overload in the prompt that causes AI to miss key points (4) Rigidity that prevents AI from leveraging patterns you don't know about. However, under-specification obviously causes problems too. The skill is in architecting your prompt: (1) Start with clear goals and constraints (2) Specify what matters (user experience, functionality) but not how to implement (let AI choose technical approaches) (3) Provide examples and context rather than exhaustive feature lists (4) Iterate—start with moderate detail, then refine based on output. Think of it like directing a skilled collaborator: you explain the problem, desired outcome, and key constraints, but you don't dictate every decision. Micromanagement constrains creativity; clear direction enables it. The same applies to AI prompting. Learning to calibrate specificity—knowing what to constrain and what to leave open—is a subtle skill developed through practice and reflection on what works."
         },
         {
-          "question": "What makes a clear and specific prompt?",
+          "question": "The example prompt evolves from vague ('Make me a website') to specific (quiz with 5 questions, scoring, blue design). But notice what's NOT in the prompt: accessibility features, mobile responsiveness, error handling. If you don't specify these, will AI include them? Who's responsible if they're missing?",
           "options": [
-            "Using complex technical words",
-            "Making it as short as possible",
-            "Including the type, features, and style you want",
-            "Asking multiple times"
+            "AI is responsible—modern AI should know best practices and include accessibility, responsiveness, and error handling by default even without explicit prompting; omission indicates AI failure",
+            "You're responsible—if you don't specify requirements, you can't complain about their absence; prompt engineering includes knowing what to ask for, including non-obvious technical requirements",
+            "It's a shared responsibility: AI should follow best practices by default, but you should verify critical requirements; the collaboration means both parties contribute to quality",
+            "No one is 'responsible'—it's iterative: you preview the output, notice missing features, and request them; blame is irrelevant when the process allows easy refinement"
           ],
           "correct": 2,
-          "explanation": "Specify WHAT it is (type), HOW it works (features), and HOW it looks (style). Clear descriptions get exactly what you want!"
+          "explanation": "This exposes a critical insight about AI collaboration: the gap between what you ask for and what you need. AI will generally include common best practices (responsiveness, basic error handling) but may not prioritize accessibility or advanced features without prompting. This creates a shared responsibility model: (1) AI should incorporate known best practices by default (2) You should verify and test for critical requirements (3) The iterative process allows catching omissions. However, this is complicated by knowledge asymmetry: if you don't know that accessibility matters, you won't think to check. If you don't know what 'good error handling' looks like, you won't notice its absence. This reveals the importance of: (1) Learning enough about quality standards to know what to verify (2) Asking AI to explain its implementation decisions (3) Using checklists for critical requirements (4) Testing with real users who expose gaps. The danger of 'easy AI building' is that it can produce functional but fundamentally flawed products—they work but have poor accessibility, security issues, or bad user experience. The solution isn't to reject AI, but to develop evaluative judgment alongside building capability. Ask: 'What should I test? What could go wrong? What best practices apply here?' Make AI not just a builder, but a teacher about quality."
         },
         {
-          "question": "A good prompt for building a quiz should include:",
+          "question": "The lesson shows improvement from 'vague' to 'clear' prompts. But in reality, you often don't KNOW what you want until you see something. How do you write a clear prompt for a vision that's still forming in your head? Is vagueness sometimes necessary?",
           "options": [
-            "Just the word 'quiz'",
-            "The topic, number of questions, how scoring works, and the visual style",
-            "Your name and age",
-            "The current date"
+            "Vagueness is never beneficial—always invest time upfront to clarify your vision through sketches, examples, or detailed requirements before prompting; clear thinking produces clear prompts",
+            "Strategic vagueness is useful for exploration: start intentionally vague to see AI's interpretation, use that as a thinking tool to clarify your vision, then iterate with specificity",
+            "The prompt clarity should match your vision clarity: if you know exactly what you want, be specific; if you're exploring, be vague; align communication precision with conceptual certainty",
+            "Vagueness indicates you're not ready to build yet—use other tools (research, sketching, prototyping) to clarify your vision before engaging AI; building should follow, not precede, clear thinking"
           ],
           "correct": 1,
-          "explanation": "A good quiz prompt includes: the topic, how many questions, how answers are checked, how the score works, and what it should look like."
+          "explanation": "This reveals an important truth that the lesson's linear progression obscures: creation is often exploratory, not planned. Sometimes you have a vague feeling ('I want something about local history that's engaging') but not a clear vision. In these cases, strategic vagueness is a feature, not a bug: (1) Start with a deliberately vague prompt to explore possibilities (2) Treat AI's interpretation as a thinking tool—it generates concrete options that clarify your preferences (3) React to what you see: 'I like this aspect, not that one' (4) Iterate toward specificity based on reactions. This is using AI as a design partner for concept exploration, not just execution. However, this requires a different mindset: you're not getting it 'right' or 'wrong'—you're exploring a design space. The skill is: (1) Recognizing when you're exploring vs. executing (2) Using vagueness intentionally, not accidentally (3) Extracting insight from AI output even when it's not what you want (4) Knowing when to shift from exploration to execution. This challenges the lesson's implicit message that clarity is always better. Sometimes vagueness is honest: you're discovering what you want through creation. The danger is mistaking unintentional vagueness (laziness, lack of thinking) for intentional exploration (using creation as a thinking tool). Know which you're doing and why."
+        },
+        {
+          "question": "Consider the example: 'A quiz about Grand Rapids history with 5 questions, scoring, and blue design.' This is clear, but it's also generic—it could describe ten thousand different quizzes. What makes YOUR creation distinct if AI generates it from a generic prompt? Where does originality enter?",
+          "options": [
+            "Originality comes from topic selection and taste in refinement—everyone can make 'a quiz,' but your choice of specific questions, personality in writing, and aesthetic decisions create distinctiveness",
+            "There is no real originality in AI-generated work—AI recombines training data patterns, and if your prompt is generic, output is necessarily generic; originality requires non-AI creative input",
+            "Originality is overrated for beginner projects—the goal is learning to build and ship, not creating groundbreaking art; generic but functional is perfectly fine for educational purposes",
+            "Originality comes from problem identification, not execution—choosing to make a Grand Rapids history quiz when nobody else has is the creative act; AI handles commodity execution of the creative vision"
+          ],
+          "correct": 0,
+          "explanation": "This gets at a deep question: where does creativity live in AI-assisted creation? The answer is: it's distributed across multiple decision points: (1) Problem/topic selection (choosing Grand Rapids history over generic trivia) (2) Specific content choices (which 5 historical events matter most?) (3) Pedagogical decisions (what makes a question good?) (4) Aesthetic sensibility (is blue the right choice? What blue?) (5) Iterative refinement (what feels right vs. wrong?) (6) Context and framing (how do you present this to your audience?). AI handles technical implementation, but you make dozens of creative micro-decisions. Your personality, knowledge, taste, and judgment infuse the work. Two people given the same generic prompt will produce different quizzes because: they ask different questions, make different refinement choices, have different standards for 'done,' and embed different values in their decisions. The trap is thinking creativity only lives in technical execution. The opportunity is recognizing that curation, selection, and judgment are creative acts. You're not diminished because AI writes the code; a film director isn't diminished because they don't personally design every costume or paint every set. Your creative role is vision, direction, and taste—technical execution is one input among many. Own the creative decisions you ARE making rather than mourning the ones you've delegated."
+        },
+        {
+          "question": "The lesson teaches you to specify 'what, features, and style.' But real projects often require trade-offs: more features vs. simplicity, visual appeal vs. accessibility, fast implementation vs. maintainability. How do you prompt for nuanced trade-offs that you might not fully understand yourself?",
+          "options": [
+            "You can't—prompting for trade-offs requires understanding the trade-off space, which requires domain expertise; AI can't make values-based decisions on your behalf without clear direction",
+            "Ask AI to explain the trade-offs and present options: 'Show me 3 approaches with different priorities' lets AI educate you about the decision space before you choose",
+            "Default to best practices—prompt for 'production-quality' or 'following best practices' and let AI make trade-off decisions based on industry standards rather than your preferences",
+            "Trade-offs don't matter for learning projects—choose the most exciting features without worrying about tension; premature optimization and constraint consideration limit creativity and learning"
+          ],
+          "correct": 1,
+          "explanation": "This reveals one of AI's most underutilized capabilities: as a teaching tool for decision-making. When you face trade-offs you don't fully understand, the solution isn't to avoid them or blindly accept defaults—it's to ask AI to illuminate the decision space: (1) 'What are the trade-offs between approach A and B?' (2) 'Show me three versions prioritizing speed, accessibility, and simplicity respectively' (3) 'What would I lose if I prioritize X over Y?' (4) 'Explain the pros and cons of this architectural choice.' This transforms AI from a tool that executes your decisions into a tool that helps you make better decisions. You're using AI's knowledge base to educate yourself about the problem domain, then making informed choices. This is significantly different from blindly accepting AI's defaults or avoiding difficult decisions. The skill being developed is: (1) Recognizing when trade-offs exist (2) Asking AI to make them explicit (3) Developing values-based criteria for decisions (4) Learning from each decision to build judgment over time. For instance: 'I need a quiz app, but I also want it to load fast and work on phones. Show me three approaches with different priorities and explain the trade-offs.' This single prompt teaches you about performance, responsive design, and feature prioritization—knowledge you can apply to future projects. Use AI as a lens to understand problems, not just a tool to solve them."
+        },
+        {
+          "question": "You've learned to craft clear prompts with type, features, and style. But consider: in 3 years, will prompt engineering still be a valuable skill, or will AI advance to the point where it understands vague requests perfectly? Should you invest in getting better at prompting?",
+          "options": [
+            "Prompting is a temporary skill—AI will soon understand intent from minimal input; invest instead in domain expertise, creative vision, and judgment that remain valuable regardless of interface evolution",
+            "Prompting is communication—as long as you're directing AI (or people), clarity in expressing needs is valuable; the specific syntax may change, but articulating requirements clearly is timeless",
+            "Prompting will become more important, not less—as AI capabilities expand, the skill of directing them toward valuable goals rather than trivial ones becomes the bottleneck differentiating impact",
+            "The question misframes the issue—don't 'invest in prompting' as a career skill; use prompting as a tool to build things NOW while developing judgment, taste, and domain expertise that compound over time"
+          ],
+          "correct": 3,
+          "explanation": "This question forces confrontation with a meta-learning issue: what skills should you develop in a rapidly changing landscape? The answer synthesizes several truths: (1) Specific prompting techniques will evolve quickly—syntax and methods that work today may be obsolete soon (2) The general skill of clear communication and requirement articulation is timeless—whether you're prompting AI, directing people, or writing specifications (3) The highest-value skills are judgment about what to build and taste in evaluation—these compound over time regardless of tools. The strategic approach is: (1) Use prompting as an immediate enabler—get good enough to build things NOW (2) But don't over-invest in prompting mastery at the expense of deeper skills (3) Focus learning energy on judgment, domain knowledge, user psychology, system thinking (4) Treat each building project as practice for these deeper skills, not just prompt refinement. Think of prompting like learning a specific software tool: yes, learn Photoshop or Figma to create designs today, but the real value is developing design taste that transfers across tools. Similarly, learn prompting to build today, but invest more in understanding what makes software good, how users think, what problems matter—skills that remain valuable regardless of interface evolution. The goal isn't to become a prompt engineer; it's to become a builder and creator who happens to use AI as a current tool."
         }
       ]
     }

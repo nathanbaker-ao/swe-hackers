@@ -195,14 +195,14 @@ class Quiz {
   async logQuizAnswer(questionIndex, selectedOption, isCorrect) {
     try {
       // Check if DataService is available
-      if (!window.DataService || !window.FirebaseApp) {
+      if (!window.DataService) {
         console.log('🎯 DataService not available, skipping Firebase logging');
         return;
       }
       
-      // Check if user is authenticated
-      const auth = window.FirebaseApp.getAuth();
-      if (!auth || !auth.currentUser) {
+      // Check if user is authenticated using AuthService
+      const user = window.AuthService?.getUser();
+      if (!user) {
         console.log('🎯 User not authenticated, skipping Firebase logging');
         return;
       }
@@ -247,10 +247,10 @@ class Quiz {
   
   async logQuizCompletion() {
     try {
-      if (!window.DataService || !window.FirebaseApp) return;
+      if (!window.DataService) return;
       
-      const auth = window.FirebaseApp.getAuth();
-      if (!auth || !auth.currentUser) return;
+      const user = window.AuthService?.getUser();
+      if (!user) return;
       
       const score = this.getScore();
       const timeSpentMs = Date.now() - this.startTime;
