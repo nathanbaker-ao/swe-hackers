@@ -1,0 +1,115 @@
+{
+  "storyId": "control-flow-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Smart Programs. Together, branching and repetition transform simple scripts into intelligent programs. Your code can now think, choose, and work tirelessly!",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "word": "smart",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "programs",
+      "start": 0.6600000262260437,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "Together",
+      "start": 2.5799999237060547,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "branching",
+      "start": 3.240000009536743,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "and",
+      "start": 3.5399999618530273,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "repetition",
+      "start": 4.340000152587891,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "transform",
+      "start": 4.340000152587891,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "simple",
+      "start": 5.199999809265137,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "scripts",
+      "start": 5.760000228881836,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "into",
+      "start": 6.139999866485596,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "intelligent",
+      "start": 6.739999771118164,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "programs",
+      "start": 7.320000171661377,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "Your",
+      "start": 8.779999732971191,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "code",
+      "start": 8.920000076293945,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "can",
+      "start": 9.260000228881836,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "now",
+      "start": 9.539999961853027,
+      "end": 9.859999656677246
+    },
+    {
+      "word": "think",
+      "start": 9.859999656677246,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "choose",
+      "start": 11.180000305175781,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "and",
+      "start": 11.619999885559082,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "work",
+      "start": 11.920000076293945,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "tirelessly",
+      "start": 12.180000305175781,
+      "end": 12.819999694824219
+    }
+  ]
+}

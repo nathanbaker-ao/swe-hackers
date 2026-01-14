@@ -1,0 +1,180 @@
+{
+  "storyId": "skills-integration-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Complete Picture. Your AI helper uses ALL of these skills together! Stone stores data, Lightning makes decisions, Magnetism organizes code into functions, and the Architect designs the flow. You've become a real programmer!",
+  "duration": 17.559999465942383,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.30000001192092896
+    },
+    {
+      "word": "complete",
+      "start": 0.30000001192092896,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "picture",
+      "start": 0.8999999761581421,
+      "end": 1.5399999618530273
+    },
+    {
+      "word": "Your",
+      "start": 2.5799999237060547,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "AI",
+      "start": 2.5799999237060547,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "helper",
+      "start": 2.940000057220459,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "uses",
+      "start": 3.2200000286102295,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "all",
+      "start": 3.559999942779541,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "of",
+      "start": 4.039999961853027,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "these",
+      "start": 4.28000020980835,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "skills",
+      "start": 4.420000076293945,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "together",
+      "start": 4.840000152587891,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "Stone",
+      "start": 6.699999809265137,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "stores",
+      "start": 6.699999809265137,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "data",
+      "start": 7.099999904632568,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "Lightning",
+      "start": 8.460000038146973,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "makes",
+      "start": 8.460000038146973,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "decisions",
+      "start": 8.739999771118164,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "Magnetism",
+      "start": 10,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "organizes",
+      "start": 10.460000038146973,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "code",
+      "start": 11.199999809265137,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "into",
+      "start": 11.479999542236328,
+      "end": 11.84000015258789
+    },
+    {
+      "word": "functions",
+      "start": 11.84000015258789,
+      "end": 12.239999771118164
+    },
+    {
+      "word": "And",
+      "start": 12.720000267028809,
+      "end": 12.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 12.960000038146973,
+      "end": 13.260000228881836
+    },
+    {
+      "word": "architect",
+      "start": 13.260000228881836,
+      "end": 13.680000305175781
+    },
+    {
+      "word": "designs",
+      "start": 13.680000305175781,
+      "end": 14.359999656677246
+    },
+    {
+      "word": "the",
+      "start": 14.359999656677246,
+      "end": 14.699999809265137
+    },
+    {
+      "word": "flow",
+      "start": 14.699999809265137,
+      "end": 14.9399995803833
+    },
+    {
+      "word": "You've",
+      "start": 15.460000038146973,
+      "end": 15.739999771118164
+    },
+    {
+      "word": "become",
+      "start": 15.739999771118164,
+      "end": 15.960000038146973
+    },
+    {
+      "word": "a",
+      "start": 15.960000038146973,
+      "end": 16.219999313354492
+    },
+    {
+      "word": "real",
+      "start": 16.219999313354492,
+      "end": 16.6200008392334
+    },
+    {
+      "word": "programmer",
+      "start": 16.6200008392334,
+      "end": 17
+    }
+  ]
+}

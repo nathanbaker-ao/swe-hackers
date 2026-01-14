@@ -1,0 +1,295 @@
+{
+  "pageId": "ch2-lightning",
+  "courseId": "apprentice",
+  "chapterMeta": {
+    "title": "Lightning Strikes",
+    "icon": "⚡",
+    "themeColor": "lightning"
+  },
+  "stories": [
+    {
+      "id": "control-flow-story",
+      "diagramId": "control-flow",
+      "title": "The Path of Lightning",
+      "steps": [
+        {
+          "nodeId": "linear-program",
+          "icon": "🚂",
+          "title": "The Linear Train",
+          "narration": "Without control flow, programs run like a train on tracks—straight through from start to finish. Step one, step two, step three, done. No choices, no variety.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "crossroads",
+          "edges": [{ "from": "linear-program", "to": "crossroads" }],
+          "icon": "🎮",
+          "title": "The Video Game Crossroads",
+          "narration": "Now imagine a video game. When you reach a crossroads, the game doesn't randomly pick—it decides based on your input. Did you press left? Go left. Press right? Go right.",
+          "connectsTo": "Linear Program"
+        },
+        {
+          "nodeId": "control-flow",
+          "edges": [{ "from": "crossroads", "to": "control-flow" }],
+          "icon": "⚡",
+          "title": "Control Flow",
+          "narration": "This decision-making power is called control flow. It's the lightning that guides your program's path, letting it think, react, and choose different routes.",
+          "connectsTo": "Crossroads"
+        },
+        {
+          "nodeId": "branching",
+          "edges": [{ "from": "control-flow", "to": "branching" }],
+          "icon": "🌳",
+          "title": "Branching Paths",
+          "narration": "With control flow, your program can branch into different paths. Like a tree growing multiple branches, each condition creates a new possible direction.",
+          "connectsTo": "Control Flow"
+        },
+        {
+          "nodeId": "repetition",
+          "edges": [{ "from": "control-flow", "to": "repetition" }],
+          "icon": "🔁",
+          "title": "The Power of Repetition",
+          "narration": "Control flow also lets programs repeat actions. Instead of writing the same code a hundred times, you tell it: do this until I say stop!",
+          "connectsTo": "Control Flow"
+        },
+        {
+          "nodeId": "smart-programs",
+          "edges": [
+            { "from": "branching", "to": "smart-programs" },
+            { "from": "repetition", "to": "smart-programs" }
+          ],
+          "icon": "🧠",
+          "title": "Smart Programs",
+          "narration": "Together, branching and repetition transform simple scripts into intelligent programs. Your code can now think, choose, and work tirelessly!",
+          "connectsTo": "Branching + Repetition"
+        }
+      ]
+    },
+    {
+      "id": "decisions-story",
+      "diagramId": "decisions",
+      "title": "Making Decisions",
+      "steps": [
+        {
+          "nodeId": "yes-no",
+          "icon": "❓",
+          "title": "Yes or No Questions",
+          "narration": "Every decision in programming is a yes-or-no question. Is this true? Is that false? Based on the answer, the program takes different paths.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "comparison",
+          "edges": [{ "from": "yes-no", "to": "comparison" }],
+          "icon": "⚖️",
+          "title": "Comparison Operators",
+          "narration": "To ask these questions, we use comparison operators. Is this equal to that? Is this greater than that? Each comparison returns true or false.",
+          "connectsTo": "Yes/No Questions"
+        },
+        {
+          "nodeId": "if-statement",
+          "edges": [{ "from": "comparison", "to": "if-statement" }],
+          "icon": "🚦",
+          "title": "The If Statement",
+          "narration": "The 'if' statement is the gatekeeper. It checks a condition and says: if this is true, run this code. Otherwise, skip it entirely.",
+          "connectsTo": "Comparisons"
+        },
+        {
+          "nodeId": "elif-else",
+          "edges": [{ "from": "if-statement", "to": "elif-else" }],
+          "icon": "🔀",
+          "title": "Elif and Else",
+          "narration": "What if you have multiple conditions? Use 'elif' for additional checks, and 'else' as a catch-all. Python checks from top to bottom—first match wins!",
+          "connectsTo": "If Statement"
+        },
+        {
+          "nodeId": "indentation",
+          "edges": [{ "from": "elif-else", "to": "indentation" }],
+          "icon": "📐",
+          "title": "Indentation Matters",
+          "narration": "Python uses indentation to know which code belongs to which condition. Always use four spaces! It's not just style—it's how Python understands your logic.",
+          "connectsTo": "If/Elif/Else"
+        },
+        {
+          "nodeId": "decision-power",
+          "edges": [{ "from": "indentation", "to": "decision-power" }],
+          "icon": "💡",
+          "title": "The Power of Decisions",
+          "narration": "Now your programs can react! Check ages, validate passwords, respond to user input—every interactive program relies on these simple yes-or-no decisions.",
+          "connectsTo": "Indentation"
+        }
+      ]
+    },
+    {
+      "id": "loops-story",
+      "diagramId": "loops",
+      "title": "The Art of Repetition",
+      "steps": [
+        {
+          "nodeId": "repetition-problem",
+          "icon": "😤",
+          "title": "The Repetition Problem",
+          "narration": "What if you need to do something ten times? A hundred times? A million? You don't write the same code over and over—that would be madness!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "loop-concept",
+          "edges": [{ "from": "repetition-problem", "to": "loop-concept" }],
+          "icon": "🔄",
+          "title": "Enter the Loop",
+          "narration": "A loop is your solution. Write the code once, tell the computer how many times to repeat it, and watch it work. Efficient and elegant!",
+          "connectsTo": "Repetition Problem"
+        },
+        {
+          "nodeId": "for-loop",
+          "edges": [{ "from": "loop-concept", "to": "for-loop" }],
+          "icon": "🔢",
+          "title": "The For Loop",
+          "narration": "The 'for' loop is perfect when you know how many times to repeat. For each item in this list, or for each number in this range, do this action.",
+          "connectsTo": "Loop Concept"
+        },
+        {
+          "nodeId": "range-function",
+          "edges": [{ "from": "for-loop", "to": "range-function" }],
+          "icon": "📏",
+          "title": "Range: Your Number Generator",
+          "narration": "Python's range function generates numbers for you. Range of one to six gives you one, two, three, four, five. It stops before the end number!",
+          "connectsTo": "For Loop"
+        },
+        {
+          "nodeId": "while-loop",
+          "edges": [{ "from": "loop-concept", "to": "while-loop" }],
+          "icon": "⏳",
+          "title": "The While Loop",
+          "narration": "When you don't know how many times to repeat, use 'while'. It keeps going as long as a condition is true—like asking until you get the right answer.",
+          "connectsTo": "Loop Concept"
+        },
+        {
+          "nodeId": "loop-control",
+          "edges": [
+            { "from": "for-loop", "to": "loop-control" },
+            { "from": "while-loop", "to": "loop-control" }
+          ],
+          "icon": "🛑",
+          "title": "Loop Control",
+          "narration": "Use 'break' to exit a loop early, and 'continue' to skip to the next iteration. You're in control of when the repetition stops!",
+          "connectsTo": "Both Loop Types"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "control-flow-story",
+      "questions": [
+        {
+          "question": "What is control flow?",
+          "options": [
+            "The speed at which a program runs",
+            "The order and decisions that determine which code executes",
+            "A type of programming language",
+            "The electricity that powers computers"
+          ],
+          "correct": 1,
+          "explanation": "Control flow determines the path your program takes—which code runs and in what order, based on conditions and loops."
+        },
+        {
+          "question": "What can programs do with control flow that they can't do without it?",
+          "options": [
+            "Store variables",
+            "Print text to the screen",
+            "Make decisions and repeat actions",
+            "Use functions"
+          ],
+          "correct": 2,
+          "explanation": "Control flow enables branching (making decisions) and looping (repeating actions). Without it, programs just run straight through."
+        },
+        {
+          "question": "In a video game, when you press 'left' and the character moves left, what programming concept is being used?",
+          "options": [
+            "A variable",
+            "A conditional/branching statement",
+            "A print statement",
+            "A comment"
+          ],
+          "correct": 1,
+          "explanation": "The game checks 'if left is pressed, then move left'—this is a conditional statement that branches the program's behavior based on input."
+        }
+      ]
+    },
+    {
+      "storyId": "decisions-story",
+      "questions": [
+        {
+          "question": "What will `5 == 5` evaluate to in Python?",
+          "options": [
+            "5",
+            "\"5\"",
+            "True",
+            "False"
+          ],
+          "correct": 2,
+          "explanation": "The == operator checks equality. Since 5 equals 5, the expression evaluates to True."
+        },
+        {
+          "question": "In an if/elif/else chain, how many blocks of code will run?",
+          "options": [
+            "All of them",
+            "Only the first one where the condition is True",
+            "All the ones where conditions are True",
+            "None of them"
+          ],
+          "correct": 1,
+          "explanation": "Python checks conditions from top to bottom and runs only the first block where the condition is True, then skips the rest."
+        },
+        {
+          "question": "Why does Python require indentation inside if statements?",
+          "options": [
+            "To make the code look pretty",
+            "It's optional but recommended",
+            "To tell Python which code belongs to the condition",
+            "To make the program run faster"
+          ],
+          "correct": 2,
+          "explanation": "Python uses indentation to understand code structure. The indented code 'belongs to' the if statement and only runs when the condition is True."
+        }
+      ]
+    },
+    {
+      "storyId": "loops-story",
+      "questions": [
+        {
+          "question": "What will `for i in range(3): print(i)` output?",
+          "options": [
+            "1, 2, 3",
+            "0, 1, 2",
+            "0, 1, 2, 3",
+            "1, 2"
+          ],
+          "correct": 1,
+          "explanation": "range(3) starts at 0 by default and stops before 3, giving us 0, 1, 2. Python counts from zero!"
+        },
+        {
+          "question": "When should you use a while loop instead of a for loop?",
+          "options": [
+            "When you want faster code",
+            "When you don't know how many times to repeat",
+            "When working with lists",
+            "When you need exactly 10 iterations"
+          ],
+          "correct": 1,
+          "explanation": "Use 'while' when repetition depends on a condition rather than a known count—like looping until the user enters the correct password."
+        },
+        {
+          "question": "What does the 'break' statement do inside a loop?",
+          "options": [
+            "Pauses the loop temporarily",
+            "Skips to the next iteration",
+            "Exits the loop immediately",
+            "Restarts the loop from the beginning"
+          ],
+          "correct": 2,
+          "explanation": "'break' immediately exits the loop, even if there are more iterations left. It's your emergency exit!"
+        }
+      ]
+    }
+  ]
+}

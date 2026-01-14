@@ -1,0 +1,257 @@
+{
+  "pageId": "ch3-magnetism",
+  "courseId": "apprentice",
+  "chapterMeta": {
+    "title": "The Pull of Magnetism",
+    "icon": "🧲",
+    "themeColor": "magnetism"
+  },
+  "stories": [
+    {
+      "id": "functions-story",
+      "diagramId": "functions",
+      "title": "Functions: The Magic Machine",
+      "steps": [
+        {
+          "nodeId": "magic-intro",
+          "icon": "✨",
+          "title": "The Magic Machine",
+          "narration": "Imagine you have a magic machine. You put something in, it does its magic, and something new comes out. You don't need to know how it works inside—you just need to know what to put in and what you'll get out.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "input-output",
+          "edges": [{ "from": "magic-intro", "to": "input-output" }],
+          "icon": "📦",
+          "title": "Input → Magic → Output",
+          "narration": "That's what functions are! They're reusable machines that take inputs, do something with them, and give you back outputs. Put in Alex, the greet machine says Hello Alex!",
+          "connectsTo": "The Magic Machine"
+        },
+        {
+          "nodeId": "def-keyword",
+          "edges": [{ "from": "input-output", "to": "def-keyword" }],
+          "icon": "🔧",
+          "title": "Creating Functions with def",
+          "narration": "In Python, you create a function using the def keyword—short for define. Write def, then your function name, then parentheses and a colon. The magic goes on the lines below, indented.",
+          "connectsTo": "Input → Output"
+        },
+        {
+          "nodeId": "calling",
+          "edges": [{ "from": "def-keyword", "to": "calling" }],
+          "icon": "📞",
+          "title": "Calling Functions",
+          "narration": "To use your function, write its name followed by parentheses. Say hello, parentheses—the function runs! You can call it as many times as you want. Write once, use forever!",
+          "connectsTo": "Creating with def"
+        },
+        {
+          "nodeId": "dry-principle",
+          "edges": [{ "from": "calling", "to": "dry-principle" }],
+          "icon": "🎯",
+          "title": "DRY: Don't Repeat Yourself",
+          "narration": "Without functions, you'd copy-paste the same code everywhere. With functions, you write it once and call it whenever you need it. This is called DRY—Don't Repeat Yourself. It's a core principle of clean code!",
+          "connectsTo": "Calling Functions"
+        }
+      ]
+    },
+    {
+      "id": "parameters-story",
+      "diagramId": "parameters",
+      "title": "Parameters: Giving Functions Data",
+      "steps": [
+        {
+          "nodeId": "params-intro",
+          "icon": "📥",
+          "title": "Functions Need Inputs",
+          "narration": "Functions become truly powerful when you can give them inputs. These inputs are called parameters—they're like ingredients for a recipe. Different ingredients, different results!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "single-param",
+          "edges": [{ "from": "params-intro", "to": "single-param" }],
+          "icon": "👤",
+          "title": "Single Parameter",
+          "narration": "Put a parameter name inside the parentheses: def greet, open paren, name, close paren. Now when you call greet with Alex, the name variable inside the function holds Alex. Call it with Jordan, name becomes Jordan!",
+          "connectsTo": "Functions Need Inputs"
+        },
+        {
+          "nodeId": "multiple-params",
+          "edges": [{ "from": "single-param", "to": "multiple-params" }],
+          "icon": "👥",
+          "title": "Multiple Parameters",
+          "narration": "Need more inputs? Add more parameters separated by commas: def add_numbers a comma b. Now you can pass two values—add_numbers 5 comma 3 gives you both numbers to work with inside the function!",
+          "connectsTo": "Single Parameter"
+        },
+        {
+          "nodeId": "recipe-metaphor",
+          "edges": [{ "from": "multiple-params", "to": "recipe-metaphor" }],
+          "icon": "👨‍🍳",
+          "title": "The Recipe Metaphor",
+          "narration": "Think of it like a recipe. The function is your recipe for chocolate chip cookies. Parameters are the ingredients—flour, sugar, chocolate chips. Same recipe, different amounts, slightly different cookies!",
+          "connectsTo": "Multiple Parameters"
+        }
+      ]
+    },
+    {
+      "id": "return-story",
+      "diagramId": "return",
+      "title": "Return Values: Getting Data Back",
+      "steps": [
+        {
+          "nodeId": "print-problem",
+          "icon": "📺",
+          "title": "The Print Problem",
+          "narration": "So far we've used print inside functions to show output on screen. But what if you don't just want to display something—you want to get a value back that you can use in your program?",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "return-keyword",
+          "edges": [{ "from": "print-problem", "to": "return-keyword" }],
+          "icon": "📤",
+          "title": "Return Gives Data Back",
+          "narration": "That's what return does! Instead of print, write return followed by the value. Return a plus b—now the function hands you back the actual result, not just a screen display.",
+          "connectsTo": "The Print Problem"
+        },
+        {
+          "nodeId": "save-result",
+          "edges": [{ "from": "return-keyword", "to": "save-result" }],
+          "icon": "💾",
+          "title": "Save in Variables",
+          "narration": "The magic happens when you call a returning function. Total equals add 5 comma 3—now total holds 8! You've captured the result in a variable. Print only shows; return gives.",
+          "connectsTo": "Return Gives Data Back"
+        },
+        {
+          "nodeId": "use-anywhere",
+          "edges": [{ "from": "save-result", "to": "use-anywhere" }],
+          "icon": "🔗",
+          "title": "Use in Calculations",
+          "narration": "Because you have the actual value, you can use it anywhere! Add 10 comma 20 plus add 5 comma 3 equals 38. You can chain functions, combine results, build complex logic—all because return gives you real data to work with.",
+          "connectsTo": "Save in Variables"
+        },
+        {
+          "nodeId": "real-example",
+          "edges": [{ "from": "use-anywhere", "to": "real-example" }],
+          "icon": "🏠",
+          "title": "Real World Example",
+          "narration": "Here's a practical example: calculate_area takes width and height, returns width times height. Room 1 equals calculate_area 10 comma 12. Room 2 equals calculate_area 8 comma 8. Total area equals room 1 plus room 2. Now you have 184 square feet!",
+          "connectsTo": "Use in Calculations"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "functions-story",
+      "questions": [
+        {
+          "question": "What keyword do you use to create a function in Python?",
+          "options": [
+            "function",
+            "def",
+            "create",
+            "make"
+          ],
+          "correct": 1,
+          "explanation": "In Python, you use 'def' (short for define) to create a function. For example: def say_hello():"
+        },
+        {
+          "question": "What does DRY stand for in programming?",
+          "options": [
+            "Do Repeat Yourself",
+            "Don't Run Yet",
+            "Don't Repeat Yourself",
+            "Define, Run, Yield"
+          ],
+          "correct": 2,
+          "explanation": "DRY stands for Don't Repeat Yourself. Functions help you follow this principle by letting you write code once and reuse it!"
+        },
+        {
+          "question": "How do you call (use) a function named 'greet'?",
+          "options": [
+            "call greet",
+            "greet()",
+            "run greet",
+            "def greet"
+          ],
+          "correct": 1,
+          "explanation": "To call a function, write its name followed by parentheses: greet(). The parentheses tell Python to execute the function."
+        }
+      ]
+    },
+    {
+      "storyId": "parameters-story",
+      "questions": [
+        {
+          "question": "What are parameters in a function?",
+          "options": [
+            "The output of a function",
+            "Input values you pass to a function",
+            "Error messages",
+            "Comments in the code"
+          ],
+          "correct": 1,
+          "explanation": "Parameters are input values you pass to a function. They're like ingredients for a recipe—different inputs can produce different outputs!"
+        },
+        {
+          "question": "In def greet(name), what is 'name'?",
+          "options": [
+            "The function's return value",
+            "A string literal",
+            "A parameter",
+            "A Python keyword"
+          ],
+          "correct": 2,
+          "explanation": "'name' is a parameter—a variable that will hold whatever value you pass when calling the function, like greet('Alex')."
+        },
+        {
+          "question": "How do you define a function with two parameters?",
+          "options": [
+            "def add(a + b):",
+            "def add(a, b):",
+            "def add(a)(b):",
+            "def add[a, b]:"
+          ],
+          "correct": 1,
+          "explanation": "Separate multiple parameters with commas inside the parentheses: def add(a, b): Now you can call it like add(5, 3)."
+        }
+      ]
+    },
+    {
+      "storyId": "return-story",
+      "questions": [
+        {
+          "question": "What's the difference between print() and return?",
+          "options": [
+            "They do the same thing",
+            "print() displays on screen; return gives a value back to use",
+            "return displays on screen; print() gives a value back",
+            "print() is for numbers, return is for text"
+          ],
+          "correct": 1,
+          "explanation": "print() shows something on screen but you can't use that value. return actually gives the value back so you can save it in a variable or use it in calculations!"
+        },
+        {
+          "question": "What will this code output?\n\ndef double(x):\n    return x * 2\n\nresult = double(5)\nprint(result + 3)",
+          "options": [
+            "10",
+            "13",
+            "53",
+            "Error"
+          ],
+          "correct": 1,
+          "explanation": "double(5) returns 10 (5 * 2). Then result + 3 = 10 + 3 = 13. The return value lets us do further calculations!"
+        },
+        {
+          "question": "Why would you use return instead of print inside a function?",
+          "options": [
+            "return is faster",
+            "print doesn't work inside functions",
+            "return lets you use the result in other parts of your code",
+            "return shows colors on screen"
+          ],
+          "correct": 2,
+          "explanation": "Return gives you a value you can store in variables, use in calculations, or pass to other functions. Print only displays—you can't capture that output!"
+        }
+      ]
+    }
+  ]
+}

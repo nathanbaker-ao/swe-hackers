@@ -1,0 +1,289 @@
+{
+  "pageId": "ch4-architect",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "The Age of Architects",
+    "icon": "🏛️",
+    "themeColor": "architect"
+  },
+  "stories": [
+    {
+      "id": "code-trap-story",
+      "diagramId": "code-trap",
+      "title": "The Coding-First Trap",
+      "steps": [
+        {
+          "nodeId": "new-feature",
+          "icon": "📋",
+          "title": "New Feature Request",
+          "narration": "A new feature lands on your desk. The junior instinct is powerful—open the IDE, start typing, figure it out as you go. But this is a trap that costs days of rework.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "junior-starts",
+          "edges": [{ "from": "new-feature", "to": "junior-starts" }],
+          "icon": "💻",
+          "title": "Junior Starts Coding",
+          "narration": "The junior approach: read the ticket, open the IDE, start coding immediately. It feels productive! But halfway through, you realize your approach won't work.",
+          "connectsTo": "New Feature"
+        },
+        {
+          "nodeId": "hit-wall",
+          "edges": [{ "from": "junior-starts", "to": "hit-wall" }],
+          "icon": "🧱",
+          "title": "Hit a Wall",
+          "narration": "Problems emerge. Edge cases you didn't consider. Architecture that doesn't fit. You start over, then start over again. Days pass in this cycle of discovery and rework.",
+          "connectsTo": "Junior Starts"
+        },
+        {
+          "nodeId": "senior-thinks",
+          "edges": [{ "from": "new-feature", "to": "senior-thinks" }],
+          "icon": "🧠",
+          "title": "Senior Thinks First",
+          "narration": "The senior approach is different. Before touching code, they ask clarifying questions, draw the data flow, and identify edge cases on paper. This feels slower—but it's not.",
+          "connectsTo": "New Feature"
+        },
+        {
+          "nodeId": "senior-plans",
+          "edges": [{ "from": "senior-thinks", "to": "senior-plans" }],
+          "icon": "📐",
+          "title": "Senior Plans on Paper",
+          "narration": "The senior writes their approach in plain English, gets quick feedback from the team, and catches problems when they're cheap to fix—before any code exists.",
+          "connectsTo": "Senior Thinks"
+        },
+        {
+          "nodeId": "senior-codes",
+          "edges": [{ "from": "senior-plans", "to": "senior-codes" }],
+          "icon": "✅",
+          "title": "Code Once, Done Right",
+          "narration": "When the senior finally codes, they code once and code right. No rework cycles. Smooth code reviews. Half the total time, better results. This is the architect's way.",
+          "connectsTo": "Senior Plans"
+        }
+      ]
+    },
+    {
+      "id": "workflow-story",
+      "diagramId": "workflow",
+      "title": "The Design-First Workflow",
+      "steps": [
+        {
+          "nodeId": "step-clarify",
+          "icon": "❓",
+          "title": "Step 1: Clarify",
+          "narration": "What EXACTLY is the requirement? Spend thirty minutes asking questions. What's in scope? What's not included? What are the success criteria? Vague requirements equal wasted work.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "step-diagram",
+          "edges": [{ "from": "step-clarify", "to": "step-diagram" }],
+          "icon": "📊",
+          "title": "Step 2: Diagram",
+          "narration": "Spend an hour drawing. Data flow: what data goes where? Component diagram: what pieces are involved? Sequence diagram: what happens in what order? Make the invisible visible.",
+          "connectsTo": "Clarify"
+        },
+        {
+          "nodeId": "step-edge-cases",
+          "edges": [{ "from": "step-diagram", "to": "step-edge-cases" }],
+          "icon": "⚠️",
+          "title": "Step 3: Edge Cases",
+          "narration": "Thirty minutes on what could go wrong. Invalid input? External service failures? User does something unexpected? Race conditions? Finding these on paper is free—finding them in code is expensive.",
+          "connectsTo": "Diagram"
+        },
+        {
+          "nodeId": "step-approach",
+          "edges": [{ "from": "step-edge-cases", "to": "step-approach" }],
+          "icon": "📝",
+          "title": "Step 4: Approach Doc",
+          "narration": "Write it out in plain English. What's your plan? What key decisions did you make and why? What are the risks and how will you mitigate them? This becomes your north star.",
+          "connectsTo": "Edge Cases"
+        },
+        {
+          "nodeId": "step-review",
+          "edges": [{ "from": "step-approach", "to": "step-review" }],
+          "icon": "👀",
+          "title": "Step 5: Quick Review",
+          "narration": "Fifteen minutes with a senior. Show them your plan, get feedback BEFORE you code. Their experience catches problems you can't see yet. This is the cheapest feedback you'll ever get.",
+          "connectsTo": "Approach Doc"
+        },
+        {
+          "nodeId": "total-investment",
+          "edges": [{ "from": "step-review", "to": "total-investment" }],
+          "icon": "⏱️",
+          "title": "2.5 Hours That Save Days",
+          "narration": "Total investment: about two and a half hours. This 'wastes' half a day, but saves you three to five days of rework. You spend less total time AND produce better code. That's the architect's advantage.",
+          "connectsTo": "Quick Review"
+        }
+      ]
+    },
+    {
+      "id": "ai-power-story",
+      "diagramId": "ai-power",
+      "title": "Design + AI = Superpowers",
+      "steps": [
+        {
+          "nodeId": "ai-secret",
+          "icon": "🤫",
+          "title": "The AI Secret",
+          "narration": "Here's the secret that separates those who leverage AI from those who don't: AI is amazing at coding but terrible at design. It needs YOU to do the thinking.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "bad-prompt",
+          "edges": [{ "from": "ai-secret", "to": "bad-prompt" }],
+          "icon": "❌",
+          "title": "Vague Prompts, Vague Code",
+          "narration": "Give AI a vague request like 'write code to handle payments' and you get generic code. It misses edge cases, doesn't fit your architecture, and needs heavy rework.",
+          "connectsTo": "AI Secret"
+        },
+        {
+          "nodeId": "good-prompt",
+          "edges": [{ "from": "ai-secret", "to": "good-prompt" }],
+          "icon": "✅",
+          "title": "Design Docs = Perfect Prompts",
+          "narration": "But give AI your design doc with sequence diagrams, edge cases, and your patterns? It generates exactly what you need. Your design work becomes the ultimate AI prompt.",
+          "connectsTo": "AI Secret"
+        },
+        {
+          "nodeId": "you-architect",
+          "edges": [{ "from": "good-prompt", "to": "you-architect" }],
+          "icon": "🏛️",
+          "title": "You: The Architect",
+          "narration": "In this workflow, YOU are the architect. You clarify requirements, draw diagrams, identify edge cases, and write the approach. This is the creative, strategic thinking AI can't do.",
+          "connectsTo": "Good Prompts"
+        },
+        {
+          "nodeId": "ai-builder",
+          "edges": [{ "from": "you-architect", "to": "ai-builder" }],
+          "icon": "🤖",
+          "title": "AI: The Builder",
+          "narration": "AI becomes your builder—executing your vision with speed and precision. You give it clear context, it generates code, you review and refine. Human strategy, machine execution.",
+          "connectsTo": "You Architect"
+        },
+        {
+          "nodeId": "superpower",
+          "edges": [{ "from": "ai-builder", "to": "superpower" }],
+          "icon": "⚡",
+          "title": "The Superpower",
+          "narration": "The result? Senior-level output in junior-level time. You're not just coding faster—you're thinking better. Design-first plus AI equals genuine superpowers. This is the future of software development.",
+          "connectsTo": "AI Builder"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "code-trap-story",
+      "questions": [
+        {
+          "question": "What typically happens when juniors start coding immediately?",
+          "options": [
+            "They finish faster and get promoted",
+            "They hit walls, rework, and spend more total time",
+            "The code quality is higher",
+            "Team reviews go smoother"
+          ],
+          "correct": 1,
+          "explanation": "Starting without a plan leads to discovering problems mid-code, causing rework cycles. What feels fast initially costs days in the long run."
+        },
+        {
+          "question": "Why do seniors seem slower at the start but finish faster overall?",
+          "options": [
+            "They type faster",
+            "They skip testing",
+            "They invest in planning to avoid rework",
+            "They copy existing code"
+          ],
+          "correct": 2,
+          "explanation": "Seniors invest 2-3 hours in planning upfront, catching problems when they're cheap to fix. This saves 3-5 days of rework later, reducing total time."
+        },
+        {
+          "question": "Where is it cheapest to find and fix problems?",
+          "options": [
+            "During code review",
+            "In production",
+            "On paper, before coding",
+            "During user testing"
+          ],
+          "correct": 2,
+          "explanation": "Finding problems on paper costs minutes. Finding them in code costs hours. Finding them in production costs days and reputation. Design-first catches issues early!"
+        }
+      ]
+    },
+    {
+      "storyId": "workflow-story",
+      "questions": [
+        {
+          "question": "What's the FIRST step in the design-first workflow?",
+          "options": [
+            "Draw diagrams",
+            "Clarify requirements",
+            "Write the approach",
+            "Start coding a prototype"
+          ],
+          "correct": 1,
+          "explanation": "Clarification comes first! You need to know exactly what you're building before you can design it. Vague requirements lead to wasted design and code."
+        },
+        {
+          "question": "Why spend time listing edge cases before coding?",
+          "options": [
+            "To impress reviewers",
+            "It's easier to fix them on paper than in code",
+            "Edge cases don't matter",
+            "To make the document longer"
+          ],
+          "correct": 1,
+          "explanation": "Edge cases found on paper are free to fix—just update your plan. Edge cases found in code require rewriting, debugging, and re-testing. Prevention beats cure!"
+        },
+        {
+          "question": "Why get a quick review before coding?",
+          "options": [
+            "Company policy requires it",
+            "To share the blame if it fails",
+            "Senior experience catches problems you can't see yet",
+            "To delay starting the work"
+          ],
+          "correct": 2,
+          "explanation": "Seniors have seen patterns and pitfalls you haven't. Their 15 minutes of review can save you days of going down the wrong path. This is the cheapest feedback you'll ever get!"
+        }
+      ]
+    },
+    {
+      "storyId": "ai-power-story",
+      "questions": [
+        {
+          "question": "What is AI good at and bad at in software development?",
+          "options": [
+            "Good at design, bad at coding",
+            "Good at coding, bad at design",
+            "Good at everything",
+            "Bad at everything"
+          ],
+          "correct": 1,
+          "explanation": "AI excels at generating code from clear specifications but struggles with the strategic thinking needed for good design. That's why YOU need to be the architect!"
+        },
+        {
+          "question": "What makes a design doc the 'perfect AI prompt'?",
+          "options": [
+            "It's written in AI language",
+            "It includes clear context, edge cases, and patterns",
+            "It's very short",
+            "It tells AI to figure things out"
+          ],
+          "correct": 1,
+          "explanation": "Design docs provide exactly what AI needs: clear requirements, edge cases to handle, and your architecture patterns. More context equals better code!"
+        },
+        {
+          "question": "In the design-first + AI workflow, what's the human's role?",
+          "options": [
+            "Just review AI code",
+            "Let AI do all the work",
+            "Be the architect—design, direct, refine",
+            "Only fix bugs"
+          ],
+          "correct": 2,
+          "explanation": "You're the architect! You do the strategic thinking—clarifying, designing, identifying edge cases. AI executes your vision. Human strategy + machine execution = superpowers."
+        }
+      ]
+    }
+  ]
+}

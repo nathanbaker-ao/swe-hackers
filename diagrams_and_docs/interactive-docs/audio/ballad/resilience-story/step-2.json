@@ -1,0 +1,170 @@
+{
+  "storyId": "resilience-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Circuit Breaker: Closed State. A circuit breaker starts closed — requests flow through normally. It tracks failures. If everything works, great. But if failures start piling up, it's watching, counting, ready to act.",
+  "duration": 16.600000381469727,
+  "words": [
+    {
+      "word": "Circuit",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "breaker",
+      "start": 0.6600000262260437,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "closed",
+      "start": 1.3799999952316284,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "state",
+      "start": 1.7400000095367432,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "A",
+      "start": 2.859999895095825,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "circuit",
+      "start": 3.0999999046325684,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "breaker",
+      "start": 3.359999895095825,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "starts",
+      "start": 3.6600000858306885,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "closed",
+      "start": 4.159999847412109,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "Requests",
+      "start": 5.619999885559082,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "flow",
+      "start": 5.619999885559082,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "through",
+      "start": 5.980000019073486,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "normally",
+      "start": 6.239999771118164,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "It",
+      "start": 7.460000038146973,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "tracks",
+      "start": 7.619999885559082,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "failures",
+      "start": 7.940000057220459,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "If",
+      "start": 9.020000457763672,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "everything",
+      "start": 9.15999984741211,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "works",
+      "start": 9.520000457763672,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "great",
+      "start": 10.380000114440918,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "But",
+      "start": 11.239999771118164,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "if",
+      "start": 11.539999961853027,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "failures",
+      "start": 11.819999694824219,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "start",
+      "start": 12.140000343322754,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "piling",
+      "start": 12.5600004196167,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "up",
+      "start": 12.84000015258789,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "it's",
+      "start": 13.699999809265137,
+      "end": 13.960000038146973
+    },
+    {
+      "word": "watching",
+      "start": 13.960000038146973,
+      "end": 14.34000015258789
+    },
+    {
+      "word": "counting",
+      "start": 15.180000305175781,
+      "end": 15.180000305175781
+    },
+    {
+      "word": "ready",
+      "start": 15.819999694824219,
+      "end": 15.859999656677246
+    },
+    {
+      "word": "to",
+      "start": 15.859999656677246,
+      "end": 16.34000015258789
+    },
+    {
+      "word": "act",
+      "start": 16.34000015258789,
+      "end": 16.3799991607666
+    }
+  ]
+}

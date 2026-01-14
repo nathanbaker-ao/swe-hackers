@@ -1,0 +1,281 @@
+{
+  "pageId": "ch1-stone",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "The Junior Accelerator",
+    "icon": "🚀",
+    "themeColor": "lightning"
+  },
+  "stories": [
+    {
+      "id": "career-path-story",
+      "diagramId": "career-path",
+      "title": "The Accelerated Career Path",
+      "steps": [
+        {
+          "nodeId": "traditional-path",
+          "icon": "🐌",
+          "title": "The Traditional Path",
+          "narration": "In the old world, career progression was slow. Most juniors spent 3 to 5 years before being considered mid-level, and another 2 to 5 years to reach senior. That's potentially a decade of waiting!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "ai-revolution",
+          "edges": [{ "from": "traditional-path", "to": "ai-revolution" }],
+          "icon": "🤖",
+          "title": "The AI Revolution",
+          "narration": "But the rules have changed. AI tools like Cursor, Claude, and GitHub Copilot are force multipliers. They don't replace engineers—they amplify what engineers can do.",
+          "connectsTo": "Traditional Path"
+        },
+        {
+          "nodeId": "learn-faster",
+          "edges": [{ "from": "ai-revolution", "to": "learn-faster" }],
+          "icon": "📚",
+          "title": "Learn 10x Faster",
+          "narration": "AI explains code, patterns, and concepts on demand. Instead of spending hours searching documentation, you get instant, contextual explanations tailored to your exact code.",
+          "connectsTo": "AI Revolution"
+        },
+        {
+          "nodeId": "build-more",
+          "edges": [{ "from": "ai-revolution", "to": "build-more" }],
+          "icon": "🏗️",
+          "title": "Build 5x More",
+          "narration": "Ship features at a pace that impresses senior engineers. AI handles the boilerplate so you can focus on the interesting architecture and business logic problems.",
+          "connectsTo": "AI Revolution"
+        },
+        {
+          "nodeId": "accelerated-timeline",
+          "edges": [
+            { "from": "learn-faster", "to": "accelerated-timeline" },
+            { "from": "build-more", "to": "accelerated-timeline" }
+          ],
+          "icon": "⚡",
+          "title": "The New Timeline",
+          "narration": "With AI augmentation, junior to mid-level takes 6 to 12 months. Mid to senior takes another 12 to 18 months. That's 18 to 24 months total—not 8 to 10 years!",
+          "connectsTo": "Learning + Building"
+        }
+      ]
+    },
+    {
+      "id": "acceleration-story",
+      "diagramId": "acceleration",
+      "title": "The Acceleration Principles",
+      "steps": [
+        {
+          "nodeId": "work-differently",
+          "icon": "🎯",
+          "title": "Work Differently, Not Harder",
+          "narration": "The difference between a 10-year journey and a 2-year journey isn't about working harder. It's about working differently. Let's explore the four principles that separate accelerators from the pack.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "think-architect",
+          "edges": [{ "from": "work-differently", "to": "think-architect" }],
+          "icon": "🏛️",
+          "title": "Think Like an Architect",
+          "narration": "Stop just completing tasks. Understand systems. See patterns across codebases. Design before you build. Ask 'why are we building this?' before asking 'how do I implement this?'",
+          "connectsTo": "Work Differently"
+        },
+        {
+          "nodeId": "use-ai-strategically",
+          "edges": [{ "from": "work-differently", "to": "use-ai-strategically" }],
+          "icon": "🤖",
+          "title": "Use AI Strategically",
+          "narration": "AI isn't just for code generation. Use it for explanations on demand, code review assistance, and exploring alternative approaches. Make AI your 24/7 senior mentor.",
+          "connectsTo": "Work Differently"
+        },
+        {
+          "nodeId": "build-visible-impact",
+          "edges": [{ "from": "work-differently", "to": "build-visible-impact" }],
+          "icon": "📈",
+          "title": "Build Visible Impact",
+          "narration": "Ship features. Fix production bugs. Document systems that confuse others. Your work should be visible to your team and leadership. Impact that nobody sees doesn't advance your career.",
+          "connectsTo": "Work Differently"
+        },
+        {
+          "nodeId": "learn-deliberately",
+          "edges": [{ "from": "work-differently", "to": "learn-deliberately" }],
+          "icon": "📖",
+          "title": "Learn Deliberately",
+          "narration": "Read senior engineers' code. Ask 'why' not just 'how.' Seek feedback actively. Every PR review is a free lesson from someone more experienced. Don't just fix the comment—understand it.",
+          "connectsTo": "Work Differently"
+        },
+        {
+          "nodeId": "accelerator-mindset",
+          "edges": [
+            { "from": "think-architect", "to": "accelerator-mindset" },
+            { "from": "use-ai-strategically", "to": "accelerator-mindset" },
+            { "from": "build-visible-impact", "to": "accelerator-mindset" },
+            { "from": "learn-deliberately", "to": "accelerator-mindset" }
+          ],
+          "icon": "🚀",
+          "title": "The Accelerator Mindset",
+          "narration": "Combine all four principles and you become an accelerator. You're not just completing tickets—you're growing into a senior engineer at 5x the traditional pace.",
+          "connectsTo": "All Four Principles"
+        }
+      ]
+    },
+    {
+      "id": "production-code-story",
+      "diagramId": "production-code",
+      "title": "Junior vs Senior Code",
+      "steps": [
+        {
+          "nodeId": "junior-code",
+          "icon": "👶",
+          "title": "Junior Code: It Works",
+          "narration": "Junior code typically works, but it's fragile. No type hints. No documentation. Maybe some SQL injection vulnerabilities. It solves the immediate problem but creates future problems.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "add-types",
+          "edges": [{ "from": "junior-code", "to": "add-types" }],
+          "icon": "🏷️",
+          "title": "Add Type Hints",
+          "narration": "Type hints tell other developers—and your IDE—exactly what your function expects and returns. They catch bugs before runtime and make code self-documenting.",
+          "connectsTo": "Junior Code"
+        },
+        {
+          "nodeId": "add-docs",
+          "edges": [{ "from": "add-types", "to": "add-docs" }],
+          "icon": "📝",
+          "title": "Add Documentation",
+          "narration": "Docstrings explain the why, not just the what. What does this function do? What are the edge cases? What errors might it raise? Future you will thank present you.",
+          "connectsTo": "Type Hints"
+        },
+        {
+          "nodeId": "add-validation",
+          "edges": [{ "from": "add-docs", "to": "add-validation" }],
+          "icon": "🛡️",
+          "title": "Add Input Validation",
+          "narration": "Never trust input. Validate parameters. Use parameterized queries to prevent SQL injection. Raise meaningful errors for invalid inputs. Defense in depth.",
+          "connectsTo": "Documentation"
+        },
+        {
+          "nodeId": "senior-code",
+          "edges": [{ "from": "add-validation", "to": "senior-code" }],
+          "icon": "🏆",
+          "title": "Senior Code: Production Ready",
+          "narration": "The result is production-ready code. It's secure, maintainable, and self-documenting. And here's the secret: you can ask AI to transform junior code into senior code instantly!",
+          "connectsTo": "Validation"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "career-path-story",
+      "questions": [
+        {
+          "question": "How long does the traditional path from junior to senior typically take?",
+          "options": [
+            "1-2 years",
+            "3-4 years",
+            "5-10 years",
+            "15+ years"
+          ],
+          "correct": 2,
+          "explanation": "The traditional path takes 5-10 years: 3-5 years to mid-level, then another 2-5 years to senior. AI-augmented development can compress this to 18-24 months."
+        },
+        {
+          "question": "What role do AI tools play in career acceleration?",
+          "options": [
+            "They replace junior engineers",
+            "They're force multipliers that amplify what engineers can do",
+            "They're only useful for senior engineers",
+            "They slow down learning by doing the work for you"
+          ],
+          "correct": 1,
+          "explanation": "AI tools are force multipliers—they don't replace engineers, they amplify capabilities. You learn faster, build more, and focus on higher-level problems."
+        },
+        {
+          "question": "What's the accelerated timeline from junior to senior with AI augmentation?",
+          "options": [
+            "6-12 months",
+            "18-24 months",
+            "3-4 years",
+            "It's the same as traditional"
+          ],
+          "correct": 1,
+          "explanation": "With AI augmentation: 6-12 months to mid-level, then 12-18 more months to senior. Total: 18-24 months—roughly 5x faster than traditional paths."
+        }
+      ]
+    },
+    {
+      "storyId": "acceleration-story",
+      "questions": [
+        {
+          "question": "What's the MOST important behavior change for accelerating from junior to senior?",
+          "options": [
+            "Writing code faster",
+            "Memorizing more syntax and APIs",
+            "Thinking about systems and asking 'why' before 'how'",
+            "Working longer hours"
+          ],
+          "correct": 2,
+          "explanation": "Systems thinking is the key differentiator. AI can write code fast, but senior engineers provide the 'why'—understanding context, trade-offs, and long-term implications."
+        },
+        {
+          "question": "Which of these is NOT one of the four acceleration principles?",
+          "options": [
+            "Think like an architect",
+            "Use AI strategically",
+            "Work longer hours than others",
+            "Build visible impact"
+          ],
+          "correct": 2,
+          "explanation": "The four principles are: Think like an architect, Use AI strategically, Build visible impact, and Learn deliberately. Working harder isn't the answer—working differently is."
+        },
+        {
+          "question": "Why is 'visible impact' important for career acceleration?",
+          "options": [
+            "It makes you look busy",
+            "Impact that nobody sees doesn't advance your career",
+            "Visibility is more important than quality",
+            "It helps you avoid difficult tasks"
+          ],
+          "correct": 1,
+          "explanation": "You can do amazing work, but if leadership doesn't see it, it won't advance your career. Ship features, fix production bugs, document systems—make your contributions visible."
+        }
+      ]
+    },
+    {
+      "storyId": "production-code-story",
+      "questions": [
+        {
+          "question": "What's the main problem with 'junior code that works'?",
+          "options": [
+            "It's always slower",
+            "It solves the immediate problem but creates future problems",
+            "It never works correctly",
+            "It uses too many comments"
+          ],
+          "correct": 1,
+          "explanation": "Junior code often works but is fragile—no types, no docs, potential security issues. It solves today's problem while creating tomorrow's tech debt."
+        },
+        {
+          "question": "Why are type hints valuable in production code?",
+          "options": [
+            "They make code run faster",
+            "They catch bugs before runtime and make code self-documenting",
+            "They're required by Python",
+            "They reduce file size"
+          ],
+          "correct": 1,
+          "explanation": "Type hints help IDEs catch bugs before you run the code, serve as documentation, and make refactoring safer. They're not required but are a senior-level practice."
+        },
+        {
+          "question": "How can AI help you write production-quality code?",
+          "options": [
+            "AI can't help with code quality",
+            "Ask it to transform junior code into senior code with types, docs, and validation",
+            "AI only writes junior-level code",
+            "You shouldn't use AI for production code"
+          ],
+          "correct": 1,
+          "explanation": "AI is excellent at transforming code! Ask Cursor to add type hints, docstrings, and error handling—it can convert fragile code to production-ready code in seconds."
+        }
+      ]
+    }
+  ]
+}

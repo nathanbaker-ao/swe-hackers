@@ -1,0 +1,140 @@
+{
+  "storyId": "control-flow-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Control Flow. This decision-making power is called control flow. It's the lightning that guides your program's path, letting it think, react, and choose different routes.",
+  "duration": 11.0600004196167,
+  "words": [
+    {
+      "word": "Control",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "Flow",
+      "start": 0.699999988079071,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "This",
+      "start": 1.7400000095367432,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "decision",
+      "start": 1.8200000524520874,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "making",
+      "start": 2.299999952316284,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "power",
+      "start": 2.559999942779541,
+      "end": 3
+    },
+    {
+      "word": "is",
+      "start": 3,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "called",
+      "start": 3.319999933242798,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "Control",
+      "start": 3.5999999046325684,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "Flow",
+      "start": 4.119999885559082,
+      "end": 4.460000038146973
+    },
+    {
+      "word": "It's",
+      "start": 5.019999980926514,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "the",
+      "start": 5.139999866485596,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "lightning",
+      "start": 5.460000038146973,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "that",
+      "start": 5.679999828338623,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "guides",
+      "start": 6.380000114440918,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "your",
+      "start": 6.380000114440918,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "program's",
+      "start": 6.579999923706055,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "path",
+      "start": 7.519999980926514,
+      "end": 7.519999980926514
+    },
+    {
+      "word": "letting",
+      "start": 8.0600004196167,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "it",
+      "start": 8.0600004196167,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "think",
+      "start": 8.300000190734863,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "react",
+      "start": 9.34000015258789,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "and",
+      "start": 9.699999809265137,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "choose",
+      "start": 9.920000076293945,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "different",
+      "start": 10.140000343322754,
+      "end": 10.539999961853027
+    },
+    {
+      "word": "routes",
+      "start": 10.539999961853027,
+      "end": 10.819999694824219
+    }
+  ]
+}

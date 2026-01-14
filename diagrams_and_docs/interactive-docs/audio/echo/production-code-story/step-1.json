@@ -1,0 +1,150 @@
+{
+  "storyId": "production-code-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Add Type Hints. Type hints tell other developers—and your IDE—exactly what your function expects and returns. They catch bugs before runtime and make code self-documenting.",
+  "duration": 12.119999885559082,
+  "words": [
+    {
+      "word": "Add",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "type",
+      "start": 0.6800000071525574,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "hints",
+      "start": 1.0199999809265137,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "Type",
+      "start": 2.0399999618530273,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "hints",
+      "start": 2.0399999618530273,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "tell",
+      "start": 2.240000009536743,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "other",
+      "start": 2.559999942779541,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "developers",
+      "start": 2.8399999141693115,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "and",
+      "start": 3.319999933242798,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "your",
+      "start": 3.9200000762939453,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "IDE",
+      "start": 4.119999885559082,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "exactly",
+      "start": 4.559999942779541,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "what",
+      "start": 5.539999961853027,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "your",
+      "start": 5.800000190734863,
+      "end": 6
+    },
+    {
+      "word": "function",
+      "start": 6,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "expects",
+      "start": 6.260000228881836,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "and",
+      "start": 6.800000190734863,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "returns",
+      "start": 7.239999771118164,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "They",
+      "start": 8.220000267028809,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "catch",
+      "start": 8.260000228881836,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "bugs",
+      "start": 8.5600004196167,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "before",
+      "start": 8.84000015258789,
+      "end": 9.260000228881836
+    },
+    {
+      "word": "runtime",
+      "start": 9.260000228881836,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "and",
+      "start": 9.760000228881836,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "make",
+      "start": 10.239999771118164,
+      "end": 10.5
+    },
+    {
+      "word": "code",
+      "start": 10.5,
+      "end": 10.920000076293945
+    },
+    {
+      "word": "self",
+      "start": 10.920000076293945,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "documenting",
+      "start": 11.399999618530273,
+      "end": 12
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "pageId": "ch4-architect",
+  "courseId": "apprentice",
+  "chapterMeta": {
+    "title": "The Age of Architects",
+    "icon": "🏛️",
+    "themeColor": "architect"
+  },
+  "stories": [
+    {
+      "id": "architect-shift-story",
+      "diagramId": "architect-shift",
+      "title": "The Architect Shift",
+      "steps": [
+        {
+          "nodeId": "old-way",
+          "icon": "🧱",
+          "title": "The Old Way",
+          "narration": "Imagine building a house. In the old days, you had to make every brick by hand, one by one. It took forever! Coding used to be the same—every line written manually.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "machines",
+          "edges": [{ "from": "old-way", "to": "machines" }],
+          "icon": "⚙️",
+          "title": "Machines Help",
+          "narration": "Then machines came along that could make bricks faster. Frameworks and libraries helped programmers reuse code. But you still had to stack every brick yourself.",
+          "connectsTo": "Old Way"
+        },
+        {
+          "nodeId": "ai-helper",
+          "edges": [{ "from": "machines", "to": "ai-helper" }],
+          "icon": "🤖",
+          "title": "AI Assistants Arrive",
+          "narration": "Now imagine you have a super-smart robot helper. You tell it: Build me a wall here, make it 10 feet tall, paint it blue. And it does it!",
+          "connectsTo": "Machines Help"
+        },
+        {
+          "nodeId": "cursor",
+          "edges": [{ "from": "ai-helper", "to": "cursor" }],
+          "icon": "💻",
+          "title": "Tools Like Cursor",
+          "narration": "That's what AI coding tools like Cursor do for programmers. You describe what you want, and AI helps you build it. You don't have to type every single line of code!",
+          "connectsTo": "AI Assistants"
+        },
+        {
+          "nodeId": "architect",
+          "edges": [{ "from": "cursor", "to": "architect" }],
+          "icon": "🏛️",
+          "title": "You Are the Architect",
+          "narration": "You're no longer just a brick-stacker—you're an architect who designs and directs. Your job isn't to type fast. Your job is to think clearly and communicate well.",
+          "connectsTo": "Cursor"
+        }
+      ]
+    },
+    {
+      "id": "evolution-story",
+      "diagramId": "evolution",
+      "title": "The Evolution of Coding",
+      "steps": [
+        {
+          "nodeId": "stone-age",
+          "icon": "🪨",
+          "title": "The Stone Age",
+          "narration": "In the Stone Age of computing, programmers used punch cards. They literally punched holes in cards to give instructions. One mistake meant starting over!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "bronze-age",
+          "edges": [{ "from": "stone-age", "to": "bronze-age" }],
+          "icon": "⚒️",
+          "title": "The Bronze Age",
+          "narration": "The Bronze Age brought real keyboards and screens. Programmers could finally type code and see it immediately. Still slow, but a huge improvement!",
+          "connectsTo": "Stone Age"
+        },
+        {
+          "nodeId": "iron-age",
+          "edges": [{ "from": "bronze-age", "to": "iron-age" }],
+          "icon": "🔩",
+          "title": "The Iron Age",
+          "narration": "The Iron Age introduced frameworks—pre-built toolkits that handled common tasks. React, Django, Rails—these let developers build faster than ever.",
+          "connectsTo": "Bronze Age"
+        },
+        {
+          "nodeId": "architect-age",
+          "edges": [{ "from": "iron-age", "to": "architect-age" }],
+          "icon": "🏛️",
+          "title": "The Age of Architects",
+          "narration": "Right now, we're entering the Age of Architects. This is an exciting time! Programmers who learn to work with AI will build amazing things faster than ever before.",
+          "connectsTo": "Iron Age"
+        },
+        {
+          "nodeId": "your-opportunity",
+          "edges": [{ "from": "architect-age", "to": "your-opportunity" }],
+          "icon": "🚀",
+          "title": "Your Opportunity",
+          "narration": "You're learning at the perfect time! The rules of programming are changing, and those who adapt will have superpowers. Welcome to the future.",
+          "connectsTo": "Age of Architects"
+        }
+      ]
+    },
+    {
+      "id": "new-skills-story",
+      "diagramId": "new-skills",
+      "title": "The New Skills That Matter",
+      "steps": [
+        {
+          "nodeId": "old-skills",
+          "icon": "📝",
+          "title": "Skills That Faded",
+          "narration": "Some skills used to be essential. Memorizing every command. Typing super fast. Writing every line by hand. Remembering tiny syntax details. These still help, but they're less critical now.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "understanding",
+          "edges": [{ "from": "old-skills", "to": "understanding" }],
+          "icon": "🧠",
+          "title": "Understanding Deeply",
+          "narration": "The first new superpower is understanding how things work. When you truly understand the concepts, you can guide AI to build the right solution, even if you don't remember exact syntax.",
+          "connectsTo": "Old Skills"
+        },
+        {
+          "nodeId": "communicating",
+          "edges": [{ "from": "old-skills", "to": "communicating" }],
+          "icon": "💬",
+          "title": "Communicating Clearly",
+          "narration": "The second superpower is explaining what you want. The clearer you describe your goal, the better AI can help you. Vague instructions give vague results!",
+          "connectsTo": "Old Skills"
+        },
+        {
+          "nodeId": "reading",
+          "edges": [{ "from": "old-skills", "to": "reading" }],
+          "icon": "👀",
+          "title": "Reading Code Critically",
+          "narration": "The third superpower is reading and checking code. AI generates code, but you must review it. Understanding what code does is more important than writing it from scratch.",
+          "connectsTo": "Old Skills"
+        },
+        {
+          "nodeId": "planning",
+          "edges": [{ "from": "old-skills", "to": "planning" }],
+          "icon": "📊",
+          "title": "Planning with Diagrams",
+          "narration": "The fourth superpower is drawing diagrams to plan. Before you build, sketch your ideas. Flowcharts, sequence diagrams, and box diagrams help you and AI understand the goal.",
+          "connectsTo": "Old Skills"
+        },
+        {
+          "nodeId": "new-programmer",
+          "edges": [
+            { "from": "understanding", "to": "new-programmer" },
+            { "from": "communicating", "to": "new-programmer" },
+            { "from": "reading", "to": "new-programmer" },
+            { "from": "planning", "to": "new-programmer" }
+          ],
+          "icon": "⭐",
+          "title": "The Modern Programmer",
+          "narration": "The best programmers aren't the fastest typists. They're the best thinkers and communicators. Master these four skills, and you'll thrive in the Age of Architects!",
+          "connectsTo": "All Four Skills"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "architect-shift-story",
+      "questions": [
+        {
+          "question": "In the Age of Architects, what is your main role?",
+          "options": [
+            "Type code as fast as possible",
+            "Memorize every programming command",
+            "Design and direct—tell AI what to build",
+            "Write every line of code by hand"
+          ],
+          "correct": 2,
+          "explanation": "Like an architect designing a building, your job is to think clearly and direct AI. The AI helps with the typing; you do the thinking and designing!"
+        },
+        {
+          "question": "What do AI coding tools like Cursor help you do?",
+          "options": [
+            "Replace programmers entirely",
+            "Build things faster by generating code from descriptions",
+            "Make your computer faster",
+            "Play video games"
+          ],
+          "correct": 1,
+          "explanation": "AI coding tools help you build faster by turning your descriptions into code. You're still in charge—you just have a powerful helper!"
+        },
+        {
+          "question": "Why is the house-building metaphor useful for understanding the change?",
+          "options": [
+            "Coding is exactly like construction",
+            "It shows how AI automates the repetitive work while you design",
+            "Houses run on code now",
+            "Programmers build physical houses"
+          ],
+          "correct": 1,
+          "explanation": "The metaphor shows how, like moving from hand-making bricks to directing robots, programmers now design and direct while AI handles repetitive coding."
+        }
+      ]
+    },
+    {
+      "storyId": "evolution-story",
+      "questions": [
+        {
+          "question": "What did programmers use in the Stone Age of computing?",
+          "options": [
+            "Touchscreens",
+            "Punch cards",
+            "Voice commands",
+            "AI assistants"
+          ],
+          "correct": 1,
+          "explanation": "In the earliest days of computing, programmers used punch cards—physical cards with holes punched in specific patterns to represent instructions."
+        },
+        {
+          "question": "What major improvement came in the Iron Age of coding?",
+          "options": [
+            "Punch cards were invented",
+            "Keyboards replaced monitors",
+            "Frameworks like React and Django",
+            "AI started writing all code"
+          ],
+          "correct": 2,
+          "explanation": "The Iron Age brought frameworks—pre-built toolkits that handle common tasks. These let developers build faster by reusing well-tested code."
+        },
+        {
+          "question": "Why is NOW a great time to learn programming?",
+          "options": [
+            "Programming is getting harder",
+            "AI will do everything automatically",
+            "The rules are changing, and adapters will have superpowers",
+            "Computers are cheaper"
+          ],
+          "correct": 2,
+          "explanation": "The rules of programming are changing with AI tools. Those who learn to work with AI—rather than ignore it—will have incredible advantages!"
+        }
+      ]
+    },
+    {
+      "storyId": "new-skills-story",
+      "questions": [
+        {
+          "question": "In the Age of Architects, what is the MOST important skill?",
+          "options": [
+            "Typing really fast",
+            "Memorizing every command",
+            "Thinking clearly and explaining what you want",
+            "Writing code without any help"
+          ],
+          "correct": 2,
+          "explanation": "AI can type the code, but YOU need to think and communicate clearly! The clearer your thinking and explanation, the better AI can help."
+        },
+        {
+          "question": "Why is reading code more important now than writing it from scratch?",
+          "options": [
+            "It isn't—writing is still more important",
+            "AI generates code that you must review and understand",
+            "Reading is faster than writing",
+            "Writing code is now illegal"
+          ],
+          "correct": 1,
+          "explanation": "AI generates code, but you're responsible for understanding and verifying it works correctly. Reading critically is essential!"
+        },
+        {
+          "question": "How do diagrams help in modern programming?",
+          "options": [
+            "They make your code run faster",
+            "They help you and AI understand what you're building before you build it",
+            "They replace code entirely",
+            "They're just for decoration"
+          ],
+          "correct": 1,
+          "explanation": "Diagrams help you plan your ideas before coding. When you and AI both understand the goal clearly, building becomes much easier!"
+        }
+      ]
+    }
+  ]
+}

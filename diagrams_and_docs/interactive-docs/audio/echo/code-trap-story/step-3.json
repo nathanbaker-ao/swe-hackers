@@ -1,0 +1,135 @@
+{
+  "storyId": "code-trap-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Senior Thinks First. The senior approach is different. Before touching code, they ask clarifying questions, draw the data flow, and identify edge cases on paper. This feels slower—but it's not.",
+  "duration": 10.649999618530273,
+  "words": [
+    {
+      "word": "Senior",
+      "start": 0,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "thinks",
+      "start": 1.0800000429153442,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "first",
+      "start": 1.399999976158142,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "The",
+      "start": 2.2200000286102295,
+      "end": 2.359999895095825
+    },
+    {
+      "word": "senior",
+      "start": 2.359999895095825,
+      "end": 2.640000104904175
+    },
+    {
+      "word": "approach",
+      "start": 2.640000104904175,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "is",
+      "start": 2.9800000190734863,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "different",
+      "start": 3.240000009536743,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "Before",
+      "start": 4.320000171661377,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "touching",
+      "start": 4.360000133514404,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "code",
+      "start": 4.659999847412109,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "they",
+      "start": 5.400000095367432,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "ask",
+      "start": 5.480000019073486,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "clarifying",
+      "start": 5.760000228881836,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "questions",
+      "start": 6.300000190734863,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "draw",
+      "start": 7.440000057220459,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "the",
+      "start": 7.440000057220459,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "data",
+      "start": 7.679999828338623,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "flow",
+      "start": 7.940000057220459,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "and",
+      "start": 8.539999961853027,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "identify",
+      "start": 8.739999771118164,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "edge",
+      "start": 9.119999885559082,
+      "end": 9.579999923706055
+    },
+    {
+      "word": "cases",
+      "start": 9.579999923706055,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "on",
+      "start": 9.84000015258789,
+      "end": 10.140000343322754
+    },
+    {
+      "word": "paper",
+      "start": 10.140000343322754,
+      "end": 10.380000114440918
+    }
+  ]
+}

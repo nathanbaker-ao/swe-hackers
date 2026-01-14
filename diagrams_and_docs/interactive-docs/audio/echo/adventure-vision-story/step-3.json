@@ -1,0 +1,155 @@
+{
+  "storyId": "adventure-vision-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Everything Comes Together. This project combines every skill you've learned: Stone for memory, Lightning for decisions, Magnetism for functions, and Architect thinking for planning. It all clicks into place!",
+  "duration": 15.15999984741211,
+  "words": [
+    {
+      "word": "Everything",
+      "start": 0,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "comes",
+      "start": 0.8199999928474426,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "together",
+      "start": 1.440000057220459,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "This",
+      "start": 2.799999952316284,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "project",
+      "start": 2.9000000953674316,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "combines",
+      "start": 3.319999933242798,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "every",
+      "start": 3.740000009536743,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "skill",
+      "start": 4.320000171661377,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "you've",
+      "start": 4.539999961853027,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "learned",
+      "start": 5.099999904632568,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "Stone",
+      "start": 5.980000019073486,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "for",
+      "start": 5.980000019073486,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "memory",
+      "start": 6.21999979019165,
+      "end": 6.5
+    },
+    {
+      "word": "lightning",
+      "start": 7.360000133514404,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "for",
+      "start": 7.420000076293945,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "decisions",
+      "start": 7.880000114440918,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "magnetism",
+      "start": 9.0600004196167,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "for",
+      "start": 9.420000076293945,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "functions",
+      "start": 10.180000305175781,
+      "end": 10.180000305175781
+    },
+    {
+      "word": "and",
+      "start": 10.720000267028809,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "architect",
+      "start": 11.0600004196167,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "thinking",
+      "start": 11.319999694824219,
+      "end": 11.619999885559082
+    },
+    {
+      "word": "for",
+      "start": 11.619999885559082,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "planning",
+      "start": 11.920000076293945,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "It",
+      "start": 12.680000305175781,
+      "end": 13.119999885559082
+    },
+    {
+      "word": "all",
+      "start": 13.119999885559082,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "clicks",
+      "start": 13.619999885559082,
+      "end": 13.9399995803833
+    },
+    {
+      "word": "into",
+      "start": 13.9399995803833,
+      "end": 14.279999732971191
+    },
+    {
+      "word": "place",
+      "start": 14.279999732971191,
+      "end": 14.579999923706055
+    }
+  ]
+}

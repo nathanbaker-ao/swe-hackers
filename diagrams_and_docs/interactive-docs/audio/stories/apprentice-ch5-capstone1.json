@@ -1,0 +1,277 @@
+{
+  "pageId": "ch5-capstone1",
+  "courseId": "apprentice",
+  "chapterMeta": {
+    "title": "Capstone I: The Adventure Game",
+    "icon": "🎮",
+    "themeColor": "capstone"
+  },
+  "stories": [
+    {
+      "id": "adventure-vision-story",
+      "diagramId": "adventure-vision",
+      "title": "The Adventure Vision",
+      "steps": [
+        {
+          "nodeId": "the-challenge",
+          "icon": "🏆",
+          "title": "The Challenge Awaits",
+          "narration": "You've learned variables, loops, conditions, and functions. Now it's time for the ultimate test—building a complete text adventure game from scratch!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "text-adventure",
+          "edges": [{ "from": "the-challenge", "to": "text-adventure" }],
+          "icon": "🎮",
+          "title": "What is a Text Adventure?",
+          "narration": "A text adventure is a game where players type commands to explore, collect items, and reach goals. No fancy graphics needed—just your imagination and code!",
+          "connectsTo": "The Challenge"
+        },
+        {
+          "nodeId": "player-experience",
+          "edges": [{ "from": "text-adventure", "to": "player-experience" }],
+          "icon": "👤",
+          "title": "The Player Experience",
+          "narration": "Players wake up in a dungeon. They type 'pick up key' and 'go north' to explore. The game responds to their commands, creating an interactive story they control.",
+          "connectsTo": "Text Adventure"
+        },
+        {
+          "nodeId": "combine-skills",
+          "edges": [{ "from": "player-experience", "to": "combine-skills" }],
+          "icon": "🔗",
+          "title": "Everything Comes Together",
+          "narration": "This project combines every skill you've learned: Stone for memory, Lightning for decisions, Magnetism for functions, and Architect thinking for planning. It all clicks into place!",
+          "connectsTo": "Player Experience"
+        },
+        {
+          "nodeId": "victory-moment",
+          "edges": [{ "from": "combine-skills", "to": "victory-moment" }],
+          "icon": "🎉",
+          "title": "The Victory Moment",
+          "narration": "When a player escapes the castle and sees 'Congratulations! You escaped!'—that's YOUR code creating that magic moment. You built something real and playable!",
+          "connectsTo": "Combine Skills"
+        }
+      ]
+    },
+    {
+      "id": "game-planning-story",
+      "diagramId": "game-planning",
+      "title": "Planning Your Game",
+      "steps": [
+        {
+          "nodeId": "architects-plan",
+          "icon": "📋",
+          "title": "Architects Plan First",
+          "narration": "Great game developers don't just start typing code. Like architects designing a building, they draw a plan first. Your map IS your blueprint!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "draw-map",
+          "edges": [{ "from": "architects-plan", "to": "draw-map" }],
+          "icon": "🗺️",
+          "title": "Draw Your Map",
+          "narration": "Sketch out your rooms and how they connect. Dungeon leads north to the Hall. Hall connects to Kitchen, Library, and Tower. Each arrow is a path players can walk.",
+          "connectsTo": "Architects Plan"
+        },
+        {
+          "nodeId": "define-rooms",
+          "edges": [{ "from": "draw-map", "to": "define-rooms" }],
+          "icon": "🚪",
+          "title": "Define Your Rooms",
+          "narration": "Every room needs three things: a description that sets the mood, exits telling where players can go, and items they might find. That's the recipe for a room!",
+          "connectsTo": "Draw Map"
+        },
+        {
+          "nodeId": "add-items",
+          "edges": [{ "from": "define-rooms", "to": "add-items" }],
+          "icon": "🗝️",
+          "title": "Add Items to Collect",
+          "narration": "Rusty key in the dungeon. Apple in the kitchen. Magic scroll in the library. Items make exploration rewarding and can unlock new paths through your adventure.",
+          "connectsTo": "Define Rooms"
+        },
+        {
+          "nodeId": "win-condition",
+          "edges": [{ "from": "add-items", "to": "win-condition" }],
+          "icon": "🏁",
+          "title": "Set the Win Condition",
+          "narration": "Every game needs a goal! Reach the tower to escape, collect all treasures, defeat the dragon—you decide. The win condition gives players something to strive for.",
+          "connectsTo": "Add Items"
+        }
+      ]
+    },
+    {
+      "id": "skills-integration-story",
+      "diagramId": "skills-integration",
+      "title": "Putting It All Together",
+      "steps": [
+        {
+          "nodeId": "all-skills",
+          "icon": "⭐",
+          "title": "Your Complete Toolkit",
+          "narration": "This capstone project isn't about learning new concepts—it's about combining everything you already know. Watch how all your skills work together!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "stone-memory",
+          "edges": [{ "from": "all-skills", "to": "stone-memory" }],
+          "icon": "🪨",
+          "title": "Stone: Game Memory",
+          "narration": "Variables store everything: current room tracks where the player is, inventory holds collected items, and game running controls if the loop continues. The Stone remembers!",
+          "connectsTo": "Your Toolkit"
+        },
+        {
+          "nodeId": "lightning-flow",
+          "edges": [{ "from": "all-skills", "to": "lightning-flow" }],
+          "icon": "⚡",
+          "title": "Lightning: Decision Making",
+          "narration": "If command is 'go north', move the player. Elif command is 'pick up', grab the item. The while loop keeps the game running until they quit or win. Lightning controls the flow!",
+          "connectsTo": "Your Toolkit"
+        },
+        {
+          "nodeId": "magnetism-functions",
+          "edges": [{ "from": "all-skills", "to": "magnetism-functions" }],
+          "icon": "🧲",
+          "title": "Magnetism: Reusable Actions",
+          "narration": "Show room displays descriptions. Move handles direction changes. Pickup adds items to inventory. Each function is a reusable building block that snaps together with the others!",
+          "connectsTo": "Your Toolkit"
+        },
+        {
+          "nodeId": "game-loop",
+          "edges": [
+            { "from": "stone-memory", "to": "game-loop" },
+            { "from": "lightning-flow", "to": "game-loop" },
+            { "from": "magnetism-functions", "to": "game-loop" }
+          ],
+          "icon": "🔄",
+          "title": "The Game Loop",
+          "narration": "While game running: show the room, get a command, decide what to do, call the right function, check for victory, repeat. That's the heartbeat of your adventure game!",
+          "connectsTo": "All Skills"
+        },
+        {
+          "nodeId": "your-game",
+          "edges": [{ "from": "game-loop", "to": "your-game" }],
+          "icon": "🎮",
+          "title": "Your Complete Game",
+          "narration": "Stone holds the state, Lightning makes decisions, Magnetism provides the actions, and the game loop ties it all together. You're not just coding—you're creating an experience!",
+          "connectsTo": "Game Loop"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "adventure-vision-story",
+      "questions": [
+        {
+          "question": "What makes this capstone project special?",
+          "options": [
+            "It teaches completely new programming concepts",
+            "It combines all the skills you've learned into one project",
+            "It requires fancy graphics and animations",
+            "It can only be built with AI assistance"
+          ],
+          "correct": 1,
+          "explanation": "The capstone combines Stone (variables), Lightning (control flow), and Magnetism (functions)—everything you've learned working together in one complete game!"
+        },
+        {
+          "question": "In a text adventure, how do players interact with the game?",
+          "options": [
+            "By clicking buttons and menus",
+            "By moving a joystick",
+            "By typing text commands like 'go north' or 'pick up key'",
+            "By drawing on the screen"
+          ],
+          "correct": 2,
+          "explanation": "Text adventures use typed commands! Players type things like 'go north', 'look', 'pick up key', and the game responds with text descriptions."
+        },
+        {
+          "question": "What happens when a player 'wins' the adventure game?",
+          "options": [
+            "The program crashes",
+            "Nothing special happens",
+            "They reach a goal you defined, like escaping the castle",
+            "They must start over immediately"
+          ],
+          "correct": 2,
+          "explanation": "You define the win condition! When players reach the Tower room marked as the goal, the game celebrates their victory and ends on a high note."
+        }
+      ]
+    },
+    {
+      "storyId": "game-planning-story",
+      "questions": [
+        {
+          "question": "Why should you draw a map before writing code?",
+          "options": [
+            "It's required by Python",
+            "Maps make the code run faster",
+            "It helps you plan rooms and connections before building",
+            "You need to submit the map for grading"
+          ],
+          "correct": 2,
+          "explanation": "Planning first prevents confusion later! A map shows which rooms exist, how they connect, and where items are—your blueprint for the whole game."
+        },
+        {
+          "question": "What three things does every room need?",
+          "options": [
+            "A name, a color, and a sound",
+            "A description, exits, and items",
+            "A password, a timer, and a score",
+            "Graphics, music, and animations"
+          ],
+          "correct": 1,
+          "explanation": "Each room needs: a description (what the player sees), exits (where they can go), and items (what they can interact with). That's the room recipe!"
+        },
+        {
+          "question": "What is a 'win condition' in a game?",
+          "options": [
+            "The fastest time to complete the game",
+            "The goal that ends the game in victory",
+            "A special cheat code",
+            "The number of points needed to win"
+          ],
+          "correct": 1,
+          "explanation": "The win condition is what players are trying to achieve—like reaching the Tower to escape. Without a clear goal, there's no satisfying ending!"
+        }
+      ]
+    },
+    {
+      "storyId": "skills-integration-story",
+      "questions": [
+        {
+          "question": "Which 'Stone' skill tracks the player's current room?",
+          "options": [
+            "A function called current_room()",
+            "A variable called current_room",
+            "A loop called room_tracker",
+            "A print statement"
+          ],
+          "correct": 1,
+          "explanation": "Variables (Stone) store game state! The variable current_room holds which room the player is in, and we update it when they move."
+        },
+        {
+          "question": "What does the game loop do?",
+          "options": [
+            "It only runs once when the game starts",
+            "It repeatedly shows room, gets command, and processes it until the game ends",
+            "It draws the game graphics",
+            "It saves the game to a file"
+          ],
+          "correct": 1,
+          "explanation": "The game loop is a while loop that keeps running: show room → get command → process command → repeat. It's the heartbeat of your game!"
+        },
+        {
+          "question": "Why do we use functions like move() and pickup() instead of writing all code in the loop?",
+          "options": [
+            "Functions are required by Python",
+            "They make the code organized, reusable, and easier to understand",
+            "Functions run faster than regular code",
+            "The game loop can't contain any code"
+          ],
+          "correct": 1,
+          "explanation": "Functions (Magnetism) are reusable building blocks! show_room(), move(), and pickup() keep the game loop clean and make each action easy to modify."
+        }
+      ]
+    }
+  ]
+}

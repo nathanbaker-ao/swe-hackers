@@ -1,0 +1,215 @@
+{
+  "storyId": "resilience-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Retry with Exponential Backoff. When a call fails, don't immediately retry — you'll make things worse. Wait one second, then two, then four. This exponential backoff gives overloaded systems time to recover. Set a max attempts limit so you don't retry forever.",
+  "duration": 21.959999084472656,
+  "words": [
+    {
+      "word": "Retry",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "with",
+      "start": 0.7799999713897705,
+      "end": 1.3600000143051147
+    },
+    {
+      "word": "Exponential",
+      "start": 1.3600000143051147,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "Backoff",
+      "start": 2.140000104904175,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "When",
+      "start": 3.5799999237060547,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "a",
+      "start": 3.619999885559082,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "call",
+      "start": 3.9800000190734863,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "fails",
+      "start": 4.099999904632568,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "don't",
+      "start": 5.360000133514404,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "immediately",
+      "start": 5.360000133514404,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "retry",
+      "start": 6.139999866485596,
+      "end": 6.739999771118164
+    },
+    {
+      "word": "You'll",
+      "start": 7.539999961853027,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "make",
+      "start": 7.71999979019165,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "things",
+      "start": 7.960000038146973,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "worse",
+      "start": 8.300000190734863,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "Wait",
+      "start": 9.619999885559082,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "one",
+      "start": 9.640000343322754,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "second",
+      "start": 9.979999542236328,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "then",
+      "start": 10.5,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "two",
+      "start": 11.020000457763672,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "then",
+      "start": 11.720000267028809,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "four",
+      "start": 11.979999542236328,
+      "end": 12.239999771118164
+    },
+    {
+      "word": "This",
+      "start": 12.760000228881836,
+      "end": 13.140000343322754
+    },
+    {
+      "word": "exponential",
+      "start": 13.140000343322754,
+      "end": 13.84000015258789
+    },
+    {
+      "word": "backoff",
+      "start": 13.84000015258789,
+      "end": 14.34000015258789
+    },
+    {
+      "word": "gives",
+      "start": 14.34000015258789,
+      "end": 14.880000114440918
+    },
+    {
+      "word": "overloaded",
+      "start": 14.880000114440918,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "systems",
+      "start": 15.800000190734863,
+      "end": 16.079999923706055
+    },
+    {
+      "word": "time",
+      "start": 16.079999923706055,
+      "end": 16.68000030517578
+    },
+    {
+      "word": "to",
+      "start": 16.68000030517578,
+      "end": 17.280000686645508
+    },
+    {
+      "word": "recover",
+      "start": 17.280000686645508,
+      "end": 17.600000381469727
+    },
+    {
+      "word": "Set",
+      "start": 18.1200008392334,
+      "end": 18.18000030517578
+    },
+    {
+      "word": "a",
+      "start": 18.18000030517578,
+      "end": 18.440000534057617
+    },
+    {
+      "word": "max",
+      "start": 18.440000534057617,
+      "end": 18.68000030517578
+    },
+    {
+      "word": "attempts",
+      "start": 18.68000030517578,
+      "end": 19
+    },
+    {
+      "word": "limit",
+      "start": 19,
+      "end": 19.3799991607666
+    },
+    {
+      "word": "so",
+      "start": 19.3799991607666,
+      "end": 19.979999542236328
+    },
+    {
+      "word": "you",
+      "start": 19.979999542236328,
+      "end": 20.200000762939453
+    },
+    {
+      "word": "don't",
+      "start": 20.200000762939453,
+      "end": 20.5
+    },
+    {
+      "word": "retry",
+      "start": 20.5,
+      "end": 21.020000457763672
+    },
+    {
+      "word": "forever",
+      "start": 21.020000457763672,
+      "end": 21.700000762939453
+    }
+  ]
+}

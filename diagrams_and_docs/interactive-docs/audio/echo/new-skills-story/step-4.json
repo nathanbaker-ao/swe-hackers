@@ -1,0 +1,160 @@
+{
+  "storyId": "new-skills-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Planning with Diagrams. The fourth superpower is drawing diagrams to plan. Before you build, sketch your ideas. Flowcharts, sequence diagrams, and box diagrams help you and AI understand the goal.",
+  "duration": 15.600000381469727,
+  "words": [
+    {
+      "word": "Planning",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "with",
+      "start": 0.6399999856948853,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "diagrams",
+      "start": 1.100000023841858,
+      "end": 1.6799999475479126
+    },
+    {
+      "word": "The",
+      "start": 2.3399999141693115,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "fourth",
+      "start": 2.440000057220459,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "superpower",
+      "start": 2.740000009536743,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "is",
+      "start": 3.299999952316284,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "drawing",
+      "start": 3.7799999713897705,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "diagrams",
+      "start": 4.199999809265137,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "to",
+      "start": 4.78000020980835,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "plan",
+      "start": 5.139999866485596,
+      "end": 5.659999847412109
+    },
+    {
+      "word": "Before",
+      "start": 6.639999866485596,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "you",
+      "start": 6.639999866485596,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "build",
+      "start": 6.940000057220459,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "sketch",
+      "start": 7.920000076293945,
+      "end": 7.920000076293945
+    },
+    {
+      "word": "your",
+      "start": 7.920000076293945,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "ideas",
+      "start": 8.720000267028809,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "Flowcharts",
+      "start": 9.720000267028809,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "sequence",
+      "start": 10.579999923706055,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "diagrams",
+      "start": 10.859999656677246,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "and",
+      "start": 11.539999961853027,
+      "end": 11.9399995803833
+    },
+    {
+      "word": "box",
+      "start": 11.9399995803833,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "diagrams",
+      "start": 12.039999961853027,
+      "end": 12.539999961853027
+    },
+    {
+      "word": "help",
+      "start": 12.539999961853027,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "you",
+      "start": 12.920000076293945,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "and",
+      "start": 13.300000190734863,
+      "end": 13.65999984741211
+    },
+    {
+      "word": "AI",
+      "start": 13.65999984741211,
+      "end": 14.100000381469727
+    },
+    {
+      "word": "understand",
+      "start": 14.100000381469727,
+      "end": 14.84000015258789
+    },
+    {
+      "word": "the",
+      "start": 14.84000015258789,
+      "end": 15.199999809265137
+    },
+    {
+      "word": "goal",
+      "start": 15.199999809265137,
+      "end": 15.260000228881836
+    }
+  ]
+}

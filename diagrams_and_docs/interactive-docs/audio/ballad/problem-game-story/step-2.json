@@ -1,0 +1,125 @@
+{
+  "storyId": "problem-game-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Simple Problems. Someone's hungry? That's a problem. Make them food, problem solved. Small reward, but real value created. This is where everyone starts.",
+  "duration": 12.859999656677246,
+  "words": [
+    {
+      "word": "Simple",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "problems",
+      "start": 0.6800000071525574,
+      "end": 1.3200000524520874
+    },
+    {
+      "word": "Someone's",
+      "start": 2.140000104904175,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "hungry",
+      "start": 2.759999990463257,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "That's",
+      "start": 3.559999942779541,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "a",
+      "start": 3.759999990463257,
+      "end": 4
+    },
+    {
+      "word": "problem",
+      "start": 4,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "Make",
+      "start": 5.039999961853027,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "them",
+      "start": 5.099999904632568,
+      "end": 5.380000114440918
+    },
+    {
+      "word": "food",
+      "start": 5.380000114440918,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "problem",
+      "start": 6,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "solved",
+      "start": 6.380000114440918,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "Small",
+      "start": 7.579999923706055,
+      "end": 7.760000228881836
+    },
+    {
+      "word": "reward",
+      "start": 7.760000228881836,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "but",
+      "start": 8.579999923706055,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "real",
+      "start": 8.800000190734863,
+      "end": 9.140000343322754
+    },
+    {
+      "word": "value",
+      "start": 9.140000343322754,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "created",
+      "start": 9.479999542236328,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "This",
+      "start": 10.880000114440918,
+      "end": 11.020000457763672
+    },
+    {
+      "word": "is",
+      "start": 11.020000457763672,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "where",
+      "start": 11.239999771118164,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "everyone",
+      "start": 11.399999618530273,
+      "end": 11.960000038146973
+    },
+    {
+      "word": "starts",
+      "start": 11.960000038146973,
+      "end": 12.420000076293945
+    }
+  ]
+}

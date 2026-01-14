@@ -1,0 +1,155 @@
+{
+  "storyId": "mindset-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Senior Approach. Seniors think differently. They understand the 'why' before writing code. They ask 'What problem are we really solving?' They design systems that prevent problems from happening.",
+  "duration": 15.5,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Senior",
+      "start": 0.41999998688697815,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Approach",
+      "start": 0.8999999761581421,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "Seniors",
+      "start": 1.8200000524520874,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "think",
+      "start": 2.6600000858306885,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "differently",
+      "start": 2.940000057220459,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "They",
+      "start": 4.320000171661377,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "understand",
+      "start": 4.400000095367432,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "the",
+      "start": 4.840000152587891,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "why",
+      "start": 5.139999866485596,
+      "end": 5.5
+    },
+    {
+      "word": "before",
+      "start": 5.5,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "writing",
+      "start": 6.179999828338623,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "code",
+      "start": 6.579999923706055,
+      "end": 7
+    },
+    {
+      "word": "They",
+      "start": 7.900000095367432,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "ask",
+      "start": 8.0600004196167,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "what",
+      "start": 8.899999618530273,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "problem",
+      "start": 9.039999961853027,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "are",
+      "start": 9.5600004196167,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "we",
+      "start": 9.819999694824219,
+      "end": 10
+    },
+    {
+      "word": "really",
+      "start": 10,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "solving",
+      "start": 10.479999542236328,
+      "end": 10.760000228881836
+    },
+    {
+      "word": "They",
+      "start": 11.420000076293945,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "design",
+      "start": 11.779999732971191,
+      "end": 12.199999809265137
+    },
+    {
+      "word": "systems",
+      "start": 12.199999809265137,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "that",
+      "start": 12.619999885559082,
+      "end": 12.920000076293945
+    },
+    {
+      "word": "prevent",
+      "start": 12.920000076293945,
+      "end": 13.300000190734863
+    },
+    {
+      "word": "problems",
+      "start": 13.300000190734863,
+      "end": 13.859999656677246
+    },
+    {
+      "word": "from",
+      "start": 13.859999656677246,
+      "end": 14.399999618530273
+    },
+    {
+      "word": "happening",
+      "start": 14.399999618530273,
+      "end": 14.5600004196167
+    }
+  ]
+}

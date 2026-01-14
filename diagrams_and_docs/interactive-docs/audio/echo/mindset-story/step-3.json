@@ -1,0 +1,175 @@
+{
+  "storyId": "mindset-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Asking 'Why?'. Seniors communicate early, clarify requirements, and measure progress by impact delivered. They use AI as a thinking partner, not just a code generator. This is the mindset shift that accelerates growth.",
+  "duration": 17.059999465942383,
+  "words": [
+    {
+      "word": "Asking",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "why",
+      "start": 0.6200000047683716,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "Seniors",
+      "start": 2.5199999809265137,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "communicate",
+      "start": 2.5199999809265137,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "early",
+      "start": 3.140000104904175,
+      "end": 3.619999885559082
+    },
+    {
+      "word": "clarify",
+      "start": 4.880000114440918,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "requirements",
+      "start": 4.880000114440918,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "and",
+      "start": 6.059999942779541,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "measure",
+      "start": 6.420000076293945,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "progress",
+      "start": 6.480000019073486,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "by",
+      "start": 7.039999961853027,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "impact",
+      "start": 7.360000133514404,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "delivered",
+      "start": 7.860000133514404,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "They",
+      "start": 9.300000190734863,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "use",
+      "start": 9.359999656677246,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "AI",
+      "start": 9.65999984741211,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "as",
+      "start": 10.020000457763672,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "a",
+      "start": 10.239999771118164,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "thinking",
+      "start": 10.520000457763672,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "partner",
+      "start": 10.699999809265137,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "not",
+      "start": 11.819999694824219,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "just",
+      "start": 11.899999618530273,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "a",
+      "start": 12.140000343322754,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "code",
+      "start": 12.380000114440918,
+      "end": 12.640000343322754
+    },
+    {
+      "word": "generator",
+      "start": 12.640000343322754,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "This",
+      "start": 13.800000190734863,
+      "end": 14
+    },
+    {
+      "word": "is",
+      "start": 14,
+      "end": 14.180000305175781
+    },
+    {
+      "word": "the",
+      "start": 14.180000305175781,
+      "end": 14.4399995803833
+    },
+    {
+      "word": "mindset",
+      "start": 14.4399995803833,
+      "end": 14.84000015258789
+    },
+    {
+      "word": "shift",
+      "start": 14.84000015258789,
+      "end": 15.260000228881836
+    },
+    {
+      "word": "that",
+      "start": 15.260000228881836,
+      "end": 15.739999771118164
+    },
+    {
+      "word": "accelerates",
+      "start": 15.739999771118164,
+      "end": 16.420000076293945
+    },
+    {
+      "word": "growth",
+      "start": 16.420000076293945,
+      "end": 16.780000686645508
+    }
+  ]
+}

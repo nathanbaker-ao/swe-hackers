@@ -1,0 +1,165 @@
+{
+  "storyId": "code-trap-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Senior Thinks First. The senior approach is different. Before touching code, they ask clarifying questions, draw the data flow, and identify edge cases on paper. This feels slower—but it's not.",
+  "duration": 15.720000267028809,
+  "words": [
+    {
+      "word": "Senior",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "thinks",
+      "start": 0.699999988079071,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "first",
+      "start": 1.159999966621399,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "The",
+      "start": 2.7200000286102295,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "senior",
+      "start": 2.759999990463257,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "approach",
+      "start": 3.180000066757202,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "is",
+      "start": 3.640000104904175,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "different",
+      "start": 4.139999866485596,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "Before",
+      "start": 5.559999942779541,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "touching",
+      "start": 5.559999942779541,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "code",
+      "start": 5.960000038146973,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "they",
+      "start": 6.840000152587891,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "ask",
+      "start": 6.920000076293945,
+      "end": 7.320000171661377
+    },
+    {
+      "word": "clarifying",
+      "start": 7.320000171661377,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "questions",
+      "start": 7.880000114440918,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "draw",
+      "start": 9.279999732971191,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "the",
+      "start": 9.279999732971191,
+      "end": 9.5
+    },
+    {
+      "word": "data",
+      "start": 9.5,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "flow",
+      "start": 9.819999694824219,
+      "end": 10.079999923706055
+    },
+    {
+      "word": "and",
+      "start": 10.380000114440918,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "identify",
+      "start": 10.800000190734863,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "edge",
+      "start": 11.260000228881836,
+      "end": 11.699999809265137
+    },
+    {
+      "word": "cases",
+      "start": 11.699999809265137,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "on",
+      "start": 12.039999961853027,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "paper",
+      "start": 12.4399995803833,
+      "end": 12.720000267028809
+    },
+    {
+      "word": "This",
+      "start": 13.279999732971191,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "feels",
+      "start": 13.619999885559082,
+      "end": 13.960000038146973
+    },
+    {
+      "word": "slower",
+      "start": 13.960000038146973,
+      "end": 14.34000015258789
+    },
+    {
+      "word": "but",
+      "start": 14.84000015258789,
+      "end": 14.960000038146973
+    },
+    {
+      "word": "it's",
+      "start": 14.960000038146973,
+      "end": 15.239999771118164
+    },
+    {
+      "word": "not",
+      "start": 15.239999771118164,
+      "end": 15.520000457763672
+    }
+  ]
+}

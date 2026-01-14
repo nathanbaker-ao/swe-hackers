@@ -1,0 +1,145 @@
+{
+  "storyId": "career-path-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Learn 10x Faster. AI explains code, patterns, and concepts on demand. Instead of spending hours searching documentation, you get instant, contextual explanations tailored to your exact code.",
+  "duration": 18.360000610351562,
+  "words": [
+    {
+      "word": "Learn",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "10x",
+      "start": 0.6600000262260437,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "faster",
+      "start": 2.1600000858306885,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "AI",
+      "start": 4.159999847412109,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "explains",
+      "start": 4.159999847412109,
+      "end": 5
+    },
+    {
+      "word": "code",
+      "start": 5,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "patterns",
+      "start": 6.480000019073486,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "and",
+      "start": 6.900000095367432,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "concepts",
+      "start": 7.659999847412109,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "on",
+      "start": 7.659999847412109,
+      "end": 8.319999694824219
+    },
+    {
+      "word": "demand",
+      "start": 8.319999694824219,
+      "end": 8.819999694824219
+    },
+    {
+      "word": "Instead",
+      "start": 9.65999984741211,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "of",
+      "start": 9.680000305175781,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "spending",
+      "start": 9.979999542236328,
+      "end": 10.300000190734863
+    },
+    {
+      "word": "hours",
+      "start": 10.300000190734863,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "searching",
+      "start": 10.859999656677246,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "documentation",
+      "start": 11.319999694824219,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "you",
+      "start": 12.899999618530273,
+      "end": 13
+    },
+    {
+      "word": "get",
+      "start": 13,
+      "end": 13.279999732971191
+    },
+    {
+      "word": "instant",
+      "start": 13.279999732971191,
+      "end": 13.899999618530273
+    },
+    {
+      "word": "contextual",
+      "start": 13.899999618530273,
+      "end": 14.800000190734863
+    },
+    {
+      "word": "explanations",
+      "start": 14.800000190734863,
+      "end": 15.65999984741211
+    },
+    {
+      "word": "tailored",
+      "start": 15.65999984741211,
+      "end": 16.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 16.420000076293945,
+      "end": 16.860000610351562
+    },
+    {
+      "word": "your",
+      "start": 16.860000610351562,
+      "end": 17.100000381469727
+    },
+    {
+      "word": "exact",
+      "start": 17.100000381469727,
+      "end": 17.65999984741211
+    },
+    {
+      "word": "code",
+      "start": 17.65999984741211,
+      "end": 18
+    }
+  ]
+}

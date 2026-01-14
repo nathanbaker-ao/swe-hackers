@@ -1,0 +1,160 @@
+{
+  "storyId": "production-code-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Junior Code: It Works. Junior code typically works, but it's fragile. No type hints. No documentation. Maybe some SQL injection vulnerabilities. It solves the immediate problem but creates future problems.",
+  "duration": 15.720000267028809,
+  "words": [
+    {
+      "word": "Junior",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "code",
+      "start": 0.5199999809265137,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "it",
+      "start": 1.2400000095367432,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "works",
+      "start": 1.399999976158142,
+      "end": 1.7599999904632568
+    },
+    {
+      "word": "Junior",
+      "start": 2.700000047683716,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "code",
+      "start": 2.700000047683716,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "typically",
+      "start": 3.0399999618530273,
+      "end": 3.5
+    },
+    {
+      "word": "works",
+      "start": 3.5,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "but",
+      "start": 4.179999828338623,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "it's",
+      "start": 4.539999961853027,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "fragile",
+      "start": 4.840000152587891,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "No",
+      "start": 6,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "type",
+      "start": 6.159999847412109,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "hints",
+      "start": 6.480000019073486,
+      "end": 6.78000020980835
+    },
+    {
+      "word": "No",
+      "start": 7.300000190734863,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "documentation",
+      "start": 7.480000019073486,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "Maybe",
+      "start": 8.9399995803833,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "some",
+      "start": 9.119999885559082,
+      "end": 9.579999923706055
+    },
+    {
+      "word": "SQL",
+      "start": 9.579999923706055,
+      "end": 10.119999885559082
+    },
+    {
+      "word": "injection",
+      "start": 10.119999885559082,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "vulnerabilities",
+      "start": 10.65999984741211,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "It",
+      "start": 12.020000457763672,
+      "end": 12.260000228881836
+    },
+    {
+      "word": "solves",
+      "start": 12.260000228881836,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "the",
+      "start": 12.4399995803833,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "immediate",
+      "start": 12.739999771118164,
+      "end": 13.039999961853027
+    },
+    {
+      "word": "problem",
+      "start": 13.039999961853027,
+      "end": 13.539999961853027
+    },
+    {
+      "word": "but",
+      "start": 13.65999984741211,
+      "end": 14.180000305175781
+    },
+    {
+      "word": "creates",
+      "start": 14.180000305175781,
+      "end": 14.5
+    },
+    {
+      "word": "future",
+      "start": 14.5,
+      "end": 14.9399995803833
+    },
+    {
+      "word": "problems",
+      "start": 14.9399995803833,
+      "end": 15.380000114440918
+    }
+  ]
+}

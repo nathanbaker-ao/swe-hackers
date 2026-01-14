@@ -1,0 +1,273 @@
+{
+  "pageId": "ch5-capstone1",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "Capstone I: Lead a Feature",
+    "icon": "🔥",
+    "themeColor": "fire"
+  },
+  "stories": [
+    {
+      "id": "ownership-mindset-story",
+      "diagramId": "ownership-mindset",
+      "title": "The Ownership Mindset",
+      "steps": [
+        {
+          "nodeId": "mindset-shift",
+          "icon": "🧠",
+          "title": "The Mindset Shift",
+          "narration": "Junior mindset: I write code for tickets assigned to me. Senior mindset: I'm responsible for this feature succeeding, from idea to production. That's the ownership difference.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "clarify-requirements",
+          "edges": [{ "from": "mindset-shift", "to": "clarify-requirements" }],
+          "icon": "📋",
+          "title": "Clarifying Requirements",
+          "narration": "Owners don't just accept vague specs. They ask questions, push back on unclear requirements, and define exactly what 'done' looks like before writing a single line of code.",
+          "connectsTo": "Mindset Shift"
+        },
+        {
+          "nodeId": "design-solution",
+          "edges": [{ "from": "clarify-requirements", "to": "design-solution" }],
+          "icon": "📐",
+          "title": "Designing the Solution",
+          "narration": "Write the design doc. Draw the diagrams. Plan for edge cases. Get buy-in from stakeholders before you start coding. This saves massive time and rework later.",
+          "connectsTo": "Requirements"
+        },
+        {
+          "nodeId": "implement",
+          "edges": [{ "from": "design-solution", "to": "implement" }],
+          "icon": "💻",
+          "title": "Implementing with Excellence",
+          "narration": "Write the code, tests, and documentation. Use AI to accelerate. But remember: owners self-review before asking others. Quality is your responsibility.",
+          "connectsTo": "Design"
+        },
+        {
+          "nodeId": "ship-monitor",
+          "edges": [{ "from": "implement", "to": "ship-monitor" }],
+          "icon": "🚀",
+          "title": "Ship and Monitor",
+          "narration": "Get through code review. Deploy to production. Watch the metrics. Fix issues that arise. Ownership doesn't end at merge—it ends when the feature is working for users.",
+          "connectsTo": "Implementation"
+        }
+      ]
+    },
+    {
+      "id": "ownership-lifecycle-story",
+      "diagramId": "ownership-lifecycle",
+      "title": "The Full Ownership Lifecycle",
+      "steps": [
+        {
+          "nodeId": "lifecycle-start",
+          "icon": "🎯",
+          "title": "The Complete Journey",
+          "narration": "Owning a feature means owning every phase of its lifecycle. From the first requirements conversation to the post-deployment retrospective, you're the one driving it forward.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "requirements-phase",
+          "edges": [{ "from": "lifecycle-start", "to": "requirements-phase" }],
+          "icon": "📋",
+          "title": "Requirements Phase",
+          "narration": "Meet with stakeholders—PMs, designers, other engineers. Write a requirements doc with clear success criteria. This is your north star for everything that follows.",
+          "connectsTo": "Journey Start"
+        },
+        {
+          "nodeId": "design-phase",
+          "edges": [{ "from": "requirements-phase", "to": "design-phase" }],
+          "icon": "📐",
+          "title": "Design Phase",
+          "narration": "Create your design document with architecture diagrams, data flows, and API contracts. List every edge case you can think of. Get this approved before you code.",
+          "connectsTo": "Requirements"
+        },
+        {
+          "nodeId": "implementation-phase",
+          "edges": [{ "from": "design-phase", "to": "implementation-phase" }],
+          "icon": "💻",
+          "title": "Implementation Phase",
+          "narration": "Now you code. Use AI to accelerate. Write tests as you go, not after. Keep commits atomic and well-described. Update your design doc when you discover new edge cases.",
+          "connectsTo": "Design"
+        },
+        {
+          "nodeId": "review-phase",
+          "edges": [{ "from": "implementation-phase", "to": "review-phase" }],
+          "icon": "🔍",
+          "title": "Review and Polish",
+          "narration": "Address code review feedback promptly. Do manual testing—don't trust only unit tests. Update documentation. Prepare your deployment checklist and rollback strategy.",
+          "connectsTo": "Implementation"
+        },
+        {
+          "nodeId": "deploy-retro",
+          "edges": [{ "from": "review-phase", "to": "deploy-retro" }],
+          "icon": "🏆",
+          "title": "Deploy and Retrospective",
+          "narration": "Deploy to production. Monitor the initial metrics. Then write your retrospective: what went well, what you'd do differently, what you learned. Share those learnings with your team!",
+          "connectsTo": "Review"
+        }
+      ]
+    },
+    {
+      "id": "real-feature-story",
+      "diagramId": "real-feature",
+      "title": "What Makes a Real Feature",
+      "steps": [
+        {
+          "nodeId": "not-toy",
+          "icon": "🎯",
+          "title": "Not a Toy Project",
+          "narration": "This capstone isn't a toy project—it's a real feature that provides real value. Something at work, an open-source contribution, or a tool your team will actually use.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "must-be-real",
+          "edges": [{ "from": "not-toy", "to": "must-be-real" }],
+          "icon": "✅",
+          "title": "It Must Be Real",
+          "narration": "An actual feature at work. A meaningful open-source contribution. A tool your team will use. Something with real impact, not just practice.",
+          "connectsTo": "Not a Toy"
+        },
+        {
+          "nodeId": "multiple-components",
+          "edges": [{ "from": "must-be-real", "to": "multiple-components" }],
+          "icon": "📦",
+          "title": "Multiple Components",
+          "narration": "Not a one-file change. It should touch frontend and backend, or multiple services, or involve database changes. Real features have complexity.",
+          "connectsTo": "Real Feature"
+        },
+        {
+          "nodeId": "has-stakeholders",
+          "edges": [{ "from": "multiple-components", "to": "has-stakeholders" }],
+          "icon": "👥",
+          "title": "Has Stakeholders",
+          "narration": "Someone must care about the outcome. A PM, a designer, users, or at least other engineers who'll use what you build. Accountability drives quality.",
+          "connectsTo": "Components"
+        },
+        {
+          "nodeId": "is-deployable",
+          "edges": [{ "from": "has-stakeholders", "to": "is-deployable" }],
+          "icon": "🚀",
+          "title": "Deployable to Production",
+          "narration": "It should reach production—or be blocked only by business reasons, not technical completeness. When you're done, it should be ready to ship.",
+          "connectsTo": "Stakeholders"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "ownership-mindset-story",
+      "questions": [
+        {
+          "question": "What's the key difference between junior and senior mindset?",
+          "options": [
+            "Seniors write more code per day",
+            "Seniors own outcomes from idea to production, not just tickets",
+            "Seniors don't need to write tests",
+            "Seniors work alone without stakeholders"
+          ],
+          "correct": 1,
+          "explanation": "The ownership mindset means being responsible for the entire feature lifecycle—from requirements through deployment and monitoring—not just completing assigned tasks."
+        },
+        {
+          "question": "Why should you clarify requirements before coding?",
+          "options": [
+            "To delay starting the actual work",
+            "Requirements never change anyway",
+            "To define 'done' clearly and avoid building the wrong thing",
+            "Only junior developers need to do this"
+          ],
+          "correct": 2,
+          "explanation": "Clarifying requirements upfront prevents wasted effort. When you know exactly what 'done' looks like, you can build the right thing the first time."
+        },
+        {
+          "question": "When does ownership of a feature end?",
+          "options": [
+            "When the code is merged",
+            "When the PR is approved",
+            "When the feature is working for users in production",
+            "When you finish writing the code"
+          ],
+          "correct": 2,
+          "explanation": "Ownership extends beyond the merge. You're responsible until the feature is deployed, monitored, and actually working for users."
+        }
+      ]
+    },
+    {
+      "storyId": "ownership-lifecycle-story",
+      "questions": [
+        {
+          "question": "Why should you get design approval BEFORE coding?",
+          "options": [
+            "It's just a bureaucratic requirement",
+            "To make meetings feel productive",
+            "To save massive time and avoid rework later",
+            "Designers need something to review"
+          ],
+          "correct": 2,
+          "explanation": "Getting design approval prevents building the wrong architecture. Discovering design problems during code review is expensive—catching them early saves everyone time."
+        },
+        {
+          "question": "When should you write tests?",
+          "options": [
+            "After all the code is done",
+            "Only if there's time left",
+            "As you go, during implementation",
+            "Tests aren't needed for owned features"
+          ],
+          "correct": 2,
+          "explanation": "Writing tests as you go catches bugs early and ensures your code actually works. Leaving tests until the end often means they get rushed or skipped."
+        },
+        {
+          "question": "What should you do after deploying?",
+          "options": [
+            "Move on to the next feature immediately",
+            "Monitor metrics and write a retrospective",
+            "Take a week off",
+            "Delete the design documents"
+          ],
+          "correct": 1,
+          "explanation": "Post-deployment, watch the metrics to ensure the feature works correctly. Then write a retrospective to capture learnings for yourself and your team."
+        }
+      ]
+    },
+    {
+      "storyId": "real-feature-story",
+      "questions": [
+        {
+          "question": "What makes a good capstone feature?",
+          "options": [
+            "A simple one-file bug fix",
+            "A real feature with multiple components and stakeholders",
+            "A tutorial project from the internet",
+            "Any code that compiles"
+          ],
+          "correct": 1,
+          "explanation": "A capstone feature should be real, touch multiple components, have stakeholders who care, and be deployable. This mimics actual senior-level work."
+        },
+        {
+          "question": "Why does a feature need stakeholders?",
+          "options": [
+            "To have someone to blame if it fails",
+            "Accountability and feedback drive quality",
+            "It's a company policy requirement",
+            "Stakeholders write the code for you"
+          ],
+          "correct": 1,
+          "explanation": "When someone cares about the outcome, you're more motivated to do excellent work. Stakeholder feedback also helps you build the right thing."
+        },
+        {
+          "question": "If you can't do the capstone at work, what's an alternative?",
+          "options": [
+            "Skip the capstone entirely",
+            "Just write documentation about a hypothetical feature",
+            "Find an open-source project that needs meaningful contributions",
+            "Build a todo app tutorial"
+          ],
+          "correct": 2,
+          "explanation": "Open-source contributions are real features with real users and maintainers as stakeholders. They provide the same ownership experience as work features."
+        }
+      ]
+    }
+  ]
+}

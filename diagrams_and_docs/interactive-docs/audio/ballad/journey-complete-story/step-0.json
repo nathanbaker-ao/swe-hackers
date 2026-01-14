@@ -1,0 +1,150 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Week Zero: Where You Started. Six weeks ago, you wrote code for tickets. You debugged with print statements. You copied API examples. You coded first and thought later. Sound familiar?",
+  "duration": 13.460000038146973,
+  "words": [
+    {
+      "word": "Week",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "0",
+      "start": 0.5,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Where",
+      "start": 1.5,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "you",
+      "start": 1.6399999856948853,
+      "end": 1.899999976158142
+    },
+    {
+      "word": "started",
+      "start": 1.899999976158142,
+      "end": 2.3399999141693115
+    },
+    {
+      "word": "Six",
+      "start": 3.240000009536743,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "weeks",
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "ago",
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "you",
+      "start": 4.420000076293945,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "wrote",
+      "start": 4.599999904632568,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "code",
+      "start": 4.800000190734863,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "for",
+      "start": 5.099999904632568,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "tickets",
+      "start": 5.699999809265137,
+      "end": 5.699999809265137
+    },
+    {
+      "word": "You",
+      "start": 6.360000133514404,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "debugged",
+      "start": 6.539999961853027,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "with",
+      "start": 7.059999942779541,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "print",
+      "start": 7.28000020980835,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "statements",
+      "start": 7.559999942779541,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "You",
+      "start": 8.699999809265137,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "copied",
+      "start": 8.880000114440918,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "API",
+      "start": 9.220000267028809,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "examples",
+      "start": 9.84000015258789,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "You",
+      "start": 11.140000343322754,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "coded",
+      "start": 11.359999656677246,
+      "end": 11.619999885559082
+    },
+    {
+      "word": "first",
+      "start": 11.619999885559082,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "and",
+      "start": 12.119999885559082,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "thought",
+      "start": 12.619999885559082,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "later",
+      "start": 12.859999656677246,
+      "end": 13.199999809265137
+    }
+  ]
+}

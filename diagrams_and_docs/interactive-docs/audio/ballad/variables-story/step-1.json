@@ -1,0 +1,165 @@
+{
+  "storyId": "variables-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Computer Memory. Before computers can do anything useful, they need a way to remember things. Just like your brain stores information, computers need a place to keep data while they work.",
+  "duration": 15.15999984741211,
+  "words": [
+    {
+      "word": "computer",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "memory",
+      "start": 0.8399999737739563,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Before",
+      "start": 2.380000114440918,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "computers",
+      "start": 2.559999942779541,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "can",
+      "start": 3.059999942779541,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "do",
+      "start": 3.319999933242798,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "anything",
+      "start": 3.5399999618530273,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "useful",
+      "start": 4.059999942779541,
+      "end": 4.5
+    },
+    {
+      "word": "they",
+      "start": 5.039999961853027,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "need",
+      "start": 5.199999809265137,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "a",
+      "start": 5.440000057220459,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "way",
+      "start": 5.639999866485596,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "to",
+      "start": 5.840000152587891,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "remember",
+      "start": 6.440000057220459,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "things",
+      "start": 6.71999979019165,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "Just",
+      "start": 8.079999923706055,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "like",
+      "start": 8.359999656677246,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "your",
+      "start": 8.600000381469727,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "brain",
+      "start": 8.920000076293945,
+      "end": 9.34000015258789
+    },
+    {
+      "word": "stores",
+      "start": 9.34000015258789,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "information",
+      "start": 9.800000190734863,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "computers",
+      "start": 11.5600004196167,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "need",
+      "start": 11.5600004196167,
+      "end": 11.9399995803833
+    },
+    {
+      "word": "a",
+      "start": 11.9399995803833,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "place",
+      "start": 12.180000305175781,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "to",
+      "start": 12.460000038146973,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "keep",
+      "start": 12.819999694824219,
+      "end": 13.020000457763672
+    },
+    {
+      "word": "data",
+      "start": 13.020000457763672,
+      "end": 13.539999961853027
+    },
+    {
+      "word": "while",
+      "start": 13.539999961853027,
+      "end": 14.199999809265137
+    },
+    {
+      "word": "they",
+      "start": 14.199999809265137,
+      "end": 14.460000038146973
+    },
+    {
+      "word": "work",
+      "start": 14.460000038146973,
+      "end": 14.779999732971191
+    }
+  ]
+}

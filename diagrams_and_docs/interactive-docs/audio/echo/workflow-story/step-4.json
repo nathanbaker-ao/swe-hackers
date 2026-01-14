@@ -1,0 +1,160 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Phase 5: You Integrate. Adapt AI output to your codebase style. Connect it to existing code. Add what AI missed. This integration step is where your codebase knowledge pays off.",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "Phase",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "5",
+      "start": 0.5400000214576721,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "You",
+      "start": 1.5199999809265137,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "integrate",
+      "start": 1.7799999713897705,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "Adapt",
+      "start": 3.299999952316284,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "AI",
+      "start": 3.299999952316284,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "output",
+      "start": 3.740000009536743,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "to",
+      "start": 4.119999885559082,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "your",
+      "start": 4.400000095367432,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "codebase",
+      "start": 4.71999979019165,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "style",
+      "start": 5.119999885559082,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "Connect",
+      "start": 6.639999866485596,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "it",
+      "start": 6.639999866485596,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "to",
+      "start": 6.800000190734863,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "existing",
+      "start": 7.059999942779541,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "code",
+      "start": 7.440000057220459,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "Add",
+      "start": 8.760000228881836,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "what",
+      "start": 8.760000228881836,
+      "end": 9
+    },
+    {
+      "word": "AI",
+      "start": 9,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "missed",
+      "start": 9.359999656677246,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "This",
+      "start": 10.420000076293945,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "integration",
+      "start": 10.579999923706055,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "step",
+      "start": 11.180000305175781,
+      "end": 11.5
+    },
+    {
+      "word": "is",
+      "start": 11.5,
+      "end": 11.760000228881836
+    },
+    {
+      "word": "where",
+      "start": 11.760000228881836,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "your",
+      "start": 11.920000076293945,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "codebase",
+      "start": 12.220000267028809,
+      "end": 12.680000305175781
+    },
+    {
+      "word": "knowledge",
+      "start": 12.680000305175781,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "pays",
+      "start": 13.0600004196167,
+      "end": 13.479999542236328
+    },
+    {
+      "word": "off",
+      "start": 13.479999542236328,
+      "end": 13.84000015258789
+    }
+  ]
+}

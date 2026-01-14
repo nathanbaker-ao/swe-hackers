@@ -1,0 +1,140 @@
+{
+  "storyId": "real-feature-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Multiple Components. Not a one-file change. It should touch frontend and backend, or multiple services, or involve database changes. Real features have complexity.",
+  "duration": 14.199999809265137,
+  "words": [
+    {
+      "word": "Multiple",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "components",
+      "start": 0.8799999952316284,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "not",
+      "start": 2.3399999141693115,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "a",
+      "start": 2.5199999809265137,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "one",
+      "start": 2.859999895095825,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "file",
+      "start": 3.140000104904175,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "change",
+      "start": 3.440000057220459,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "It",
+      "start": 4.739999771118164,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "should",
+      "start": 4.739999771118164,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "touch",
+      "start": 4.960000038146973,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "front",
+      "start": 5.28000020980835,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "end",
+      "start": 5.800000190734863,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "and",
+      "start": 5.840000152587891,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "back",
+      "start": 6.28000020980835,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "end",
+      "start": 6.579999923706055,
+      "end": 6.800000190734863
+    },
+    {
+      "word": "or",
+      "start": 7.039999961853027,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "multiple",
+      "start": 7.599999904632568,
+      "end": 7.880000114440918
+    },
+    {
+      "word": "services",
+      "start": 7.880000114440918,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "or",
+      "start": 9.180000305175781,
+      "end": 9.359999656677246
+    },
+    {
+      "word": "involve",
+      "start": 9.359999656677246,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "database",
+      "start": 9.84000015258789,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "changes",
+      "start": 10.399999618530273,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "Real",
+      "start": 11.880000114440918,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "features",
+      "start": 12.100000381469727,
+      "end": 12.539999961853027
+    },
+    {
+      "word": "have",
+      "start": 12.539999961853027,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "complexity",
+      "start": 13.199999809265137,
+      "end": 13.880000114440918
+    }
+  ]
+}

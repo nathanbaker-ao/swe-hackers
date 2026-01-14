@@ -1,0 +1,25 @@
+{
+  "storyId": "capstone-journey-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Choose Your Problem. Pick one problem to solve. It should be real—something you've actually observed. Specific—not too broad. And solvable—something you can actually address with a tool or resource.",
+  "duration": 0.36000001430511475,
+  "words": [
+    {
+      "word": "MBC",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "word": "뉴스",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "word": "이덕영입니다",
+      "start": 0,
+      "end": 0.25999999046325684
+    }
+  ]
+}

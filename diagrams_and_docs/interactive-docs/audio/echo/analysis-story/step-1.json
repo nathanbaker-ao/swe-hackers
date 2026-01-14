@@ -1,0 +1,145 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Collection Pattern. The pattern: define what you want to know, identify where the data lives, collect it systematically, then look for patterns. Simple process, powerful results.",
+  "duration": 13.319999694824219,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.30000001192092896
+    },
+    {
+      "word": "collection",
+      "start": 0.30000001192092896,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "pattern",
+      "start": 0.8600000143051147,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "The",
+      "start": 2.059999942779541,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "pattern",
+      "start": 2.059999942779541,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "Define",
+      "start": 3.359999895095825,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "what",
+      "start": 3.380000114440918,
+      "end": 3.559999942779541
+    },
+    {
+      "word": "you",
+      "start": 3.559999942779541,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "want",
+      "start": 3.700000047683716,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "to",
+      "start": 3.9000000953674316,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "know",
+      "start": 4.099999904632568,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "Identify",
+      "start": 5.159999847412109,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "where",
+      "start": 5.400000095367432,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 5.579999923706055,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "data",
+      "start": 5.800000190734863,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "lives",
+      "start": 6.039999961853027,
+      "end": 6.440000057220459
+    },
+    {
+      "word": "Collect",
+      "start": 7.199999809265137,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "it",
+      "start": 7.199999809265137,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "systematically",
+      "start": 7.480000019073486,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "Then",
+      "start": 8.699999809265137,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "look",
+      "start": 9.260000228881836,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "for",
+      "start": 9.300000190734863,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "patterns",
+      "start": 9.960000038146973,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "Simple",
+      "start": 10.739999771118164,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "process",
+      "start": 10.859999656677246,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "Powerful",
+      "start": 12.260000228881836,
+      "end": 12.520000457763672
+    },
+    {
+      "word": "results",
+      "start": 12.520000457763672,
+      "end": 12.800000190734863
+    }
+  ]
+}

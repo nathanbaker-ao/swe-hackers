@@ -10,8 +10,8 @@ Copy any command below and paste it into a Cursor agent chat. Each agent can wor
 
 ## ✅ Completed Conversions
 
-| Course | Lesson | Status |
-|--------|--------|--------|
+| Course     | Lesson      | Status      |
+| ---------- | ----------- | ----------- |
 | Apprentice | ch0-origins | ✅ Complete |
 
 ---
@@ -166,14 +166,14 @@ Copy any command below and paste it into a Cursor agent chat. Each agent can wor
 
 ## Summary
 
-| Course | Lessons | Status |
-|--------|---------|--------|
-| **Apprentice** | 7 | 1 done, 6 remaining |
-| **Junior** | 7 | 0 done, 7 remaining |
-| **Senior** | 7 | 0 done, 7 remaining |
-| **Undergrad** | 7 | 0 done, 7 remaining |
-| **Endless Opportunities** | 5 | 0 done, 5 remaining |
-| **Total** | **33** | **1 done, 32 remaining** |
+| Course                    | Lessons | Status                   |
+| ------------------------- | ------- | ------------------------ |
+| **Apprentice**            | 7       | 1 done, 6 remaining      |
+| **Junior**                | 7       | 0 done, 7 remaining      |
+| **Senior**                | 7       | 0 done, 7 remaining      |
+| **Undergrad**             | 7       | 0 done, 7 remaining      |
+| **Endless Opportunities** | 5       | 0 done, 5 remaining      |
+| **Total**                 | **33**  | **1 done, 32 remaining** |
 
 ---
 
@@ -184,15 +184,18 @@ Copy any command below and paste it into a Cursor agent chat. Each agent can wor
 Run 4-5 agents at once, each converting the same chapter across courses:
 
 **Batch 1 - All ch0-origins:**
+
 - Junior, Senior, Undergrad (Apprentice already done)
 
 **Batch 2 - All ch1-stone:**
+
 - Apprentice, Junior, Senior, Undergrad
 
 **Batch 3 - All ch2-lightning:**
+
 - Apprentice, Junior, Senior, Undergrad
 
-*(Continue for ch3-ch6...)*
+_(Continue for ch3-ch6...)_
 
 ### Option 2: By Course (Focused)
 
@@ -219,5 +222,5 @@ After each conversion, verify:
 
 ---
 
-*Generated: January 2026*
-*Rule: `@autonateai-cursor-rules/.cursor/rules/convert-lesson.mdc`*
+_Generated: January 2026_
+_Rule: `@autonateai-cursor-rules/.cursor/rules/convert-lesson.mdc`_

@@ -1,0 +1,145 @@
+{
+  "storyId": "architect-shift-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Machines Help. Then machines came along that could make bricks faster. Frameworks and libraries helped programmers reuse code. But you still had to stack every brick yourself.",
+  "duration": 11.800000190734863,
+  "words": [
+    {
+      "word": "Machines",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "help",
+      "start": 0.6399999856948853,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Then",
+      "start": 2.0399999618530273,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "machines",
+      "start": 2.1600000858306885,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "came",
+      "start": 2.559999942779541,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "along",
+      "start": 2.859999895095825,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "that",
+      "start": 3.140000104904175,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "could",
+      "start": 3.319999933242798,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "make",
+      "start": 3.4800000190734863,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "bricks",
+      "start": 3.740000009536743,
+      "end": 4
+    },
+    {
+      "word": "faster",
+      "start": 4,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "Frameworks",
+      "start": 5.639999866485596,
+      "end": 5.820000171661377
+    },
+    {
+      "word": "and",
+      "start": 5.820000171661377,
+      "end": 6.079999923706055
+    },
+    {
+      "word": "libraries",
+      "start": 6.079999923706055,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "helped",
+      "start": 6.460000038146973,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "programmers",
+      "start": 6.860000133514404,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "reuse",
+      "start": 7.420000076293945,
+      "end": 8
+    },
+    {
+      "word": "code",
+      "start": 8,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "but",
+      "start": 9.359999656677246,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "you",
+      "start": 9.460000038146973,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "still",
+      "start": 9.619999885559082,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "had",
+      "start": 9.899999618530273,
+      "end": 10.0600004196167
+    },
+    {
+      "word": "to",
+      "start": 10.0600004196167,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "stack",
+      "start": 10.579999923706055,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "every",
+      "start": 10.579999923706055,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "brick",
+      "start": 11.180000305175781,
+      "end": 11.180000305175781
+    },
+    {
+      "word": "yourself",
+      "start": 11.180000305175781,
+      "end": 11.65999984741211
+    }
+  ]
+}

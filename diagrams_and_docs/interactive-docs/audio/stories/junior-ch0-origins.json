@@ -1,0 +1,272 @@
+{
+  "pageId": "ch0-origins",
+  "courseId": "junior",
+  "chapterMeta": {
+    "title": "The Acceleration Point",
+    "icon": "🚀",
+    "themeColor": "acceleration"
+  },
+  "stories": [
+    {
+      "id": "mindset-story",
+      "diagramId": "mindset",
+      "title": "The Mindset Shift",
+      "steps": [
+        {
+          "nodeId": "junior-trap",
+          "icon": "🐢",
+          "title": "The Junior Trap",
+          "narration": "Most juniors get stuck in patterns that slow their growth. They immediately start coding when given a task, fix symptoms instead of root causes, and measure progress by lines of code.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "ask-how",
+          "edges": [{ "from": "junior-trap", "to": "ask-how" }],
+          "icon": "❓",
+          "title": "Asking 'How?'",
+          "narration": "Juniors ask 'How do I do this?' first. They work in isolation, afraid to ask questions. They see AI as just a code generator. This keeps them stuck at the same level.",
+          "connectsTo": "The Junior Trap"
+        },
+        {
+          "nodeId": "senior-mindset",
+          "edges": [{ "from": "junior-trap", "to": "senior-mindset" }],
+          "icon": "🚀",
+          "title": "The Senior Approach",
+          "narration": "Seniors think differently. They understand the 'why' before writing code. They ask 'What problem are we really solving?' They design systems that prevent problems from happening.",
+          "connectsTo": "The Junior Trap"
+        },
+        {
+          "nodeId": "ask-why",
+          "edges": [{ "from": "senior-mindset", "to": "ask-why" }],
+          "icon": "💡",
+          "title": "Asking 'Why?'",
+          "narration": "Seniors communicate early, clarify requirements, and measure progress by impact delivered. They use AI as a thinking partner, not just a code generator. This is the mindset shift that accelerates growth.",
+          "connectsTo": "Senior Approach"
+        },
+        {
+          "nodeId": "real-difference",
+          "edges": [
+            { "from": "ask-how", "to": "real-difference" },
+            { "from": "ask-why", "to": "real-difference" }
+          ],
+          "icon": "🎯",
+          "title": "The Real Difference",
+          "narration": "Here's the secret: A junior fixes bugs. A mid-level prevents bugs. A senior designs systems where certain classes of bugs can't exist. This course teaches you to think like the third type.",
+          "connectsTo": "Both Approaches"
+        }
+      ]
+    },
+    {
+      "id": "acceleration-story",
+      "diagramId": "acceleration",
+      "title": "Your Accelerated Path",
+      "steps": [
+        {
+          "nodeId": "traditional-path",
+          "icon": "📅",
+          "title": "Traditional Timeline",
+          "narration": "The traditional path from junior to senior takes 5 to 10 years. You slowly accumulate experience, make mistakes, and eventually level up. But what if there was a shortcut?",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "you-are-here",
+          "edges": [{ "from": "traditional-path", "to": "you-are-here" }],
+          "icon": "👶",
+          "title": "You Are Here",
+          "narration": "Right now, you're at the starting point. You might feel like senior-level thinking is years away. But with AI tools and the right approach, the timeline is about to compress dramatically.",
+          "connectsTo": "Traditional Timeline"
+        },
+        {
+          "nodeId": "ai-acceleration",
+          "edges": [{ "from": "you-are-here", "to": "ai-acceleration" }],
+          "icon": "⚡",
+          "title": "AI Acceleration",
+          "narration": "AI changes everything. Ten times faster learning. Eighty percent less time on boilerplate. You can focus on architecture and systems thinking while AI handles implementation details.",
+          "connectsTo": "You Are Here"
+        },
+        {
+          "nodeId": "mid-level",
+          "edges": [{ "from": "ai-acceleration", "to": "mid-level" }],
+          "icon": "🧑‍💻",
+          "title": "Mid-Level: 6-12 Months",
+          "narration": "With deliberate practice and AI collaboration, you can reach mid-level thinking in 6 to 12 months. You start seeing patterns, understanding codebases faster, and preventing bugs proactively.",
+          "connectsTo": "AI Acceleration"
+        },
+        {
+          "nodeId": "senior-architect",
+          "edges": [{ "from": "mid-level", "to": "senior-architect" }],
+          "icon": "🏗️",
+          "title": "Senior: 12-24 Months",
+          "narration": "By month 12 to 24, you're operating at senior level. You design systems, make architectural decisions, and lead features. The goal is to become an architect who thinks in systems.",
+          "connectsTo": "Mid-Level"
+        }
+      ]
+    },
+    {
+      "id": "skills-story",
+      "diagramId": "skills",
+      "title": "Skills That Matter",
+      "steps": [
+        {
+          "nodeId": "not-more-code",
+          "icon": "📝",
+          "title": "Not About More Code",
+          "narration": "Here's what nobody tells you: the skills that accelerate your growth are not about writing more code. They're about how you think. Let's look at what actually matters.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "codebase-nav",
+          "edges": [{ "from": "not-more-code", "to": "codebase-nav" }],
+          "icon": "🗺️",
+          "title": "Codebase Navigation",
+          "narration": "Understanding large codebases quickly is critical. Seniors can jump into million-line codebases and find what they need in hours, not weeks. We'll cover this in Chapter 1.",
+          "connectsTo": "Not About Code"
+        },
+        {
+          "nodeId": "data-flow",
+          "edges": [{ "from": "not-more-code", "to": "data-flow" }],
+          "icon": "⚡",
+          "title": "Data Flow Tracing",
+          "narration": "Following data through systems is another critical skill. Where does data come from? Where does it go? What transforms it along the way? Chapter 2 is all about this.",
+          "connectsTo": "Not About Code"
+        },
+        {
+          "nodeId": "design-first",
+          "edges": [{ "from": "not-more-code", "to": "design-first" }],
+          "icon": "📐",
+          "title": "Design First",
+          "narration": "Planning before coding is what separates seniors from juniors. Taking 30 minutes to design can save 30 hours of rework. This becomes second nature in Chapter 4.",
+          "connectsTo": "Not About Code"
+        },
+        {
+          "nodeId": "ai-collab",
+          "edges": [
+            { "from": "codebase-nav", "to": "ai-collab" },
+            { "from": "data-flow", "to": "ai-collab" },
+            { "from": "design-first", "to": "ai-collab" }
+          ],
+          "icon": "🤖",
+          "title": "AI Collaboration",
+          "narration": "The master skill: using AI as a thinking partner. Not just for code generation, but for exploring designs, catching blind spots, and accelerating every other skill. This runs through the entire course.",
+          "connectsTo": "All Skills"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "mindset-story",
+      "questions": [
+        {
+          "question": "A senior engineer is asked to add a new feature. What do they do first?",
+          "options": [
+            "Open their IDE and start coding",
+            "Look for similar code to copy",
+            "Ask clarifying questions about the requirements",
+            "Estimate how long it will take"
+          ],
+          "correct": 2,
+          "explanation": "Seniors understand the 'why' before writing code. They clarify requirements first because building the wrong thing perfectly is worse than building the right thing imperfectly."
+        },
+        {
+          "question": "What's the key difference between how juniors and seniors measure progress?",
+          "options": [
+            "Seniors measure by hours worked",
+            "Juniors measure by impact delivered",
+            "Seniors measure by impact delivered",
+            "There's no difference"
+          ],
+          "correct": 2,
+          "explanation": "Juniors often measure progress by lines of code or tasks completed. Seniors focus on the impact their work delivers to users and the business."
+        },
+        {
+          "question": "How should you think about AI tools like Cursor or Copilot?",
+          "options": [
+            "A code generator only",
+            "A replacement for learning",
+            "A thinking partner for design and review",
+            "Something seniors don't need"
+          ],
+          "correct": 2,
+          "explanation": "AI is most powerful when used as a thinking partner—for exploring designs, catching blind spots, and accelerating learning—not just generating code."
+        }
+      ]
+    },
+    {
+      "storyId": "acceleration-story",
+      "questions": [
+        {
+          "question": "How long does the traditional junior-to-senior path typically take?",
+          "options": [
+            "1-2 years",
+            "3-4 years",
+            "5-10 years",
+            "15+ years"
+          ],
+          "correct": 2,
+          "explanation": "Traditionally, the path from junior to senior engineer takes 5-10 years of accumulated experience. AI-accelerated learning can compress this significantly."
+        },
+        {
+          "question": "According to this course, how much faster can AI tools accelerate learning?",
+          "options": [
+            "2x faster",
+            "5x faster",
+            "10x faster",
+            "100x faster"
+          ],
+          "correct": 2,
+          "explanation": "AI tools can accelerate learning by 10x, reducing time spent on boilerplate by 80%, and letting you focus on what matters—systems thinking and architecture."
+        },
+        {
+          "question": "What level can you reach in 12-24 months with deliberate AI-assisted practice?",
+          "options": [
+            "Junior+",
+            "Mid-level",
+            "Senior",
+            "CTO"
+          ],
+          "correct": 2,
+          "explanation": "With deliberate practice and AI collaboration, you can reach senior-level thinking in 12-24 months, designing systems and making architectural decisions."
+        }
+      ]
+    },
+    {
+      "storyId": "skills-story",
+      "questions": [
+        {
+          "question": "Which skill is NOT mentioned as critical for accelerating to senior level?",
+          "options": [
+            "Codebase Navigation",
+            "Memorizing syntax",
+            "Data Flow Tracing",
+            "Design First thinking"
+          ],
+          "correct": 1,
+          "explanation": "Memorizing syntax is a junior mindset. Seniors rely on tools, documentation, and AI for syntax details. The critical skills are navigation, data flow, and design thinking."
+        },
+        {
+          "question": "Why is 'Design First' thinking so valuable?",
+          "options": [
+            "It looks professional in meetings",
+            "30 minutes of design can save 30 hours of rework",
+            "It's required by most companies",
+            "AI can't help with implementation"
+          ],
+          "correct": 1,
+          "explanation": "Taking time to design before coding prevents expensive mistakes. A 30-minute design session can save 30 hours of reworking code that went in the wrong direction."
+        },
+        {
+          "question": "Which chapter focuses on understanding large codebases quickly?",
+          "options": [
+            "Chapter 0",
+            "Chapter 1",
+            "Chapter 4",
+            "Chapter 6"
+          ],
+          "correct": 1,
+          "explanation": "Chapter 1: Codebase Mastery focuses on the critical skill of navigating and understanding large codebases quickly—a superpower that separates seniors from juniors."
+        }
+      ]
+    }
+  ]
+}

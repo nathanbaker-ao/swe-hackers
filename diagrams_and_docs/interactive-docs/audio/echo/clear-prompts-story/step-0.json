@@ -1,0 +1,155 @@
+{
+  "storyId": "clear-prompts-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Description Quality Matters. The quality of what AI builds depends entirely on how well you describe it. Vague descriptions get vague results. Clear descriptions get exactly what you want.",
+  "duration": 12.8100004196167,
+  "words": [
+    {
+      "word": "Description",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "quality",
+      "start": 0.7799999713897705,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "matters",
+      "start": 1.340000033378601,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "The",
+      "start": 2.559999942779541,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "quality",
+      "start": 2.559999942779541,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "of",
+      "start": 2.9200000762939453,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "what",
+      "start": 3.119999885559082,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "AI",
+      "start": 3.299999952316284,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "builds",
+      "start": 3.6600000858306885,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "depends",
+      "start": 4.059999942779541,
+      "end": 4.5
+    },
+    {
+      "word": "entirely",
+      "start": 4.5,
+      "end": 5.139999866485596
+    },
+    {
+      "word": "on",
+      "start": 5.139999866485596,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "how",
+      "start": 5.480000019073486,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "well",
+      "start": 5.679999828338623,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "you",
+      "start": 5.940000057220459,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "describe",
+      "start": 6.179999828338623,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "it",
+      "start": 6.599999904632568,
+      "end": 7
+    },
+    {
+      "word": "Vague",
+      "start": 7.699999809265137,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "descriptions",
+      "start": 7.800000190734863,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "get",
+      "start": 8.260000228881836,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "vague",
+      "start": 8.619999885559082,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "results",
+      "start": 9.039999961853027,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "Clear",
+      "start": 10.479999542236328,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "descriptions",
+      "start": 10.5600004196167,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "get",
+      "start": 11.039999961853027,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "exactly",
+      "start": 11.399999618530273,
+      "end": 11.920000076293945
+    },
+    {
+      "word": "what",
+      "start": 11.920000076293945,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "you",
+      "start": 12.140000343322754,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "want",
+      "start": 12.300000190734863,
+      "end": 12.5600004196167
+    }
+  ]
+}

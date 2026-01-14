@@ -1,0 +1,150 @@
+{
+  "storyId": "decisions-story",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Power of Decisions. Now your programs can react! Check ages, validate passwords, respond to user input—every interactive program relies on these simple yes-or-no decisions.",
+  "duration": 15.210000038146973,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.30000001192092896
+    },
+    {
+      "word": "power",
+      "start": 0.30000001192092896,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "of",
+      "start": 0.7200000286102295,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "decisions",
+      "start": 1.1399999856948853,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "Now",
+      "start": 2.8399999141693115,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "your",
+      "start": 2.8399999141693115,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "programs",
+      "start": 3.180000066757202,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "can",
+      "start": 3.700000047683716,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "react",
+      "start": 4.039999961853027,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "Check",
+      "start": 5.480000019073486,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "ages",
+      "start": 5.480000019073486,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "validate",
+      "start": 6.960000038146973,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "passwords",
+      "start": 6.960000038146973,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "respond",
+      "start": 8.34000015258789,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "to",
+      "start": 8.34000015258789,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "user",
+      "start": 8.619999885559082,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "input",
+      "start": 8.920000076293945,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "Every",
+      "start": 10.0600004196167,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "interactive",
+      "start": 10.399999618530273,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "program",
+      "start": 11.039999961853027,
+      "end": 11.600000381469727
+    },
+    {
+      "word": "relies",
+      "start": 11.600000381469727,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "on",
+      "start": 12.220000267028809,
+      "end": 12.5
+    },
+    {
+      "word": "these",
+      "start": 12.5,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "simple",
+      "start": 12.84000015258789,
+      "end": 13.239999771118164
+    },
+    {
+      "word": "yes",
+      "start": 13.239999771118164,
+      "end": 13.720000267028809
+    },
+    {
+      "word": "or",
+      "start": 13.720000267028809,
+      "end": 13.899999618530273
+    },
+    {
+      "word": "no",
+      "start": 13.899999618530273,
+      "end": 14.199999809265137
+    },
+    {
+      "word": "decisions",
+      "start": 14.199999809265137,
+      "end": 14.640000343322754
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "storyId": "six-levels-story",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Transformation. You went from 'why homework?' to understanding human evolution. Now you don't just do homework because you're told to—you understand how your brain actually works. That's the power of going deep!",
+  "duration": 14.65999984741211,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3199999928474426
+    },
+    {
+      "word": "transformation",
+      "start": 0.3199999928474426,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "You",
+      "start": 1.7799999713897705,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "went",
+      "start": 1.8200000524520874,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "from",
+      "start": 1.9800000190734863,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "why",
+      "start": 2.259999990463257,
+      "end": 2.700000047683716
+    },
+    {
+      "word": "homework",
+      "start": 2.700000047683716,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "to",
+      "start": 3.0999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "understanding",
+      "start": 3.5999999046325684,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "human",
+      "start": 4.21999979019165,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "evolution",
+      "start": 4.699999809265137,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "Now",
+      "start": 5.840000152587891,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "you",
+      "start": 5.960000038146973,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "don't",
+      "start": 6.159999847412109,
+      "end": 6.400000095367432
+    },
+    {
+      "word": "just",
+      "start": 6.400000095367432,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "do",
+      "start": 6.659999847412109,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "homework",
+      "start": 6.880000114440918,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "because",
+      "start": 7.179999828338623,
+      "end": 7.5
+    },
+    {
+      "word": "you're",
+      "start": 7.5,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "told",
+      "start": 7.900000095367432,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "to",
+      "start": 7.900000095367432,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "you",
+      "start": 8.720000267028809,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "understand",
+      "start": 8.84000015258789,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "how",
+      "start": 9.319999694824219,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "your",
+      "start": 9.539999961853027,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "brain",
+      "start": 9.779999732971191,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "actually",
+      "start": 10.039999961853027,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "works",
+      "start": 10.720000267028809,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "That's",
+      "start": 12.020000457763672,
+      "end": 12.479999542236328
+    },
+    {
+      "word": "the",
+      "start": 12.479999542236328,
+      "end": 12.720000267028809
+    },
+    {
+      "word": "power",
+      "start": 12.720000267028809,
+      "end": 13.020000457763672
+    },
+    {
+      "word": "of",
+      "start": 13.020000457763672,
+      "end": 13.399999618530273
+    },
+    {
+      "word": "going",
+      "start": 13.399999618530273,
+      "end": 13.699999809265137
+    },
+    {
+      "word": "deep",
+      "start": 13.699999809265137,
+      "end": 14.0600004196167
+    }
+  ]
+}

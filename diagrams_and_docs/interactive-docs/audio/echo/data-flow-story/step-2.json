@@ -3,123 +3,163 @@
   "stepId": "step-2",
   "voice": "echo",
   "voiceLabel": "Storyteller (Male UK)",
-  "text": "UI Components Render. The HTML page renders interactive UI components—buttons, progress bars, quiz options. These are the touchpoints users interact with.",
-  "duration": 11.710000038146973,
+  "text": "Question 3: What Writes?. Third: What writes to this storage? This is the critical question. Make a complete list. Every function, every job, every external system that can modify this data.",
+  "duration": 14.520000457763672,
   "words": [
     {
-      "word": "UI",
+      "word": "Question",
       "start": 0,
-      "end": 0.47999998927116394
+      "end": 0.46000000834465027
     },
     {
-      "word": "Components",
-      "start": 0.47999998927116394,
-      "end": 1
+      "word": "3",
+      "start": 0.46000000834465027,
+      "end": 0.8799999952316284
     },
     {
-      "word": "Render",
-      "start": 1,
-      "end": 1.5
+      "word": "What",
+      "start": 1.6200000047683716,
+      "end": 1.6799999475479126
     },
     {
-      "word": "The",
-      "start": 1.5,
-      "end": 2.0399999618530273
+      "word": "rights",
+      "start": 1.6799999475479126,
+      "end": 2.180000066757202
     },
     {
-      "word": "HTML",
-      "start": 2.0399999618530273,
-      "end": 2.5799999237060547
+      "word": "Third",
+      "start": 2.819999933242798,
+      "end": 3.0999999046325684
     },
     {
-      "word": "page",
-      "start": 2.5799999237060547,
-      "end": 3.180000066757202
-    },
-    {
-      "word": "renders",
-      "start": 3.180000066757202,
+      "word": "what",
+      "start": 3.5,
       "end": 3.680000066757202
     },
     {
-      "word": "interactive",
+      "word": "rights",
       "start": 3.680000066757202,
-      "end": 4.480000019073486
+      "end": 4
     },
     {
-      "word": "UI",
-      "start": 4.480000019073486,
-      "end": 4.940000057220459
+      "word": "to",
+      "start": 4,
+      "end": 4.179999828338623
     },
     {
-      "word": "components",
-      "start": 4.940000057220459,
+      "word": "this",
+      "start": 4.179999828338623,
+      "end": 4.5
+    },
+    {
+      "word": "storage",
+      "start": 4.5,
+      "end": 4.739999771118164
+    },
+    {
+      "word": "This",
+      "start": 5.239999771118164,
       "end": 5.5
     },
     {
-      "word": "Buttons",
-      "start": 6.21999979019165,
-      "end": 6.28000020980835
-    },
-    {
-      "word": "progress",
-      "start": 7.059999942779541,
-      "end": 7.059999942779541
-    },
-    {
-      "word": "bars",
-      "start": 7.059999942779541,
-      "end": 7.420000076293945
-    },
-    {
-      "word": "quiz",
-      "start": 7.960000038146973,
-      "end": 8.020000457763672
-    },
-    {
-      "word": "options",
-      "start": 8.020000457763672,
-      "end": 8.420000076293945
-    },
-    {
-      "word": "These",
-      "start": 9.199999809265137,
-      "end": 9.199999809265137
-    },
-    {
-      "word": "are",
-      "start": 9.199999809265137,
-      "end": 9.34000015258789
+      "word": "is",
+      "start": 5.5,
+      "end": 5.78000020980835
     },
     {
       "word": "the",
+      "start": 5.78000020980835,
+      "end": 6
+    },
+    {
+      "word": "critical",
+      "start": 6,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "question",
+      "start": 6.320000171661377,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "Make",
+      "start": 7.539999961853027,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "a",
+      "start": 7.539999961853027,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "complete",
+      "start": 7.820000171661377,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "list",
+      "start": 8.140000343322754,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "Every",
       "start": 9.34000015258789,
-      "end": 9.579999923706055
+      "end": 9.420000076293945
     },
     {
-      "word": "touch",
-      "start": 9.579999923706055,
-      "end": 9.899999618530273
+      "word": "function",
+      "start": 9.420000076293945,
+      "end": 9.880000114440918
     },
     {
-      "word": "points",
-      "start": 9.899999618530273,
-      "end": 10.140000343322754
+      "word": "every",
+      "start": 10.380000114440918,
+      "end": 10.65999984741211
     },
     {
-      "word": "users",
-      "start": 10.140000343322754,
-      "end": 10.600000381469727
+      "word": "job",
+      "start": 10.65999984741211,
+      "end": 11
     },
     {
-      "word": "interact",
-      "start": 10.600000381469727,
-      "end": 11.260000228881836
+      "word": "every",
+      "start": 11.539999961853027,
+      "end": 11.720000267028809
     },
     {
-      "word": "with",
-      "start": 11.260000228881836,
-      "end": 11.579999923706055
+      "word": "external",
+      "start": 11.720000267028809,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "system",
+      "start": 12.119999885559082,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "that",
+      "start": 12.5600004196167,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "can",
+      "start": 12.979999542236328,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "modify",
+      "start": 13.199999809265137,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "this",
+      "start": 13.600000381469727,
+      "end": 14.020000457763672
+    },
+    {
+      "word": "data",
+      "start": 14.020000457763672,
+      "end": 14.180000305175781
     }
   ]
 }

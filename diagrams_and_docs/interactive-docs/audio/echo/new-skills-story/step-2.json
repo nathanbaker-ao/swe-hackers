@@ -1,0 +1,145 @@
+{
+  "storyId": "new-skills-story",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Communicating Clearly. The second superpower is explaining what you want. The clearer you describe your goal, the better AI can help you. Vague instructions give vague results!",
+  "duration": 13.75,
+  "words": [
+    {
+      "word": "Communicating",
+      "start": 0,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "clearly",
+      "start": 0.9200000166893005,
+      "end": 1.600000023841858
+    },
+    {
+      "word": "The",
+      "start": 2.559999942779541,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "second",
+      "start": 2.559999942779541,
+      "end": 2.9200000762939453
+    },
+    {
+      "word": "superpower",
+      "start": 2.9200000762939453,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "is",
+      "start": 3.5999999046325684,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "explaining",
+      "start": 3.9800000190734863,
+      "end": 4.539999961853027
+    },
+    {
+      "word": "what",
+      "start": 4.539999961853027,
+      "end": 4.820000171661377
+    },
+    {
+      "word": "you",
+      "start": 4.820000171661377,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "want",
+      "start": 5.019999980926514,
+      "end": 5.320000171661377
+    },
+    {
+      "word": "The",
+      "start": 5.800000190734863,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "clearer",
+      "start": 5.940000057220459,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "you",
+      "start": 6.300000190734863,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "describe",
+      "start": 6.599999904632568,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "your",
+      "start": 7.039999961853027,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "goal",
+      "start": 7.340000152587891,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 7.940000057220459,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "better",
+      "start": 8.220000267028809,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "AI",
+      "start": 8.460000038146973,
+      "end": 8.9399995803833
+    },
+    {
+      "word": "can",
+      "start": 8.9399995803833,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "help",
+      "start": 9.180000305175781,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "you",
+      "start": 9.460000038146973,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "Vague",
+      "start": 10.640000343322754,
+      "end": 10.739999771118164
+    },
+    {
+      "word": "instructions",
+      "start": 10.739999771118164,
+      "end": 11.420000076293945
+    },
+    {
+      "word": "give",
+      "start": 11.420000076293945,
+      "end": 12
+    },
+    {
+      "word": "vague",
+      "start": 12,
+      "end": 12.359999656677246
+    },
+    {
+      "word": "results",
+      "start": 12.359999656677246,
+      "end": 12.819999694824219
+    }
+  ]
+}

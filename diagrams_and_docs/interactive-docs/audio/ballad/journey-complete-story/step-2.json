@@ -1,0 +1,140 @@
+{
+  "storyId": "journey-complete-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "You Learned Data Flow. You trace data flows systematically now. From user click to database and back. No more guessing where bugs come from—you find them methodically.",
+  "duration": 12.399999618530273,
+  "words": [
+    {
+      "word": "You",
+      "start": 0,
+      "end": 0.5199999809265137
+    },
+    {
+      "word": "learned",
+      "start": 0.5199999809265137,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "Dataflow",
+      "start": 0.9399999976158142,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "You",
+      "start": 2.5199999809265137,
+      "end": 3
+    },
+    {
+      "word": "trace",
+      "start": 3,
+      "end": 3.3399999141693115
+    },
+    {
+      "word": "Dataflow",
+      "start": 3.3399999141693115,
+      "end": 4
+    },
+    {
+      "word": "systematically",
+      "start": 4,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "now",
+      "start": 4.800000190734863,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "from",
+      "start": 5.760000228881836,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "user",
+      "start": 5.900000095367432,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "click",
+      "start": 6.239999771118164,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "to",
+      "start": 6.460000038146973,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "database",
+      "start": 6.860000133514404,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "and",
+      "start": 7.260000228881836,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "back",
+      "start": 7.539999961853027,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "No",
+      "start": 8.640000343322754,
+      "end": 8.779999732971191
+    },
+    {
+      "word": "more",
+      "start": 8.779999732971191,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "guessing",
+      "start": 9.020000457763672,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "where",
+      "start": 9.279999732971191,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "bugs",
+      "start": 9.539999961853027,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "come",
+      "start": 9.720000267028809,
+      "end": 10.039999961853027
+    },
+    {
+      "word": "from",
+      "start": 10.039999961853027,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "You",
+      "start": 10.739999771118164,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "find",
+      "start": 10.9399995803833,
+      "end": 11.199999809265137
+    },
+    {
+      "word": "them",
+      "start": 11.199999809265137,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "methodically",
+      "start": 11.5600004196167,
+      "end": 12.15999984741211
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "storyId": "evolution-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Stone Age. In the Stone Age of computing, programmers used punch cards. They literally punched holes in cards to give instructions. One mistake meant starting over!",
+  "duration": 11.850000381469727,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Stone",
+      "start": 0.41999998688697815,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "Age",
+      "start": 0.6200000047683716,
+      "end": 0.9599999785423279
+    },
+    {
+      "word": "In",
+      "start": 1.7799999713897705,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "the",
+      "start": 1.7799999713897705,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "Stone",
+      "start": 2.0999999046325684,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "Age",
+      "start": 2.299999952316284,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "of",
+      "start": 2.4600000381469727,
+      "end": 2.7799999713897705
+    },
+    {
+      "word": "computing",
+      "start": 2.7799999713897705,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "programmers",
+      "start": 3.680000066757202,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "used",
+      "start": 4.099999904632568,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "punch",
+      "start": 4.480000019073486,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "cards",
+      "start": 4.880000114440918,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "They",
+      "start": 5.860000133514404,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "literally",
+      "start": 6.039999961853027,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "punched",
+      "start": 6.559999942779541,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "holes",
+      "start": 6.880000114440918,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "in",
+      "start": 7.260000228881836,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "cards",
+      "start": 7.960000038146973,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "to",
+      "start": 7.960000038146973,
+      "end": 8.4399995803833
+    },
+    {
+      "word": "give",
+      "start": 8.4399995803833,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "instructions",
+      "start": 8.640000343322754,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "One",
+      "start": 9.880000114440918,
+      "end": 10.020000457763672
+    },
+    {
+      "word": "mistake",
+      "start": 10.020000457763672,
+      "end": 10.460000038146973
+    },
+    {
+      "word": "meant",
+      "start": 10.460000038146973,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "starting",
+      "start": 10.9399995803833,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "over",
+      "start": 11.300000190734863,
+      "end": 11.640000343322754
+    }
+  ]
+}

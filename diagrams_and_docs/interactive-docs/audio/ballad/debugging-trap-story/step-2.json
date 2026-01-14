@@ -1,0 +1,145 @@
+{
+  "storyId": "debugging-trap-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Junior: Hours Lost. Eventually they realize the bug is somewhere else entirely. A race condition in a background job that nobody remembers writing. Time wasted: four hours.",
+  "duration": 15.15999984741211,
+  "words": [
+    {
+      "word": "Junior",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "Hours",
+      "start": 1.5199999809265137,
+      "end": 1.5199999809265137
+    },
+    {
+      "word": "lost",
+      "start": 1.5199999809265137,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "Eventually",
+      "start": 2.9600000381469727,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "they",
+      "start": 3.059999942779541,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "realise",
+      "start": 3.5199999809265137,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "the",
+      "start": 4.099999904632568,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "bug",
+      "start": 4.559999942779541,
+      "end": 4.78000020980835
+    },
+    {
+      "word": "is",
+      "start": 4.78000020980835,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "somewhere",
+      "start": 5.159999847412109,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "else",
+      "start": 5.519999980926514,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "entirely",
+      "start": 6.019999980926514,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "A",
+      "start": 7.440000057220459,
+      "end": 7.639999866485596
+    },
+    {
+      "word": "race",
+      "start": 7.639999866485596,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "condition",
+      "start": 7.960000038146973,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "in",
+      "start": 8.359999656677246,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "a",
+      "start": 8.880000114440918,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "background",
+      "start": 9.220000267028809,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "job",
+      "start": 9.520000457763672,
+      "end": 9.84000015258789
+    },
+    {
+      "word": "that",
+      "start": 9.84000015258789,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "nobody",
+      "start": 10.4399995803833,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "remembers",
+      "start": 10.84000015258789,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "writing",
+      "start": 11.319999694824219,
+      "end": 11.800000190734863
+    },
+    {
+      "word": "Time",
+      "start": 12.880000114440918,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "wasted",
+      "start": 12.979999542236328,
+      "end": 13.380000114440918
+    },
+    {
+      "word": "Four",
+      "start": 14.020000457763672,
+      "end": 14.399999618530273
+    },
+    {
+      "word": "hours",
+      "start": 14.399999618530273,
+      "end": 14.760000228881836
+    }
+  ]
+}

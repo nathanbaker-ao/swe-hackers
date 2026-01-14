@@ -1,0 +1,160 @@
+{
+  "storyId": "functions-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Input → Magic → Output. That's what functions are! They're reusable machines that take inputs, do something with them, and give you back outputs. Put in Alex, the greet machine says Hello Alex!",
+  "duration": 15.260000228881836,
+  "words": [
+    {
+      "word": "Input",
+      "start": 0,
+      "end": 0.7799999713897705
+    },
+    {
+      "word": "Output",
+      "start": 2.799999952316284,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "That's",
+      "start": 3.759999990463257,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "what",
+      "start": 3.940000057220459,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "functions",
+      "start": 4.199999809265137,
+      "end": 4.5
+    },
+    {
+      "word": "are",
+      "start": 4.5,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "They're",
+      "start": 5.519999980926514,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "reusable",
+      "start": 5.599999904632568,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "machines",
+      "start": 6.199999809265137,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "that",
+      "start": 6.619999885559082,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "take",
+      "start": 6.900000095367432,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "inputs",
+      "start": 7.179999828338623,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "do",
+      "start": 8.300000190734863,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "something",
+      "start": 8.300000190734863,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "with",
+      "start": 8.65999984741211,
+      "end": 8.880000114440918
+    },
+    {
+      "word": "them",
+      "start": 8.880000114440918,
+      "end": 9
+    },
+    {
+      "word": "and",
+      "start": 9.460000038146973,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "give",
+      "start": 9.65999984741211,
+      "end": 9.800000190734863
+    },
+    {
+      "word": "you",
+      "start": 9.800000190734863,
+      "end": 9.960000038146973
+    },
+    {
+      "word": "back",
+      "start": 9.960000038146973,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "outputs",
+      "start": 10.399999618530273,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "Put",
+      "start": 11.420000076293945,
+      "end": 11.619999885559082
+    },
+    {
+      "word": "in",
+      "start": 11.619999885559082,
+      "end": 11.880000114440918
+    },
+    {
+      "word": "Alex",
+      "start": 11.880000114440918,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "the",
+      "start": 12.640000343322754,
+      "end": 12.779999732971191
+    },
+    {
+      "word": "Greek",
+      "start": 12.779999732971191,
+      "end": 13
+    },
+    {
+      "word": "machine",
+      "start": 13,
+      "end": 13.359999656677246
+    },
+    {
+      "word": "says",
+      "start": 13.359999656677246,
+      "end": 13.859999656677246
+    },
+    {
+      "word": "Hello",
+      "start": 14.239999771118164,
+      "end": 14.4399995803833
+    },
+    {
+      "word": "Alex",
+      "start": 14.4399995803833,
+      "end": 14.859999656677246
+    }
+  ]
+}

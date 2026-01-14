@@ -1,0 +1,273 @@
+{
+  "pageId": "week1-questions",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "The Art of Questions",
+    "icon": "❓",
+    "themeColor": "emerald"
+  },
+  "stories": [
+    {
+      "id": "curiosity-story",
+      "diagramId": "curiosity",
+      "title": "Why Questions Matter",
+      "steps": [
+        {
+          "nodeId": "truth",
+          "icon": "💡",
+          "title": "A Truth That Changes Everything",
+          "narration": "Here's a truth that will change how you see the world: the quality of your understanding depends entirely on the quality of your questions. Most people never realize this.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "surface-thinker",
+          "edges": [{ "from": "truth", "to": "surface-thinker" }],
+          "icon": "😐",
+          "title": "The Surface Thinker",
+          "narration": "Most people accept the first answer they get. They hear something, nod, and move on. Surface thinkers ask 'Why is climate change happening?' hear 'pollution,' and stop there.",
+          "connectsTo": "The Truth"
+        },
+        {
+          "nodeId": "deep-thinker",
+          "edges": [{ "from": "truth", "to": "deep-thinker" }],
+          "icon": "🧠",
+          "title": "The Deep Thinker",
+          "narration": "Deep thinkers keep asking why. Why pollution? Why so much? What causes that? They go six levels deep and truly understand the whole system, not just the surface.",
+          "connectsTo": "The Truth"
+        },
+        {
+          "nodeId": "curiosity-advantage",
+          "edges": [{ "from": "surface-thinker", "to": "curiosity-advantage" }, { "from": "deep-thinker", "to": "curiosity-advantage" }],
+          "icon": "🏆",
+          "title": "The Curiosity Advantage",
+          "narration": "A curious person who asks great questions will always beat a 'smart' person who accepts surface-level answers. Intelligence isn't about knowing things—it's about knowing how to find things out.",
+          "connectsTo": "Both Paths"
+        },
+        {
+          "nodeId": "your-choice",
+          "edges": [{ "from": "curiosity-advantage", "to": "your-choice" }],
+          "icon": "🎯",
+          "title": "Your Choice",
+          "narration": "Every time you encounter something new, you have a choice: accept the first answer, or keep asking why. The people who change the world consistently choose to go deeper.",
+          "connectsTo": "Curiosity Advantage"
+        }
+      ]
+    },
+    {
+      "id": "six-levels-story",
+      "diagramId": "six-levels",
+      "title": "The 6 Levels Deep Framework",
+      "steps": [
+        {
+          "nodeId": "the-framework",
+          "icon": "🎯",
+          "title": "The Framework",
+          "narration": "The framework is beautifully simple: when you want to understand something, ask 'why?' at least six times. Each answer reveals a new layer of truth.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "level-1-2",
+          "edges": [{ "from": "the-framework", "to": "level-1-2" }],
+          "icon": "1️⃣",
+          "title": "Levels 1-2: Where Most Stop",
+          "narration": "Ninety percent of people stop at levels one and two. 'Why homework?' 'To practice.' 'Why practice?' 'So things stick.' They feel satisfied, but they've barely scratched the surface.",
+          "connectsTo": "The Framework"
+        },
+        {
+          "nodeId": "level-3-4",
+          "edges": [{ "from": "level-1-2", "to": "level-3-4" }],
+          "icon": "3️⃣",
+          "title": "Levels 3-4: Getting Interesting",
+          "narration": "At level three, things get interesting. 'Why does practice make things stick?' Your brain strengthens neural pathways when you repeat something. Now you're learning how your brain actually works!",
+          "connectsTo": "Levels 1-2"
+        },
+        {
+          "nodeId": "level-5-6",
+          "edges": [{ "from": "level-3-4", "to": "level-5-6" }],
+          "icon": "6️⃣",
+          "title": "Levels 5-6: Real Understanding",
+          "narration": "At levels five and six, you reach evolutionary neuroscience. Your brain prioritizes what to remember based on repetition because it was survival-critical for our ancestors. Mind. Blown.",
+          "connectsTo": "Levels 3-4"
+        },
+        {
+          "nodeId": "transformation",
+          "edges": [{ "from": "level-5-6", "to": "transformation" }],
+          "icon": "✨",
+          "title": "The Transformation",
+          "narration": "You went from 'why homework?' to understanding human evolution. Now you don't just do homework because you're told to—you understand how your brain actually works. That's the power of going deep!",
+          "connectsTo": "Levels 5-6"
+        }
+      ]
+    },
+    {
+      "id": "comprehension-story",
+      "diagramId": "comprehension",
+      "title": "Building Real Comprehension",
+      "steps": [
+        {
+          "nodeId": "questions-tool",
+          "icon": "🔧",
+          "title": "Questions Are the Tool",
+          "narration": "Questions are the tool. Comprehension is the result. When you truly comprehend something, you can do four powerful things that prove you really understand.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "explain-simply",
+          "edges": [{ "from": "questions-tool", "to": "explain-simply" }],
+          "icon": "👶",
+          "title": "Explain It Simply",
+          "narration": "If you can't explain something simply, you don't really understand it. After going six levels deep, try explaining the concept to a younger kid. Can you do it without jargon?",
+          "connectsTo": "Questions Tool"
+        },
+        {
+          "nodeId": "find-connections",
+          "edges": [{ "from": "questions-tool", "to": "find-connections" }],
+          "icon": "🔗",
+          "title": "Find Connections",
+          "narration": "True understanding means seeing how things connect to other things you know. Ask: how does this relate to history? To science? To my own life? Connections deepen understanding.",
+          "connectsTo": "Questions Tool"
+        },
+        {
+          "nodeId": "predict-outcomes",
+          "edges": [{ "from": "questions-tool", "to": "predict-outcomes" }],
+          "icon": "🔮",
+          "title": "Predict Outcomes",
+          "narration": "When you deeply understand something, you can predict what will happen. 'If X happens, then Y will probably follow because...' Prediction proves comprehension.",
+          "connectsTo": "Questions Tool"
+        },
+        {
+          "nodeId": "apply-new",
+          "edges": [{ "from": "questions-tool", "to": "apply-new" }],
+          "icon": "🚀",
+          "title": "Apply to New Situations",
+          "narration": "Real comprehension lets you use knowledge in completely new contexts. Understanding isn't memorizing facts—it's having transferable insight that works everywhere.",
+          "connectsTo": "Questions Tool"
+        },
+        {
+          "nodeId": "master-questioner",
+          "edges": [{ "from": "explain-simply", "to": "master-questioner" }, { "from": "find-connections", "to": "master-questioner" }, { "from": "predict-outcomes", "to": "master-questioner" }, { "from": "apply-new", "to": "master-questioner" }],
+          "icon": "🏆",
+          "title": "Become a Master Questioner",
+          "narration": "Practice these skills and you become a master questioner. You'll see the world differently. Problems become puzzles to solve. Confusion becomes curiosity. The art of questions is your superpower!",
+          "connectsTo": "All Skills"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "curiosity-story",
+      "questions": [
+        {
+          "question": "What determines the quality of your understanding?",
+          "options": [
+            "How smart you are naturally",
+            "How many books you read",
+            "The quality of your questions",
+            "How good your teachers are"
+          ],
+          "correct": 2,
+          "explanation": "The quality of your understanding depends entirely on the quality of your questions. Great questions lead to deep understanding; shallow questions lead to surface knowledge."
+        },
+        {
+          "question": "What do most people do when they get an answer?",
+          "options": [
+            "Ask 6 more questions",
+            "Accept it and move on",
+            "Research it thoroughly",
+            "Challenge the source"
+          ],
+          "correct": 1,
+          "explanation": "Most people accept the first answer they get and move on. That's surface thinking. Deep thinkers keep asking 'why?' to understand the full picture."
+        },
+        {
+          "question": "Who has the advantage: a 'smart' person or a curious person?",
+          "options": [
+            "Smart person always wins",
+            "Curious person who asks great questions",
+            "They're exactly equal",
+            "Neither—luck matters most"
+          ],
+          "correct": 1,
+          "explanation": "A curious person who asks great questions beats a 'smart' person who accepts surface answers. Intelligence isn't knowing things—it's knowing how to find things out!"
+        }
+      ]
+    },
+    {
+      "storyId": "six-levels-story",
+      "questions": [
+        {
+          "question": "How many times should you ask 'why?' to truly understand something?",
+          "options": [
+            "Once is enough",
+            "2-3 times",
+            "At least 6 times",
+            "Until you're bored"
+          ],
+          "correct": 2,
+          "explanation": "The 6 Levels Deep framework says to ask 'why?' at least 6 times. Each level reveals a new layer of truth that you'd miss if you stopped earlier."
+        },
+        {
+          "question": "Where do 90% of people stop when asking questions?",
+          "options": [
+            "Levels 5-6",
+            "Levels 3-4",
+            "Levels 1-2",
+            "They don't ask at all"
+          ],
+          "correct": 2,
+          "explanation": "90% of people stop at levels 1-2. They get a surface answer and feel satisfied, missing the deeper understanding that comes from levels 3-6."
+        },
+        {
+          "question": "In the homework example, what did level 6 reveal?",
+          "options": [
+            "Homework is unnecessary",
+            "Teachers are mean",
+            "Evolutionary neuroscience about survival",
+            "Schools need more funding"
+          ],
+          "correct": 2,
+          "explanation": "Level 6 revealed that our brains evolved to prioritize repeated information because remembering important patterns kept our ancestors alive. From 'why homework?' to evolutionary science!"
+        }
+      ]
+    },
+    {
+      "storyId": "comprehension-story",
+      "questions": [
+        {
+          "question": "How can you prove you really understand something?",
+          "options": [
+            "Recite the definition perfectly",
+            "Explain it simply to a younger kid",
+            "Use big words when discussing it",
+            "Read about it multiple times"
+          ],
+          "correct": 1,
+          "explanation": "If you can't explain something simply, you don't really understand it. Explaining to a younger kid forces you to use clear, simple language—which requires true comprehension."
+        },
+        {
+          "question": "What does 'transferable understanding' mean?",
+          "options": [
+            "You can move files between computers",
+            "You can teach others",
+            "You can apply knowledge to new situations",
+            "You can remember facts for tests"
+          ],
+          "correct": 2,
+          "explanation": "Transferable understanding means you can use your knowledge in completely new contexts. Real comprehension isn't memorizing—it's having insight that works everywhere."
+        },
+        {
+          "question": "What's the ultimate result of mastering the art of questions?",
+          "options": [
+            "You become annoying",
+            "Problems become puzzles to solve",
+            "You run out of things to ask",
+            "You know everything"
+          ],
+          "correct": 1,
+          "explanation": "When you master the art of questions, problems become puzzles to solve and confusion becomes curiosity. You see the world differently—and that's your superpower!"
+        }
+      ]
+    }
+  ]
+}

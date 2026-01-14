@@ -1,0 +1,160 @@
+{
+  "storyId": "debugging-trap-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Bug Report. A bug report arrives: The user's balance shows the wrong number. You open the code. What do you do next? Your approach here separates juniors from seniors.",
+  "duration": 10.5600004196167,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3199999928474426
+    },
+    {
+      "word": "bug",
+      "start": 0.3199999928474426,
+      "end": 0.5
+    },
+    {
+      "word": "report",
+      "start": 0.5,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "A",
+      "start": 1.399999976158142,
+      "end": 1.5
+    },
+    {
+      "word": "bug",
+      "start": 1.5,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "report",
+      "start": 1.659999966621399,
+      "end": 2
+    },
+    {
+      "word": "arrives",
+      "start": 2,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "The",
+      "start": 2.8399999141693115,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "user's",
+      "start": 2.940000057220459,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "balance",
+      "start": 3.380000114440918,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "shows",
+      "start": 3.6600000858306885,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "the",
+      "start": 3.9800000190734863,
+      "end": 4.340000152587891
+    },
+    {
+      "word": "wrong",
+      "start": 4.340000152587891,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "number",
+      "start": 4.420000076293945,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "You",
+      "start": 5.159999847412109,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "open",
+      "start": 5.239999771118164,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "the",
+      "start": 5.440000057220459,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "code",
+      "start": 5.880000114440918,
+      "end": 5.880000114440918
+    },
+    {
+      "word": "What",
+      "start": 6.440000057220459,
+      "end": 6.5
+    },
+    {
+      "word": "do",
+      "start": 6.5,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "you",
+      "start": 6.639999866485596,
+      "end": 6.71999979019165
+    },
+    {
+      "word": "do",
+      "start": 6.71999979019165,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "next",
+      "start": 6.880000114440918,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "Your",
+      "start": 7.800000190734863,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "approach",
+      "start": 7.960000038146973,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "here",
+      "start": 8.260000228881836,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "separates",
+      "start": 9.119999885559082,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "juniors",
+      "start": 9.119999885559082,
+      "end": 9.5
+    },
+    {
+      "word": "from",
+      "start": 9.5,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "seniors",
+      "start": 9.899999618530273,
+      "end": 10.239999771118164
+    }
+  ]
+}

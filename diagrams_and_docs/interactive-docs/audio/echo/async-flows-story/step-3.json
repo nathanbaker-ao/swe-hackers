@@ -1,0 +1,145 @@
+{
+  "storyId": "async-flows-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Message Queues. Second hiding spot: message queues. Celery, RabbitMQ, SQS. Messages go in, workers process them. What happens when a message fails? When the queue backs up?",
+  "duration": 13.149999618530273,
+  "words": [
+    {
+      "word": "Message",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "queues",
+      "start": 0.6600000262260437,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Second",
+      "start": 1.9600000381469727,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "hiding",
+      "start": 1.9600000381469727,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "spot",
+      "start": 2.299999952316284,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "Message",
+      "start": 3.5999999046325684,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "queues",
+      "start": 3.5999999046325684,
+      "end": 4.039999961853027
+    },
+    {
+      "word": "Celery",
+      "start": 4.820000171661377,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "RabbitMQ",
+      "start": 5.340000152587891,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "SQS",
+      "start": 6.360000133514404,
+      "end": 7.039999961853027
+    },
+    {
+      "word": "Messages",
+      "start": 7.71999979019165,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "go",
+      "start": 7.739999771118164,
+      "end": 8.039999961853027
+    },
+    {
+      "word": "in",
+      "start": 8.039999961853027,
+      "end": 8.300000190734863
+    },
+    {
+      "word": "workers",
+      "start": 8.84000015258789,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "process",
+      "start": 8.84000015258789,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "them",
+      "start": 9.319999694824219,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "What",
+      "start": 10.0600004196167,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "happens",
+      "start": 10.220000267028809,
+      "end": 10.5
+    },
+    {
+      "word": "when",
+      "start": 10.5,
+      "end": 10.680000305175781
+    },
+    {
+      "word": "a",
+      "start": 10.680000305175781,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "message",
+      "start": 11.079999923706055,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "fails",
+      "start": 11.079999923706055,
+      "end": 11.479999542236328
+    },
+    {
+      "word": "When",
+      "start": 11.720000267028809,
+      "end": 12.15999984741211
+    },
+    {
+      "word": "the",
+      "start": 12.15999984741211,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "queue",
+      "start": 12.300000190734863,
+      "end": 12.5
+    },
+    {
+      "word": "backs",
+      "start": 12.5,
+      "end": 12.720000267028809
+    },
+    {
+      "word": "up",
+      "start": 12.720000267028809,
+      "end": 12.979999542236328
+    }
+  ]
+}

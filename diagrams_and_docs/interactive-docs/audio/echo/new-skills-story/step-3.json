@@ -1,0 +1,165 @@
+{
+  "storyId": "new-skills-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Reading Code Critically. The third superpower is reading and checking code. AI generates code, but you must review it. Understanding what code does is more important than writing it from scratch.",
+  "duration": 14.710000038146973,
+  "words": [
+    {
+      "word": "Reading",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "code",
+      "start": 0.6200000047683716,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "critically",
+      "start": 1.1200000047683716,
+      "end": 1.6200000047683716
+    },
+    {
+      "word": "The",
+      "start": 2.4600000381469727,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "third",
+      "start": 2.4800000190734863,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "superpower",
+      "start": 2.799999952316284,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "is",
+      "start": 3.380000114440918,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "reading",
+      "start": 3.819999933242798,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "and",
+      "start": 4.159999847412109,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "checking",
+      "start": 4.940000057220459,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "code",
+      "start": 4.940000057220459,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "AI",
+      "start": 6.260000228881836,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "generates",
+      "start": 6.460000038146973,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "code",
+      "start": 6.980000019073486,
+      "end": 7.360000133514404
+    },
+    {
+      "word": "but",
+      "start": 7.820000171661377,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "you",
+      "start": 7.940000057220459,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "must",
+      "start": 8.140000343322754,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "review",
+      "start": 8.460000038146973,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "it",
+      "start": 8.739999771118164,
+      "end": 9.199999809265137
+    },
+    {
+      "word": "Understanding",
+      "start": 10.180000305175781,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "what",
+      "start": 10.199999809265137,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "code",
+      "start": 10.5600004196167,
+      "end": 10.819999694824219
+    },
+    {
+      "word": "does",
+      "start": 10.819999694824219,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "is",
+      "start": 11.260000228881836,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "more",
+      "start": 11.859999656677246,
+      "end": 12.140000343322754
+    },
+    {
+      "word": "important",
+      "start": 12.140000343322754,
+      "end": 12.539999961853027
+    },
+    {
+      "word": "than",
+      "start": 12.539999961853027,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "writing",
+      "start": 13.0600004196167,
+      "end": 13.399999618530273
+    },
+    {
+      "word": "it",
+      "start": 13.399999618530273,
+      "end": 13.600000381469727
+    },
+    {
+      "word": "from",
+      "start": 13.600000381469727,
+      "end": 13.859999656677246
+    },
+    {
+      "word": "scratch",
+      "start": 13.859999656677246,
+      "end": 14.199999809265137
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "pageId": "week2-data",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Data is Everywhere",
+    "icon": "📊",
+    "themeColor": "purple"
+  },
+  "stories": [
+    {
+      "id": "data-mindset-story",
+      "diagramId": "data-mindset",
+      "title": "The Data Mindset",
+      "steps": [
+        {
+          "nodeId": "superpower",
+          "icon": "👁️",
+          "title": "The Superpower",
+          "narration": "Here's a superpower most people don't have: the ability to see data everywhere. Right now, you're surrounded by information. Every post, every review, every comment — it's all data waiting to be discovered.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "phone-book",
+          "edges": [{ "from": "superpower", "to": "phone-book" }],
+          "icon": "📱",
+          "title": "Social Media as Phone Book",
+          "narration": "Think of social media as a phone book of data. It's not just people posting selfies — it's millions of people telling you what they think, what they want, what problems they have. All for free.",
+          "connectsTo": "The Superpower"
+        },
+        {
+          "nodeId": "data-sources",
+          "edges": [{ "from": "phone-book", "to": "data-sources" }],
+          "icon": "🌐",
+          "title": "Data Sources Everywhere",
+          "narration": "Social media shows opinions and trends. Reviews reveal what people love and hate. Comments show real reactions. Local listings, news, public stats — data is literally everywhere once you learn to see it.",
+          "connectsTo": "Phone Book"
+        },
+        {
+          "nodeId": "data-to-insight",
+          "edges": [{ "from": "data-sources", "to": "data-to-insight" }],
+          "icon": "💡",
+          "title": "Data Becomes Insight",
+          "narration": "And here's the key: data, when you know how to collect and analyze it, becomes insight. Insight is understanding. Understanding leads to solutions. This is how problem solvers operate.",
+          "connectsTo": "Data Sources"
+        }
+      ]
+    },
+    {
+      "id": "algorithms-story",
+      "diagramId": "algorithms",
+      "title": "Two Algorithms That Rule Your Life",
+      "steps": [
+        {
+          "nodeId": "two-algorithms",
+          "icon": "🔍",
+          "title": "Two Algorithms",
+          "narration": "There are two algorithms you need to understand because they control most of how you find and receive information. One puts you in control. The other puts the platform in control.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "search-algorithm",
+          "edges": [{ "from": "two-algorithms", "to": "search-algorithm" }],
+          "icon": "🎯",
+          "title": "Search Algorithm",
+          "narration": "Search: you have a goal, you go find it. When you search Google or YouTube, you decide what you want and the algorithm tries to match it. Better search terms equal better results. This is a skill.",
+          "connectsTo": "Two Algorithms"
+        },
+        {
+          "nodeId": "recommendation-algorithm",
+          "edges": [{ "from": "two-algorithms", "to": "recommendation-algorithm" }],
+          "icon": "📲",
+          "title": "Recommendation Algorithm",
+          "narration": "Recommendation: the platform decides what you see. Your TikTok feed, YouTube homepage, Instagram Explore — they watch what you engage with and show you more of the same. Designed to keep you watching.",
+          "connectsTo": "Two Algorithms"
+        },
+        {
+          "nodeId": "the-difference",
+          "edges": [{ "from": "search-algorithm", "to": "the-difference" }, { "from": "recommendation-algorithm", "to": "the-difference" }],
+          "icon": "⚖️",
+          "title": "The Critical Difference",
+          "narration": "Search: you're in control, you choose what to find. Recommendation: the algorithm chooses what you see. Problem solvers use search more than recommendation. They know what they're looking for and go get it.",
+          "connectsTo": "Both Algorithms"
+        },
+        {
+          "nodeId": "be-intentional",
+          "edges": [{ "from": "the-difference", "to": "be-intentional" }],
+          "icon": "🧠",
+          "title": "Be Intentional",
+          "narration": "Don't let algorithms choose your information for you. Be intentional about what you engage with. When you need to learn something, search for it. Don't wait for it to be recommended.",
+          "connectsTo": "The Difference"
+        }
+      ]
+    },
+    {
+      "id": "analysis-story",
+      "diagramId": "analysis",
+      "title": "Collecting and Analyzing Data",
+      "steps": [
+        {
+          "nodeId": "collection-simple",
+          "icon": "📥",
+          "title": "Collection is Simple",
+          "narration": "Data collection isn't complicated. It's just being intentional about gathering information instead of passively scrolling past it. You see data every day — you just need to capture it.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "the-pattern",
+          "edges": [{ "from": "collection-simple", "to": "the-pattern" }],
+          "icon": "🔄",
+          "title": "The Collection Pattern",
+          "narration": "The pattern: define what you want to know, identify where the data lives, collect it systematically, then look for patterns. Simple process, powerful results.",
+          "connectsTo": "Collection Simple"
+        },
+        {
+          "nodeId": "look-for-patterns",
+          "edges": [{ "from": "the-pattern", "to": "look-for-patterns" }],
+          "icon": "🔬",
+          "title": "Look for Patterns",
+          "narration": "Raw data is just numbers and words. Insights come from patterns. If ten reviews mention slow service, that's a pattern. If everyone praises the vibe, that's a pattern. Patterns reveal truth.",
+          "connectsTo": "Collection Pattern"
+        },
+        {
+          "nodeId": "ask-why",
+          "edges": [{ "from": "look-for-patterns", "to": "ask-why" }],
+          "icon": "❓",
+          "title": "Ask Why",
+          "narration": "Once you see patterns, ask why. Why do people complain about this? Why do they love that? Go deeper than the surface. Use your six levels deep skills to understand root causes.",
+          "connectsTo": "Patterns"
+        },
+        {
+          "nodeId": "find-gaps",
+          "edges": [{ "from": "ask-why", "to": "find-gaps" }],
+          "icon": "🕳️",
+          "title": "Find the Gaps",
+          "narration": "What's missing? What are people asking for that doesn't exist? Gaps equal opportunities. Every unmet need is a potential solution waiting to be built. Data reveals where to focus.",
+          "connectsTo": "Ask Why"
+        },
+        {
+          "nodeId": "draw-conclusions",
+          "edges": [{ "from": "find-gaps", "to": "draw-conclusions" }],
+          "icon": "📝",
+          "title": "Draw Conclusions",
+          "narration": "Based on the patterns, what can you conclude? What would you recommend? This is where data becomes useful — when it informs action. Analysis without action is just trivia.",
+          "connectsTo": "Find Gaps"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "data-mindset-story",
+      "questions": [
+        {
+          "question": "What's the 'superpower' described in the Data Mindset?",
+          "options": [
+            "Being good at math",
+            "The ability to see data everywhere",
+            "Having lots of social media followers",
+            "Memorizing statistics"
+          ],
+          "correct": 1,
+          "explanation": "The superpower is seeing data everywhere — recognizing that every review, comment, post, and interaction contains information that can be collected and analyzed for insights."
+        },
+        {
+          "question": "What does 'social media as a phone book' mean?",
+          "options": [
+            "You can find phone numbers on social media",
+            "It's millions of people sharing their thoughts, problems, and wants — free data",
+            "Social media is outdated like phone books",
+            "You should call people instead of messaging"
+          ],
+          "correct": 1,
+          "explanation": "Social media is like a phone book of data — millions of people freely sharing what they think, want, and struggle with. It's a massive source of insights if you know how to look."
+        },
+        {
+          "question": "What's the relationship between data and insight?",
+          "options": [
+            "They're the same thing",
+            "Data is raw information; insight is understanding that comes from analyzing it",
+            "Insight comes before data",
+            "Data is more valuable than insight"
+          ],
+          "correct": 1,
+          "explanation": "Data is raw information (numbers, comments, reviews). Insight is the understanding you gain when you analyze data for patterns. Data → Analysis → Insight → Solutions."
+        }
+      ]
+    },
+    {
+      "storyId": "algorithms-story",
+      "questions": [
+        {
+          "question": "What's the key difference between search and recommendation algorithms?",
+          "options": [
+            "Search is faster",
+            "Search: you're in control; Recommendation: the algorithm chooses for you",
+            "Recommendation is more accurate",
+            "There's no real difference"
+          ],
+          "correct": 1,
+          "explanation": "With search, YOU decide what to find. With recommendations, the ALGORITHM decides what you see. Problem solvers prefer search because they stay in control of their information diet."
+        },
+        {
+          "question": "Why do problem solvers use search more than recommendations?",
+          "options": [
+            "Search is free, recommendations cost money",
+            "They know what they're looking for and go get it intentionally",
+            "Recommendations are always wrong",
+            "Search engines pay them"
+          ],
+          "correct": 1,
+          "explanation": "Problem solvers are intentional. They know what information they need and actively search for it rather than passively consuming whatever an algorithm serves them."
+        },
+        {
+          "question": "What's the danger of relying too heavily on recommendation algorithms?",
+          "options": [
+            "They cost too much",
+            "They're designed to keep you watching, not necessarily to help you",
+            "They only work on mobile",
+            "They require an account"
+          ],
+          "correct": 1,
+          "explanation": "Recommendation algorithms are optimized for engagement (keeping you watching) not for your benefit. They can trap you in filter bubbles and distract you from intentional learning."
+        }
+      ]
+    },
+    {
+      "storyId": "analysis-story",
+      "questions": [
+        {
+          "question": "What's the data collection pattern?",
+          "options": [
+            "Collect everything, sort later",
+            "Define what you want → Find where data lives → Collect systematically → Look for patterns",
+            "Let AI collect everything automatically",
+            "Only collect data from official sources"
+          ],
+          "correct": 1,
+          "explanation": "The pattern is: (1) Define what you want to know, (2) Identify where that data exists, (3) Collect it systematically, (4) Analyze for patterns. Simple and effective."
+        },
+        {
+          "question": "What turns raw data into insights?",
+          "options": [
+            "Having more data",
+            "Looking for patterns and asking 'why'",
+            "Expensive software",
+            "Hiring a data scientist"
+          ],
+          "correct": 1,
+          "explanation": "Insights come from finding patterns in data and asking why those patterns exist. Ten reviews mentioning 'slow service' is a pattern; understanding WHY service is slow is insight."
+        },
+        {
+          "question": "Why are 'gaps' important when analyzing data?",
+          "options": [
+            "Gaps indicate errors in your data",
+            "Gaps (unmet needs) represent opportunities for solutions",
+            "Gaps mean you need more data",
+            "Gaps should be ignored"
+          ],
+          "correct": 1,
+          "explanation": "Gaps are opportunities! When people ask for something that doesn't exist, that's an unmet need. Every gap is a potential solution waiting to be built."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "storyId": "clear-prompts-story",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Describe the Style. Modern look, blue color scheme, clean design. With the type, features, and style all specified, AI creates something that matches your vision on the first try!",
+  "duration": 13.600000381469727,
+  "words": [
+    {
+      "word": "Describe",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "the",
+      "start": 0.8799999952316284,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "style",
+      "start": 1.159999966621399,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "modern",
+      "start": 2.200000047683716,
+      "end": 2.5
+    },
+    {
+      "word": "look",
+      "start": 2.5,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "blue",
+      "start": 3.4600000381469727,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "color",
+      "start": 3.640000104904175,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "scheme",
+      "start": 3.9800000190734863,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "clean",
+      "start": 4.820000171661377,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "design",
+      "start": 5.079999923706055,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "With",
+      "start": 6.360000133514404,
+      "end": 6.460000038146973
+    },
+    {
+      "word": "the",
+      "start": 6.460000038146973,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "type",
+      "start": 6.699999809265137,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "features",
+      "start": 7.539999961853027,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "and",
+      "start": 7.78000020980835,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "style",
+      "start": 8.140000343322754,
+      "end": 8.5
+    },
+    {
+      "word": "all",
+      "start": 8.5,
+      "end": 9.100000381469727
+    },
+    {
+      "word": "specified",
+      "start": 9.100000381469727,
+      "end": 9.5600004196167
+    },
+    {
+      "word": "AI",
+      "start": 10.279999732971191,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "creates",
+      "start": 10.420000076293945,
+      "end": 10.880000114440918
+    },
+    {
+      "word": "something",
+      "start": 10.880000114440918,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "that",
+      "start": 11.239999771118164,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "matches",
+      "start": 11.779999732971191,
+      "end": 11.779999732971191
+    },
+    {
+      "word": "your",
+      "start": 11.779999732971191,
+      "end": 12.119999885559082
+    },
+    {
+      "word": "vision",
+      "start": 12.119999885559082,
+      "end": 12.34000015258789
+    },
+    {
+      "word": "on",
+      "start": 12.34000015258789,
+      "end": 12.680000305175781
+    },
+    {
+      "word": "the",
+      "start": 12.680000305175781,
+      "end": 12.84000015258789
+    },
+    {
+      "word": "first",
+      "start": 12.84000015258789,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "try",
+      "start": 13.079999923706055,
+      "end": 13.4399995803833
+    }
+  ]
+}

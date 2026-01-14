@@ -3,113 +3,138 @@
   "stepId": "step-3",
   "voice": "ballad",
   "voiceLabel": "Storyteller (Female)",
-  "text": "Event Handlers Fire. When users click, scroll, or type, event handlers spring into action. These JavaScript functions decide what happens next.",
-  "duration": 13.239999771118164,
+  "text": "Question 4: When?. Fourth: When does each write happen? Some happen on user action. Some happen at midnight. Some happen when external events fire. Timing matters.",
+  "duration": 13.5600004196167,
   "words": [
     {
-      "word": "Event",
+      "word": "Question",
       "start": 0,
-      "end": 0.699999988079071
+      "end": 0.5199999809265137
     },
     {
-      "word": "handlers",
-      "start": 0.699999988079071,
-      "end": 1.2200000286102295
+      "word": "four",
+      "start": 0.5199999809265137,
+      "end": 1.0199999809265137
     },
     {
-      "word": "fire",
-      "start": 1.2200000286102295,
-      "end": 2.140000104904175
+      "word": "when",
+      "start": 1.5199999809265137,
+      "end": 1.840000033378601
     },
     {
-      "word": "When",
-      "start": 3.059999942779541,
-      "end": 3.1600000858306885
+      "word": "Fourth",
+      "start": 2.9800000190734863,
+      "end": 3.0399999618530273
     },
     {
-      "word": "users",
-      "start": 3.1600000858306885,
-      "end": 3.5199999809265137
+      "word": "when",
+      "start": 3.5799999237060547,
+      "end": 3.680000066757202
     },
     {
-      "word": "click",
-      "start": 3.5199999809265137,
-      "end": 3.9800000190734863
+      "word": "does",
+      "start": 3.680000066757202,
+      "end": 3.9200000762939453
     },
     {
-      "word": "scroll",
-      "start": 4.940000057220459,
-      "end": 4.940000057220459
+      "word": "each",
+      "start": 3.9200000762939453,
+      "end": 4.239999771118164
     },
     {
-      "word": "or",
-      "start": 4.940000057220459,
-      "end": 5.360000133514404
+      "word": "write",
+      "start": 4.239999771118164,
+      "end": 4.440000057220459
     },
     {
-      "word": "type",
-      "start": 5.360000133514404,
-      "end": 5.78000020980835
+      "word": "happen",
+      "start": 4.440000057220459,
+      "end": 4.820000171661377
     },
     {
-      "word": "event",
-      "start": 6.539999961853027,
+      "word": "Some",
+      "start": 5.599999904632568,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "happen",
+      "start": 5.71999979019165,
+      "end": 6
+    },
+    {
+      "word": "on",
+      "start": 6,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "user",
+      "start": 6.28000020980835,
       "end": 6.579999923706055
     },
     {
-      "word": "handlers",
-      "start": 6.579999923706055,
-      "end": 7.039999961853027
-    },
-    {
-      "word": "spring",
-      "start": 7.039999961853027,
-      "end": 7.800000190734863
-    },
-    {
-      "word": "into",
-      "start": 7.800000190734863,
-      "end": 8.279999732971191
-    },
-    {
       "word": "action",
-      "start": 8.279999732971191,
-      "end": 8.640000343322754
+      "start": 6.579999923706055,
+      "end": 6.940000057220459
     },
     {
-      "word": "These",
-      "start": 9.600000381469727,
-      "end": 9.920000076293945
+      "word": "some",
+      "start": 7.599999904632568,
+      "end": 7.739999771118164
     },
     {
-      "word": "JavaScript",
-      "start": 9.920000076293945,
-      "end": 10.479999542236328
+      "word": "happen",
+      "start": 7.739999771118164,
+      "end": 7.980000019073486
     },
     {
-      "word": "functions",
-      "start": 10.479999542236328,
-      "end": 11.140000343322754
+      "word": "at",
+      "start": 7.980000019073486,
+      "end": 8.220000267028809
     },
     {
-      "word": "decide",
-      "start": 11.140000343322754,
-      "end": 11.899999618530273
+      "word": "midnight",
+      "start": 8.220000267028809,
+      "end": 8.5600004196167
     },
     {
-      "word": "what",
-      "start": 11.899999618530273,
-      "end": 12.260000228881836
+      "word": "some",
+      "start": 9.319999694824219,
+      "end": 9.460000038146973
     },
     {
-      "word": "happens",
-      "start": 12.260000228881836,
-      "end": 12.5600004196167
+      "word": "happen",
+      "start": 9.460000038146973,
+      "end": 9.779999732971191
     },
     {
-      "word": "next",
-      "start": 12.5600004196167,
-      "end": 12.960000038146973
+      "word": "when",
+      "start": 9.779999732971191,
+      "end": 10.0600004196167
+    },
+    {
+      "word": "external",
+      "start": 10.0600004196167,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "events",
+      "start": 10.520000457763672,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "fire",
+      "start": 10.859999656677246,
+      "end": 11.260000228881836
+    },
+    {
+      "word": "Timing",
+      "start": 12.199999809265137,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "matters",
+      "start": 12.399999618530273,
+      "end": 12.899999618530273
     }
   ]
 }

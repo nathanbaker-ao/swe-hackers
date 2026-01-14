@@ -1,0 +1,160 @@
+{
+  "storyId": "workflow-story",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Phase 2: You Prompt. Break your design into clear, specific prompts. Include context from your codebase. Specify constraints and patterns to follow. A great prompt is half the work.",
+  "duration": 13.960000038146973,
+  "words": [
+    {
+      "word": "Phase",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "two",
+      "start": 0.5,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "U",
+      "start": 1.9600000381469727,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "Prompt",
+      "start": 2.200000047683716,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "Break",
+      "start": 3.2799999713897705,
+      "end": 3.299999952316284
+    },
+    {
+      "word": "your",
+      "start": 3.299999952316284,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "design",
+      "start": 3.5399999618530273,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "into",
+      "start": 3.9200000762939453,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "clear",
+      "start": 4.28000020980835,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "specific",
+      "start": 4.71999979019165,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "prompts",
+      "start": 5.28000020980835,
+      "end": 5.679999828338623
+    },
+    {
+      "word": "Include",
+      "start": 6.599999904632568,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "context",
+      "start": 6.659999847412109,
+      "end": 7.28000020980835
+    },
+    {
+      "word": "from",
+      "start": 7.28000020980835,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "your",
+      "start": 7.539999961853027,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "code",
+      "start": 7.78000020980835,
+      "end": 8
+    },
+    {
+      "word": "base",
+      "start": 8,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "Specify",
+      "start": 9.140000343322754,
+      "end": 9.399999618530273
+    },
+    {
+      "word": "constraints",
+      "start": 9.399999618530273,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "and",
+      "start": 9.979999542236328,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "patterns",
+      "start": 10.520000457763672,
+      "end": 10.699999809265137
+    },
+    {
+      "word": "to",
+      "start": 10.699999809265137,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "follow",
+      "start": 11.300000190734863,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "A",
+      "start": 11.920000076293945,
+      "end": 12.100000381469727
+    },
+    {
+      "word": "great",
+      "start": 12.100000381469727,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "prompt",
+      "start": 12.399999618530273,
+      "end": 12.699999809265137
+    },
+    {
+      "word": "is",
+      "start": 12.699999809265137,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "half",
+      "start": 13.199999809265137,
+      "end": 13.380000114440918
+    },
+    {
+      "word": "the",
+      "start": 13.380000114440918,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "work",
+      "start": 13.619999885559082,
+      "end": 13.819999694824219
+    }
+  ]
+}

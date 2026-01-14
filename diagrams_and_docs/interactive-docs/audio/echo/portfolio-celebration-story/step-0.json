@@ -1,0 +1,145 @@
+{
+  "storyId": "portfolio-celebration-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Your Portfolio. Your portfolio showcases everything you've learned. It includes work from each week plus your capstone project. This is proof that you can solve real problems.",
+  "duration": 11.25,
+  "words": [
+    {
+      "word": "Your",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "Portfolio",
+      "start": 0.41999998688697815,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Your",
+      "start": 1.559999942779541,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "Portfolio",
+      "start": 1.7400000095367432,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "showcases",
+      "start": 2.380000114440918,
+      "end": 3.0399999618530273
+    },
+    {
+      "word": "everything",
+      "start": 3.0399999618530273,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "you've",
+      "start": 3.640000104904175,
+      "end": 4
+    },
+    {
+      "word": "learned",
+      "start": 4,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "It",
+      "start": 4.71999979019165,
+      "end": 4.800000190734863
+    },
+    {
+      "word": "includes",
+      "start": 4.800000190734863,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "work",
+      "start": 5.099999904632568,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "from",
+      "start": 5.400000095367432,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "each",
+      "start": 5.639999866485596,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "week",
+      "start": 5.960000038146973,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "plus",
+      "start": 6.599999904632568,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "your",
+      "start": 6.760000228881836,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "capstone",
+      "start": 6.940000057220459,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "project",
+      "start": 7.340000152587891,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "This",
+      "start": 8.4399995803833,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "is",
+      "start": 8.539999961853027,
+      "end": 8.800000190734863
+    },
+    {
+      "word": "proof",
+      "start": 8.800000190734863,
+      "end": 9.079999923706055
+    },
+    {
+      "word": "that",
+      "start": 9.079999923706055,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "you",
+      "start": 9.279999732971191,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "can",
+      "start": 9.380000114440918,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "solve",
+      "start": 9.640000343322754,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "real",
+      "start": 9.899999618530273,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "problems",
+      "start": 10.34000015258789,
+      "end": 10.760000228881836
+    }
+  ]
+}

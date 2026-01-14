@@ -1,0 +1,155 @@
+{
+  "storyId": "builder-mindset-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Step 2: Describe It. Put your idea into words. The clearer and more specific you describe it, the better the AI understands. This is where your communication skills shine!",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "Step",
+      "start": 0,
+      "end": 0.6399999856948853
+    },
+    {
+      "word": "2",
+      "start": 0.6399999856948853,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "Describe",
+      "start": 2.180000066757202,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "it",
+      "start": 2.559999942779541,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "Put",
+      "start": 3.819999933242798,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "your",
+      "start": 3.819999933242798,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "idea",
+      "start": 4.199999809265137,
+      "end": 4.5
+    },
+    {
+      "word": "into",
+      "start": 4.5,
+      "end": 4.960000038146973
+    },
+    {
+      "word": "words",
+      "start": 4.960000038146973,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "The",
+      "start": 6.039999961853027,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "clearer",
+      "start": 6.139999866485596,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "and",
+      "start": 6.519999980926514,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "more",
+      "start": 6.860000133514404,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "specific",
+      "start": 7.239999771118164,
+      "end": 7.5
+    },
+    {
+      "word": "you",
+      "start": 7.5,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "describe",
+      "start": 7.78000020980835,
+      "end": 8.15999984741211
+    },
+    {
+      "word": "it",
+      "start": 8.15999984741211,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "the",
+      "start": 8.739999771118164,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "better",
+      "start": 8.920000076293945,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "the",
+      "start": 9.15999984741211,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "AI",
+      "start": 9.420000076293945,
+      "end": 9.720000267028809
+    },
+    {
+      "word": "understands",
+      "start": 9.720000267028809,
+      "end": 10.359999656677246
+    },
+    {
+      "word": "This",
+      "start": 11.100000381469727,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "is",
+      "start": 11.300000190734863,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "where",
+      "start": 11.5600004196167,
+      "end": 11.65999984741211
+    },
+    {
+      "word": "your",
+      "start": 11.65999984741211,
+      "end": 11.9399995803833
+    },
+    {
+      "word": "communication",
+      "start": 11.9399995803833,
+      "end": 12.579999923706055
+    },
+    {
+      "word": "skills",
+      "start": 12.579999923706055,
+      "end": 13.039999961853027
+    },
+    {
+      "word": "shine",
+      "start": 13.039999961853027,
+      "end": 13.600000381469727
+    }
+  ]
+}

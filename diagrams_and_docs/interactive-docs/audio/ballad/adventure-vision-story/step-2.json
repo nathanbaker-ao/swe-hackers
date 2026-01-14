@@ -1,0 +1,165 @@
+{
+  "storyId": "adventure-vision-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Player Experience. Players wake up in a dungeon. They type 'pick up key' and 'go north' to explore. The game responds to their commands, creating an interactive story they control.",
+  "duration": 13.600000381469727,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.2800000011920929
+    },
+    {
+      "word": "player",
+      "start": 0.2800000011920929,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "experience",
+      "start": 0.6800000071525574,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "Players",
+      "start": 2.6600000858306885,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "wake",
+      "start": 2.6600000858306885,
+      "end": 3
+    },
+    {
+      "word": "up",
+      "start": 3,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "in",
+      "start": 3.2799999713897705,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "a",
+      "start": 3.440000057220459,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "dungeon",
+      "start": 3.9000000953674316,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "They",
+      "start": 4.599999904632568,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "type",
+      "start": 4.679999828338623,
+      "end": 5.019999980926514
+    },
+    {
+      "word": "pick",
+      "start": 5.019999980926514,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "up",
+      "start": 5.400000095367432,
+      "end": 5.599999904632568
+    },
+    {
+      "word": "key",
+      "start": 5.599999904632568,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "and",
+      "start": 5.840000152587891,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "go",
+      "start": 6.320000171661377,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "north",
+      "start": 6.679999828338623,
+      "end": 7
+    },
+    {
+      "word": "to",
+      "start": 7,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "explore",
+      "start": 7.400000095367432,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "The",
+      "start": 8.220000267028809,
+      "end": 8.600000381469727
+    },
+    {
+      "word": "game",
+      "start": 8.600000381469727,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "responds",
+      "start": 8.920000076293945,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 9.420000076293945,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "their",
+      "start": 9.600000381469727,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "commands",
+      "start": 9.880000114440918,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "creating",
+      "start": 11.119999885559082,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "an",
+      "start": 11.119999885559082,
+      "end": 11.579999923706055
+    },
+    {
+      "word": "interactive",
+      "start": 11.579999923706055,
+      "end": 11.899999618530273
+    },
+    {
+      "word": "story",
+      "start": 11.899999618530273,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "they",
+      "start": 12.399999618530273,
+      "end": 12.9399995803833
+    },
+    {
+      "word": "control",
+      "start": 12.9399995803833,
+      "end": 13.380000114440918
+    }
+  ]
+}

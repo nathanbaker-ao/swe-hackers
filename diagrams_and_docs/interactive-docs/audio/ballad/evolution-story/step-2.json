@@ -1,0 +1,135 @@
+{
+  "storyId": "evolution-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Iron Age. The Iron Age introduced frameworks—pre-built toolkits that handled common tasks. React, Django, Rails—these let developers build faster than ever.",
+  "duration": 13.199999809265137,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.4000000059604645
+    },
+    {
+      "word": "Iron",
+      "start": 0.4000000059604645,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "Age",
+      "start": 0.800000011920929,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "The",
+      "start": 2,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "Iron",
+      "start": 2.2200000286102295,
+      "end": 2.5
+    },
+    {
+      "word": "Age",
+      "start": 2.5,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "introduced",
+      "start": 2.799999952316284,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "frameworks",
+      "start": 3.4600000381469727,
+      "end": 4.199999809265137
+    },
+    {
+      "word": "pre",
+      "start": 5.059999942779541,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "built",
+      "start": 5.28000020980835,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "toolkits",
+      "start": 5.360000133514404,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "that",
+      "start": 5.920000076293945,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "handled",
+      "start": 6.21999979019165,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "common",
+      "start": 6.539999961853027,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "tasks",
+      "start": 6.960000038146973,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "React",
+      "start": 8.260000228881836,
+      "end": 8.5600004196167
+    },
+    {
+      "word": "Django",
+      "start": 9.319999694824219,
+      "end": 9.319999694824219
+    },
+    {
+      "word": "Rails",
+      "start": 9.979999542236328,
+      "end": 10
+    },
+    {
+      "word": "These",
+      "start": 10.65999984741211,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "let",
+      "start": 10.859999656677246,
+      "end": 11.119999885559082
+    },
+    {
+      "word": "developers",
+      "start": 11.119999885559082,
+      "end": 11.5600004196167
+    },
+    {
+      "word": "build",
+      "start": 11.5600004196167,
+      "end": 12
+    },
+    {
+      "word": "faster",
+      "start": 12,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "than",
+      "start": 12.619999885559082,
+      "end": 12.899999618530273
+    },
+    {
+      "word": "ever",
+      "start": 12.899999618530273,
+      "end": 13.039999961853027
+    }
+  ]
+}

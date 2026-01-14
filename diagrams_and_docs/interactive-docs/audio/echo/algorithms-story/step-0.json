@@ -1,0 +1,175 @@
+{
+  "storyId": "algorithms-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Two Algorithms. There are two algorithms you need to understand because they control most of how you find and receive information. One puts you in control. The other puts the platform in control.",
+  "duration": 12.640000343322754,
+  "words": [
+    {
+      "word": "Two",
+      "start": 0,
+      "end": 0.8199999928474426
+    },
+    {
+      "word": "algorithms",
+      "start": 0.8199999928474426,
+      "end": 1.3799999952316284
+    },
+    {
+      "word": "There",
+      "start": 1.9199999570846558,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "are",
+      "start": 2.0199999809265137,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "two",
+      "start": 2.240000009536743,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "algorithms",
+      "start": 2.559999942779541,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "you",
+      "start": 2.9800000190734863,
+      "end": 3.259999990463257
+    },
+    {
+      "word": "need",
+      "start": 3.259999990463257,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "to",
+      "start": 3.4000000953674316,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "understand",
+      "start": 4.079999923706055,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "because",
+      "start": 4.480000019073486,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "they",
+      "start": 4.679999828338623,
+      "end": 5
+    },
+    {
+      "word": "control",
+      "start": 5,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "most",
+      "start": 5.360000133514404,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "of",
+      "start": 5.739999771118164,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "how",
+      "start": 5.960000038146973,
+      "end": 6.039999961853027
+    },
+    {
+      "word": "you",
+      "start": 6.039999961853027,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "find",
+      "start": 6.28000020980835,
+      "end": 6.619999885559082
+    },
+    {
+      "word": "and",
+      "start": 6.619999885559082,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "receive",
+      "start": 7.260000228881836,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "information",
+      "start": 7.260000228881836,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "One",
+      "start": 8.5,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "puts",
+      "start": 8.65999984741211,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "you",
+      "start": 8.920000076293945,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "in",
+      "start": 9.220000267028809,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "control",
+      "start": 9.539999961853027,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "The",
+      "start": 10.220000267028809,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "other",
+      "start": 10.420000076293945,
+      "end": 10.720000267028809
+    },
+    {
+      "word": "puts",
+      "start": 10.720000267028809,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "the",
+      "start": 11.140000343322754,
+      "end": 11.380000114440918
+    },
+    {
+      "word": "platform",
+      "start": 11.380000114440918,
+      "end": 11.720000267028809
+    },
+    {
+      "word": "in",
+      "start": 11.720000267028809,
+      "end": 12.399999618530273
+    },
+    {
+      "word": "control",
+      "start": 12.399999618530273,
+      "end": 12.399999618530273
+    }
+  ]
+}

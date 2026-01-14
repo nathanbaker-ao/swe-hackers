@@ -1,0 +1,180 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Look for Patterns. Raw data is just numbers and words. Insights come from patterns. If ten reviews mention slow service, that's a pattern. If everyone praises the vibe, that's a pattern. Patterns reveal truth.",
+  "duration": 17.350000381469727,
+  "words": [
+    {
+      "word": "Look",
+      "start": 0,
+      "end": 0.46000000834465027
+    },
+    {
+      "word": "for",
+      "start": 0.46000000834465027,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "patterns",
+      "start": 1.1399999856948853,
+      "end": 1.4600000381469727
+    },
+    {
+      "word": "Raw",
+      "start": 2.380000114440918,
+      "end": 2.4800000190734863
+    },
+    {
+      "word": "data",
+      "start": 2.4800000190734863,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "is",
+      "start": 2.799999952316284,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "just",
+      "start": 3.0799999237060547,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "numbers",
+      "start": 3.5399999618530273,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "and",
+      "start": 3.7200000286102295,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "words",
+      "start": 4.480000019073486,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "Insights",
+      "start": 5.300000190734863,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "come",
+      "start": 5.559999942779541,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "from",
+      "start": 6.159999847412109,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "patterns",
+      "start": 6.940000057220459,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "If",
+      "start": 7.71999979019165,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "10",
+      "start": 7.78000020980835,
+      "end": 8.180000305175781
+    },
+    {
+      "word": "reviews",
+      "start": 8.180000305175781,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "mention",
+      "start": 8.579999923706055,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "slow",
+      "start": 9.039999961853027,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "service",
+      "start": 9.4399995803833,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "that's",
+      "start": 10.34000015258789,
+      "end": 10.600000381469727
+    },
+    {
+      "word": "a",
+      "start": 10.600000381469727,
+      "end": 11
+    },
+    {
+      "word": "pattern",
+      "start": 11,
+      "end": 11
+    },
+    {
+      "word": "If",
+      "start": 11.739999771118164,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "everyone",
+      "start": 11.859999656677246,
+      "end": 12.359999656677246
+    },
+    {
+      "word": "praises",
+      "start": 12.359999656677246,
+      "end": 12.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 12.760000228881836,
+      "end": 13.039999961853027
+    },
+    {
+      "word": "vibe",
+      "start": 13.039999961853027,
+      "end": 13.319999694824219
+    },
+    {
+      "word": "that's",
+      "start": 13.800000190734863,
+      "end": 14.079999923706055
+    },
+    {
+      "word": "a",
+      "start": 14.079999923706055,
+      "end": 14.5
+    },
+    {
+      "word": "pattern",
+      "start": 14.5,
+      "end": 14.5
+    },
+    {
+      "word": "Patterns",
+      "start": 15.399999618530273,
+      "end": 15.640000343322754
+    },
+    {
+      "word": "reveal",
+      "start": 15.640000343322754,
+      "end": 16.3799991607666
+    },
+    {
+      "word": "truth",
+      "start": 16.3799991607666,
+      "end": 16.8799991607666
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "storyId": "six-levels-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Levels 5-6: Real Understanding. At levels five and six, you reach evolutionary neuroscience. Your brain prioritizes what to remember based on repetition because it was survival-critical for our ancestors. Mind. Blown.",
+  "duration": 16.799999237060547,
+  "words": [
+    {
+      "word": "Levels",
+      "start": 0,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "5",
+      "start": 0.800000011920929,
+      "end": 1.059999942779541
+    },
+    {
+      "word": "6",
+      "start": 1.4800000190734863,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "Real",
+      "start": 2.0999999046325684,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "understanding",
+      "start": 2.4000000953674316,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "At",
+      "start": 3.819999933242798,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "levels",
+      "start": 3.940000057220459,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "5",
+      "start": 4.159999847412109,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "and",
+      "start": 4.519999980926514,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "6",
+      "start": 4.679999828338623,
+      "end": 5
+    },
+    {
+      "word": "you",
+      "start": 5.420000076293945,
+      "end": 5.5
+    },
+    {
+      "word": "reach",
+      "start": 5.5,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "evolutionary",
+      "start": 5.840000152587891,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "neuroscience",
+      "start": 6.679999828338623,
+      "end": 7.420000076293945
+    },
+    {
+      "word": "Your",
+      "start": 8.279999732971191,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "brain",
+      "start": 8.359999656677246,
+      "end": 8.720000267028809
+    },
+    {
+      "word": "prioritizes",
+      "start": 8.720000267028809,
+      "end": 9.680000305175781
+    },
+    {
+      "word": "what",
+      "start": 9.680000305175781,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "to",
+      "start": 9.920000076293945,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "remember",
+      "start": 10.479999542236328,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "based",
+      "start": 10.479999542236328,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "on",
+      "start": 10.979999542236328,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "repetition",
+      "start": 11.300000190734863,
+      "end": 11.65999984741211
+    },
+    {
+      "word": "because",
+      "start": 12.319999694824219,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "it",
+      "start": 12.380000114440918,
+      "end": 12.5
+    },
+    {
+      "word": "was",
+      "start": 12.5,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "survival",
+      "start": 12.739999771118164,
+      "end": 13.180000305175781
+    },
+    {
+      "word": "critical",
+      "start": 13.180000305175781,
+      "end": 13.520000457763672
+    },
+    {
+      "word": "for",
+      "start": 13.520000457763672,
+      "end": 13.960000038146973
+    },
+    {
+      "word": "our",
+      "start": 13.960000038146973,
+      "end": 14.380000114440918
+    },
+    {
+      "word": "ancestors",
+      "start": 14.380000114440918,
+      "end": 14.739999771118164
+    },
+    {
+      "word": "Mind",
+      "start": 15.619999885559082,
+      "end": 15.84000015258789
+    },
+    {
+      "word": "blown",
+      "start": 15.84000015258789,
+      "end": 16.5
+    }
+  ]
+}

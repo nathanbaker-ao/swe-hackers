@@ -1,0 +1,273 @@
+{
+  "pageId": "week3-building",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Building Real Things",
+    "icon": "🛠️",
+    "themeColor": "amber"
+  },
+  "stories": [
+    {
+      "id": "builder-mindset-story",
+      "diagramId": "builder-mindset",
+      "title": "The Builder Mindset",
+      "steps": [
+        {
+          "nodeId": "old-way",
+          "icon": "📚",
+          "title": "The Old Way",
+          "narration": "You've learned to ask deep questions. You've learned to see data everywhere. But here's a secret most people don't know: You don't need years of coding to build websites and tools anymore.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "new-reality",
+          "edges": [{ "from": "old-way", "to": "new-reality" }],
+          "icon": "✨",
+          "title": "The New Reality",
+          "narration": "With AI, everything changed. You describe what you want in plain English, and the AI builds it for you. No coding experience needed—just clear communication and creative ideas.",
+          "connectsTo": "Old Way"
+        },
+        {
+          "nodeId": "think-it",
+          "edges": [{ "from": "new-reality", "to": "think-it" }],
+          "icon": "💭",
+          "title": "Step 1: Think It",
+          "narration": "Your superpower starts with imagination. What would be useful? What would be cool? What problem could you solve? The idea is the seed of everything.",
+          "connectsTo": "New Reality"
+        },
+        {
+          "nodeId": "describe-it",
+          "edges": [{ "from": "think-it", "to": "describe-it" }],
+          "icon": "💬",
+          "title": "Step 2: Describe It",
+          "narration": "Put your idea into words. The clearer and more specific you describe it, the better the AI understands. This is where your communication skills shine!",
+          "connectsTo": "Think It"
+        },
+        {
+          "nodeId": "ai-builds",
+          "edges": [{ "from": "describe-it", "to": "ai-builds" }],
+          "icon": "🤖",
+          "title": "Step 3: AI Builds It",
+          "narration": "The AI takes your description and generates working code. It handles all the technical details—you just focus on what you want it to do.",
+          "connectsTo": "Describe It"
+        },
+        {
+          "nodeId": "its-live",
+          "edges": [{ "from": "ai-builds", "to": "its-live" }],
+          "icon": "🚀",
+          "title": "Step 4: It's Live!",
+          "narration": "Your creation is real! Put it online, share the link, and say 'I made this.' You've gone from consumer to creator. Most people just use the internet—you build it!",
+          "connectsTo": "AI Builds"
+        }
+      ]
+    },
+    {
+      "id": "art-of-building-story",
+      "diagramId": "art-of-building",
+      "title": "The Art of AI Building",
+      "steps": [
+        {
+          "nodeId": "conversation",
+          "icon": "💬",
+          "title": "Building is a Conversation",
+          "narration": "Building with AI is like having a conversation with a super-smart helper. You describe what you want, it creates it, you give feedback, it improves. Iterate until it's perfect!",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "describe-step",
+          "edges": [{ "from": "conversation", "to": "describe-step" }],
+          "icon": "📝",
+          "title": "Describe What You Want",
+          "narration": "Start by describing your vision clearly. What is it? What should it do? How should it look? The more specific you are, the better the first attempt will be.",
+          "connectsTo": "Conversation"
+        },
+        {
+          "nodeId": "preview-step",
+          "edges": [{ "from": "describe-step", "to": "preview-step" }],
+          "icon": "👀",
+          "title": "Preview the Result",
+          "narration": "Save the file, open it in your browser, and see what AI created. Does it match your vision? What works? What doesn't? This is your feedback moment.",
+          "connectsTo": "Describe"
+        },
+        {
+          "nodeId": "refine-step",
+          "edges": [{ "from": "preview-step", "to": "refine-step" }],
+          "icon": "🔧",
+          "title": "Ask for Changes",
+          "narration": "Don't like the colors? Want more features? Just ask! Tell the AI exactly what to change. It remembers your conversation and builds on previous work.",
+          "connectsTo": "Preview"
+        },
+        {
+          "nodeId": "iterate-step",
+          "edges": [{ "from": "refine-step", "to": "iterate-step" }],
+          "icon": "🔄",
+          "title": "Keep Iterating",
+          "narration": "Great builders iterate. Each round gets you closer to your vision. Professional developers do this too—nobody gets it perfect on the first try!",
+          "connectsTo": "Refine"
+        }
+      ]
+    },
+    {
+      "id": "clear-prompts-story",
+      "diagramId": "clear-prompts",
+      "title": "Clear vs Vague Prompts",
+      "steps": [
+        {
+          "nodeId": "quality-matters",
+          "icon": "⚡",
+          "title": "Description Quality Matters",
+          "narration": "The quality of what AI builds depends entirely on how well you describe it. Vague descriptions get vague results. Clear descriptions get exactly what you want.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "bad-example",
+          "edges": [{ "from": "quality-matters", "to": "bad-example" }],
+          "icon": "❌",
+          "title": "Too Vague",
+          "narration": "Make me a website. That's too vague! What kind of website? What should it do? What should it look like? The AI has to guess—and it will probably guess wrong.",
+          "connectsTo": "Quality Matters"
+        },
+        {
+          "nodeId": "good-what",
+          "edges": [{ "from": "bad-example", "to": "good-what" }],
+          "icon": "🎯",
+          "title": "Say WHAT It Is",
+          "narration": "A quiz webpage about Grand Rapids history. Now the AI knows the type and topic. But we can be even more specific about features and style.",
+          "connectsTo": "Bad Example"
+        },
+        {
+          "nodeId": "good-features",
+          "edges": [{ "from": "good-what", "to": "good-features" }],
+          "icon": "📋",
+          "title": "List the Features",
+          "narration": "Five multiple choice questions, show if answers are correct immediately, track the score, include a try-again button. Now AI knows exactly what functionality to build.",
+          "connectsTo": "What It Is"
+        },
+        {
+          "nodeId": "good-style",
+          "edges": [{ "from": "good-features", "to": "good-style" }],
+          "icon": "🎨",
+          "title": "Describe the Style",
+          "narration": "Modern look, blue color scheme, clean design. With the type, features, and style all specified, AI creates something that matches your vision on the first try!",
+          "connectsTo": "Features"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "builder-mindset-story",
+      "questions": [
+        {
+          "question": "What's the 'new reality' of building websites and tools?",
+          "options": [
+            "You need years of coding classes first",
+            "You describe what you want in plain English and AI builds it",
+            "Only professional programmers can build things",
+            "It takes months to make a simple website"
+          ],
+          "correct": 1,
+          "explanation": "With AI tools like Cursor, you describe your vision in plain English and AI handles the technical coding. No programming experience required!"
+        },
+        {
+          "question": "What's the first step in your new superpower workflow?",
+          "options": [
+            "Write code",
+            "Think it - imagine what you want to create",
+            "Learn a programming language",
+            "Buy expensive software"
+          ],
+          "correct": 1,
+          "explanation": "It all starts with your imagination! Think about what would be useful, cool, or solve a problem. The idea is the seed of everything."
+        },
+        {
+          "question": "What changes when you go from 'consumer to creator'?",
+          "options": [
+            "You have to pay for the internet",
+            "You can share a link and say 'I made this' - you build the internet, not just use it",
+            "You become a professional programmer",
+            "Nothing really changes"
+          ],
+          "correct": 1,
+          "explanation": "Most people just consume the internet. When you can share a link to something YOU built, you've become a creator. That's powerful!"
+        }
+      ]
+    },
+    {
+      "storyId": "art-of-building-story",
+      "questions": [
+        {
+          "question": "Building with AI is best described as:",
+          "options": [
+            "A one-time magic spell",
+            "A conversation where you describe, preview, and refine",
+            "Pure luck",
+            "Impossible without coding knowledge"
+          ],
+          "correct": 1,
+          "explanation": "Building with AI is iterative - describe what you want, see what it creates, ask for changes, repeat. It's a collaborative conversation!"
+        },
+        {
+          "question": "What should you do if AI creates something that's not quite right?",
+          "options": [
+            "Give up and start over",
+            "Accept it as-is",
+            "Tell AI exactly what to change and iterate",
+            "Learn to code yourself"
+          ],
+          "correct": 2,
+          "explanation": "Just ask for changes! AI remembers your conversation and builds on previous work. Professional developers iterate too - nobody gets it perfect first try."
+        },
+        {
+          "question": "After AI generates code, what's your next step?",
+          "options": [
+            "Delete everything and try again",
+            "Save it and preview in your browser to see if it matches your vision",
+            "Send it to a programmer for review",
+            "Memorize all the code"
+          ],
+          "correct": 1,
+          "explanation": "Save the file, open it in your browser, and see what AI created. Does it work? What would you change? That's your feedback moment!"
+        }
+      ]
+    },
+    {
+      "storyId": "clear-prompts-story",
+      "questions": [
+        {
+          "question": "Why does 'Make me a website' produce poor results?",
+          "options": [
+            "AI doesn't understand websites",
+            "It's too vague - AI has to guess the type, features, and style",
+            "You have to say please",
+            "Websites are too complex"
+          ],
+          "correct": 1,
+          "explanation": "Vague descriptions get vague results. Without knowing what kind of website, what it should do, or how it should look, AI is just guessing."
+        },
+        {
+          "question": "What makes a clear and specific prompt?",
+          "options": [
+            "Using complex technical words",
+            "Making it as short as possible",
+            "Including the type, features, and style you want",
+            "Asking multiple times"
+          ],
+          "correct": 2,
+          "explanation": "Specify WHAT it is (type), HOW it works (features), and HOW it looks (style). Clear descriptions get exactly what you want!"
+        },
+        {
+          "question": "A good prompt for building a quiz should include:",
+          "options": [
+            "Just the word 'quiz'",
+            "The topic, number of questions, how scoring works, and the visual style",
+            "Your name and age",
+            "The current date"
+          ],
+          "correct": 1,
+          "explanation": "A good quiz prompt includes: the topic, how many questions, how answers are checked, how the score works, and what it should look like."
+        }
+      ]
+    }
+  ]
+}

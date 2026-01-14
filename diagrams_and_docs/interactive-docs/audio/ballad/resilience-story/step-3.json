@@ -1,0 +1,210 @@
+{
+  "storyId": "resilience-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Circuit Breaker: Open State. When failures exceed a threshold, the circuit opens. Now it fails fast — requests don't even try to reach the broken service. This protects your system from cascading failures and gives the external service time to recover.",
+  "duration": 20.350000381469727,
+  "words": [
+    {
+      "word": "Circuit",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "breaker",
+      "start": 0.7400000095367432,
+      "end": 1.1200000047683716
+    },
+    {
+      "word": "open",
+      "start": 1.940000057220459,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "state",
+      "start": 2.200000047683716,
+      "end": 2.6600000858306885
+    },
+    {
+      "word": "When",
+      "start": 3.5,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "failures",
+      "start": 3.5999999046325684,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "exceed",
+      "start": 4.019999980926514,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "a",
+      "start": 4.400000095367432,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "threshold",
+      "start": 5.079999923706055,
+      "end": 5.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 5.460000038146973,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "circuit",
+      "start": 5.960000038146973,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "opens",
+      "start": 5.960000038146973,
+      "end": 6.5
+    },
+    {
+      "word": "Now",
+      "start": 7.380000114440918,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "it",
+      "start": 8.100000381469727,
+      "end": 8.460000038146973
+    },
+    {
+      "word": "fails",
+      "start": 8.460000038146973,
+      "end": 8.760000228881836
+    },
+    {
+      "word": "fast",
+      "start": 8.760000228881836,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "Requests",
+      "start": 10.4399995803833,
+      "end": 10.4399995803833
+    },
+    {
+      "word": "don't",
+      "start": 10.4399995803833,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "even",
+      "start": 10.84000015258789,
+      "end": 11.15999984741211
+    },
+    {
+      "word": "try",
+      "start": 11.15999984741211,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "to",
+      "start": 11.520000457763672,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "reach",
+      "start": 12.039999961853027,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "the",
+      "start": 12.039999961853027,
+      "end": 12.300000190734863
+    },
+    {
+      "word": "broken",
+      "start": 12.300000190734863,
+      "end": 12.600000381469727
+    },
+    {
+      "word": "service",
+      "start": 12.600000381469727,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "This",
+      "start": 13.979999542236328,
+      "end": 14.180000305175781
+    },
+    {
+      "word": "protects",
+      "start": 14.180000305175781,
+      "end": 14.579999923706055
+    },
+    {
+      "word": "your",
+      "start": 14.579999923706055,
+      "end": 14.9399995803833
+    },
+    {
+      "word": "system",
+      "start": 14.9399995803833,
+      "end": 15.180000305175781
+    },
+    {
+      "word": "from",
+      "start": 15.180000305175781,
+      "end": 15.539999961853027
+    },
+    {
+      "word": "castating",
+      "start": 15.539999961853027,
+      "end": 16.1200008392334
+    },
+    {
+      "word": "failures",
+      "start": 16.1200008392334,
+      "end": 16.559999465942383
+    },
+    {
+      "word": "and",
+      "start": 17.079999923706055,
+      "end": 17.479999542236328
+    },
+    {
+      "word": "gives",
+      "start": 17.479999542236328,
+      "end": 17.719999313354492
+    },
+    {
+      "word": "the",
+      "start": 17.719999313354492,
+      "end": 18.079999923706055
+    },
+    {
+      "word": "external",
+      "start": 18.079999923706055,
+      "end": 18.399999618530273
+    },
+    {
+      "word": "service",
+      "start": 18.399999618530273,
+      "end": 19
+    },
+    {
+      "word": "time",
+      "start": 19,
+      "end": 19.6200008392334
+    },
+    {
+      "word": "to",
+      "start": 19.6200008392334,
+      "end": 20.15999984741211
+    },
+    {
+      "word": "recover",
+      "start": 20.15999984741211,
+      "end": 20.15999984741211
+    }
+  ]
+}

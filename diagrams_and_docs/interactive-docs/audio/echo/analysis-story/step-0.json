@@ -1,0 +1,165 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Collection is Simple. Data collection isn't complicated. It's just being intentional about gathering information instead of passively scrolling past it. You see data every day — you just need to capture it.",
+  "duration": 15.550000190734863,
+  "words": [
+    {
+      "word": "Collection",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "is",
+      "start": 0.6800000071525574,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "simple",
+      "start": 1.2999999523162842,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "Data",
+      "start": 2.940000057220459,
+      "end": 2.940000057220459
+    },
+    {
+      "word": "collection",
+      "start": 2.940000057220459,
+      "end": 3.359999895095825
+    },
+    {
+      "word": "isn't",
+      "start": 3.359999895095825,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "complicated",
+      "start": 3.940000057220459,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "It's",
+      "start": 5.440000057220459,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "just",
+      "start": 5.579999923706055,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "being",
+      "start": 5.900000095367432,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "intentional",
+      "start": 6.199999809265137,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "about",
+      "start": 6.760000228881836,
+      "end": 7.260000228881836
+    },
+    {
+      "word": "gathering",
+      "start": 7.260000228881836,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "information",
+      "start": 7.659999847412109,
+      "end": 8.359999656677246
+    },
+    {
+      "word": "instead",
+      "start": 8.359999656677246,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "of",
+      "start": 8.960000038146973,
+      "end": 9.279999732971191
+    },
+    {
+      "word": "passively",
+      "start": 9.279999732971191,
+      "end": 9.779999732971191
+    },
+    {
+      "word": "scrolling",
+      "start": 9.779999732971191,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "past",
+      "start": 10.220000267028809,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "it",
+      "start": 10.640000343322754,
+      "end": 11.039999961853027
+    },
+    {
+      "word": "You",
+      "start": 11.569999694824219,
+      "end": 12
+    },
+    {
+      "word": "see",
+      "start": 12,
+      "end": 12.180000305175781
+    },
+    {
+      "word": "data",
+      "start": 12.180000305175781,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "every",
+      "start": 12.460000038146973,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "day",
+      "start": 12.979999542236328,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "You",
+      "start": 13.800000190734863,
+      "end": 13.899999618530273
+    },
+    {
+      "word": "just",
+      "start": 13.899999618530273,
+      "end": 14.260000228881836
+    },
+    {
+      "word": "need",
+      "start": 14.260000228881836,
+      "end": 14.420000076293945
+    },
+    {
+      "word": "to",
+      "start": 14.420000076293945,
+      "end": 14.960000038146973
+    },
+    {
+      "word": "capture",
+      "start": 14.960000038146973,
+      "end": 14.960000038146973
+    },
+    {
+      "word": "it",
+      "start": 14.960000038146973,
+      "end": 15.15999984741211
+    }
+  ]
+}

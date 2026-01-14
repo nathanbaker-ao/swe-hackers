@@ -1,0 +1,175 @@
+{
+  "storyId": "ai-revolution-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Your New Superpower. This is revolutionary. You can learn things faster, understand problems deeper, and build real solutions. All you need is curiosity and the willingness to ask questions. That's your new superpower.",
+  "duration": 14.710000038146973,
+  "words": [
+    {
+      "word": "Your",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "new",
+      "start": 0.5,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "superpower",
+      "start": 1.0199999809265137,
+      "end": 1.6399999856948853
+    },
+    {
+      "word": "This",
+      "start": 2.2799999713897705,
+      "end": 2.299999952316284
+    },
+    {
+      "word": "is",
+      "start": 2.299999952316284,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "revolutionary",
+      "start": 2.559999942779541,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "You",
+      "start": 3.7200000286102295,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "can",
+      "start": 3.7200000286102295,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "learn",
+      "start": 3.940000057220459,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "things",
+      "start": 4.179999828338623,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "faster",
+      "start": 4.480000019073486,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "understand",
+      "start": 5.760000228881836,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "problems",
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "deeper",
+      "start": 6.239999771118164,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "and",
+      "start": 7.079999923706055,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "build",
+      "start": 7.440000057220459,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "real",
+      "start": 7.619999885559082,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "solutions",
+      "start": 8.079999923706055,
+      "end": 8.5
+    },
+    {
+      "word": "All",
+      "start": 9.319999694824219,
+      "end": 9.4399995803833
+    },
+    {
+      "word": "you",
+      "start": 9.4399995803833,
+      "end": 9.600000381469727
+    },
+    {
+      "word": "need",
+      "start": 9.600000381469727,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "is",
+      "start": 9.760000228881836,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "curiosity",
+      "start": 9.9399995803833,
+      "end": 10.579999923706055
+    },
+    {
+      "word": "and",
+      "start": 10.579999923706055,
+      "end": 11.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 11.079999923706055,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "willingness",
+      "start": 11.34000015258789,
+      "end": 11.5
+    },
+    {
+      "word": "to",
+      "start": 11.5,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "ask",
+      "start": 11.819999694824219,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "questions",
+      "start": 12.0600004196167,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "That's",
+      "start": 12.84000015258789,
+      "end": 13.619999885559082
+    },
+    {
+      "word": "your",
+      "start": 13.619999885559082,
+      "end": 13.760000228881836
+    },
+    {
+      "word": "new",
+      "start": 13.760000228881836,
+      "end": 14.039999961853027
+    },
+    {
+      "word": "superpower",
+      "start": 14.039999961853027,
+      "end": 14.460000038146973
+    }
+  ]
+}

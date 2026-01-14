@@ -1,0 +1,150 @@
+{
+  "storyId": "career-path-story",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Build 5x More. Ship features at a pace that impresses senior engineers. AI handles the boilerplate so you can focus on the interesting architecture and business logic problems.",
+  "duration": 12.260000228881836,
+  "words": [
+    {
+      "word": "Build",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "5X",
+      "start": 0.5400000214576721,
+      "end": 1.440000057220459
+    },
+    {
+      "word": "more",
+      "start": 1.440000057220459,
+      "end": 1.940000057220459
+    },
+    {
+      "word": "Ship",
+      "start": 2.440000057220459,
+      "end": 2.5
+    },
+    {
+      "word": "features",
+      "start": 2.5,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "at",
+      "start": 2.880000114440918,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "a",
+      "start": 3.0999999046325684,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "pace",
+      "start": 3.440000057220459,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "that",
+      "start": 3.440000057220459,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "impresses",
+      "start": 3.799999952316284,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "senior",
+      "start": 4.659999847412109,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "engineers",
+      "start": 4.860000133514404,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "AI",
+      "start": 6.079999923706055,
+      "end": 6.380000114440918
+    },
+    {
+      "word": "handles",
+      "start": 6.380000114440918,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "the",
+      "start": 6.760000228881836,
+      "end": 7.019999980926514
+    },
+    {
+      "word": "boilerplate",
+      "start": 7.019999980926514,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "so",
+      "start": 7.579999923706055,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "you",
+      "start": 7.940000057220459,
+      "end": 8.079999923706055
+    },
+    {
+      "word": "can",
+      "start": 8.079999923706055,
+      "end": 8.34000015258789
+    },
+    {
+      "word": "focus",
+      "start": 8.34000015258789,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "on",
+      "start": 8.579999923706055,
+      "end": 8.779999732971191
+    },
+    {
+      "word": "the",
+      "start": 8.779999732971191,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "interesting",
+      "start": 9.039999961853027,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "architecture",
+      "start": 9.380000114440918,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "and",
+      "start": 9.920000076293945,
+      "end": 10.600000381469727
+    },
+    {
+      "word": "business",
+      "start": 10.600000381469727,
+      "end": 10.979999542236328
+    },
+    {
+      "word": "logic",
+      "start": 10.979999542236328,
+      "end": 11.359999656677246
+    },
+    {
+      "word": "problems",
+      "start": 11.359999656677246,
+      "end": 11.800000190734863
+    }
+  ]
+}

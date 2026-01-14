@@ -1,0 +1,140 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Start with Questions. Every solution starts with understanding. Go six levels deep to truly understand the problem. Don't jump to solutions—understand the root causes first.",
+  "duration": 14.0600004196167,
+  "words": [
+    {
+      "word": "Start",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "with",
+      "start": 0.6800000071525574,
+      "end": 1.1799999475479126
+    },
+    {
+      "word": "questions",
+      "start": 1.1799999475479126,
+      "end": 1.9199999570846558
+    },
+    {
+      "word": "Every",
+      "start": 3.0999999046325684,
+      "end": 3.1600000858306885
+    },
+    {
+      "word": "solution",
+      "start": 3.1600000858306885,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "starts",
+      "start": 3.740000009536743,
+      "end": 4.400000095367432
+    },
+    {
+      "word": "with",
+      "start": 4.400000095367432,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "understanding",
+      "start": 4.699999809265137,
+      "end": 5.239999771118164
+    },
+    {
+      "word": "Go",
+      "start": 6.260000228881836,
+      "end": 6.260000228881836
+    },
+    {
+      "word": "six",
+      "start": 6.260000228881836,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "levels",
+      "start": 6.699999809265137,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "deep",
+      "start": 6.980000019073486,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "to",
+      "start": 7.380000114440918,
+      "end": 7.78000020980835
+    },
+    {
+      "word": "truly",
+      "start": 7.78000020980835,
+      "end": 8.220000267028809
+    },
+    {
+      "word": "understand",
+      "start": 8.220000267028809,
+      "end": 8.65999984741211
+    },
+    {
+      "word": "the",
+      "start": 8.65999984741211,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "problem",
+      "start": 9.239999771118164,
+      "end": 9.239999771118164
+    },
+    {
+      "word": "Don't",
+      "start": 10.140000343322754,
+      "end": 10.34000015258789
+    },
+    {
+      "word": "jump",
+      "start": 10.34000015258789,
+      "end": 10.520000457763672
+    },
+    {
+      "word": "to",
+      "start": 10.520000457763672,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "solutions",
+      "start": 11.300000190734863,
+      "end": 11.300000190734863
+    },
+    {
+      "word": "Understand",
+      "start": 12.460000038146973,
+      "end": 12.460000038146973
+    },
+    {
+      "word": "the",
+      "start": 12.460000038146973,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "root",
+      "start": 12.880000114440918,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "causes",
+      "start": 12.979999542236328,
+      "end": 13.359999656677246
+    },
+    {
+      "word": "first",
+      "start": 13.359999656677246,
+      "end": 13.880000114440918
+    }
+  ]
+}

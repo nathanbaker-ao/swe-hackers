@@ -10,15 +10,15 @@
     }
   },
   "defaultVoice": "ballad",
-  "generatedAt": "2026-01-14T00:59:56.596Z",
+  "generatedAt": "2026-01-14T02:22:44.561Z",
   "stories": [
     "variables-story",
     "datatypes-story",
     "input-output-story"
   ],
   "ballad": {
-    "variables-story": [
-      {
+    "variables-story": {
+      "0": {
         "storyId": "variables-story",
         "stepId": "step-0",
         "voice": "ballad",
@@ -188,7 +188,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "variables-story",
         "stepId": "step-1",
         "voice": "ballad",
@@ -353,7 +353,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "variables-story",
         "stepId": "step-2",
         "voice": "ballad",
@@ -538,7 +538,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "variables-story",
         "stepId": "step-3",
         "voice": "ballad",
@@ -708,7 +708,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "variables-story",
         "stepId": "step-4",
         "voice": "ballad",
@@ -868,9 +868,9 @@
           }
         ]
       }
-    ],
-    "datatypes-story": [
-      {
+    },
+    "datatypes-story": {
+      "0": {
         "storyId": "datatypes-story",
         "stepId": "step-0",
         "voice": "ballad",
@@ -1085,7 +1085,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "datatypes-story",
         "stepId": "step-1",
         "voice": "ballad",
@@ -1250,7 +1250,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "datatypes-story",
         "stepId": "step-2",
         "voice": "ballad",
@@ -1405,7 +1405,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "datatypes-story",
         "stepId": "step-3",
         "voice": "ballad",
@@ -1560,7 +1560,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "datatypes-story",
         "stepId": "step-4",
         "voice": "ballad",
@@ -1745,7 +1745,7 @@
           }
         ]
       },
-      {
+      "5": {
         "storyId": "datatypes-story",
         "stepId": "step-5",
         "voice": "ballad",
@@ -1955,9 +1955,9 @@
           }
         ]
       }
-    ],
-    "input-output-story": [
-      {
+    },
+    "input-output-story": {
+      "0": {
         "storyId": "input-output-story",
         "stepId": "step-0",
         "voice": "ballad",
@@ -2142,7 +2142,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "input-output-story",
         "stepId": "step-1",
         "voice": "ballad",
@@ -2307,7 +2307,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "input-output-story",
         "stepId": "step-2",
         "voice": "ballad",
@@ -2497,7 +2497,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "input-output-story",
         "stepId": "step-3",
         "voice": "ballad",
@@ -2687,7 +2687,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "input-output-story",
         "stepId": "step-4",
         "voice": "ballad",
@@ -2882,11 +2882,11 @@
           }
         ]
       }
-    ]
+    }
   },
   "echo": {
-    "variables-story": [
-      {
+    "variables-story": {
+      "0": {
         "storyId": "variables-story",
         "stepId": "step-0",
         "voice": "echo",
@@ -3056,7 +3056,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "variables-story",
         "stepId": "step-1",
         "voice": "echo",
@@ -3221,7 +3221,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "variables-story",
         "stepId": "step-2",
         "voice": "echo",
@@ -3406,7 +3406,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "variables-story",
         "stepId": "step-3",
         "voice": "echo",
@@ -3576,7 +3576,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "variables-story",
         "stepId": "step-4",
         "voice": "echo",
@@ -3731,9 +3731,9 @@
           }
         ]
       }
-    ],
-    "datatypes-story": [
-      {
+    },
+    "datatypes-story": {
+      "0": {
         "storyId": "datatypes-story",
         "stepId": "step-0",
         "voice": "echo",
@@ -3948,7 +3948,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "datatypes-story",
         "stepId": "step-1",
         "voice": "echo",
@@ -4113,7 +4113,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "datatypes-story",
         "stepId": "step-2",
         "voice": "echo",
@@ -4268,7 +4268,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "datatypes-story",
         "stepId": "step-3",
         "voice": "echo",
@@ -4423,7 +4423,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "datatypes-story",
         "stepId": "step-4",
         "voice": "echo",
@@ -4608,7 +4608,7 @@
           }
         ]
       },
-      {
+      "5": {
         "storyId": "datatypes-story",
         "stepId": "step-5",
         "voice": "echo",
@@ -4823,9 +4823,9 @@
           }
         ]
       }
-    ],
-    "input-output-story": [
-      {
+    },
+    "input-output-story": {
+      "0": {
         "storyId": "input-output-story",
         "stepId": "step-0",
         "voice": "echo",
@@ -5010,7 +5010,7 @@
           }
         ]
       },
-      {
+      "1": {
         "storyId": "input-output-story",
         "stepId": "step-1",
         "voice": "echo",
@@ -5180,7 +5180,7 @@
           }
         ]
       },
-      {
+      "2": {
         "storyId": "input-output-story",
         "stepId": "step-2",
         "voice": "echo",
@@ -5370,7 +5370,7 @@
           }
         ]
       },
-      {
+      "3": {
         "storyId": "input-output-story",
         "stepId": "step-3",
         "voice": "echo",
@@ -5560,7 +5560,7 @@
           }
         ]
       },
-      {
+      "4": {
         "storyId": "input-output-story",
         "stepId": "step-4",
         "voice": "echo",
@@ -5755,6 +5755,6 @@
           }
         ]
       }
-    ]
+    }
   }
 }

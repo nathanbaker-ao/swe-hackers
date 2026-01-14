@@ -1,0 +1,160 @@
+{
+  "storyId": "skills-integration-story",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Architect: The Big Picture. The Architect mindset ties it all together. You designed a system where input flows to parsing, parsing routes to features, and features return responses. That's architecture!",
+  "duration": 15.550000190734863,
+  "words": [
+    {
+      "word": "Architect",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "The",
+      "start": 1.399999976158142,
+      "end": 1.559999942779541
+    },
+    {
+      "word": "big",
+      "start": 1.559999942779541,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "picture",
+      "start": 1.8600000143051147,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "The",
+      "start": 3.0399999618530273,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "architect's",
+      "start": 3.240000009536743,
+      "end": 3.880000114440918
+    },
+    {
+      "word": "mindset",
+      "start": 3.880000114440918,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "ties",
+      "start": 4.139999866485596,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "it",
+      "start": 4.480000019073486,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "all",
+      "start": 4.699999809265137,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "together",
+      "start": 4.940000057220459,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "You",
+      "start": 5.880000114440918,
+      "end": 6.059999942779541
+    },
+    {
+      "word": "designed",
+      "start": 6.059999942779541,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "a",
+      "start": 6.360000133514404,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "system",
+      "start": 6.900000095367432,
+      "end": 6.900000095367432
+    },
+    {
+      "word": "where",
+      "start": 6.900000095367432,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "input",
+      "start": 7.380000114440918,
+      "end": 7.860000133514404
+    },
+    {
+      "word": "flows",
+      "start": 7.860000133514404,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "to",
+      "start": 8.199999809265137,
+      "end": 8.5
+    },
+    {
+      "word": "parsing",
+      "start": 8.5,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "parsing",
+      "start": 9.819999694824219,
+      "end": 9.979999542236328
+    },
+    {
+      "word": "routes",
+      "start": 9.979999542236328,
+      "end": 10.220000267028809
+    },
+    {
+      "word": "to",
+      "start": 10.220000267028809,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "features",
+      "start": 10.859999656677246,
+      "end": 10.859999656677246
+    },
+    {
+      "word": "and",
+      "start": 11.4399995803833,
+      "end": 11.600000381469727
+    },
+    {
+      "word": "features",
+      "start": 11.600000381469727,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "return",
+      "start": 11.979999542236328,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "responses",
+      "start": 12.619999885559082,
+      "end": 13.140000343322754
+    },
+    {
+      "word": "That's",
+      "start": 14.260000228881836,
+      "end": 14.760000228881836
+    },
+    {
+      "word": "architecture",
+      "start": 14.760000228881836,
+      "end": 15.180000305175781
+    }
+  ]
+}

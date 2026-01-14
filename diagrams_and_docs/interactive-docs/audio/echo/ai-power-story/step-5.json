@@ -1,0 +1,175 @@
+{
+  "storyId": "ai-power-story",
+  "stepId": "step-5",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Superpower. The result? Senior-level output in junior-level time. You're not just coding faster—you're thinking better. Design-first plus AI equals genuine superpowers. This is the future of software development.",
+  "duration": 14.949999809265137,
+  "words": [
+    {
+      "word": "the",
+      "start": 0,
+      "end": 0.3799999952316284
+    },
+    {
+      "word": "superpower",
+      "start": 0.3799999952316284,
+      "end": 1
+    },
+    {
+      "word": "The",
+      "start": 1.600000023841858,
+      "end": 1.7400000095367432
+    },
+    {
+      "word": "result",
+      "start": 1.7400000095367432,
+      "end": 2.0399999618530273
+    },
+    {
+      "word": "Senior",
+      "start": 2.799999952316284,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "level",
+      "start": 2.880000114440918,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "output",
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "in",
+      "start": 3.4600000381469727,
+      "end": 3.9800000190734863
+    },
+    {
+      "word": "junior",
+      "start": 3.9800000190734863,
+      "end": 4.059999942779541
+    },
+    {
+      "word": "level",
+      "start": 4.059999942779541,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "time",
+      "start": 4.380000114440918,
+      "end": 4.860000133514404
+    },
+    {
+      "word": "You're",
+      "start": 5.340000152587891,
+      "end": 5.440000057220459
+    },
+    {
+      "word": "not",
+      "start": 5.440000057220459,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "just",
+      "start": 5.579999923706055,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "coding",
+      "start": 6.099999904632568,
+      "end": 6.099999904632568
+    },
+    {
+      "word": "faster",
+      "start": 6.099999904632568,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "you're",
+      "start": 6.920000076293945,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "thinking",
+      "start": 7.460000038146973,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "better",
+      "start": 7.460000038146973,
+      "end": 7.980000019073486
+    },
+    {
+      "word": "Design",
+      "start": 8.9399995803833,
+      "end": 8.979999542236328
+    },
+    {
+      "word": "First",
+      "start": 8.979999542236328,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "plus",
+      "start": 9.300000190734863,
+      "end": 9.760000228881836
+    },
+    {
+      "word": "AI",
+      "start": 9.760000228881836,
+      "end": 10.199999809265137
+    },
+    {
+      "word": "equals",
+      "start": 10.199999809265137,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "genuine",
+      "start": 10.800000190734863,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "superpowers",
+      "start": 11.319999694824219,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "This",
+      "start": 12.699999809265137,
+      "end": 12.859999656677246
+    },
+    {
+      "word": "is",
+      "start": 12.859999656677246,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 13.079999923706055,
+      "end": 13.260000228881836
+    },
+    {
+      "word": "future",
+      "start": 13.260000228881836,
+      "end": 13.539999961853027
+    },
+    {
+      "word": "of",
+      "start": 13.539999961853027,
+      "end": 14.220000267028809
+    },
+    {
+      "word": "software",
+      "start": 14.220000267028809,
+      "end": 14.220000267028809
+    },
+    {
+      "word": "development",
+      "start": 14.220000267028809,
+      "end": 14.619999885559082
+    }
+  ]
+}
