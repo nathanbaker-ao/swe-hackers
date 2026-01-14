@@ -1,0 +1,461 @@
+/**
+ * Challenge Puzzle CSS
+ * Interactive diagram puzzle challenges with split layout
+ */
+
+/* ============================================
+   Layout
+   ============================================ */
+
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.streak-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 213, 79, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
+  border-radius: var(--radius-lg, 12px);
+  border: 1px solid rgba(255, 213, 79, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.streak-icon {
+  font-size: 2.5rem;
+}
+
+.streak-info {
+  flex: 1;
+}
+
+.streak-count {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent-warning, #ffd54f);
+  margin-bottom: 0.25rem;
+}
+
+.streak-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #b8b8c8);
+}
+
+.challenges-score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary, #e8e8f0);
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+}
+
+/* ============================================
+   Challenge Card
+   ============================================ */
+
+.challenge-card {
+  background: var(--bg-card, #1e1e32);
+  border-radius: var(--radius-lg, 12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-card:hover {
+  border-color: rgba(121, 134, 203, 0.3);
+}
+
+.challenge-card.complete {
+  border-color: var(--accent-secondary, #4db6ac);
+  box-shadow: 0 0 30px rgba(77, 182, 172, 0.15);
+}
+
+/* Challenge Number Badge */
+.challenge-number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-tertiary, #1a1a2e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted, #888);
+  margin-bottom: 0.75rem;
+}
+
+/* Meta Bar (Badge + XP below video) */
+.challenge-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.challenge-badge {
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.challenge-badge.ai-fundamentals {
+  background: rgba(121, 134, 203, 0.2);
+  color: var(--accent-primary, #7986cb);
+}
+
+.challenge-badge.rag-systems {
+  background: rgba(77, 182, 172, 0.2);
+  color: var(--accent-secondary, #4db6ac);
+}
+
+.challenge-badge.agentic-systems {
+  background: rgba(171, 71, 188, 0.2);
+  color: #ab47bc;
+}
+
+.challenge-xp {
+  font-size: 0.9rem;
+  color: var(--accent-secondary, #4db6ac);
+  font-weight: 600;
+}
+
+.challenge-xp.earned {
+  color: var(--accent-secondary, #4db6ac);
+}
+
+/* ============================================
+   Split Layout
+   ============================================ */
+
+.challenge-split {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 0;
+  min-height: 450px;
+}
+
+/* Left Side - Intro */
+.challenge-intro-side {
+  padding: 1.75rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card, #1e1e32);
+}
+
+.challenge-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary, #e8e8f0);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display, 'Space Grotesk', sans-serif);
+}
+
+.challenge-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #b8b8c8);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.challenge-video-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary, #16162a);
+  border-radius: var(--radius-md, 8px);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.challenge-diagram {
+  flex: 1;
+  min-height: 180px;
+  position: relative;
+}
+
+.challenge-caption {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #b8b8c8);
+  background: rgba(0, 0, 0, 0.25);
+  min-height: 2.5rem;
+  transition: opacity 0.15s ease;
+}
+
+/* Video Controls */
+.video-controls {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--bg-tertiary, #1a1a2e);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.video-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-primary, #7986cb) 0%, var(--accent-secondary, #4db6ac) 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-play-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(121, 134, 203, 0.4);
+}
+
+.video-play-btn .play-icon {
+  font-size: 0.8rem;
+}
+
+
+/* Right Side - Puzzle */
+.challenge-puzzle-side {
+  padding: 1.75rem;
+  background: var(--bg-secondary, #16162a);
+  display: flex;
+  flex-direction: column;
+}
+
+.puzzle-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-puzzle-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+   Puzzle UI
+   ============================================ */
+
+.puzzle-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.puzzle-instruction {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #b8b8c8);
+  flex: 1;
+}
+
+.puzzle-progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: var(--text-muted, #888);
+  font-weight: 500;
+}
+
+/* Puzzle Canvas */
+.puzzle-canvas {
+  flex: 1;
+  min-height: 300px;
+  background: var(--bg-tertiary, #1a1a2e);
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Puzzle Controls */
+.puzzle-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.puzzle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary, #1a1a2e);
+  color: var(--text-secondary, #b8b8c8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.puzzle-btn:hover:not(:disabled) {
+  background: var(--bg-card, #1e1e32);
+  border-color: var(--accent-primary, #7986cb);
+  color: var(--text-primary, #e8e8f0);
+}
+
+.puzzle-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.puzzle-check {
+  background: linear-gradient(135deg, var(--accent-primary, #7986cb) 0%, var(--accent-secondary, #4db6ac) 100%);
+  color: white;
+  border: none;
+  margin-left: auto;
+}
+
+.puzzle-check:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(121, 134, 203, 0.35);
+}
+
+/* Puzzle Feedback */
+.puzzle-feedback {
+  margin-top: 0.75rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.puzzle-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedback-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.9rem;
+}
+
+.feedback-result.success {
+  background: rgba(77, 182, 172, 0.15);
+  border: 1px solid rgba(77, 182, 172, 0.3);
+  color: var(--accent-secondary, #4db6ac);
+}
+
+.feedback-result.partial {
+  background: rgba(255, 213, 79, 0.15);
+  border: 1px solid rgba(255, 213, 79, 0.3);
+  color: var(--accent-warning, #ffd54f);
+}
+
+.feedback-result.error {
+  background: rgba(239, 83, 80, 0.15);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  color: #ef5350;
+}
+
+.feedback-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.feedback-xp {
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm, 4px);
+}
+
+/* ============================================
+   Mobile Responsiveness
+   ============================================ */
+
+@media (max-width: 900px) {
+  .challenge-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .challenge-intro-side {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.25rem;
+  }
+  
+  .challenge-diagram {
+    height: 120px;
+  }
+  
+  .challenge-puzzle-side {
+    padding: 1.25rem;
+  }
+  
+  .puzzle-canvas {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .challenge-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .challenge-intro-side,
+  .challenge-puzzle-side {
+    padding: 1rem;
+  }
+  
+  .challenge-title {
+    font-size: 1.15rem;
+  }
+  
+  .puzzle-controls {
+    flex-direction: column;
+  }
+  
+  .puzzle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .puzzle-check {
+    margin-left: 0;
+  }
+  
+  .streak-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .challenges-score {
+    font-size: 1.5rem;
+  }
+}

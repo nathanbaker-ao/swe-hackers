@@ -1,0 +1,80 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Embeddings. Your query gets converted into a numerical vector - a mathematical representation of meaning.",
+  "duration": 8.949999809265137,
+  "words": [
+    {
+      "word": "Embeddings",
+      "start": 0,
+      "end": 0.8799999952316284
+    },
+    {
+      "word": "Your",
+      "start": 1.659999966621399,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "query",
+      "start": 1.7799999713897705,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "gets",
+      "start": 2.0999999046325684,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "converted",
+      "start": 2.440000057220459,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "into",
+      "start": 2.880000114440918,
+      "end": 3.2200000286102295
+    },
+    {
+      "word": "a",
+      "start": 3.2200000286102295,
+      "end": 3.5199999809265137
+    },
+    {
+      "word": "numerical",
+      "start": 3.5199999809265137,
+      "end": 3.819999933242798
+    },
+    {
+      "word": "vector",
+      "start": 3.819999933242798,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "a",
+      "start": 4.880000114440918,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "mathematical",
+      "start": 5.159999847412109,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "representation",
+      "start": 5.619999885559082,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "of",
+      "start": 6.420000076293945,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "meaning",
+      "start": 6.820000171661377,
+      "end": 7.039999961853027
+    }
+  ]
+}

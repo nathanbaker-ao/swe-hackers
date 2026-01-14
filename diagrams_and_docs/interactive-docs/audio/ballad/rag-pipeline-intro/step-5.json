@@ -1,0 +1,105 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-5",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Grounded Answer. The result? An answer grounded in your actual data - not hallucinated. Now wire up the RAG pipeline!",
+  "duration": 10.699999809265137,
+  "words": [
+    {
+      "word": "Grounded",
+      "start": 0,
+      "end": 0.9399999976158142
+    },
+    {
+      "word": "answer",
+      "start": 0.9399999976158142,
+      "end": 1.340000033378601
+    },
+    {
+      "word": "The",
+      "start": 2.0399999618530273,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "result",
+      "start": 2.140000104904175,
+      "end": 2.5399999618530273
+    },
+    {
+      "word": "An",
+      "start": 3.4600000381469727,
+      "end": 3.5999999046325684
+    },
+    {
+      "word": "answer",
+      "start": 3.5999999046325684,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "grounded",
+      "start": 3.9600000381469727,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "in",
+      "start": 4.440000057220459,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "your",
+      "start": 4.679999828338623,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "actual",
+      "start": 4.880000114440918,
+      "end": 5.340000152587891
+    },
+    {
+      "word": "data",
+      "start": 5.340000152587891,
+      "end": 5.980000019073486
+    },
+    {
+      "word": "not",
+      "start": 6.360000133514404,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "hallucinated",
+      "start": 6.539999961853027,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "Now",
+      "start": 8.239999771118164,
+      "end": 8.520000457763672
+    },
+    {
+      "word": "wire",
+      "start": 8.520000457763672,
+      "end": 8.920000076293945
+    },
+    {
+      "word": "up",
+      "start": 8.920000076293945,
+      "end": 9.180000305175781
+    },
+    {
+      "word": "the",
+      "start": 9.180000305175781,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "RAG",
+      "start": 9.460000038146973,
+      "end": 9.739999771118164
+    },
+    {
+      "word": "pipeline",
+      "start": 9.739999771118164,
+      "end": 10.319999694824219
+    }
+  ]
+}

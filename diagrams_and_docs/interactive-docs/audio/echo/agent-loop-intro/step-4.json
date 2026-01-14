@@ -1,0 +1,85 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Tools. Actions often use tools - APIs, databases, code execution - extending what the agent can do.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "word": "Tools",
+      "start": 0,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "Actions",
+      "start": 2.0199999809265137,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "often",
+      "start": 2.0199999809265137,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "use",
+      "start": 2.440000057220459,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "tools",
+      "start": 2.7200000286102295,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "APIs",
+      "start": 3.740000009536743,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "databases",
+      "start": 5.159999847412109,
+      "end": 5.159999847412109
+    },
+    {
+      "word": "code",
+      "start": 5.619999885559082,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "execution",
+      "start": 5.760000228881836,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "extending",
+      "start": 7.179999828338623,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "what",
+      "start": 7.179999828338623,
+      "end": 7.460000038146973
+    },
+    {
+      "word": "the",
+      "start": 7.460000038146973,
+      "end": 7.800000190734863
+    },
+    {
+      "word": "agent",
+      "start": 7.800000190734863,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "can",
+      "start": 7.900000095367432,
+      "end": 8.199999809265137
+    },
+    {
+      "word": "do",
+      "start": 8.199999809265137,
+      "end": 8.399999618530273
+    }
+  ]
+}

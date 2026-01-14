@@ -30,13 +30,135 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="shared/css/marketing.css">
-  <link rel="stylesheet" href="shared/css/challenge-interactive.css">
+  
+  <style>
+    /* Challenge Preview Cards */
+    .daily-challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .challenge-preview-card {
+      background: var(--bg-card, #1e1e32);
+      border-radius: var(--radius-lg, 12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .challenge-preview-card:hover {
+      border-color: rgba(121, 134, 203, 0.4);
+      transform: translateY(-4px);
+    }
+    
+    .challenge-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: var(--bg-tertiary, #1a1a2e);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .challenge-badge {
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .challenge-badge.ai-fundamentals {
+      background: rgba(121, 134, 203, 0.2);
+      color: var(--accent-primary, #7986cb);
+    }
+    
+    .challenge-badge.rag-systems {
+      background: rgba(77, 182, 172, 0.2);
+      color: var(--accent-secondary, #4db6ac);
+    }
+    
+    .challenge-badge.agentic-systems {
+      background: rgba(171, 71, 188, 0.2);
+      color: #ab47bc;
+    }
+    
+    .challenge-xp {
+      font-size: 0.9rem;
+      color: var(--accent-secondary, #4db6ac);
+      font-weight: 600;
+    }
+    
+    .challenge-preview-content {
+      padding: 1.5rem;
+    }
+    
+    .challenge-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary, #e8e8f0);
+      margin-bottom: 0.5rem;
+      font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    }
+    
+    .challenge-description {
+      font-size: 0.95rem;
+      color: var(--text-secondary, #b8b8c8);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    
+    .challenge-nodes-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .preview-node {
+      padding: 0.4rem 0.75rem;
+      background: var(--bg-tertiary, #1a1a2e);
+      border: 1px solid rgba(121, 134, 203, 0.3);
+      border-radius: var(--radius-md, 8px);
+      font-size: 0.85rem;
+      color: var(--text-primary, #e8e8f0);
+    }
+    
+    .challenge-preview-hint {
+      font-size: 0.85rem;
+      color: var(--text-muted, #888);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .challenge-start-btn {
+      display: block;
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, var(--accent-primary, #7986cb) 0%, var(--accent-secondary, #4db6ac) 100%);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease;
+    }
+    
+    .challenge-start-btn:hover {
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+      .daily-challenges-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
   
   <!-- External Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
   
   <!-- Shared Components -->
   <script src="shared/js/navbar.js" defer></script>
@@ -414,215 +536,68 @@
   <script src="shared/js/firebase-config.js"></script>
   <script src="shared/js/auth.js"></script>
   
-  <!-- Interactive Components -->
-  <script src="shared/js/interactive/diagram-utils.js"></script>
-  <script src="shared/js/interactive/audio-engine.js"></script>
-  <script src="shared/js/interactive/challenge-diagram.js"></script>
-  <script src="shared/js/activity-tracker.js"></script>
   
   <!-- Page Script -->
   <script>
-    // Today's date for challenge IDs
-    const today = new Date().toISOString().split('T')[0];
-    
-    // Challenge intro story data (embedded for simplicity, could be loaded from JSON)
-    const challengeIntros = {
-      'prompt-craft-intro': {
-        id: 'prompt-craft-intro',
-        elements: [
-          { data: { id: 'thinking', label: '🧠 Your Thinking', type: 'concept' } },
-          { data: { id: 'prompt', label: '📝 Prompt', type: 'data' } },
-          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
-          { data: { id: 'output', label: '✨ Output', type: 'example' } },
-          { data: { source: 'thinking', target: 'prompt' } },
-          { data: { source: 'prompt', target: 'ai' } },
-          { data: { source: 'ai', target: 'output' } }
-        ],
-        steps: [
-          { nodeId: 'thinking', caption: 'The prompt is how you translate your thinking into AI instructions.' },
-          { nodeId: 'output', edges: [{ from: 'thinking', to: 'prompt' }, { from: 'prompt', to: 'ai' }, { from: 'ai', to: 'output' }], caption: 'A great prompt leads to a great output. Let\'s craft one.' }
-        ]
-      },
-      'context-engineering-intro': {
-        id: 'context-engineering-intro',
-        elements: [
-          { data: { id: 'raw-info', label: '📚 Raw Information', type: 'external' } },
-          { data: { id: 'context', label: '🧩 Structured Context', type: 'concept' } },
-          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
-          { data: { id: 'accuracy', label: '🎯 Accurate Results', type: 'example' } },
-          { data: { source: 'raw-info', target: 'context' } },
-          { data: { source: 'context', target: 'ai' } },
-          { data: { source: 'ai', target: 'accuracy' } }
-        ],
-        steps: [
-          { nodeId: 'raw-info', caption: 'AI can\'t read your mind. It needs the right context.' },
-          { nodeId: 'accuracy', edges: [{ from: 'raw-info', to: 'context' }, { from: 'context', to: 'ai' }, { from: 'ai', to: 'accuracy' }], caption: 'Structure your context well, and accuracy follows.' }
-        ]
-      },
-      'visual-challenge-intro': {
-        id: 'visual-challenge-intro',
-        elements: [
-          { data: { id: 'concept', label: '💭 Concept', type: 'concept' } },
-          { data: { id: 'motion', label: '🎬 Motion Design', type: 'data' } },
-          { data: { id: 'animation', label: '✨ Animation', type: 'example' } },
-          { data: { source: 'concept', target: 'motion' } },
-          { data: { source: 'motion', target: 'animation' } }
-        ],
-        steps: [
-          { nodeId: 'concept', caption: 'Every visualization tells a story through motion.' },
-          { nodeId: 'animation', edges: [{ from: 'concept', to: 'motion' }, { from: 'motion', to: 'animation' }], caption: 'Transform your concept into something users can feel.' }
-        ]
-      }
-    };
-    
-    // Today's challenges data
+    // Today's puzzle challenges (matching dashboard)
     const todaysChallenges = [
       {
-        id: `challenge-prompt-${today}`,
-        category: 'prompt-craft',
-        categoryLabel: 'PROMPT CRAFT',
-        title: 'The Explanation Challenge',
-        description: 'Write a prompt that makes AI explain quantum computing using only cooking metaphors.',
+        id: 'ai-flow',
+        category: 'ai-fundamentals',
+        categoryLabel: 'AI FUNDAMENTALS',
+        title: 'Connect the AI Pipeline',
+        description: 'Connect the nodes to show how data flows from user input to AI output.',
         xp: 50,
-        introStory: 'prompt-craft-intro',
-        evaluationType: 'length-check',
-        minLength: 50
+        nodes: ['👤 User', '📝 Prompt', '📚 Context', '🤖 LLM', '✨ Response']
       },
       {
-        id: `challenge-context-${today}`,
-        category: 'context-engineering',
-        categoryLabel: 'CONTEXT ENGINEERING',
-        title: 'The Refactor Brief',
-        description: 'Given a 200-line legacy function, write the minimal context needed for AI to refactor it safely.',
+        id: 'rag-flow',
+        category: 'rag-systems',
+        categoryLabel: 'RAG SYSTEMS',
+        title: 'Build the RAG Pipeline',
+        description: 'Retrieval Augmented Generation combines search with generation. Connect the flow!',
         xp: 75,
-        introStory: 'context-engineering-intro',
-        evaluationType: 'keyword-match',
-        keywords: 'function,dependencies,constraints,expected behavior,edge cases'
+        nodes: ['❓ Query', '🔢 Embed', '🗄️ Vector DB', '📄 Docs', '🤖 LLM', '💡 Answer']
       },
       {
-        id: `challenge-visual-${today}`,
-        category: 'visual',
-        categoryLabel: 'VISUAL',
-        title: 'The Animation Challenge',
-        description: 'Create an anime.js animation that visualizes a sorting algorithm in action.',
+        id: 'agent-loop',
+        category: 'agentic-systems',
+        categoryLabel: 'AGENTIC SYSTEMS',
+        title: 'Wire the AI Agent Loop',
+        description: 'AI agents observe, think, plan, act, and learn in a continuous loop. Connect the cycle!',
         xp: 100,
-        introStory: 'visual-challenge-intro',
-        evaluationType: 'length-check',
-        minLength: 100
+        nodes: ['👁️ Observe', '🧠 Think', '📋 Plan', '⚡ Act', '🔧 Tools', '💾 Memory']
       }
     ];
     
-    // Render challenge card
-    function renderChallengeCard(challenge, isAuthenticated) {
-      const introStory = challengeIntros[challenge.introStory];
-      
-      // Common elements - intro video is always shown (it's the teaser!)
-      const introSection = `
-        <!-- Challenge Intro Diagram - Always visible as teaser -->
-        <div class="challenge-intro-container">
-          <div class="challenge-diagram" id="diagram-${challenge.id}" data-story="${challenge.introStory}"></div>
-          <div class="challenge-caption"></div>
-          <div class="audio-settings">
-            <label>🎤 Voice:</label>
-            <select class="voice-select">
-              <option value="ballad">Female Storyteller</option>
-              <option value="echo">Male UK Storyteller</option>
-            </select>
-          </div>
-        </div>
-      `;
-      
-      if (!isAuthenticated) {
-        // Preview mode - show intro video but lock the submission
-        return `
-          <div class="challenge-card">
-            ${introSection}
-            
-            <!-- Challenge Header -->
-            <div class="challenge-header">
-              <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
-              <span class="challenge-xp">+${challenge.xp} XP</span>
-            </div>
-            
-            <!-- Challenge Content -->
-            <div class="challenge-content">
-              <h3 class="challenge-title">${challenge.title}</h3>
-              <p class="challenge-description">${challenge.description}</p>
-              
-              <!-- Locked Input Area -->
-              <div class="challenge-input-area challenge-locked-input">
-                <div class="lock-overlay">
-                  <span class="lock-icon">🔒</span>
-                  <p>Sign in to attempt this challenge</p>
-                  <a href="dashboard/challenges.html" class="btn btn-primary go-to-challenge-btn">Start Challenge</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-      
-      // Full interactive card for authenticated users
+    // Render challenge preview card
+    function renderChallengeCard(challenge, index) {
       return `
-        <div class="challenge-card" 
-             data-activity="${challenge.id}" 
-             data-type="challenge"
-             data-points="${challenge.xp}"
-             data-date="${today}"
-             data-category="${challenge.category}"
-             data-evaluation-type="${challenge.evaluationType}"
-             ${challenge.keywords ? `data-keywords="${challenge.keywords}"` : ''}
-             ${challenge.minLength ? `data-min-length="${challenge.minLength}"` : ''}>
-          
-          ${introSection}
-          
-          <!-- Challenge Header -->
-          <div class="challenge-header">
+        <div class="challenge-preview-card">
+          <div class="challenge-preview-header">
             <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
             <span class="challenge-xp">+${challenge.xp} XP</span>
           </div>
           
-          <!-- Challenge Content -->
-          <div class="challenge-content">
+          <div class="challenge-preview-content">
             <h3 class="challenge-title">${challenge.title}</h3>
             <p class="challenge-description">${challenge.description}</p>
             
-            <!-- Challenge Input -->
-            <div class="challenge-input-area">
-              <textarea class="challenge-input" placeholder="Enter your response here..."></textarea>
-              <button class="challenge-submit" disabled>Submit Answer</button>
+            <!-- Node preview -->
+            <div class="challenge-nodes-preview">
+              ${challenge.nodes.map(node => `<span class="preview-node">${node}</span>`).join('')}
             </div>
             
-            <!-- Feedback Area -->
-            <div class="challenge-feedback"></div>
+            <div class="challenge-preview-hint">
+              <span>🔗</span> Click nodes to connect them in the right order
+            </div>
           </div>
+          
+          <a href="dashboard/challenges.html?challenge=${challenge.id}" class="challenge-start-btn">
+            Start Challenge #${index + 1} →
+          </a>
         </div>
       `;
-    }
-    
-    // Initialize challenge diagrams
-    function initChallengeDiagrams() {
-      todaysChallenges.forEach(challenge => {
-        const diagramId = `diagram-${challenge.id}`;
-        const container = document.getElementById(diagramId);
-        if (!container) return;
-        
-        const story = challengeIntros[challenge.introStory];
-        if (!story) return;
-        
-        // Initialize audio engine
-        const audioEngine = new AudioNarrationEngine('challenges/audio');
-        
-        // Create diagram
-        const diagram = new ChallengeDiagram(diagramId, story, {
-          audioEngine,
-          audioEnabled: true,
-          canvasHeight: 200
-        });
-        
-        // Store reference
-        container._challengeDiagram = diagram;
-      });
     }
     
     // Check auth state and render appropriate view
@@ -632,9 +607,6 @@
       const streakSection = document.getElementById('streak-section');
       const subtitle = document.getElementById('challenges-subtitle');
       
-      // Check if user is authenticated
-      let isAuthenticated = false;
-      
       // Initialize Firebase and check auth
       if (window.FirebaseApp && window.AuthService) {
         try {
@@ -642,11 +614,9 @@
           window.AuthService.init();
           
           const user = await window.AuthService.waitForAuthState();
-          isAuthenticated = !!user;
           
-          if (isAuthenticated) {
+          if (user) {
             // User is logged in - redirect to the dashboard challenges page
-            console.log('User is authenticated, redirecting to dashboard challenges...');
             window.location.href = 'dashboard/challenges.html';
             return;
           }
@@ -656,17 +626,12 @@
       }
       
       // User is NOT authenticated - show preview/marketing page
-      grid.innerHTML = todaysChallenges.map(c => renderChallengeCard(c, false)).join('');
-      
-      // Initialize diagrams (they're visible to everyone as teasers)
-      setTimeout(() => {
-        initChallengeDiagrams();
-      }, 100);
+      grid.innerHTML = todaysChallenges.map((c, i) => renderChallengeCard(c, i)).join('');
       
       // Show unauthenticated preview UI
       signupCta.style.display = 'block';
       streakSection.style.display = 'none';
-      subtitle.textContent = 'Sign in to attempt today\'s challenges and track your progress.';
+      subtitle.textContent = 'Sign in to attempt today\'s interactive diagram challenges.';
       
       // Hide loading overlay
       const loadingOverlay = document.getElementById('auth-check-loading');
@@ -683,17 +648,16 @@
     
     // Entry animations
     document.addEventListener('DOMContentLoaded', () => {
-      anime({
-        targets: '.feature-card, .challenge-card',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        delay: anime.stagger(100),
-        duration: 600,
-        easing: 'easeOutCubic'
+      initPage().then(() => {
+        anime({
+          targets: '.feature-card, .challenge-preview-card',
+          opacity: [0, 1],
+          translateY: [30, 0],
+          delay: anime.stagger(100),
+          duration: 600,
+          easing: 'easeOutCubic'
+        });
       });
-      
-      // Initialize page
-      initPage();
     });
   </script>
 </body>

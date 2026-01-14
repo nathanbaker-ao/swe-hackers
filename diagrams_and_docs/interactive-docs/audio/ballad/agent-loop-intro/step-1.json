@@ -1,0 +1,75 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Think. With observations in hand, the agent thinks - reasoning about what it sees.",
+  "duration": 7.360000133514404,
+  "words": [
+    {
+      "word": "Think",
+      "start": 0,
+      "end": 0.6200000047683716
+    },
+    {
+      "word": "with",
+      "start": 0.6200000047683716,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "observations",
+      "start": 1.4800000190734863,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "in",
+      "start": 2.259999990463257,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "hand",
+      "start": 2.619999885559082,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "the",
+      "start": 3.180000066757202,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "agent",
+      "start": 3.740000009536743,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "thinks",
+      "start": 4.139999866485596,
+      "end": 4.760000228881836
+    },
+    {
+      "word": "reasoning",
+      "start": 4.760000228881836,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "about",
+      "start": 5.579999923706055,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "what",
+      "start": 6.019999980926514,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "it",
+      "start": 6.300000190734863,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "sees",
+      "start": 6.519999980926514,
+      "end": 6.900000095367432
+    }
+  ]
+}

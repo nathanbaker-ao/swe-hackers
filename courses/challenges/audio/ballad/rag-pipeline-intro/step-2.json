@@ -1,0 +1,90 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Vector Database. This vector searches a database of pre-embedded documents, finding the most similar matches.",
+  "duration": 8.109999656677246,
+  "words": [
+    {
+      "word": "Vector",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "database",
+      "start": 0.5799999833106995,
+      "end": 1.2400000095367432
+    },
+    {
+      "word": "This",
+      "start": 1.9600000381469727,
+      "end": 2.259999990463257
+    },
+    {
+      "word": "vector",
+      "start": 2.259999990463257,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "searches",
+      "start": 2.619999885559082,
+      "end": 3.200000047683716
+    },
+    {
+      "word": "a",
+      "start": 3.200000047683716,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "database",
+      "start": 3.5399999618530273,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "of",
+      "start": 3.859999895095825,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "pre",
+      "start": 4.320000171661377,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "embedded",
+      "start": 4.619999885559082,
+      "end": 5
+    },
+    {
+      "word": "documents",
+      "start": 5,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "finding",
+      "start": 6.360000133514404,
+      "end": 6.360000133514404
+    },
+    {
+      "word": "the",
+      "start": 6.360000133514404,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "most",
+      "start": 6.679999828338623,
+      "end": 7.059999942779541
+    },
+    {
+      "word": "similar",
+      "start": 7.059999942779541,
+      "end": 7.400000095367432
+    },
+    {
+      "word": "matches",
+      "start": 7.400000095367432,
+      "end": 7.739999771118164
+    }
+  ]
+}

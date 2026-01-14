@@ -1,0 +1,85 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-4",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The LLM. The language model receives both your original query AND the retrieved documents together.",
+  "duration": 9.359999656677246,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 1.0399999618530273
+    },
+    {
+      "word": "LLM",
+      "start": 1.0399999618530273,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "The",
+      "start": 2.0399999618530273,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "language",
+      "start": 2.5799999237060547,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "model",
+      "start": 2.9800000190734863,
+      "end": 3.4000000953674316
+    },
+    {
+      "word": "receives",
+      "start": 3.4000000953674316,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "both",
+      "start": 4.099999904632568,
+      "end": 4.519999980926514
+    },
+    {
+      "word": "your",
+      "start": 4.519999980926514,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "original",
+      "start": 4.880000114440918,
+      "end": 5.480000019073486
+    },
+    {
+      "word": "query",
+      "start": 5.480000019073486,
+      "end": 5.900000095367432
+    },
+    {
+      "word": "and",
+      "start": 5.900000095367432,
+      "end": 6.820000171661377
+    },
+    {
+      "word": "the",
+      "start": 6.820000171661377,
+      "end": 7.539999961853027
+    },
+    {
+      "word": "retrieved",
+      "start": 7.539999961853027,
+      "end": 7.659999847412109
+    },
+    {
+      "word": "documents",
+      "start": 7.659999847412109,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "together",
+      "start": 8.260000228881836,
+      "end": 8.880000114440918
+    }
+  ]
+}

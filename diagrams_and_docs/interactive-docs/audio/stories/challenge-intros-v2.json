@@ -1,0 +1,112 @@
+{
+  "page": "challenge-intros-v2",
+  "description": "Multi-step challenge intro animations with per-node narration",
+  "stories": [
+    {
+      "id": "ai-pipeline-intro",
+      "title": "The AI Pipeline",
+      "description": "How data flows from user to response",
+      "steps": [
+        {
+          "nodeId": "user",
+          "title": "User Input",
+          "narration": "Everything begins with you - the user. Your intent, your question, your goal."
+        },
+        {
+          "nodeId": "prompt",
+          "title": "The Prompt",
+          "narration": "Your intent becomes a prompt - carefully crafted instructions that tell the AI what you need."
+        },
+        {
+          "nodeId": "context",
+          "title": "Context",
+          "narration": "Context is the secret sauce. It gives the AI the background it needs to truly understand."
+        },
+        {
+          "nodeId": "llm",
+          "title": "The LLM",
+          "narration": "The large language model receives your prompt and context, processing them together."
+        },
+        {
+          "nodeId": "output",
+          "title": "The Response",
+          "narration": "And out comes the response - shaped by how well you crafted the input. Now it's your turn to connect the flow!"
+        }
+      ]
+    },
+    {
+      "id": "rag-pipeline-intro",
+      "title": "The RAG Pipeline",
+      "description": "Retrieval Augmented Generation explained",
+      "steps": [
+        {
+          "nodeId": "query",
+          "title": "Your Query",
+          "narration": "It starts with a question - something you need answered using your own data."
+        },
+        {
+          "nodeId": "embed",
+          "title": "Embeddings",
+          "narration": "Your query gets converted into a numerical vector - a mathematical representation of meaning."
+        },
+        {
+          "nodeId": "vectordb",
+          "title": "Vector Database",
+          "narration": "This vector searches a database of pre-embedded documents, finding the most similar matches."
+        },
+        {
+          "nodeId": "docs",
+          "title": "Retrieved Documents",
+          "narration": "The most relevant documents are pulled out - your grounding context for the answer."
+        },
+        {
+          "nodeId": "llm",
+          "title": "The LLM",
+          "narration": "The language model receives both your original query AND the retrieved documents together."
+        },
+        {
+          "nodeId": "answer",
+          "title": "Grounded Answer",
+          "narration": "The result? An answer grounded in your actual data - not hallucinated. Now wire up the RAG pipeline!"
+        }
+      ]
+    },
+    {
+      "id": "agent-loop-intro",
+      "title": "The Agent Loop",
+      "description": "How AI agents think and act",
+      "steps": [
+        {
+          "nodeId": "observe",
+          "title": "Observe",
+          "narration": "The agent begins by observing its environment - what's the current state of the world?"
+        },
+        {
+          "nodeId": "think",
+          "title": "Think",
+          "narration": "With observations in hand, the agent thinks - reasoning about what it sees."
+        },
+        {
+          "nodeId": "plan",
+          "title": "Plan",
+          "narration": "Thinking leads to planning - deciding the next steps to achieve the goal."
+        },
+        {
+          "nodeId": "act",
+          "title": "Act",
+          "narration": "The agent takes action, executing part of its plan."
+        },
+        {
+          "nodeId": "tools",
+          "title": "Tools",
+          "narration": "Actions often use tools - APIs, databases, code execution - extending what the agent can do."
+        },
+        {
+          "nodeId": "memory",
+          "title": "Memory",
+          "narration": "Results get stored in memory, informing future decisions. And the loop continues! Now connect the cycle."
+        }
+      ]
+    }
+  ]
+}

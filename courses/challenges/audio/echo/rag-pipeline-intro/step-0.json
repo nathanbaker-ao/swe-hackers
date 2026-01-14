@@ -1,0 +1,85 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-0",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Your Query. It starts with a question - something you need answered using your own data.",
+  "duration": 5.849999904632568,
+  "words": [
+    {
+      "word": "Your",
+      "start": 0,
+      "end": 0.8600000143051147
+    },
+    {
+      "word": "query",
+      "start": 0.8600000143051147,
+      "end": 1.2599999904632568
+    },
+    {
+      "word": "It",
+      "start": 1.8200000524520874,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "starts",
+      "start": 1.8200000524520874,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "with",
+      "start": 2.059999942779541,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "a",
+      "start": 2.240000009536743,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "question",
+      "start": 2.880000114440918,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "Something",
+      "start": 3.4600000381469727,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "you",
+      "start": 3.5399999618530273,
+      "end": 3.7799999713897705
+    },
+    {
+      "word": "need",
+      "start": 3.7799999713897705,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "answered",
+      "start": 3.9600000381469727,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "using",
+      "start": 4.360000133514404,
+      "end": 4.699999809265137
+    },
+    {
+      "word": "your",
+      "start": 4.699999809265137,
+      "end": 4.940000057220459
+    },
+    {
+      "word": "own",
+      "start": 4.940000057220459,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "data",
+      "start": 5.28000020980835,
+      "end": 5.519999980926514
+    }
+  ]
+}

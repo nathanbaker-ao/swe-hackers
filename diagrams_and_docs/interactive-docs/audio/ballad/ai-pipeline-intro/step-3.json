@@ -1,0 +1,80 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-3",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The LLM. The large language model receives your prompt and context, processing them together.",
+  "duration": 6.760000228881836,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.41999998688697815
+    },
+    {
+      "word": "LLM",
+      "start": 0.41999998688697815,
+      "end": 1.2999999523162842
+    },
+    {
+      "word": "the",
+      "start": 1.7799999713897705,
+      "end": 1.8600000143051147
+    },
+    {
+      "word": "large",
+      "start": 1.8600000143051147,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "language",
+      "start": 2.2200000286102295,
+      "end": 2.5999999046325684
+    },
+    {
+      "word": "model",
+      "start": 2.5999999046325684,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "receives",
+      "start": 2.9000000953674316,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "your",
+      "start": 3.440000057220459,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "prompt",
+      "start": 3.740000009536743,
+      "end": 3.9600000381469727
+    },
+    {
+      "word": "and",
+      "start": 3.9600000381469727,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "context",
+      "start": 4.420000076293945,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "processing",
+      "start": 5.760000228881836,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "them",
+      "start": 5.760000228881836,
+      "end": 6.139999866485596
+    },
+    {
+      "word": "together",
+      "start": 6.139999866485596,
+      "end": 6.519999980926514
+    }
+  ]
+}

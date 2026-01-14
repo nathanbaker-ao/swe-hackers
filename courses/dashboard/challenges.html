@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Critical styles - must load before body renders -->
+  <!-- Critical styles -->
   <style>
     .dashboard { display: none !important; }
     .dashboard.ready { display: flex !important; }
@@ -39,18 +39,20 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/css/dashboard.css">
-  <link rel="stylesheet" href="../shared/css/challenge-interactive.css">
+  <link rel="stylesheet" href="../shared/css/challenge-puzzle.css">
   
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   
-  <!-- External Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <!-- Cytoscape & Dagre -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
   
@@ -197,36 +199,25 @@
       <div class="content-area">
         
         <!-- Streak Display -->
-        <div class="streak-display" id="streak-display">
+        <div class="streak-display">
           <span class="streak-icon">🔥</span>
           <div class="streak-info">
             <div class="streak-count" id="streak-count">0 day streak</div>
-            <div class="streak-label">Complete all 3 daily challenges to continue your streak!</div>
+            <div class="streak-label">Complete all 3 challenges to continue your streak!</div>
+          </div>
+          <div class="challenges-score">
+            <span id="completed-count">0</span>/3
           </div>
         </div>
         
         <!-- Today's Date Header -->
-        <div class="section-header" style="margin-bottom: 1.5rem;">
+        <div class="section-header">
           <h2 class="section-title" id="today-header">Today's Challenges</h2>
-          <div class="challenge-progress-indicator">
-            <span id="completed-count">0</span>/3 completed
-          </div>
         </div>
         
-        <!-- Challenges Grid -->
-        <div class="daily-challenges-grid" id="challenges-grid">
+        <!-- Challenges List -->
+        <div class="challenges-list" id="challenges-list">
           <!-- Challenge cards will be inserted here -->
-        </div>
-        
-        <!-- Previous Challenges Section -->
-        <div class="section-header" style="margin-top: 3rem; margin-bottom: 1rem;">
-          <h3 class="section-title">Challenge History</h3>
-        </div>
-        
-        <div class="challenge-history" id="challenge-history">
-          <p style="color: var(--text-muted); font-size: 0.9rem;">
-            Your past challenge completions will appear here.
-          </p>
         </div>
         
       </div>
@@ -241,182 +232,364 @@
   <script src="../shared/js/interactive/diagram-utils.js"></script>
   <script src="../shared/js/interactive/audio-engine.js"></script>
   <script src="../shared/js/interactive/challenge-diagram.js"></script>
-  <script src="../shared/js/activity-tracker.js"></script>
+  <script src="../shared/js/interactive/challenge-puzzle.js"></script>
   
   <script>
-    // Today's date for challenge IDs
     const today = new Date().toISOString().split('T')[0];
     
-    // Challenge intro story data
+    // Challenge intro stories - multi-step with per-node audio narration
     const challengeIntros = {
-      'prompt-craft-intro': {
-        id: 'prompt-craft-intro',
+      'ai-pipeline-intro': {
+        id: 'ai-pipeline-intro',
         elements: [
-          { data: { id: 'thinking', label: '🧠 Your Thinking', type: 'concept' } },
+          { data: { id: 'user', label: '👤 User', type: 'external' } },
           { data: { id: 'prompt', label: '📝 Prompt', type: 'data' } },
-          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
-          { data: { id: 'output', label: '✨ Output', type: 'example' } },
-          { data: { source: 'thinking', target: 'prompt' } },
-          { data: { source: 'prompt', target: 'ai' } },
-          { data: { source: 'ai', target: 'output' } }
+          { data: { id: 'context', label: '📚 Context', type: 'data' } },
+          { data: { id: 'llm', label: '🤖 LLM', type: 'service' } },
+          { data: { id: 'output', label: '✨ Response', type: 'example' } },
+          { data: { source: 'user', target: 'prompt' } },
+          { data: { source: 'user', target: 'context' } },
+          { data: { source: 'prompt', target: 'llm' } },
+          { data: { source: 'context', target: 'llm' } },
+          { data: { source: 'llm', target: 'output' } }
         ],
         steps: [
-          { nodeId: 'thinking', caption: 'The prompt is how you translate your thinking into AI instructions.' },
-          { nodeId: 'output', edges: [{ from: 'thinking', to: 'prompt' }, { from: 'prompt', to: 'ai' }, { from: 'ai', to: 'output' }], caption: 'A great prompt leads to a great output. Let\'s craft one.' }
+          { nodeId: 'user', caption: 'Everything begins with you - the user. Your intent, your question, your goal.' },
+          { nodeId: 'prompt', edges: [{ from: 'user', to: 'prompt' }], caption: 'Your intent becomes a prompt - carefully crafted instructions that tell the AI what you need.' },
+          { nodeId: 'context', edges: [{ from: 'user', to: 'context' }], caption: 'Context is the secret sauce. It gives the AI the background it needs to truly understand.' },
+          { nodeId: 'llm', edges: [{ from: 'prompt', to: 'llm' }, { from: 'context', to: 'llm' }], caption: 'The large language model receives your prompt and context, processing them together.' },
+          { nodeId: 'output', edges: [{ from: 'llm', to: 'output' }], caption: 'And out comes the response - shaped by how well you crafted the input. Now it\'s your turn to connect the flow!' }
         ]
       },
-      'context-engineering-intro': {
-        id: 'context-engineering-intro',
+      'rag-pipeline-intro': {
+        id: 'rag-pipeline-intro',
         elements: [
-          { data: { id: 'raw-info', label: '📚 Raw Information', type: 'external' } },
-          { data: { id: 'context', label: '🧩 Structured Context', type: 'concept' } },
-          { data: { id: 'ai', label: '🤖 AI', type: 'service' } },
-          { data: { id: 'accuracy', label: '🎯 Accurate Results', type: 'example' } },
-          { data: { source: 'raw-info', target: 'context' } },
-          { data: { source: 'context', target: 'ai' } },
-          { data: { source: 'ai', target: 'accuracy' } }
+          { data: { id: 'query', label: '❓ Query', type: 'external' } },
+          { data: { id: 'embed', label: '🔢 Embed', type: 'service' } },
+          { data: { id: 'vectordb', label: '🗄️ Vector DB', type: 'data' } },
+          { data: { id: 'docs', label: '📄 Docs', type: 'data' } },
+          { data: { id: 'llm', label: '🤖 LLM', type: 'service' } },
+          { data: { id: 'answer', label: '💡 Answer', type: 'example' } },
+          { data: { source: 'query', target: 'embed' } },
+          { data: { source: 'embed', target: 'vectordb' } },
+          { data: { source: 'vectordb', target: 'docs' } },
+          { data: { source: 'query', target: 'llm' } },
+          { data: { source: 'docs', target: 'llm' } },
+          { data: { source: 'llm', target: 'answer' } }
         ],
         steps: [
-          { nodeId: 'raw-info', caption: 'AI can\'t read your mind. It needs the right context.' },
-          { nodeId: 'accuracy', edges: [{ from: 'raw-info', to: 'context' }, { from: 'context', to: 'ai' }, { from: 'ai', to: 'accuracy' }], caption: 'Structure your context well, and accuracy follows.' }
+          { nodeId: 'query', caption: 'It starts with a question - something you need answered using your own data.' },
+          { nodeId: 'embed', edges: [{ from: 'query', to: 'embed' }], caption: 'Your query gets converted into a numerical vector - a mathematical representation of meaning.' },
+          { nodeId: 'vectordb', edges: [{ from: 'embed', to: 'vectordb' }], caption: 'This vector searches a database of pre-embedded documents, finding the most similar matches.' },
+          { nodeId: 'docs', edges: [{ from: 'vectordb', to: 'docs' }], caption: 'The most relevant documents are pulled out - your grounding context for the answer.' },
+          { nodeId: 'llm', edges: [{ from: 'query', to: 'llm' }, { from: 'docs', to: 'llm' }], caption: 'The language model receives both your original query AND the retrieved documents together.' },
+          { nodeId: 'answer', edges: [{ from: 'llm', to: 'answer' }], caption: 'The result? An answer grounded in your actual data - not hallucinated. Now wire up the RAG pipeline!' }
         ]
       },
-      'visual-challenge-intro': {
-        id: 'visual-challenge-intro',
+      'agent-loop-intro': {
+        id: 'agent-loop-intro',
         elements: [
-          { data: { id: 'concept', label: '💭 Concept', type: 'concept' } },
-          { data: { id: 'motion', label: '🎬 Motion Design', type: 'data' } },
-          { data: { id: 'animation', label: '✨ Animation', type: 'example' } },
-          { data: { source: 'concept', target: 'motion' } },
-          { data: { source: 'motion', target: 'animation' } }
+          { data: { id: 'observe', label: '👁️ Observe', type: 'concept' } },
+          { data: { id: 'think', label: '🧠 Think', type: 'service' } },
+          { data: { id: 'plan', label: '📋 Plan', type: 'data' } },
+          { data: { id: 'act', label: '⚡ Act', type: 'example' } },
+          { data: { id: 'tools', label: '🔧 Tools', type: 'external' } },
+          { data: { id: 'memory', label: '💾 Memory', type: 'data' } },
+          { data: { source: 'observe', target: 'think' } },
+          { data: { source: 'think', target: 'plan' } },
+          { data: { source: 'plan', target: 'act' } },
+          { data: { source: 'act', target: 'tools' } },
+          { data: { source: 'tools', target: 'memory' } },
+          { data: { source: 'memory', target: 'observe' } }
         ],
         steps: [
-          { nodeId: 'concept', caption: 'Every visualization tells a story through motion.' },
-          { nodeId: 'animation', edges: [{ from: 'concept', to: 'motion' }, { from: 'motion', to: 'animation' }], caption: 'Transform your concept into something users can feel.' }
+          { nodeId: 'observe', caption: 'The agent begins by observing its environment - what\'s the current state of the world?' },
+          { nodeId: 'think', edges: [{ from: 'observe', to: 'think' }], caption: 'With observations in hand, the agent thinks - reasoning about what it sees.' },
+          { nodeId: 'plan', edges: [{ from: 'think', to: 'plan' }], caption: 'Thinking leads to planning - deciding the next steps to achieve the goal.' },
+          { nodeId: 'act', edges: [{ from: 'plan', to: 'act' }], caption: 'The agent takes action, executing part of its plan.' },
+          { nodeId: 'tools', edges: [{ from: 'act', to: 'tools' }], caption: 'Actions often use tools - APIs, databases, code execution - extending what the agent can do.' },
+          { nodeId: 'memory', edges: [{ from: 'tools', to: 'memory' }], caption: 'Results get stored in memory, informing future decisions. And the loop continues! Now connect the cycle.' }
         ]
       }
     };
     
-    // Today's challenges data
+    // Today's puzzle challenges - using intro stories that have audio
     const todaysChallenges = [
       {
-        id: `challenge-prompt-${today}`,
-        category: 'prompt-craft',
-        categoryLabel: 'PROMPT CRAFT',
-        title: 'The Explanation Challenge',
-        description: 'Write a prompt that makes AI explain quantum computing using only cooking metaphors.',
+        id: 'ai-flow',
+        type: 'connect-edges',
+        category: 'ai-fundamentals',
+        categoryLabel: 'AI FUNDAMENTALS',
+        title: 'Connect the AI Pipeline',
+        description: 'Connect the nodes to show how data flows from user input to AI output. Click two nodes to draw an edge between them.',
+        instruction: 'Click a node to start, then click another to connect them.',
         xp: 50,
-        introStory: 'prompt-craft-intro',
-        evaluationType: 'length-check',
-        minLength: 50
+        introStory: 'ai-pipeline-intro', // Multi-step with per-node audio
+        nodes: [
+          { id: 'user', label: '👤 User Input' },
+          { id: 'prompt', label: '📝 Prompt' },
+          { id: 'context', label: '📚 Context' },
+          { id: 'llm', label: '🤖 LLM' },
+          { id: 'output', label: '✨ Response' }
+        ],
+        nodeDescriptions: {
+          'user': 'The human providing input to the system',
+          'prompt': 'The formatted instruction sent to the AI',
+          'context': 'Background information that helps the AI understand',
+          'llm': 'The Large Language Model that processes everything',
+          'output': 'The AI\'s generated response'
+        },
+        solution: {
+          edges: [
+            { source: 'user', target: 'prompt' },
+            { source: 'user', target: 'context' },
+            { source: 'prompt', target: 'llm' },
+            { source: 'context', target: 'llm' },
+            { source: 'llm', target: 'output' }
+          ]
+        }
       },
       {
-        id: `challenge-context-${today}`,
-        category: 'context-engineering',
-        categoryLabel: 'CONTEXT ENGINEERING',
-        title: 'The Refactor Brief',
-        description: 'Given a 200-line legacy function, write the minimal context needed for AI to refactor it safely.',
+        id: 'rag-flow',
+        type: 'connect-edges',
+        category: 'rag-systems',
+        categoryLabel: 'RAG SYSTEMS',
+        title: 'Build the RAG Pipeline',
+        description: 'Retrieval Augmented Generation combines search with generation. Connect the nodes to show how RAG works!',
+        instruction: 'Click nodes to connect them in the right order.',
         xp: 75,
-        introStory: 'context-engineering-intro',
-        evaluationType: 'keyword-match',
-        keywords: 'function,dependencies,constraints,expected behavior,edge cases'
+        introStory: 'rag-pipeline-intro', // Multi-step with per-node audio
+        nodes: [
+          { id: 'query', label: '❓ Query' },
+          { id: 'embed', label: '🔢 Embeddings' },
+          { id: 'vectordb', label: '🗄️ Vector DB' },
+          { id: 'docs', label: '📄 Documents' },
+          { id: 'llm', label: '🤖 LLM' },
+          { id: 'answer', label: '💡 Answer' }
+        ],
+        nodeDescriptions: {
+          'query': 'The user\'s question or search query',
+          'embed': 'Converts text to numerical vectors',
+          'vectordb': 'Database storing document embeddings',
+          'docs': 'Retrieved relevant documents',
+          'llm': 'Generates answer using retrieved context',
+          'answer': 'The final grounded response'
+        },
+        solution: {
+          edges: [
+            { source: 'query', target: 'embed' },
+            { source: 'embed', target: 'vectordb' },
+            { source: 'vectordb', target: 'docs' },
+            { source: 'query', target: 'llm' },
+            { source: 'docs', target: 'llm' },
+            { source: 'llm', target: 'answer' }
+          ]
+        }
       },
       {
-        id: `challenge-visual-${today}`,
-        category: 'visual',
-        categoryLabel: 'VISUAL',
-        title: 'The Animation Challenge',
-        description: 'Create an anime.js animation that visualizes a sorting algorithm in action.',
+        id: 'agent-loop',
+        type: 'connect-edges',
+        category: 'agentic-systems',
+        categoryLabel: 'AGENTIC SYSTEMS',
+        title: 'Wire the AI Agent Loop',
+        description: 'AI agents observe, think, plan, act, and learn in a continuous loop. Connect the agent cycle!',
+        instruction: 'Connect the nodes to create the agent reasoning loop.',
         xp: 100,
-        introStory: 'visual-challenge-intro',
-        evaluationType: 'length-check',
-        minLength: 100
+        introStory: 'agent-loop-intro', // Multi-step with per-node audio
+        nodes: [
+          { id: 'observe', label: '👁️ Observe' },
+          { id: 'think', label: '🧠 Think' },
+          { id: 'plan', label: '📋 Plan' },
+          { id: 'act', label: '⚡ Act' },
+          { id: 'tools', label: '🔧 Tools' },
+          { id: 'memory', label: '💾 Memory' }
+        ],
+        nodeDescriptions: {
+          'observe': 'Perceive the current state of the environment',
+          'think': 'Reason about observations using the LLM',
+          'plan': 'Decide on the next steps to take',
+          'act': 'Execute the planned action',
+          'tools': 'External capabilities the agent can use',
+          'memory': 'Store results for future reference'
+        },
+        solution: {
+          edges: [
+            { source: 'observe', target: 'think' },
+            { source: 'think', target: 'plan' },
+            { source: 'plan', target: 'act' },
+            { source: 'act', target: 'tools' },
+            { source: 'tools', target: 'memory' },
+            { source: 'memory', target: 'observe' }
+          ]
+        }
       }
     ];
     
-    // Render challenge card (authenticated - full interactive)
-    function renderChallengeCard(challenge) {
+    let completedChallenges = new Set();
+    
+    // Render challenge card with split layout
+    function renderChallengeCard(challenge, index) {
+      const isComplete = completedChallenges.has(challenge.id);
+      
       return `
-        <div class="challenge-card" 
-             data-activity="${challenge.id}" 
-             data-type="challenge"
-             data-points="${challenge.xp}"
-             data-date="${today}"
-             data-category="${challenge.category}"
-             data-evaluation-type="${challenge.evaluationType}"
-             ${challenge.keywords ? `data-keywords="${challenge.keywords}"` : ''}
-             ${challenge.minLength ? `data-min-length="${challenge.minLength}"` : ''}>
+        <div class="challenge-card ${isComplete ? 'complete' : ''}" 
+             id="challenge-${challenge.id}"
+             data-challenge-id="${challenge.id}">
           
-          <!-- Challenge Intro Diagram -->
-          <div class="challenge-intro-container">
-            <div class="challenge-diagram" id="diagram-${challenge.id}" data-story="${challenge.introStory}"></div>
-            <div class="challenge-caption"></div>
-            <div class="audio-settings">
-              <label>🎤 Voice:</label>
-              <select class="voice-select">
-                <option value="ballad">Female Storyteller</option>
-                <option value="echo">Male UK Storyteller</option>
-              </select>
+          <div class="challenge-split">
+            <!-- Left: Intro Video -->
+            <div class="challenge-intro-side">
+              <div class="challenge-number-badge">#${index + 1}</div>
+              <h3 class="challenge-title">${challenge.title}</h3>
+              <p class="challenge-description">${challenge.description}</p>
+              
+              <div class="challenge-video-container">
+                <div class="challenge-diagram" id="intro-${challenge.id}" data-story="${challenge.introStory}"></div>
+                <div class="challenge-caption"></div>
+                <div class="video-controls">
+                  <button class="video-play-btn" data-target="intro-${challenge.id}">
+                    <span class="play-icon">▶</span> Watch Intro
+                  </button>
+                </div>
+              </div>
+              
+              <div class="challenge-meta-bar">
+                <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
+                <span class="challenge-xp ${isComplete ? 'earned' : ''}">
+                  ${isComplete ? '✓' : '+'} ${challenge.xp} XP
+                </span>
+              </div>
+            </div>
+            
+            <!-- Right: Puzzle -->
+            <div class="challenge-puzzle-side">
+              <div class="puzzle-label">Your Turn: Connect the Flow</div>
+              <div class="challenge-puzzle-area" id="puzzle-${challenge.id}"></div>
             </div>
           </div>
           
-          <!-- Challenge Header -->
-          <div class="challenge-header">
-            <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
-            <span class="challenge-xp">+${challenge.xp} XP</span>
-          </div>
-          
-          <!-- Challenge Content -->
-          <div class="challenge-content">
-            <h3 class="challenge-title">${challenge.title}</h3>
-            <p class="challenge-description">${challenge.description}</p>
-            
-            <!-- Challenge Input -->
-            <div class="challenge-input-area">
-              <textarea class="challenge-input" placeholder="Enter your response here..."></textarea>
-              <button class="challenge-submit" disabled>Submit Answer</button>
-            </div>
-            
-            <!-- Feedback Area -->
-            <div class="challenge-feedback"></div>
-          </div>
         </div>
       `;
     }
     
-    // Initialize challenge diagrams
-    function initChallengeDiagrams() {
+    // Initialize intro diagrams
+    function initIntroDiagrams() {
       todaysChallenges.forEach(challenge => {
-        const diagramId = `diagram-${challenge.id}`;
-        const container = document.getElementById(diagramId);
+        const containerId = `intro-${challenge.id}`;
+        const container = document.getElementById(containerId);
         if (!container) return;
         
         const story = challengeIntros[challenge.introStory];
         if (!story) return;
         
-        // Initialize audio engine - use relative path from dashboard folder
-        const audioEngine = new AudioNarrationEngine('../challenges/audio');
-        
-        // Create diagram
-        const diagram = new ChallengeDiagram(diagramId, story, {
-          audioEngine,
-          audioEnabled: true,
-          canvasHeight: 200
-        });
-        
-        // Store reference
-        container._challengeDiagram = diagram;
+        // Use ChallengeDiagram for the intro animation
+        if (window.ChallengeDiagram) {
+          // Initialize audio engine for narration
+          const audioEngine = new AudioNarrationEngine('../challenges/audio');
+          
+          const diagram = new ChallengeDiagram(containerId, story, {
+            audioEngine,
+            audioEnabled: true, // Enable audio narration
+            canvasHeight: 180,
+            autoPlay: false,
+            showOverlay: false // We use external play button
+          });
+          
+          // Store reference for external controls
+          container._challengeDiagram = diagram;
+        }
       });
     }
     
-    // Update completed count
+    // Initialize puzzles
+    function initPuzzles() {
+      todaysChallenges.forEach(challenge => {
+        const containerId = `puzzle-${challenge.id}`;
+        
+        new ChallengePuzzle(containerId, challenge, {
+          onComplete: (result) => {
+            completedChallenges.add(challenge.id);
+            updateCompletedCount();
+            saveProgress(challenge.id, result);
+            
+            const card = document.querySelector(`[data-challenge-id="${challenge.id}"]`);
+            if (card) {
+              card.classList.add('complete');
+              card.querySelector('.challenge-xp').classList.add('earned');
+              card.querySelector('.challenge-xp').innerHTML = `✓ ${challenge.xp} XP`;
+            }
+          }
+        });
+      });
+    }
+    
+    // Initialize video play/pause controls
+    function initVideoControls() {
+      document.querySelectorAll('.video-play-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.dataset.target;
+          const container = document.getElementById(targetId);
+          
+          if (container && container._challengeDiagram) {
+            const diagram = container._challengeDiagram;
+            
+            if (diagram.isPlaying) {
+              // Pause
+              diagram.pause();
+              btn.innerHTML = '<span class="play-icon">▶</span> Resume';
+            } else {
+              // Play
+              btn.innerHTML = '<span class="play-icon">⏸</span> Playing...';
+              
+              // Set callback for when animation completes
+              diagram.onComplete = () => {
+                btn.innerHTML = '<span class="play-icon">↻</span> Replay';
+              };
+              
+              diagram.play();
+            }
+          }
+        });
+      });
+    }
+    
     function updateCompletedCount() {
-      const completed = document.querySelectorAll('.challenge-card.challenge-complete').length;
-      document.getElementById('completed-count').textContent = completed;
-      document.getElementById('challenges-remaining').textContent = 3 - completed;
+      const count = completedChallenges.size;
+      document.getElementById('completed-count').textContent = count;
+      document.getElementById('challenges-remaining').textContent = 3 - count;
       
-      if (completed === 3) {
+      if (count === 3) {
         document.querySelector('.streak-label').textContent = '🎉 All challenges complete! Streak continued!';
+      }
+    }
+    
+    async function saveProgress(challengeId, result) {
+      try {
+        if (window.DataService?.recordChallengeCompletion) {
+          await window.DataService.recordChallengeCompletion(challengeId, result);
+        }
+      } catch (e) {
+        console.error('Error saving progress:', e);
+      }
+    }
+    
+    // Scroll to specific challenge from URL param
+    function scrollToChallengeFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const challengeId = params.get('challenge');
+      
+      if (challengeId) {
+        setTimeout(() => {
+          const card = document.getElementById(`challenge-${challengeId}`);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Highlight the card briefly
+            card.style.boxShadow = '0 0 0 3px var(--accent-primary, #7986cb)';
+            setTimeout(() => {
+              card.style.boxShadow = '';
+            }, 2000);
+          }
+        }, 500);
       }
     }
     
@@ -425,7 +598,6 @@
       const loadingScreen = document.getElementById('auth-loading');
       const dashboardContent = document.getElementById('dashboard-content');
       
-      // Initialize Firebase
       if (!window.FirebaseApp.init()) {
         console.error('Firebase initialization failed');
         loadingScreen.innerHTML = '<div class="loading-content"><p>Error loading. Please refresh.</p></div>';
@@ -434,50 +606,37 @@
       
       window.AuthService.init();
       
-      // Wait for auth state
       const user = await window.AuthService.waitForAuthState();
       
       if (!user) {
-        // Not logged in, redirect to login with return URL
         window.AuthService.setRedirectUrl(window.location.href);
         window.location.href = '../auth/login.html';
         return;
       }
       
-      // User is logged in
       loadingScreen.classList.add('hidden');
       dashboardContent.classList.add('ready');
       
-      // Load user info
       loadUserInfo(user);
       
-      // Set today's date in header
       const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
       document.getElementById('today-header').textContent = 
         `Today's Challenges — ${new Date().toLocaleDateString('en-US', dateOptions)}`;
       
       // Render challenges
-      const grid = document.getElementById('challenges-grid');
-      grid.innerHTML = todaysChallenges.map(renderChallengeCard).join('');
+      const list = document.getElementById('challenges-list');
+      list.innerHTML = todaysChallenges.map((c, i) => renderChallengeCard(c, i)).join('');
       
-      // Initialize diagrams
+      // Initialize components
       setTimeout(() => {
-        initChallengeDiagrams();
-        
-        // Initialize Activity Tracker
-        if (window.ActivityTracker) {
-          ActivityTracker.init('daily', today);
-          
-          // Watch for completions
-          const observer = new MutationObserver(updateCompletedCount);
-          observer.observe(grid, { subtree: true, attributes: true, attributeFilter: ['class'] });
-        }
-      }, 100);
+        initIntroDiagrams();
+        initPuzzles();
+        initVideoControls();
+        scrollToChallengeFromURL();
+      }, 150);
       
-      // Load streak data
       await loadStreakData();
       
-      // Setup UI
       setupSidebar();
       setupLogout();
       
@@ -486,23 +645,18 @@
         targets: '.challenge-card',
         opacity: [0, 1],
         translateY: [30, 0],
-        delay: anime.stagger(100),
+        delay: anime.stagger(150),
         duration: 600,
         easing: 'easeOutCubic'
       });
       
-      // Auth state listener
       window.AuthService.onAuthStateChanged((user) => {
-        if (!user) {
-          window.location.href = '../auth/login.html';
-        }
+        if (!user) window.location.href = '../auth/login.html';
       });
     });
     
-    // Load user info
     function loadUserInfo(user) {
       const displayName = user.displayName || user.email.split('@')[0];
-      
       document.getElementById('user-name').textContent = displayName;
       
       const avatar = document.getElementById('user-avatar');
@@ -513,22 +667,19 @@
       }
     }
     
-    // Load streak data
     async function loadStreakData() {
       try {
         if (window.DataService) {
           const stats = await window.DataService.getUserStats();
           const streak = stats?.currentStreak || 0;
-          
           document.getElementById('user-streak').textContent = streak;
           document.getElementById('streak-count').textContent = `${streak} day streak`;
         }
-      } catch (error) {
-        console.error('Error loading streak:', error);
+      } catch (e) {
+        console.error('Error loading streak:', e);
       }
     }
     
-    // Setup sidebar
     function setupSidebar() {
       const sidebar = document.getElementById('sidebar');
       const toggle = document.getElementById('sidebar-toggle');
@@ -548,7 +699,6 @@
       overlay?.addEventListener('click', () => sidebar.classList.remove('open'));
     }
     
-    // Setup logout
     function setupLogout() {
       document.getElementById('logout-link')?.addEventListener('click', async (e) => {
         e.preventDefault();

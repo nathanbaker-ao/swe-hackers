@@ -1,0 +1,95 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "The Prompt. Your intent becomes a prompt - carefully crafted instructions that tell the AI what you need.",
+  "duration": 8.5600004196167,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "prompt",
+      "start": 0.5,
+      "end": 0.8999999761581421
+    },
+    {
+      "word": "Your",
+      "start": 1.7000000476837158,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "intent",
+      "start": 1.8799999952316284,
+      "end": 2.319999933242798
+    },
+    {
+      "word": "becomes",
+      "start": 2.319999933242798,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "a",
+      "start": 2.859999895095825,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "prompt",
+      "start": 3.440000057220459,
+      "end": 3.440000057220459
+    },
+    {
+      "word": "Carefully",
+      "start": 4.460000038146973,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "crafted",
+      "start": 4.599999904632568,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "instructions",
+      "start": 5.119999885559082,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "that",
+      "start": 5.800000190734863,
+      "end": 6.340000152587891
+    },
+    {
+      "word": "tell",
+      "start": 6.340000152587891,
+      "end": 6.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 6.579999923706055,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "AI",
+      "start": 6.840000152587891,
+      "end": 7.139999866485596
+    },
+    {
+      "word": "what",
+      "start": 7.139999866485596,
+      "end": 7.679999828338623
+    },
+    {
+      "word": "you",
+      "start": 7.679999828338623,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "need",
+      "start": 7.960000038146973,
+      "end": 8.260000228881836
+    }
+  ]
+}

@@ -23,6 +23,7 @@ class ChallengePuzzle {
     this.correctEdges = new Set();
     this.selectedNode = null;
     this.isComplete = false;
+    this.tooltip = null;
     
     this.init();
   }
@@ -35,6 +36,9 @@ class ChallengePuzzle {
     
     // Build the challenge UI
     this.container.innerHTML = this.buildUI();
+    
+    // Create tooltip element
+    this.createTooltip();
     
     // Initialize based on challenge type
     if (this.challengeData.type === 'connect-edges') {
@@ -55,14 +59,73 @@ class ChallengePuzzle {
       <div class="puzzle-canvas" id="${this.containerId}-canvas"></div>
       <div class="puzzle-controls">
         ${this.challengeData.type === 'connect-edges' ? `
-          <button class="puzzle-btn puzzle-clear">🗑️ Clear Edges</button>
+          <button class="puzzle-btn puzzle-clear">🗑️ Clear</button>
+          <button class="puzzle-btn puzzle-fit">⊡ Fit View</button>
         ` : `
-          <button class="puzzle-btn puzzle-reset">↩️ Reset Positions</button>
+          <button class="puzzle-btn puzzle-reset">↩️ Reset</button>
+          <button class="puzzle-btn puzzle-fit">⊡ Fit View</button>
         `}
-        <button class="puzzle-btn puzzle-check" disabled>✓ Check Answer</button>
+        <button class="puzzle-btn puzzle-check">✓ Check Answer</button>
       </div>
       <div class="puzzle-feedback"></div>
     `;
+  }
+  
+  createTooltip() {
+    this.tooltip = document.createElement('div');
+    this.tooltip.className = 'puzzle-tooltip';
+    this.tooltip.style.cssText = `
+      position: absolute;
+      background: rgba(30, 30, 50, 0.95);
+      border: 1px solid rgba(121, 134, 203, 0.5);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      color: #e8e8f0;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 1000;
+      max-width: 200px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    `;
+    this.container.style.position = 'relative';
+    this.container.appendChild(this.tooltip);
+  }
+  
+  showTooltip(node, event) {
+    const nodeData = node.data();
+    const description = this.challengeData.nodeDescriptions?.[nodeData.id] || nodeData.label;
+    
+    this.tooltip.innerHTML = `
+      <div style="font-weight: 600; margin-bottom: 0.25rem;">${nodeData.label}</div>
+      ${description !== nodeData.label ? `<div style="color: #b8b8c8; font-size: 0.8rem;">${description}</div>` : ''}
+    `;
+    
+    const canvas = this.container.querySelector('.puzzle-canvas');
+    const canvasRect = canvas.getBoundingClientRect();
+    const containerRect = this.container.getBoundingClientRect();
+    
+    // Position tooltip near the node
+    const pos = node.renderedPosition();
+    let left = pos.x + canvasRect.left - containerRect.left + 50;
+    let top = pos.y + canvasRect.top - containerRect.top - 20;
+    
+    // Keep tooltip in bounds
+    if (left + 200 > containerRect.width) {
+      left = pos.x + canvasRect.left - containerRect.left - 220;
+    }
+    
+    this.tooltip.style.left = `${left}px`;
+    this.tooltip.style.top = `${top}px`;
+    this.tooltip.style.opacity = '1';
+    this.tooltip.style.transform = 'translateY(0)';
+  }
+  
+  hideTooltip() {
+    this.tooltip.style.opacity = '0';
+    this.tooltip.style.transform = 'translateY(5px)';
   }
   
   getTargetCount() {
@@ -78,35 +141,66 @@ class ChallengePuzzle {
   
   initEdgeChallenge() {
     const canvasId = `${this.containerId}-canvas`;
+    const canvas = document.getElementById(canvasId);
+    
+    if (!canvas) {
+      console.error('ChallengePuzzle: Canvas not found:', canvasId);
+      return;
+    }
     
     // Store correct edges for checking
     this.challengeData.solution.edges.forEach(edge => {
       this.correctEdges.add(`${edge.source}->${edge.target}`);
     });
     
-    // Initialize Cytoscape with nodes only (no edges - user adds them)
+    // Create elements - just nodes with data, no position (will use layout)
+    const elements = this.challengeData.nodes.map(n => ({
+      data: { id: n.id, label: n.label }
+    }));
+    
+    // Initialize Cytoscape with grid layout
     this.cy = cytoscape({
-      container: document.getElementById(canvasId),
-      elements: this.challengeData.nodes.map(n => ({ data: n })),
+      container: canvas,
+      elements: elements,
       style: this.getEdgeChallengeStyles(),
-      layout: { name: 'preset' },
-      userZoomingEnabled: false,
-      userPanningEnabled: false,
+      layout: {
+        name: 'grid',
+        rows: 2,
+        cols: Math.ceil(this.challengeData.nodes.length / 2),
+        padding: 40,
+        avoidOverlap: true,
+        condense: false
+      },
+      userZoomingEnabled: true,
+      userPanningEnabled: true,
       boxSelectionEnabled: false,
-      autoungrabify: true // Nodes can't be moved
+      autoungrabify: true,
+      minZoom: 0.4,
+      maxZoom: 2.5
     });
     
-    // Click handlers for edge creation
+    // Fit to viewport after layout completes
+    this.cy.on('layoutstop', () => {
+      this.cy.fit(undefined, 25);
+    });
+    
+    // Node interactions
     this.cy.on('tap', 'node', (e) => this.handleNodeTap(e));
     this.cy.on('tap', (e) => {
       if (e.target === this.cy) this.clearSelection();
     });
-    
-    // Edge click to remove
     this.cy.on('tap', 'edge', (e) => this.handleEdgeTap(e));
+    
+    // Hover tooltips
+    this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
+    this.cy.on('mouseout', 'node', () => this.hideTooltip());
     
     // Setup control buttons
     this.container.querySelector('.puzzle-clear')?.addEventListener('click', () => this.clearAllEdges());
+    this.container.querySelector('.puzzle-fit')?.addEventListener('click', () => {
+      this.cy.fit(undefined, 40);
+      this.cy.center();
+    });
     this.container.querySelector('.puzzle-check')?.addEventListener('click', () => this.checkAnswer());
   }
   
@@ -114,12 +208,10 @@ class ChallengePuzzle {
     const node = e.target;
     
     if (!this.selectedNode) {
-      // First node selected - start edge
       this.selectedNode = node;
       node.addClass('selected');
-      this.updateInstruction('Now click the target node to connect');
+      this.updateInstruction('Now click the target node to connect →');
     } else {
-      // Second node selected - create edge
       if (this.selectedNode.id() !== node.id()) {
         this.addUserEdge(this.selectedNode.id(), node.id());
       }
@@ -139,15 +231,11 @@ class ChallengePuzzle {
     const edgeKey = `${sourceId}->${targetId}`;
     const reverseKey = `${targetId}->${sourceId}`;
     
-    // Check if edge already exists (either direction)
     if (this.userEdges.has(edgeKey) || this.userEdges.has(reverseKey)) {
       return;
     }
     
     this.userEdges.add(edgeKey);
-    
-    // Determine if this edge is correct
-    const isCorrect = this.correctEdges.has(edgeKey) || this.correctEdges.has(reverseKey);
     
     this.cy.add({
       group: 'edges',
@@ -155,8 +243,7 @@ class ChallengePuzzle {
         id: `edge-${sourceId}-${targetId}`,
         source: sourceId, 
         target: targetId,
-        userCreated: true,
-        isCorrect: isCorrect
+        userCreated: true
       }
     });
     
@@ -184,7 +271,6 @@ class ChallengePuzzle {
   initPlacementChallenge() {
     const canvasId = `${this.containerId}-canvas`;
     
-    // Create elements with edges but scrambled node positions
     const elements = [
       ...this.challengeData.nodes.map(n => ({
         data: n,
@@ -198,41 +284,47 @@ class ChallengePuzzle {
       elements: elements,
       style: this.getPlacementChallengeStyles(),
       layout: { name: 'preset' },
-      userZoomingEnabled: false,
-      userPanningEnabled: false,
-      boxSelectionEnabled: false
+      userZoomingEnabled: true,
+      userPanningEnabled: true,
+      boxSelectionEnabled: false,
+      minZoom: 0.5,
+      maxZoom: 2
     });
     
-    // Store original scrambled positions for reset
+    // Fit to viewport
+    setTimeout(() => {
+      this.cy.fit(undefined, 40);
+      this.cy.center();
+    }, 50);
+    
     this.originalPositions = {};
     this.cy.nodes().forEach(node => {
       this.originalPositions[node.id()] = { ...node.position() };
-    });
-    
-    // Enable dragging
-    this.cy.nodes().forEach(node => {
       node.grabify();
     });
     
-    // Track when nodes are moved
     this.cy.on('dragfree', 'node', () => this.updateProgress());
     
-    // Setup control buttons
+    // Hover tooltips
+    this.cy.on('mouseover', 'node', (e) => this.showTooltip(e.target, e));
+    this.cy.on('mouseout', 'node', () => this.hideTooltip());
+    
     this.container.querySelector('.puzzle-reset')?.addEventListener('click', () => this.resetPositions());
+    this.container.querySelector('.puzzle-fit')?.addEventListener('click', () => {
+      this.cy.fit(undefined, 40);
+      this.cy.center();
+    });
     this.container.querySelector('.puzzle-check')?.addEventListener('click', () => this.checkAnswer());
   }
   
   getScrambledPosition(nodeId) {
-    // Find the correct position
-    const correct = this.challengeData.solution.positions.find(p => p.id === nodeId);
     const canvas = this.container.querySelector('.puzzle-canvas');
     const width = canvas?.offsetWidth || 400;
     const height = canvas?.offsetHeight || 300;
     
-    // Return a random position (scrambled)
     return {
-      x: 50 + Math.random() * (width - 100),
-      y: 50 + Math.random() * (height - 100)
+      x: 80 + Math.random() * (width - 160),
+      y: 60 + Math.random() * (height - 120)
     };
   }
   
@@ -240,6 +332,7 @@ class ChallengePuzzle {
     this.cy.nodes().forEach(node => {
       node.position(this.originalPositions[node.id()]);
     });
+    this.cy.fit(undefined, 40);
     this.updateProgress();
   }
   
@@ -257,7 +350,6 @@ class ChallengePuzzle {
     let total = this.getTargetCount();
     
     if (this.challengeData.type === 'connect-edges') {
-      // Count correct edges
       this.userEdges.forEach(edgeKey => {
         const [source, target] = edgeKey.split('->');
         const reverseKey = `${target}->${source}`;
@@ -266,24 +358,14 @@ class ChallengePuzzle {
         }
       });
     } else {
-      // Count correctly placed nodes
       this.cy.nodes().forEach(node => {
-        if (this.isNodeCorrectlyPlaced(node)) {
-          correct++;
-        }
+        if (this.isNodeCorrectlyPlaced(node)) correct++;
       });
     }
     
-    // Update progress text
     const progressText = this.container.querySelector('.progress-text');
     if (progressText) {
       progressText.textContent = `${correct}/${total} correct`;
-    }
-    
-    // Enable check button when user has made attempts
-    const checkBtn = this.container.querySelector('.puzzle-check');
-    if (checkBtn) {
-      checkBtn.disabled = this.userEdges.size === 0 && this.challengeData.type === 'connect-edges';
     }
     
     this.options.onProgress({ correct, total });
@@ -294,7 +376,7 @@ class ChallengePuzzle {
     if (!solution) return false;
     
     const pos = node.position();
-    const tolerance = 50; // pixels
+    const tolerance = 50;
     
     return Math.abs(pos.x - solution.x) < tolerance && 
            Math.abs(pos.y - solution.y) < tolerance;
@@ -308,7 +390,6 @@ class ChallengePuzzle {
     let incorrect = 0;
     
     if (this.challengeData.type === 'connect-edges') {
-      // Check edges
       const userEdgeKeys = Array.from(this.userEdges);
       
       userEdgeKeys.forEach(edgeKey => {
@@ -316,22 +397,17 @@ class ChallengePuzzle {
         const reverseKey = `${target}->${source}`;
         if (this.correctEdges.has(edgeKey) || this.correctEdges.has(reverseKey)) {
           correct++;
-          // Mark edge as correct
           this.cy.edges(`[source="${source}"][target="${target}"]`).addClass('correct');
         } else {
           incorrect++;
-          // Mark edge as incorrect
           this.cy.edges(`[source="${source}"][target="${target}"]`).addClass('incorrect');
         }
       });
       
-      // Check for missing edges
       const missing = total - correct;
-      
       this.showFeedback(correct, total, incorrect, missing);
       
     } else {
-      // Check node positions
       this.cy.nodes().forEach(node => {
         if (this.isNodeCorrectlyPlaced(node)) {
           correct++;
@@ -345,7 +421,6 @@ class ChallengePuzzle {
       this.showFeedback(correct, total, incorrect, 0);
     }
     
-    // If perfect score, mark complete
     if (correct === total && incorrect === 0) {
       this.isComplete = true;
       this.options.onComplete({
@@ -360,7 +435,6 @@ class ChallengePuzzle {
     const feedbackEl = this.container.querySelector('.puzzle-feedback');
     if (!feedbackEl) return;
     
-    const score = Math.round((correct / total) * 100);
     const isPerfect = correct === total && incorrect === 0;
     
     let message = '';
@@ -371,8 +445,8 @@ class ChallengePuzzle {
       className = 'success';
     } else if (correct > 0) {
       message = `${correct}/${total} correct`;
-      if (incorrect > 0) message += `, ${incorrect} wrong`;
-      if (missing > 0) message += `, ${missing} missing`;
+      if (incorrect > 0) message += ` • ${incorrect} wrong`;
+      if (missing > 0) message += ` • ${missing} missing`;
       className = 'partial';
     } else {
       message = `Not quite right. Try again!`;
@@ -387,12 +461,11 @@ class ChallengePuzzle {
     `;
     feedbackEl.classList.add('visible');
     
-    // Clear incorrect markers after a delay so user can try again
     if (!isPerfect) {
       setTimeout(() => {
         this.cy.elements().removeClass('incorrect');
         feedbackEl.classList.remove('visible');
-      }, 2000);
+      }, 2500);
     }
   }
   
@@ -412,13 +485,21 @@ class ChallengePuzzle {
           'border-width': 2,
           'border-color': '#7986cb',
           'color': '#e8e8f0',
-          'font-size': '12px',
-          'width': 80,
-          'height': 40,
+          'font-size': '11px',
+          'width': 90,
+          'height': 45,
           'shape': 'roundrectangle',
           'text-wrap': 'wrap',
-          'text-max-width': '70px',
-          'cursor': 'pointer'
+          'text-max-width': '80px',
+          'cursor': 'pointer',
+          'transition-property': 'border-color, border-width, background-color',
+          'transition-duration': '0.2s'
+        }
+      },
+      {
+        selector: 'node:active',
+        style: {
+          'overlay-opacity': 0
         }
       },
       {
@@ -433,11 +514,13 @@ class ChallengePuzzle {
         selector: 'edge',
         style: {
           'width': 2,
-          'line-color': '#666',
-          'target-arrow-color': '#666',
+          'line-color': '#7986cb',
+          'target-arrow-color': '#7986cb',
           'target-arrow-shape': 'triangle',
           'curve-style': 'bezier',
-          'arrow-scale': 1.2
+          'arrow-scale': 1.2,
+          'transition-property': 'line-color, target-arrow-color, width',
+          'transition-duration': '0.2s'
         }
       },
       {
@@ -471,13 +554,15 @@ class ChallengePuzzle {
           'border-width': 2,
           'border-color': '#7986cb',
           'color': '#e8e8f0',
-          'font-size': '12px',
-          'width': 80,
-          'height': 40,
+          'font-size': '11px',
+          'width': 90,
+          'height': 45,
           'shape': 'roundrectangle',
           'text-wrap': 'wrap',
-          'text-max-width': '70px',
-          'cursor': 'grab'
+          'text-max-width': '80px',
+          'cursor': 'grab',
+          'transition-property': 'border-color, background-color',
+          'transition-duration': '0.2s'
         }
       },
       {
@@ -515,5 +600,4 @@ class ChallengePuzzle {
   }
 }
 
-// Export
 window.ChallengePuzzle = ChallengePuzzle;

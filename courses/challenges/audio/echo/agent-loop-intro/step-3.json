@@ -1,0 +1,60 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-3",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Act. The agent takes action, executing part of its plan.",
+  "duration": 4.840000152587891,
+  "words": [
+    {
+      "word": "Act",
+      "start": 0,
+      "end": 0.5400000214576721
+    },
+    {
+      "word": "The",
+      "start": 1.440000057220459,
+      "end": 1.5
+    },
+    {
+      "word": "agent",
+      "start": 1.5,
+      "end": 1.7799999713897705
+    },
+    {
+      "word": "takes",
+      "start": 1.7799999713897705,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "action",
+      "start": 2.140000104904175,
+      "end": 2.619999885559082
+    },
+    {
+      "word": "executing",
+      "start": 3.799999952316284,
+      "end": 3.799999952316284
+    },
+    {
+      "word": "part",
+      "start": 3.799999952316284,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "of",
+      "start": 4.099999904632568,
+      "end": 4.21999979019165
+    },
+    {
+      "word": "its",
+      "start": 4.21999979019165,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "plan",
+      "start": 4.380000114440918,
+      "end": 4.699999809265137
+    }
+  ]
+}

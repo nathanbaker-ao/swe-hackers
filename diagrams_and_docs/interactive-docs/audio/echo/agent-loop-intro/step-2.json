@@ -1,0 +1,75 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Plan. Thinking leads to planning - deciding the next steps to achieve the goal.",
+  "duration": 5.849999904632568,
+  "words": [
+    {
+      "word": "Plan",
+      "start": 0,
+      "end": 0.7400000095367432
+    },
+    {
+      "word": "Thinking",
+      "start": 1.840000033378601,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "leads",
+      "start": 1.840000033378601,
+      "end": 2.0999999046325684
+    },
+    {
+      "word": "to",
+      "start": 2.0999999046325684,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "planning",
+      "start": 2.440000057220459,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "deciding",
+      "start": 3.5799999237060547,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.5799999237060547,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "next",
+      "start": 3.8399999141693115,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "steps",
+      "start": 4.139999866485596,
+      "end": 4.360000133514404
+    },
+    {
+      "word": "to",
+      "start": 4.360000133514404,
+      "end": 4.659999847412109
+    },
+    {
+      "word": "achieve",
+      "start": 4.659999847412109,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "the",
+      "start": 4.980000019073486,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "goal",
+      "start": 5.360000133514404,
+      "end": 5.440000057220459
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Context. Context is the secret sauce. It gives the AI the background it needs to truly understand.",
+  "duration": 8.760000228881836,
+  "words": [
+    {
+      "word": "Context",
+      "start": 0,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "Context",
+      "start": 2.140000104904175,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "is",
+      "start": 2.140000104904175,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "the",
+      "start": 2.440000057220459,
+      "end": 2.680000066757202
+    },
+    {
+      "word": "secret",
+      "start": 2.680000066757202,
+      "end": 3.0199999809265137
+    },
+    {
+      "word": "source",
+      "start": 3.0199999809265137,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "It",
+      "start": 4.460000038146973,
+      "end": 4.480000019073486
+    },
+    {
+      "word": "gives",
+      "start": 4.480000019073486,
+      "end": 4.71999979019165
+    },
+    {
+      "word": "the",
+      "start": 4.71999979019165,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "AI",
+      "start": 4.920000076293945,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "the",
+      "start": 5.260000228881836,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "background",
+      "start": 5.739999771118164,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "it",
+      "start": 6.019999980926514,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "needs",
+      "start": 6.480000019073486,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "to",
+      "start": 6.659999847412109,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "truly",
+      "start": 7.239999771118164,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "understand",
+      "start": 7.71999979019165,
+      "end": 8.359999656677246
+    }
+  ]
+}

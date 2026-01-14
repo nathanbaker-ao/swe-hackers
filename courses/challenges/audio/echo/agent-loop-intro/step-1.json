@@ -1,0 +1,75 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-1",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Think. With observations in hand, the agent thinks - reasoning about what it sees.",
+  "duration": 6.159999847412109,
+  "words": [
+    {
+      "word": "Think",
+      "start": 0,
+      "end": 0.9200000166893005
+    },
+    {
+      "word": "with",
+      "start": 1.4600000381469727,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "observations",
+      "start": 1.5800000429153442,
+      "end": 2.200000047683716
+    },
+    {
+      "word": "in",
+      "start": 2.200000047683716,
+      "end": 2.7200000286102295
+    },
+    {
+      "word": "hand",
+      "start": 2.7200000286102295,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "the",
+      "start": 3.2799999713897705,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "agent",
+      "start": 3.380000114440918,
+      "end": 3.7200000286102295
+    },
+    {
+      "word": "thinks",
+      "start": 3.7200000286102295,
+      "end": 4.119999885559082
+    },
+    {
+      "word": "reasoning",
+      "start": 4.900000095367432,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "about",
+      "start": 4.900000095367432,
+      "end": 5.260000228881836
+    },
+    {
+      "word": "what",
+      "start": 5.260000228881836,
+      "end": 5.400000095367432
+    },
+    {
+      "word": "it",
+      "start": 5.400000095367432,
+      "end": 5.619999885559082
+    },
+    {
+      "word": "sees",
+      "start": 5.619999885559082,
+      "end": 5.920000076293945
+    }
+  ]
+}

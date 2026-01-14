@@ -1,0 +1,80 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-1",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Embeddings. Your query gets converted into a numerical vector - a mathematical representation of meaning.",
+  "duration": 8.949999809265137,
+  "words": [
+    {
+      "word": "embeddings",
+      "start": 0,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Your",
+      "start": 1.159999966621399,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "query",
+      "start": 1.840000033378601,
+      "end": 2.1600000858306885
+    },
+    {
+      "word": "gets",
+      "start": 2.1600000858306885,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "converted",
+      "start": 2.559999942779541,
+      "end": 3.059999942779541
+    },
+    {
+      "word": "into",
+      "start": 3.059999942779541,
+      "end": 3.4800000190734863
+    },
+    {
+      "word": "a",
+      "start": 3.4800000190734863,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "numerical",
+      "start": 3.8399999141693115,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "vector",
+      "start": 4.179999828338623,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "a",
+      "start": 5.5,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "mathematical",
+      "start": 5.800000190734863,
+      "end": 6.28000020980835
+    },
+    {
+      "word": "representation",
+      "start": 6.28000020980835,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "of",
+      "start": 6.960000038146973,
+      "end": 7.739999771118164
+    },
+    {
+      "word": "meaning",
+      "start": 7.739999771118164,
+      "end": 8.100000381469727
+    }
+  ]
+}

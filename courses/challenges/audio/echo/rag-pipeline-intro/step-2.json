@@ -1,0 +1,90 @@
+{
+  "storyId": "rag-pipeline-intro",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Vector Database. This vector searches a database of pre-embedded documents, finding the most similar matches.",
+  "duration": 7.409999847412109,
+  "words": [
+    {
+      "word": "Vector",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "database",
+      "start": 0.5600000023841858,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "This",
+      "start": 2.0399999618530273,
+      "end": 2.140000104904175
+    },
+    {
+      "word": "vector",
+      "start": 2.140000104904175,
+      "end": 2.440000057220459
+    },
+    {
+      "word": "searches",
+      "start": 2.440000057220459,
+      "end": 2.8399999141693115
+    },
+    {
+      "word": "a",
+      "start": 2.8399999141693115,
+      "end": 3.140000104904175
+    },
+    {
+      "word": "database",
+      "start": 3.140000104904175,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "of",
+      "start": 3.4600000381469727,
+      "end": 3.940000057220459
+    },
+    {
+      "word": "pre",
+      "start": 3.940000057220459,
+      "end": 4.179999828338623
+    },
+    {
+      "word": "embedded",
+      "start": 4.179999828338623,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "documents",
+      "start": 4.440000057220459,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "finding",
+      "start": 5.71999979019165,
+      "end": 5.71999979019165
+    },
+    {
+      "word": "the",
+      "start": 5.71999979019165,
+      "end": 5.960000038146973
+    },
+    {
+      "word": "most",
+      "start": 5.960000038146973,
+      "end": 6.199999809265137
+    },
+    {
+      "word": "similar",
+      "start": 6.199999809265137,
+      "end": 6.519999980926514
+    },
+    {
+      "word": "matches",
+      "start": 6.519999980926514,
+      "end": 6.880000114440918
+    }
+  ]
+}

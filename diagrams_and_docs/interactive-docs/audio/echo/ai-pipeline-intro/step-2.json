@@ -1,0 +1,95 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-2",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "Context. Context is the secret sauce. It gives the AI the background it needs to truly understand.",
+  "duration": 7.409999847412109,
+  "words": [
+    {
+      "word": "Context",
+      "start": 0,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "Context",
+      "start": 2.0199999809265137,
+      "end": 2.0199999809265137
+    },
+    {
+      "word": "is",
+      "start": 2.0199999809265137,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "the",
+      "start": 2.240000009536743,
+      "end": 2.4600000381469727
+    },
+    {
+      "word": "secret",
+      "start": 2.4600000381469727,
+      "end": 2.759999990463257
+    },
+    {
+      "word": "sauce",
+      "start": 2.759999990463257,
+      "end": 3.240000009536743
+    },
+    {
+      "word": "It",
+      "start": 3.819999933242798,
+      "end": 3.859999895095825
+    },
+    {
+      "word": "gives",
+      "start": 3.859999895095825,
+      "end": 4.079999923706055
+    },
+    {
+      "word": "the",
+      "start": 4.079999923706055,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "AI",
+      "start": 4.28000020980835,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "the",
+      "start": 4.579999923706055,
+      "end": 4.900000095367432
+    },
+    {
+      "word": "background",
+      "start": 4.900000095367432,
+      "end": 5.21999979019165
+    },
+    {
+      "word": "it",
+      "start": 5.21999979019165,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "needs",
+      "start": 5.519999980926514,
+      "end": 5.78000020980835
+    },
+    {
+      "word": "to",
+      "start": 5.78000020980835,
+      "end": 6.179999828338623
+    },
+    {
+      "word": "truly",
+      "start": 6.179999828338623,
+      "end": 6.599999904632568
+    },
+    {
+      "word": "understand",
+      "start": 6.599999904632568,
+      "end": 7.079999923706055
+    }
+  ]
+}

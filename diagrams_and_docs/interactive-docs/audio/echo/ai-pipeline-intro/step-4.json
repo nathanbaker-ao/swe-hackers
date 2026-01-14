@@ -1,0 +1,125 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-4",
+  "voice": "echo",
+  "voiceLabel": "Storyteller (Male UK)",
+  "text": "The Response. And out comes the response - shaped by how well you crafted the input. Now it's your turn to connect the flow!",
+  "duration": 9.039999961853027,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.5
+    },
+    {
+      "word": "response",
+      "start": 0.5,
+      "end": 1.100000023841858
+    },
+    {
+      "word": "And",
+      "start": 1.5399999618530273,
+      "end": 1.659999966621399
+    },
+    {
+      "word": "out",
+      "start": 1.659999966621399,
+      "end": 1.9800000190734863
+    },
+    {
+      "word": "comes",
+      "start": 1.9800000190734863,
+      "end": 2.240000009536743
+    },
+    {
+      "word": "the",
+      "start": 2.240000009536743,
+      "end": 2.5799999237060547
+    },
+    {
+      "word": "response",
+      "start": 2.5799999237060547,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "shaped",
+      "start": 3.6600000858306885,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "by",
+      "start": 3.6600000858306885,
+      "end": 4
+    },
+    {
+      "word": "how",
+      "start": 4,
+      "end": 4.300000190734863
+    },
+    {
+      "word": "well",
+      "start": 4.300000190734863,
+      "end": 4.559999942779541
+    },
+    {
+      "word": "you",
+      "start": 4.559999942779541,
+      "end": 4.880000114440918
+    },
+    {
+      "word": "crafted",
+      "start": 4.880000114440918,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "the",
+      "start": 5.199999809265137,
+      "end": 5.559999942779541
+    },
+    {
+      "word": "input",
+      "start": 5.559999942779541,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "Now",
+      "start": 6.260000228881836,
+      "end": 6.5
+    },
+    {
+      "word": "it's",
+      "start": 6.5,
+      "end": 6.679999828338623
+    },
+    {
+      "word": "your",
+      "start": 6.679999828338623,
+      "end": 6.980000019073486
+    },
+    {
+      "word": "turn",
+      "start": 6.980000019073486,
+      "end": 7.119999885559082
+    },
+    {
+      "word": "to",
+      "start": 7.119999885559082,
+      "end": 7.599999904632568
+    },
+    {
+      "word": "connect",
+      "start": 7.599999904632568,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "the",
+      "start": 7.960000038146973,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "flow",
+      "start": 8.239999771118164,
+      "end": 8.460000038146973
+    }
+  ]
+}

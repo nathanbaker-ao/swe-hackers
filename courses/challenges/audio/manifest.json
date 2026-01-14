@@ -10,866 +10,2966 @@
     }
   },
   "defaultVoice": "ballad",
-  "generatedAt": "2026-01-14T05:04:32.632Z",
+  "generatedAt": "2026-01-14T05:45:54.513Z",
   "stories": [
-    "prompt-craft-intro",
-    "context-engineering-intro",
-    "visual-challenge-intro"
+    "ai-pipeline-intro",
+    "rag-pipeline-intro",
+    "agent-loop-intro"
   ],
   "ballad": {
-    "prompt-craft-intro": {
-      "0": {
-        "storyId": "prompt-craft-intro",
+    "ai-pipeline-intro": [
+      {
+        "storyId": "ai-pipeline-intro",
         "stepId": "step-0",
         "voice": "ballad",
         "voiceLabel": "Storyteller (Female)",
-        "text": "Your Thinking. The prompt is how you translate your thinking into AI instructions.",
-        "duration": 7.650000095367432,
+        "text": "User Input. Everything begins with you - the user. Your intent, your question, your goal.",
+        "duration": 6.860000133514404,
         "words": [
           {
-            "word": "Your",
+            "word": "Everything",
             "start": 0,
-            "end": 0.8799999952316284
+            "end": 0.6800000071525574
           },
           {
-            "word": "thinking",
-            "start": 0.8799999952316284,
-            "end": 1.3200000524520874
+            "word": "begins",
+            "start": 0.6800000071525574,
+            "end": 1.2000000476837158
           },
           {
-            "word": "The",
-            "start": 2.180000066757202,
-            "end": 2.440000057220459
-          },
-          {
-            "word": "prompt",
-            "start": 2.440000057220459,
-            "end": 2.7200000286102295
-          },
-          {
-            "word": "is",
-            "start": 2.7200000286102295,
-            "end": 3.200000047683716
-          },
-          {
-            "word": "how",
-            "start": 3.200000047683716,
-            "end": 3.380000114440918
+            "word": "with",
+            "start": 1.2000000476837158,
+            "end": 1.5800000429153442
           },
           {
             "word": "you",
-            "start": 3.380000114440918,
-            "end": 3.680000066757202
+            "start": 1.5800000429153442,
+            "end": 1.8799999952316284
           },
           {
-            "word": "translate",
-            "start": 3.680000066757202,
-            "end": 4.179999828338623
+            "word": "the",
+            "start": 2.380000114440918,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "user",
+            "start": 2.559999942779541,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "Your",
+            "start": 3.859999895095825,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "intent",
+            "start": 3.9200000762939453,
+            "end": 4.380000114440918
           },
           {
             "word": "your",
-            "start": 4.179999828338623,
-            "end": 4.5
+            "start": 4.820000171661377,
+            "end": 5.300000190734863
           },
           {
-            "word": "thinking",
-            "start": 4.5,
-            "end": 4.840000152587891
+            "word": "question",
+            "start": 5.300000190734863,
+            "end": 5.5
           },
           {
-            "word": "into",
-            "start": 4.840000152587891,
-            "end": 5.460000038146973
+            "word": "your",
+            "start": 6.039999961853027,
+            "end": 6.320000171661377
           },
           {
-            "word": "AI",
-            "start": 5.460000038146973,
-            "end": 5.920000076293945
-          },
-          {
-            "word": "instructions",
-            "start": 5.920000076293945,
-            "end": 6.460000038146973
+            "word": "goal",
+            "start": 6.320000171661377,
+            "end": 6.659999847412109
           }
         ]
       },
-      "1": {
-        "storyId": "prompt-craft-intro",
+      {
+        "storyId": "ai-pipeline-intro",
         "stepId": "step-1",
         "voice": "ballad",
         "voiceLabel": "Storyteller (Female)",
-        "text": "Great Output. A great prompt leads to a great output. Let's craft one.",
-        "duration": 5.900000095367432,
+        "text": "The Prompt. Your intent becomes a prompt - carefully crafted instructions that tell the AI what you need.",
+        "duration": 8.5600004196167,
         "words": [
           {
-            "word": "Great",
+            "word": "The",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "prompt",
+            "start": 0.5,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Your",
+            "start": 1.7000000476837158,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "intent",
+            "start": 1.8799999952316284,
+            "end": 2.319999933242798
+          },
+          {
+            "word": "becomes",
+            "start": 2.319999933242798,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "a",
+            "start": 2.859999895095825,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "prompt",
+            "start": 3.440000057220459,
+            "end": 3.440000057220459
+          },
+          {
+            "word": "Carefully",
+            "start": 4.460000038146973,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "crafted",
+            "start": 4.599999904632568,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "instructions",
+            "start": 5.119999885559082,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "that",
+            "start": 5.800000190734863,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "tell",
+            "start": 6.340000152587891,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 6.579999923706055,
+            "end": 6.840000152587891
+          },
+          {
+            "word": "AI",
+            "start": 6.840000152587891,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "what",
+            "start": 7.139999866485596,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "you",
+            "start": 7.679999828338623,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "need",
+            "start": 7.960000038146973,
+            "end": 8.260000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Context. Context is the secret sauce. It gives the AI the background it needs to truly understand.",
+        "duration": 8.760000228881836,
+        "words": [
+          {
+            "word": "Context",
+            "start": 0,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "Context",
+            "start": 2.140000104904175,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "is",
+            "start": 2.140000104904175,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 2.440000057220459,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "secret",
+            "start": 2.680000066757202,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "source",
+            "start": 3.0199999809265137,
+            "end": 3.5799999237060547
+          },
+          {
+            "word": "It",
+            "start": 4.460000038146973,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "gives",
+            "start": 4.480000019073486,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 4.71999979019165,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "AI",
+            "start": 4.920000076293945,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 5.260000228881836,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "background",
+            "start": 5.739999771118164,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "it",
+            "start": 6.019999980926514,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "needs",
+            "start": 6.480000019073486,
+            "end": 6.659999847412109
+          },
+          {
+            "word": "to",
+            "start": 6.659999847412109,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "truly",
+            "start": 7.239999771118164,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "understand",
+            "start": 7.71999979019165,
+            "end": 8.359999656677246
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The LLM. The large language model receives your prompt and context, processing them together.",
+        "duration": 6.760000228881836,
+        "words": [
+          {
+            "word": "The",
             "start": 0,
             "end": 0.41999998688697815
           },
           {
-            "word": "output",
+            "word": "LLM",
             "start": 0.41999998688697815,
-            "end": 0.7799999713897705
-          },
-          {
-            "word": "A",
-            "start": 1.559999942779541,
-            "end": 1.6799999475479126
-          },
-          {
-            "word": "great",
-            "start": 1.6799999475479126,
-            "end": 2.0199999809265137
-          },
-          {
-            "word": "prompt",
-            "start": 2.0199999809265137,
-            "end": 2.359999895095825
-          },
-          {
-            "word": "leads",
-            "start": 2.359999895095825,
-            "end": 3.0999999046325684
-          },
-          {
-            "word": "to",
-            "start": 3.0999999046325684,
-            "end": 3.2799999713897705
-          },
-          {
-            "word": "a",
-            "start": 3.2799999713897705,
-            "end": 3.5199999809265137
-          },
-          {
-            "word": "great",
-            "start": 3.5199999809265137,
-            "end": 3.799999952316284
-          },
-          {
-            "word": "output",
-            "start": 3.799999952316284,
-            "end": 4.159999847412109
-          },
-          {
-            "word": "Let's",
-            "start": 5.059999942779541,
-            "end": 5.260000228881836
-          },
-          {
-            "word": "craft",
-            "start": 5.260000228881836,
-            "end": 5.5
-          },
-          {
-            "word": "one",
-            "start": 5.5,
-            "end": 5.760000228881836
-          }
-        ]
-      }
-    },
-    "context-engineering-intro": {
-      "0": {
-        "storyId": "context-engineering-intro",
-        "stepId": "step-0",
-        "voice": "ballad",
-        "voiceLabel": "Storyteller (Female)",
-        "text": "The Right Context. AI can't read your mind. It needs the right context to understand your problem.",
-        "duration": 8.0600004196167,
-        "words": [
-          {
-            "word": "The",
-            "start": 0,
-            "end": 0.3799999952316284
-          },
-          {
-            "word": "right",
-            "start": 0.3799999952316284,
-            "end": 0.8799999952316284
-          },
-          {
-            "word": "context",
-            "start": 0.8799999952316284,
-            "end": 1.5
-          },
-          {
-            "word": "AI",
-            "start": 2.640000104904175,
-            "end": 2.9000000953674316
-          },
-          {
-            "word": "can't",
-            "start": 2.9000000953674316,
-            "end": 3.4000000953674316
-          },
-          {
-            "word": "read",
-            "start": 3.4000000953674316,
-            "end": 3.6600000858306885
-          },
-          {
-            "word": "your",
-            "start": 3.6600000858306885,
-            "end": 4.139999866485596
-          },
-          {
-            "word": "mind",
-            "start": 4.139999866485596,
-            "end": 4.139999866485596
-          },
-          {
-            "word": "It",
-            "start": 4.820000171661377,
-            "end": 4.900000095367432
-          },
-          {
-            "word": "needs",
-            "start": 4.900000095367432,
-            "end": 5.119999885559082
-          },
-          {
-            "word": "the",
-            "start": 5.119999885559082,
-            "end": 5.340000152587891
-          },
-          {
-            "word": "right",
-            "start": 5.340000152587891,
-            "end": 5.840000152587891
-          },
-          {
-            "word": "context",
-            "start": 5.840000152587891,
-            "end": 6.139999866485596
-          },
-          {
-            "word": "to",
-            "start": 6.139999866485596,
-            "end": 6.71999979019165
-          },
-          {
-            "word": "understand",
-            "start": 6.71999979019165,
-            "end": 7.239999771118164
-          },
-          {
-            "word": "your",
-            "start": 7.239999771118164,
-            "end": 7.519999980926514
-          },
-          {
-            "word": "problem",
-            "start": 7.519999980926514,
-            "end": 7.78000020980835
-          }
-        ]
-      },
-      "1": {
-        "storyId": "context-engineering-intro",
-        "stepId": "step-1",
-        "voice": "ballad",
-        "voiceLabel": "Storyteller (Female)",
-        "text": "Accuracy Follows. Structure your context well, and accuracy follows naturally.",
-        "duration": 7.050000190734863,
-        "words": [
-          {
-            "word": "Accuracy",
-            "start": 0,
             "end": 1.2999999523162842
           },
           {
-            "word": "follows",
-            "start": 1.2999999523162842,
-            "end": 1.7799999713897705
+            "word": "the",
+            "start": 1.7799999713897705,
+            "end": 1.8600000143051147
           },
           {
-            "word": "Structure",
-            "start": 2.619999885559082,
-            "end": 3
-          },
-          {
-            "word": "your",
-            "start": 3,
-            "end": 3.5
-          },
-          {
-            "word": "context",
-            "start": 3.5,
-            "end": 3.940000057220459
-          },
-          {
-            "word": "well",
-            "start": 3.940000057220459,
-            "end": 4.360000133514404
-          },
-          {
-            "word": "and",
-            "start": 4.360000133514404,
-            "end": 5.340000152587891
-          },
-          {
-            "word": "accuracy",
-            "start": 5.340000152587891,
-            "end": 5.71999979019165
-          },
-          {
-            "word": "follows",
-            "start": 5.71999979019165,
-            "end": 6.320000171661377
-          },
-          {
-            "word": "naturally",
-            "start": 6.320000171661377,
-            "end": 6.800000190734863
-          }
-        ]
-      }
-    },
-    "visual-challenge-intro": {
-      "0": {
-        "storyId": "visual-challenge-intro",
-        "stepId": "step-0",
-        "voice": "ballad",
-        "voiceLabel": "Storyteller (Female)",
-        "text": "Motion Stories. Every visualization tells a story through motion.",
-        "duration": 5.349999904632568,
-        "words": [
-          {
-            "word": "Motion",
-            "start": 0,
-            "end": 0.6399999856948853
-          },
-          {
-            "word": "stories",
-            "start": 0.6399999856948853,
-            "end": 1.2200000286102295
-          },
-          {
-            "word": "Every",
-            "start": 1.840000033378601,
-            "end": 2.259999990463257
-          },
-          {
-            "word": "visualization",
-            "start": 2.259999990463257,
-            "end": 3.0999999046325684
-          },
-          {
-            "word": "tells",
-            "start": 3.0999999046325684,
-            "end": 3.5799999237060547
-          },
-          {
-            "word": "a",
-            "start": 3.5799999237060547,
-            "end": 4
-          },
-          {
-            "word": "story",
-            "start": 4,
-            "end": 4.099999904632568
-          },
-          {
-            "word": "through",
-            "start": 4.099999904632568,
-            "end": 4.559999942779541
-          },
-          {
-            "word": "motion",
-            "start": 4.559999942779541,
-            "end": 4.940000057220459
-          }
-        ]
-      },
-      "1": {
-        "storyId": "visual-challenge-intro",
-        "stepId": "step-1",
-        "voice": "ballad",
-        "voiceLabel": "Storyteller (Female)",
-        "text": "Feel It. Transform your concept into something users can feel.",
-        "duration": 7.199999809265137,
-        "words": [
-          {
-            "word": "Feel",
-            "start": 1.399999976158142,
+            "word": "large",
+            "start": 1.8600000143051147,
             "end": 2.2200000286102295
           },
           {
-            "word": "it",
+            "word": "language",
             "start": 2.2200000286102295,
-            "end": 2.4000000953674316
+            "end": 2.5999999046325684
           },
           {
-            "word": "transform",
-            "start": 3.200000047683716,
+            "word": "model",
+            "start": 2.5999999046325684,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "receives",
+            "start": 2.9000000953674316,
             "end": 3.440000057220459
           },
           {
             "word": "your",
             "start": 3.440000057220459,
-            "end": 3.859999895095825
+            "end": 3.740000009536743
           },
           {
-            "word": "concept",
-            "start": 3.859999895095825,
-            "end": 4.260000228881836
+            "word": "prompt",
+            "start": 3.740000009536743,
+            "end": 3.9600000381469727
           },
           {
-            "word": "into",
-            "start": 4.260000228881836,
+            "word": "and",
+            "start": 3.9600000381469727,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "context",
+            "start": 4.420000076293945,
             "end": 4.900000095367432
           },
           {
-            "word": "something",
-            "start": 4.900000095367432,
-            "end": 5.420000076293945
+            "word": "processing",
+            "start": 5.760000228881836,
+            "end": 5.760000228881836
           },
           {
-            "word": "users",
-            "start": 5.420000076293945,
-            "end": 5.960000038146973
+            "word": "them",
+            "start": 5.760000228881836,
+            "end": 6.139999866485596
           },
           {
-            "word": "can",
-            "start": 5.960000038146973,
-            "end": 6.360000133514404
+            "word": "together",
+            "start": 6.139999866485596,
+            "end": 6.519999980926514
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The Response. And out comes the response - shaped by how well you crafted the input. Now it's your turn to connect the flow!",
+        "duration": 9.449999809265137,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.25999999046325684
           },
           {
-            "word": "feel",
-            "start": 6.360000133514404,
-            "end": 6.699999809265137
+            "word": "response",
+            "start": 0.25999999046325684,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "And",
+            "start": 1.5,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "out",
+            "start": 1.6799999475479126,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "comes",
+            "start": 2.0199999809265137,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "the",
+            "start": 2.240000009536743,
+            "end": 3
+          },
+          {
+            "word": "response",
+            "start": 3,
+            "end": 3
+          },
+          {
+            "word": "shaped",
+            "start": 3.680000066757202,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "by",
+            "start": 3.700000047683716,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "how",
+            "start": 4.039999961853027,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "well",
+            "start": 4.320000171661377,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "you",
+            "start": 4.539999961853027,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "crafted",
+            "start": 4.800000190734863,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "the",
+            "start": 5.099999904632568,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "input",
+            "start": 5.659999847412109,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "Now",
+            "start": 6.400000095367432,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "it's",
+            "start": 6.840000152587891,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "your",
+            "start": 7.21999979019165,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "turn",
+            "start": 7.579999923706055,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "to",
+            "start": 7.840000152587891,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "connect",
+            "start": 8.319999694824219,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 8.539999961853027,
+            "end": 8.800000190734863
+          },
+          {
+            "word": "flow",
+            "start": 8.800000190734863,
+            "end": 9.039999961853027
           }
         ]
       }
-    }
-  },
-  "echo": {
-    "prompt-craft-intro": {
-      "0": {
-        "storyId": "prompt-craft-intro",
+    ],
+    "rag-pipeline-intro": [
+      {
+        "storyId": "rag-pipeline-intro",
         "stepId": "step-0",
-        "voice": "echo",
-        "voiceLabel": "Storyteller (Male UK)",
-        "text": "Your Thinking. The prompt is how you translate your thinking into AI instructions.",
-        "duration": 7.650000095367432,
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Your Query. It starts with a question - something you need answered using your own data.",
+        "duration": 6.760000228881836,
         "words": [
           {
             "word": "Your",
             "start": 0,
-            "end": 1.2599999904632568
+            "end": 0.5
           },
           {
-            "word": "Thinking",
-            "start": 1.2599999904632568,
-            "end": 1.659999966621399
+            "word": "query",
+            "start": 0.5,
+            "end": 0.8600000143051147
           },
           {
-            "word": "The",
+            "word": "It",
+            "start": 1.9199999570846558,
+            "end": 1.9199999570846558
+          },
+          {
+            "word": "starts",
+            "start": 1.9199999570846558,
+            "end": 2.2200000286102295
+          },
+          {
+            "word": "with",
             "start": 2.2200000286102295,
-            "end": 2.4000000953674316
+            "end": 2.4600000381469727
           },
           {
-            "word": "prompt",
-            "start": 2.4000000953674316,
-            "end": 2.640000104904175
+            "word": "a",
+            "start": 2.4600000381469727,
+            "end": 3.0999999046325684
           },
           {
-            "word": "is",
-            "start": 2.640000104904175,
-            "end": 2.859999895095825
+            "word": "question",
+            "start": 3.0999999046325684,
+            "end": 3.0999999046325684
           },
           {
-            "word": "how",
-            "start": 2.859999895095825,
-            "end": 2.9800000190734863
+            "word": "something",
+            "start": 3.680000066757202,
+            "end": 3.9800000190734863
           },
           {
             "word": "you",
-            "start": 2.9800000190734863,
-            "end": 3.259999990463257
+            "start": 3.9800000190734863,
+            "end": 4.320000171661377
           },
           {
-            "word": "translate",
-            "start": 3.259999990463257,
+            "word": "need",
+            "start": 4.320000171661377,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "answered",
+            "start": 4.539999961853027,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "using",
+            "start": 4.900000095367432,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "your",
+            "start": 5.519999980926514,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "own",
+            "start": 5.820000171661377,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "data",
+            "start": 6.21999979019165,
+            "end": 6.5
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Embeddings. Your query gets converted into a numerical vector - a mathematical representation of meaning.",
+        "duration": 8.949999809265137,
+        "words": [
+          {
+            "word": "embeddings",
+            "start": 0,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "Your",
+            "start": 1.159999966621399,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "query",
+            "start": 1.840000033378601,
+            "end": 2.1600000858306885
+          },
+          {
+            "word": "gets",
+            "start": 2.1600000858306885,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "converted",
+            "start": 2.559999942779541,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "into",
+            "start": 3.059999942779541,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "a",
+            "start": 3.4800000190734863,
+            "end": 3.8399999141693115
+          },
+          {
+            "word": "numerical",
+            "start": 3.8399999141693115,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "vector",
+            "start": 4.179999828338623,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "a",
+            "start": 5.5,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "mathematical",
+            "start": 5.800000190734863,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "representation",
+            "start": 6.28000020980835,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "of",
+            "start": 6.960000038146973,
+            "end": 7.739999771118164
+          },
+          {
+            "word": "meaning",
+            "start": 7.739999771118164,
+            "end": 8.100000381469727
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Vector Database. This vector searches a database of pre-embedded documents, finding the most similar matches.",
+        "duration": 8.109999656677246,
+        "words": [
+          {
+            "word": "Vector",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "database",
+            "start": 0.5799999833106995,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "This",
+            "start": 1.9600000381469727,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "vector",
+            "start": 2.259999990463257,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "searches",
+            "start": 2.619999885559082,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "a",
+            "start": 3.200000047683716,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "database",
+            "start": 3.5399999618530273,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "of",
+            "start": 3.859999895095825,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "pre",
+            "start": 4.320000171661377,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "embedded",
+            "start": 4.619999885559082,
+            "end": 5
+          },
+          {
+            "word": "documents",
+            "start": 5,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "finding",
+            "start": 6.360000133514404,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "the",
+            "start": 6.360000133514404,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "most",
+            "start": 6.679999828338623,
+            "end": 7.059999942779541
+          },
+          {
+            "word": "similar",
+            "start": 7.059999942779541,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "matches",
+            "start": 7.400000095367432,
+            "end": 7.739999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Retrieved Documents. The most relevant documents are pulled out - your grounding context for the answer.",
+        "duration": 7.199999809265137,
+        "words": [
+          {
+            "word": "Retrieved",
+            "start": 0,
+            "end": 1.0199999809265137
+          },
+          {
+            "word": "documents",
+            "start": 1.0199999809265137,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "The",
+            "start": 2.380000114440918,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "most",
+            "start": 2.440000057220459,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "relevant",
+            "start": 2.759999990463257,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "documents",
+            "start": 3.140000104904175,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "are",
+            "start": 3.640000104904175,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "pulled",
+            "start": 3.9800000190734863,
+            "end": 4.199999809265137
+          },
+          {
+            "word": "out",
+            "start": 4.199999809265137,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "You're",
+            "start": 5.119999885559082,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "grounding",
+            "start": 5.360000133514404,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "context",
+            "start": 5.739999771118164,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "for",
+            "start": 6.340000152587891,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 6.579999923706055,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "answer",
+            "start": 6.71999979019165,
+            "end": 7.019999980926514
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "The LLM. The language model receives both your original query AND the retrieved documents together.",
+        "duration": 9.359999656677246,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "LLM",
+            "start": 1.0399999618530273,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "The",
+            "start": 2.0399999618530273,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "language",
+            "start": 2.5799999237060547,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "model",
+            "start": 2.9800000190734863,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "receives",
+            "start": 3.4000000953674316,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "both",
+            "start": 4.099999904632568,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "your",
+            "start": 4.519999980926514,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "original",
+            "start": 4.880000114440918,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "query",
+            "start": 5.480000019073486,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "and",
+            "start": 5.900000095367432,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "the",
+            "start": 6.820000171661377,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "retrieved",
+            "start": 7.539999961853027,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "documents",
+            "start": 7.659999847412109,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "together",
+            "start": 8.260000228881836,
+            "end": 8.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Grounded Answer. The result? An answer grounded in your actual data - not hallucinated. Now wire up the RAG pipeline!",
+        "duration": 10.699999809265137,
+        "words": [
+          {
+            "word": "Grounded",
+            "start": 0,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "answer",
+            "start": 0.9399999976158142,
+            "end": 1.340000033378601
+          },
+          {
+            "word": "The",
+            "start": 2.0399999618530273,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "result",
+            "start": 2.140000104904175,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "An",
+            "start": 3.4600000381469727,
+            "end": 3.5999999046325684
+          },
+          {
+            "word": "answer",
+            "start": 3.5999999046325684,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "grounded",
+            "start": 3.9600000381469727,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "in",
+            "start": 4.440000057220459,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "your",
+            "start": 4.679999828338623,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "actual",
+            "start": 4.880000114440918,
+            "end": 5.340000152587891
+          },
+          {
+            "word": "data",
+            "start": 5.340000152587891,
+            "end": 5.980000019073486
+          },
+          {
+            "word": "not",
+            "start": 6.360000133514404,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "hallucinated",
+            "start": 6.539999961853027,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "Now",
+            "start": 8.239999771118164,
+            "end": 8.520000457763672
+          },
+          {
+            "word": "wire",
+            "start": 8.520000457763672,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "up",
+            "start": 8.920000076293945,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 9.180000305175781,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "RAG",
+            "start": 9.460000038146973,
+            "end": 9.739999771118164
+          },
+          {
+            "word": "pipeline",
+            "start": 9.739999771118164,
+            "end": 10.319999694824219
+          }
+        ]
+      }
+    ],
+    "agent-loop-intro": [
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-0",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Observe. The agent begins by observing its environment - what's the current state of the world?",
+        "duration": 6.809999942779541,
+        "words": [
+          {
+            "word": "Observe",
+            "start": 0,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "The",
+            "start": 1.2799999713897705,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "agent",
+            "start": 1.4199999570846558,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "begins",
+            "start": 1.8200000524520874,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "by",
+            "start": 2.259999990463257,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "observing",
+            "start": 2.6600000858306885,
+            "end": 3.0799999237060547
+          },
+          {
+            "word": "its",
+            "start": 3.0799999237060547,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "environment",
+            "start": 3.4800000190734863,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "What's",
+            "start": 4.519999980926514,
+            "end": 4.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 4.71999979019165,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "current",
+            "start": 5.019999980926514,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "state",
+            "start": 5.239999771118164,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "of",
+            "start": 5.599999904632568,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "the",
+            "start": 5.760000228881836,
+            "end": 5.880000114440918
+          },
+          {
+            "word": "world",
+            "start": 5.880000114440918,
+            "end": 6.199999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-1",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Think. With observations in hand, the agent thinks - reasoning about what it sees.",
+        "duration": 7.360000133514404,
+        "words": [
+          {
+            "word": "Think",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "with",
+            "start": 0.6200000047683716,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "observations",
+            "start": 1.4800000190734863,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "in",
+            "start": 2.259999990463257,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "hand",
+            "start": 2.619999885559082,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "the",
+            "start": 3.180000066757202,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "agent",
+            "start": 3.740000009536743,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "thinks",
+            "start": 4.139999866485596,
+            "end": 4.760000228881836
+          },
+          {
+            "word": "reasoning",
+            "start": 4.760000228881836,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "about",
+            "start": 5.579999923706055,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "what",
+            "start": 6.019999980926514,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "it",
+            "start": 6.300000190734863,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "sees",
+            "start": 6.519999980926514,
+            "end": 6.900000095367432
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-2",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Plan. Thinking leads to planning - deciding the next steps to achieve the goal.",
+        "duration": 7.099999904632568,
+        "words": [
+          {
+            "word": "Plan",
+            "start": 0,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "Thinking",
+            "start": 2.180000066757202,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "leads",
+            "start": 2.180000066757202,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "to",
+            "start": 2.819999933242798,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "planning",
+            "start": 3.4600000381469727,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "deciding",
+            "start": 4.320000171661377,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "the",
+            "start": 4.619999885559082,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "next",
+            "start": 4.920000076293945,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "steps",
+            "start": 5.28000020980835,
+            "end": 5.579999923706055
+          },
+          {
+            "word": "to",
+            "start": 5.579999923706055,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "achieve",
+            "start": 6.159999847412109,
+            "end": 6.480000019073486
+          },
+          {
+            "word": "the",
+            "start": 6.480000019073486,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "goal",
+            "start": 6.699999809265137,
+            "end": 6.940000057220459
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-3",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Act. The agent takes action, executing part of its plan.",
+        "duration": 5.559999942779541,
+        "words": [
+          {
+            "word": "Act",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "The",
+            "start": 1.899999976158142,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "agent",
+            "start": 2.0399999618530273,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "takes",
+            "start": 2.380000114440918,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "action",
+            "start": 2.7200000286102295,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "executing",
+            "start": 4.239999771118164,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "part",
+            "start": 4.239999771118164,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "of",
+            "start": 4.639999866485596,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "its",
+            "start": 4.800000190734863,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "plan",
+            "start": 4.980000019073486,
+            "end": 5.28000020980835
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-4",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Tools. Actions often use tools - APIs, databases, code execution - extending what the agent can do.",
+        "duration": 9.760000228881836,
+        "words": [
+          {
+            "word": "Tools",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "Actions",
+            "start": 1.9800000190734863,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "often",
+            "start": 1.9800000190734863,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "use",
+            "start": 2.4000000953674316,
+            "end": 2.7799999713897705
+          },
+          {
+            "word": "tools",
+            "start": 2.7799999713897705,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "APIs",
+            "start": 4.420000076293945,
+            "end": 4.420000076293945
+          },
+          {
+            "word": "databases",
+            "start": 5.460000038146973,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "code",
+            "start": 6.059999942779541,
+            "end": 6.28000020980835
+          },
+          {
+            "word": "execution",
+            "start": 6.28000020980835,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "extending",
+            "start": 8.079999923706055,
+            "end": 8.119999885559082
+          },
+          {
+            "word": "what",
+            "start": 8.119999885559082,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "the",
+            "start": 8.460000038146973,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "agent",
+            "start": 8.779999732971191,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "can",
+            "start": 8.899999618530273,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "do",
+            "start": 9.220000267028809,
+            "end": 9.4399995803833
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-5",
+        "voice": "ballad",
+        "voiceLabel": "Storyteller (Female)",
+        "text": "Memory. Results get stored in memory, informing future decisions. And the loop continues! Now connect the cycle.",
+        "duration": 10.239999771118164,
+        "words": [
+          {
+            "word": "Memory",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "Results",
+            "start": 1.840000033378601,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "get",
+            "start": 1.840000033378601,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "stored",
+            "start": 2.240000009536743,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "in",
+            "start": 2.5199999809265137,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "memory",
+            "start": 3.3399999141693115,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "informing",
+            "start": 3.700000047683716,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "future",
+            "start": 4.079999923706055,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "decisions",
+            "start": 4.599999904632568,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "and",
+            "start": 5.820000171661377,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "the",
+            "start": 5.860000133514404,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "loop",
+            "start": 6.260000228881836,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "continues",
+            "start": 6.340000152587891,
+            "end": 7.079999923706055
+          },
+          {
+            "word": "Now",
+            "start": 8.020000457763672,
+            "end": 8.15999984741211
+          },
+          {
+            "word": "connect",
+            "start": 8.15999984741211,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "the",
+            "start": 8.5600004196167,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "cycle",
+            "start": 8.880000114440918,
+            "end": 9.140000343322754
+          }
+        ]
+      }
+    ]
+  },
+  "echo": {
+    "ai-pipeline-intro": [
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "User Input. Everything begins with you - the user. Your intent, your question, your goal.",
+        "duration": 6.639999866485596,
+        "words": [
+          {
+            "word": "Everything",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "begins",
+            "start": 0.5600000023841858,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "with",
+            "start": 1.0800000429153442,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "you",
+            "start": 1.6200000047683716,
+            "end": 1.940000057220459
+          },
+          {
+            "word": "the",
+            "start": 2.4200000762939453,
+            "end": 2.559999942779541
+          },
+          {
+            "word": "user",
+            "start": 2.559999942779541,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "Your",
+            "start": 3.880000114440918,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "intent",
+            "start": 3.940000057220459,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "Your",
+            "start": 4.840000152587891,
+            "end": 5
+          },
+          {
+            "word": "question",
+            "start": 5,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "Your",
+            "start": 5.980000019073486,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "goal",
+            "start": 6.179999828338623,
+            "end": 6.440000057220459
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Prompt. Your intent becomes a prompt - carefully crafted instructions that tell the AI what you need.",
+        "duration": 7.920000076293945,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "Prompt",
+            "start": 0.4399999976158142,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "Your",
+            "start": 1.059999942779541,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "intent",
+            "start": 1.7400000095367432,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "becomes",
+            "start": 2.200000047683716,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "a",
+            "start": 2.640000104904175,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "prompt",
+            "start": 3.2200000286102295,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "carefully",
+            "start": 3.940000057220459,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "crafted",
+            "start": 4.21999979019165,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "instructions",
+            "start": 4.699999809265137,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "that",
+            "start": 5.360000133514404,
+            "end": 5.679999828338623
+          },
+          {
+            "word": "tell",
+            "start": 5.679999828338623,
+            "end": 5.920000076293945
+          },
+          {
+            "word": "the",
+            "start": 5.920000076293945,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "AI",
+            "start": 6.139999866485596,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "what",
+            "start": 6.539999961853027,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "you",
+            "start": 7.159999847412109,
+            "end": 7.420000076293945
+          },
+          {
+            "word": "need",
+            "start": 7.420000076293945,
+            "end": 7.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Context. Context is the secret sauce. It gives the AI the background it needs to truly understand.",
+        "duration": 7.409999847412109,
+        "words": [
+          {
+            "word": "Context",
+            "start": 0,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "Context",
+            "start": 2.0199999809265137,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "is",
+            "start": 2.0199999809265137,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "the",
+            "start": 2.240000009536743,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "secret",
+            "start": 2.4600000381469727,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "sauce",
+            "start": 2.759999990463257,
+            "end": 3.240000009536743
+          },
+          {
+            "word": "It",
+            "start": 3.819999933242798,
+            "end": 3.859999895095825
+          },
+          {
+            "word": "gives",
+            "start": 3.859999895095825,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "the",
+            "start": 4.079999923706055,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "AI",
+            "start": 4.28000020980835,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 4.579999923706055,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "background",
+            "start": 4.900000095367432,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "it",
+            "start": 5.21999979019165,
+            "end": 5.519999980926514
+          },
+          {
+            "word": "needs",
+            "start": 5.519999980926514,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "to",
+            "start": 5.78000020980835,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "truly",
+            "start": 6.179999828338623,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "understand",
+            "start": 6.599999904632568,
+            "end": 7.079999923706055
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The LLM. The large language model receives your prompt and context, processing them together.",
+        "duration": 6.550000190734863,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.36000001430511475
+          },
+          {
+            "word": "LLM",
+            "start": 0.36000001430511475,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "the",
+            "start": 1.559999942779541,
+            "end": 1.7200000286102295
+          },
+          {
+            "word": "large",
+            "start": 1.7200000286102295,
+            "end": 2
+          },
+          {
+            "word": "language",
+            "start": 2,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "model",
+            "start": 2.3399999141693115,
+            "end": 2.640000104904175
+          },
+          {
+            "word": "receives",
+            "start": 2.9200000762939453,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "your",
+            "start": 3.180000066757202,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "prompt",
+            "start": 3.5199999809265137,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "and",
+            "start": 3.7799999713897705,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "context",
+            "start": 4.239999771118164,
+            "end": 4.619999885559082
+          },
+          {
+            "word": "processing",
+            "start": 5.440000057220459,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "them",
+            "start": 5.440000057220459,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "together",
+            "start": 5.760000228881836,
+            "end": 6.099999904632568
+          }
+        ]
+      },
+      {
+        "storyId": "ai-pipeline-intro",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The Response. And out comes the response - shaped by how well you crafted the input. Now it's your turn to connect the flow!",
+        "duration": 9.039999961853027,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.5
+          },
+          {
+            "word": "response",
+            "start": 0.5,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "And",
+            "start": 1.5399999618530273,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "out",
+            "start": 1.659999966621399,
+            "end": 1.9800000190734863
+          },
+          {
+            "word": "comes",
+            "start": 1.9800000190734863,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "the",
+            "start": 2.240000009536743,
+            "end": 2.5799999237060547
+          },
+          {
+            "word": "response",
+            "start": 2.5799999237060547,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "shaped",
+            "start": 3.6600000858306885,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "by",
+            "start": 3.6600000858306885,
+            "end": 4
+          },
+          {
+            "word": "how",
+            "start": 4,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "well",
+            "start": 4.300000190734863,
+            "end": 4.559999942779541
+          },
+          {
+            "word": "you",
+            "start": 4.559999942779541,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "crafted",
+            "start": 4.880000114440918,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 5.199999809265137,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "input",
+            "start": 5.559999942779541,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "Now",
+            "start": 6.260000228881836,
+            "end": 6.5
+          },
+          {
+            "word": "it's",
+            "start": 6.5,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "your",
+            "start": 6.679999828338623,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "turn",
+            "start": 6.980000019073486,
+            "end": 7.119999885559082
+          },
+          {
+            "word": "to",
+            "start": 7.119999885559082,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "connect",
+            "start": 7.599999904632568,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "the",
+            "start": 7.960000038146973,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "flow",
+            "start": 8.239999771118164,
+            "end": 8.460000038146973
+          }
+        ]
+      }
+    ],
+    "rag-pipeline-intro": [
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Your Query. It starts with a question - something you need answered using your own data.",
+        "duration": 5.849999904632568,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.8600000143051147
+          },
+          {
+            "word": "query",
+            "start": 0.8600000143051147,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "It",
+            "start": 1.8200000524520874,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "starts",
+            "start": 1.8200000524520874,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "with",
+            "start": 2.059999942779541,
+            "end": 2.240000009536743
+          },
+          {
+            "word": "a",
+            "start": 2.240000009536743,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "question",
+            "start": 2.880000114440918,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "Something",
+            "start": 3.4600000381469727,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "you",
+            "start": 3.5399999618530273,
+            "end": 3.7799999713897705
+          },
+          {
+            "word": "need",
+            "start": 3.7799999713897705,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "answered",
+            "start": 3.9600000381469727,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "using",
+            "start": 4.360000133514404,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "your",
+            "start": 4.699999809265137,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "own",
+            "start": 4.940000057220459,
+            "end": 5.28000020980835
+          },
+          {
+            "word": "data",
+            "start": 5.28000020980835,
+            "end": 5.519999980926514
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Embeddings. Your query gets converted into a numerical vector - a mathematical representation of meaning.",
+        "duration": 8.949999809265137,
+        "words": [
+          {
+            "word": "Embeddings",
+            "start": 0,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "Your",
+            "start": 1.659999966621399,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "query",
+            "start": 1.7799999713897705,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "gets",
+            "start": 2.0999999046325684,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "converted",
+            "start": 2.440000057220459,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "into",
+            "start": 2.880000114440918,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "a",
+            "start": 3.2200000286102295,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "numerical",
+            "start": 3.5199999809265137,
+            "end": 3.819999933242798
+          },
+          {
+            "word": "vector",
+            "start": 3.819999933242798,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "a",
+            "start": 4.880000114440918,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "mathematical",
+            "start": 5.159999847412109,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "representation",
+            "start": 5.619999885559082,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "of",
+            "start": 6.420000076293945,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "meaning",
+            "start": 6.820000171661377,
+            "end": 7.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-2",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Vector Database. This vector searches a database of pre-embedded documents, finding the most similar matches.",
+        "duration": 7.409999847412109,
+        "words": [
+          {
+            "word": "Vector",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "database",
+            "start": 0.5600000023841858,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "This",
+            "start": 2.0399999618530273,
+            "end": 2.140000104904175
+          },
+          {
+            "word": "vector",
+            "start": 2.140000104904175,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "searches",
+            "start": 2.440000057220459,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "a",
+            "start": 2.8399999141693115,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "database",
+            "start": 3.140000104904175,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "of",
+            "start": 3.4600000381469727,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "pre",
+            "start": 3.940000057220459,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "embedded",
+            "start": 4.179999828338623,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "documents",
+            "start": 4.440000057220459,
+            "end": 4.920000076293945
+          },
+          {
+            "word": "finding",
+            "start": 5.71999979019165,
+            "end": 5.71999979019165
+          },
+          {
+            "word": "the",
+            "start": 5.71999979019165,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "most",
+            "start": 5.960000038146973,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "similar",
+            "start": 6.199999809265137,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "matches",
+            "start": 6.519999980926514,
+            "end": 6.880000114440918
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-3",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Retrieved Documents. The most relevant documents are pulled out - your grounding context for the answer.",
+        "duration": 7.199999809265137,
+        "words": [
+          {
+            "word": "Retrieved",
+            "start": 0,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "Documents",
+            "start": 0.7799999713897705,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "The",
+            "start": 1.440000057220459,
+            "end": 2.3399999141693115
+          },
+          {
+            "word": "most",
+            "start": 2.3399999141693115,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "relevant",
+            "start": 2.5999999046325684,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "documents",
+            "start": 2.9600000381469727,
+            "end": 3.4200000762939453
+          },
+          {
+            "word": "are",
+            "start": 3.4200000762939453,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "pulled",
+            "start": 3.7200000286102295,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "out",
+            "start": 3.9800000190734863,
+            "end": 4.340000152587891
+          },
+          {
+            "word": "You're",
+            "start": 4.78000020980835,
+            "end": 5.119999885559082
+          },
+          {
+            "word": "grounding",
+            "start": 5.119999885559082,
+            "end": 5.5
+          },
+          {
+            "word": "context",
+            "start": 5.5,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "for",
+            "start": 6.179999828338623,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "the",
+            "start": 6.599999904632568,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "answer",
+            "start": 6.880000114440918,
+            "end": 7
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "The LLM. The language model receives both your original query AND the retrieved documents together.",
+        "duration": 8.520000457763672,
+        "words": [
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "LLM",
+            "start": 0.699999988079071,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "The",
+            "start": 1.6200000047683716,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "language",
+            "start": 2.359999895095825,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "model",
+            "start": 2.5999999046325684,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "receives",
+            "start": 2.880000114440918,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "both",
+            "start": 3.319999933242798,
             "end": 3.700000047683716
           },
           {
             "word": "your",
             "start": 3.700000047683716,
-            "end": 4.039999961853027
+            "end": 4
           },
           {
-            "word": "thinking",
-            "start": 4.039999961853027,
-            "end": 4.28000020980835
+            "word": "original",
+            "start": 4,
+            "end": 4.440000057220459
           },
           {
-            "word": "into",
-            "start": 4.28000020980835,
-            "end": 4.739999771118164
+            "word": "query",
+            "start": 4.440000057220459,
+            "end": 4.820000171661377
           },
           {
-            "word": "AI",
-            "start": 4.739999771118164,
-            "end": 5.21999979019165
-          },
-          {
-            "word": "instructions",
-            "start": 5.21999979019165,
-            "end": 5.760000228881836
-          }
-        ]
-      },
-      "1": {
-        "storyId": "prompt-craft-intro",
-        "stepId": "step-1",
-        "voice": "echo",
-        "voiceLabel": "Storyteller (Male UK)",
-        "text": "Great Output. A great prompt leads to a great output. Let's craft one.",
-        "duration": 4.920000076293945,
-        "words": [
-          {
-            "word": "Great",
-            "start": 0,
-            "end": 0.5
-          },
-          {
-            "word": "output",
-            "start": 0.5,
-            "end": 0.9800000190734863
-          },
-          {
-            "word": "A",
-            "start": 1.3200000524520874,
-            "end": 1.4800000190734863
-          },
-          {
-            "word": "great",
-            "start": 1.4800000190734863,
-            "end": 1.7799999713897705
-          },
-          {
-            "word": "prompt",
-            "start": 1.7799999713897705,
-            "end": 2.119999885559082
-          },
-          {
-            "word": "leads",
-            "start": 2.119999885559082,
-            "end": 2.4000000953674316
-          },
-          {
-            "word": "to",
-            "start": 2.4000000953674316,
-            "end": 2.619999885559082
-          },
-          {
-            "word": "a",
-            "start": 2.619999885559082,
-            "end": 2.819999933242798
-          },
-          {
-            "word": "great",
-            "start": 2.819999933242798,
-            "end": 3.0799999237060547
-          },
-          {
-            "word": "output",
-            "start": 3.0799999237060547,
-            "end": 3.4000000953674316
-          },
-          {
-            "word": "Let's",
-            "start": 3.9600000381469727,
-            "end": 4.139999866485596
-          },
-          {
-            "word": "craft",
-            "start": 4.139999866485596,
-            "end": 4.420000076293945
-          },
-          {
-            "word": "one",
-            "start": 4.420000076293945,
-            "end": 4.699999809265137
-          }
-        ]
-      }
-    },
-    "context-engineering-intro": {
-      "0": {
-        "storyId": "context-engineering-intro",
-        "stepId": "step-0",
-        "voice": "echo",
-        "voiceLabel": "Storyteller (Male UK)",
-        "text": "The Right Context. AI can't read your mind. It needs the right context to understand your problem.",
-        "duration": 6.119999885559082,
-        "words": [
-          {
-            "word": "The",
-            "start": 0,
-            "end": 0.3199999928474426
-          },
-          {
-            "word": "right",
-            "start": 0.3199999928474426,
-            "end": 0.699999988079071
-          },
-          {
-            "word": "context",
-            "start": 0.699999988079071,
-            "end": 1.340000033378601
-          },
-          {
-            "word": "AI",
-            "start": 2.0399999618530273,
-            "end": 2.200000047683716
-          },
-          {
-            "word": "can't",
-            "start": 2.200000047683716,
-            "end": 2.5799999237060547
-          },
-          {
-            "word": "read",
-            "start": 2.5799999237060547,
-            "end": 2.740000009536743
-          },
-          {
-            "word": "your",
-            "start": 2.740000009536743,
-            "end": 3.1600000858306885
-          },
-          {
-            "word": "mind",
-            "start": 3.1600000858306885,
-            "end": 3.1600000858306885
-          },
-          {
-            "word": "It",
-            "start": 3.680000066757202,
-            "end": 3.759999990463257
-          },
-          {
-            "word": "needs",
-            "start": 3.759999990463257,
-            "end": 3.9600000381469727
+            "word": "and",
+            "start": 4.820000171661377,
+            "end": 5.5
           },
           {
             "word": "the",
-            "start": 3.9600000381469727,
-            "end": 4.159999847412109
+            "start": 5.5,
+            "end": 5.800000190734863
           },
           {
-            "word": "right",
-            "start": 4.159999847412109,
-            "end": 4.619999885559082
+            "word": "retrieved",
+            "start": 5.800000190734863,
+            "end": 6.159999847412109
           },
           {
-            "word": "context",
-            "start": 4.619999885559082,
-            "end": 4.840000152587891
+            "word": "documents",
+            "start": 6.159999847412109,
+            "end": 6.679999828338623
           },
           {
-            "word": "to",
-            "start": 4.840000152587891,
-            "end": 5.139999866485596
+            "word": "together",
+            "start": 6.679999828338623,
+            "end": 7.159999847412109
+          }
+        ]
+      },
+      {
+        "storyId": "rag-pipeline-intro",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Grounded Answer. The result? An answer grounded in your actual data - not hallucinated. Now wire up the RAG pipeline!",
+        "duration": 8.609999656677246,
+        "words": [
+          {
+            "word": "Grounded",
+            "start": 0,
+            "end": 0.7599999904632568
           },
           {
-            "word": "understand",
-            "start": 5.139999866485596,
-            "end": 5.440000057220459
+            "word": "answer",
+            "start": 0.7599999904632568,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "The",
+            "start": 1.6799999475479126,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "result",
+            "start": 1.7799999713897705,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "An",
+            "start": 2.5,
+            "end": 2.740000009536743
+          },
+          {
+            "word": "answer",
+            "start": 2.740000009536743,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "grounded",
+            "start": 2.9000000953674316,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "in",
+            "start": 3.380000114440918,
+            "end": 3.5799999237060547
           },
           {
             "word": "your",
-            "start": 5.440000057220459,
-            "end": 5.659999847412109
+            "start": 3.5799999237060547,
+            "end": 3.7799999713897705
           },
           {
-            "word": "problem",
-            "start": 5.659999847412109,
+            "word": "actual",
+            "start": 3.7799999713897705,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "data",
+            "start": 4.239999771118164,
+            "end": 4.539999961853027
+          },
+          {
+            "word": "not",
+            "start": 5.039999961853027,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "hallucinated",
+            "start": 5.21999979019165,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "Now",
+            "start": 6.420000076293945,
+            "end": 6.71999979019165
+          },
+          {
+            "word": "wire",
+            "start": 6.71999979019165,
+            "end": 7
+          },
+          {
+            "word": "up",
+            "start": 7,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "the",
+            "start": 7.28000020980835,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "RAG",
+            "start": 7.519999980926514,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "pipeline",
+            "start": 7.800000190734863,
+            "end": 8.319999694824219
+          }
+        ]
+      }
+    ],
+    "agent-loop-intro": [
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-0",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Observe. The agent begins by observing its environment - what's the current state of the world?",
+        "duration": 5.800000190734863,
+        "words": [
+          {
+            "word": "Observe",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "The",
+            "start": 0.9599999785423279,
+            "end": 1.1200000047683716
+          },
+          {
+            "word": "agent",
+            "start": 1.1200000047683716,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "begins",
+            "start": 1.4199999570846558,
+            "end": 1.7999999523162842
+          },
+          {
+            "word": "by",
+            "start": 1.7999999523162842,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "observing",
+            "start": 2.200000047683716,
+            "end": 2.5
+          },
+          {
+            "word": "its",
+            "start": 2.5,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "environment",
+            "start": 2.819999933242798,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "What's",
+            "start": 4.019999980926514,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 4.21999979019165,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "current",
+            "start": 4.480000019073486,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "state",
+            "start": 4.699999809265137,
+            "end": 5.039999961853027
+          },
+          {
+            "word": "of",
+            "start": 5.039999961853027,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "the",
+            "start": 5.159999847412109,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "world",
+            "start": 5.440000057220459,
+            "end": 5.539999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-1",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Think. With observations in hand, the agent thinks - reasoning about what it sees.",
+        "duration": 6.159999847412109,
+        "words": [
+          {
+            "word": "Think",
+            "start": 0,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "with",
+            "start": 1.4600000381469727,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "observations",
+            "start": 1.5800000429153442,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "in",
+            "start": 2.200000047683716,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "hand",
+            "start": 2.7200000286102295,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 3.2799999713897705,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "agent",
+            "start": 3.380000114440918,
+            "end": 3.7200000286102295
+          },
+          {
+            "word": "thinks",
+            "start": 3.7200000286102295,
+            "end": 4.119999885559082
+          },
+          {
+            "word": "reasoning",
+            "start": 4.900000095367432,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "about",
+            "start": 4.900000095367432,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "what",
+            "start": 5.260000228881836,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "it",
+            "start": 5.400000095367432,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "sees",
+            "start": 5.619999885559082,
             "end": 5.920000076293945
           }
         ]
       },
-      "1": {
-        "storyId": "context-engineering-intro",
-        "stepId": "step-1",
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-2",
         "voice": "echo",
         "voiceLabel": "Storyteller (Male UK)",
-        "text": "Accuracy Follows. Structure your context well, and accuracy follows naturally.",
-        "duration": 6.5,
+        "text": "Plan. Thinking leads to planning - deciding the next steps to achieve the goal.",
+        "duration": 5.849999904632568,
         "words": [
           {
-            "word": "Accuracy",
+            "word": "Plan",
             "start": 0,
-            "end": 0.8999999761581421
+            "end": 0.7400000095367432
           },
           {
-            "word": "follows",
-            "start": 0.8999999761581421,
-            "end": 1.5199999809265137
+            "word": "Thinking",
+            "start": 1.840000033378601,
+            "end": 1.840000033378601
           },
           {
-            "word": "Structure",
-            "start": 2.1600000858306885,
-            "end": 2.5
+            "word": "leads",
+            "start": 1.840000033378601,
+            "end": 2.0999999046325684
           },
           {
-            "word": "your",
-            "start": 2.5,
-            "end": 2.880000114440918
+            "word": "to",
+            "start": 2.0999999046325684,
+            "end": 2.440000057220459
           },
           {
-            "word": "context",
-            "start": 2.880000114440918,
-            "end": 3.299999952316284
+            "word": "planning",
+            "start": 2.440000057220459,
+            "end": 2.740000009536743
           },
           {
-            "word": "well",
-            "start": 3.299999952316284,
-            "end": 3.740000009536743
+            "word": "deciding",
+            "start": 3.5799999237060547,
+            "end": 3.5799999237060547
           },
           {
-            "word": "and",
-            "start": 4.21999979019165,
-            "end": 4.579999923706055
+            "word": "the",
+            "start": 3.5799999237060547,
+            "end": 3.8399999141693115
           },
           {
-            "word": "accuracy",
-            "start": 4.579999923706055,
-            "end": 4.940000057220459
+            "word": "next",
+            "start": 3.8399999141693115,
+            "end": 4.139999866485596
           },
           {
-            "word": "follows",
-            "start": 4.940000057220459,
-            "end": 5.519999980926514
+            "word": "steps",
+            "start": 4.139999866485596,
+            "end": 4.360000133514404
           },
           {
-            "word": "naturally",
-            "start": 5.519999980926514,
-            "end": 6
-          }
-        ]
-      }
-    },
-    "visual-challenge-intro": {
-      "0": {
-        "storyId": "visual-challenge-intro",
-        "stepId": "step-0",
-        "voice": "echo",
-        "voiceLabel": "Storyteller (Male UK)",
-        "text": "Motion Stories. Every visualization tells a story through motion.",
-        "duration": 4.960000038146973,
-        "words": [
-          {
-            "word": "Motion",
-            "start": 0,
-            "end": 0.6399999856948853
+            "word": "to",
+            "start": 4.360000133514404,
+            "end": 4.659999847412109
           },
           {
-            "word": "stories",
-            "start": 0.6399999856948853,
-            "end": 1.0800000429153442
+            "word": "achieve",
+            "start": 4.659999847412109,
+            "end": 4.980000019073486
           },
           {
-            "word": "Every",
-            "start": 1.7599999904632568,
-            "end": 1.9600000381469727
+            "word": "the",
+            "start": 4.980000019073486,
+            "end": 5.360000133514404
           },
           {
-            "word": "visualization",
-            "start": 1.9600000381469727,
-            "end": 2.6600000858306885
-          },
-          {
-            "word": "tells",
-            "start": 2.6600000858306885,
-            "end": 3.119999885559082
-          },
-          {
-            "word": "a",
-            "start": 3.119999885559082,
-            "end": 3.5
-          },
-          {
-            "word": "story",
-            "start": 3.5,
-            "end": 3.680000066757202
-          },
-          {
-            "word": "through",
-            "start": 3.680000066757202,
-            "end": 4.320000171661377
-          },
-          {
-            "word": "motion",
-            "start": 4.320000171661377,
-            "end": 4.679999828338623
+            "word": "goal",
+            "start": 5.360000133514404,
+            "end": 5.440000057220459
           }
         ]
       },
-      "1": {
-        "storyId": "visual-challenge-intro",
-        "stepId": "step-1",
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-3",
         "voice": "echo",
         "voiceLabel": "Storyteller (Male UK)",
-        "text": "Feel It. Transform your concept into something users can feel.",
-        "duration": 5.25,
+        "text": "Act. The agent takes action, executing part of its plan.",
+        "duration": 4.840000152587891,
         "words": [
           {
-            "word": "Feel",
+            "word": "Act",
             "start": 0,
-            "end": 0.5
+            "end": 0.5400000214576721
           },
           {
-            "word": "it",
-            "start": 0.5,
-            "end": 0.7799999713897705
+            "word": "The",
+            "start": 1.440000057220459,
+            "end": 1.5
           },
           {
-            "word": "Transform",
-            "start": 2,
-            "end": 2
+            "word": "agent",
+            "start": 1.5,
+            "end": 1.7799999713897705
           },
           {
-            "word": "your",
-            "start": 2,
-            "end": 2.319999933242798
+            "word": "takes",
+            "start": 1.7799999713897705,
+            "end": 2.140000104904175
           },
           {
-            "word": "concept",
-            "start": 2.319999933242798,
-            "end": 2.8399999141693115
+            "word": "action",
+            "start": 2.140000104904175,
+            "end": 2.619999885559082
           },
           {
-            "word": "into",
-            "start": 2.8399999141693115,
-            "end": 3.380000114440918
+            "word": "executing",
+            "start": 3.799999952316284,
+            "end": 3.799999952316284
           },
           {
-            "word": "something",
-            "start": 3.380000114440918,
-            "end": 3.759999990463257
+            "word": "part",
+            "start": 3.799999952316284,
+            "end": 4.099999904632568
           },
           {
-            "word": "users",
-            "start": 3.759999990463257,
-            "end": 4.199999809265137
+            "word": "of",
+            "start": 4.099999904632568,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "its",
+            "start": 4.21999979019165,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "plan",
+            "start": 4.380000114440918,
+            "end": 4.699999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-4",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Tools. Actions often use tools - APIs, databases, code execution - extending what the agent can do.",
+        "duration": 8.760000228881836,
+        "words": [
+          {
+            "word": "Tools",
+            "start": 0,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "Actions",
+            "start": 2.0199999809265137,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "often",
+            "start": 2.0199999809265137,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "use",
+            "start": 2.440000057220459,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "tools",
+            "start": 2.7200000286102295,
+            "end": 3.119999885559082
+          },
+          {
+            "word": "APIs",
+            "start": 3.740000009536743,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "databases",
+            "start": 5.159999847412109,
+            "end": 5.159999847412109
+          },
+          {
+            "word": "code",
+            "start": 5.619999885559082,
+            "end": 5.760000228881836
+          },
+          {
+            "word": "execution",
+            "start": 5.760000228881836,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "extending",
+            "start": 7.179999828338623,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "what",
+            "start": 7.179999828338623,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "the",
+            "start": 7.460000038146973,
+            "end": 7.800000190734863
+          },
+          {
+            "word": "agent",
+            "start": 7.800000190734863,
+            "end": 7.900000095367432
           },
           {
             "word": "can",
-            "start": 4.199999809265137,
-            "end": 4.559999942779541
+            "start": 7.900000095367432,
+            "end": 8.199999809265137
           },
           {
-            "word": "feel",
-            "start": 4.559999942779541,
-            "end": 4.840000152587891
+            "word": "do",
+            "start": 8.199999809265137,
+            "end": 8.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "agent-loop-intro",
+        "stepId": "step-5",
+        "voice": "echo",
+        "voiceLabel": "Storyteller (Male UK)",
+        "text": "Memory. Results get stored in memory, informing future decisions. And the loop continues! Now connect the cycle.",
+        "duration": 9.359999656677246,
+        "words": [
+          {
+            "word": "Memory",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "Results",
+            "start": 1.7400000095367432,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "get",
+            "start": 1.7400000095367432,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "stored",
+            "start": 2.0799999237060547,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "in",
+            "start": 2.4200000762939453,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "memory",
+            "start": 3.059999942779541,
+            "end": 3.059999942779541
+          },
+          {
+            "word": "informing",
+            "start": 4.039999961853027,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "future",
+            "start": 4.039999961853027,
+            "end": 4.579999923706055
+          },
+          {
+            "word": "decisions",
+            "start": 4.579999923706055,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "and",
+            "start": 5.760000228881836,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "the",
+            "start": 5.820000171661377,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "loop",
+            "start": 6.179999828338623,
+            "end": 6.260000228881836
+          },
+          {
+            "word": "continues",
+            "start": 6.260000228881836,
+            "end": 7
+          },
+          {
+            "word": "Now",
+            "start": 7.960000038146973,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "connect",
+            "start": 8.079999923706055,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "the",
+            "start": 8.600000381469727,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "cycle",
+            "start": 8.880000114440918,
+            "end": 9.140000343322754
           }
         ]
       }
-    }
+    ]
   }
 }

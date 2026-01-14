@@ -1,0 +1,70 @@
+{
+  "storyId": "ai-pipeline-intro",
+  "stepId": "step-0",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "User Input. Everything begins with you - the user. Your intent, your question, your goal.",
+  "duration": 6.860000133514404,
+  "words": [
+    {
+      "word": "Everything",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "begins",
+      "start": 0.6800000071525574,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "with",
+      "start": 1.2000000476837158,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "you",
+      "start": 1.5800000429153442,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "the",
+      "start": 2.380000114440918,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "user",
+      "start": 2.559999942779541,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "Your",
+      "start": 3.859999895095825,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "intent",
+      "start": 3.9200000762939453,
+      "end": 4.380000114440918
+    },
+    {
+      "word": "your",
+      "start": 4.820000171661377,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "question",
+      "start": 5.300000190734863,
+      "end": 5.5
+    },
+    {
+      "word": "your",
+      "start": 6.039999961853027,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "goal",
+      "start": 6.320000171661377,
+      "end": 6.659999847412109
+    }
+  ]
+}

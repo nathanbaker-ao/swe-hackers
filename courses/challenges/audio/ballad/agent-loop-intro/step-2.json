@@ -1,0 +1,75 @@
+{
+  "storyId": "agent-loop-intro",
+  "stepId": "step-2",
+  "voice": "ballad",
+  "voiceLabel": "Storyteller (Female)",
+  "text": "Plan. Thinking leads to planning - deciding the next steps to achieve the goal.",
+  "duration": 7.099999904632568,
+  "words": [
+    {
+      "word": "Plan",
+      "start": 0,
+      "end": 0.8399999737739563
+    },
+    {
+      "word": "Thinking",
+      "start": 2.180000066757202,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "leads",
+      "start": 2.180000066757202,
+      "end": 2.819999933242798
+    },
+    {
+      "word": "to",
+      "start": 2.819999933242798,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "planning",
+      "start": 3.4600000381469727,
+      "end": 3.4600000381469727
+    },
+    {
+      "word": "deciding",
+      "start": 4.320000171661377,
+      "end": 4.619999885559082
+    },
+    {
+      "word": "the",
+      "start": 4.619999885559082,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "next",
+      "start": 4.920000076293945,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "steps",
+      "start": 5.28000020980835,
+      "end": 5.579999923706055
+    },
+    {
+      "word": "to",
+      "start": 5.579999923706055,
+      "end": 6.159999847412109
+    },
+    {
+      "word": "achieve",
+      "start": 6.159999847412109,
+      "end": 6.480000019073486
+    },
+    {
+      "word": "the",
+      "start": 6.480000019073486,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "goal",
+      "start": 6.699999809265137,
+      "end": 6.940000057220459
+    }
+  ]
+}

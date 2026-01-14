@@ -29,6 +29,7 @@ class ChallengeDiagram {
       audioEnabled: true, // Audio ON by default for challenge intros
       audioBasePath: 'audio',
       canvasHeight: 250,
+      showOverlay: true, // Can disable if using external controls
       ...options
     };
     
@@ -57,14 +58,19 @@ class ChallengeDiagram {
     this.cy = this.createDiagram();
     if (!this.cy) return;
 
-    // Initial state: all dimmed
-    this.showAllDimmed();
-
-    // Setup play overlay
-    this.setupPlayOverlay();
+    // Initial state: show all nodes at reduced opacity
+    if (this.options.showOverlay) {
+      this.showAllDimmed();
+      this.setupPlayOverlay();
+    } else {
+      // If no overlay, show diagram normally (external controls will be used)
+      this.cy.fit(20);
+    }
     
-    // Setup voice selector
-    this.setupVoiceSelector();
+    // Setup voice selector if needed
+    if (this.options.audioEnabled) {
+      this.setupVoiceSelector();
+    }
   }
 
   createDiagram() {
@@ -366,12 +372,34 @@ class ChallengeDiagram {
     if (!this.shouldStop) {
       this.showAllComplete();
       this.hasPlayed = true;
+      
+      // Callback for external controls
+      if (this.onComplete) {
+        this.onComplete();
+      }
     }
 
     this.isPlaying = false;
     
-    // Show replay button after delay
-    setTimeout(() => this.showPlayOverlay(), 1500);
+    // Show replay button after delay (only if using built-in overlay)
+    if (this.options.showOverlay) {
+      setTimeout(() => this.showPlayOverlay(), 1500);
+    }
+  }
+  
+  pause() {
+    this.shouldStop = true;
+    this.clearAnimations();
+    if (this.audioEngine) {
+      this.audioEngine.stop?.();
+    }
+  }
+  
+  reset() {
+    this.pause();
+    this.resetDiagram();
+    this.isPlaying = false;
+    this.hasPlayed = false;
   }
 
   async playStep(step, stepIndex) {
