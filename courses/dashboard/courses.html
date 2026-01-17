@@ -92,6 +92,7 @@
     .card-banner.undergrad { background: linear-gradient(135deg, #7986cb, #4db6ac); }
     .card-banner.junior { background: linear-gradient(135deg, #ffd54f, #ff7043); }
     .card-banner.senior { background: linear-gradient(135deg, #4db6ac, #26a69a); }
+    .card-banner.endless-opportunities { background: linear-gradient(135deg, #4db6ac, #7986cb); }
     
     .card-icon {
       position: absolute;
@@ -414,7 +415,7 @@
       <div class="content-area">
         
         <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-          Choose your path and master the Three Forces of software architecture: Stone, Lightning, and Magnetism.
+          Your enrolled courses are shown below. Track your progress and continue learning.
         </p>
         
         <!-- Filters -->
@@ -442,9 +443,21 @@
   <script src="../shared/js/data-service.js"></script>
   
   <script>
-    // Course catalog
-    const COURSES = [
-      {
+    // Course catalog - all available courses
+    const ALL_COURSES = {
+      'endless-opportunities': {
+        id: 'endless-opportunities',
+        name: "Endless Opportunities",
+        icon: "🚀",
+        audience: "Grand Rapids Public Schools",
+        level: "beginner",
+        description: "Start your tech journey with hands-on learning. Discover how to ask powerful questions, work with data, and build your first projects.",
+        duration: "5 weeks",
+        chapters: 5,
+        projects: 4,
+        type: 'week'
+      },
+      'apprentice': {
         id: 'apprentice',
         name: "The Apprentice's Path",
         icon: "🌟",
@@ -453,9 +466,10 @@
         description: "Start your coding journey from scratch. Learn Python fundamentals through adventure and discovery. Perfect for students or career changers with no prior experience.",
         duration: "6 weeks",
         chapters: 6,
-        projects: 6
+        projects: 6,
+        type: 'chapter'
       },
-      {
+      'undergrad': {
         id: 'undergrad',
         name: "The Bridge to Industry",
         icon: "🎓",
@@ -464,9 +478,10 @@
         description: "Bridge the gap between academic theory and industry practice. Prepare for interviews, internships, and your first engineering role with real-world projects.",
         duration: "6 weeks",
         chapters: 6,
-        projects: 6
+        projects: 6,
+        type: 'chapter'
       },
-      {
+      'junior': {
         id: 'junior',
         name: "The Junior Accelerator",
         icon: "🚀",
@@ -475,9 +490,10 @@
         description: "Skip years of slow progression. Fast-track from junior to mid/senior level in 1-2 years by leveraging AI and systems thinking.",
         duration: "6 weeks",
         chapters: 6,
-        projects: 6
+        projects: 6,
+        type: 'chapter'
       },
-      {
+      'senior': {
         id: 'senior',
         name: "The Senior Amplifier",
         icon: "🎯",
@@ -486,9 +502,13 @@
         description: "Multiply your impact with AI. Take on bigger projects, lead initiatives, and future-proof your career as an amplified engineer.",
         duration: "6 weeks",
         chapters: 6,
-        projects: 6
+        projects: 6,
+        type: 'chapter'
       }
-    ];
+    };
+    
+    // Courses the user is authorized to see (populated from enrolledCourses)
+    let authorizedCourses = [];
     
     let enrolledCourses = {};
     
@@ -534,6 +554,14 @@
       });
     });
     
+    // Get the correct lesson IDs for a course type
+    function getLessonIds(courseType) {
+      if (courseType === 'week') {
+        return ['week0-intro', 'week1-questions', 'week2-data', 'week3-building', 'week4-portfolio'];
+      }
+      return ['ch0-origins', 'ch1-stone', 'ch2-lightning', 'ch3-magnetism', 'ch4-architect', 'ch5-capstone1', 'ch6-capstone2'];
+    }
+    
     // Load user info
     function loadUserInfo(user) {
       const displayName = user.displayName || user.email.split('@')[0];
@@ -547,28 +575,72 @@
       }
     }
     
-    // Load enrollment status
+    // Load enrollment status and build authorized courses list
     async function loadEnrollmentStatus() {
       try {
         const courses = await window.DataService.getEnrolledCourses();
+        console.log('📚 Loaded enrolled courses:', courses);
+        
+        // Build enrolledCourses dictionary and authorizedCourses array
+        authorizedCourses = [];
+        
         courses.forEach(course => {
-          enrolledCourses[course.courseId] = course;
+          const courseId = course.courseId || course.id;
+          enrolledCourses[courseId] = course;
+          
+          // Get course metadata from ALL_COURSES, or create basic metadata
+          const metadata = ALL_COURSES[courseId] || {
+            id: courseId,
+            name: course.courseName || courseId,
+            icon: course.courseIcon || '📚',
+            audience: 'Enrolled Course',
+            level: 'beginner',
+            description: 'You have access to this course.',
+            duration: 'Self-paced',
+            chapters: course.totalLessons || 7,
+            projects: 0,
+            type: courseId.includes('week') || courseId === 'endless-opportunities' ? 'week' : 'chapter'
+          };
+          
+          // Combine metadata with enrollment progress
+          authorizedCourses.push({
+            ...metadata,
+            ...course, // Include progress data
+            id: courseId
+          });
         });
+        
+        console.log('📚 Authorized courses:', authorizedCourses);
       } catch (error) {
         console.error('Error loading enrollment status:', error);
       }
     }
     
-    // Render courses
+    // Render courses - only show authorized (enrolled) courses
     function renderCourses(filter = 'all') {
       const grid = document.getElementById('course-grid');
       grid.innerHTML = '';
       
-      const filteredCourses = COURSES.filter(course => {
+      // Filter from authorized courses only
+      const filteredCourses = authorizedCourses.filter(course => {
         if (filter === 'all') return true;
-        if (filter === 'enrolled') return enrolledCourses[course.id];
+        if (filter === 'enrolled') return true; // All authorized courses are enrolled
         return course.level === filter;
       });
+      
+      if (filteredCourses.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">No courses found</h3>
+            <p style="color: var(--text-secondary);">
+              ${filter === 'all' ? "You don't have access to any courses yet. Contact your administrator for enrollment." : 
+                `No ${filter} level courses available.`}
+            </p>
+          </div>
+        `;
+        return;
+      }
       
       filteredCourses.forEach((course, index) => {
         const card = createCourseCard(course);
@@ -590,25 +662,46 @@
     
     // Create course card
     function createCourseCard(course) {
-      const isEnrolled = enrolledCourses[course.id];
-      const progress = isEnrolled || {};
+      const courseId = course.id || course.courseId;
+      const isEnrolled = enrolledCourses[courseId];
+      const progress = isEnrolled || course;
       
       const card = document.createElement('div');
-      card.className = `library-card ${isEnrolled ? 'enrolled' : ''}`;
+      card.className = `library-card enrolled`; // All courses shown are enrolled
       card.dataset.level = course.level;
       
-      // Build chapter dots
-      let chapterDots = '';
-      for (let i = 1; i <= 6; i++) {
-        const completed = progress.lessons?.[`ch${i}`]?.completed;
-        const isCurrent = !completed && (i === 1 || progress.lessons?.[`ch${i-1}`]?.completed);
-        chapterDots += `<div class="chapter-dot ${completed ? 'completed' : ''} ${isCurrent ? 'current' : ''}"></div>`;
-      }
+      // Get the correct lesson IDs based on course type
+      const courseType = course.type || (courseId === 'endless-opportunities' ? 'week' : 'chapter');
+      const lessonIds = getLessonIds(courseType);
+      const lessonLabel = courseType === 'week' ? 'weeks' : 'chapters';
+      
+      // Build progress dots using the correct lesson IDs
+      let progressDots = '';
+      let completedCount = 0;
+      let foundCurrent = false;
+      
+      lessonIds.forEach((lessonId, index) => {
+        const lessonData = progress.lessons?.[lessonId];
+        const isComplete = lessonData?.completed || 
+                          lessonData?.progressPercent >= 100 ||
+                          (lessonData?.viewedSections && lessonData?.totalSections && 
+                           lessonData.viewedSections >= lessonData.totalSections);
+        
+        if (isComplete) completedCount++;
+        
+        const isCurrent = !isComplete && !foundCurrent && (index === 0 || completedCount === index);
+        if (isCurrent) foundCurrent = true;
+        
+        progressDots += `<div class="chapter-dot ${isComplete ? 'completed' : ''} ${isCurrent ? 'current' : ''}"></div>`;
+      });
+      
+      // Calculate progress percentage
+      const progressPercent = progress.progressPercent || Math.round((completedCount / lessonIds.length) * 100);
       
       card.innerHTML = `
-        <div class="card-banner ${course.id}">
+        <div class="card-banner ${courseId}">
           <div class="card-icon">${course.icon}</div>
-          ${isEnrolled ? '<span class="enrolled-badge">Enrolled</span>' : ''}
+          <span class="enrolled-badge">${progressPercent}% Complete</span>
         </div>
         <div class="card-body">
           <span class="card-audience">${course.audience}</span>
@@ -617,18 +710,16 @@
           
           <div class="card-meta">
             <span class="meta-item">📅 ${course.duration}</span>
-            <span class="meta-item">📖 ${course.chapters} chapters</span>
-            <span class="meta-item">🔨 ${course.projects} projects</span>
+            <span class="meta-item">📖 ${course.chapters || lessonIds.length} ${lessonLabel}</span>
+            <span class="meta-item">🔨 ${course.projects || 0} projects</span>
           </div>
           
-          ${isEnrolled ? `
-            <div class="card-chapters">
-              ${chapterDots}
-            </div>
-          ` : ''}
+          <div class="card-chapters">
+            ${progressDots}
+          </div>
           
-          <a href="${isEnrolled ? `course.html?id=${course.id}` : `../course/${course.id}.html`}" class="card-action ${isEnrolled ? 'continue' : 'enroll'}">
-            ${isEnrolled ? 'Continue Learning →' : 'View Course Details'}
+          <a href="course.html?id=${courseId}" class="card-action continue">
+            ${progressPercent === 100 ? 'Review Course →' : 'Continue Learning →'}
           </a>
         </div>
       `;

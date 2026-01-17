@@ -510,13 +510,17 @@
       document.getElementById('ov-chapters').textContent = `${completed}/${totalLessons}`;
       document.getElementById('ov-chapters-label').textContent = lessonLabel === 'Week' ? 'Weeks' : 'Chapters';
       
-      // Time
-      const timeMs = chapterAnalytics?.totals?.totalTimeMs || 0;
+      // Time - check both chapterAnalytics and courseProgress
+      let timeMs = chapterAnalytics?.totals?.totalTimeMs || 0;
+      if (timeMs === 0 && progress.totalTimeSpent) {
+        // totalTimeSpent might be in seconds, convert to ms
+        timeMs = progress.totalTimeSpent * 1000;
+      }
       document.getElementById('ov-time').textContent = formatDuration(timeMs);
       
-      // Quiz score
+      // Quiz score - only show if we have a valid number
       const quizScore = chapterAnalytics?.totals?.avgQuizScore;
-      document.getElementById('ov-quiz').textContent = quizScore !== null ? `${quizScore}%` : '--';
+      document.getElementById('ov-quiz').textContent = (quizScore !== null && quizScore !== undefined && !isNaN(quizScore)) ? `${quizScore}%` : '--';
       
       // Activities
       const activities = chapterAnalytics?.totals?.totalActivities || 0;
@@ -525,12 +529,39 @@
     
     // Setup continue learning
     function setupContinueLearning() {
-      // Find next incomplete chapter/week
+      // Find next incomplete lesson using courseProgress.lessons data
       let nextLesson = lessons[0];
       let nextIndex = 0;
       
-      if (chapterAnalytics?.chapters) {
-        for (let i = 0; i < chapterAnalytics.chapters.length; i++) {
+      // First check courseProgress.lessons (most reliable for all course types)
+      if (courseProgress?.lessons) {
+        let foundIncomplete = false;
+        for (let i = 0; i < lessons.length; i++) {
+          const lessonId = lessons[i].id;
+          const lessonData = courseProgress.lessons[lessonId];
+          
+          // Check if this lesson is complete
+          const isComplete = lessonData?.completed || 
+                            lessonData?.progressPercent >= 100 ||
+                            (lessonData?.viewedSections && lessonData?.totalSections && 
+                             lessonData.viewedSections >= lessonData.totalSections);
+          
+          if (!isComplete && !foundIncomplete) {
+            nextLesson = lessons[i];
+            nextIndex = i;
+            foundIncomplete = true;
+            break;
+          }
+        }
+        
+        // If all complete, show last lesson
+        if (!foundIncomplete) {
+          nextLesson = lessons[lessons.length - 1];
+          nextIndex = lessons.length - 1;
+        }
+      } else if (chapterAnalytics?.chapters) {
+        // Fallback to chapterAnalytics for chapter-based courses
+        for (let i = 0; i < Math.min(chapterAnalytics.chapters.length, lessons.length); i++) {
           if (chapterAnalytics.chapters[i].status !== 'completed') {
             nextLesson = lessons[i];
             nextIndex = i;
@@ -556,8 +587,36 @@
       container.innerHTML = '';
       
       lessons.forEach((lesson, index) => {
-        const analytics = chapterAnalytics?.chapters?.[index] || {};
-        const status = analytics.status || 'not_started';
+        // Try to get analytics from chapterAnalytics first, then fall back to courseProgress.lessons
+        let analytics = chapterAnalytics?.chapters?.[index] || {};
+        let status = analytics.status || 'not_started';
+        let timeSpentFormatted = analytics.timeSpentFormatted || '0m';
+        let quizScore = analytics.quizScore;
+        let activitiesCompleted = analytics.activitiesCompleted || 0;
+        
+        // For courses without chapter analytics (like endless-opportunities), use courseProgress.lessons
+        if (courseProgress?.lessons?.[lesson.id]) {
+          const lessonData = courseProgress.lessons[lesson.id];
+          
+          // Determine status from lesson data
+          const isComplete = lessonData.completed || 
+                            lessonData.progressPercent >= 100 ||
+                            (lessonData.viewedSections && lessonData.totalSections && 
+                             lessonData.viewedSections >= lessonData.totalSections);
+          
+          if (isComplete) {
+            status = 'completed';
+          } else if (lessonData.progressPercent > 0 || lessonData.viewedSections > 0) {
+            status = 'in_progress';
+          }
+          
+          // Get time spent
+          if (lessonData.totalTimeSpent) {
+            const minutes = Math.floor(lessonData.totalTimeSpent / 60);
+            const hours = Math.floor(minutes / 60);
+            timeSpentFormatted = hours > 0 ? `${hours}h ${minutes % 60}m` : `${minutes}m`;
+          }
+        }
         
         const card = document.createElement('div');
         card.className = `chapter-card ${status}`;
@@ -571,17 +630,17 @@
             <div class="chapter-meta">
               <span class="meta-item">
                 <span class="meta-icon">⏱️</span>
-                ${analytics.timeSpentFormatted || '0m'}
+                ${timeSpentFormatted}
               </span>
-              ${analytics.quizScore !== null ? `
+              ${quizScore !== null && quizScore !== undefined ? `
                 <span class="meta-item">
                   <span class="meta-icon">🎯</span>
-                  ${analytics.quizScore}%
+                  ${quizScore}%
                 </span>
               ` : ''}
               <span class="meta-item">
                 <span class="meta-icon">✅</span>
-                ${analytics.activitiesCompleted || 0} activities
+                ${activitiesCompleted} activities
               </span>
             </div>
           </div>
