@@ -55,6 +55,75 @@ const ActivityTracker = {
   },
   
   /**
+   * Generic method to complete any activity (called by BaseActivity)
+   * @param {string} activityId - Unique activity identifier
+   * @param {object} result - Result from BaseActivity.getResult()
+   */
+  async completeActivity(activityId, result) {
+    if (!this.isInitialized) {
+      console.warn('🎯 ActivityTracker not initialized, cannot save activity');
+      return;
+    }
+    
+    const timer = this.activityTimers[activityId];
+    const timeSpentMs = result.timeSpentMs || (timer ? Date.now() - timer.startTime : 0);
+    
+    const attemptData = {
+      activityId,
+      activityType: result.activityType || 'activity',
+      courseId: this.courseId,
+      lessonId: this.lessonId,
+      attemptNumber: (this.attemptCounts[activityId] || 0) + 1,
+      correct: result.correct || false,
+      score: result.score || 0,
+      timeSpentMs,
+      response: result.response || {},
+      startedAt: timer?.startTime ? new Date(timer.startTime).toISOString() : null,
+      completedAt: new Date().toISOString()
+    };
+    
+    console.log('🎯 Completing activity:', attemptData);
+    
+    // Update attempt count
+    this.attemptCounts[activityId] = attemptData.attemptNumber;
+    
+    // Save (with offline support)
+    await this.saveAttemptWithCache(attemptData);
+    
+    // Clean up timer
+    delete this.activityTimers[activityId];
+    
+    return { correct: attemptData.correct, score: attemptData.score, attemptNumber: attemptData.attemptNumber };
+  },
+  
+  /**
+   * Start tracking time for an activity
+   * @param {string} activityId - Unique activity identifier
+   */
+  startActivity(activityId) {
+    this.activityTimers[activityId] = {
+      startTime: Date.now()
+    };
+    console.log('🎯 Started activity timer:', activityId);
+  },
+  
+  /**
+   * Check if an activity has been completed
+   * @param {string} activityId - Unique activity identifier
+   */
+  hasCompleted(activityId) {
+    return (this.attemptCounts[activityId] || 0) > 0;
+  },
+  
+  /**
+   * Get attempt count for an activity
+   * @param {string} activityId - Unique activity identifier
+   */
+  getAttemptCount(activityId) {
+    return this.attemptCounts[activityId] || 0;
+  },
+  
+  /**
    * Discover activities on the page via data attributes
    */
   discoverActivities() {
