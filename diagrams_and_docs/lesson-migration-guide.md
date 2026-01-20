@@ -355,7 +355,37 @@ Lessons (7 total - DO NOT SKIP ANY):
 - ch5-capstone1
 - ch6-capstone2
 
-[Same instructions as Agent 1]
+For EACH lesson (index.html):
+
+1. SCRIPT IMPORTS - Ensure these are present (add if missing):
+   - Firebase SDK scripts (firebase-app-compat, firebase-auth-compat, firebase-firestore-compat)
+   - firebase-config.js, auth.js, data-service.js, activity-tracker.js
+   - All activity type scripts (base-activity.js, quiz-activity.js, etc.)
+   - activity-carousel.js
+   - REMOVE quiz-system.js if present
+
+2. INITIALIZATION ORDER - Fix DOMContentLoaded to:
+   - FirebaseApp.init() FIRST
+   - AuthService.init() + await waitForAuthState() SECOND
+   - ActivityTracker.init(courseId, lessonId) THIRD
+   - ActivityCarousel initialization LAST
+
+3. HTML STRUCTURE - For each story section:
+   - Move quiz-card HTML to AFTER activity-carousels
+   - OR replace quiz-card with carousel-container inside activity-carousels
+
+4. QUIZ INITIALIZATION - Replace old Quiz() calls with ActivityCarousel:
+   - Transform quiz.questions to ActivityCarousel format
+   - Add type: 'quiz', id: 'unique-id' to each question
+   - Use new ActivityCarousel(containerId, { type: 'knowledge-check', ... })
+
+Test by verifying console shows:
+- ✅ Firebase initialized
+- 👤 Auth ready
+- 🎯 ActivityTracker initialized
+- 🎯 Activity registered (multiple)
+- 🎯 Completing activity (on submit)
+- 📊 Activity attempt saved
 ```
 
 ### Agent 3: Senior Course
@@ -375,7 +405,37 @@ Lessons (7 total - DO NOT SKIP ANY):
 - ch5-capstone1
 - ch6-capstone2
 
-[Same instructions as Agent 1]
+For EACH lesson (index.html):
+
+1. SCRIPT IMPORTS - Ensure these are present (add if missing):
+   - Firebase SDK scripts (firebase-app-compat, firebase-auth-compat, firebase-firestore-compat)
+   - firebase-config.js, auth.js, data-service.js, activity-tracker.js
+   - All activity type scripts (base-activity.js, quiz-activity.js, etc.)
+   - activity-carousel.js
+   - REMOVE quiz-system.js if present
+
+2. INITIALIZATION ORDER - Fix DOMContentLoaded to:
+   - FirebaseApp.init() FIRST
+   - AuthService.init() + await waitForAuthState() SECOND
+   - ActivityTracker.init(courseId, lessonId) THIRD
+   - ActivityCarousel initialization LAST
+
+3. HTML STRUCTURE - For each story section:
+   - Move quiz-card HTML to AFTER activity-carousels
+   - OR replace quiz-card with carousel-container inside activity-carousels
+
+4. QUIZ INITIALIZATION - Replace old Quiz() calls with ActivityCarousel:
+   - Transform quiz.questions to ActivityCarousel format
+   - Add type: 'quiz', id: 'unique-id' to each question
+   - Use new ActivityCarousel(containerId, { type: 'knowledge-check', ... })
+
+Test by verifying console shows:
+- ✅ Firebase initialized
+- 👤 Auth ready
+- 🎯 ActivityTracker initialized
+- 🎯 Activity registered (multiple)
+- 🎯 Completing activity (on submit)
+- 📊 Activity attempt saved
 ```
 
 ### Agent 4: Undergrad Course
@@ -395,7 +455,37 @@ Lessons (7 total - DO NOT SKIP ANY):
 - ch5-capstone1
 - ch6-capstone2
 
-[Same instructions as Agent 1]
+For EACH lesson (index.html):
+
+1. SCRIPT IMPORTS - Ensure these are present (add if missing):
+   - Firebase SDK scripts (firebase-app-compat, firebase-auth-compat, firebase-firestore-compat)
+   - firebase-config.js, auth.js, data-service.js, activity-tracker.js
+   - All activity type scripts (base-activity.js, quiz-activity.js, etc.)
+   - activity-carousel.js
+   - REMOVE quiz-system.js if present
+
+2. INITIALIZATION ORDER - Fix DOMContentLoaded to:
+   - FirebaseApp.init() FIRST
+   - AuthService.init() + await waitForAuthState() SECOND
+   - ActivityTracker.init(courseId, lessonId) THIRD
+   - ActivityCarousel initialization LAST
+
+3. HTML STRUCTURE - For each story section:
+   - Move quiz-card HTML to AFTER activity-carousels
+   - OR replace quiz-card with carousel-container inside activity-carousels
+
+4. QUIZ INITIALIZATION - Replace old Quiz() calls with ActivityCarousel:
+   - Transform quiz.questions to ActivityCarousel format
+   - Add type: 'quiz', id: 'unique-id' to each question
+   - Use new ActivityCarousel(containerId, { type: 'knowledge-check', ... })
+
+Test by verifying console shows:
+- ✅ Firebase initialized
+- 👤 Auth ready
+- 🎯 ActivityTracker initialized
+- 🎯 Activity registered (multiple)
+- 🎯 Completing activity (on submit)
+- 📊 Activity attempt saved
 ```
 
 ### Agent 5: Endless Opportunities Course
@@ -415,7 +505,37 @@ Lessons (5 total - DO NOT SKIP ANY):
 
 NOTE: week1-questions has already been migrated. Use it as a reference for the correct pattern.
 
-[Same instructions as Agent 1]
+For EACH lesson (index.html) EXCEPT week1-questions:
+
+1. SCRIPT IMPORTS - Ensure these are present (add if missing):
+   - Firebase SDK scripts (firebase-app-compat, firebase-auth-compat, firebase-firestore-compat)
+   - firebase-config.js, auth.js, data-service.js, activity-tracker.js
+   - All activity type scripts (base-activity.js, quiz-activity.js, etc.)
+   - activity-carousel.js
+   - REMOVE quiz-system.js if present
+
+2. INITIALIZATION ORDER - Fix DOMContentLoaded to:
+   - FirebaseApp.init() FIRST
+   - AuthService.init() + await waitForAuthState() SECOND
+   - ActivityTracker.init(courseId, lessonId) THIRD
+   - ActivityCarousel initialization LAST
+
+3. HTML STRUCTURE - For each story section:
+   - Move quiz-card HTML to AFTER activity-carousels
+   - OR replace quiz-card with carousel-container inside activity-carousels
+
+4. QUIZ INITIALIZATION - Replace old Quiz() calls with ActivityCarousel:
+   - Transform quiz.questions to ActivityCarousel format
+   - Add type: 'quiz', id: 'unique-id' to each question
+   - Use new ActivityCarousel(containerId, { type: 'knowledge-check', ... })
+
+Test by verifying console shows:
+- ✅ Firebase initialized
+- 👤 Auth ready
+- 🎯 ActivityTracker initialized
+- 🎯 Activity registered (multiple)
+- 🎯 Completing activity (on submit)
+- 📊 Activity attempt saved
 ```
 
 ---
