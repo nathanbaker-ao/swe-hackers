@@ -353,7 +353,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <!-- Activity Carousel System -->
     <!-- Firebase & Activity Tracking -->
@@ -506,11 +505,966 @@
         'ai-power-story': 'ai-power-quiz'
       };
 
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
-        if (!containerId) return;
-        new Quiz(containerId, quiz.questions);
+      // ============================================
+      // ACTIVITY CAROUSELS - CODE TRAP SECTION
+      // ============================================
+
+      const codeTrapComprehension = new ActivityCarousel('code-trap-comprehension', {
+        type: 'comprehension',
+        sectionId: 'code-trap',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'trap-comp-q1',
+            question: 'What is the "coding-first trap" that juniors fall into?',
+            options: [
+              'Writing too much documentation before coding',
+              'Starting to code immediately without planning or understanding requirements',
+              'Spending too much time in code review',
+              'Using too many external libraries'
+            ],
+            correct: 1,
+            explanation: 'The coding-first trap is jumping straight into the IDE without clarifying requirements, drawing diagrams, or planning the approach.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'trap-comp-q2',
+            question: 'Why does the senior approach "feel slower" initially but is actually faster?',
+            options: [
+              'Seniors type faster once they start',
+              'Planning upfront prevents multiple rewrites and rework cycles',
+              'Seniors skip testing',
+              'Seniors delegate the hard work'
+            ],
+            correct: 1,
+            explanation: 'Investing time in planning catches problems when they\'re cheap to fix (on paper) instead of expensive (in code).',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'trap-comp-tf1',
+            statement: 'Senior engineers code once and done right because they think first and plan on paper.',
+            correct: true,
+            explanation: 'By clarifying requirements, drawing diagrams, and getting feedback before coding, seniors avoid the discovery-rework cycle.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'trap-comp-tf2',
+            statement: 'It\'s faster to start coding immediately and figure things out as you go.',
+            correct: false,
+            explanation: 'This leads to multiple rewrites. Problems discovered mid-code are expensive to fix. Planning feels slower but saves days.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'trap-comp-fill1',
+            statement: 'Seniors ask ___ questions, draw the data flow, and identify edge cases on paper before touching code.',
+            correctAnswers: ['clarifying', 'probing', 'smart'],
+            caseSensitive: false,
+            hints: ['Questions that ensure you understand what you\'re building'],
+            explanation: 'Clarifying questions prevent building the wrong thing. They define exactly what "done" looks like.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'trap-comp-fill2',
+            statement: 'The senior writes their approach in plain ___, gets quick feedback, and catches problems when they\'re cheap to fix.',
+            correctAnswers: ['English', 'language', 'words', 'text'],
+            caseSensitive: false,
+            hints: ['Not code, but human-readable description'],
+            explanation: 'Writing your approach in plain English forces you to think through the design before implementation.',
+            points: 10
+          }
+        ]
       });
+      codeTrapComprehension.init();
+
+      const codeTrapApplication = new ActivityCarousel('code-trap-application', {
+        type: 'application',
+        sectionId: 'code-trap',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'trap-app-seq1',
+            instruction: 'Order the senior approach steps from first to last:',
+            items: [
+              { id: 's1', text: 'Ask clarifying questions about requirements' },
+              { id: 's2', text: 'Draw diagrams (data flow, components)' },
+              { id: 's3', text: 'Identify edge cases on paper' },
+              { id: 's4', text: 'Get feedback from team before coding' },
+              { id: 's5', text: 'Code once, done right' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Start with understanding, end with implementation.',
+              wrong: 'Questions → Diagrams → Edge cases → Feedback → Code'
+            },
+            explanation: 'The senior workflow: clarify → diagram → edge cases → feedback → implement.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'trap-app-dd1',
+            instruction: 'Categorize each behavior as Junior or Senior approach:',
+            items: [
+              { id: 'j1', text: 'Open IDE immediately when assigned a task' },
+              { id: 's1', text: 'Ask "What exactly does done look like?"' },
+              { id: 'j2', text: 'Figure out requirements while coding' },
+              { id: 's2', text: 'Draw a diagram before writing code' },
+              { id: 'j3', text: 'Rewrite code 3 times when problems emerge' },
+              { id: 's3', text: 'Get 15-minute feedback before starting' }
+            ],
+            zones: [
+              { id: 'junior', label: '👶 Junior Approach', correct: ['j1', 'j2', 'j3'] },
+              { id: 'senior', label: '🧓 Senior Approach', correct: ['s1', 's2', 's3'] }
+            ],
+            explanation: 'Junior = reactive, code-first. Senior = proactive, design-first.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'trap-app-connect1',
+            instruction: 'Connect each approach to its typical outcome:',
+            nodes: [
+              { id: 'code-first', label: '💻 Code First' },
+              { id: 'think-first', label: '🧠 Think First' },
+              { id: 'rewrites', label: '🔄 Multiple Rewrites' },
+              { id: 'smooth', label: '✅ Smooth Reviews' },
+              { id: 'walls', label: '🧱 Hit Walls Mid-Code' },
+              { id: 'right', label: '🎯 Code Once, Done Right' }
+            ],
+            solution: {
+              edges: [
+                { source: 'code-first', target: 'rewrites' },
+                { source: 'code-first', target: 'walls' },
+                { source: 'think-first', target: 'smooth' },
+                { source: 'think-first', target: 'right' }
+              ]
+            },
+            explanation: 'Code-first leads to walls and rewrites. Think-first leads to smooth reviews and done right.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'trap-app-quiz1',
+            question: 'You receive a feature request with vague requirements. What\'s the senior move?',
+            options: [
+              'Start coding and clarify later',
+              'Wait until someone gives you detailed specs',
+              'Schedule 30 minutes to ask clarifying questions before touching code',
+              'Estimate based on assumptions'
+            ],
+            correct: 2,
+            explanation: 'Seniors proactively clarify requirements. 30 minutes of questions can save days of rework.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'trap-app-seq2',
+            instruction: 'Order these from most expensive to least expensive place to find problems:',
+            items: [
+              { id: 'p1', text: 'In production (users affected)' },
+              { id: 'p2', text: 'During code review' },
+              { id: 'p3', text: 'While coding (mid-implementation)' },
+              { id: 'p4', text: 'On paper (during design)' }
+            ],
+            correctOrder: ['p1', 'p2', 'p3', 'p4'],
+            hints: {
+              partial: 'Production is most expensive, paper is cheapest.',
+              wrong: 'Cost decreases: Production → Review → Coding → Paper'
+            },
+            explanation: 'Finding problems on paper is free. Finding them in production is extremely expensive.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'trap-app-dd2',
+            instruction: 'Match each time investment to its value:',
+            items: [
+              { id: 't1', text: '30 min clarifying requirements' },
+              { id: 't2', text: '1 hour drawing diagrams' },
+              { id: 't3', text: '15 min getting senior feedback' }
+            ],
+            zones: [
+              { id: 'prevents-wrong', label: '🎯 Prevents Building Wrong Thing', correct: ['t1'] },
+              { id: 'reveals-edge', label: '⚠️ Reveals Edge Cases Early', correct: ['t2'] },
+              { id: 'catches-blind', label: '👁️ Catches Blind Spots', correct: ['t3'] }
+            ],
+            explanation: 'Each planning activity prevents a different class of problems.',
+            points: 15
+          }
+        ]
+      });
+      codeTrapApplication.init();
+
+      const codeTrapSynthesis = new ActivityCarousel('code-trap-synthesis', {
+        type: 'synthesis',
+        sectionId: 'code-trap',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'trap-syn-sc1',
+            scenario: 'You\'re assigned a feature to add "user notifications." You could start coding immediately (estimated 2 days) or spend 2 hours planning first. Your PM is pushing for fast delivery.',
+            question: 'How would you approach this, and what would you tell your PM?',
+            evaluation: {
+              keywords: ['clarify', 'requirements', 'diagram', 'edge cases', 'faster', 'total time', 'rework', 'plan'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d explain that 2 hours planning saves days of rework. I\'d clarify: What triggers notifications? Email, push, in-app? What\'s the priority? Then diagram the data flow, identify edge cases (user preferences, failures), and get quick feedback before coding. Total time will actually be less.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'trap-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Developer A: Gets feature request, opens IDE, starts coding immediately. Works for 3 days.\n\nDeveloper B: Gets same feature, spends 2 hours clarifying and diagramming, then codes for 2 days.'
+            },
+            question: 'Who will likely deliver a better feature with fewer bugs and less rework?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'developer b', 'dev b', 'second'],
+            explanation: 'Developer B\'s 2-hour investment catches problems early. Developer A will likely hit walls and need rewrites, taking more total time.',
+            commonMistakes: {
+              'A': 'Developer A feels faster initially but will likely hit walls and need to rewrite.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'trap-syn-sc2',
+            scenario: 'Halfway through coding a feature, you realize your approach won\'t handle a key edge case. You\'ve already written 500 lines of code.',
+            question: 'What would you do differently next time, and how would you handle this situation now?',
+            evaluation: {
+              keywords: ['paper', 'diagram', 'edge case', 'early', 'before', 'plan', 'cheaper', 'rewrite'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Next time: list edge cases on paper before coding—finding this earlier would have been free to fix. Now: don\'t throw away 500 lines without thinking. Evaluate: can I adapt the existing code? If not, is partial rewrite enough? Sometimes the best code to write is deleting bad code.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'trap-syn-ref1',
+            prompt: 'Think about a feature you\'ve built recently. Did you plan first or code first? What would you do differently knowing what you know now?',
+            thinkingPrompts: [
+              'Did you clarify requirements before starting?',
+              'Did you draw any diagrams?',
+              'Were there rewrites or "aha" moments mid-code?',
+              'What edge cases did you miss initially?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(didn\'t|should have|would)', label: 'Self-awareness', points: 5 },
+                { pattern: '(diagram|plan|clarify)', label: 'Design-first thinking', points: 5 },
+                { pattern: '(rewrite|redo|rework)', label: 'Recognized cost', points: 5 },
+                { pattern: '(next time|will|going to)', label: 'Future commitment', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'trap-syn-graph1',
+            instruction: 'Build the design-first workflow: Requirements → Diagrams → Edge Cases → Feedback → Code',
+            nodeTypes: [
+              { type: 'requirements', label: '📋 Requirements', color: '#42a5f5' },
+              { type: 'diagrams', label: '📊 Diagrams', color: '#66bb6a' },
+              { type: 'edge-cases', label: '⚠️ Edge Cases', color: '#ffa726' },
+              { type: 'feedback', label: '👀 Feedback', color: '#7986cb' },
+              { type: 'code', label: '💻 Code', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['requirements', 'diagrams', 'edge-cases', 'feedback', 'code'],
+              requiredEdges: [
+                { from: 'requirements', to: 'diagrams' },
+                { from: 'diagrams', to: 'edge-cases' },
+                { from: 'edge-cases', to: 'feedback' },
+                { from: 'feedback', to: 'code' }
+              ],
+              optionalNodes: [],
+              minNodes: 5,
+              maxNodes: 6
+            },
+            hints: [
+              'This is a linear workflow',
+              'Code comes last, not first',
+              'Each step informs the next'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'trap-syn-sc3',
+            scenario: 'A junior on your team says: "All this planning seems like a waste of time. I just want to code and figure it out."',
+            question: 'How would you help them understand the value of design-first thinking?',
+            evaluation: {
+              keywords: ['save', 'time', 'rework', 'cheap', 'expensive', 'paper', 'total', 'experience'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d share my experience of projects where skipping planning led to days of rework. Then offer: try it on your next feature—spend 2 hours planning, track total time including rewrites. Compare to your last feature. The numbers usually convince people that planning saves time, not wastes it.',
+            points: 25
+          }
+        ]
+      });
+      codeTrapSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - WORKFLOW SECTION
+      // ============================================
+
+      const workflowComprehension = new ActivityCarousel('workflow-comprehension', {
+        type: 'comprehension',
+        sectionId: 'workflow',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'work-comp-q1',
+            question: 'What is the first step in the design-first workflow?',
+            options: [
+              'Draw diagrams',
+              'Write the approach document',
+              'Clarify requirements',
+              'Start coding a prototype'
+            ],
+            correct: 2,
+            explanation: 'Clarification comes first. You need to know exactly what you\'re building before you can design it.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'work-comp-q2',
+            question: 'How long does the design-first workflow typically take before coding?',
+            options: [
+              '15 minutes',
+              'About 2.5 hours',
+              '1-2 days',
+              'A full week'
+            ],
+            correct: 1,
+            explanation: 'The workflow takes about 2.5 hours total (30 min clarify, 1 hour diagram, 30 min edge cases, 30 min approach, 15 min review).',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'work-comp-tf1',
+            statement: 'The 2.5 hours spent on design typically saves 3-5 days of rework.',
+            correct: true,
+            explanation: 'This is the architect\'s advantage—investing half a day in planning saves multiple days of rework.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'work-comp-tf2',
+            statement: 'You should skip the quick review step if you\'re confident in your design.',
+            correct: false,
+            explanation: 'Never skip review. Senior experience catches problems you can\'t see yet—this is the cheapest feedback you\'ll ever get.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'work-comp-fill1',
+            statement: 'During the diagram step (~1 hour), you draw ___ flow, component diagrams, and sequence diagrams.',
+            correctAnswers: ['data', 'information', 'system'],
+            caseSensitive: false,
+            hints: ['What moves through your system?'],
+            explanation: 'Data flow diagrams show what data goes where—making the invisible visible.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'work-comp-fill2',
+            statement: 'Finding edge cases on ___ is free; finding them in code is expensive.',
+            correctAnswers: ['paper', 'diagrams', 'documents'],
+            caseSensitive: false,
+            hints: ['Before you write any code'],
+            explanation: 'Edge cases discovered during design are free to address. In code, they require rewriting.',
+            points: 10
+          }
+        ]
+      });
+      workflowComprehension.init();
+
+      const workflowApplication = new ActivityCarousel('workflow-application', {
+        type: 'application',
+        sectionId: 'workflow',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'work-app-seq1',
+            instruction: 'Order the 5-step design workflow from first to last:',
+            items: [
+              { id: 'w1', text: 'Clarify (30 min) - What exactly is needed?' },
+              { id: 'w2', text: 'Diagram (1 hour) - Data flow & components' },
+              { id: 'w3', text: 'Edge Cases (30 min) - What could go wrong?' },
+              { id: 'w4', text: 'Approach Doc (30 min) - Plain English plan' },
+              { id: 'w5', text: 'Quick Review (15 min) - Get senior feedback' }
+            ],
+            correctOrder: ['w1', 'w2', 'w3', 'w4', 'w5'],
+            hints: {
+              partial: 'Start with understanding requirements.',
+              wrong: 'Clarify → Diagram → Edge Cases → Approach → Review'
+            },
+            explanation: 'The workflow builds: understand → visualize → protect → document → validate.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'work-app-dd1',
+            instruction: 'Match each workflow step to what it produces:',
+            items: [
+              { id: 'p1', text: 'Clear success criteria and scope' },
+              { id: 'p2', text: 'Visual representation of system' },
+              { id: 'p3', text: 'List of potential failure modes' },
+              { id: 'p4', text: 'Written plan with key decisions' },
+              { id: 'p5', text: 'Validated approach with expert input' }
+            ],
+            zones: [
+              { id: 'clarify', label: '❓ Clarify', correct: ['p1'] },
+              { id: 'diagram', label: '📊 Diagram', correct: ['p2'] },
+              { id: 'edge', label: '⚠️ Edge Cases', correct: ['p3'] },
+              { id: 'approach', label: '📝 Approach', correct: ['p4'] },
+              { id: 'review', label: '👀 Review', correct: ['p5'] }
+            ],
+            explanation: 'Each step produces a specific deliverable that informs the next.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'work-app-connect1',
+            instruction: 'Connect each type of diagram to what it shows:',
+            nodes: [
+              { id: 'data-flow', label: '🔄 Data Flow' },
+              { id: 'component', label: '📦 Component' },
+              { id: 'sequence', label: '⏱️ Sequence' },
+              { id: 'what-where', label: 'What data goes where' },
+              { id: 'pieces', label: 'What pieces are involved' },
+              { id: 'order', label: 'What happens in what order' }
+            ],
+            solution: {
+              edges: [
+                { source: 'data-flow', target: 'what-where' },
+                { source: 'component', target: 'pieces' },
+                { source: 'sequence', target: 'order' }
+              ]
+            },
+            explanation: 'Different diagrams answer different questions about your system.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'work-app-quiz1',
+            question: 'Why get a quick review before coding, even if you\'re confident?',
+            options: [
+              'Company policy requires it',
+              'To share blame if it fails',
+              'Senior experience catches problems you can\'t see yet',
+              'To delay starting the work'
+            ],
+            correct: 2,
+            explanation: 'Seniors have seen patterns and pitfalls you haven\'t. Their 15 minutes can save you days.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'work-app-seq2',
+            instruction: 'Order these edge case questions from most important to least important:',
+            items: [
+              { id: 'e1', text: 'What if the input is invalid?' },
+              { id: 'e2', text: 'What if an external service fails?' },
+              { id: 'e3', text: 'What if two users do this simultaneously?' },
+              { id: 'e4', text: 'What if the input is empty?' }
+            ],
+            correctOrder: ['e1', 'e2', 'e3', 'e4'],
+            hints: {
+              partial: 'All are important, but some are more common.',
+              wrong: 'Invalid input → External failure → Concurrency → Empty input'
+            },
+            explanation: 'All edge cases matter. Invalid inputs and external failures are most common.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'work-app-dd2',
+            instruction: 'Categorize these questions by which workflow step they belong to:',
+            items: [
+              { id: 'q1', text: 'What exactly does "done" look like?' },
+              { id: 'q2', text: 'What services does this connect to?' },
+              { id: 'q3', text: 'What if the database is down?' },
+              { id: 'q4', text: 'Why did I choose this approach over alternatives?' }
+            ],
+            zones: [
+              { id: 'clarify', label: '❓ Clarify', correct: ['q1'] },
+              { id: 'diagram', label: '📊 Diagram', correct: ['q2'] },
+              { id: 'edge', label: '⚠️ Edge Cases', correct: ['q3'] },
+              { id: 'approach', label: '📝 Approach', correct: ['q4'] }
+            ],
+            explanation: 'Each step focuses on different questions.',
+            points: 20
+          }
+        ]
+      });
+      workflowApplication.init();
+
+      const workflowSynthesis = new ActivityCarousel('workflow-synthesis', {
+        type: 'synthesis',
+        sectionId: 'workflow',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'work-syn-sc1',
+            scenario: 'Your manager says: "We need this feature by Friday. There\'s no time for all this planning—just start coding." It\'s Tuesday.',
+            question: 'How would you handle this situation while still applying design-first principles?',
+            evaluation: {
+              keywords: ['compress', 'prioritize', 'parallel', 'risk', 'clarify', 'key decisions', 'trade-off', 'faster'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d compress, not skip. Spend 1 hour total: 15 min clarifying critical requirements, 30 min on key data flow diagram, 15 min listing top edge cases. Then code. Even compressed planning prevents major rewrites. Explain to manager: "1 hour planning saves 1 day of rework."',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'work-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Feature: Add payment processing\n\nDeveloper A: Codes immediately, finishes in 4 days, but needs 2 days of bug fixes after code review.\n\nDeveloper B: Spends 3 hours planning, codes for 3 days, minor review comments only.'
+            },
+            question: 'Who delivered faster (total time including fixes)?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'developer b', 'dev b', 'second'],
+            explanation: 'Developer A: 4 + 2 = 6 days total. Developer B: 0.5 (planning) + 3 = 3.5 days total. Planning cuts total time in half.',
+            commonMistakes: {
+              'A': 'Developer A spent 6 days total (4 coding + 2 fixing). Developer B spent 3.5 days total.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'work-syn-sc2',
+            scenario: 'During the "quick review" step, the senior engineer points out a fundamental flaw in your approach. You\'ve spent 2 hours on planning and feel frustrated.',
+            question: 'How should you interpret this feedback, and what should you do?',
+            evaluation: {
+              keywords: ['cheap', 'better now', 'saved', 'rework', 'grateful', 'learn', 'days', 'iterate'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'This is exactly why we get review before coding! Finding this flaw now cost 2 hours. Finding it after coding would cost days. Be grateful, not frustrated. Iterate on the approach, get re-reviewed if needed, then code with confidence. This IS the system working.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'work-syn-ref1',
+            prompt: 'Think about the last time you got surprising feedback during code review. Could that feedback have been caught earlier during design review? What would you change?',
+            thinkingPrompts: [
+              'What was the feedback about?',
+              'Was it architectural or just stylistic?',
+              'Would a diagram have revealed the issue?',
+              'How much rework did it cause?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(architectural|design|approach)', label: 'Design awareness', points: 5 },
+                { pattern: '(earlier|before|planning)', label: 'Shift-left thinking', points: 5 },
+                { pattern: '(rework|rewrite|change)', label: 'Cost awareness', points: 5 },
+                { pattern: '(diagram|review|document)', label: 'Process improvement', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'work-syn-graph1',
+            instruction: 'Build the time investment diagram: 2.5 hours design → saves → 3-5 days rework',
+            nodeTypes: [
+              { type: 'clarify', label: '❓ 30min Clarify', color: '#42a5f5' },
+              { type: 'diagram', label: '📊 1hr Diagram', color: '#66bb6a' },
+              { type: 'edge', label: '⚠️ 30min Edge', color: '#ffa726' },
+              { type: 'approach', label: '📝 30min Approach', color: '#7986cb' },
+              { type: 'review', label: '👀 15min Review', color: '#ef5350' },
+              { type: 'savings', label: '💰 3-5 Days Saved', color: '#ab47bc' }
+            ],
+            validation: {
+              requiredNodes: ['clarify', 'diagram', 'edge', 'review', 'savings'],
+              requiredEdges: [
+                { from: 'clarify', to: 'diagram' },
+                { from: 'review', to: 'savings' }
+              ],
+              optionalNodes: ['approach'],
+              minNodes: 5,
+              maxNodes: 7
+            },
+            hints: [
+              'The workflow steps lead to massive time savings',
+              'Review catches problems before expensive coding',
+              'The return on investment is 10x or more'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'work-syn-sc3',
+            scenario: 'A teammate asks: "Why do I need to write an approach doc? I already know what I\'m going to do."',
+            question: 'How would you explain the value of writing the approach document?',
+            evaluation: {
+              keywords: ['think through', 'force', 'communicate', 'review', 'record', 'decisions', 'why', 'future'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Writing forces you to think through details you might skip mentally. It creates a record of decisions and why you made them. It enables meaningful review—seniors can\'t review what\'s only in your head. And it helps future-you (or teammates) understand the design later.',
+            points: 25
+          }
+        ]
+      });
+      workflowSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - AI POWER SECTION
+      // ============================================
+
+      const aiPowerComprehension = new ActivityCarousel('ai-power-comprehension', {
+        type: 'comprehension',
+        sectionId: 'ai-power',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'ai-comp-q1',
+            question: 'What is AI good at and bad at in software development?',
+            options: [
+              'Good at design, bad at coding',
+              'Good at coding, bad at design',
+              'Good at everything',
+              'Bad at everything'
+            ],
+            correct: 1,
+            explanation: 'AI excels at generating code from clear specifications but struggles with strategic thinking needed for good design.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'ai-comp-q2',
+            question: 'Why is a design doc described as the "perfect AI prompt"?',
+            options: [
+              'It\'s written in AI language',
+              'It includes clear context, edge cases, and patterns',
+              'It\'s very short',
+              'It tells AI to figure things out'
+            ],
+            correct: 1,
+            explanation: 'Design docs provide exactly what AI needs: clear requirements, edge cases to handle, and your architecture patterns.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'ai-comp-tf1',
+            statement: 'Vague prompts to AI produce vague, generic code that misses edge cases.',
+            correct: true,
+            explanation: 'AI output quality directly correlates with prompt quality. Vague input = vague output.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'ai-comp-tf2',
+            statement: 'AI can replace the need for design-first thinking because it can figure out requirements.',
+            correct: false,
+            explanation: 'AI can\'t know your business requirements, codebase patterns, or edge cases. You must provide this context.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'ai-comp-fill1',
+            statement: 'In the design + AI workflow, YOU are the ___ and AI is the builder.',
+            correctAnswers: ['architect', 'designer', 'thinker'],
+            caseSensitive: false,
+            hints: ['The person who plans the building'],
+            explanation: 'You do the strategic thinking; AI executes your vision with speed and precision.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'ai-comp-fill2',
+            statement: 'The result of design + AI is senior-level output in ___ time.',
+            correctAnswers: ['junior', 'junior-level', 'less', 'reduced'],
+            caseSensitive: false,
+            hints: ['Faster than traditional senior work'],
+            explanation: 'Your strategic thinking plus AI\'s speed equals senior-level productivity.',
+            points: 10
+          }
+        ]
+      });
+      aiPowerComprehension.init();
+
+      const aiPowerApplication = new ActivityCarousel('ai-power-application', {
+        type: 'application',
+        sectionId: 'ai-power',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'ai-app-seq1',
+            instruction: 'Order the Design + AI workflow from first to last:',
+            items: [
+              { id: 'a1', text: 'Clarify requirements and draw diagrams' },
+              { id: 'a2', text: 'Write approach doc with edge cases' },
+              { id: 'a3', text: 'Give AI your design doc as context' },
+              { id: 'a4', text: 'AI generates code based on your design' },
+              { id: 'a5', text: 'Review and refine AI output' }
+            ],
+            correctOrder: ['a1', 'a2', 'a3', 'a4', 'a5'],
+            hints: {
+              partial: 'Design comes before AI generation.',
+              wrong: 'Design → Document → Prompt AI → Generate → Review'
+            },
+            explanation: 'Human strategy first, machine execution second, human verification last.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'ai-app-dd1',
+            instruction: 'Categorize these as Human Role or AI Role:',
+            items: [
+              { id: 'h1', text: 'Clarify business requirements' },
+              { id: 'h2', text: 'Identify edge cases' },
+              { id: 'a1', text: 'Generate boilerplate code' },
+              { id: 'h3', text: 'Design system architecture' },
+              { id: 'a2', text: 'Transform code patterns' },
+              { id: 'h4', text: 'Verify code matches design' }
+            ],
+            zones: [
+              { id: 'human', label: '🧠 Human Role', correct: ['h1', 'h2', 'h3', 'h4'] },
+              { id: 'ai', label: '🤖 AI Role', correct: ['a1', 'a2'] }
+            ],
+            explanation: 'Humans do strategic thinking; AI does execution.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'ai-app-connect1',
+            instruction: 'Connect each prompt quality to its AI output quality:',
+            nodes: [
+              { id: 'vague-prompt', label: '😕 Vague Prompt' },
+              { id: 'detailed-prompt', label: '📋 Detailed Prompt' },
+              { id: 'design-doc', label: '📐 Full Design Doc' },
+              { id: 'generic-code', label: '🔄 Generic Code' },
+              { id: 'good-code', label: '✅ Good Code' },
+              { id: 'perfect-code', label: '🌟 Exactly What You Need' }
+            ],
+            solution: {
+              edges: [
+                { source: 'vague-prompt', target: 'generic-code' },
+                { source: 'detailed-prompt', target: 'good-code' },
+                { source: 'design-doc', target: 'perfect-code' }
+              ]
+            },
+            explanation: 'AI output quality directly correlates with input quality.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'ai-app-quiz1',
+            question: 'You want AI to implement a feature. What\'s the best prompt approach?',
+            options: [
+              '"Write code to handle payments"',
+              'Paste your design doc with requirements, edge cases, and patterns',
+              'Ask AI to figure out what you need',
+              '"Make it work like the other payment systems"'
+            ],
+            correct: 1,
+            explanation: 'Design docs provide the context AI needs. Vague prompts produce vague code.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'ai-app-seq2',
+            instruction: 'Order these from worst AI prompt to best AI prompt:',
+            items: [
+              { id: 'p1', text: '"Write code for this feature"' },
+              { id: 'p2', text: '"Write code that does X, Y, Z with these inputs"' },
+              { id: 'p3', text: 'Design doc + diagrams + edge cases + codebase patterns' },
+              { id: 'p4', text: '"Here\'s the requirements doc, implement it"' }
+            ],
+            correctOrder: ['p1', 'p2', 'p4', 'p3'],
+            hints: {
+              partial: 'More context = better output.',
+              wrong: 'Vague → Specific → Requirements → Full Design'
+            },
+            explanation: 'Best prompts include full design context, edge cases, and codebase patterns.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'ai-app-dd2',
+            instruction: 'Match each benefit to Design + AI workflow:',
+            items: [
+              { id: 'b1', text: 'Senior-level output quality' },
+              { id: 'b2', text: 'Junior-level time investment' },
+              { id: 'b3', text: 'Fewer rewrites needed' }
+            ],
+            zones: [
+              { id: 'quality', label: '📊 Quality Benefit', correct: ['b1'] },
+              { id: 'speed', label: '⚡ Speed Benefit', correct: ['b2'] },
+              { id: 'efficiency', label: '🎯 Efficiency Benefit', correct: ['b3'] }
+            ],
+            explanation: 'Design + AI delivers quality, speed, and efficiency together.',
+            points: 20
+          }
+        ]
+      });
+      aiPowerApplication.init();
+
+      const aiPowerSynthesis = new ActivityCarousel('ai-power-synthesis', {
+        type: 'synthesis',
+        sectionId: 'ai-power',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'ai-syn-sc1',
+            scenario: 'You need to build an authentication system. You could: A) Ask AI "build auth for my app" or B) Write a design doc with user flows, security requirements, and edge cases, then give that to AI.',
+            question: 'Compare the likely outcomes of approach A vs B.',
+            evaluation: {
+              keywords: ['context', 'edge cases', 'security', 'specific', 'generic', 'rework', 'patterns', 'requirements'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Approach A produces generic auth code—misses your specific security requirements, edge cases like account lockout, and integration with your existing user system. Approach B produces exactly what you need because AI has full context. A requires heavy rework; B is nearly production-ready.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'ai-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Two developers building the same feature:\n\nDev A: Types prompts as they go, iterating with AI many times.\n\nDev B: Spends 2 hours on design doc first, then gives it to AI for implementation.'
+            },
+            question: 'Who will likely finish with better code in less total time?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b', 'second'],
+            explanation: 'Dev B\'s upfront design means fewer AI iterations and better-targeted output. Dev A\'s approach leads to many cycles of vague prompts and generic code that needs constant correction.',
+            commonMistakes: {
+              'A': 'More iterations doesn\'t mean better results. Each vague prompt produces vague code needing fixes.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'ai-syn-sc2',
+            scenario: 'A colleague says: "Why bother with design docs? I just iterate with AI until the code works." They ship features, but their code often needs refactoring later.',
+            question: 'How would you explain the value of design-first AI collaboration?',
+            evaluation: {
+              keywords: ['context', 'first time', 'rework', 'quality', 'patterns', 'edge cases', 'iterate', 'right'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Iteration without design is random searching. Design doc gives AI context to get it right the first time. Their refactoring time IS the cost of skipping design. Design + AI = fewer iterations, better code, less rework. Total time is actually lower with design-first.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'ai-syn-ref1',
+            prompt: 'Think about how you currently use AI coding tools. Are you an architect directing AI, or are you hoping AI figures things out? What would you change?',
+            thinkingPrompts: [
+              'Do you provide design context to AI?',
+              'Do you include edge cases in prompts?',
+              'How often do you need to correct AI output?',
+              'Could design docs reduce your iteration cycles?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(vague|unclear|generic)', label: 'Recognizes problem', points: 5 },
+                { pattern: '(design|context|document)', label: 'Solution awareness', points: 5 },
+                { pattern: '(iterate|correct|rework)', label: 'Cost awareness', points: 5 },
+                { pattern: '(will|going to|change)', label: 'Commitment to improve', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'ai-syn-graph1',
+            instruction: 'Build the Design + AI workflow: You (Architect) → Design Doc → AI (Builder) → Code → You (Reviewer) → Ship',
+            nodeTypes: [
+              { type: 'architect', label: '🏛️ You: Architect', color: '#42a5f5' },
+              { type: 'design', label: '📐 Design Doc', color: '#66bb6a' },
+              { type: 'builder', label: '🤖 AI: Builder', color: '#ffa726' },
+              { type: 'code', label: '💻 Generated Code', color: '#7986cb' },
+              { type: 'reviewer', label: '🔍 You: Reviewer', color: '#ef5350' },
+              { type: 'ship', label: '🚀 Ship!', color: '#ab47bc' }
+            ],
+            validation: {
+              requiredNodes: ['architect', 'design', 'builder', 'code', 'reviewer'],
+              requiredEdges: [
+                { from: 'architect', to: 'design' },
+                { from: 'design', to: 'builder' },
+                { from: 'builder', to: 'code' },
+                { from: 'code', to: 'reviewer' }
+              ],
+              optionalNodes: ['ship'],
+              minNodes: 5,
+              maxNodes: 7
+            },
+            hints: [
+              'You start and end the process',
+              'Design doc is the bridge to AI',
+              'AI generates, you verify'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'ai-syn-sc3',
+            scenario: 'You\'re joining a team that heavily uses AI for coding but doesn\'t do design-first. Their codebase has inconsistent patterns and many bugs.',
+            question: 'How would you introduce design-first AI practices to the team?',
+            evaluation: {
+              keywords: ['demonstrate', 'example', 'show', 'quality', 'compare', 'before after', 'design doc', 'gradually'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Start by demonstrating on my own features. Show the before/after: my features have fewer bugs, consistent patterns, less rework. Share design docs as examples. Offer to review teammates\' designs. Gradually, success speaks for itself. Don\'t mandate—inspire through results.',
+            points: 25
+          }
+        ]
+      });
+      aiPowerSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Junior Ch4: The Age of Architects');
     });
   </script>
 </body>

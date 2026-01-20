@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="junior" data-lesson="ch5-capstone1">
   <header class="header">
@@ -115,20 +116,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="ownership-mindset-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="mindset-comprehension"></div>
+        <div class="carousel-container" id="mindset-application"></div>
+        <div class="carousel-container" id="mindset-synthesis"></div>
       </div>
     </section>
 
@@ -194,20 +186,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="ownership-lifecycle-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="lifecycle-comprehension"></div>
+        <div class="carousel-container" id="lifecycle-application"></div>
+        <div class="carousel-container" id="lifecycle-synthesis"></div>
       </div>
     </section>
 
@@ -273,20 +256,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="real-feature-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="real-feature-comprehension"></div>
+        <div class="carousel-container" id="real-feature-application"></div>
+        <div class="carousel-container" id="real-feature-synthesis"></div>
       </div>
     </section>
 
@@ -331,6 +305,19 @@
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/activity-tracker.js"></script>
 
+  <!-- Activity Type Scripts -->
+  <script src="../../shared/js/activities/base-activity.js"></script>
+  <script src="../../shared/js/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/activity-carousel.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
@@ -341,7 +328,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -455,22 +441,967 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // ACTIVITY CAROUSELS - OWNERSHIP MINDSET SECTION
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
-        'ownership-mindset-story': 'ownership-mindset-quiz',
-        'ownership-lifecycle-story': 'ownership-lifecycle-quiz',
-        'real-feature-story': 'real-feature-quiz'
-      };
-
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
-        if (!containerId) return;
-
-        new Quiz(containerId, quiz.questions);
+      const mindsetComprehension = new ActivityCarousel('mindset-comprehension', {
+        type: 'comprehension',
+        sectionId: 'ownership-mindset',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'mindset-comp-q1',
+            question: 'What is the core difference between junior and senior mindset regarding features?',
+            options: [
+              'Seniors write more code',
+              'Seniors own the entire lifecycle from requirements to production',
+              'Juniors work faster',
+              'Seniors delegate more tasks'
+            ],
+            correct: 1,
+            explanation: 'Ownership means taking responsibility for the entire feature lifecycle, not just the coding part.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'mindset-comp-q2',
+            question: 'What does "clarify requirements" mean in the ownership mindset?',
+            options: [
+              'Wait for someone to tell you what to do',
+              'Make assumptions about what users want',
+              'Ask questions to define what "done" looks like',
+              'Read the ticket and start coding'
+            ],
+            correct: 2,
+            explanation: 'Clarifying requirements means proactively asking questions to understand the full scope.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'mindset-comp-tf1',
+            statement: 'Ship & Monitor means your job is done once the code is merged.',
+            correct: false,
+            explanation: 'Ownership extends to production. You monitor the feature, watch metrics, and respond to issues.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'mindset-comp-tf2',
+            statement: 'Designing the solution includes creating docs and diagrams to get buy-in.',
+            correct: true,
+            explanation: 'Good design involves documentation that others can review and approve before implementation.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'mindset-comp-fill1',
+            statement: 'Implement with ___ means writing code, tests, and doing self-review.',
+            correctAnswers: ['excellence', 'quality', 'care'],
+            caseSensitive: false,
+            hints: ['A word describing high-quality work'],
+            explanation: 'Excellence in implementation includes thorough testing and self-review before asking others to review.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'mindset-comp-fill2',
+            statement: 'The ownership mindset represents a shift from ___ to senior thinking.',
+            correctAnswers: ['junior', 'task-focused', 'basic'],
+            caseSensitive: false,
+            hints: ['What level comes before senior?'],
+            explanation: 'This mindset shift is what distinguishes senior-level ownership from junior task execution.',
+            points: 10
+          }
+        ]
       });
+      mindsetComprehension.init();
+
+      const mindsetApplication = new ActivityCarousel('mindset-application', {
+        type: 'application',
+        sectionId: 'ownership-mindset',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'mindset-app-seq1',
+            instruction: 'Order the ownership lifecycle from first to last:',
+            items: [
+              { id: 's1', text: 'Clarify Requirements' },
+              { id: 's2', text: 'Design Solution' },
+              { id: 's3', text: 'Implement with Excellence' },
+              { id: 's4', text: 'Ship & Monitor' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4'],
+            hints: {
+              partial: 'Start by understanding what you need to build.',
+              wrong: 'Clarify → Design → Implement → Ship'
+            },
+            explanation: 'The ownership lifecycle flows from understanding to design to implementation to deployment.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'mindset-app-dd1',
+            instruction: 'Categorize each behavior as Junior or Senior mindset:',
+            items: [
+              { id: 'j1', text: 'Wait for detailed specifications' },
+              { id: 's1', text: 'Proactively clarify requirements' },
+              { id: 'j2', text: 'Code is done when PR is merged' },
+              { id: 's2', text: 'Monitor feature in production' },
+              { id: 'j3', text: 'Just implement the ticket' },
+              { id: 's3', text: 'Design and document solution' }
+            ],
+            zones: [
+              { id: 'junior', label: '👶 Junior Mindset', correct: ['j1', 'j2', 'j3'] },
+              { id: 'senior', label: '🧓 Senior Mindset', correct: ['s1', 's2', 's3'] }
+            ],
+            explanation: 'Senior mindset = proactive, full lifecycle. Junior mindset = reactive, task-focused.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'mindset-app-connect1',
+            instruction: 'Connect each ownership phase to what it produces:',
+            nodes: [
+              { id: 'clarify', label: '📋 Clarify' },
+              { id: 'design', label: '📐 Design' },
+              { id: 'implement', label: '💻 Implement' },
+              { id: 'ship', label: '🚀 Ship' },
+              { id: 'requirements', label: 'Clear success criteria' },
+              { id: 'docs', label: 'Architecture docs' },
+              { id: 'code', label: 'Tested code' },
+              { id: 'metrics', label: 'Production data' }
+            ],
+            solution: {
+              edges: [
+                { source: 'clarify', target: 'requirements' },
+                { source: 'design', target: 'docs' },
+                { source: 'implement', target: 'code' },
+                { source: 'ship', target: 'metrics' }
+              ]
+            },
+            explanation: 'Each phase produces tangible deliverables.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'mindset-app-quiz1',
+            question: 'Your PM gives you a vague feature request. What\'s the senior move?',
+            options: [
+              'Start coding based on your interpretation',
+              'Wait for more detailed specs',
+              'Schedule time to clarify requirements before designing',
+              'Ask a more experienced developer what to do'
+            ],
+            correct: 2,
+            explanation: 'Seniors proactively clarify rather than waiting or assuming.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'mindset-app-seq2',
+            instruction: 'Order these from least to most ownership:',
+            items: [
+              { id: 'o1', text: 'Implement ticket and merge PR' },
+              { id: 'o2', text: 'Implement and respond to code review' },
+              { id: 'o3', text: 'Design, implement, and deploy' },
+              { id: 'o4', text: 'Clarify, design, implement, ship, and monitor' }
+            ],
+            correctOrder: ['o1', 'o2', 'o3', 'o4'],
+            hints: {
+              partial: 'More phases = more ownership.',
+              wrong: 'Least → Most: Just code → Review → Deploy → Full lifecycle'
+            },
+            explanation: 'Full ownership includes every phase from requirements to monitoring.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'mindset-app-dd2',
+            instruction: 'Match each question to its ownership phase:',
+            items: [
+              { id: 'q1', text: 'What does "done" look like?' },
+              { id: 'q2', text: 'How should components interact?' },
+              { id: 'q3', text: 'Are all tests passing?' },
+              { id: 'q4', text: 'Are users experiencing errors?' }
+            ],
+            zones: [
+              { id: 'clarify', label: '📋 Clarify', correct: ['q1'] },
+              { id: 'design', label: '📐 Design', correct: ['q2'] },
+              { id: 'implement', label: '💻 Implement', correct: ['q3'] },
+              { id: 'monitor', label: '🚀 Monitor', correct: ['q4'] }
+            ],
+            explanation: 'Different questions are appropriate at different phases.',
+            points: 15
+          }
+        ]
+      });
+      mindsetApplication.init();
+
+      const mindsetSynthesis = new ActivityCarousel('mindset-synthesis', {
+        type: 'synthesis',
+        sectionId: 'ownership-mindset',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'mindset-syn-sc1',
+            scenario: 'You\'ve been assigned to add a "favorite items" feature. The ticket just says "Users should be able to favorite items."',
+            question: 'What questions would you ask to clarify requirements before starting?',
+            evaluation: {
+              keywords: ['what items', 'where display', 'persist', 'limit', 'sync', 'remove', 'done', 'success'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d ask: What items can be favorited? Where are favorites displayed? Should favorites persist across sessions? Is there a limit? Should favorites sync across devices? Can users remove favorites? What does success look like? These questions define scope.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'mindset-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Two developers get the same feature:\n\nDev A: Reads ticket, starts coding immediately, finishes in 3 days, discovers during review that stakeholders wanted different behavior.\n\nDev B: Spends 2 hours clarifying, documents design, codes in 2 days, smooth review.'
+            },
+            question: 'Who will likely ship the feature faster (total time including rework)?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b'],
+            explanation: 'Dev A will need rework after review. Dev B\'s clarification prevents building the wrong thing.',
+            commonMistakes: {
+              'A': 'Dev A seems faster initially but rework after review adds days.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'mindset-syn-sc2',
+            scenario: 'Your feature is deployed. Users report it\'s working but slower than expected. You could: A) Say "it works, ticket done" or B) Investigate and optimize.',
+            question: 'What would a senior with ownership mindset do, and why?',
+            evaluation: {
+              keywords: ['investigate', 'monitor', 'optimize', 'ownership', 'production', 'user experience', 'metrics', 'improve'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'A senior would investigate—ownership doesn\'t end at deployment. Check metrics, identify bottlenecks, and optimize. User experience matters. Shipping is the beginning of monitoring, not the end of ownership.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'mindset-syn-ref1',
+            prompt: 'Think about a feature you worked on recently. Did you own the full lifecycle or just the implementation? What would you do differently?',
+            thinkingPrompts: [
+              'Did you clarify requirements before coding?',
+              'Did you create design documentation?',
+              'Did you monitor after deployment?',
+              'What phase could use more attention?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(didn\'t|should have|would)', label: 'Self-awareness', points: 5 },
+                { pattern: '(clarify|requirements)', label: 'Requirements thinking', points: 5 },
+                { pattern: '(design|document)', label: 'Design awareness', points: 5 },
+                { pattern: '(monitor|production)', label: 'Post-ship ownership', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'mindset-syn-graph1',
+            instruction: 'Build the ownership lifecycle: Clarify → Design → Implement → Ship → Monitor',
+            nodeTypes: [
+              { type: 'clarify', label: '📋 Clarify', color: '#42a5f5' },
+              { type: 'design', label: '📐 Design', color: '#66bb6a' },
+              { type: 'implement', label: '💻 Implement', color: '#ffa726' },
+              { type: 'ship', label: '🚀 Ship', color: '#7986cb' },
+              { type: 'monitor', label: '👀 Monitor', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['clarify', 'design', 'implement', 'ship', 'monitor'],
+              requiredEdges: [
+                { from: 'clarify', to: 'design' },
+                { from: 'design', to: 'implement' },
+                { from: 'implement', to: 'ship' },
+                { from: 'ship', to: 'monitor' }
+              ],
+              optionalNodes: [],
+              minNodes: 5,
+              maxNodes: 6
+            },
+            hints: [
+              'This is a linear flow from understanding to observing',
+              'Each phase leads to the next',
+              'Monitoring comes after shipping'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'mindset-syn-sc3',
+            scenario: 'A junior says: "I just code what\'s in the ticket. Understanding requirements is the PM\'s job."',
+            question: 'How would you help them understand the ownership mindset?',
+            evaluation: {
+              keywords: ['proactive', 'clarify', 'quality', 'growth', 'senior', 'responsibility', 'outcome', 'value'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d explain that ownership separates senior from junior. When you clarify requirements, you catch issues early and deliver better outcomes. PMs appreciate developers who think proactively. Taking ownership is how you grow and add more value.',
+            points: 25
+          }
+        ]
+      });
+      mindsetSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - OWNERSHIP LIFECYCLE SECTION
+      // ============================================
+
+      const lifecycleComprehension = new ActivityCarousel('lifecycle-comprehension', {
+        type: 'comprehension',
+        sectionId: 'ownership-lifecycle',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'lifecycle-comp-q1',
+            question: 'What happens during the Requirements Phase?',
+            options: [
+              'Write code and tests',
+              'Meet stakeholders and define scope',
+              'Deploy to production',
+              'Review other people\'s code'
+            ],
+            correct: 1,
+            explanation: 'Requirements phase involves meeting stakeholders, understanding needs, and defining what success looks like.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'lifecycle-comp-q2',
+            question: 'Why is Review & Polish important before deployment?',
+            options: [
+              'It\'s not important, just deploy fast',
+              'To address feedback and ensure quality before users see it',
+              'To delay the project',
+              'To make the manager happy'
+            ],
+            correct: 1,
+            explanation: 'Review catches issues when they\'re cheaper to fix than in production.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'lifecycle-comp-tf1',
+            statement: 'The retrospective is optional since the feature is already shipped.',
+            correct: false,
+            explanation: 'Retrospectives are essential for learning. They help you improve your process for next time.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'lifecycle-comp-tf2',
+            statement: 'Design Phase should produce architecture documentation.',
+            correct: true,
+            explanation: 'Design documentation captures decisions, enables review, and helps onboard others.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'lifecycle-comp-fill1',
+            statement: 'Implementation Phase includes coding with ___ to ensure quality.',
+            correctAnswers: ['tests', 'testing', 'test coverage'],
+            caseSensitive: false,
+            hints: ['What verifies code works correctly?'],
+            explanation: 'Tests are essential for maintaining code quality and enabling confident changes.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'lifecycle-comp-fill2',
+            statement: 'After deployment, you hold a ___ to learn from the experience.',
+            correctAnswers: ['retrospective', 'retro', 'post-mortem'],
+            caseSensitive: false,
+            hints: ['Looking back to improve'],
+            explanation: 'Retrospectives capture lessons learned and improve future feature development.',
+            points: 10
+          }
+        ]
+      });
+      lifecycleComprehension.init();
+
+      const lifecycleApplication = new ActivityCarousel('lifecycle-application', {
+        type: 'application',
+        sectionId: 'ownership-lifecycle',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'lifecycle-app-seq1',
+            instruction: 'Order the complete ownership lifecycle from start to finish:',
+            items: [
+              { id: 'l1', text: 'Requirements Phase - Meet stakeholders' },
+              { id: 'l2', text: 'Design Phase - Architecture docs' },
+              { id: 'l3', text: 'Implementation Phase - Code with tests' },
+              { id: 'l4', text: 'Review & Polish - Address feedback' },
+              { id: 'l5', text: 'Deploy & Retrospective - Ship and learn' }
+            ],
+            correctOrder: ['l1', 'l2', 'l3', 'l4', 'l5'],
+            hints: {
+              partial: 'Start with understanding what to build.',
+              wrong: 'Requirements → Design → Implementation → Review → Deploy/Retro'
+            },
+            explanation: 'The complete journey from idea to production includes all these phases.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'lifecycle-app-dd1',
+            instruction: 'Match each deliverable to its lifecycle phase:',
+            items: [
+              { id: 'd1', text: 'User story acceptance criteria' },
+              { id: 'd2', text: 'System architecture diagram' },
+              { id: 'd3', text: 'Pull request with tests' },
+              { id: 'd4', text: 'Addressed code review comments' },
+              { id: 'd5', text: 'Lessons learned document' }
+            ],
+            zones: [
+              { id: 'requirements', label: '📋 Requirements', correct: ['d1'] },
+              { id: 'design', label: '📐 Design', correct: ['d2'] },
+              { id: 'implementation', label: '💻 Implementation', correct: ['d3'] },
+              { id: 'review', label: '🔍 Review', correct: ['d4'] },
+              { id: 'retrospective', label: '🏆 Retrospective', correct: ['d5'] }
+            ],
+            explanation: 'Each phase produces specific artifacts.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'lifecycle-app-connect1',
+            instruction: 'Connect each phase to its primary question:',
+            nodes: [
+              { id: 'requirements', label: '📋 Requirements' },
+              { id: 'design', label: '📐 Design' },
+              { id: 'implementation', label: '💻 Implementation' },
+              { id: 'review', label: '🔍 Review' },
+              { id: 'q-what', label: 'What are we building?' },
+              { id: 'q-how', label: 'How will we build it?' },
+              { id: 'q-works', label: 'Does it work correctly?' },
+              { id: 'q-ready', label: 'Is it ready to ship?' }
+            ],
+            solution: {
+              edges: [
+                { source: 'requirements', target: 'q-what' },
+                { source: 'design', target: 'q-how' },
+                { source: 'implementation', target: 'q-works' },
+                { source: 'review', target: 'q-ready' }
+              ]
+            },
+            explanation: 'Each phase answers a different fundamental question.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'lifecycle-app-quiz1',
+            question: 'You finished coding but haven\'t had code review yet. What phase are you in?',
+            options: [
+              'Design Phase',
+              'Implementation Phase',
+              'Review & Polish Phase',
+              'Retrospective'
+            ],
+            correct: 2,
+            explanation: 'After implementation, you enter Review & Polish to get feedback before deploying.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'lifecycle-app-seq2',
+            instruction: 'Order these activities by when they happen in a feature lifecycle:',
+            items: [
+              { id: 'a1', text: 'Write acceptance criteria' },
+              { id: 'a2', text: 'Create system diagram' },
+              { id: 'a3', text: 'Write unit tests' },
+              { id: 'a4', text: 'Hold retrospective meeting' }
+            ],
+            correctOrder: ['a1', 'a2', 'a3', 'a4'],
+            hints: {
+              partial: 'Criteria come before diagrams.',
+              wrong: 'Acceptance criteria → Diagram → Tests → Retrospective'
+            },
+            explanation: 'Activities map to their phases in sequence.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'lifecycle-app-dd2',
+            instruction: 'Categorize each as early phase or late phase activity:',
+            items: [
+              { id: 'e1', text: 'Meet with product manager' },
+              { id: 'e2', text: 'Draw component diagram' },
+              { id: 'l1', text: 'Deploy to staging' },
+              { id: 'l2', text: 'Document lessons learned' }
+            ],
+            zones: [
+              { id: 'early', label: '🌅 Early Phase', correct: ['e1', 'e2'] },
+              { id: 'late', label: '🌆 Late Phase', correct: ['l1', 'l2'] }
+            ],
+            explanation: 'Early = understanding/design. Late = deploy/reflect.',
+            points: 20
+          }
+        ]
+      });
+      lifecycleApplication.init();
+
+      const lifecycleSynthesis = new ActivityCarousel('lifecycle-synthesis', {
+        type: 'synthesis',
+        sectionId: 'ownership-lifecycle',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'lifecycle-syn-sc1',
+            scenario: 'Your team wants to skip the design phase to "move faster." The feature involves multiple services and a new database table.',
+            question: 'How would you advocate for keeping the design phase?',
+            evaluation: {
+              keywords: ['complexity', 'multiple', 'coordination', 'rework', 'expensive', 'mistakes', 'documentation', 'review'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d explain that complexity makes design MORE important, not less. Multiple services need coordination—without design, we\'ll make expensive mistakes. A few hours of design prevents days of rework. Documentation enables parallel work and code review. Speed without design is an illusion.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'lifecycle-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Team A: Skips retrospectives because "we already shipped, moving on."\n\nTeam B: Holds 30-minute retros after every feature.'
+            },
+            question: 'Which team will likely improve faster over the next 6 months?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'team b'],
+            explanation: 'Team B learns from each feature. Team A repeats mistakes. Continuous improvement requires reflection.',
+            commonMistakes: {
+              'A': 'Moving fast without learning means repeating the same mistakes.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'lifecycle-syn-sc2',
+            scenario: 'During code review, a senior points out that your approach doesn\'t handle a key edge case. You\'ve already written 500 lines.',
+            question: 'What does this tell you about the earlier phases, and what would you do differently next time?',
+            evaluation: {
+              keywords: ['design', 'edge case', 'earlier', 'review', 'cheaper', 'catch', 'diagram', 'requirements'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'This tells me design phase needed more edge case analysis and earlier review. Next time: document edge cases in design, get senior review before coding, use diagrams to spot gaps. Catching this earlier would have been much cheaper.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'lifecycle-syn-ref1',
+            prompt: 'Think about a feature where something went wrong after deployment. Could better process at an earlier phase have prevented it?',
+            thinkingPrompts: [
+              'What went wrong?',
+              'Was requirements clear?',
+              'Was design reviewed?',
+              'What phase could have caught it?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(requirement|unclear|scope)', label: 'Requirements analysis', points: 5 },
+                { pattern: '(design|architecture)', label: 'Design thinking', points: 5 },
+                { pattern: '(review|feedback)', label: 'Process improvement', points: 5 },
+                { pattern: '(earlier|before|prevent)', label: 'Shift-left mindset', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'lifecycle-syn-graph1',
+            instruction: 'Build the feedback loops: Retrospective learnings feed back into better Requirements for the next feature.',
+            nodeTypes: [
+              { type: 'requirements', label: '📋 Requirements', color: '#42a5f5' },
+              { type: 'design', label: '📐 Design', color: '#66bb6a' },
+              { type: 'implementation', label: '💻 Implementation', color: '#ffa726' },
+              { type: 'review', label: '🔍 Review', color: '#7986cb' },
+              { type: 'deploy', label: '🚀 Deploy', color: '#ef5350' },
+              { type: 'retrospective', label: '🔄 Retrospective', color: '#ab47bc' }
+            ],
+            validation: {
+              requiredNodes: ['requirements', 'design', 'implementation', 'deploy', 'retrospective'],
+              requiredEdges: [
+                { from: 'requirements', to: 'design' },
+                { from: 'design', to: 'implementation' },
+                { from: 'implementation', to: 'deploy' },
+                { from: 'deploy', to: 'retrospective' },
+                { from: 'retrospective', to: 'requirements' }
+              ],
+              optionalNodes: ['review'],
+              minNodes: 5,
+              maxNodes: 7
+            },
+            hints: [
+              'The lifecycle is actually a loop, not a line',
+              'Retrospective learnings improve future requirements',
+              'Each feature informs the next'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'lifecycle-syn-sc3',
+            scenario: 'A teammate says: "I\'m too busy coding to attend the retrospective meeting. My work is done."',
+            question: 'How would you explain the value of retrospectives to them?',
+            evaluation: {
+              keywords: ['learn', 'improve', 'mistakes', 'process', 'team', 'ownership', 'patterns', 'better'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d explain that retrospectives are how we improve. Without reflection, we repeat mistakes. Your insights help the whole team. It\'s part of ownership—caring about making next time better, not just this time done. 30 minutes of reflection saves hours of repeated problems.',
+            points: 25
+          }
+        ]
+      });
+      lifecycleSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - REAL FEATURE SECTION
+      // ============================================
+
+      const realFeatureComprehension = new ActivityCarousel('real-feature-comprehension', {
+        type: 'comprehension',
+        sectionId: 'real-feature',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'real-comp-q1',
+            question: 'What makes a capstone feature "real" vs a toy project?',
+            options: [
+              'Using trendy frameworks',
+              'Having lots of code',
+              'Actual impact with stakeholders who care',
+              'Being difficult to build'
+            ],
+            correct: 2,
+            explanation: 'Real features have users or stakeholders who care about the outcome.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'real-comp-q2',
+            question: 'Why should a capstone feature involve multiple components?',
+            options: [
+              'To make it harder',
+              'Because seniors need to coordinate frontend, backend, and more',
+              'To impress recruiters',
+              'Single components are too easy'
+            ],
+            correct: 1,
+            explanation: 'Real senior work involves coordinating multiple parts of a system, not just one piece.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'real-comp-tf1',
+            statement: 'A capstone feature must be deployable to production, not just local.',
+            correct: true,
+            explanation: 'Real features ship. Production deployment teaches you the full delivery pipeline.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'real-comp-tf2',
+            statement: 'Having stakeholders means at least one person cares about your feature succeeding.',
+            correct: true,
+            explanation: 'Stakeholders give feedback, set requirements, and validate your work—this is real-world dynamics.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'real-comp-fill1',
+            statement: 'A real feature is "not a ___ project" because it has actual impact.',
+            correctAnswers: ['toy', 'fake', 'practice'],
+            caseSensitive: false,
+            hints: ['Something you play with but doesn\'t matter'],
+            explanation: 'Toy projects have no stakes. Real features matter to real people.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'real-comp-fill2',
+            statement: 'The feature must involve multiple ___ like frontend and backend.',
+            correctAnswers: ['components', 'parts', 'systems', 'layers'],
+            caseSensitive: false,
+            hints: ['Different pieces of a system'],
+            explanation: 'Senior-level work requires coordinating multiple parts of a system.',
+            points: 10
+          }
+        ]
+      });
+      realFeatureComprehension.init();
+
+      const realFeatureApplication = new ActivityCarousel('real-feature-application', {
+        type: 'application',
+        sectionId: 'real-feature',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'real-app-dd1',
+            instruction: 'Categorize each project as Real Feature or Toy Project:',
+            items: [
+              { id: 'r1', text: 'Add user notifications—team is waiting for it' },
+              { id: 't1', text: 'Build a todo app for your portfolio' },
+              { id: 'r2', text: 'Implement search feature stakeholders requested' },
+              { id: 't2', text: 'Clone a popular website for practice' },
+              { id: 'r3', text: 'Create admin dashboard the ops team needs' },
+              { id: 't3', text: 'Tutorial project to learn a framework' }
+            ],
+            zones: [
+              { id: 'real', label: '✅ Real Feature', correct: ['r1', 'r2', 'r3'] },
+              { id: 'toy', label: '🧸 Toy Project', correct: ['t1', 't2', 't3'] }
+            ],
+            explanation: 'Real features have stakeholders, impact, and ship to production.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'real-app-connect1',
+            instruction: 'Connect each criterion to why it matters:',
+            nodes: [
+              { id: 'stakeholders', label: '👥 Stakeholders' },
+              { id: 'components', label: '📦 Multiple Components' },
+              { id: 'deployable', label: '🚀 Deployable' },
+              { id: 'feedback', label: 'Get real feedback' },
+              { id: 'coordinate', label: 'Practice coordination' },
+              { id: 'pipeline', label: 'Learn full delivery' }
+            ],
+            solution: {
+              edges: [
+                { source: 'stakeholders', target: 'feedback' },
+                { source: 'components', target: 'coordinate' },
+                { source: 'deployable', target: 'pipeline' }
+              ]
+            },
+            explanation: 'Each criterion teaches a crucial senior skill.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'real-app-seq1',
+            instruction: 'Order these features from least "real" to most "real":',
+            items: [
+              { id: 'f1', text: 'Personal hobby project, no users' },
+              { id: 'f2', text: 'Open source contribution, some users' },
+              { id: 'f3', text: 'Work feature, team depends on it' },
+              { id: 'f4', text: 'Production feature, external customers use it' }
+            ],
+            correctOrder: ['f1', 'f2', 'f3', 'f4'],
+            hints: {
+              partial: 'More stakeholders = more real.',
+              wrong: 'Personal → Open source → Team → Customers'
+            },
+            explanation: 'Real-ness correlates with stakeholder impact.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'real-app-quiz1',
+            question: 'You want to build a capstone but have no company project. What\'s a good option?',
+            options: [
+              'Build another todo app',
+              'Contribute a real feature to an open source project with active users',
+              'Just code something interesting',
+              'Skip the capstone entirely'
+            ],
+            correct: 1,
+            explanation: 'Open source contributions have real users and stakeholders—perfect for capstone features.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'real-app-dd2',
+            instruction: 'Match each component type to its role:',
+            items: [
+              { id: 'c1', text: 'User interface layer' },
+              { id: 'c2', text: 'Business logic layer' },
+              { id: 'c3', text: 'Data storage layer' }
+            ],
+            zones: [
+              { id: 'frontend', label: '🖥️ Frontend', correct: ['c1'] },
+              { id: 'backend', label: '⚙️ Backend', correct: ['c2'] },
+              { id: 'database', label: '💾 Database', correct: ['c3'] }
+            ],
+            explanation: 'Real features typically touch multiple layers.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'real-app-seq2',
+            instruction: 'Order these deployment targets from development to production:',
+            items: [
+              { id: 'd1', text: 'Local development' },
+              { id: 'd2', text: 'Staging environment' },
+              { id: 'd3', text: 'Production' }
+            ],
+            correctOrder: ['d1', 'd2', 'd3'],
+            hints: {
+              partial: 'Start local, end at production.',
+              wrong: 'Local → Staging → Production'
+            },
+            explanation: 'Real features go through this deployment pipeline.',
+            points: 15
+          }
+        ]
+      });
+      realFeatureApplication.init();
+
+      const realFeatureSynthesis = new ActivityCarousel('real-feature-synthesis', {
+        type: 'synthesis',
+        sectionId: 'real-feature',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'real-syn-sc1',
+            scenario: 'You\'re choosing your capstone feature. Option A: Build a cool side project you\'re interested in. Option B: Tackle a feature from your team\'s backlog that no one wants to do.',
+            question: 'Which would be a better capstone and why?',
+            evaluation: {
+              keywords: ['stakeholders', 'real', 'impact', 'feedback', 'production', 'team', 'ownership', 'value'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Option B is better for capstone—it has real stakeholders (team), real impact (backlog item), and will ship to production. You\'ll get feedback, practice ownership, and add actual value. Side projects are fine for learning, but capstones should prove senior-level work.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'real-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Dev A builds a portfolio project: social media clone with no actual users.\n\nDev B builds a feature: admin dashboard for a real team who uses it daily.'
+            },
+            question: 'Whose portfolio will better demonstrate senior-level capability to employers?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b'],
+            explanation: 'Dev B can speak to stakeholder feedback, real requirements, production deployment—things employers value.',
+            commonMistakes: {
+              'A': 'Clones are common and don\'t show ownership of real problems.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'real-syn-sc2',
+            scenario: 'A friend says: "I built 10 portfolio projects but can\'t get interviews. I don\'t understand."',
+            question: 'What advice would you give them based on what makes features "real"?',
+            evaluation: {
+              keywords: ['stakeholders', 'impact', 'real', 'users', 'production', 'ownership', 'one real', 'fewer better'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d say: 10 toy projects < 1 real feature. Find an open source project, non-profit, or company backlog item. Build something with actual users and stakeholders. One feature you can deeply speak to—requirements, design, deployment, feedback—beats 10 generic clones.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'real-syn-ref1',
+            prompt: 'What feature could you build that would have real stakeholders? Think about your team, open source projects you use, or organizations you\'re involved with.',
+            thinkingPrompts: [
+              'Who would use this feature?',
+              'Who would you get requirements from?',
+              'Where would it be deployed?',
+              'What makes it "real" not "toy"?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(team|manager|stakeholder)', label: 'Stakeholder awareness', points: 5 },
+                { pattern: '(deploy|production|ship)', label: 'Delivery thinking', points: 5 },
+                { pattern: '(user|customer|person)', label: 'User focus', points: 5 },
+                { pattern: '(requirements|needs|problem)', label: 'Problem focus', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'real-syn-graph1',
+            instruction: 'Build the "Real Feature" criteria: Must Be Real → Multiple Components → Has Stakeholders → Deployable',
+            nodeTypes: [
+              { type: 'real', label: '✅ Must Be Real', color: '#42a5f5' },
+              { type: 'components', label: '📦 Multiple Components', color: '#66bb6a' },
+              { type: 'stakeholders', label: '👥 Has Stakeholders', color: '#ffa726' },
+              { type: 'deployable', label: '🚀 Deployable', color: '#7986cb' }
+            ],
+            validation: {
+              requiredNodes: ['real', 'components', 'stakeholders', 'deployable'],
+              requiredEdges: [
+                { from: 'real', to: 'components' },
+                { from: 'components', to: 'stakeholders' },
+                { from: 'stakeholders', to: 'deployable' }
+              ],
+              optionalNodes: [],
+              minNodes: 4,
+              maxNodes: 5
+            },
+            hints: [
+              'All criteria must be met',
+              'They build on each other',
+              'Deployable is the final proof'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'real-syn-sc3',
+            scenario: 'You identified a perfect capstone feature at work, but your manager says it\'s "too risky" to give to someone learning.',
+            question: 'How would you make the case for taking ownership of this feature?',
+            evaluation: {
+              keywords: ['support', 'review', 'learning', 'risk', 'mitigation', 'checkpoints', 'design doc', 'grow'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d propose risk mitigation: share design doc early for review, set up checkpoints, get senior pair review at key points. Explain that ownership with guardrails is how juniors grow. The alternative—staying on safe tasks—limits growth. Show you understand the risks and have a plan.',
+            points: 25
+          }
+        ]
+      });
+      realFeatureSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Junior Ch5: Capstone I');
     });
   </script>
 </body>

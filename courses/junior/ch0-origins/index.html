@@ -352,7 +352,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <!-- Activity Carousel System -->
     <!-- Firebase & Activity Tracking -->
@@ -487,24 +486,6 @@
           story.steps,
           { audioEngine, storyId: story.id }
         );
-      });
-
-      // ============================================
-      // INITIALIZE QUIZZES
-      // ============================================
-
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
-        'mindset-story': 'mindset-quiz',
-        'acceleration-story': 'acceleration-quiz',
-        'skills-story': 'skills-quiz'
-      };
-
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
-        if (!containerId) return;
-
-        new Quiz(containerId, quiz.questions);
       });
 
       // ============================================

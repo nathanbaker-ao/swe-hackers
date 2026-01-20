@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="junior" data-lesson="ch6-capstone2">
   <header class="header">
@@ -114,20 +115,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="skills-ai-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="skills-ai-comprehension"></div>
+        <div class="carousel-container" id="skills-ai-application"></div>
+        <div class="carousel-container" id="skills-ai-synthesis"></div>
       </div>
     </section>
 
@@ -193,20 +185,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="workflow-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="workflow-comprehension"></div>
+        <div class="carousel-container" id="workflow-application"></div>
+        <div class="carousel-container" id="workflow-synthesis"></div>
       </div>
     </section>
 
@@ -272,20 +255,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="journey-complete-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels">
+        <div class="carousel-container" id="journey-comprehension"></div>
+        <div class="carousel-container" id="journey-application"></div>
+        <div class="carousel-container" id="journey-synthesis"></div>
       </div>
     </section>
 
@@ -341,6 +315,19 @@
   <script src="../../shared/js/data-service.js"></script>
   <script src="../../shared/js/activity-tracker.js"></script>
 
+  <!-- Activity Type Scripts -->
+  <script src="../../shared/js/activities/base-activity.js"></script>
+  <script src="../../shared/js/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/activity-carousel.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
@@ -351,7 +338,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -485,22 +471,981 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // ACTIVITY CAROUSELS - SKILLS + AI SECTION
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
-        'skills-ai-story': 'skills-ai-quiz',
-        'workflow-story': 'workflow-quiz',
-        'journey-complete-story': 'journey-complete-quiz'
-      };
-
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
-        if (!containerId) return;
-
-        new Quiz(containerId, quiz.questions);
+      const skillsAiComprehension = new ActivityCarousel('skills-ai-comprehension', {
+        type: 'comprehension',
+        sectionId: 'skills-ai',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'skills-comp-q1',
+            question: 'What makes you valuable as an AI partner (not replaceable by AI)?',
+            options: [
+              'Your typing speed',
+              'Your context: codebase patterns, constraints, and requirements',
+              'Your ability to copy-paste code',
+              'Your memorization of syntax'
+            ],
+            correct: 1,
+            explanation: 'AI can generate code, but only you understand your specific codebase, team constraints, and business requirements.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'skills-comp-q2',
+            question: 'What transforms AI from "guessing" to "executing your vision"?',
+            options: [
+              'Using the newest AI model',
+              'Writing longer prompts',
+              'Providing your context (patterns, constraints, design decisions)',
+              'Asking AI to figure it out'
+            ],
+            correct: 2,
+            explanation: 'Your context bridges your skills and AI\'s capabilities to produce targeted, correct output.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'skills-comp-tf1',
+            statement: 'AI replaces the need for understanding codebase navigation and data flow.',
+            correct: false,
+            explanation: 'AI amplifies these skills—without understanding, you can\'t provide good context or verify AI output.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'skills-comp-tf2',
+            statement: 'The combination of human context + AI execution can produce 10x productivity.',
+            correct: true,
+            explanation: 'Your strategic thinking + AI\'s speed = senior-level output at unprecedented velocity.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'skills-comp-fill1',
+            statement: 'AI executes at machine ___; you provide the direction.',
+            correctAnswers: ['speed', 'velocity', 'pace'],
+            caseSensitive: false,
+            hints: ['How fast machines work'],
+            explanation: 'AI execution is nearly instant—your job is making sure it\'s going the right direction.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'skills-comp-fill2',
+            statement: 'Your skills from the course (Navigation, Data Flow, Integration, Design) become ___ that you provide to AI.',
+            correctAnswers: ['context', 'guidance', 'direction'],
+            caseSensitive: false,
+            hints: ['The information AI needs to be useful'],
+            explanation: 'Everything you learned becomes context that makes AI output actually useful.',
+            points: 10
+          }
+        ]
       });
+      skillsAiComprehension.init();
+
+      const skillsAiApplication = new ActivityCarousel('skills-ai-application', {
+        type: 'application',
+        sectionId: 'skills-ai',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'skills-app-dd1',
+            instruction: 'Categorize each as Human Role or AI Role:',
+            items: [
+              { id: 'h1', text: 'Understanding business requirements' },
+              { id: 'h2', text: 'Knowing codebase patterns' },
+              { id: 'a1', text: 'Generating boilerplate code' },
+              { id: 'h3', text: 'Identifying edge cases' },
+              { id: 'a2', text: 'Refactoring at scale' },
+              { id: 'h4', text: 'Verifying output correctness' }
+            ],
+            zones: [
+              { id: 'human', label: '🧠 Human Role', correct: ['h1', 'h2', 'h3', 'h4'] },
+              { id: 'ai', label: '🤖 AI Role', correct: ['a1', 'a2'] }
+            ],
+            explanation: 'Humans provide context and verification; AI provides speed and execution.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'skills-app-connect1',
+            instruction: 'Connect each Junior skill to what it enables with AI:',
+            nodes: [
+              { id: 'navigation', label: '🪨 Navigation' },
+              { id: 'dataflow', label: '⚡ Data Flow' },
+              { id: 'integration', label: '🧲 Integration' },
+              { id: 'design', label: '🏛️ Design' },
+              { id: 'read', label: 'Read & understand AI output' },
+              { id: 'trace', label: 'Trace AI-generated logic' },
+              { id: 'resilient', label: 'Guide resilient patterns' },
+              { id: 'architect', label: 'Direct AI with clear design' }
+            ],
+            solution: {
+              edges: [
+                { source: 'navigation', target: 'read' },
+                { source: 'dataflow', target: 'trace' },
+                { source: 'integration', target: 'resilient' },
+                { source: 'design', target: 'architect' }
+              ]
+            },
+            explanation: 'Every skill you learned amplifies your AI partnership.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'skills-app-seq1',
+            instruction: 'Order these from least to most AI-amplified output:',
+            items: [
+              { id: 's1', text: 'Ask AI to code something without context' },
+              { id: 's2', text: 'Give AI basic requirements' },
+              { id: 's3', text: 'Give AI requirements + codebase patterns' },
+              { id: 's4', text: 'Give AI design doc + patterns + edge cases' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4'],
+            hints: {
+              partial: 'More context = better output.',
+              wrong: 'No context → Basic → Patterns → Full design'
+            },
+            explanation: 'AI output quality directly correlates with context quality.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'skills-app-quiz1',
+            question: 'AI generates code that looks correct but doesn\'t handle a key edge case. What skill helps you catch this?',
+            options: [
+              'Faster typing',
+              'Data flow tracing and edge case thinking',
+              'Memorizing AI documentation',
+              'Asking AI to check itself'
+            ],
+            correct: 1,
+            explanation: 'Your data flow and design skills help you trace logic and identify missed edge cases.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'skills-app-dd2',
+            instruction: 'Match each context type to what it prevents:',
+            items: [
+              { id: 'c1', text: 'Codebase patterns' },
+              { id: 'c2', text: 'Business constraints' },
+              { id: 'c3', text: 'Edge cases' }
+            ],
+            zones: [
+              { id: 'style', label: '🎨 Inconsistent Style', correct: ['c1'] },
+              { id: 'wrong', label: '❌ Wrong Solution', correct: ['c2'] },
+              { id: 'bugs', label: '🐛 Hidden Bugs', correct: ['c3'] }
+            ],
+            explanation: 'Different context prevents different problems.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'skills-app-seq2',
+            instruction: 'Order the value chain from your skills to AI output:',
+            items: [
+              { id: 'v1', text: 'Your skills (from 5 weeks)' },
+              { id: 'v2', text: 'Your context (patterns, constraints)' },
+              { id: 'v3', text: 'AI execution (machine speed)' },
+              { id: 'v4', text: 'Senior output (10x productivity)' }
+            ],
+            correctOrder: ['v1', 'v2', 'v3', 'v4'],
+            hints: {
+              partial: 'Skills enable context.',
+              wrong: 'Skills → Context → Execution → Output'
+            },
+            explanation: 'Your skills create context that directs AI execution to senior output.',
+            points: 20
+          }
+        ]
+      });
+      skillsAiApplication.init();
+
+      const skillsAiSynthesis = new ActivityCarousel('skills-ai-synthesis', {
+        type: 'synthesis',
+        sectionId: 'skills-ai',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'skills-syn-sc1',
+            scenario: 'A colleague says: "Why did you spend 5 weeks learning codebase skills? Just use AI to figure it out." They copy-paste AI code without understanding it.',
+            question: 'How would you explain why your skills make you more valuable, not less, in the AI era?',
+            evaluation: {
+              keywords: ['context', 'verify', 'understand', 'direction', 'quality', 'patterns', 'edge cases', 'reliable'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d explain: AI without understanding is dangerous. My skills let me provide context for better output, verify correctness, and catch edge cases. Your copy-paste code will break in production. I direct AI with understanding; you hope AI guesses right. One produces reliable features, one produces debt.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'skills-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Developer A: Uses AI without understanding codebase. Copies output directly.\n\nDeveloper B: Uses navigation skills to understand context, then prompts AI with specific patterns.'
+            },
+            question: 'Whose AI-generated code will have fewer bugs in production?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b'],
+            explanation: 'Developer B\'s context means AI output matches actual requirements and patterns.',
+            commonMistakes: {
+              'A': 'Without context, AI guesses—guesses often miss edge cases and codebase conventions.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'skills-syn-sc2',
+            scenario: 'You\'re adding a feature to an unfamiliar service. You could: A) Ask AI to generate the feature or B) Use navigation skills to understand the service first, then work with AI.',
+            question: 'Which approach would produce better results and why?',
+            evaluation: {
+              keywords: ['understand', 'patterns', 'context', 'verify', 'fit', 'integration', 'quality', 'correct'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Approach B. Understanding first means I can give AI correct context (existing patterns, constraints). I can verify output fits the service. Approach A produces generic code that might not integrate correctly. Navigation skills make AI partnership effective.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'skills-syn-ref1',
+            prompt: 'How has your relationship with AI tools changed during this course? What will you do differently now that you have stronger foundational skills?',
+            thinkingPrompts: [
+              'Did you use AI before? How?',
+              'What context can you now provide that you couldn\'t before?',
+              'How will you verify AI output differently?',
+              'What skills will you lean on most?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(before|used to|previously)', label: 'Self-awareness', points: 5 },
+                { pattern: '(context|understand|pattern)', label: 'Skills integration', points: 5 },
+                { pattern: '(verify|check|test)', label: 'Quality mindset', points: 5 },
+                { pattern: '(now|will|going to)', label: 'Future application', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'skills-syn-graph1',
+            instruction: 'Build the value chain: Your Skills → Context → AI Execution → Senior Output',
+            nodeTypes: [
+              { type: 'skills', label: '🧠 Your Skills', color: '#42a5f5' },
+              { type: 'context', label: '🔗 Your Context', color: '#66bb6a' },
+              { type: 'ai', label: '🤖 AI Execution', color: '#ffa726' },
+              { type: 'output', label: '🚀 Senior Output', color: '#7986cb' }
+            ],
+            validation: {
+              requiredNodes: ['skills', 'context', 'ai', 'output'],
+              requiredEdges: [
+                { from: 'skills', to: 'context' },
+                { from: 'context', to: 'ai' },
+                { from: 'ai', to: 'output' }
+              ],
+              optionalNodes: [],
+              minNodes: 4,
+              maxNodes: 5
+            },
+            hints: [
+              'Skills enable context',
+              'Context directs AI',
+              'AI produces output'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'skills-syn-sc3',
+            scenario: 'In an interview, the interviewer asks: "With AI coding tools, why do developers need to understand code deeply?"',
+            question: 'How would you answer based on what you\'ve learned?',
+            evaluation: {
+              keywords: ['context', 'verify', 'direction', 'edge cases', 'patterns', 'quality', 'reliable', 'understand'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'AI is a powerful tool, but it needs direction. Understanding lets me provide context for relevant output, verify correctness, catch edge cases, and maintain quality. Without understanding, I\'m just hoping AI guesses right. Deep knowledge makes AI partnerships actually work—it\'s the difference between 10x productivity and 10x bugs.',
+            points: 25
+          }
+        ]
+      });
+      skillsAiSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - WORKFLOW SECTION
+      // ============================================
+
+      const workflowComprehension = new ActivityCarousel('workflow-comprehension', {
+        type: 'comprehension',
+        sectionId: 'workflow',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'work-comp-q1',
+            question: 'In the AI-paired workflow, which phases are human-led?',
+            options: [
+              'Only Execute',
+              'Design, Prompt, Verify, Integrate, Test',
+              'All phases',
+              'None—AI does everything'
+            ],
+            correct: 1,
+            explanation: 'Only Execute is AI-led. Humans lead Design, Prompt, Verify, Integrate, and Test.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'work-comp-q2',
+            question: 'Why is Verify critical after AI execution?',
+            options: [
+              'To thank the AI',
+              'AI never makes mistakes',
+              'To ensure output matches your design and handles edge cases',
+              'It\'s optional'
+            ],
+            correct: 2,
+            explanation: 'AI can produce plausible-looking but incorrect code. Verification catches mismatches.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'work-comp-tf1',
+            statement: 'The Integrate phase adapts AI output to match your codebase style.',
+            correct: true,
+            explanation: 'AI doesn\'t know your codebase conventions. Integration ensures consistency.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'work-comp-tf2',
+            statement: 'If AI generates tests, you can trust them without reviewing.',
+            correct: false,
+            explanation: 'AI-generated tests might not cover the right cases. You must verify every assertion.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'work-comp-fill1',
+            statement: 'The Design phase establishes requirements, diagrams, and ___ cases.',
+            correctAnswers: ['edge', 'corner', 'boundary'],
+            caseSensitive: false,
+            hints: ['Unusual or extreme situations'],
+            explanation: 'Edge cases defined upfront help you verify AI output completeness.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'work-comp-fill2',
+            statement: 'A clear ___ with context produces much better AI output than vague requests.',
+            correctAnswers: ['prompt', 'instruction', 'request'],
+            caseSensitive: false,
+            hints: ['What you give to AI'],
+            explanation: 'Prompt quality directly determines output quality.',
+            points: 10
+          }
+        ]
+      });
+      workflowComprehension.init();
+
+      const workflowApplication = new ActivityCarousel('workflow-application', {
+        type: 'application',
+        sectionId: 'workflow',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'work-app-seq1',
+            instruction: 'Order the AI-paired workflow from first to last:',
+            items: [
+              { id: 'w1', text: 'Design [HUMAN] - Requirements, diagrams' },
+              { id: 'w2', text: 'Prompt [HUMAN] - Clear prompts with context' },
+              { id: 'w3', text: 'Execute [AI] - Generate code' },
+              { id: 'w4', text: 'Verify [HUMAN] - Check design match' },
+              { id: 'w5', text: 'Integrate [HUMAN] - Adapt to codebase' },
+              { id: 'w6', text: 'Test [HUMAN] - Verify assertions' },
+              { id: 'w7', text: 'Ship!' }
+            ],
+            correctOrder: ['w1', 'w2', 'w3', 'w4', 'w5', 'w6', 'w7'],
+            hints: {
+              partial: 'Design comes first, Ship comes last.',
+              wrong: 'Design → Prompt → Execute → Verify → Integrate → Test → Ship'
+            },
+            explanation: 'The workflow ensures human oversight of AI output at every stage.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'work-app-dd1',
+            instruction: 'Match each workflow phase to its key activity:',
+            items: [
+              { id: 'a1', text: 'Draw data flow diagrams' },
+              { id: 'a2', text: 'Write prompts with context' },
+              { id: 'a3', text: 'Generate code' },
+              { id: 'a4', text: 'Check edge case handling' },
+              { id: 'a5', text: 'Match codebase conventions' },
+              { id: 'a6', text: 'Review every test assertion' }
+            ],
+            zones: [
+              { id: 'design', label: '📋 Design', correct: ['a1'] },
+              { id: 'prompt', label: '💬 Prompt', correct: ['a2'] },
+              { id: 'execute', label: '🤖 Execute', correct: ['a3'] },
+              { id: 'verify', label: '🔍 Verify', correct: ['a4'] },
+              { id: 'integrate', label: '🔧 Integrate', correct: ['a5'] },
+              { id: 'test', label: '✅ Test', correct: ['a6'] }
+            ],
+            explanation: 'Each phase has specific responsibilities.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'work-app-connect1',
+            instruction: 'Connect each verification check to what it catches:',
+            nodes: [
+              { id: 'design-match', label: '📋 Design Match' },
+              { id: 'edge-check', label: '⚠️ Edge Cases' },
+              { id: 'style-check', label: '🎨 Style Check' },
+              { id: 'wrong', label: 'Wrong solution' },
+              { id: 'bugs', label: 'Hidden bugs' },
+              { id: 'inconsistent', label: 'Inconsistent code' }
+            ],
+            solution: {
+              edges: [
+                { source: 'design-match', target: 'wrong' },
+                { source: 'edge-check', target: 'bugs' },
+                { source: 'style-check', target: 'inconsistent' }
+              ]
+            },
+            explanation: 'Different checks catch different types of problems.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'work-app-quiz1',
+            question: 'AI generates a test that always passes. What should you do?',
+            options: [
+              'Trust it—AI knows testing',
+              'Skip testing—the feature works',
+              'Review the assertion to ensure it\'s actually testing something meaningful',
+              'Ask AI to generate more tests'
+            ],
+            correct: 2,
+            explanation: 'AI can generate tests that pass trivially. You must verify assertions are meaningful.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'work-app-seq2',
+            instruction: 'Order these prompts from worst to best AI context:',
+            items: [
+              { id: 'p1', text: '"Write the feature"' },
+              { id: 'p2', text: '"Write feature X that does Y"' },
+              { id: 'p3', text: '"Write feature X per this design doc, using our patterns"' },
+              { id: 'p4', text: 'Full design doc + diagrams + edge cases + codebase examples' }
+            ],
+            correctOrder: ['p1', 'p2', 'p3', 'p4'],
+            hints: {
+              partial: 'More context = better output.',
+              wrong: 'Vague → Basic → With patterns → Full context'
+            },
+            explanation: 'Comprehensive context produces comprehensive, correct output.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'work-app-dd2',
+            instruction: 'Categorize each as "Skip This" or "Always Do":',
+            items: [
+              { id: 's1', text: 'Trust AI output blindly' },
+              { id: 's2', text: 'Skip code review since AI wrote it' },
+              { id: 'a1', text: 'Verify output matches design' },
+              { id: 'a2', text: 'Check edge case handling' },
+              { id: 's3', text: 'Copy-paste without reading' },
+              { id: 'a3', text: 'Adapt to codebase style' }
+            ],
+            zones: [
+              { id: 'skip', label: '⛔ Skip This', correct: ['s1', 's2', 's3'] },
+              { id: 'always', label: '✅ Always Do', correct: ['a1', 'a2', 'a3'] }
+            ],
+            explanation: 'AI requires human oversight at every step.',
+            points: 20
+          }
+        ]
+      });
+      workflowApplication.init();
+
+      const workflowSynthesis = new ActivityCarousel('workflow-synthesis', {
+        type: 'synthesis',
+        sectionId: 'workflow',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'work-syn-sc1',
+            scenario: 'Your team wants to "move fast" and skip the Verify and Integrate phases. "AI code is good enough—just ship it!"',
+            question: 'How would you argue for keeping these phases?',
+            evaluation: {
+              keywords: ['bugs', 'production', 'edge cases', 'consistency', 'verify', 'integrate', 'quality', 'debt'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d explain: AI code often looks correct but misses edge cases. Skipping Verify means bugs in production. Skipping Integrate means inconsistent codebase—technical debt accumulates. The 30 minutes of verification saves days of debugging. "Fast" shipping that causes production issues isn\'t actually fast.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'work-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Team A: Uses full AI-paired workflow with all phases.\n\nTeam B: Just prompts AI and ships output directly.'
+            },
+            question: 'Which team will have fewer production incidents?',
+            correctAnswer: 'A',
+            acceptableVariants: ['a', 'team a'],
+            explanation: 'Team A\'s verification catches issues before production. Team B ships AI\'s mistakes.',
+            commonMistakes: {
+              'B': 'AI output without verification often contains subtle bugs that break in production.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'work-syn-sc2',
+            scenario: 'You followed the workflow perfectly, but AI output still had a bug that made it to production. What would you add to your workflow to prevent similar issues?',
+            question: 'How would you strengthen your verification and testing phases?',
+            evaluation: {
+              keywords: ['edge cases', 'checklist', 'test', 'review', 'specific', 'scenario', 'verify', 'better'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d add: (1) Edge case checklist specific to this type of feature, (2) More targeted test scenarios, (3) Second-person review of AI output, (4) Better design doc with failure modes documented. Each production bug teaches us what to verify more carefully next time.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'work-syn-ref1',
+            prompt: 'Think about how you would use this AI-paired workflow on your next feature. Which phases will be hardest for you? Which skills from the course will help most?',
+            thinkingPrompts: [
+              'What do you need to improve in Design?',
+              'How will you craft better prompts?',
+              'What will you check during Verify?',
+              'How will you ensure Integration quality?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(design|requirement|diagram)', label: 'Design thinking', points: 5 },
+                { pattern: '(prompt|context|clear)', label: 'Prompt awareness', points: 5 },
+                { pattern: '(verify|check|test)', label: 'Quality mindset', points: 5 },
+                { pattern: '(integrate|style|codebase)', label: 'Integration awareness', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'work-syn-graph1',
+            instruction: 'Build the AI-paired workflow with human/AI labels: Design[H] → Prompt[H] → Execute[AI] → Verify[H] → Integrate[H] → Test[H] → Ship',
+            nodeTypes: [
+              { type: 'design', label: '📋 Design [H]', color: '#42a5f5' },
+              { type: 'prompt', label: '💬 Prompt [H]', color: '#66bb6a' },
+              { type: 'execute', label: '🤖 Execute [AI]', color: '#ffa726' },
+              { type: 'verify', label: '🔍 Verify [H]', color: '#7986cb' },
+              { type: 'integrate', label: '🔧 Integrate [H]', color: '#ef5350' },
+              { type: 'test', label: '✅ Test [H]', color: '#ab47bc' },
+              { type: 'ship', label: '🚢 Ship!', color: '#26a69a' }
+            ],
+            validation: {
+              requiredNodes: ['design', 'prompt', 'execute', 'verify', 'integrate', 'test', 'ship'],
+              requiredEdges: [
+                { from: 'design', to: 'prompt' },
+                { from: 'prompt', to: 'execute' },
+                { from: 'execute', to: 'verify' },
+                { from: 'verify', to: 'integrate' },
+                { from: 'integrate', to: 'test' },
+                { from: 'test', to: 'ship' }
+              ],
+              optionalNodes: [],
+              minNodes: 7,
+              maxNodes: 8
+            },
+            hints: [
+              'Only Execute is AI-led',
+              'Human phases surround AI execution',
+              'Ship is the final destination'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'work-syn-sc3',
+            scenario: 'A junior asks: "Why do I need to verify AI code? It\'s smarter than me."',
+            question: 'How would you explain why human verification is essential?',
+            evaluation: {
+              keywords: ['context', 'requirements', 'edge cases', 'codebase', 'patterns', 'verify', 'understand', 'responsible'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'AI is powerful but doesn\'t know YOUR requirements, codebase patterns, or edge cases. It generates plausible code that might be subtly wrong. You understand the context AI doesn\'t have. You\'re responsible for the code—"AI wrote it" isn\'t an excuse. Verification is where your skills matter most.',
+            points: 25
+          }
+        ]
+      });
+      workflowSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - JOURNEY COMPLETE SECTION
+      // ============================================
+
+      const journeyComprehension = new ActivityCarousel('journey-comprehension', {
+        type: 'comprehension',
+        sectionId: 'journey-complete',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'journey-comp-q1',
+            question: 'What transformation did you undergo from Week 0 to Week 6?',
+            options: [
+              'Junior coder to junior coder with more projects',
+              'Junior coder to senior engineer mindset',
+              'No transformation—just learned some tools',
+              'Became an AI expert'
+            ],
+            correct: 1,
+            explanation: 'The course built senior-level thinking: navigation, flow, integration, design—not just tools.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'journey-comp-q2',
+            question: 'Which skills from the course form your foundation for AI partnership?',
+            options: [
+              'Only AI prompting skills',
+              'Navigation, Data Flow, Integration, Design',
+              'Just coding faster',
+              'Memorizing syntax'
+            ],
+            correct: 1,
+            explanation: 'These four core skills become the context you provide to AI for effective partnership.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'journey-comp-tf1',
+            statement: 'Learning to "Read Any Codebase" (Navigation) helps you understand and verify AI-generated code.',
+            correct: true,
+            explanation: 'Navigation skills let you read AI output critically, not just accept it blindly.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'journey-comp-tf2',
+            statement: 'The capstone project was optional—the real learning was in the lessons.',
+            correct: false,
+            explanation: 'The capstone proves you can apply everything to a real feature with real ownership.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'journey-comp-fill1',
+            statement: 'Data Flow skills let you ___ systematically to find bugs.',
+            correctAnswers: ['trace', 'debug', 'follow'],
+            caseSensitive: false,
+            hints: ['Following the path of data'],
+            explanation: 'Systematic tracing is how you debug methodically instead of randomly guessing.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'journey-comp-fill2',
+            statement: 'Integration skills teach you to handle ___ gracefully in distributed systems.',
+            correctAnswers: ['failure', 'failures', 'errors'],
+            caseSensitive: false,
+            hints: ['When things go wrong'],
+            explanation: 'Resilience patterns prepare you for real-world distributed system challenges.',
+            points: 10
+          }
+        ]
+      });
+      journeyComprehension.init();
+
+      const journeyApplication = new ActivityCarousel('journey-application', {
+        type: 'application',
+        sectionId: 'journey-complete',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'connect-edges',
+            id: 'journey-app-connect1',
+            instruction: 'Connect each chapter to its core skill:',
+            nodes: [
+              { id: 'ch1', label: '🪨 Chapter 1: Stone' },
+              { id: 'ch2', label: '⚡ Chapter 2: Lightning' },
+              { id: 'ch3', label: '🧲 Chapter 3: Magnetism' },
+              { id: 'ch4', label: '🏛️ Chapter 4: Architect' },
+              { id: 'nav', label: 'Codebase Navigation' },
+              { id: 'flow', label: 'Data Flow Tracing' },
+              { id: 'int', label: 'Integration Resilience' },
+              { id: 'des', label: 'Design-First Thinking' }
+            ],
+            solution: {
+              edges: [
+                { source: 'ch1', target: 'nav' },
+                { source: 'ch2', target: 'flow' },
+                { source: 'ch3', target: 'int' },
+                { source: 'ch4', target: 'des' }
+              ]
+            },
+            explanation: 'Each chapter built a distinct senior skill.',
+            points: 25
+          },
+          {
+            type: 'drag-drop',
+            id: 'journey-app-dd1',
+            instruction: 'Match each skill to how it helps in real work:',
+            items: [
+              { id: 's1', text: 'Read unfamiliar code confidently' },
+              { id: 's2', text: 'Debug by following data through system' },
+              { id: 's3', text: 'Build systems that handle failures' },
+              { id: 's4', text: 'Think before coding to save time' }
+            ],
+            zones: [
+              { id: 'nav', label: '🪨 Navigation', correct: ['s1'] },
+              { id: 'flow', label: '⚡ Data Flow', correct: ['s2'] },
+              { id: 'int', label: '🧲 Integration', correct: ['s3'] },
+              { id: 'des', label: '🏛️ Design', correct: ['s4'] }
+            ],
+            explanation: 'Each skill has practical, daily applications.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'journey-app-seq1',
+            instruction: 'Order the course journey from start to finish:',
+            items: [
+              { id: 'j1', text: 'Week 0: Junior Coder (starting point)' },
+              { id: 'j2', text: 'Learn Navigation (read any codebase)' },
+              { id: 'j3', text: 'Learn Data Flow (trace systematically)' },
+              { id: 'j4', text: 'Learn Integration (resilience patterns)' },
+              { id: 'j5', text: 'Learn Design (think before code)' },
+              { id: 'j6', text: 'Capstone: Real Feature + AI Partnership' },
+              { id: 'j7', text: 'Week 6: Senior Engineer' }
+            ],
+            correctOrder: ['j1', 'j2', 'j3', 'j4', 'j5', 'j6', 'j7'],
+            hints: {
+              partial: 'Start junior, end senior.',
+              wrong: 'Junior → Nav → Flow → Int → Design → Capstone → Senior'
+            },
+            explanation: 'The course progressively built senior-level capabilities.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'journey-app-quiz1',
+            question: 'What proves you\'re ready for senior-level work?',
+            options: [
+              'Finishing all the lessons',
+              'Owning a real feature from requirements to production',
+              'Using AI tools',
+              'Memorizing design patterns'
+            ],
+            correct: 1,
+            explanation: 'The capstone—owning a real feature end-to-end—proves senior-level capability.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'journey-app-dd2',
+            instruction: 'Categorize each as Week 0 You or Week 6 You:',
+            items: [
+              { id: 'w0a', text: 'Hope AI guesses right' },
+              { id: 'w0b', text: 'Get lost in new codebases' },
+              { id: 'w6a', text: 'Direct AI with clear context' },
+              { id: 'w6b', text: 'Navigate any codebase confidently' },
+              { id: 'w0c', text: 'Debug by random guessing' },
+              { id: 'w6c', text: 'Trace data flow systematically' }
+            ],
+            zones: [
+              { id: 'week0', label: '📅 Week 0 You', correct: ['w0a', 'w0b', 'w0c'] },
+              { id: 'week6', label: '🌟 Week 6 You', correct: ['w6a', 'w6b', 'w6c'] }
+            ],
+            explanation: 'The transformation is from reactive to proactive, random to systematic.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'journey-app-seq2',
+            instruction: 'Order these from least to most senior-level behavior:',
+            items: [
+              { id: 'b1', text: 'Code what\'s in the ticket' },
+              { id: 'b2', text: 'Clarify requirements before coding' },
+              { id: 'b3', text: 'Design, implement, and test' },
+              { id: 'b4', text: 'Own full lifecycle with AI partnership' }
+            ],
+            correctOrder: ['b1', 'b2', 'b3', 'b4'],
+            hints: {
+              partial: 'More ownership = more senior.',
+              wrong: 'Just code → Clarify → Design+test → Full ownership'
+            },
+            explanation: 'Senior-level means full ownership with modern tools.',
+            points: 15
+          }
+        ]
+      });
+      journeyApplication.init();
+
+      const journeySynthesis = new ActivityCarousel('journey-synthesis', {
+        type: 'synthesis',
+        sectionId: 'journey-complete',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'journey-syn-sc1',
+            scenario: 'In a job interview, the interviewer asks: "Tell me about a time you demonstrated senior-level thinking, not just coding."',
+            question: 'Using your capstone experience, how would you answer?',
+            evaluation: {
+              keywords: ['requirements', 'design', 'ownership', 'stakeholders', 'production', 'lifecycle', 'decisions', 'trade-offs'],
+              minWords: 50,
+              pointsPerKeyword: 4,
+              depthBonus: 15
+            },
+            modelAnswer: 'I\'d describe my capstone: I clarified requirements with stakeholders, designed the solution with diagrams, made trade-off decisions, implemented with tests, and deployed to production. I owned the full lifecycle, not just the code. I used AI as a tool while maintaining ownership and verifying every output. This is senior-level work.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'journey-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Six months from now, Developer A continues learning new frameworks and tools.\n\nDeveloper B practices the skills from this course on real features.'
+            },
+            question: 'Who will be more valuable to their team as a senior engineer?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b'],
+            explanation: 'Tools change; fundamental skills (navigation, flow, design, ownership) transfer everywhere.',
+            commonMistakes: {
+              'A': 'New tools without foundational skills just means struggling with new tools.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'journey-syn-sc2',
+            scenario: 'A junior colleague asks you to mentor them. They want to become senior-level faster.',
+            question: 'Based on your journey, what would you recommend they focus on?',
+            evaluation: {
+              keywords: ['navigation', 'data flow', 'design', 'ownership', 'real features', 'AI', 'context', 'thinking'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Focus on fundamentals: (1) Learn to navigate any codebase, (2) Practice tracing data flow to debug, (3) Think design-first before coding, (4) Take ownership of real features end-to-end. These skills make everything else easier—including AI partnerships. Don\'t chase tools; build thinking skills.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'journey-syn-ref1',
+            prompt: 'Looking back at your journey from Week 0 to now, what was your biggest "aha" moment? What skill surprised you most in its impact?',
+            thinkingPrompts: [
+              'When did something "click"?',
+              'Which skill changed how you work most?',
+              'What will you keep doing?',
+              'What would you tell Week 0 You?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(realize|understand|click)', label: 'Insight recognition', points: 5 },
+                { pattern: '(change|different|before)', label: 'Growth awareness', points: 5 },
+                { pattern: '(continue|keep|maintain)', label: 'Future commitment', points: 5 },
+                { pattern: '(navigation|flow|design|ownership)', label: 'Skill integration', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 25
+          },
+          {
+            type: 'graph-builder',
+            id: 'journey-syn-graph1',
+            instruction: 'Build your skill stack: Navigation → Data Flow → Integration → Design → AI Partnership → Senior Engineer',
+            nodeTypes: [
+              { type: 'nav', label: '🪨 Navigation', color: '#42a5f5' },
+              { type: 'flow', label: '⚡ Data Flow', color: '#66bb6a' },
+              { type: 'int', label: '🧲 Integration', color: '#ffa726' },
+              { type: 'design', label: '🏛️ Design', color: '#7986cb' },
+              { type: 'ai', label: '🤖 AI Partnership', color: '#ef5350' },
+              { type: 'senior', label: '🌟 Senior Engineer', color: '#ab47bc' }
+            ],
+            validation: {
+              requiredNodes: ['nav', 'flow', 'int', 'design', 'ai', 'senior'],
+              requiredEdges: [
+                { from: 'nav', to: 'flow' },
+                { from: 'flow', to: 'int' },
+                { from: 'int', to: 'design' },
+                { from: 'design', to: 'ai' },
+                { from: 'ai', to: 'senior' }
+              ],
+              optionalNodes: [],
+              minNodes: 6,
+              maxNodes: 7
+            },
+            hints: [
+              'Skills build on each other',
+              'AI partnership requires all previous skills',
+              'Senior engineer is the destination'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'journey-syn-sc3',
+            scenario: 'You\'re starting your first day at a new company. How will you apply the skills from this course immediately?',
+            question: 'Describe your first-week plan using navigation, data flow, design, and AI partnership skills.',
+            evaluation: {
+              keywords: ['navigate', 'explore', 'trace', 'understand', 'ask', 'design', 'AI', 'context', 'patterns'],
+              minWords: 50,
+              pointsPerKeyword: 4,
+              depthBonus: 15
+            },
+            modelAnswer: 'Week 1: (1) Navigate the codebase—find entry points, understand structure. (2) Trace a key data flow to understand how things work. (3) Ask about design patterns and constraints. (4) Before any feature, write design docs. (5) Use AI with the context I\'ve gathered for 10x velocity. Start with understanding, then accelerate.',
+            points: 30
+          }
+        ]
+      });
+      journeySynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Junior Ch6: Capstone II');
     });
   </script>
 </body>
