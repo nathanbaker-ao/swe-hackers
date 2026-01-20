@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="endless-opportunities" data-lesson="week1-questions">
   <header class="header">
@@ -130,6 +131,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Story 1: Why Questions Matter -->
+      <div class="activity-carousels" data-story="curiosity-story">
+        <div id="story1-comprehension" class="carousel-container"></div>
+        <div id="story1-application" class="carousel-container"></div>
+        <div id="story1-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Story 2: The 6 Levels Deep Framework -->
@@ -208,6 +216,13 @@
           <div class="quiz-dots"></div>
           <button class="quiz-nav-btn next">Next →</button>
         </div>
+      </div>
+
+      <!-- Activity Carousels for Story 2: 6 Levels Deep Framework -->
+      <div class="activity-carousels" data-story="six-levels-story">
+        <div id="story2-comprehension" class="carousel-container"></div>
+        <div id="story2-application" class="carousel-container"></div>
+        <div id="story2-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,6 +303,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Story 3: Building Real Comprehension -->
+      <div class="activity-carousels" data-story="comprehension-story">
+        <div id="story3-comprehension" class="carousel-container"></div>
+        <div id="story3-application" class="carousel-container"></div>
+        <div id="story3-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Next Steps -->
@@ -342,6 +364,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -454,6 +490,1037 @@
         if (!containerId) return;
         new Quiz(containerId, quiz.questions);
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // Story 1: Why Questions Matter - Comprehension
+      const story1Comprehension = new ActivityCarousel('story1-comprehension', {
+        type: 'comprehension',
+        sectionId: 'curiosity',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'cur-quiz-depends-on',
+            question: 'According to the lesson, what does the quality of your understanding depend on?',
+            options: [
+              'How smart you are naturally',
+              'How much time you spend studying',
+              'The quality of your questions',
+              'Access to good teachers'
+            ],
+            correct: 2,
+            explanation: 'The lesson states: "The quality of your understanding depends entirely on the quality of your questions." This is the foundational insight of the art of questioning.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'cur-quiz-surface-thinker',
+            question: 'What does a "surface thinker" do when they hear an answer?',
+            options: [
+              'Challenge everything they hear',
+              'Accept the first answer and move on',
+              'Ask six follow-up questions',
+              'Write down the answer for later analysis'
+            ],
+            correct: 1,
+            explanation: 'Surface thinkers "accept the first answer they get. They hear something, nod, and move on." They stop at levels 1-2 and think they understand.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'cur-tf-intelligence',
+            statement: 'According to the lesson, "intelligence" is really about knowing how to find things out, not about knowing things.',
+            correct: true,
+            explanation: 'The lesson explicitly states: "Intelligence isn\'t about knowing things—it\'s about knowing how to find things out." This reframes intelligence as a skill, not a fixed trait.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'cur-tf-smart-wins',
+            statement: 'A "smart" person who accepts surface-level answers will always beat a curious person who asks great questions.',
+            correct: false,
+            explanation: 'The opposite is true: "A curious person who asks great questions will always beat a \'smart\' person who accepts surface-level answers." Curiosity beats raw intelligence.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'cur-fill-advantage',
+            statement: 'The lesson describes something called the "___ advantage" - where asking great questions beats raw intelligence.',
+            correctAnswers: ['curiosity', 'Curiosity'],
+            caseSensitive: false,
+            hints: ['What trait drives someone to keep asking why?'],
+            explanation: 'The "Curiosity Advantage" is the key concept - it\'s the idea that the habit of asking questions is more powerful than innate intelligence.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'cur-fill-choice',
+            statement: 'Every time you encounter something new, you have a ___: accept the first answer, or keep asking why.',
+            correctAnswers: ['choice', 'decision'],
+            caseSensitive: false,
+            hints: ['It\'s something you can make'],
+            explanation: 'The lesson emphasizes that deep thinking is a choice, not a talent. You actively decide to go deeper or stay at the surface.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'cur-quiz-change-world',
+            question: 'According to the lesson, what do "the people who change the world" consistently do?',
+            options: [
+              'Work harder than everyone else',
+              'Have more resources and connections',
+              'Choose to go deeper with questions',
+              'Focus on simple, practical solutions'
+            ],
+            correct: 2,
+            explanation: '"The people who change the world consistently choose to go deeper." Going 6 levels deep is what separates world-changers from surface thinkers.',
+            points: 10
+          }
+        ]
+      });
+      story1Comprehension.init();
+
+      // Story 1: Why Questions Matter - Application
+      const story1Application = new ActivityCarousel('story1-application', {
+        type: 'application',
+        sectionId: 'curiosity',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'cur-dd-thinker-traits',
+            instruction: 'Sort these behaviors by thinker type:',
+            items: [
+              { id: 't1', text: 'Hears "pollution" and accepts it as the full answer' },
+              { id: 't2', text: 'Asks "Why is there so much pollution?"' },
+              { id: 't3', text: 'Nods and moves on after hearing one explanation' },
+              { id: 't4', text: 'Keeps asking why until understanding the whole system' }
+            ],
+            zones: [
+              { id: 'surface', label: '😐 Surface Thinker', correct: ['t1', 't3'] },
+              { id: 'deep', label: '🧠 Deep Thinker', correct: ['t2', 't4'] }
+            ],
+            explanation: 'Surface thinkers stop at first answers and move on. Deep thinkers keep probing with "why" to understand underlying systems.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'cur-seq-question-depth',
+            instruction: 'Put these questions in order from surface-level to deep thinking:',
+            items: [
+              { id: 'q1', text: '"What is climate change?"' },
+              { id: 'q2', text: '"Why is pollution increasing?"' },
+              { id: 'q3', text: '"What causes the economic systems that incentivize pollution?"' },
+              { id: 'q4', text: '"Why is there pollution?"' }
+            ],
+            correctOrder: ['q1', 'q4', 'q2', 'q3'],
+            hints: {
+              partial: 'Start with basic "what" questions, then progress through layers of "why".',
+              wrong: '"What" questions are typically more surface-level than "why" questions.'
+            },
+            explanation: 'Questions progress from surface (what) to deeper layers (why) and eventually to systemic understanding (root causes).',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'cur-ce-thinking-outcomes',
+            instruction: 'Connect each thinking style to its typical outcome:',
+            nodes: [
+              { id: 'surface', label: '😐 Surface Thinking' },
+              { id: 'deep', label: '🧠 Deep Thinking' },
+              { id: 'quick', label: '⚡ Quick but Shallow' },
+              { id: 'system', label: '🔗 System Understanding' },
+              { id: 'repeat', label: '🔁 Repeating Mistakes' },
+              { id: 'solve', label: '💡 Root Problem Solving' }
+            ],
+            solution: {
+              edges: [
+                { source: 'surface', target: 'quick' },
+                { source: 'surface', target: 'repeat' },
+                { source: 'deep', target: 'system' },
+                { source: 'deep', target: 'solve' }
+              ]
+            },
+            nodeDescriptions: {
+              'surface': 'Accepts first answer',
+              'deep': 'Asks why repeatedly',
+              'quick': 'Fast but incomplete',
+              'system': 'Sees how parts connect',
+              'repeat': 'Same problems recur',
+              'solve': 'Addresses root causes'
+            },
+            explanation: 'Surface thinking is faster but leads to repeated mistakes. Deep thinking takes effort but enables solving root problems.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'cur-quiz-apply-job',
+            question: 'Your teammate says: "Our app is slow because of bad code." Using the curiosity advantage, what\'s the best next step?',
+            options: [
+              'Accept their diagnosis and start rewriting code',
+              'Ask "What specifically makes the code bad? Why was it written that way?"',
+              'Hire a consultant to give a second opinion',
+              'Ignore them and benchmark the app first'
+            ],
+            correct: 1,
+            explanation: 'Deep thinking means asking follow-up "why" questions rather than accepting first answers. You might discover the real issue is elsewhere.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'cur-dd-question-quality',
+            instruction: 'Categorize these responses to learning something new:',
+            items: [
+              { id: 'r1', text: '"That makes sense" → moves on' },
+              { id: 'r2', text: '"Wait, but why does that work?"' },
+              { id: 'r3', text: '"Interesting. How does this connect to what I already know?"' },
+              { id: 'r4', text: '"Got it" → closes the book' }
+            ],
+            zones: [
+              { id: 'surface', label: '🏊 Surface Response', correct: ['r1', 'r4'] },
+              { id: 'deep', label: '🤿 Deep Response', correct: ['r2', 'r3'] }
+            ],
+            explanation: 'Deep responses generate follow-up questions. Surface responses accept information passively.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'cur-seq-choice-moment',
+            instruction: 'Put these steps in order for making the "choice to go deeper":',
+            items: [
+              { id: 's1', text: 'Hear an explanation or answer' },
+              { id: 's2', text: 'Notice the urge to move on' },
+              { id: 's3', text: 'Consciously choose to ask "why?"' },
+              { id: 's4', text: 'Discover deeper understanding' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4'],
+            hints: {
+              partial: 'The choice moment happens right after receiving information.',
+              wrong: 'Start with receiving the information, then notice the decision point.'
+            },
+            explanation: 'Going deep requires noticing the moment when you could stop (and most do), then consciously choosing to continue.',
+            points: 20
+          }
+        ]
+      });
+      story1Application.init();
+
+      // Story 1: Why Questions Matter - Synthesis
+      const story1Synthesis = new ActivityCarousel('story1-synthesis', {
+        type: 'synthesis',
+        sectionId: 'curiosity',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'cur-scenario-coworker',
+            scenario: 'A coworker explains why a project failed: "The client changed requirements too many times." Most people would accept this and move on.',
+            question: 'Using the curiosity advantage, what deeper questions might reveal the real root causes?',
+            evaluation: {
+              keywords: ['why', 'communication', 'process', 'expectations', 'contract', 'planning', 'scope', 'client', 'relationship', 'understand'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Deeper questions: "Why did the client keep changing requirements? Were their needs unclear from the start? Why wasn\'t there a process to manage changes? What did we miss in the discovery phase?" Root causes might be poor initial communication, lack of scope documentation, or not understanding the client\'s real problem.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'cur-predict-two-students',
+            setup: {
+              type: 'text',
+              content: 'Two students learn about photosynthesis. Student A memorizes the definition: "Plants convert sunlight to energy." Student B asks: "Why do plants need sunlight? How does it actually convert to energy? Why can\'t animals do this?"'
+            },
+            question: 'A month later, who will remember and understand photosynthesis better? Why?',
+            correctAnswer: 'Student B',
+            acceptableVariants: ['B', 'the second student', 'second', 'questioner', 'deep thinker'],
+            explanation: 'Student B will understand deeply because their questions created multiple neural connections. They connected photosynthesis to energy, evolution, and comparison with animals. Student A has one isolated fact that\'s easy to forget.',
+            commonMistakes: {
+              'A': 'Memorization without questioning creates shallow, forgettable knowledge.',
+              'both': 'The approaches lead to very different outcomes. Deep questioning creates durable understanding.'
+            },
+            points: 15
+          },
+          {
+            type: 'reflection',
+            id: 'cur-reflect-surface-moment',
+            prompt: 'Think of a recent time when you accepted a surface-level answer and moved on. Looking back, what deeper questions could you have asked? What might you have learned?',
+            thinkingPrompts: [
+              'What information did you accept without questioning?',
+              'What "why" questions could you have asked?',
+              'What system or deeper truth might those questions have revealed?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: 'I (accepted|believed|assumed|heard)', label: 'Surface moment identified', points: 5 },
+                { pattern: '(could have asked|should have asked|wish I had)', label: 'Alternative questions', points: 5 },
+                { pattern: '(why|because|deeper|root)', label: 'Depth awareness', points: 4 },
+                { pattern: '(learn|discover|understand|realize)', label: 'Learning insight', points: 4 },
+                { pattern: '(next time|future|now I)', label: 'Forward application', points: 3 }
+              ],
+              maxScore: 21
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'cur-scenario-interview',
+            scenario: 'You\'re in a job interview. The interviewer explains: "We\'re looking for problem solvers." Most candidates would nod and move on. But you remember the curiosity advantage.',
+            question: 'What questions could you ask that would both demonstrate deep thinking AND help you understand if this job is right for you?',
+            evaluation: {
+              keywords: ['why', 'example', 'problem', 'process', 'team', 'challenge', 'approach', 'learn', 'solve', 'define'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Good questions: "Can you give me an example of a problem someone solved here that impressed you?" "What\'s your process when someone identifies a problem - who defines it, who decides the approach?" "What kind of problems are you facing that I\'d be working on?" These show curiosity while revealing company culture.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'cur-predict-habit',
+            setup: {
+              type: 'text',
+              content: 'Maria decides to practice asking "why" three more times whenever she learns something new. She does this consistently for one month.'
+            },
+            question: 'How will this habit change her thinking after a month? What will be different?',
+            correctAnswer: 'automatic',
+            acceptableVariants: ['natural', 'habit', 'instinct', 'easier', 'second nature', 'routine', 'default', 'normal'],
+            explanation: 'The questioning will become automatic - she\'ll start asking "why" naturally without having to remind herself. Her curiosity muscle will be stronger. She\'ll notice surface answers more quickly and feel unsatisfied by them.',
+            commonMistakes: {
+              'nothing': 'Consistent practice changes thinking patterns. One month of deliberate questioning creates lasting habits.',
+              'tired': 'Initially it might feel like effort, but the habit becomes energizing as insights compound.'
+            },
+            points: 15
+          },
+          {
+            type: 'graph-builder',
+            id: 'cur-graph-question-path',
+            instruction: 'Build a diagram showing how one good question leads to deeper understanding: Start with a surface question, show 2-3 follow-up "why" questions, and end with deeper insight.',
+            nodeTypes: [
+              { type: 'surface', label: '🏊 Surface Question', color: '#ef5350' },
+              { type: 'why', label: '❓ Why?', color: '#42a5f5' },
+              { type: 'deeper', label: '🔍 Deeper Why', color: '#7986cb' },
+              { type: 'insight', label: '💡 Deep Insight', color: '#66bb6a' },
+              { type: 'action', label: '🎯 Better Action', color: '#ffd54f' }
+            ],
+            validation: {
+              requiredNodes: ['surface', 'why', 'insight'],
+              requiredEdges: [
+                { from: 'surface', to: 'why' }
+              ],
+              optionalNodes: ['deeper', 'action'],
+              minNodes: 3,
+              maxNodes: 6
+            },
+            hints: [
+              'Start with a basic "what" question',
+              'Each "why" should dig deeper than the last',
+              'The insight should reveal something not obvious from the surface'
+            ],
+            points: 30
+          }
+        ]
+      });
+      story1Synthesis.init();
+
+      // Story 2: 6 Levels Deep Framework - Comprehension
+      const story2Comprehension = new ActivityCarousel('story2-comprehension', {
+        type: 'comprehension',
+        sectionId: 'six-levels',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'sl-quiz-framework',
+            question: 'What is the 6 Levels Deep framework?',
+            options: [
+              'A method for organizing information into 6 categories',
+              'Asking "why?" at least six times to reach deep understanding',
+              'A 6-step problem-solving process',
+              'A grading system with 6 levels of mastery'
+            ],
+            correct: 1,
+            explanation: '"The framework is beautifully simple: when you want to understand something, ask \'why?\' at least six times. Each answer reveals a new layer of truth."',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'sl-quiz-90-percent',
+            question: 'At which levels do 90% of people stop asking questions?',
+            options: [
+              'Levels 5-6',
+              'Levels 3-4',
+              'Levels 1-2',
+              'They never start'
+            ],
+            correct: 2,
+            explanation: '"Ninety percent of people stop at levels one and two." They feel satisfied with surface answers and don\'t realize they\'ve barely scratched the surface.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'sl-tf-interesting',
+            statement: 'According to the lesson, things start to get "interesting" at levels 3-4.',
+            correct: true,
+            explanation: '"At level three, things get interesting." This is where you move beyond obvious answers and start understanding how systems actually work.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'sl-tf-mind-blown',
+            statement: 'The lesson promises that reaching levels 5-6 will always result in a "mind-blown" transformation.',
+            correct: true,
+            explanation: 'The lesson describes levels 5-6 as where you reach "real understanding" and the "transformation" - moving from surface acceptance to deep comprehension.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'sl-fill-evolution',
+            statement: 'In the homework example, going 6 levels deep leads to understanding ___ neuroscience.',
+            correctAnswers: ['evolutionary', 'evolution', 'evolutional'],
+            caseSensitive: false,
+            hints: ['Think about how the brain evolved over time'],
+            explanation: 'The example shows how "why homework?" eventually leads to understanding why the brain prioritizes certain memories - based on evolutionary survival mechanisms.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'sl-fill-each-answer',
+            statement: 'In the framework, each ___ reveals a new layer of truth.',
+            correctAnswers: ['answer', 'response', 'why', 'question'],
+            caseSensitive: false,
+            hints: ['What do you get when you ask "why"?'],
+            explanation: 'Each answer to "why" peels back another layer, revealing deeper truths. The answers themselves generate new questions.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'sl-quiz-transformation',
+            question: 'What is the "transformation" that happens when you reach level 6?',
+            options: [
+              'You become an expert in the topic',
+              'You no longer need to ask questions',
+              'You understand the underlying mechanisms, not just the surface facts',
+              'You can teach the topic to others'
+            ],
+            correct: 2,
+            explanation: 'The transformation is moving from surface knowledge ("do homework because teacher says") to deep understanding ("understand how your brain actually works").',
+            points: 10
+          }
+        ]
+      });
+      story2Comprehension.init();
+
+      // Story 2: 6 Levels Deep Framework - Application
+      const story2Application = new ActivityCarousel('story2-application', {
+        type: 'application',
+        sectionId: 'six-levels',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'sl-seq-homework',
+            instruction: 'Put the "Why homework?" example in order from level 1 to level 5:',
+            items: [
+              { id: 'h1', text: 'Why homework? → To practice' },
+              { id: 'h2', text: 'Why practice? → So things stick' },
+              { id: 'h3', text: 'Why does practice make things stick? → Neural pathways strengthen' },
+              { id: 'h4', text: 'Why does repetition strengthen pathways? → Brain prioritizes repeated information' },
+              { id: 'h5', text: 'Why does brain prioritize this? → Evolutionary survival' }
+            ],
+            correctOrder: ['h1', 'h2', 'h3', 'h4', 'h5'],
+            hints: {
+              partial: 'Each level should directly answer the "why" from the previous level.',
+              wrong: 'Start with the most obvious answer and dig deeper with each step.'
+            },
+            explanation: 'The progression goes: behavior → purpose → mechanism → deeper mechanism → evolutionary/fundamental cause.',
+            points: 25
+          },
+          {
+            type: 'drag-drop',
+            id: 'sl-dd-level-depth',
+            instruction: 'Match each question to its approximate depth level:',
+            items: [
+              { id: 'd1', text: '"Why is the sky blue?"' },
+              { id: 'd2', text: '"Why does light scatter?"' },
+              { id: 'd3', text: '"What quantum properties cause this scattering?"' },
+              { id: 'd4', text: '"Why does light even exist as we perceive it?"' }
+            ],
+            zones: [
+              { id: 'level1-2', label: '1️⃣ Levels 1-2 (Surface)', correct: ['d1'] },
+              { id: 'level3-4', label: '3️⃣ Levels 3-4 (Interesting)', correct: ['d2'] },
+              { id: 'level5-6', label: '6️⃣ Levels 5-6 (Deep)', correct: ['d3', 'd4'] }
+            ],
+            explanation: 'Surface questions ask "what." Middle levels ask about mechanisms. Deep levels explore fundamental physics and existence.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'sl-ce-level-characteristics',
+            instruction: 'Connect each level range to what it typically reveals:',
+            nodes: [
+              { id: 'l12', label: '1️⃣ Levels 1-2' },
+              { id: 'l34', label: '3️⃣ Levels 3-4' },
+              { id: 'l56', label: '6️⃣ Levels 5-6' },
+              { id: 'surface', label: '📝 Surface Facts' },
+              { id: 'mechanism', label: '⚙️ How It Works' },
+              { id: 'fundamental', label: '🧬 Fundamental Truths' }
+            ],
+            solution: {
+              edges: [
+                { source: 'l12', target: 'surface' },
+                { source: 'l34', target: 'mechanism' },
+                { source: 'l56', target: 'fundamental' }
+              ]
+            },
+            nodeDescriptions: {
+              'l12': 'Where 90% stop',
+              'l34': 'Where it gets interesting',
+              'l56': 'Real understanding',
+              'surface': 'Basic facts and definitions',
+              'mechanism': 'How systems operate',
+              'fundamental': 'Why it must be this way'
+            },
+            explanation: 'Each level reveals different types of knowledge, from facts to mechanisms to fundamental principles.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'sl-quiz-apply-coffee',
+            question: 'Someone asks "Why does coffee wake me up?" and you say "caffeine." What level answer is that?',
+            options: [
+              'Level 1-2 (surface)',
+              'Level 3-4 (mechanism)',
+              'Level 5-6 (fundamental)',
+              'Not a valid level'
+            ],
+            correct: 0,
+            explanation: '"Caffeine" is a level 1 surface answer. Going deeper: Why does caffeine wake you up? (blocks adenosine), Why does blocking adenosine matter? (adenosine signals sleepiness), Why does the body use adenosine? (circadian rhythm regulation).',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'sl-seq-create-your-own',
+            instruction: 'Put these "Why do people exercise?" answers in order from level 1 to level 5:',
+            items: [
+              { id: 'e1', text: 'To be healthy' },
+              { id: 'e2', text: 'Exercise strengthens cardiovascular system and muscles' },
+              { id: 'e3', text: 'Active bodies maintained better survival and reproduction chances' },
+              { id: 'e4', text: 'Physical activity triggers hormones and cellular repair processes' },
+              { id: 'e5', text: 'Bodies evolved to require movement for optimal function' }
+            ],
+            correctOrder: ['e1', 'e2', 'e4', 'e5', 'e3'],
+            hints: {
+              partial: 'Move from general reasons to biological mechanisms to evolutionary origins.',
+              wrong: 'Start with the simplest, most common answer.'
+            },
+            explanation: 'The progression: simple reason → body benefits → cellular mechanisms → evolutionary design → survival advantage.',
+            points: 25
+          },
+          {
+            type: 'drag-drop',
+            id: 'sl-dd-stopping-points',
+            instruction: 'Match each percentage of people to where they stop:',
+            items: [
+              { id: 'p1', text: '90% of people' },
+              { id: 'p2', text: '~9% of people' },
+              { id: 'p3', text: '~1% of people' }
+            ],
+            zones: [
+              { id: 'early', label: '1️⃣ Stop at Levels 1-2', correct: ['p1'] },
+              { id: 'middle', label: '3️⃣ Stop at Levels 3-4', correct: ['p2'] },
+              { id: 'deep', label: '6️⃣ Reach Levels 5-6', correct: ['p3'] }
+            ],
+            explanation: 'Very few people push to levels 5-6. Even getting to 3-4 puts you ahead of most.',
+            points: 20
+          }
+        ]
+      });
+      story2Application.init();
+
+      // Story 2: 6 Levels Deep Framework - Synthesis
+      const story2Synthesis = new ActivityCarousel('story2-synthesis', {
+        type: 'synthesis',
+        sectionId: 'six-levels',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'sl-scenario-social-media',
+            scenario: 'A friend says: "Social media is bad for mental health." That\'s a level 1-2 statement.',
+            question: 'Apply the 6 levels deep framework. What questions would take this from surface statement to deep understanding?',
+            evaluation: {
+              keywords: ['why', 'how', 'dopamine', 'comparison', 'algorithm', 'brain', 'design', 'addiction', 'attention', 'evolution'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Level 3: Why is it bad? (Social comparison, anxiety). Level 4: Why do we compare? (Brain wired for social status). Level 5: Why is the brain wired this way? (Evolutionary survival in tribes). Level 6: Why are apps so effective at triggering this? (Designed to exploit evolutionary wiring for engagement).',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'sl-predict-two-employees',
+            setup: {
+              type: 'text',
+              content: 'Employee A accepts their boss\'s explanation: "We use this software because it\'s what we\'ve always used." Employee B asks: "Why did we start using it? Why do we still use it? What problem does it actually solve?"'
+            },
+            question: 'Which employee is more likely to find opportunities to improve processes? Why?',
+            correctAnswer: 'Employee B',
+            acceptableVariants: ['B', 'the second employee', 'second', 'questioner'],
+            explanation: 'Employee B will discover that "what we\'ve always done" might not be optimal. They might find the original reason no longer applies, or that better tools exist. Deep questioning reveals improvement opportunities that surface acceptance misses.',
+            commonMistakes: {
+              'A': 'Accepting "that\'s how we do it" prevents seeing improvement opportunities.',
+              'both': 'Very different outcomes - questioning reveals opportunities that acceptance hides.'
+            },
+            points: 15
+          },
+          {
+            type: 'reflection',
+            id: 'sl-reflect-six-levels',
+            prompt: 'Think of a belief or practice you\'ve never questioned (at home, at school, at work). Try applying the 6 levels framework now. Ask "why?" at least 4 times. What did you discover?',
+            thinkingPrompts: [
+              'What\'s something you\'ve always done without questioning why?',
+              'What was the first "why" answer?',
+              'What deeper reasons emerged as you kept asking?',
+              'Did you reach a surprise insight?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(always|never questioned|just did)', label: 'Unquestioned belief identified', points: 5 },
+                { pattern: '(why|because|reason)', label: 'Questioning process', points: 4 },
+                { pattern: '(level|deeper|surface)', label: 'Framework application', points: 4 },
+                { pattern: '(discover|realize|surprise|insight)', label: 'Insight reached', points: 5 },
+                { pattern: '(now I|going forward|next time)', label: 'Changed perspective', points: 3 }
+              ],
+              maxScore: 21
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'sl-scenario-politics',
+            scenario: 'Someone says: "I support this policy because my party supports it." That\'s level 1. Most political discussions stay at levels 1-2.',
+            question: 'What would it look like to go 6 levels deep on a policy position? What questions would you ask?',
+            evaluation: {
+              keywords: ['why', 'evidence', 'values', 'tradeoff', 'outcome', 'history', 'alternative', 'assumption', 'benefit', 'cost'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Level 3: Why does my party support this? Level 4: What problem does it solve? What evidence exists? Level 5: What are the tradeoffs? Who benefits, who loses? Level 6: What values underlie this position? Would I still support it if the other party proposed it? Deep thinking transcends party lines.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'sl-predict-career-path',
+            setup: {
+              type: 'text',
+              content: 'A student is choosing between two career paths. They ask their advisor "Why should I choose Path A?" The advisor says: "It pays well." The student accepts this and chooses Path A.'
+            },
+            question: 'What might this student regret later? What deeper questions could have led to a better decision?',
+            correctAnswer: 'meaning',
+            acceptableVariants: ['purpose', 'fulfillment', 'happiness', 'fit', 'values', 'satisfaction', 'interest', 'passion'],
+            explanation: 'They might regret ignoring fit, meaning, values, and personal interest. Deeper questions: Why does it pay well? What does daily work look like? Why do people leave? What would make me feel fulfilled? Money is level 1 - deeper factors determine long-term satisfaction.',
+            commonMistakes: {
+              'money': 'Money was the surface answer they accepted. The regret comes from what they didn\'t ask about.',
+              'nothing': 'Surface decisions often lead to regret when deeper factors (meaning, fit) don\'t align.'
+            },
+            points: 15
+          },
+          {
+            type: 'graph-builder',
+            id: 'sl-graph-six-levels',
+            instruction: 'Build a "6 Levels Deep" diagram for a question you care about. Start with your question and show how each "why" goes deeper.',
+            nodeTypes: [
+              { type: 'question', label: '❓ Starting Question', color: '#ef5350' },
+              { type: 'level1', label: '1️⃣ Level 1', color: '#ff7043' },
+              { type: 'level2', label: '2️⃣ Level 2', color: '#ffa726' },
+              { type: 'level3', label: '3️⃣ Level 3-4', color: '#ffca28' },
+              { type: 'level6', label: '6️⃣ Level 5-6', color: '#66bb6a' },
+              { type: 'insight', label: '💡 Deep Insight', color: '#42a5f5' }
+            ],
+            validation: {
+              requiredNodes: ['question', 'level1', 'insight'],
+              requiredEdges: [
+                { from: 'question', to: 'level1' }
+              ],
+              optionalNodes: ['level2', 'level3', 'level6'],
+              minNodes: 3,
+              maxNodes: 7
+            },
+            hints: [
+              'Pick a question you genuinely want to understand better',
+              'Each level should answer "why" from the previous level',
+              'Your insight should be something not obvious from the surface'
+            ],
+            points: 30
+          }
+        ]
+      });
+      story2Synthesis.init();
+
+      // Story 3: Building Real Comprehension - Comprehension
+      const story3Comprehension = new ActivityCarousel('story3-comprehension', {
+        type: 'comprehension',
+        sectionId: 'comprehension',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'comp-quiz-tool-result',
+            question: 'According to the lesson, what is the relationship between questions and comprehension?',
+            options: [
+              'Questions and comprehension are the same thing',
+              'Questions are the tool; comprehension is the result',
+              'Comprehension comes first, then questions',
+              'Questions replace the need for comprehension'
+            ],
+            correct: 1,
+            explanation: '"Questions are the tool. Comprehension is the result." Questions are the mechanism; understanding is what you build with them.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'comp-quiz-four-skills',
+            question: 'How many "powerful skills" prove you truly comprehend something?',
+            options: [
+              'Two skills',
+              'Three skills',
+              'Four skills',
+              'Six skills'
+            ],
+            correct: 2,
+            explanation: 'The lesson identifies four skills: explain simply, find connections, predict outcomes, and apply to new situations.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'comp-tf-explain-simply',
+            statement: 'If you can\'t explain something simply, you probably don\'t really understand it.',
+            correct: true,
+            explanation: '"If you can\'t explain something simply, you don\'t really understand it." Jargon-free explanation requires genuine comprehension.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'comp-tf-memorizing',
+            statement: 'According to the lesson, understanding is the same as memorizing facts.',
+            correct: false,
+            explanation: '"Understanding isn\'t memorizing facts—it\'s having transferable insight that works everywhere." Memorizing ≠ comprehending.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'comp-fill-predict',
+            statement: 'When you deeply understand something, you can ___ what will happen next.',
+            correctAnswers: ['predict', 'anticipate', 'forecast', 'foresee'],
+            caseSensitive: false,
+            hints: ['Think about seeing the future based on understanding'],
+            explanation: '"When you deeply understand something, you can predict what will happen." Prediction proves you understand the underlying mechanisms.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'comp-fill-transferable',
+            statement: 'Real comprehension means having ___ insight that works in new situations.',
+            correctAnswers: ['transferable', 'portable', 'applicable', 'useful'],
+            caseSensitive: false,
+            hints: ['What kind of insight can move from one context to another?'],
+            explanation: 'Transferable insight is the hallmark of true understanding - you can apply it anywhere, not just where you learned it.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'comp-quiz-superpower',
+            question: 'The lesson calls the art of questions your "___":',
+            options: [
+              'Responsibility',
+              'Superpower',
+              'Challenge',
+              'Duty'
+            ],
+            correct: 1,
+            explanation: '"The art of questions is your superpower!" It\'s presented as an extraordinary capability anyone can develop.',
+            points: 10
+          }
+        ]
+      });
+      story3Comprehension.init();
+
+      // Story 3: Building Real Comprehension - Application
+      const story3Application = new ActivityCarousel('story3-application', {
+        type: 'application',
+        sectionId: 'comprehension',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'comp-dd-four-skills',
+            instruction: 'Match each comprehension skill to its test:',
+            items: [
+              { id: 's1', text: 'Could you teach this to a 10-year-old?' },
+              { id: 's2', text: 'How does this relate to other things you know?' },
+              { id: 's3', text: 'If X happens, what will Y be?' },
+              { id: 's4', text: 'Can you use this in a completely new context?' }
+            ],
+            zones: [
+              { id: 'explain', label: '👶 Explain Simply', correct: ['s1'] },
+              { id: 'connect', label: '🔗 Find Connections', correct: ['s2'] },
+              { id: 'predict', label: '🔮 Predict Outcomes', correct: ['s3'] },
+              { id: 'apply', label: '🚀 Apply to New', correct: ['s4'] }
+            ],
+            explanation: 'Each skill has a specific test: simple explanation, connections to knowledge, prediction, and transfer to new contexts.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'comp-seq-comprehension-flow',
+            instruction: 'Put these steps in order for building true comprehension:',
+            items: [
+              { id: 'c1', text: 'Ask deep questions (6 levels)' },
+              { id: 'c2', text: 'Encounter new information' },
+              { id: 'c3', text: 'Apply to real situations' },
+              { id: 'c4', text: 'Test: Can I explain, connect, predict, apply?' }
+            ],
+            correctOrder: ['c2', 'c1', 'c4', 'c3'],
+            hints: {
+              partial: 'Start with encountering information, end with real-world application.',
+              wrong: 'You can\'t question what you haven\'t encountered yet.'
+            },
+            explanation: 'The flow: encounter → question deeply → test comprehension → apply in practice.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'comp-ce-skills-evidence',
+            instruction: 'Connect each skill to what it proves about your understanding:',
+            nodes: [
+              { id: 'explain', label: '👶 Explain Simply' },
+              { id: 'connect', label: '🔗 Find Connections' },
+              { id: 'predict', label: '🔮 Predict Outcomes' },
+              { id: 'apply', label: '🚀 Apply to New' },
+              { id: 'core', label: '💎 You know the core essence' },
+              { id: 'network', label: '🕸️ Knowledge is integrated' },
+              { id: 'mechanism', label: '⚙️ You understand how it works' },
+              { id: 'transfer', label: '🔄 Understanding transcends context' }
+            ],
+            solution: {
+              edges: [
+                { source: 'explain', target: 'core' },
+                { source: 'connect', target: 'network' },
+                { source: 'predict', target: 'mechanism' },
+                { source: 'apply', target: 'transfer' }
+              ]
+            },
+            nodeDescriptions: {
+              'explain': 'Teach without jargon',
+              'connect': 'See relationships',
+              'predict': 'Know what will happen',
+              'apply': 'Use in new contexts',
+              'core': 'Grasped the essential idea',
+              'network': 'Part of larger knowledge',
+              'mechanism': 'Understand cause-effect',
+              'transfer': 'Not context-dependent'
+            },
+            explanation: 'Each skill demonstrates a different aspect of true comprehension.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'comp-quiz-apply-meeting',
+            question: 'You\'re in a meeting where someone explains a new process. Which action best tests your comprehension?',
+            options: [
+              'Take detailed notes',
+              'Nod along and ask no questions',
+              'Ask: "How would this apply to [unrelated situation]?"',
+              'Wait until it affects your work'
+            ],
+            correct: 2,
+            explanation: 'Asking how it applies to an unrelated situation tests the "apply to new" skill - if you can transfer it, you truly understand it.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'comp-dd-comprehension-evidence',
+            instruction: 'Sort these statements by whether they indicate true comprehension:',
+            items: [
+              { id: 'e1', text: '"I memorized the definition"' },
+              { id: 'e2', text: '"I could explain it to my younger sibling"' },
+              { id: 'e3', text: '"I know it connects to what I learned about X"' },
+              { id: 'e4', text: '"I can predict what will happen if conditions change"' }
+            ],
+            zones: [
+              { id: 'shallow', label: '🏊 Surface Knowledge', correct: ['e1'] },
+              { id: 'deep', label: '🤿 True Comprehension', correct: ['e2', 'e3', 'e4'] }
+            ],
+            explanation: 'Memorization is surface. Explaining, connecting, and predicting require genuine understanding.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'comp-seq-master',
+            instruction: 'Put these on the path to becoming a "master questioner":',
+            items: [
+              { id: 'm1', text: 'See confusion as curiosity' },
+              { id: 'm2', text: 'Accept that you don\'t know things' },
+              { id: 'm3', text: 'Apply 4 comprehension tests regularly' },
+              { id: 'm4', text: 'Practice asking "why" 6 levels deep' }
+            ],
+            correctOrder: ['m2', 'm1', 'm4', 'm3'],
+            hints: {
+              partial: 'You must accept not-knowing before embracing curiosity.',
+              wrong: 'Start with the mindset shift, then move to practice.'
+            },
+            explanation: 'Mastery path: accept ignorance → embrace curiosity → practice questioning → test comprehension regularly.',
+            points: 20
+          }
+        ]
+      });
+      story3Application.init();
+
+      // Story 3: Building Real Comprehension - Synthesis
+      const story3Synthesis = new ActivityCarousel('story3-synthesis', {
+        type: 'synthesis',
+        sectionId: 'comprehension',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'comp-scenario-teaching',
+            scenario: 'You\'ve been learning about machine learning for 2 weeks. A friend asks: "What is machine learning?" You realize you can only say: "It\'s when computers learn from data."',
+            question: 'Using the 4 comprehension skills, what specific gaps does this reveal? What should you do next?',
+            evaluation: {
+              keywords: ['explain', 'simple', 'connection', 'predict', 'apply', 'example', 'question', 'deeper', 'practice', 'test'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Gaps: Can\'t explain simply (stuck on jargon-level), probably missing connections (how does ML relate to statistics, brain learning?), uncertain about predictions (when would ML work vs fail?), can\'t apply (couldn\'t identify a new ML opportunity). Next: ask deeper why questions, try explaining to a 10-year-old, look for connections to familiar concepts.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'comp-predict-two-learners',
+            setup: {
+              type: 'text',
+              content: 'Learner A studies a topic, takes a test, gets 95%, and moves on. Learner B studies the same topic, takes the same test, gets 85%, but then asks: "Could I explain this simply? What does it connect to? What would I predict in a new situation?"'
+            },
+            question: 'Three months later, who understands the topic better? Why?',
+            correctAnswer: 'Learner B',
+            acceptableVariants: ['B', 'the second learner', 'second', '85%'],
+            explanation: 'Learner B will retain and understand better because they tested for true comprehension, not just recall. Test performance often measures memorization; the 4 skills test actual understanding. B\'s self-questioning created durable learning.',
+            commonMistakes: {
+              'A': 'High test scores don\'t guarantee lasting comprehension. Without testing for real understanding, knowledge fades.',
+              'same': 'Very different outcomes - active comprehension testing creates lasting understanding that passive testing doesn\'t.'
+            },
+            points: 15
+          },
+          {
+            type: 'reflection',
+            id: 'comp-reflect-four-skills',
+            prompt: 'Pick something you believe you understand well (a subject, a skill, a concept). Test yourself on all 4 comprehension skills. Can you: explain it simply? Find connections? Predict outcomes? Apply to new situations? Where are your gaps?',
+            thinkingPrompts: [
+              'What topic did you choose?',
+              'Could you explain it to a child without jargon?',
+              'What else does it connect to?',
+              'Can you predict what would happen in new scenarios?',
+              'Where is your comprehension weaker than you thought?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(thought I understood|realized|surprised)', label: 'Self-assessment', points: 5 },
+                { pattern: '(explain|simply|child|jargon)', label: 'Tested explanation', points: 4 },
+                { pattern: '(connect|relate|link)', label: 'Tested connections', points: 4 },
+                { pattern: '(predict|would happen|if)', label: 'Tested prediction', points: 4 },
+                { pattern: '(apply|new situation|different)', label: 'Tested application', points: 4 }
+              ],
+              maxScore: 21
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'comp-scenario-hiring',
+            scenario: 'You\'re hiring for a technical role. Two candidates have similar resumes. You want to test for real comprehension, not just memorization.',
+            question: 'Design 4 interview questions, one for each comprehension skill, that would reveal true understanding vs. surface knowledge.',
+            evaluation: {
+              keywords: ['explain', 'child', 'simple', 'connect', 'relate', 'predict', 'what if', 'apply', 'new situation', 'example'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: '1) Explain Simply: "Explain [concept] as if to a non-technical friend." 2) Find Connections: "How does [concept] relate to [other domain]?" 3) Predict: "If we changed X, what would happen to Y?" 4) Apply: "Here\'s a scenario we\'ve never seen - how would you approach it?" These reveal comprehension depth beyond resume keywords.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'comp-predict-transformation',
+            setup: {
+              type: 'text',
+              content: 'Someone commits to using the 4 comprehension tests every time they learn something new for one year. Every topic gets: explain simply test, connection finding, prediction attempt, and new application practice.'
+            },
+            question: 'How will this person\'s learning ability be different after a year?',
+            correctAnswer: 'faster',
+            acceptableVariants: ['better', 'deeper', 'stronger', 'improved', 'more effective', 'automatic', 'natural', 'integrated'],
+            explanation: 'They\'ll learn faster and deeper because: 1) Each topic builds more connections to existing knowledge, 2) They\'ll spot comprehension gaps immediately instead of discovering them later, 3) Their prediction and application skills will improve with practice, 4) New learning will integrate with old learning automatically.',
+            commonMistakes: {
+              'slower': 'Initially it takes more time, but the compound effect accelerates learning dramatically over a year.',
+              'same': 'Consistent comprehension testing fundamentally changes how knowledge is organized and retained.'
+            },
+            points: 15
+          },
+          {
+            type: 'graph-builder',
+            id: 'comp-graph-comprehension',
+            instruction: 'Build a diagram showing how the 4 comprehension skills work together. Show how testing one skill can reveal gaps that other skills need to fill.',
+            nodeTypes: [
+              { type: 'questions', label: '❓ Deep Questions', color: '#42a5f5' },
+              { type: 'explain', label: '👶 Explain Simply', color: '#66bb6a' },
+              { type: 'connect', label: '🔗 Find Connections', color: '#ffd54f' },
+              { type: 'predict', label: '🔮 Predict Outcomes', color: '#ab47bc' },
+              { type: 'apply', label: '🚀 Apply to New', color: '#ef5350' },
+              { type: 'master', label: '🏆 True Comprehension', color: '#00bcd4' }
+            ],
+            validation: {
+              requiredNodes: ['explain', 'connect', 'predict', 'apply'],
+              requiredEdges: [],
+              optionalNodes: ['questions', 'master'],
+              minNodes: 4,
+              maxNodes: 7
+            },
+            hints: [
+              'All 4 skills connect to true comprehension',
+              'The skills also connect to each other - explaining reveals connection gaps',
+              'Deep questions feed into all 4 skills'
+            ],
+            points: 30
+          }
+        ]
+      });
+      story3Synthesis.init();
+
+      console.log('❓ Week 1 activity carousels initialized!');
     });
   </script>
 </body>
