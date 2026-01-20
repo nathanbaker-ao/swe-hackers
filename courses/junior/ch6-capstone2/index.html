@@ -355,6 +355,14 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize ActivityTracker for Firestore logging
+      const courseId = document.body.dataset.course;
+      const lessonId = document.body.dataset.lesson;
+      if (courseId && lessonId && window.ActivityTracker) {
+        ActivityTracker.init(courseId, lessonId);
+        console.log('🎯 ActivityTracker initialized:', courseId, lessonId);
+      }
+
       // Initialize page animations
       DiagramUtils.initPageAnimations();
       DiagramUtils.setupBackToTop();
