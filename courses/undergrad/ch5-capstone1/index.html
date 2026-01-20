@@ -115,20 +115,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="quest-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="quest-story">
+        <div id="quest-comprehension" class="carousel-container"></div>
+        <div id="quest-application" class="carousel-container"></div>
+        <div id="quest-synthesis" class="carousel-container"></div>
+        <div id="quest-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,20 +186,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="architecture-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="architecture-story">
+        <div id="architecture-comprehension" class="carousel-container"></div>
+        <div id="architecture-application" class="carousel-container"></div>
+        <div id="architecture-synthesis" class="carousel-container"></div>
+        <div id="architecture-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,20 +257,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="requirements-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="requirements-story">
+        <div id="requirements-comprehension" class="carousel-container"></div>
+        <div id="requirements-application" class="carousel-container"></div>
+        <div id="requirements-synthesis" class="carousel-container"></div>
+        <div id="requirements-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -352,20 +328,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="quality-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="quality-story">
+        <div id="quality-comprehension" class="carousel-container"></div>
+        <div id="quality-application" class="carousel-container"></div>
+        <div id="quality-synthesis" class="carousel-container"></div>
+        <div id="quality-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -421,7 +389,20 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -569,11 +550,10 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from Quiz system)
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'quest-story': 'quest-quiz',
         'architecture-story': 'architecture-quiz',
         'requirements-story': 'requirements-quiz',
@@ -581,10 +561,25 @@
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        // Transform quiz questions to ActivityCarousel format
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
     });
   </script>

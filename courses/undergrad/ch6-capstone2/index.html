@@ -114,20 +114,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="ai-integration-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="ai-integration-story">
+        <div id="ai-integration-comprehension" class="carousel-container"></div>
+        <div id="ai-integration-application" class="carousel-container"></div>
+        <div id="ai-integration-synthesis" class="carousel-container"></div>
+        <div id="ai-integration-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -193,20 +185,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="prompt-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="prompt-story">
+        <div id="prompt-comprehension" class="carousel-container"></div>
+        <div id="prompt-application" class="carousel-container"></div>
+        <div id="prompt-synthesis" class="carousel-container"></div>
+        <div id="prompt-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -272,20 +256,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="completion-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels -->
+      <div class="activity-carousels" data-story="completion-story">
+        <div id="completion-comprehension" class="carousel-container"></div>
+        <div id="completion-application" class="carousel-container"></div>
+        <div id="completion-synthesis" class="carousel-container"></div>
+        <div id="completion-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -340,7 +316,20 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -445,20 +434,35 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from Quiz system)
       // ============================================
 
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'ai-integration-story': 'ai-integration-quiz',
         'prompt-story': 'prompt-quiz',
         'completion-story': 'completion-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        // Transform quiz questions to ActivityCarousel format
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
     });
   </script>
