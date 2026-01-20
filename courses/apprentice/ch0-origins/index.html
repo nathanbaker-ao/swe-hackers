@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="apprentice" data-lesson="ch0-origins">
   <header class="header">
@@ -129,6 +130,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Three Forces -->
+      <div class="activity-carousels" data-story="three-forces-story">
+        <div id="three-forces-comprehension" class="carousel-container"></div>
+        <div id="three-forces-application" class="carousel-container"></div>
+        <div id="three-forces-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Story 2: Binary Language -->
@@ -207,6 +215,13 @@
           <div class="quiz-dots"></div>
           <button class="quiz-nav-btn next">Next →</button>
         </div>
+      </div>
+
+      <!-- Activity Carousels for Binary -->
+      <div class="activity-carousels" data-story="binary-story">
+        <div id="binary-comprehension" class="carousel-container"></div>
+        <div id="binary-application" class="carousel-container"></div>
+        <div id="binary-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -287,6 +302,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Navigation -->
+      <div class="activity-carousels" data-story="navigation-story">
+        <div id="navigation-comprehension" class="carousel-container"></div>
+        <div id="navigation-application" class="carousel-container"></div>
+        <div id="navigation-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Next Steps -->
@@ -331,6 +353,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -442,6 +478,990 @@
 
         new Quiz(containerId, quiz.questions);
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // ----------------------------------------
+      // STORY 1: THREE FORCES - Activity Carousels
+      // ----------------------------------------
+
+      // Comprehension Carousel - Three Forces
+      const threeForces_Comprehension = new ActivityCarousel('three-forces-comprehension', {
+        type: 'comprehension',
+        sectionId: 'three-forces',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'tf-quiz-silicon-origin',
+            question: 'What material is silicon (the foundation of computer chips) refined from?',
+            options: [
+              'Metal ore from deep mines',
+              'Sand and rock (common stone)',
+              'Rare crystals from caves',
+              'Synthetic materials made in labs'
+            ],
+            correct: 1,
+            explanation: 'Silicon comes from sand and rock—the most common elements on Earth! The "Stone" in computing is literally refined sand transformed into the foundation of every chip.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'tf-quiz-transistor-function',
+            question: 'What is the primary function of a transistor?',
+            options: [
+              'Store data permanently',
+              'Generate electricity',
+              'Act as a tiny switch that turns on and off',
+              'Connect computers to the internet'
+            ],
+            correct: 2,
+            explanation: 'A transistor is fundamentally a switch—it can be ON (1) or OFF (0). Modern chips contain billions of these switches working together!',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'tf-tf-transistor-before-electricity',
+            statement: 'The transistor was invented before scientists understood how to harness electricity.',
+            correct: false,
+            explanation: 'Electricity was harnessed long before transistors. Benjamin Franklin\'s experiments were in the 1750s, while the transistor was invented in 1947—nearly 200 years later!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'tf-tf-billions-transistors',
+            statement: 'A modern smartphone contains more transistors than there are people on Earth.',
+            correct: true,
+            explanation: 'Modern smartphone chips contain 15+ billion transistors, while Earth has about 8 billion people. Your pocket computer has more switches than humans!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'tf-fill-transistor-definition',
+            statement: 'A transistor is a tiny ___ made of silicon that can turn on and off billions of times per second.',
+            correctAnswers: ['switch', 'switches', 'electronic switch'],
+            caseSensitive: false,
+            hints: ['Think about what ON and OFF represent'],
+            explanation: 'A transistor is a microscopic switch. ON represents 1, OFF represents 0—the fundamental language of computing.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'tf-fill-magnetism-role',
+            statement: 'Magnetism helps computers ___ data by remembering which direction it\'s pointing.',
+            correctAnswers: ['store', 'save', 'remember', 'keep', 'preserve'],
+            caseSensitive: false,
+            hints: ['What does a hard drive do with your files?'],
+            explanation: 'Magnetic storage works because magnets remember their orientation—north or south, which represents 1 or 0. This is how hard drives store your files!',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'tf-quiz-three-forces-combo',
+            question: 'Which combination correctly matches each "ancient force" to its role in computing?',
+            options: [
+              'Stone = Power, Lightning = Foundation, Magnetism = Memory',
+              'Stone = Memory, Lightning = Foundation, Magnetism = Power',
+              'Stone = Foundation, Lightning = Power, Magnetism = Memory',
+              'Stone = Processing, Lightning = Memory, Magnetism = Foundation'
+            ],
+            correct: 2,
+            explanation: 'Stone (silicon) provides the FOUNDATION for chips, Lightning (electricity) provides POWER to run them, and Magnetism provides MEMORY to store data.',
+            points: 10
+          }
+        ]
+      });
+      threeForces_Comprehension.init();
+
+      // Application Carousel - Three Forces
+      const threeForces_Application = new ActivityCarousel('three-forces-application', {
+        type: 'application',
+        sectionId: 'three-forces',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'tf-seq-computing-evolution',
+            instruction: 'Put these computing technologies in chronological order (oldest to newest):',
+            items: [
+              { id: 'abacus', text: 'Abacus (stone beads for counting)' },
+              { id: 'vacuum', text: 'Vacuum tubes (room-sized computers)' },
+              { id: 'transistor', text: 'Transistor invention (1947)' },
+              { id: 'microchip', text: 'Microchip (millions of transistors)' },
+              { id: 'smartphone', text: 'Smartphone (billions of transistors)' }
+            ],
+            correctOrder: ['abacus', 'vacuum', 'transistor', 'microchip', 'smartphone'],
+            hints: {
+              partial: 'The abacus is thousands of years old. Vacuum tubes came before solid-state electronics.',
+              wrong: 'Think about the history from the video—what came first?'
+            },
+            explanation: 'Computing evolved from ancient stone tools (abacus, ~3000 BC) → vacuum tubes (1940s) → transistors (1947) → integrated circuits/microchips (1960s) → modern smartphones (2000s+).',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'tf-dd-forces-roles',
+            instruction: 'Match each ancient force to what it provides in modern computing:',
+            items: [
+              { id: 'item-foundation', text: 'Physical foundation for chips' },
+              { id: 'item-power', text: 'Energy to run machines' },
+              { id: 'item-storage', text: 'Ability to store data' }
+            ],
+            zones: [
+              { id: 'zone-stone', label: '🪨 Stone (Silicon)', correct: 'item-foundation' },
+              { id: 'zone-lightning', label: '⚡ Lightning (Electricity)', correct: 'item-power' },
+              { id: 'zone-magnetism', label: '🧲 Magnetism', correct: 'item-storage' }
+            ],
+            explanation: 'Stone/silicon provides the physical substrate, electricity powers the circuits, and magnetism enables persistent storage.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'tf-connect-forces-computing',
+            instruction: 'Connect the ancient forces to show how they combine to create modern computing:',
+            nodes: [
+              { id: 'stone', label: '🪨 Stone' },
+              { id: 'lightning', label: '⚡ Lightning' },
+              { id: 'transistor', label: '🔬 Transistor' },
+              { id: 'magnetism', label: '🧲 Magnetism' },
+              { id: 'computer', label: '💻 Computer' }
+            ],
+            solution: {
+              edges: [
+                { source: 'stone', target: 'transistor' },
+                { source: 'lightning', target: 'transistor' },
+                { source: 'transistor', target: 'computer' },
+                { source: 'magnetism', target: 'computer' }
+              ]
+            },
+            nodeDescriptions: {
+              'stone': 'Silicon from sand—the chip material',
+              'lightning': 'Electricity—powers the switches',
+              'transistor': 'Combines stone + lightning',
+              'magnetism': 'Stores data persistently',
+              'computer': 'The final result'
+            },
+            explanation: 'Stone and lightning combine to make transistors. Transistors and magnetism together create the complete computer.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'tf-quiz-which-force',
+            question: 'Your phone just died because the battery ran out. Which "ancient force" failed?',
+            options: [
+              'Stone (Silicon) - the chips stopped working',
+              'Lightning (Electricity) - no power to run',
+              'Magnetism - lost all stored data',
+              'All three forces failed equally'
+            ],
+            correct: 1,
+            explanation: 'When your battery dies, it\'s the Lightning (electricity) that\'s gone. The Stone (chips) and Magnetism (storage) are fine—you just need to recharge!',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'tf-seq-transistor-operation',
+            instruction: 'Order the steps of how a transistor processes information:',
+            items: [
+              { id: 'signal', text: 'Electrical signal arrives at transistor' },
+              { id: 'silicon', text: 'Silicon material controls the flow' },
+              { id: 'state', text: 'Transistor switches ON or OFF' },
+              { id: 'output', text: 'Output represents 1 or 0' }
+            ],
+            correctOrder: ['signal', 'silicon', 'state', 'output'],
+            hints: {
+              partial: 'The signal comes first, then the silicon material does its work.',
+              wrong: 'Think about cause and effect—what triggers what?'
+            },
+            explanation: 'An electrical signal enters → silicon controls whether it passes → the transistor is either ON or OFF → this represents a binary digit (1 or 0).',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'tf-dd-historical-timeline',
+            instruction: 'Match each invention to its approximate era:',
+            items: [
+              { id: 'item-ancient', text: 'Abacus' },
+              { id: 'item-1750s', text: 'Franklin\'s electricity experiments' },
+              { id: 'item-1940s', text: 'First electronic computers (ENIAC)' },
+              { id: 'item-1947', text: 'Transistor invented' }
+            ],
+            zones: [
+              { id: 'zone-ancient', label: '~3000 BC', correct: 'item-ancient' },
+              { id: 'zone-1750s', label: '1750s', correct: 'item-1750s' },
+              { id: 'zone-1940s', label: '1940s', correct: 'item-1940s' },
+              { id: 'zone-1947', label: '1947', correct: 'item-1947' }
+            ],
+            explanation: 'Humans have been computing for millennia! The abacus is ancient, electricity experiments were in the 1750s, ENIAC was 1945, and the transistor was 1947.',
+            points: 20
+          }
+        ]
+      });
+      threeForces_Application.init();
+
+      // Synthesis Carousel - Three Forces
+      const threeForces_Synthesis = new ActivityCarousel('three-forces-synthesis', {
+        type: 'synthesis',
+        sectionId: 'three-forces',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'tf-scenario-explain-phone',
+            scenario: 'Your 10-year-old cousin asks: "How is my phone a computer? It doesn\'t look like the big computers with screens and keyboards!"',
+            question: 'Using the three forces concept, how would you explain that a smartphone is indeed a computer?',
+            evaluation: {
+              keywords: ['silicon', 'transistor', 'electricity', 'storage', 'magnetism', 'chip', 'switch', 'billion', 'stone'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'A smartphone IS a computer—just much smaller! Inside it has a tiny chip made of silicon (stone) with billions of transistors (switches) powered by electricity (lightning). It stores your photos and apps using storage (magnetism). The same three forces power both—your phone just has billions more transistors packed into a tiny space!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'tf-predict-no-silicon',
+            setup: {
+              type: 'text',
+              content: 'Imagine scientists never discovered how to use silicon for computing. We can\'t make transistor chips from stone/sand.'
+            },
+            question: 'What do you predict computing would look like today without silicon?',
+            correctAnswer: 'Computers would be much larger and less powerful',
+            acceptableVariants: ['big', 'large', 'huge', 'room-sized', 'vacuum tubes', 'slower', 'expensive', 'rare'],
+            explanation: 'Without silicon, we\'d still be using vacuum tubes or other technologies. Computers would be room-sized, consume enormous power, and only governments and big companies could afford them. No smartphones, no laptops—just massive mainframes!',
+            commonMistakes: {
+              'no computers': 'We\'d still have computers—just using different technology like vacuum tubes. They\'d be much larger and less powerful.'
+            },
+            points: 20
+          },
+          {
+            type: 'reflection',
+            id: 'tf-reflect-pocket-supercomputer',
+            prompt: 'The phone in your pocket is more powerful than the computers that sent astronauts to the moon. Knowing the history of the three forces, how does this change how you think about the device you use every day?',
+            thinkingPrompts: [
+              'What took humanity thousands of years to figure out?',
+              'How do you feel knowing you carry billions of tiny switches?',
+              'What might computing look like in another 50 years?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: 'I (think|feel|believe|realize|never)', label: 'Personal reflection', points: 5 },
+                { pattern: '(amazing|incredible|powerful|grateful)', label: 'Appreciation', points: 4 },
+                { pattern: '(history|ancient|evolution|progress)', label: 'Historical connection', points: 4 },
+                { pattern: '(future|will|might|could)', label: 'Forward thinking', points: 4 },
+                { pattern: '\\?', label: 'Curiosity', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'tf-scenario-design-without-force',
+            scenario: 'You\'re a computer engineer in an alternate universe where magnetism doesn\'t exist (magnets don\'t work). You still have stone/silicon and lightning/electricity.',
+            question: 'How would you design a computer that can still store data without magnetic storage?',
+            evaluation: {
+              keywords: ['flash', 'SSD', 'solid state', 'electronic', 'circuit', 'battery', 'cloud', 'memory', 'chip', 'RAM'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Without magnetism, we\'d rely entirely on electronic storage using silicon. Flash memory and SSDs (solid-state drives) actually don\'t use magnetism—they trap electrons in circuits. We\'d need constant power or better flash technology. Interestingly, this is where computing is heading anyway—SSDs are replacing magnetic hard drives!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'tf-predict-next-breakthrough',
+            setup: {
+              type: 'text',
+              content: 'The transistor revolutionized computing in 1947. Scientists are now working on quantum computing using properties of subatomic particles.'
+            },
+            question: 'Predict: What might be the "fourth force" that enables the next computing revolution?',
+            correctAnswer: 'Quantum mechanics or light-based computing',
+            acceptableVariants: ['quantum', 'light', 'photon', 'DNA', 'biological', 'atomic', 'particle', 'neural'],
+            explanation: 'Scientists are exploring quantum computing (using particle behavior), optical computing (using light), and even DNA computing (using biological molecules). The next revolution might combine multiple new "forces" just like the transistor combined stone and lightning!',
+            commonMistakes: {
+              'AI': 'AI is software that runs on current computers. We\'re looking for new physical technologies—the "hardware" breakthrough like the transistor was.'
+            },
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'tf-quiz-synthesis-forces',
+            question: 'Which statement best explains why the "three forces" metaphor is useful for understanding computing?',
+            options: [
+              'It makes computing seem magical and mysterious',
+              'It shows that modern technology is built on ancient natural discoveries',
+              'It proves that only scientists can understand computers',
+              'It demonstrates that computers are completely artificial inventions'
+            ],
+            correct: 1,
+            explanation: 'The three forces metaphor reveals that our most advanced technology is built on fundamental natural phenomena that humans have known about for centuries or millennia. Computing isn\'t magic—it\'s the clever combination of natural forces!',
+            points: 15
+          }
+        ]
+      });
+      threeForces_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: BINARY - Activity Carousels
+      // ----------------------------------------
+
+      // Comprehension Carousel - Binary
+      const binary_Comprehension = new ActivityCarousel('binary-comprehension', {
+        type: 'comprehension',
+        sectionId: 'binary',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'bin-quiz-binary-meaning',
+            question: 'What does "binary" mean in computing?',
+            options: [
+              'A system using ten digits (0-9)',
+              'A system using only two symbols (0 and 1)',
+              'A type of computer virus',
+              'A programming language'
+            ],
+            correct: 1,
+            explanation: '"Binary" comes from "bi" meaning two. In computing, binary uses only 0 and 1—the same ON/OFF that transistors produce!',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'bin-quiz-why-binary',
+            question: 'Why do computers use binary instead of decimal (0-9)?',
+            options: [
+              'Binary is easier for humans to read',
+              'Decimal would require too much memory',
+              'Transistors can only be ON or OFF—two states match binary',
+              'Binary was invented before decimal numbers'
+            ],
+            correct: 2,
+            explanation: 'Transistors have two states: ON and OFF. Binary (0 and 1) maps perfectly to this! Having 10 different voltage levels for decimal would be unreliable and complex.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'bin-tf-ten-digits',
+            statement: 'Binary has 10 different digits, just like our normal number system.',
+            correct: false,
+            explanation: 'Binary has only TWO digits: 0 and 1. Our "normal" decimal system has ten digits (0-9). That\'s why we call it bi-nary (two) vs deci-mal (ten)!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'bin-tf-computers-understand-english',
+            statement: 'Computers can directly understand English words and sentences without converting them to binary.',
+            correct: false,
+            explanation: 'Computers ONLY understand binary! When you type "Hello", each letter becomes a number (like H=72), and that number becomes binary (01001000). Everything is 0s and 1s inside.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'bin-fill-on-off',
+            statement: 'In binary, 1 represents ___ and 0 represents ___.',
+            correctAnswers: ['ON and OFF', 'on and off', 'ON, OFF', 'on, off', 'on off'],
+            caseSensitive: false,
+            hints: ['Think about what a transistor does—it\'s either...?'],
+            explanation: 'Binary directly maps to transistor states: 1 = ON (current flowing) and 0 = OFF (no current). This physical reality is why binary works so well for computing.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'bin-fill-power-of-two',
+            statement: 'Each position in a binary number represents a power of ___.',
+            correctAnswers: ['2', 'two', '2/two'],
+            caseSensitive: false,
+            hints: ['Binary has 2 digits, so each position is...?'],
+            explanation: 'In binary, positions are powers of 2: 1, 2, 4, 8, 16, 32... (Just like decimal positions are powers of 10: 1, 10, 100, 1000...)',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'bin-quiz-bit-definition',
+            question: 'What is a single binary digit (0 or 1) called?',
+            options: [
+              'A byte',
+              'A bit',
+              'A pixel',
+              'A node'
+            ],
+            correct: 1,
+            explanation: 'A single binary digit is called a "bit" (short for binary digit). 8 bits make a "byte". Your computer\'s storage is measured in gigabytes—billions of bytes!',
+            points: 10
+          }
+        ]
+      });
+      binary_Comprehension.init();
+
+      // Application Carousel - Binary
+      const binary_Application = new ActivityCarousel('binary-application', {
+        type: 'application',
+        sectionId: 'binary',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'bin-seq-decimal-to-binary',
+            instruction: 'Order the steps to convert the decimal number 13 to binary:',
+            items: [
+              { id: 'step1', text: 'Write the powers of 2: 8, 4, 2, 1' },
+              { id: 'step2', text: 'Check: Is 13 ≥ 8? Yes! Write 1, remainder = 5' },
+              { id: 'step3', text: 'Check: Is 5 ≥ 4? Yes! Write 1, remainder = 1' },
+              { id: 'step4', text: 'Check: Is 1 ≥ 2? No! Write 0' },
+              { id: 'step5', text: 'Check: Is 1 ≥ 1? Yes! Write 1, remainder = 0' },
+              { id: 'step6', text: 'Result: 13 in binary is 1101' }
+            ],
+            correctOrder: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6'],
+            hints: {
+              partial: 'Start by writing the powers of 2, then check each from largest to smallest.',
+              wrong: 'Think about the process: list powers → check each → write 1 or 0'
+            },
+            explanation: 'To convert to binary: list powers of 2, go from largest to smallest, subtract when possible (write 1), skip when not (write 0). 13 = 8+4+1 = 1101.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'bin-dd-binary-to-decimal',
+            instruction: 'Match each binary number to its decimal value:',
+            items: [
+              { id: 'val-5', text: '5' },
+              { id: 'val-10', text: '10' },
+              { id: 'val-15', text: '15' },
+              { id: 'val-7', text: '7' }
+            ],
+            zones: [
+              { id: 'bin-0101', label: '0101', correct: 'val-5' },
+              { id: 'bin-1010', label: '1010', correct: 'val-10' },
+              { id: 'bin-1111', label: '1111', correct: 'val-15' },
+              { id: 'bin-0111', label: '0111', correct: 'val-7' }
+            ],
+            explanation: '0101 = 4+1 = 5 | 1010 = 8+2 = 10 | 1111 = 8+4+2+1 = 15 | 0111 = 4+2+1 = 7. Add up the positions where there\'s a 1!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'bin-quiz-convert-1010',
+            question: 'What is binary 1010 in decimal?',
+            options: [
+              '5',
+              '8',
+              '10',
+              '12'
+            ],
+            correct: 2,
+            explanation: 'Binary 1010: Position values are 8,4,2,1. We have 1s in the 8 and 2 positions. 8 + 0 + 2 + 0 = 10. Fun fact: 1010 looking like "10" in binary equals 10 in decimal!',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'bin-dd-powers-of-two',
+            instruction: 'Match each binary position (from right) to its decimal value:',
+            items: [
+              { id: 'pow-1', text: '1' },
+              { id: 'pow-2', text: '2' },
+              { id: 'pow-4', text: '4' },
+              { id: 'pow-8', text: '8' }
+            ],
+            zones: [
+              { id: 'pos-1', label: 'Position 1 (rightmost)', correct: 'pow-1' },
+              { id: 'pos-2', label: 'Position 2', correct: 'pow-2' },
+              { id: 'pos-3', label: 'Position 3', correct: 'pow-4' },
+              { id: 'pos-4', label: 'Position 4', correct: 'pow-8' }
+            ],
+            explanation: 'Each position is a power of 2. From right to left: 2⁰=1, 2¹=2, 2²=4, 2³=8, 2⁴=16, and so on. This is why we call it "base 2"!',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'bin-seq-text-to-binary',
+            instruction: 'Order the steps showing how the letter "A" is stored in a computer:',
+            items: [
+              { id: 'type', text: 'You type the letter "A" on keyboard' },
+              { id: 'ascii', text: 'Computer looks up "A" in ASCII table: A = 65' },
+              { id: 'convert', text: 'Convert 65 to binary: 01000001' },
+              { id: 'store', text: 'Store the 8-bit pattern in memory' }
+            ],
+            correctOrder: ['type', 'ascii', 'convert', 'store'],
+            hints: {
+              partial: 'First you type, then the computer needs to find the number code...',
+              wrong: 'Think about the journey: human types → computer converts → stores'
+            },
+            explanation: 'Every character has a number (ASCII code). "A" = 65, "a" = 97, "0" = 48. The computer converts this number to binary and stores that pattern of 0s and 1s.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'bin-quiz-byte-bits',
+            question: 'How many bits are in a byte?',
+            options: [
+              '4 bits',
+              '8 bits',
+              '16 bits',
+              '32 bits'
+            ],
+            correct: 1,
+            explanation: 'A byte is 8 bits. This is enough to represent 256 different values (0-255), which covers all letters, digits, and common symbols. This is why ASCII codes go up to 255!',
+            points: 10
+          }
+        ]
+      });
+      binary_Application.init();
+
+      // Synthesis Carousel - Binary
+      const binary_Synthesis = new ActivityCarousel('binary-synthesis', {
+        type: 'synthesis',
+        sectionId: 'binary',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'bin-scenario-why-not-decimal',
+            scenario: 'Your friend says: "Why don\'t computers just use normal numbers 0-9? Binary seems unnecessarily complicated!"',
+            question: 'How would you explain why binary is actually simpler and better for computers?',
+            evaluation: {
+              keywords: ['transistor', 'switch', 'on', 'off', 'reliable', 'simple', 'two states', 'voltage', 'electrical'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Binary is actually SIMPLER for computers! Transistors are switches—they can only be ON or OFF, two states. If we used decimal, we\'d need to detect 10 different voltage levels accurately, which would be unreliable and error-prone. With binary, it\'s easy: any significant voltage = 1, no voltage = 0. The simplicity makes computers fast and reliable!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'bin-predict-stuck-bit',
+            setup: {
+              type: 'code',
+              language: 'text',
+              code: 'A computer is storing the number 13 (binary: 1101)\nBut one transistor gets stuck at 0 and can\'t turn ON.\nThe stuck transistor is in the "8" position.'
+            },
+            question: 'What number will the computer actually store?',
+            correctAnswer: '5',
+            acceptableVariants: ['5', 'five', '0101'],
+            explanation: 'Normal 13 = 1101 (8+4+0+1). With the 8-position stuck at 0, we get 0101 = 4+0+0+1 = 5. This is why error detection and redundancy are crucial in computing—one stuck bit can corrupt data!',
+            commonMistakes: {
+              '12': 'The stuck bit is in the 8 position, not the 1 position. 1101 becomes 0101.',
+              '4': 'Remember to add up ALL the 1s that remain: 0+4+0+1 = 5'
+            },
+            points: 20
+          },
+          {
+            type: 'reflection',
+            id: 'bin-reflect-binary-life',
+            prompt: 'Binary thinking (yes/no, on/off, true/false) appears in everyday life, not just computers. Think of examples where "binary" decisions or states exist in the real world.',
+            thinkingPrompts: [
+              'Light switches, doors, questions with yes/no answers...',
+              'Are there situations where binary is too limiting?',
+              'When do we need more than two options?'
+            ],
+            evaluation: {
+              minWords: 35,
+              depthIndicators: [
+                { pattern: '(switch|door|light|button)', label: 'Physical examples', points: 4 },
+                { pattern: '(yes|no|true|false)', label: 'Binary states', points: 4 },
+                { pattern: '(sometimes|but|however|although)', label: 'Nuanced thinking', points: 5 },
+                { pattern: '(gray|middle|between|spectrum)', label: 'Recognizes limitations', points: 5 },
+                { pattern: '(I think|I realize|example)', label: 'Personal connection', points: 3 }
+              ],
+              maxScore: 21
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'bin-scenario-explain-to-child',
+            scenario: 'You\'re volunteering at an elementary school. A curious 8-year-old asks: "My teacher says computers only understand 1s and 0s. But I play games with pictures and music! How?"',
+            question: 'How would you explain this apparent contradiction in a way an 8-year-old could understand?',
+            evaluation: {
+              keywords: ['pattern', 'code', 'translate', 'color', 'pixel', 'number', 'convert', 'secret', 'language'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Great question! Think of it like a secret code. Each color has a number, and each number becomes a pattern of 1s and 0s. Red might be 11111111 00000000 00000000. When you see a picture, your screen is reading millions of these code patterns super fast and showing you the colors! Music works the same way—every sound has a number code. The computer speaks in 0s and 1s, but we see colors and hear music!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'bin-predict-next-pattern',
+            setup: {
+              type: 'code',
+              language: 'text',
+              code: 'Binary counting pattern:\n0001 = 1\n0010 = 2\n0011 = 3\n0100 = 4\n0101 = 5\n0110 = 6\n0111 = 7\n???? = 8'
+            },
+            question: 'What is binary 8?',
+            correctAnswer: '1000',
+            acceptableVariants: ['1000', '1 0 0 0', 'one zero zero zero'],
+            explanation: 'In binary, when you run out of symbols in a column, you carry over to the next. 0111 + 1 = 1000. It\'s just like decimal: 999 + 1 = 1000. The pattern continues: 8, 16, 32, 64 are all single 1s followed by zeros!',
+            commonMistakes: {
+              '1001': '1001 would be 9, not 8. 8 is the next power of 2, so it\'s 1 followed by zeros.',
+              '0008': 'Binary only uses 0 and 1! There is no "8" symbol in binary.'
+            },
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'bin-quiz-why-everything',
+            question: 'Why can binary represent everything—text, images, music, video, and more?',
+            options: [
+              'Binary has special magical properties',
+              'Everything can be converted to numbers, and binary can represent any number',
+              'Computers have special chips for each type of data',
+              'Binary is the same as English alphabet'
+            ],
+            correct: 1,
+            explanation: 'The key insight: ANYTHING can be represented as numbers. Letters have ASCII codes, colors have RGB values, sounds have frequencies. Once something is a number, binary can represent it. Binary is universal because numbers are universal!',
+            points: 15
+          }
+        ]
+      });
+      binary_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: NAVIGATION - Activity Carousels
+      // ----------------------------------------
+
+      // Comprehension Carousel - Navigation
+      const navigation_Comprehension = new ActivityCarousel('navigation-comprehension', {
+        type: 'comprehension',
+        sectionId: 'navigation',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'nav-quiz-path-definition',
+            question: 'What is a file path in computing?',
+            options: [
+              'A cable that connects files to the internet',
+              'The unique address that tells a computer exactly where to find a file',
+              'A type of folder that stores programs',
+              'The speed at which files transfer'
+            ],
+            correct: 1,
+            explanation: 'A path is like a file\'s mailing address. /Users/Nathan/Documents/report.pdf tells the computer exactly which folders to open to find the file.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'nav-quiz-pwd',
+            question: 'What does the terminal command "pwd" stand for?',
+            options: [
+              'Password',
+              'Print Working Directory',
+              'Power Down',
+              'Program with Data'
+            ],
+            correct: 1,
+            explanation: '"pwd" means "Print Working Directory" - it shows you exactly where you are in the file system. Think of it as asking "Where am I right now?"',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'nav-tf-terminal-before-gui',
+            statement: 'The graphical user interface (GUI) with icons and windows was invented before the text-based terminal.',
+            correct: false,
+            explanation: 'The terminal came FIRST! Early computers only had text interfaces. Graphical interfaces came later (1970s-80s). The terminal is the original way humans talked to computers.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'nav-tf-files-in-folders',
+            statement: 'Every file on a computer must be inside at least one folder.',
+            correct: true,
+            explanation: 'Yes! Even files that appear to be "loose" are inside the root folder (/). The file system is a tree structure where everything branches from the root.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'nav-fill-pwd-shows',
+            statement: 'The "pwd" command shows your current working ___.',
+            correctAnswers: ['directory', 'dir', 'folder', 'location', 'path'],
+            caseSensitive: false,
+            hints: ['It shows WHERE you are in the file system'],
+            explanation: 'pwd = Print Working Directory. It shows the full path of the folder you\'re currently in, like /Users/Nathan/Projects.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'nav-fill-ls-stands-for',
+            statement: 'The terminal command "ls" is short for ___.',
+            correctAnswers: ['list', 'list files', 'list directory'],
+            caseSensitive: false,
+            hints: ['What does ls show you?'],
+            explanation: '"ls" is short for "list" - it shows all the files and folders in your current location. Like asking "What\'s in this folder?"',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'nav-quiz-cd-meaning',
+            question: 'What does the "cd" command do in the terminal?',
+            options: [
+              'Creates a new directory',
+              'Changes to a different directory (moves you)',
+              'Copies a directory',
+              'Compiles and debugs code'
+            ],
+            correct: 1,
+            explanation: '"cd" means "Change Directory" - it moves you to a different folder. "cd Documents" takes you into the Documents folder.',
+            points: 10
+          }
+        ]
+      });
+      navigation_Comprehension.init();
+
+      // Application Carousel - Navigation
+      const navigation_Application = new ActivityCarousel('navigation-application', {
+        type: 'application',
+        sectionId: 'navigation',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'nav-seq-find-file',
+            instruction: 'You\'re in your home folder and need to open a file at /Users/You/Projects/website/index.html. Order the commands:',
+            items: [
+              { id: 'pwd', text: 'pwd (check where you are)' },
+              { id: 'cd-projects', text: 'cd Projects' },
+              { id: 'cd-website', text: 'cd website' },
+              { id: 'ls', text: 'ls (see what files are here)' }
+            ],
+            correctOrder: ['pwd', 'cd-projects', 'cd-website', 'ls'],
+            hints: {
+              partial: 'First check where you are, then navigate step by step.',
+              wrong: 'Start with pwd to know your location, then use cd to move.'
+            },
+            explanation: 'Good practice: 1) pwd to know where you are, 2) cd to move down the path step by step, 3) ls to see what\'s available. You could also do "cd Projects/website" in one step!',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'nav-dd-commands-actions',
+            instruction: 'Match each terminal command to what it does:',
+            items: [
+              { id: 'action-where', text: 'Shows where you currently are' },
+              { id: 'action-list', text: 'Lists files and folders' },
+              { id: 'action-move', text: 'Moves to a different folder' },
+              { id: 'action-make', text: 'Creates a new folder' }
+            ],
+            zones: [
+              { id: 'cmd-pwd', label: 'pwd', correct: 'action-where' },
+              { id: 'cmd-ls', label: 'ls', correct: 'action-list' },
+              { id: 'cmd-cd', label: 'cd', correct: 'action-move' },
+              { id: 'cmd-mkdir', label: 'mkdir', correct: 'action-make' }
+            ],
+            explanation: 'pwd = print working directory (where am I?) | ls = list (what\'s here?) | cd = change directory (go somewhere) | mkdir = make directory (create folder)',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'nav-connect-filesystem',
+            instruction: 'Connect the file system components to show the hierarchy (parent → child):',
+            nodes: [
+              { id: 'root', label: '/ (Root)' },
+              { id: 'users', label: 'Users' },
+              { id: 'yourname', label: 'YourName' },
+              { id: 'documents', label: 'Documents' },
+              { id: 'file', label: 'report.pdf' }
+            ],
+            solution: {
+              edges: [
+                { source: 'root', target: 'users' },
+                { source: 'users', target: 'yourname' },
+                { source: 'yourname', target: 'documents' },
+                { source: 'documents', target: 'file' }
+              ]
+            },
+            nodeDescriptions: {
+              'root': 'The very top of the file system',
+              'users': 'Contains all user home folders',
+              'yourname': 'Your personal home folder',
+              'documents': 'A folder for documents',
+              'file': 'The actual file you want'
+            },
+            explanation: 'File systems are trees: / (root) → Users → YourName → Documents → report.pdf. The path /Users/YourName/Documents/report.pdf follows this exact hierarchy!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'nav-quiz-which-command',
+            question: 'You want to see what files exist in your current folder. Which command do you use?',
+            options: [
+              'pwd',
+              'ls',
+              'cd',
+              'cat'
+            ],
+            correct: 1,
+            explanation: 'ls (list) shows all files and folders in your current location. Add flags like -la to see hidden files and details!',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'nav-dd-path-parts',
+            instruction: 'Match each part of the path /Users/Nathan/Code/project.py to its meaning:',
+            items: [
+              { id: 'meaning-root', text: 'The starting point (root)' },
+              { id: 'meaning-users', text: 'Folder containing all users' },
+              { id: 'meaning-name', text: 'A specific user\'s folder' },
+              { id: 'meaning-file', text: 'The actual file' }
+            ],
+            zones: [
+              { id: 'part-slash', label: '/', correct: 'meaning-root' },
+              { id: 'part-users', label: 'Users', correct: 'meaning-users' },
+              { id: 'part-nathan', label: 'Nathan', correct: 'meaning-name' },
+              { id: 'part-file', label: 'project.py', correct: 'meaning-file' }
+            ],
+            explanation: 'Every path tells a story: start at root (/), go to Users, find Nathan\'s folder, look in Code, and there\'s project.py!',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'nav-seq-lost-file',
+            instruction: 'You downloaded a file but can\'t find it. Order these steps to locate it:',
+            items: [
+              { id: 'think', text: 'Think about where it might have gone (Downloads?)' },
+              { id: 'navigate', text: 'cd ~/Downloads (go to Downloads folder)' },
+              { id: 'list', text: 'ls -lt (list files sorted by time)' },
+              { id: 'find', text: 'Look for your file at the top (most recent)' }
+            ],
+            correctOrder: ['think', 'navigate', 'list', 'find'],
+            hints: {
+              partial: 'First think about likely locations, then navigate there.',
+              wrong: 'Start by guessing where the file might be, then go look.'
+            },
+            explanation: 'Most downloads go to ~/Downloads. Using "ls -lt" sorts by time (newest first), making it easy to find recent files. The ~ is shorthand for your home folder!',
+            points: 20
+          }
+        ]
+      });
+      navigation_Application.init();
+
+      // Synthesis Carousel - Navigation
+      const navigation_Synthesis = new ActivityCarousel('navigation-synthesis', {
+        type: 'synthesis',
+        sectionId: 'navigation',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'nav-scenario-terminal-vs-gui',
+            scenario: 'Your coworker says: "Why do developers use the terminal? We have nice graphical file browsers with icons. The terminal seems old-fashioned and harder!"',
+            question: 'Why do professional developers often prefer the terminal over graphical interfaces?',
+            evaluation: {
+              keywords: ['faster', 'automate', 'script', 'precise', 'remote', 'server', 'power', 'batch', 'efficient', 'repeat'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'The terminal is actually MORE powerful! You can automate repetitive tasks with scripts, work on remote servers without graphics, process hundreds of files with one command, and combine commands in powerful ways. Once you know the commands, it\'s much faster than clicking through folders. GUI is friendlier to learn, but terminal gives you superpowers!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'nav-predict-wrong-path',
+            setup: {
+              type: 'code',
+              language: 'bash',
+              code: 'pwd\n/Users/Nathan/Documents\n\ncat /Users/Nathan/Document/notes.txt'
+            },
+            question: 'What will happen when this command runs? (Hint: look carefully at the path)',
+            correctAnswer: 'File not found error',
+            acceptableVariants: ['error', 'not found', 'no such file', 'fail', 'Document', 'typo'],
+            explanation: 'Spot the typo: "Document" vs "Documents"! The path says Document (singular) but the folder is Documents (plural). Computers are literal—one wrong character means failure. This is why developers develop attention to detail!',
+            commonMistakes: {
+              'it will work': 'Look very carefully at the spelling of Documents in both paths...'
+            },
+            points: 20
+          },
+          {
+            type: 'reflection',
+            id: 'nav-reflect-when-to-use',
+            prompt: 'Think about your own computer use. When would you prefer using a graphical file browser (Finder/Explorer) vs the terminal? Are there tasks better suited to each?',
+            thinkingPrompts: [
+              'What tasks feel natural with clicking and dragging?',
+              'What tasks would be tedious to do one-by-one?',
+              'When might you need to do something repeatedly?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(click|drag|visual|see|picture|icon)', label: 'GUI advantages', points: 4 },
+                { pattern: '(repeat|automate|batch|script|many files)', label: 'Terminal advantages', points: 5 },
+                { pattern: '(I use|I prefer|for me|personally)', label: 'Personal connection', points: 4 },
+                { pattern: '(depends|sometimes|both)', label: 'Nuanced view', points: 4 },
+                { pattern: '(example|like when|such as)', label: 'Specific examples', points: 4 }
+              ],
+              maxScore: 21
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'nav-scenario-debug-error',
+            scenario: 'A junior developer comes to you frustrated: "I keep getting \'No such file or directory\' but I can SEE the file in my file browser! It\'s right there!"',
+            question: 'What are some possible causes of this error, and how would you help them debug it?',
+            evaluation: {
+              keywords: ['path', 'spelling', 'case', 'typo', 'pwd', 'directory', 'cd', 'space', 'uppercase', 'lowercase'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 12
+            },
+            modelAnswer: 'Common causes: 1) Wrong directory - use pwd to check where you are. 2) Typo in filename - computers are case-sensitive (File.txt ≠ file.txt). 3) Spaces in path - need quotes around paths with spaces. 4) Looking in wrong folder - ls to see what\'s actually there. Have them use pwd, then ls, then try again with the exact filename they see.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'nav-predict-organize-project',
+            setup: {
+              type: 'text',
+              content: 'You\'re starting a web development project that will have:\n- HTML files\n- CSS stylesheets\n- JavaScript code\n- Images and icons\n- Documentation'
+            },
+            question: 'How would you organize these into folders? Describe your folder structure.',
+            correctAnswer: 'Separate folders for each type',
+            acceptableVariants: ['folder', 'css', 'js', 'images', 'img', 'assets', 'docs', 'src', 'public'],
+            explanation: 'Good organization: /project → /css (stylesheets), /js (JavaScript), /images or /assets (media), /docs (documentation), and HTML files often at root or in /pages. Clear structure makes projects manageable as they grow!',
+            commonMistakes: {
+              'all in one folder': 'While it works for small projects, having hundreds of files in one folder becomes unmanageable. Organization saves time!'
+            },
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'nav-quiz-why-organize',
+            question: 'Why is it important to organize files into a clear folder structure for programming projects?',
+            options: [
+              'Computers require organized folders to run programs',
+              'It makes files easier to find and helps collaborators understand the project',
+              'Disorganized folders take up more storage space',
+              'File browsers can\'t display unorganized files'
+            ],
+            correct: 1,
+            explanation: 'Organization is for humans, not computers! Good structure helps you find files quickly, helps teammates understand your project, and follows conventions that tools and frameworks expect. As projects grow, organization becomes essential.',
+            points: 15
+          }
+        ]
+      });
+      navigation_Synthesis.init();
+
+      console.log('✅ All activity carousels initialized for Ch0: Origins');
     });
   </script>
 </body>
