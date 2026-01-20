@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="senior" data-lesson="ch3-magnetism">
   <header class="header">
@@ -115,20 +116,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="platform-scale-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 1: Platform Scale -->
+      <div class="activity-carousels" data-story="platform-scale-story">
+        <div id="platform-comprehension" class="carousel-container"></div>
+        <div id="platform-application" class="carousel-container"></div>
+        <div id="platform-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,20 +186,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="strategy-framework-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 2: Integration Strategy Framework -->
+      <div class="activity-carousels" data-story="strategy-framework-story">
+        <div id="strategy-comprehension" class="carousel-container"></div>
+        <div id="strategy-application" class="carousel-container"></div>
+        <div id="strategy-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,20 +256,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="ai-toolkit-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 3: AI Integration Toolkit -->
+      <div class="activity-carousels" data-story="ai-toolkit-story">
+        <div id="toolkit-comprehension" class="carousel-container"></div>
+        <div id="toolkit-application" class="carousel-container"></div>
+        <div id="toolkit-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -332,6 +306,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -438,6 +426,986 @@
 
         new Quiz(containerId, quiz.questions);
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // ----------------------------------------
+      // STORY 1: THINKING AT PLATFORM SCALE
+      // ----------------------------------------
+
+      const platformComprehension = new ActivityCarousel('platform-comprehension', {
+        type: 'comprehension',
+        sectionId: 'platform',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'plat-quiz-1',
+            question: 'What limits a traditional senior engineer\'s integration impact?',
+            options: [
+              'Lack of technical skills or knowledge',
+              'Impact is limited to integrations they personally build and review',
+              'Company politics and bureaucracy',
+              'Not enough AI tools available'
+            ],
+            correct: 1,
+            explanation: 'Traditional seniors are limited by what they can personally touch—one integration, one review at a time. Amplified seniors define patterns that scale their expertise organization-wide through AI.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'plat-tf-1',
+            statement: 'An amplified senior\'s value comes from building more integrations faster than traditional seniors.',
+            correct: false,
+            explanation: 'Amplified seniors don\'t just build faster—they define patterns once that AI implements everywhere. Their value is in the patterns and templates, not in personally building more integrations.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'plat-fill-1',
+            statement: 'An amplified senior defines ___ once that AI can implement consistently across all teams.',
+            correctAnswers: ['patterns', 'templates', 'standards', 'rules'],
+            caseSensitive: false,
+            hints: ['What reusable things do you create for others to follow?'],
+            explanation: 'Patterns, templates, and standards are the key. Define them once with your expertise, and AI multiplies their implementation across the entire organization.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-2',
+            question: 'How does an amplified senior\'s impact differ from a traditional senior?',
+            options: [
+              'They write code faster than traditional seniors',
+              'Traditional seniors impact their team; amplified seniors impact the entire organization',
+              'They don\'t need to understand integrations deeply',
+              'They only work on new projects, not maintenance'
+            ],
+            correct: 1,
+            explanation: 'Traditional seniors impact their team (one integration at a time). Amplified seniors define patterns that shape integrations organization-wide—every team benefits from their expertise.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'plat-tf-2',
+            statement: 'To become an amplified senior, you must first be an expert at designing individual integrations.',
+            correct: true,
+            explanation: 'You can\'t scale expertise you don\'t have. Amplified seniors first master the patterns (retries, circuit breakers, idempotency) through hands-on work, THEN learn to scale that knowledge through AI.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-3',
+            question: 'What does "AI multiplies your impact" mean in the context of integration strategy?',
+            options: [
+              'AI writes code for you so you can take vacations',
+              'AI generates compliant implementations across all teams based on your patterns',
+              'AI makes your code run faster',
+              'AI replaces the need for senior engineers'
+            ],
+            correct: 1,
+            explanation: 'AI takes your patterns and generates consistent implementations across every team. Your expertise is encoded in templates and rules that AI applies everywhere—multiplication, not replacement.',
+            points: 10
+          }
+        ]
+      });
+      platformComprehension.init();
+
+      const platformApplication = new ActivityCarousel('platform-application', {
+        type: 'application',
+        sectionId: 'platform',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'plat-seq-1',
+            instruction: 'Order the steps to scale your integration expertise across an organization:',
+            items: [
+              { id: 's1', text: 'Master integration patterns through hands-on experience' },
+              { id: 's2', text: 'Document patterns as templates and validation rules' },
+              { id: 's3', text: 'Create prompts that encode your standards' },
+              { id: 's4', text: 'AI generates compliant implementations from your patterns' },
+              { id: 's5', text: 'Review and refine based on organization-wide feedback' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Start with building expertise, end with continuous improvement.',
+              wrong: 'You need expertise before you can encode it. AI comes after documentation.'
+            },
+            explanation: 'The progression: Build expertise → Document → Create prompts → AI generates → Refine. Each step builds on the previous.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'plat-dd-1',
+            instruction: 'Categorize these activities as Traditional Senior or Amplified Senior work:',
+            items: [
+              { id: 'a1', text: 'Review every integration PR personally' },
+              { id: 'a2', text: 'Create integration templates with validation rules' },
+              { id: 'a3', text: 'Build one-off integrations for each team' },
+              { id: 'a4', text: 'Define prompts that encode retry and timeout standards' },
+              { id: 'a5', text: 'Manually fix every integration bug' },
+              { id: 'a6', text: 'Create a checklist that AI validates against' }
+            ],
+            zones: [
+              { id: 'traditional', label: 'Traditional Senior', correct: ['a1', 'a3', 'a5'] },
+              { id: 'amplified', label: 'Amplified Senior', correct: ['a2', 'a4', 'a6'] }
+            ],
+            explanation: 'Traditional: personal involvement in every integration. Amplified: create systems (templates, prompts, checklists) that scale your expertise without your direct involvement.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'plat-connect-1',
+            instruction: 'Connect each senior activity to its scaling mechanism:',
+            nodes: [
+              { id: 'review', label: '👀 Personal\nReview' },
+              { id: 'template', label: '📐 Integration\nTemplate' },
+              { id: 'checklist', label: '✅ Validation\nChecklist' },
+              { id: 'one-team', label: '👥 One Team\nat a Time' },
+              { id: 'ai-generate', label: '🤖 AI Generates\nCompliant Code' },
+              { id: 'ai-validate', label: '🤖 AI Validates\nAutomatically' }
+            ],
+            solution: {
+              edges: [
+                { source: 'review', target: 'one-team' },
+                { source: 'template', target: 'ai-generate' },
+                { source: 'checklist', target: 'ai-validate' }
+              ]
+            },
+            explanation: 'Personal review scales to one team. Templates scale through AI generation. Checklists scale through AI validation. The latter two have organization-wide reach.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-apply-1',
+            question: 'Your company has 10 teams, each building their own integrations. As an amplified senior, what\'s your first move?',
+            options: [
+              'Review all 10 teams\' integrations personally',
+              'Create integration templates and standards that all 10 teams can use with AI assistance',
+              'Tell teams to figure it out themselves',
+              'Build all integrations yourself to ensure quality'
+            ],
+            correct: 1,
+            explanation: 'Create once, apply everywhere. Define templates and standards that AI can help all 10 teams implement consistently. Your expertise scales without your direct involvement.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'plat-seq-2',
+            instruction: 'Order the impact levels from most limited to most amplified:',
+            items: [
+              { id: 'i1', text: 'Fix bugs in one team\'s integration' },
+              { id: 'i2', text: 'Build integrations for your team' },
+              { id: 'i3', text: 'Review integrations across 3 teams' },
+              { id: 'i4', text: 'Define templates used by all 10 teams' },
+              { id: 'i5', text: 'Create AI prompts that generate compliant integrations company-wide' }
+            ],
+            correctOrder: ['i1', 'i2', 'i3', 'i4', 'i5'],
+            hints: {
+              partial: 'From individual fixes to organization-wide impact.',
+              wrong: 'Think about how many people benefit from each activity.'
+            },
+            explanation: 'Impact scales: bug fix → build for team → review multiple teams → templates for all → AI-enabled company-wide. Each step multiplies reach.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'plat-dd-2',
+            instruction: 'Match each artifact to its multiplication effect:',
+            items: [
+              { id: 'code', text: 'Custom code you write' },
+              { id: 'doc', text: 'Integration pattern documentation' },
+              { id: 'prompt', text: 'AI prompt with your standards encoded' },
+              { id: 'template', text: 'Reference implementation template' }
+            ],
+            zones: [
+              { id: 'low', label: 'Low Multiplication (1-5 users)', correct: ['code'] },
+              { id: 'medium', label: 'Medium Multiplication (5-50 users)', correct: ['doc'] },
+              { id: 'high', label: 'High Multiplication (50+ users)', correct: ['prompt', 'template'] }
+            ],
+            explanation: 'Code helps a few. Documentation helps dozens. AI prompts and templates help everyone in the organization—unlimited multiplication.',
+            points: 20
+          }
+        ]
+      });
+      platformApplication.init();
+
+      const platformSynthesis = new ActivityCarousel('platform-synthesis', {
+        type: 'synthesis',
+        sectionId: 'platform',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'plat-scenario-1',
+            scenario: 'You\'re a senior engineer at a growing company. 3 years ago, you built excellent integrations. Now there are 15 teams, and you\'re spending all your time reviewing inconsistent integrations and fixing the same patterns repeatedly.',
+            question: 'How would you transition from traditional to amplified impact? What would you create first?',
+            evaluation: {
+              keywords: ['template', 'pattern', 'standard', 'AI', 'prompt', 'checklist', 'document', 'scale', 'consistent', 'multiply'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'First: Document the patterns I keep correcting—those are clearly not understood. Create a "golden path" template for our most common integration type. Add a checklist AI can validate (auth, retries, timeouts, observability). Then create prompts that encode these standards. Train teams to use AI with my prompts. Now my expertise is embedded in every new integration, not just the ones I personally review.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'plat-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Company A has 1 amplified senior who creates templates and AI prompts for integrations.\nCompany B has 5 traditional seniors who each personally review integrations.\n\nBoth companies have 20 teams.'
+            },
+            question: 'Which company will have more consistent integrations after 1 year?',
+            correctAnswer: 'A',
+            acceptableVariants: ['a', 'company a', 'first', 'the first'],
+            explanation: 'Company A\'s one amplified senior scales to all 20 teams through templates and AI. Company B\'s 5 traditional seniors can only cover ~4 teams each, and human review is inconsistent. Templates beat personal touch at scale.',
+            commonMistakes: {
+              'B': '5 seniors can\'t consistently cover 20 teams. Amplified approaches scale better.',
+              'same': 'Template + AI consistency beats variable human review.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'plat-scenario-2',
+            scenario: 'A colleague says: "Our company is too unique. Generic integration templates won\'t work for us. Every integration needs custom design."',
+            question: 'How would you address this objection while acknowledging that some customization is always needed?',
+            evaluation: {
+              keywords: ['80%', 'common', 'standard', 'customize', 'exception', 'template', 'baseline', 'pattern', 'consistent', 'flexibility'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Templates don\'t mean zero customization. They provide a consistent baseline: "All integrations WILL have retries, timeouts, circuit breakers, and observability. HOW you configure them can vary." Even if 80% is standard and 20% is custom, that 80% consistency is huge. Templates are the floor, not the ceiling. Teams customize on top of the standard foundation.',
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'plat-reflect-1',
+            prompt: 'Think about your current role. What integration patterns have you had to explain or fix repeatedly? Could any of these be turned into templates that scale your expertise?',
+            thinkingPrompts: [
+              'What mistakes do you see in integration PRs over and over?',
+              'What patterns do you wish everyone just knew?',
+              'Where could a template or checklist prevent problems?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(I|my|me)', label: 'Personal context', points: 5 },
+                { pattern: '(retry|timeout|circuit|auth)', label: 'Specific patterns', points: 5 },
+                { pattern: '(template|checklist|standard)', label: 'Scaling solution', points: 4 },
+                { pattern: '(repeat|again|same)', label: 'Pattern recognition', points: 4 },
+                { pattern: '(could|would|should)', label: 'Future thinking', points: 3 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'graph-builder',
+            id: 'plat-graph-1',
+            instruction: 'Build a diagram showing how your integration expertise could scale from you to the entire organization:',
+            nodeTypes: [
+              { type: 'you', label: '👤 Your Expertise', color: '#ef5350' },
+              { type: 'artifact', label: '📄 Template/Prompt', color: '#7986cb' },
+              { type: 'ai', label: '🤖 AI Implementation', color: '#66bb6a' },
+              { type: 'team', label: '👥 Team', color: '#ffd54f' }
+            ],
+            validation: {
+              requiredNodes: ['you', 'artifact', 'ai', 'team'],
+              requiredEdges: [
+                { from: 'you', to: 'artifact' },
+                { from: 'artifact', to: 'ai' }
+              ],
+              optionalNodes: ['team'],
+              minNodes: 4,
+              maxNodes: 7
+            },
+            hints: [
+              'Start with your expertise',
+              'Create an artifact (template or prompt)',
+              'AI uses it to help multiple teams'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'plat-scenario-3',
+            scenario: 'Your CTO asks: "We\'re hiring 3 more senior integration engineers to keep up with demand. Is there a better way?"',
+            question: 'Make the case for the amplified approach as an alternative or complement to hiring.',
+            evaluation: {
+              keywords: ['scale', 'template', 'AI', 'multiply', 'consistent', 'cost', 'quality', 'pattern', 'sustainable', 'compound'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'More seniors help, but they scale linearly (3 more = 3x capacity). The amplified approach scales exponentially: 1 senior creates templates and prompts that help ALL teams, including the new seniors. Consider: invest in amplified tooling first, then hire. New seniors become more effective immediately because they have templates. Compounding returns vs. linear addition.',
+            points: 30
+          }
+        ]
+      });
+      platformSynthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: THE INTEGRATION STRATEGY FRAMEWORK
+      // ----------------------------------------
+
+      const strategyComprehension = new ActivityCarousel('strategy-comprehension', {
+        type: 'comprehension',
+        sectionId: 'strategy',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'strat-quiz-1',
+            question: 'What are the four pillars of integration strategy?',
+            options: [
+              'Speed, Cost, Quality, Scope',
+              'Patterns, Contracts, Observability, Governance',
+              'Frontend, Backend, Database, Cache',
+              'Plan, Build, Test, Deploy'
+            ],
+            correct: 1,
+            explanation: 'The four pillars: Patterns (how we connect), Contracts (what services expect), Observability (how we monitor), and Governance (who decides what). These shape organization-wide integration strategy.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'strat-tf-1',
+            statement: 'The Patterns pillar only covers whether to use REST or GraphQL.',
+            correct: false,
+            explanation: 'Patterns covers much more: sync vs. async communication, retry/backoff standards, partial failure handling, circuit breaker policies, idempotency requirements. It\'s about ALL the ways services connect.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'strat-fill-1',
+            statement: 'The ___ pillar defines what services expect from each other, including versioning and breaking change policies.',
+            correctAnswers: ['contracts', 'Contracts', 'contract'],
+            caseSensitive: false,
+            hints: ['What formal agreement between services?'],
+            explanation: 'The Contracts pillar covers OpenAPI specs, versioning strategy, breaking change policies, and expectations between services. Without clear contracts, integration chaos grows.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'strat-quiz-2',
+            question: 'Why is the Observability pillar essential for integrations?',
+            options: [
+              'It\'s just nice to have for compliance',
+              'If you can\'t see it, you can\'t fix it—visibility is required, not optional',
+              'Only needed for external APIs',
+              'Observability only matters in production'
+            ],
+            correct: 1,
+            explanation: 'Integrations fail silently. Without required metrics, tracing, and alerting thresholds, you won\'t know integrations are unhealthy until customers complain. Make visibility a requirement.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'strat-tf-2',
+            statement: 'Governance is just bureaucracy that slows down integration work.',
+            correct: false,
+            explanation: 'Governance provides clarity: who approves new integrations, how to deprecate safely, what security reviews are required. It\'s not about slowing down—it\'s about knowing who owns what and when.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'strat-quiz-3',
+            question: 'What does the Governance pillar address?',
+            options: [
+              'Who writes the most code',
+              'Who decides what and when—approval, deprecation, security reviews',
+              'How to avoid all meetings',
+              'Salary negotiations for integration work'
+            ],
+            correct: 1,
+            explanation: 'Governance answers: Who approves new integrations? How do we deprecate old ones? What security reviews are required? It\'s clarity about ownership and responsibility.',
+            points: 10
+          }
+        ]
+      });
+      strategyComprehension.init();
+
+      const strategyApplication = new ActivityCarousel('strategy-application', {
+        type: 'application',
+        sectionId: 'strategy',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'strat-dd-1',
+            instruction: 'Match each question to the pillar that addresses it:',
+            items: [
+              { id: 'q1', text: '"Should we use sync or async for this integration?"' },
+              { id: 'q2', text: '"What\'s our versioning strategy for APIs?"' },
+              { id: 'q3', text: '"What metrics do we require on all integrations?"' },
+              { id: 'q4', text: '"Who approves adding a new external API?"' },
+              { id: 'q5', text: '"What\'s our retry/backoff standard?"' },
+              { id: 'q6', text: '"How do we handle breaking changes?"' }
+            ],
+            zones: [
+              { id: 'patterns', label: '📐 Patterns', correct: ['q1', 'q5'] },
+              { id: 'contracts', label: '📝 Contracts', correct: ['q2', 'q6'] },
+              { id: 'observability', label: '📊 Observability', correct: ['q3'] },
+              { id: 'governance', label: '🔐 Governance', correct: ['q4'] }
+            ],
+            explanation: 'Patterns: how we connect (sync/async, retry). Contracts: expectations (versions, breaking changes). Observability: visibility (metrics). Governance: decisions (approvals).',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'strat-seq-1',
+            instruction: 'Order the steps to define an integration strategy for a new organization:',
+            items: [
+              { id: 's1', text: 'Audit existing integration patterns and pain points' },
+              { id: 's2', text: 'Define standard patterns (retry, timeout, circuit breaker)' },
+              { id: 's3', text: 'Create contract standards (OpenAPI, versioning policy)' },
+              { id: 's4', text: 'Establish observability requirements (metrics, tracing)' },
+              { id: 's5', text: 'Set governance procedures (approval, deprecation)' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Start by understanding current state, then build each pillar.',
+              wrong: 'Audit first, then define patterns, contracts, observability, governance.'
+            },
+            explanation: 'First understand current state (audit), then build each pillar in order: patterns → contracts → observability → governance. Each builds on the previous.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'strat-connect-1',
+            instruction: 'Connect each pillar to what happens when it\'s missing:',
+            nodes: [
+              { id: 'patterns', label: '📐 Patterns' },
+              { id: 'contracts', label: '📝 Contracts' },
+              { id: 'observability', label: '📊 Observability' },
+              { id: 'governance', label: '🔐 Governance' },
+              { id: 'inconsistent', label: '⚠️ Inconsistent\nImplementations' },
+              { id: 'breaking', label: '💥 Breaking\nChanges' },
+              { id: 'silent', label: '😶 Silent\nFailures' },
+              { id: 'chaos', label: '🔥 Integration\nChaos' }
+            ],
+            solution: {
+              edges: [
+                { source: 'patterns', target: 'inconsistent' },
+                { source: 'contracts', target: 'breaking' },
+                { source: 'observability', target: 'silent' },
+                { source: 'governance', target: 'chaos' }
+              ]
+            },
+            explanation: 'Missing patterns → inconsistent implementations. Missing contracts → breaking changes. Missing observability → silent failures. Missing governance → integration chaos.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'strat-quiz-apply-1',
+            question: 'A team wants to add a new third-party payment provider. Which pillar answers "what approval do they need?"',
+            options: [
+              'Patterns',
+              'Contracts',
+              'Observability',
+              'Governance'
+            ],
+            correct: 3,
+            explanation: 'Governance handles who decides what and when. New integration approval (especially with external payment providers involving security/compliance) is a governance question.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'strat-dd-2',
+            instruction: 'Categorize these standards by pillar:',
+            items: [
+              { id: 't1', text: 'Exponential backoff with max 5 retries' },
+              { id: 't2', text: 'OpenAPI spec required for all internal APIs' },
+              { id: 't3', text: 'Latency p99, error rate, throughput on all integrations' },
+              { id: 't4', text: 'Architecture review required for external APIs' },
+              { id: 't5', text: 'Circuit breaker opens after 50% error rate' },
+              { id: 't6', text: 'Minimum 2-week deprecation notice' }
+            ],
+            zones: [
+              { id: 'patterns', label: 'Patterns', correct: ['t1', 't5'] },
+              { id: 'contracts', label: 'Contracts', correct: ['t2', 't6'] },
+              { id: 'observability', label: 'Observability', correct: ['t3'] },
+              { id: 'governance', label: 'Governance', correct: ['t4'] }
+            ],
+            explanation: 'Retry/circuit breaker = Patterns. OpenAPI/deprecation = Contracts. Metrics = Observability. Review requirements = Governance.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'strat-seq-2',
+            instruction: 'Order the integration lifecycle stages where each pillar applies:',
+            items: [
+              { id: 'l1', text: 'Governance: Approve the integration plan' },
+              { id: 'l2', text: 'Patterns: Implement with standard retry/timeout/circuit breaker' },
+              { id: 'l3', text: 'Contracts: Define API spec and versioning' },
+              { id: 'l4', text: 'Observability: Add required metrics and tracing' },
+              { id: 'l5', text: 'Governance: Approve for production deployment' }
+            ],
+            correctOrder: ['l1', 'l3', 'l2', 'l4', 'l5'],
+            hints: {
+              partial: 'Governance bookends the process. Contracts define before patterns implement.',
+              wrong: 'Get approval first, then define, implement, observe, deploy.'
+            },
+            explanation: 'Lifecycle: Approve plan → Define contracts → Implement patterns → Add observability → Approve for production. Governance at start and end.',
+            points: 20
+          }
+        ]
+      });
+      strategyApplication.init();
+
+      const strategySynthesis = new ActivityCarousel('strategy-synthesis', {
+        type: 'synthesis',
+        sectionId: 'strategy',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'strat-scenario-1',
+            scenario: 'You\'re defining integration strategy for a startup that just grew from 2 to 15 services. They have no standards—every team does integrations differently. Where do you start?',
+            question: 'Which pillar would you tackle first, and why? What quick wins would you target?',
+            evaluation: {
+              keywords: ['patterns', 'observability', 'contract', 'governance', 'quick win', 'baseline', 'metric', 'standard', 'consistent', 'pain point'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Start with Observability—you can\'t improve what you can\'t see. Quick win: require basic metrics (latency, error rate, throughput) on all existing integrations within 2 weeks. This reveals the worst problems. THEN tackle Patterns for the most common issues exposed. Don\'t try to boil the ocean—address the most painful inconsistencies first.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'strat-predict-1',
+            setup: {
+              type: 'text',
+              content: 'A company implements strong Contracts (OpenAPI, versioning) but ignores Observability (no required metrics). They ship many integrations quickly.'
+            },
+            question: 'What specific problem will emerge within 6 months?',
+            correctAnswer: 'silent failures',
+            acceptableVariants: ['silent', 'invisible', 'undetected', 'hidden', 'unknown failures', 'blind spots', 'no visibility'],
+            explanation: 'Good contracts prevent breaking changes but don\'t tell you when integrations degrade. Without observability, integrations fail silently—you\'ll only know when customers complain. Contracts define correctness; observability reveals health.',
+            commonMistakes: {
+              'breaking changes': 'Good contracts actually prevent this.',
+              'nothing': 'Integrations fail—without observability, you won\'t know until it\'s too late.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'strat-scenario-2',
+            scenario: 'A team argues against the Governance pillar: "Approval processes slow us down. We should just trust engineers to make good decisions."',
+            question: 'How would you argue for Governance without it becoming bureaucracy? What\'s the right balance?',
+            evaluation: {
+              keywords: ['clarity', 'ownership', 'security', 'risk', 'trust', 'accountability', 'fast', 'exception', 'lightweight', 'tier'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Governance isn\'t about distrust—it\'s about clarity. Questions like "who do I ask about X?" shouldn\'t require hunting. Balance: tiered governance based on risk. Internal integrations might need only team lead approval. External payment APIs need security review. High-risk = more gates. Low-risk = fast path. The goal is speed with appropriate safeguards, not blanket bureaucracy.',
+            points: 30
+          },
+          {
+            type: 'graph-builder',
+            id: 'strat-graph-1',
+            instruction: 'Build a diagram showing how the four pillars support each other:',
+            nodeTypes: [
+              { type: 'patterns', label: '📐 Patterns', color: '#4a9eff' },
+              { type: 'contracts', label: '📝 Contracts', color: '#66bb6a' },
+              { type: 'observability', label: '📊 Observability', color: '#ffd54f' },
+              { type: 'governance', label: '🔐 Governance', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['patterns', 'contracts', 'observability', 'governance'],
+              requiredEdges: [],
+              optionalNodes: [],
+              minNodes: 4,
+              maxNodes: 4
+            },
+            hints: [
+              'Consider how pillars depend on each other',
+              'Governance may oversee all pillars',
+              'Observability reveals if patterns work'
+            ],
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'strat-reflect-1',
+            prompt: 'Think about your organization\'s current integration practices. Which of the four pillars is strongest? Which is weakest or missing entirely? What\'s one concrete step to improve the weakest pillar?',
+            thinkingPrompts: [
+              'Do you have standard patterns everyone follows?',
+              'Are contracts (APIs, versioning) clearly defined?',
+              'Can you see integration health easily?',
+              'Is it clear who approves what?'
+            ],
+            evaluation: {
+              minWords: 70,
+              depthIndicators: [
+                { pattern: '(we|our|organization)', label: 'Org context', points: 5 },
+                { pattern: '(pattern|contract|observ|govern)', label: 'Pillar reference', points: 5 },
+                { pattern: '(weak|strong|missing|lack)', label: 'Assessment', points: 4 },
+                { pattern: '(could|should|would|improve)', label: 'Action orientation', points: 4 },
+                { pattern: '(specific|concrete|example)', label: 'Specificity', points: 3 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'strat-scenario-3',
+            scenario: 'You\'ve defined all four pillars. Now leadership asks: "How do we know teams are actually following the strategy?"',
+            question: 'Design a compliance mechanism that enforces strategy without being heavy-handed.',
+            evaluation: {
+              keywords: ['automat', 'CI', 'lint', 'check', 'metric', 'dashboard', 'self-service', 'template', 'exception', 'escalate'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Automation > audits. Build compliance into CI/CD: linter checks for patterns (retry present?), contract validation (OpenAPI valid?), observability requirements (metrics configured?). Dashboard shows compliance score per team. Non-compliant code can\'t deploy to production. Teams see their own scores and fix issues before review. Escalation only for genuine exceptions. Make the right thing easy, the wrong thing hard.',
+            points: 30
+          }
+        ]
+      });
+      strategySynthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: THE AI INTEGRATION TOOLKIT
+      // ----------------------------------------
+
+      const toolkitComprehension = new ActivityCarousel('toolkit-comprehension', {
+        type: 'comprehension',
+        sectionId: 'toolkit',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'tool-quiz-1',
+            question: 'How do you turn your integration standards into AI prompts?',
+            options: [
+              'Let AI figure out the standards on its own',
+              'Encode retry patterns, circuit breaker config, timeouts, and auth methods in the prompt',
+              'Just paste code and hope AI improves it',
+              'Standards aren\'t relevant for AI'
+            ],
+            correct: 1,
+            explanation: 'Your prompts should explicitly encode your standards: "Use exponential backoff with max 5 retries. Configure circuit breaker to open at 50% error rate. Timeout at 30s." Give AI your rules.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'tool-tf-1',
+            statement: 'The integration checklist is just documentation—AI doesn\'t actually use it.',
+            correct: false,
+            explanation: 'The checklist is an active validation tool! AI can check generated integrations against the checklist: "Does this have authentication? Error handling? Rate limiting? Observability?" Checklist = validation rules.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'tool-fill-1',
+            statement: 'A template ___ is a collection of reference implementations that AI uses to generate new integrations matching your style.',
+            correctAnswers: ['library', 'collection', 'repository'],
+            caseSensitive: false,
+            hints: ['Where do you store many templates?'],
+            explanation: 'A template library contains reference implementations for sync clients, async clients, webhook handlers, etc. AI uses these as examples to generate consistent new integrations.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'tool-quiz-2',
+            question: 'What is "amplified impact" in the context of the AI Integration Toolkit?',
+            options: [
+              'Louder commit messages',
+              'Your patterns, encoded in prompts and templates, shape every integration in the company',
+              'Working more hours',
+              'Having more meetings about integrations'
+            ],
+            correct: 1,
+            explanation: 'Amplified impact means your expertise becomes embedded in every integration through AI. Define patterns once → encode in prompts/templates → AI generates compliant code everywhere.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'tool-tf-2',
+            statement: 'With a good template library, AI can generate integrations that exactly match your architectural style.',
+            correct: true,
+            explanation: 'AI learns from examples. A template library showing your preferred error handling, authentication patterns, and code structure trains AI to produce consistent output across all generated integrations.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'tool-quiz-3',
+            question: 'What does the integration checklist ensure?',
+            options: [
+              'That meetings are scheduled',
+              'That every integration meets the same standard: auth, errors, rate limits, observability',
+              'That code is formatted correctly',
+              'That developers use the right IDE'
+            ],
+            correct: 1,
+            explanation: 'The checklist standardizes quality: Does it have authentication? Error handling? Rate limiting? Observability? AI validates against this list, ensuring no critical components are missing.',
+            points: 10
+          }
+        ]
+      });
+      toolkitComprehension.init();
+
+      const toolkitApplication = new ActivityCarousel('toolkit-application', {
+        type: 'application',
+        sectionId: 'toolkit',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'tool-seq-1',
+            instruction: 'Order the steps to create an AI-powered integration generation workflow:',
+            items: [
+              { id: 's1', text: 'Document your integration standards and patterns' },
+              { id: 's2', text: 'Create an integration checklist (auth, errors, rate limits, observability)' },
+              { id: 's3', text: 'Build a template library with reference implementations' },
+              { id: 's4', text: 'Write prompts that encode your standards for AI' },
+              { id: 's5', text: 'AI generates integrations; you validate against checklist' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Start with documenting, end with AI generating and you validating.',
+              wrong: 'Standards first, then checklist, templates, prompts, generation.'
+            },
+            explanation: 'Document → Checklist → Templates → Prompts → Generate. Each step builds on the previous, creating a complete AI-assisted workflow.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'tool-dd-1',
+            instruction: 'Match each toolkit component to its function:',
+            items: [
+              { id: 'c1', text: 'Standards Documentation' },
+              { id: 'c2', text: 'Integration Checklist' },
+              { id: 'c3', text: 'Template Library' },
+              { id: 'c4', text: 'Encoded Prompts' }
+            ],
+            zones: [
+              { id: 'define', label: 'Defines What Good Looks Like', correct: ['c1', 'c3'] },
+              { id: 'validate', label: 'Validates AI Output', correct: ['c2'] },
+              { id: 'generate', label: 'Guides AI Generation', correct: ['c4'] }
+            ],
+            explanation: 'Standards and templates define quality. Checklist validates output. Prompts guide generation. Together they create consistent, high-quality integrations.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'tool-connect-1',
+            instruction: 'Connect each input to what AI produces with it:',
+            nodes: [
+              { id: 'spec', label: '📄 API Spec\n+ Standards' },
+              { id: 'template', label: '📚 Template\nLibrary' },
+              { id: 'checklist', label: '✅ Integration\nChecklist' },
+              { id: 'client', label: '🔧 API Client\nCode' },
+              { id: 'style', label: '🎨 Consistent\nStyle' },
+              { id: 'valid', label: '✓ Validated\nIntegration' }
+            ],
+            solution: {
+              edges: [
+                { source: 'spec', target: 'client' },
+                { source: 'template', target: 'style' },
+                { source: 'checklist', target: 'valid' }
+              ]
+            },
+            explanation: 'API spec + standards → client code. Templates → consistent style. Checklist → validated integration. All three inputs together produce quality output.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'tool-quiz-apply-1',
+            question: 'AI generates an integration but forgets to add rate limiting. How does your toolkit catch this?',
+            options: [
+              'Manual code review',
+              'The integration checklist includes rate limiting; validation fails',
+              'Hope for the best in production',
+              'Rate limiting isn\'t important'
+            ],
+            correct: 1,
+            explanation: 'Your checklist includes rate limiting as a required component. When AI generates code, automated validation checks against the checklist and flags the missing rate limiting.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'tool-seq-2',
+            instruction: 'Order the AI integration generation flow:',
+            items: [
+              { id: 'f1', text: 'Developer provides API spec to integrate with' },
+              { id: 'f2', text: 'AI receives prompt with your encoded standards' },
+              { id: 'f3', text: 'AI generates integration code based on templates' },
+              { id: 'f4', text: 'Checklist validation runs on generated code' },
+              { id: 'f5', text: 'Developer reviews and deploys validated integration' }
+            ],
+            correctOrder: ['f1', 'f2', 'f3', 'f4', 'f5'],
+            hints: {
+              partial: 'Input → AI processing → validation → human review.',
+              wrong: 'Spec first, then AI generation with prompts, validation, review.'
+            },
+            explanation: 'API spec → AI with prompts → generated code → checklist validation → human review. Automated quality with human oversight.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'tool-dd-2',
+            instruction: 'Categorize what YOU create once vs what AI does repeatedly:',
+            items: [
+              { id: 'w1', text: 'Define retry pattern standard' },
+              { id: 'w2', text: 'Generate retry code for each integration' },
+              { id: 'w3', text: 'Create authentication template' },
+              { id: 'w4', text: 'Add auth to 50 different integrations' },
+              { id: 'w5', text: 'Write integration checklist' },
+              { id: 'w6', text: 'Validate each generated integration against checklist' }
+            ],
+            zones: [
+              { id: 'you', label: 'You Do Once', correct: ['w1', 'w3', 'w5'] },
+              { id: 'ai', label: 'AI Does Repeatedly', correct: ['w2', 'w4', 'w6'] }
+            ],
+            explanation: 'You define standards, templates, and checklists ONCE. AI applies them REPEATEDLY to every integration. That\'s the multiplication effect.',
+            points: 20
+          }
+        ]
+      });
+      toolkitApplication.init();
+
+      const toolkitSynthesis = new ActivityCarousel('toolkit-synthesis', {
+        type: 'synthesis',
+        sectionId: 'toolkit',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'tool-scenario-1',
+            scenario: 'You\'re building the AI Integration Toolkit for your company. You have time to create either a comprehensive template library (10 templates) OR a detailed integration checklist with validation. You can\'t do both initially.',
+            question: 'Which would you prioritize first, and why? What would you add second?',
+            evaluation: {
+              keywords: ['checklist', 'template', 'validate', 'quality', 'consistent', 'baseline', 'example', 'foundation', 'iterate', 'priority'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Start with the checklist. Templates without validation mean AI can generate beautiful-looking code that misses critical requirements. The checklist ensures minimum quality: "Every integration MUST have auth, error handling, rate limiting, observability." Once the floor is set, add templates to raise the ceiling (consistent style). Quality gates before style guides.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'tool-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Team A uses AI with encoded prompts but no validation checklist.\nTeam B uses AI with a validation checklist but generic prompts.\n\nBoth generate 20 integrations in a month.'
+            },
+            question: 'Which team will have fewer production incidents related to integrations?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'team b', 'second', 'the second'],
+            explanation: 'Team B catches missing components through validation. Team A might generate stylistically consistent code that\'s missing critical pieces (no rate limiting, missing error handling). Validation catches errors; style prompts don\'t.',
+            commonMistakes: {
+              'A': 'Style without validation misses critical requirements.',
+              'same': 'Validation actively prevents issues; style prompts are passive.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'tool-scenario-2',
+            scenario: 'A developer complains: "Your AI toolkit generates boilerplate code, but I still have to customize 40% for each integration. What\'s the point?"',
+            question: 'How would you respond? Is 60% automated actually valuable?',
+            evaluation: {
+              keywords: ['60%', '40%', 'boilerplate', 'custom', 'consistent', 'quality', 'time', 'foundation', 'baseline', 'focus'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: '60% automated means: (1) You skip the boring, error-prone boilerplate. (2) That 60% is CONSISTENT across all integrations—same patterns, same error handling. (3) You focus your 40% customization on business logic, not reinventing retry patterns. The value isn\'t "AI does everything"—it\'s "AI handles the consistent foundation so you focus on what\'s unique."',
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'tool-reflect-1',
+            prompt: 'Think about the integrations your team builds. What repetitive work could be encoded into prompts and templates? What would you include in your integration checklist?',
+            thinkingPrompts: [
+              'What boilerplate do you write for every integration?',
+              'What requirements are non-negotiable?',
+              'What mistakes keep happening that automation could prevent?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(I|we|my|our)', label: 'Personal context', points: 5 },
+                { pattern: '(retry|timeout|auth|error)', label: 'Specific patterns', points: 5 },
+                { pattern: '(checklist|template|prompt)', label: 'Toolkit thinking', points: 4 },
+                { pattern: '(repeat|every|always)', label: 'Repetition awareness', points: 4 },
+                { pattern: '(automat|AI|generate)', label: 'Automation focus', points: 3 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'graph-builder',
+            id: 'tool-graph-1',
+            instruction: 'Build a diagram showing the AI Integration Toolkit workflow:',
+            nodeTypes: [
+              { type: 'input', label: '📄 API Spec', color: '#4a9eff' },
+              { type: 'prompt', label: '💬 Encoded Prompt', color: '#7986cb' },
+              { type: 'template', label: '📚 Templates', color: '#66bb6a' },
+              { type: 'ai', label: '🤖 AI Generation', color: '#ffd54f' },
+              { type: 'checklist', label: '✅ Validation', color: '#ff9800' },
+              { type: 'output', label: '🔧 Integration', color: '#9c27b0' }
+            ],
+            validation: {
+              requiredNodes: ['input', 'ai', 'output'],
+              requiredEdges: [
+                { from: 'input', to: 'ai' },
+                { from: 'ai', to: 'output' }
+              ],
+              optionalNodes: ['prompt', 'template', 'checklist'],
+              minNodes: 4,
+              maxNodes: 6
+            },
+            hints: [
+              'API spec is the input',
+              'AI uses prompts and templates',
+              'Validation happens before final output'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'tool-scenario-3',
+            scenario: 'Your toolkit is successful—20 teams are using it. Now you need to update the retry standard from "3 retries" to "5 retries with exponential backoff." How do you propagate this change?',
+            question: 'Design a strategy to update the standard across all existing and future integrations.',
+            evaluation: {
+              keywords: ['prompt', 'template', 'checklist', 'regenerate', 'validate', 'automat', 'lint', 'migration', 'version', 'track'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'For new integrations: Update prompts and templates—done, all future generations use new standard. For existing: (1) Update checklist validation to flag "3 retries" as non-compliant. (2) Create migration prompt: "Update this integration to use 5 retries with exponential backoff." (3) Run migration prompt on each existing integration. (4) Validate all updated code against new checklist. Version the standards so teams know which version they\'re on.',
+            points: 30
+          }
+        ]
+      });
+      toolkitSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Senior Ch 3: Magnetism');
     });
   </script>
 </body>
