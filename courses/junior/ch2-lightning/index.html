@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="junior" data-lesson="ch2-lightning">
   <header class="header">
@@ -130,6 +131,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Debugging Trap Section -->
+      <div class="activity-carousels" data-story="debugging-trap-story">
+        <div id="debugging-trap-comprehension" class="carousel-container"></div>
+        <div id="debugging-trap-application" class="carousel-container"></div>
+        <div id="debugging-trap-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Story 2: The Data Flow Tracing Method -->
@@ -208,6 +216,13 @@
           <div class="quiz-dots"></div>
           <button class="quiz-nav-btn next">Next →</button>
         </div>
+      </div>
+
+      <!-- Activity Carousels for Data Flow Section -->
+      <div class="activity-carousels" data-story="data-flow-story">
+        <div id="data-flow-comprehension" class="carousel-container"></div>
+        <div id="data-flow-application" class="carousel-container"></div>
+        <div id="data-flow-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,6 +303,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Async Flows Section -->
+      <div class="activity-carousels" data-story="async-flows-story">
+        <div id="async-flows-comprehension" class="carousel-container"></div>
+        <div id="async-flows-application" class="carousel-container"></div>
+        <div id="async-flows-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Next Steps -->
@@ -332,6 +354,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -446,6 +482,970 @@
 
         new Quiz(containerId, quiz.questions);
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS - DEBUGGING TRAP SECTION
+      // ============================================
+
+      // Debugging Trap Comprehension Carousel
+      const debuggingTrapComprehension = new ActivityCarousel('debugging-trap-comprehension', {
+        type: 'comprehension',
+        sectionId: 'debugging-trap',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'debug-quiz-1',
+            question: 'What\'s the first thing a senior engineer does when receiving a bug report?',
+            options: [
+              'Add print statements everywhere',
+              'Start reading the code where the bug appears',
+              'Ask "What writes to this data?"',
+              'Restart the server'
+            ],
+            correct: 2,
+            explanation: 'Seniors map the data flow first by asking "What touches this data?" This creates a finite list of suspects.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'debug-quiz-2',
+            question: 'Why do juniors waste hours debugging while seniors find bugs in minutes?',
+            options: [
+              'Seniors have better tools',
+              'Seniors know more programming languages',
+              'Seniors focus on WHAT touches data, not WHERE the symptom appears',
+              'Seniors get easier bugs'
+            ],
+            correct: 2,
+            explanation: 'The key difference is approach: juniors start at symptoms, seniors map data flow. Your list of "what writes to this" is your treasure map.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'debug-tf-1',
+            statement: 'Adding print statements is always the first step in debugging.',
+            correct: false,
+            explanation: 'Print statements can help, but they\'re not the first step. First, map what touches the data. Then use prints strategically on your suspect list.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'debug-tf-2',
+            statement: 'The bug is often in code that runs when nobody\'s watching (background jobs, scheduled tasks).',
+            correct: true,
+            explanation: 'Async code is a common bug hiding spot. Senior engineers always check background jobs, scheduled tasks, and event handlers.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'debug-fill-1',
+            statement: 'Instead of asking WHERE the bug is, ask ___ touches this data.',
+            correctAnswers: ['what', 'which code', 'which function'],
+            caseSensitive: false,
+            hints: ['Focus on the data, not the symptom'],
+            explanation: 'The senior secret: focus on WHAT touches the data, not WHERE the symptom appears.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'debug-fill-2',
+            statement: 'The bug is always in your ___ of things that touch the data.',
+            correctAnswers: ['list', 'map', 'inventory'],
+            caseSensitive: false,
+            hints: ['You create this by asking "what writes to this storage?"'],
+            explanation: 'Your list of everything that writes to the data is your treasure map—the bug is in that list.',
+            points: 10
+          }
+        ]
+      });
+      debuggingTrapComprehension.init();
+
+      // Debugging Trap Application Carousel
+      const debuggingTrapApplication = new ActivityCarousel('debugging-trap-application', {
+        type: 'application',
+        sectionId: 'debugging-trap',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'debug-seq-1',
+            instruction: 'Order these debugging steps from first (top) to last (bottom):',
+            items: [
+              { id: 's1', text: 'List everything that writes to this data' },
+              { id: 's2', text: 'Check for background jobs and scheduled tasks' },
+              { id: 's3', text: 'Add targeted print statements to suspects' },
+              { id: 's4', text: 'Identify which function is causing the bug' },
+              { id: 's5', text: 'Fix the bug and add a test' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Mapping comes before targeted debugging.',
+              wrong: 'First map the flow, then investigate suspects, then fix.'
+            },
+            explanation: 'Senior debugging: map data flow → check async code → targeted investigation → identify root cause → fix with test.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'debug-dd-1',
+            instruction: 'Categorize these debugging approaches:',
+            items: [
+              { id: 'j1', text: 'Add print statements everywhere' },
+              { id: 's1', text: 'Map what writes to the data' },
+              { id: 'j2', text: 'Stare at the code hoping to spot it' },
+              { id: 's2', text: 'Check background jobs and scheduled tasks' },
+              { id: 'j3', text: 'Blame the framework or library' },
+              { id: 's3', text: 'Create a finite list of suspects' }
+            ],
+            zones: [
+              { id: 'junior', label: '👶 Junior Approach', correct: ['j1', 'j2', 'j3'] },
+              { id: 'senior', label: '🏆 Senior Approach', correct: ['s1', 's2', 's3'] }
+            ],
+            explanation: 'Senior debugging is systematic: map flows, check async, create suspect lists. Junior debugging is reactive and unfocused.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'debug-connect-1',
+            instruction: 'Connect each symptom to where the bug likely hides:',
+            nodes: [
+              { id: 'wrong-balance', label: '💰 Wrong Balance' },
+              { id: 'stale-data', label: '📊 Stale Data' },
+              { id: 'missing-email', label: '📧 Missing Email' },
+              { id: 'background-job', label: '⏰ Background Job' },
+              { id: 'cache', label: '🗄️ Cache System' },
+              { id: 'queue', label: '📬 Message Queue' }
+            ],
+            solution: {
+              edges: [
+                { source: 'wrong-balance', target: 'background-job' },
+                { source: 'stale-data', target: 'cache' },
+                { source: 'missing-email', target: 'queue' }
+              ]
+            },
+            explanation: 'Balance issues often trace to overnight reconciliation. Stale data suggests caching. Missing notifications suggest queue failures.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'debug-quiz-apply-1',
+            question: 'Bug report: "User profile picture shows old image after update." What\'s your first debugging step?',
+            options: [
+              'Clear all caches and see if it fixes it',
+              'Add print statements to the upload handler',
+              'List everything that processes/stores profile pictures (upload, resize, CDN, cache)',
+              'Ask the user to use a different browser'
+            ],
+            correct: 2,
+            explanation: 'Map the flow first! Profile pictures often involve multiple systems: upload handler, image processor, CDN upload, cache. The bug is in one of these.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'debug-seq-2',
+            instruction: 'Order these from most likely to least likely bug location for "wrong data displayed":',
+            items: [
+              { id: 'a1', text: 'Background job that processes data overnight' },
+              { id: 'a2', text: 'Event handler triggered by external webhook' },
+              { id: 'a3', text: 'The display code showing the data' },
+              { id: 'a4', text: 'The cache layer' }
+            ],
+            correctOrder: ['a1', 'a2', 'a4', 'a3'],
+            hints: {
+              partial: 'Async code is more likely to have bugs than display code.',
+              wrong: 'The display code is usually correct—bugs hide in data writes.'
+            },
+            explanation: 'Bugs hide in async code (background jobs, webhooks) and caching more than display. The display usually shows whatever data it receives.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'debug-dd-2',
+            instruction: 'Match each debugging question to its purpose:',
+            items: [
+              { id: 'q1', text: '"What writes to this data?"' },
+              { id: 'q2', text: '"When does it write?"' },
+              { id: 'q3', text: '"Any external data sources?"' }
+            ],
+            zones: [
+              { id: 'suspects', label: '🔍 Create Suspect List', correct: ['q1'] },
+              { id: 'timing', label: '⏰ Check Timing Issues', correct: ['q2'] },
+              { id: 'external', label: '🌐 Check External Bugs', correct: ['q3'] }
+            ],
+            explanation: 'Each question narrows the search: "what writes" creates suspects, "when" reveals timing bugs, "external" finds third-party issues.',
+            points: 15
+          }
+        ]
+      });
+      debuggingTrapApplication.init();
+
+      // Debugging Trap Synthesis Carousel
+      const debuggingTrapSynthesis = new ActivityCarousel('debugging-trap-synthesis', {
+        type: 'synthesis',
+        sectionId: 'debugging-trap',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'debug-scenario-1',
+            scenario: 'Bug report: "User\'s order total is $0 when it should be $150." You check the checkout code—it looks fine. You check the order creation endpoint—also fine. The database shows $0.',
+            question: 'Using the data flow tracing method, describe your next debugging steps.',
+            evaluation: {
+              keywords: ['what writes', 'list', 'background', 'job', 'scheduled', 'async', 'flow', 'touches', 'map'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Ask: "What else writes to the order total?" List everything: checkout, promotions system, tax calculator, order sync jobs, admin edits. Check if any background jobs process orders overnight. The bug is likely in something that modifies the order after creation.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'debug-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Junior: Spent 4 hours adding print statements to the display code. Found nothing wrong.\n\nThe bug: A nightly reconciliation job was overwriting user balances with incorrect calculations.'
+            },
+            question: 'How could the junior have found this bug faster?',
+            correctAnswer: 'map the data flow',
+            acceptableVariants: ['list what writes', 'check background jobs', 'map the flow', 'ask what writes', 'data flow tracing'],
+            explanation: 'By listing everything that writes to user balances, they would have found the nightly job in their suspect list. Then they could investigate it directly instead of searching randomly.',
+            commonMistakes: {
+              'use debugger': 'A debugger wouldn\'t help find a nightly job that runs when you\'re asleep.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'debug-scenario-2',
+            scenario: 'You\'ve identified that a background job called "reconcile_balances" runs at 3 AM and seems to be the bug source. How do you debug code that only runs at 3 AM?',
+            question: 'Describe your approach to debugging this time-sensitive code.',
+            evaluation: {
+              keywords: ['run manually', 'test', 'log', 'trigger', 'local', 'input data', 'simulate', 'reproduce'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Options: 1) Run the job manually with test data, 2) Add detailed logging and wait for the next run, 3) Run it locally with production data (if safe), 4) Trigger it for a specific test user. Key: reproduce the issue in a controlled environment.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'debug-reflect-1',
+            prompt: 'Think about the last bug you spent hours on. Could you have found it faster using the data flow tracing method? What would you do differently?',
+            thinkingPrompts: [
+              'Did you start at the symptom or the data flow?',
+              'Did you check background jobs and async code?',
+              'Did you create a list of everything that touches the data?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(spent|wasted|took) (hours|time)', label: 'Recognizes wasted effort', points: 5 },
+                { pattern: '(should have|could have|would)', label: 'Identifies improvement', points: 5 },
+                { pattern: '(list|map|flow|write)', label: 'Applies method', points: 5 },
+                { pattern: '(next time|will|going to)', label: 'Future commitment', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'debug-graph-1',
+            instruction: 'Build a data flow diagram for user balance: User Action → API → Database, with a Background Job also writing to Database',
+            nodeTypes: [
+              { type: 'user', label: '👤 User Action', color: '#42a5f5' },
+              { type: 'api', label: '📡 API', color: '#66bb6a' },
+              { type: 'database', label: '🗄️ Database', color: '#ffa726' },
+              { type: 'background', label: '⏰ Background Job', color: '#7986cb' }
+            ],
+            validation: {
+              requiredNodes: ['user', 'api', 'database', 'background'],
+              requiredEdges: [
+                { from: 'user', to: 'api' },
+                { from: 'api', to: 'database' },
+                { from: 'background', to: 'database' }
+              ],
+              optionalNodes: [],
+              minNodes: 4,
+              maxNodes: 5
+            },
+            hints: [
+              'The database receives writes from multiple sources',
+              'Background job is a hidden path juniors often miss',
+              'Both API and background job can modify the same data'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'debug-scenario-3',
+            scenario: 'Your teammate says: "I found the bug! The display code was showing wrong data. I fixed it by adding a data transformation." You\'re skeptical.',
+            question: 'What questions would you ask to ensure this is the real fix and not just masking the symptom?',
+            evaluation: {
+              keywords: ['root cause', 'why', 'source', 'write', 'still wrong', 'database', 'mask', 'symptom'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Questions: 1) Is the data actually wrong in storage, or just displayed wrong? 2) What writes this data—is the source fixed? 3) Are we masking a symptom instead of fixing the root cause? 4) Will this fix break other places that use this data?',
+            points: 25
+          }
+        ]
+      });
+      debuggingTrapSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - DATA FLOW SECTION
+      // ============================================
+
+      // Data Flow Comprehension Carousel
+      const dataFlowComprehension = new ActivityCarousel('data-flow-comprehension', {
+        type: 'comprehension',
+        sectionId: 'data-flow',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'flow-quiz-1',
+            question: 'According to the Five Questions method, where is the bug almost always hiding?',
+            options: [
+              'Question 1 (Where displayed?)',
+              'Question 2 (Where stored?)',
+              'Questions 3, 4, or 5 (What writes, When, External data)',
+              'None of the above'
+            ],
+            correct: 2,
+            explanation: 'The bug is almost always in questions 3-5: something that writes to the data, runs at an unexpected time, or comes from an external source.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'flow-quiz-2',
+            question: 'What does "trace backwards from display" mean?',
+            options: [
+              'Delete code in reverse order',
+              'Follow data from where it\'s shown back to where it\'s stored',
+              'Use a debugger in reverse mode',
+              'Read code from bottom to top'
+            ],
+            correct: 1,
+            explanation: 'Start where the wrong data appears (the display), then trace back through the code to find where the data originates and what modifies it.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'flow-tf-1',
+            statement: 'Question 3 ("What writes to storage?") is the most critical question because it identifies every possible source of data corruption.',
+            correct: true,
+            explanation: 'If data is wrong, something wrote it wrong. By listing every write path, you create a finite list of suspects where the bug must be.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'flow-tf-2',
+            statement: 'External data (webhooks, APIs, file uploads) is predictable and rarely causes bugs.',
+            correct: false,
+            explanation: 'External data is unpredictable and often the source of bugs. You don\'t control what data comes from external systems.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'flow-fill-1',
+            statement: 'The Five Questions: Where displayed? Where stored? What writes? When? External ___?',
+            correctAnswers: ['data', 'sources', 'inputs', 'flows'],
+            caseSensitive: false,
+            hints: ['The fifth question asks about data from outside your system'],
+            explanation: 'The five questions are: Where displayed? Where stored? What writes? When? What external data flows in?',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'flow-fill-2',
+            statement: 'Your list of everything that writes to the data is your treasure ___.',
+            correctAnswers: ['map', 'guide', 'key'],
+            caseSensitive: false,
+            hints: ['This list tells you where to look for the bug'],
+            explanation: 'The list of write paths is your treasure map—the bug is somewhere in that list.',
+            points: 10
+          }
+        ]
+      });
+      dataFlowComprehension.init();
+
+      // Data Flow Application Carousel
+      const dataFlowApplication = new ActivityCarousel('data-flow-application', {
+        type: 'application',
+        sectionId: 'data-flow',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'flow-seq-1',
+            instruction: 'Order the Five Questions from first to last:',
+            items: [
+              { id: 'q1', text: 'Where is the data displayed?' },
+              { id: 'q2', text: 'Where is the data stored?' },
+              { id: 'q3', text: 'What writes to this storage?' },
+              { id: 'q4', text: 'When does each write happen?' },
+              { id: 'q5', text: 'What external data flows in?' }
+            ],
+            correctOrder: ['q1', 'q2', 'q3', 'q4', 'q5'],
+            hints: {
+              partial: 'Start with display, end with external.',
+              wrong: 'Display → Storage → Writes → Timing → External'
+            },
+            explanation: 'The Five Questions follow data backwards: display → storage → writes → timing → external sources.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'flow-connect-1',
+            instruction: 'Connect each question to what it helps you find:',
+            nodes: [
+              { id: 'q-write', label: '3️⃣ What Writes?' },
+              { id: 'q-when', label: '4️⃣ When?' },
+              { id: 'q-external', label: '5️⃣ External Data?' },
+              { id: 'corrupt', label: '🐛 Data Corruption' },
+              { id: 'race', label: '⚡ Race Conditions' },
+              { id: 'third', label: '🌐 Third-Party Bugs' }
+            ],
+            solution: {
+              edges: [
+                { source: 'q-write', target: 'corrupt' },
+                { source: 'q-when', target: 'race' },
+                { source: 'q-external', target: 'third' }
+              ]
+            },
+            explanation: 'Question 3 finds data corruption, Question 4 finds timing/race conditions, Question 5 finds bugs from external systems.',
+            points: 25
+          },
+          {
+            type: 'drag-drop',
+            id: 'flow-dd-1',
+            instruction: 'Categorize each data source by question type:',
+            items: [
+              { id: 'w1', text: 'User update endpoint' },
+              { id: 'w2', text: 'Nightly batch job' },
+              { id: 'e1', text: 'Payment gateway webhook' },
+              { id: 'w3', text: 'Admin edit function' },
+              { id: 'e2', text: 'Partner API sync' },
+              { id: 'w4', text: 'Promotion calculator cron' }
+            ],
+            zones: [
+              { id: 'q3', label: '3️⃣ What Writes (code you control)', correct: ['w1', 'w2', 'w3', 'w4'] },
+              { id: 'q5', label: '5️⃣ External Data (third-party)', correct: ['e1', 'e2'] }
+            ],
+            explanation: 'Question 3 covers code you control. Question 5 covers external systems where data comes from outside.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'flow-quiz-apply-1',
+            question: 'You\'re debugging a "wrong inventory count" bug. You\'ve answered Questions 1-3. What does Question 4 ("When?") help you discover?',
+            options: [
+              'Where the inventory is displayed',
+              'Which database table stores inventory',
+              'Whether the bug only happens at certain times (overnight, after events)',
+              'What the inventory count should be'
+            ],
+            correct: 2,
+            explanation: 'Question 4 reveals timing-dependent bugs: things that run overnight, event-triggered processes, or race conditions between concurrent writes.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'flow-seq-2',
+            instruction: 'For a "wrong email notification content" bug, order these from most likely to least likely bug location:',
+            items: [
+              { id: 'a1', text: 'The email sending function itself' },
+              { id: 'a2', text: 'The template system that generates content' },
+              { id: 'a3', text: 'The data source feeding into the template' },
+              { id: 'a4', text: 'The event that triggers the email' }
+            ],
+            correctOrder: ['a3', 'a4', 'a2', 'a1'],
+            hints: {
+              partial: 'Data issues are more common than template issues.',
+              wrong: 'Most likely: data source → trigger → template → sender'
+            },
+            explanation: 'Wrong email content usually means wrong input data or wrong trigger, not the sending function itself.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'flow-dd-2',
+            instruction: 'Match each bug symptom to the most likely question where the bug hides:',
+            items: [
+              { id: 's1', text: 'Data correct sometimes, wrong other times' },
+              { id: 's2', text: 'Data always wrong after external sync' },
+              { id: 's3', text: 'Data wrong, but only one function modifies it' }
+            ],
+            zones: [
+              { id: 'q3', label: '3️⃣ What Writes (function bug)', correct: ['s3'] },
+              { id: 'q4', label: '4️⃣ When (timing bug)', correct: ['s1'] },
+              { id: 'q5', label: '5️⃣ External (third-party bug)', correct: ['s2'] }
+            ],
+            explanation: 'Intermittent issues suggest timing. External sync issues suggest third-party bugs. Single-function issues are straightforward.',
+            points: 20
+          }
+        ]
+      });
+      dataFlowApplication.init();
+
+      // Data Flow Synthesis Carousel
+      const dataFlowSynthesis = new ActivityCarousel('data-flow-synthesis', {
+        type: 'synthesis',
+        sectionId: 'data-flow',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'flow-scenario-1',
+            scenario: 'Bug: User\'s subscription status shows "active" in the app but "expired" in the billing system. Both systems should show the same status.',
+            question: 'Apply the Five Questions to debug this issue.',
+            evaluation: {
+              keywords: ['display', 'store', 'write', 'when', 'sync', 'external', 'webhook', 'api', 'billing'],
+              minWords: 50,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Q1: Displayed in app (user profile) and billing (admin panel). Q2: Stored in our DB and billing system. Q3: What writes? User signup, payment webhook, billing sync job. Q4: When? On signup, on payment, nightly sync. Q5: External? Billing system webhook. Likely bug: sync job or webhook handling doesn\'t update our DB when billing expires.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'flow-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Debugging session log:\n- Q1: Balance shown on dashboard\n- Q2: Stored in users.balance column\n- Q3: Writes: deposit endpoint, withdraw endpoint, transfer endpoint, rewards job\n- Q4: When: User actions + rewards job runs hourly\n- Q5: External: None'
+            },
+            question: 'Given this Five Questions analysis, where would you investigate first?',
+            correctAnswer: 'rewards job',
+            acceptableVariants: ['rewards', 'hourly job', 'rewards job', 'the rewards job', 'job'],
+            explanation: 'The rewards job runs hourly without user action. Bugs in background jobs are common and less tested than user-facing endpoints.',
+            commonMistakes: {
+              'deposit endpoint': 'User-facing endpoints are typically well-tested. The hourly background job is more likely to have edge case bugs.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'flow-scenario-2',
+            scenario: 'Your Five Questions analysis shows 12 different functions that write to the problematic data field. This is too many to investigate each one.',
+            question: 'How would you narrow down this suspect list efficiently?',
+            evaluation: {
+              keywords: ['recent', 'log', 'when', 'timing', 'reproduce', 'pattern', 'test', 'narrow', 'condition'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Strategies to narrow down: 1) Check logs for which functions ran recently, 2) Look for patterns—does bug only happen at certain times? 3) Check recent code changes to any of these functions, 4) Try to reproduce and see which functions fire, 5) Add logging to all 12 and wait for the bug to happen.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'flow-reflect-1',
+            prompt: 'Think about your current or recent project. Pick a key data field (like user.balance or order.status). Can you answer all Five Questions for it? If not, what\'s missing?',
+            thinkingPrompts: [
+              'Where is this data displayed?',
+              'Where is it stored?',
+              'What writes to it?',
+              'When do those writes happen?',
+              'Is there external data involved?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(display|show|render)', label: 'Q1 Understanding', points: 4 },
+                { pattern: '(database|store|table)', label: 'Q2 Understanding', points: 4 },
+                { pattern: '(write|function|endpoint)', label: 'Q3 Understanding', points: 4 },
+                { pattern: '(when|time|schedule)', label: 'Q4 Understanding', points: 4 },
+                { pattern: '(external|api|webhook)', label: 'Q5 Understanding', points: 4 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'flow-graph-1',
+            instruction: 'Build a data flow diagram answering the Five Questions for "Order Total": Display → Storage → Writes (checkout, promotion, tax) → External (payment API)',
+            nodeTypes: [
+              { type: 'display', label: '📺 Display', color: '#42a5f5' },
+              { type: 'storage', label: '🗄️ Storage', color: '#66bb6a' },
+              { type: 'checkout', label: '🛒 Checkout', color: '#ffa726' },
+              { type: 'promo', label: '🎁 Promotions', color: '#ffa726' },
+              { type: 'tax', label: '📋 Tax Calc', color: '#ffa726' },
+              { type: 'payment', label: '💳 Payment API', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['display', 'storage', 'checkout', 'payment'],
+              requiredEdges: [
+                { from: 'storage', to: 'display' },
+                { from: 'checkout', to: 'storage' }
+              ],
+              optionalNodes: ['promo', 'tax'],
+              minNodes: 4,
+              maxNodes: 7
+            },
+            hints: [
+              'Display reads from storage',
+              'Multiple functions write to storage',
+              'Payment API is an external data source'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'flow-scenario-3',
+            scenario: 'You ask a junior to debug using the Five Questions. They return saying: "I answered all five questions, but I still can\'t find the bug." They show you a very short list for Question 3.',
+            question: 'What might they be missing, and how would you help them?',
+            evaluation: {
+              keywords: ['incomplete', 'background', 'async', 'indirect', 'trigger', 'event', 'hidden', 'scheduled'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'They likely missed indirect writes: background jobs, event handlers, scheduled tasks, database triggers, cascade effects from other tables. Help them by asking: "What background jobs touch this data? Any event handlers? Cron jobs? Database triggers?" The bug hides in what they didn\'t list.',
+            points: 25
+          }
+        ]
+      });
+      dataFlowSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - ASYNC FLOWS SECTION
+      // ============================================
+
+      // Async Flows Comprehension Carousel
+      const asyncFlowsComprehension = new ActivityCarousel('async-flows-comprehension', {
+        type: 'comprehension',
+        sectionId: 'async-flows',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'async-quiz-1',
+            question: 'Why are scheduled tasks a common source of bugs?',
+            options: [
+              'They run too fast',
+              'They use too much memory',
+              'They run when nobody\'s watching and are often forgotten',
+              'They can\'t connect to the database'
+            ],
+            correct: 2,
+            explanation: 'Code that runs at 3 AM is rarely tested and often forgotten. When it breaks, nobody notices until data is already corrupted.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'async-quiz-2',
+            question: 'What are the three main "hiding spots" for async bugs mentioned in the lesson?',
+            options: [
+              'Databases, caches, and files',
+              'Scheduled tasks, message queues, and event handlers',
+              'APIs, webhooks, and emails',
+              'Frontend, backend, and database'
+            ],
+            correct: 1,
+            explanation: 'Bugs hide in scheduled tasks (cron jobs), message queues (Celery, RabbitMQ), and event handlers (webhooks, pub/sub).',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'async-tf-1',
+            statement: 'Synchronous code is easier to debug than asynchronous code because you can follow the flow step by step.',
+            correct: true,
+            explanation: 'Synchronous code is linear: request → process → response. Async code has gaps between when something is queued and when it runs, making bugs harder to trace.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'async-tf-2',
+            statement: 'An "async flow inventory" is a performance monitoring tool.',
+            correct: false,
+            explanation: 'An async flow inventory is a document listing every background process, what data it touches, and when it runs. It\'s for debugging, not performance.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'async-fill-1',
+            statement: 'Senior engineers keep an ___ of every async flow, what data it touches, and when it runs.',
+            correctAnswers: ['inventory', 'list', 'map', 'document'],
+            caseSensitive: false,
+            hints: ['A document that helps you quickly check async processes when debugging'],
+            explanation: 'An async flow inventory is a debugging tool—a list of every background process in your system.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'async-fill-2',
+            statement: 'Bugs love to hide in code that runs when nobody\'s ___.',
+            correctAnswers: ['watching', 'looking', 'awake', 'around'],
+            caseSensitive: false,
+            hints: ['Think about 3 AM scheduled jobs'],
+            explanation: 'Async code runs without user interaction, often at night. These processes are rarely monitored in real-time.',
+            points: 10
+          }
+        ]
+      });
+      asyncFlowsComprehension.init();
+
+      // Async Flows Application Carousel
+      const asyncFlowsApplication = new ActivityCarousel('async-flows-application', {
+        type: 'application',
+        sectionId: 'async-flows',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'async-dd-1',
+            instruction: 'Categorize each async pattern by its hiding spot:',
+            items: [
+              { id: 's1', text: 'Nightly data cleanup job' },
+              { id: 'q1', text: 'Celery task for email sending' },
+              { id: 'e1', text: 'Stripe payment webhook' },
+              { id: 's2', text: '3 AM report generation' },
+              { id: 'q2', text: 'SQS message for image processing' },
+              { id: 'e2', text: 'GitHub push event handler' }
+            ],
+            zones: [
+              { id: 'scheduled', label: '⏰ Scheduled Tasks', correct: ['s1', 's2'] },
+              { id: 'queue', label: '📬 Message Queues', correct: ['q1', 'q2'] },
+              { id: 'event', label: '🔔 Event Handlers', correct: ['e1', 'e2'] }
+            ],
+            explanation: 'Scheduled tasks run on time triggers. Message queues process jobs asynchronously. Event handlers respond to external triggers.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'async-connect-1',
+            instruction: 'Connect each async issue to its debugging approach:',
+            nodes: [
+              { id: 'cron-bug', label: '⏰ Cron Job Bug' },
+              { id: 'queue-bug', label: '📬 Queue Failure' },
+              { id: 'webhook-bug', label: '🔔 Webhook Bug' },
+              { id: 'run-manual', label: '▶️ Run Manually' },
+              { id: 'check-dlq', label: '🗑️ Check Dead Letter Queue' },
+              { id: 'check-logs', label: '📋 Check Request Logs' }
+            ],
+            solution: {
+              edges: [
+                { source: 'cron-bug', target: 'run-manual' },
+                { source: 'queue-bug', target: 'check-dlq' },
+                { source: 'webhook-bug', target: 'check-logs' }
+              ]
+            },
+            explanation: 'Debug cron jobs by running manually. Queue failures leave traces in dead letter queues. Webhook bugs show in request logs.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'async-seq-1',
+            instruction: 'Order these steps for debugging an async flow issue:',
+            items: [
+              { id: 'a1', text: 'Identify which async processes touch the data' },
+              { id: 'a2', text: 'Check when each process last ran' },
+              { id: 'a3', text: 'Look at logs from the suspicious process' },
+              { id: 'a4', text: 'Reproduce by running the process manually' },
+              { id: 'a5', text: 'Fix the bug and add monitoring' }
+            ],
+            correctOrder: ['a1', 'a2', 'a3', 'a4', 'a5'],
+            hints: {
+              partial: 'Start by identifying suspects, end by adding monitoring.',
+              wrong: 'Identify → Check timing → Read logs → Reproduce → Fix'
+            },
+            explanation: 'Async debugging: identify processes → check timing → review logs → reproduce → fix with monitoring.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'async-quiz-apply-1',
+            question: 'Your e-commerce site has a bug: some orders never send confirmation emails. The send_email task is in a Celery queue. Where do you look first?',
+            options: [
+              'The email template code',
+              'The checkout endpoint that triggers the email',
+              'The Celery dead letter queue and worker logs',
+              'The user\'s spam folder'
+            ],
+            correct: 2,
+            explanation: 'For queue-based issues, check the dead letter queue (failed tasks) and worker logs. The task might be failing silently or getting stuck.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'async-dd-2',
+            instruction: 'Match each symptom to the most likely async culprit:',
+            items: [
+              { id: 's1', text: 'Data wrong every morning' },
+              { id: 's2', text: 'Some tasks complete, some silently fail' },
+              { id: 's3', text: 'Data wrong right after external event' }
+            ],
+            zones: [
+              { id: 'scheduled', label: '⏰ Scheduled Task Bug', correct: ['s1'] },
+              { id: 'queue', label: '📬 Queue Processing Bug', correct: ['s2'] },
+              { id: 'webhook', label: '🔔 Webhook Handler Bug', correct: ['s3'] }
+            ],
+            explanation: 'Morning issues → overnight scheduled tasks. Partial failures → queue problems. External event issues → webhook handlers.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'async-seq-2',
+            instruction: 'Order these from hardest to easiest to debug:',
+            items: [
+              { id: 'a1', text: 'Synchronous API endpoint' },
+              { id: 'a2', text: 'Webhook from third-party service' },
+              { id: 'a3', text: 'Scheduled job that runs at 3 AM' },
+              { id: 'a4', text: 'Message queue worker' }
+            ],
+            correctOrder: ['a2', 'a3', 'a4', 'a1'],
+            hints: {
+              partial: 'Third-party webhooks are hardest because you don\'t control the sender.',
+              wrong: 'Hardest: external webhooks → scheduled → queues → sync API (easiest)'
+            },
+            explanation: 'Webhooks are hardest (can\'t control), then scheduled (timing), then queues (at least you can replay), then sync (easiest to reproduce).',
+            points: 15
+          }
+        ]
+      });
+      asyncFlowsApplication.init();
+
+      // Async Flows Synthesis Carousel
+      const asyncFlowsSynthesis = new ActivityCarousel('async-flows-synthesis', {
+        type: 'synthesis',
+        sectionId: 'async-flows',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'async-scenario-1',
+            scenario: 'Bug report: "User reports didn\'t generate last night." Your system has a 2 AM cron job that generates reports. The job shows "completed successfully" in the logs.',
+            question: 'The job "completed" but reports weren\'t generated. What would you investigate?',
+            evaluation: {
+              keywords: ['partial', 'error', 'silent', 'input', 'data', 'empty', 'condition', 'zero', 'log', 'specific'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Investigate: 1) Did the job process 0 items due to empty input? 2) Were there silent errors caught but not re-raised? 3) Did a condition cause early exit? 4) Did it run but save reports to wrong location? 5) Check detailed logs for what data the job actually processed.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'async-predict-1',
+            setup: {
+              type: 'text',
+              content: 'System design:\n- User uploads image\n- API returns 200 OK immediately\n- Message goes to queue\n- Worker resizes image and uploads to CDN\n- Worker updates database with CDN URL\n\nBug: Some images show as broken after upload.'
+            },
+            question: 'Where in this async flow is the bug most likely hiding?',
+            correctAnswer: 'worker',
+            acceptableVariants: ['queue', 'worker', 'message queue', 'the worker', 'resize', 'cdn upload'],
+            explanation: 'The user gets 200 OK before processing completes. If the worker fails silently, the database never gets updated, but the user thinks upload succeeded.',
+            commonMistakes: {
+              'api': 'The API just queues the message and returns 200. If the API was broken, NO uploads would work.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'async-scenario-2',
+            scenario: 'Your team wants to add a new Stripe webhook handler for subscription events. You\'re the senior who needs to review the implementation.',
+            question: 'What would you look for to ensure this webhook handler doesn\'t become a bug hiding spot?',
+            evaluation: {
+              keywords: ['idempotent', 'retry', 'log', 'error', 'timeout', 'test', 'verify', 'signature', 'duplicate', 'order'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Review checklist: 1) Idempotency—can it handle duplicate events? 2) Error handling—does it catch and log all errors? 3) Signature verification—is it validating Stripe signatures? 4) Timeout handling—what if it takes too long? 5) Testing—how do we test without real Stripe events? 6) Monitoring—will we know if it fails?',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'async-reflect-1',
+            prompt: 'Think about your current project. Do you have an async flow inventory? If not, can you list the scheduled tasks, message queues, and event handlers from memory?',
+            thinkingPrompts: [
+              'What runs on a schedule (cron, scheduled tasks)?',
+              'What uses message queues (Celery, SQS, etc.)?',
+              'What event handlers exist (webhooks, pub/sub)?',
+              'What data does each process touch?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(cron|schedule|nightly|hourly)', label: 'Knows scheduled tasks', points: 5 },
+                { pattern: '(queue|celery|sqs|worker)', label: 'Knows queues', points: 5 },
+                { pattern: '(webhook|event|handler)', label: 'Knows event handlers', points: 5 },
+                { pattern: '(don\'t know|not sure|should document)', label: 'Honest assessment', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'async-graph-1',
+            instruction: 'Build an async flow diagram: User Request → Queue → Worker → Database, with scheduled Cron Job also writing to Database',
+            nodeTypes: [
+              { type: 'user', label: '👤 User', color: '#42a5f5' },
+              { type: 'queue', label: '📬 Queue', color: '#66bb6a' },
+              { type: 'worker', label: '⚙️ Worker', color: '#ffa726' },
+              { type: 'database', label: '🗄️ Database', color: '#7986cb' },
+              { type: 'cron', label: '⏰ Cron Job', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['user', 'queue', 'worker', 'database', 'cron'],
+              requiredEdges: [
+                { from: 'user', to: 'queue' },
+                { from: 'queue', to: 'worker' },
+                { from: 'worker', to: 'database' },
+                { from: 'cron', to: 'database' }
+              ],
+              optionalNodes: [],
+              minNodes: 5,
+              maxNodes: 6
+            },
+            hints: [
+              'User triggers the async flow',
+              'Worker processes from the queue',
+              'Both worker and cron write to database—multiple write paths!'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'async-scenario-3',
+            scenario: 'A junior asks: "How do I debug a cron job that only runs at 3 AM? I can\'t stay up all night waiting for it."',
+            question: 'What debugging strategies would you teach them?',
+            evaluation: {
+              keywords: ['manual', 'run', 'trigger', 'local', 'test data', 'log', 'environment', 'simulate', 'mock'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Strategies: 1) Run the job manually with a test user/data, 2) Run it locally with production data (if safe), 3) Add detailed logging and wait one night, 4) Create a test environment where you can trigger the job on demand, 5) Mock the time to make the cron condition pass, 6) Split job into testable functions.',
+            points: 25
+          }
+        ]
+      });
+      asyncFlowsSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Junior Ch2: Lightning Paths');
     });
   </script>
 </body>
