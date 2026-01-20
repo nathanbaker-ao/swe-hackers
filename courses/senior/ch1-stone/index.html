@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="senior" data-lesson="ch1-stone">
   <header class="header">
@@ -115,20 +116,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="plateau-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 1: The Senior Plateau -->
+      <div class="activity-carousels" data-story="plateau-story">
+        <div id="plateau-comprehension" class="carousel-container"></div>
+        <div id="plateau-application" class="carousel-container"></div>
+        <div id="plateau-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,20 +186,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="amplified-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 2: The Amplified Approach -->
+      <div class="activity-carousels" data-story="amplified-story">
+        <div id="amplified-comprehension" class="carousel-container"></div>
+        <div id="amplified-application" class="carousel-container"></div>
+        <div id="amplified-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,20 +256,11 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="protocol-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Story 3: The Rapid Acquisition Protocol -->
+      <div class="activity-carousels" data-story="protocol-story">
+        <div id="protocol-comprehension" class="carousel-container"></div>
+        <div id="protocol-application" class="carousel-container"></div>
+        <div id="protocol-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -332,6 +306,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -352,13 +340,11 @@
 
       const diagramElements = {
         'plateau': [
-          // The plateau problem
           { data: { id: 'domain-locked', label: '🏔️ Domain\nLocked', type: 'external', description: 'Expertise trapped in one codebase' } },
           { data: { id: 'unfamiliar-code', label: '❓ Unfamiliar\nCode', type: 'concept', description: 'Back to square one' } },
           { data: { id: 'traditional-timeline', label: '⏱️ Traditional\n2-4 Weeks', type: 'data', description: 'Setup, break, learn, productive' } },
           { data: { id: 'amplified-timeline', label: '⚡ Amplified\nHours', type: 'service', description: 'AI overview → flows → patterns' } },
           { data: { id: 'key-insight', label: '💡 Key Insight\nAI Assists', type: 'page', description: 'You judge, AI researches' } },
-          // Edges
           { data: { source: 'domain-locked', target: 'unfamiliar-code' } },
           { data: { source: 'unfamiliar-code', target: 'traditional-timeline' } },
           { data: { source: 'traditional-timeline', target: 'amplified-timeline' } },
@@ -366,13 +352,11 @@
         ],
 
         'amplified': [
-          // The amplified approach
           { data: { id: 'new-codebase', label: '📦 New\nCodebase', type: 'external', description: 'Thousands of files, unknown patterns' } },
           { data: { id: 'ai-analysis', label: '🤖 AI\nAnalysis', type: 'concept', description: 'Feed codebase, ask for structure' } },
           { data: { id: 'ai-outputs', label: '📊 AI\nOutputs', type: 'data', description: 'Architecture, entry points, patterns' } },
           { data: { id: 'senior-verification', label: '🔍 Senior\nVerification', type: 'auth', description: 'Check claims, apply judgment' } },
           { data: { id: 'productive-fast', label: '🚀 Productive\nin Hours', type: 'page', description: 'Contributing by day 2' } },
-          // Edges
           { data: { source: 'new-codebase', target: 'ai-analysis' } },
           { data: { source: 'ai-analysis', target: 'ai-outputs' } },
           { data: { source: 'ai-outputs', target: 'senior-verification' } },
@@ -380,7 +364,6 @@
         ],
 
         'protocol': [
-          // The 6-step protocol
           { data: { id: 'repeatable-process', label: '📋 6-Step\nProtocol', type: 'external', description: 'Systematic acquisition' } },
           { data: { id: 'step-reconnaissance', label: '1️⃣ Recon\nStructure', type: 'concept', description: 'Ask AI for shape, not details' } },
           { data: { id: 'step-entry-points', label: '2️⃣ Entry\nPoints', type: 'data', description: 'API routes, CLI, jobs' } },
@@ -389,7 +372,6 @@
           { data: { id: 'step-risks', label: '5️⃣ Risk\nAssessment', type: 'concept', description: 'Landmines, tech debt' } },
           { data: { id: 'step-docs', label: '6️⃣ Generate\nDocs', type: 'data', description: 'Draft, verify, refine' } },
           { data: { id: 'mastery', label: '🏆 Codebase\nMastery', type: 'page', description: 'Contributor in days' } },
-          // Edges
           { data: { source: 'repeatable-process', target: 'step-reconnaissance' } },
           { data: { source: 'step-reconnaissance', target: 'step-entry-points' } },
           { data: { source: 'step-entry-points', target: 'step-data-models' } },
@@ -404,46 +386,985 @@
       // INITIALIZE STORYTELLING DIAGRAMS
       // ============================================
 
-      // Map story IDs to diagram element keys
       const storyToDiagram = {
         'plateau-story': 'plateau',
         'amplified-story': 'amplified',
         'protocol-story': 'protocol'
       };
 
-      // Create storytelling diagrams for each story in the JSON
       pageData.stories.forEach(story => {
         const diagramKey = storyToDiagram[story.id];
         if (!diagramKey) return;
-
         const elements = diagramElements[diagramKey];
         if (!elements) return;
-
-        new StorytellingDiagram(
-          story.id,
-          elements,
-          story.steps,
-          { audioEngine, storyId: story.id }
-        );
+        new StorytellingDiagram(story.id, elements, story.steps, { audioEngine, storyId: story.id });
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // ACTIVITY CAROUSELS
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
-        'plateau-story': 'plateau-quiz',
-        'amplified-story': 'amplified-quiz',
-        'protocol-story': 'protocol-quiz'
-      };
+      // ----------------------------------------
+      // STORY 1: THE SENIOR PLATEAU
+      // ----------------------------------------
 
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
-        if (!containerId) return;
-
-        new Quiz(containerId, quiz.questions);
+      const plateauComprehension = new ActivityCarousel('plateau-comprehension', {
+        type: 'comprehension',
+        sectionId: 'plateau',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'plat-quiz-1',
+            question: 'What is the "senior plateau" problem?',
+            options: [
+              'Senior engineers get promoted too quickly',
+              'Expertise is domain-locked and doesn\'t transfer to new codebases',
+              'Senior engineers refuse to learn new technologies',
+              'AI is making senior engineers obsolete'
+            ],
+            correct: 1,
+            explanation: 'The senior plateau describes how deep expertise in YOUR codebase doesn\'t automatically transfer. In unfamiliar code, even seniors start from scratch—traditionally taking 2-4 weeks.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'plat-tf-1',
+            statement: 'Traditional codebase onboarding typically takes 2-4 days for senior engineers.',
+            correct: false,
+            explanation: 'Traditional onboarding takes 2-4 WEEKS, not days: Week 1 for setup/exploration, Week 2 for breaking things, Week 3 for understanding flows, Week 4 for productivity. The amplified approach compresses this to hours.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-2',
+            question: 'How does the amplified timeline compress onboarding?',
+            options: [
+              'By skipping code review entirely',
+              'Hours 1-2: AI architecture overview; 3-4: entry points/flows; 5-6: patterns/risks',
+              'By hiring consultants who already know the code',
+              'By only working on simple features'
+            ],
+            correct: 1,
+            explanation: 'The amplified approach uses AI to accelerate each phase: architecture overview, entry point mapping, flow tracing, pattern recognition, and risk assessment—all in hours instead of weeks.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'plat-fill-1',
+            statement: 'AI doesn\'t replace your expertise—it helps you acquire expertise ___.',
+            correctAnswers: ['faster', 'quickly', 'rapidly', 'quicker'],
+            caseSensitive: false,
+            hints: ['Think about time compression'],
+            explanation: 'AI accelerates expertise acquisition. You\'re still the judge and decision-maker. AI is your research assistant that handles the reconnaissance while you apply judgment.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'plat-tf-2',
+            statement: 'When facing unfamiliar code, senior engineers have a significant advantage over juniors even without AI.',
+            correct: false,
+            explanation: 'This is the plateau problem! In truly unfamiliar code, senior expertise doesn\'t automatically transfer. Both start from scratch. AI-augmented learning changes this by letting seniors apply their judgment to AI-gathered reconnaissance.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-3',
+            question: 'What\'s the key insight about AI in codebase acquisition?',
+            options: [
+              'AI can fully understand and explain any codebase',
+              'AI replaces the need for human judgment',
+              'You judge and decide; AI researches and accelerates',
+              'AI works best without human guidance'
+            ],
+            correct: 2,
+            explanation: 'The key insight: AI is your research assistant, not your replacement. You provide judgment, context, and decision-making. AI provides speed and breadth of analysis.',
+            points: 10
+          }
+        ]
       });
+      plateauComprehension.init();
+
+      const plateauApplication = new ActivityCarousel('plateau-application', {
+        type: 'application',
+        sectionId: 'plateau',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'plat-seq-1',
+            instruction: 'Order the traditional codebase onboarding phases:',
+            items: [
+              { id: 't1', text: 'Setup and initial exploration' },
+              { id: 't2', text: 'Breaking things while experimenting' },
+              { id: 't3', text: 'Understanding key flows' },
+              { id: 't4', text: 'Finally becoming productive' }
+            ],
+            correctOrder: ['t1', 't2', 't3', 't4'],
+            hints: {
+              partial: 'Traditional onboarding follows a predictable pattern over weeks.',
+              wrong: 'Think about what happens first when you join a new team.'
+            },
+            explanation: 'Traditional onboarding: Setup (Week 1) → Breaking things (Week 2) → Understanding flows (Week 3) → Productivity (Week 4). Each phase builds on the previous.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'plat-dd-1',
+            instruction: 'Match each timeline approach to its characteristics:',
+            items: [
+              { id: 'i1', text: 'Manual file-by-file exploration' },
+              { id: 'i2', text: 'AI generates architecture overview' },
+              { id: 'i3', text: 'Learn by trial and error' },
+              { id: 'i4', text: 'AI maps entry points and flows' },
+              { id: 'i5', text: 'Ask teammates for tribal knowledge' },
+              { id: 'i6', text: 'AI identifies patterns and risks' }
+            ],
+            zones: [
+              { id: 'trad', label: 'Traditional (2-4 weeks)', correct: ['i1', 'i3', 'i5'] },
+              { id: 'amp', label: 'Amplified (hours)', correct: ['i2', 'i4', 'i6'] }
+            ],
+            explanation: 'Traditional relies on manual exploration, trial/error, and tribal knowledge. Amplified uses AI for systematic reconnaissance: architecture, entry points, patterns, and risks.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'plat-connect-1',
+            instruction: 'Connect each plateau problem to its amplified solution:',
+            nodes: [
+              { id: 'locked', label: '🔒 Domain-Locked' },
+              { id: 'slow', label: '🐢 Slow Onboarding' },
+              { id: 'tribal', label: '📜 Tribal Knowledge' },
+              { id: 'transfer', label: '🔄 Expertise Transfer' },
+              { id: 'accel', label: '⚡ AI Acceleration' },
+              { id: 'docs', label: '📝 AI Documentation' }
+            ],
+            solution: {
+              edges: [
+                { source: 'locked', target: 'transfer' },
+                { source: 'slow', target: 'accel' },
+                { source: 'tribal', target: 'docs' }
+              ]
+            },
+            explanation: 'Domain-locked expertise is solved by transferable acquisition skills. Slow onboarding is solved by AI acceleration. Tribal knowledge is captured through AI-generated documentation.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'plat-quiz-apply-1',
+            question: 'You\'re a senior joining a new team with a 200K line codebase. What\'s your first AI-amplified move?',
+            options: [
+              'Start fixing bugs to learn the code',
+              'Ask AI for high-level architecture and component overview',
+              'Read every file starting from main()',
+              'Ask teammates to explain everything'
+            ],
+            correct: 1,
+            explanation: 'Start with reconnaissance: Ask AI for the high-level shape—architecture, major components, relationships. Understand the forest before examining trees.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'plat-seq-2',
+            instruction: 'Order the amplified onboarding approach:',
+            items: [
+              { id: 'a1', text: 'AI provides architecture overview (Hours 1-2)' },
+              { id: 'a2', text: 'AI maps entry points and flows (Hours 3-4)' },
+              { id: 'a3', text: 'AI identifies patterns and risks (Hours 5-6)' },
+              { id: 'a4', text: 'Senior verifies and deep-dives where needed' },
+              { id: 'a5', text: 'Contributing by day 2' }
+            ],
+            correctOrder: ['a1', 'a2', 'a3', 'a4', 'a5'],
+            hints: {
+              partial: 'Move from broad overview to specific details, then verify.',
+              wrong: 'Start with the big picture, then drill down.'
+            },
+            explanation: 'Amplified approach: Architecture → Entry points → Patterns/Risks → Verification → Contribution. AI provides breadth, you provide depth and judgment.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'plat-dd-2',
+            instruction: 'Categorize what YOU provide vs what AI provides in breaking the plateau:',
+            items: [
+              { id: 'p1', text: 'Judgment on what\'s important' },
+              { id: 'p2', text: 'Rapid file scanning' },
+              { id: 'p3', text: 'Pattern synthesis from experience' },
+              { id: 'p4', text: 'Dependency mapping' },
+              { id: 'p5', text: 'Decision on what to investigate' },
+              { id: 'p6', text: 'Initial architecture summary' }
+            ],
+            zones: [
+              { id: 'you', label: 'You Provide', correct: ['p1', 'p3', 'p5'] },
+              { id: 'ai', label: 'AI Provides', correct: ['p2', 'p4', 'p6'] }
+            ],
+            explanation: 'You bring judgment, experience-based pattern recognition, and decision-making. AI brings speed, breadth, and systematic analysis.',
+            points: 20
+          }
+        ]
+      });
+      plateauApplication.init();
+
+      const plateauSynthesis = new ActivityCarousel('plateau-synthesis', {
+        type: 'synthesis',
+        sectionId: 'plateau',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'plat-scenario-1',
+            scenario: 'You\'re a senior engineer being acquired along with your company. You have 2 weeks to get productive in the acquirer\'s main platform (1M+ lines, 50+ services) before being assigned to integrate your product.',
+            question: 'How would you use the amplified approach to break the plateau and get productive in this complex new environment?',
+            evaluation: {
+              keywords: ['AI', 'architecture', 'entry', 'pattern', 'flow', 'verify', 'judgment', 'reconnaissance', 'service', 'dependency'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Day 1: AI reconnaissance of overall architecture—identify the 50 services, their relationships, data flows. Day 2: Focus on services relevant to the integration. AI maps entry points and domain models. Verify AI findings against actual code. Day 3-4: Deep dive on 3-5 critical services using AI to trace specific flows. Day 5+: Begin contributing while continuing to expand understanding.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'plat-predict-1',
+            setup: {
+              type: 'text',
+              content: 'A senior engineer refuses to use AI for codebase acquisition, insisting the traditional 4-week approach builds "deeper understanding." They\'re competing with an AI-augmented senior for a limited number of project assignments.'
+            },
+            question: 'What happens to the traditional senior\'s project opportunities over 6 months?',
+            correctAnswer: 'decreases',
+            acceptableVariants: ['fewer', 'less', 'diminishes', 'reduces', 'shrinks'],
+            explanation: 'The AI-augmented senior can take on new projects every 1-2 weeks while the traditional senior is still onboarding. Over 6 months, the amplified senior handles 10+ projects while the traditional senior handles 4-6. Opportunities concentrate on the faster contributor.',
+            commonMistakes: {
+              'same': 'Speed of acquisition directly impacts project capacity.',
+              'increases': 'Traditional approach can\'t compete with AI-augmented velocity.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'plat-scenario-2',
+            scenario: 'Your team inherits a legacy system after its maintainers leave the company. No documentation, no tests, 80K lines of code. Management expects your team productive in 1 week.',
+            question: 'Design a team strategy using the amplified approach to meet this aggressive timeline.',
+            evaluation: {
+              keywords: ['AI', 'parallel', 'architecture', 'entry', 'pattern', 'risk', 'divide', 'verify', 'document', 'flow'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Divide and conquer: Day 1—AI generates overall architecture. Split team by component. Day 2—Each member uses AI to map their component\'s entry points, data models, and flows. Day 3—Reconvene, share findings, AI identifies cross-component risks. Day 4—Parallel deep-dives on critical paths. Day 5—AI generates documentation of what we\'ve learned. Verify as we go.',
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'plat-reflect-1',
+            prompt: 'Think about the last time you joined a new codebase or project. How long did it take to get productive? What would have been different with AI-augmented acquisition?',
+            thinkingPrompts: [
+              'What was the biggest time sink in your onboarding?',
+              'What questions would AI have answered faster?',
+              'What tribal knowledge took weeks to discover?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(I|my|me)', label: 'Personal experience', points: 5 },
+                { pattern: '(week|day|month|time)', label: 'Time awareness', points: 5 },
+                { pattern: '(AI|would have|could have)', label: 'Counterfactual thinking', points: 4 },
+                { pattern: '(understand|learn|discover)', label: 'Learning focus', points: 4 },
+                { pattern: '(ask|question|find)', label: 'Information seeking', points: 3 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'plat-predict-2',
+            setup: {
+              type: 'text',
+              content: 'A company implements mandatory AI-augmented onboarding for all engineers joining new projects. Traditional 4-week onboarding is no longer allowed.'
+            },
+            question: 'What organizational change would you predict as the most significant outcome?',
+            correctAnswer: 'mobility',
+            acceptableVariants: ['rotation', 'flexibility', 'transfer', 'movement', 'reassignment', 'cross-team'],
+            explanation: 'With fast acquisition, engineers can move between projects/teams more frequently. This increases organizational flexibility, reduces knowledge silos, and allows better resource allocation. The plateau problem becomes a solved problem.',
+            commonMistakes: {
+              'productivity': 'True but not the most significant organizational change.',
+              'cost savings': 'A benefit, but mobility changes team dynamics fundamentally.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'plat-scenario-3',
+            scenario: 'You\'re consulting for a client evaluating an acquisition target\'s technology. You have 3 days to assess 5 repositories totaling 500K lines. Traditional due diligence would take 3-4 weeks.',
+            question: 'How would you structure your AI-augmented assessment to deliver actionable insights in 3 days?',
+            evaluation: {
+              keywords: ['AI', 'parallel', 'architecture', 'risk', 'pattern', 'debt', 'quality', 'dependency', 'flow', 'document'],
+              minWords: 60,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Day 1: AI parallel analysis of all 5 repos—architecture, tech stack, dependencies, obvious risks. Synthesize into unified view. Day 2: Deep-dive on 2 highest-risk repos. AI identifies tech debt patterns, security concerns, scalability limits. Verify critical claims. Day 3: AI generates assessment report. Add my judgment on integration complexity, team capability requirements, hidden costs. Deliver actionable recommendation.',
+            points: 30
+          }
+        ]
+      });
+      plateauSynthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: THE AMPLIFIED APPROACH
+      // ----------------------------------------
+
+      const amplifiedComprehension = new ActivityCarousel('amplified-comprehension', {
+        type: 'comprehension',
+        sectionId: 'amplified',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'amp-quiz-1',
+            question: 'What should you ask AI for when first analyzing a new codebase?',
+            options: [
+              'Line-by-line code review',
+              'Structure and patterns, not details',
+              'Bug fixes and optimizations',
+              'Performance benchmarks'
+            ],
+            correct: 1,
+            explanation: 'Ask AI for high-level structure: architecture summary, entry points, data models, patterns, complexity areas, and external integrations. Understand the SHAPE before diving into details.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'amp-tf-1',
+            statement: 'You should trust AI analysis completely and skip manual verification.',
+            correct: false,
+            explanation: 'AI makes mistakes! Senior verification is critical. Your job is to verify claims against actual code, apply your context, and use judgment on what to trust, investigate, or skip.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'amp-fill-1',
+            statement: 'AI gives you an architecture summary, maps ___, identifies patterns, and flags risk areas.',
+            correctAnswers: ['entry points', 'entry-points', 'entrypoints', 'entry'],
+            caseSensitive: false,
+            hints: ['Where does execution start?'],
+            explanation: 'Entry points (API routes, CLI commands, job schedulers) are where external requests enter the system. AI maps these as landmarks for navigation.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'amp-quiz-2',
+            question: 'Why is senior verification critical in the amplified approach?',
+            options: [
+              'It\'s just for compliance',
+              'AI lacks context about your specific situation and can make mistakes',
+              'AI is always accurate but slow',
+              'Only juniors need to verify'
+            ],
+            correct: 1,
+            explanation: 'AI can hallucinate, miss context, and make errors. You bring domain knowledge, understanding of your specific goals, and experience to judge what\'s accurate and relevant.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'amp-tf-2',
+            statement: 'The goal of AI analysis is to replace the need to ever read actual code.',
+            correct: false,
+            explanation: 'AI provides the map; you still need to explore. The goal is to reduce wasteful exploration by knowing WHERE to look. Deep-dive only where needed based on AI\'s map.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'amp-quiz-3',
+            question: 'What\'s the expected timeline for becoming productive with the amplified approach?',
+            options: [
+              '2-4 weeks (same as traditional)',
+              '1 week',
+              'Hours to days (contributing by day 2)',
+              'Immediately without any learning'
+            ],
+            correct: 2,
+            explanation: 'The amplified approach compresses weeks to hours. Hours 1-2 for architecture, 3-4 for entry points/flows, 5-6 for patterns/risks. Contributing by day 2.',
+            points: 10
+          }
+        ]
+      });
+      amplifiedComprehension.init();
+
+      const amplifiedApplication = new ActivityCarousel('amplified-application', {
+        type: 'application',
+        sectionId: 'amplified',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'amp-seq-1',
+            instruction: 'Order the amplified approach workflow:',
+            items: [
+              { id: 'w1', text: 'Drop into new codebase' },
+              { id: 'w2', text: 'Feed codebase to AI, ask for structure' },
+              { id: 'w3', text: 'AI produces architecture, entry points, patterns' },
+              { id: 'w4', text: 'Apply senior judgment to verify and focus' },
+              { id: 'w5', text: 'Deep-dive only where needed' },
+              { id: 'w6', text: 'Contributing by day 2' }
+            ],
+            correctOrder: ['w1', 'w2', 'w3', 'w4', 'w5', 'w6'],
+            hints: {
+              partial: 'Start with AI reconnaissance, then apply judgment.',
+              wrong: 'The flow is: codebase → AI analysis → verification → contribution.'
+            },
+            explanation: 'The workflow: Face new codebase → AI reconnaissance → AI outputs → Senior verification → Focused deep-dives → Productive contributions.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'amp-dd-1',
+            instruction: 'Categorize what AI produces vs what you decide:',
+            items: [
+              { id: 'd1', text: 'Architecture summary' },
+              { id: 'd2', text: 'What claims to trust' },
+              { id: 'd3', text: 'Entry point mapping' },
+              { id: 'd4', text: 'What to investigate deeper' },
+              { id: 'd5', text: 'Pattern identification' },
+              { id: 'd6', text: 'What\'s relevant for YOUR situation' }
+            ],
+            zones: [
+              { id: 'ai', label: 'AI Produces', correct: ['d1', 'd3', 'd5'] },
+              { id: 'you', label: 'You Decide', correct: ['d2', 'd4', 'd6'] }
+            ],
+            explanation: 'AI produces the analysis (architecture, entry points, patterns). You decide what to trust, what to investigate, and what\'s relevant for your specific context.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'amp-connect-1',
+            instruction: 'Connect each AI output type to what you verify:',
+            nodes: [
+              { id: 'arch', label: '📊 Architecture' },
+              { id: 'entry', label: '🚪 Entry Points' },
+              { id: 'pattern', label: '🔄 Patterns' },
+              { id: 'struct', label: '🏗️ Component Relations' },
+              { id: 'flow', label: '➡️ Request Flows' },
+              { id: 'convention', label: '📝 Conventions' }
+            ],
+            solution: {
+              edges: [
+                { source: 'arch', target: 'struct' },
+                { source: 'entry', target: 'flow' },
+                { source: 'pattern', target: 'convention' }
+              ]
+            },
+            explanation: 'Architecture → Verify component relationships. Entry points → Verify request flows. Patterns → Verify conventions actually used.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'amp-quiz-apply-1',
+            question: 'AI tells you a codebase uses the "Repository Pattern" for data access. What\'s your verification approach?',
+            options: [
+              'Trust it completely—AI analyzed the whole codebase',
+              'Check 2-3 data access points to verify the pattern is consistently applied',
+              'Ignore patterns and read every data access file',
+              'Ask AI to explain the pattern in more detail'
+            ],
+            correct: 1,
+            explanation: 'Sample verification: Check a few examples to confirm the pattern exists AND is consistently applied. AI might identify a pattern used in 60% of cases but miss the exceptions.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'amp-seq-2',
+            instruction: 'Order the senior verification process:',
+            items: [
+              { id: 'v1', text: 'Receive AI analysis output' },
+              { id: 'v2', text: 'Identify claims that matter for your goals' },
+              { id: 'v3', text: 'Sample-check critical claims against actual code' },
+              { id: 'v4', text: 'Note where AI was accurate vs wrong' },
+              { id: 'v5', text: 'Adjust trust level for subsequent AI analysis' }
+            ],
+            correctOrder: ['v1', 'v2', 'v3', 'v4', 'v5'],
+            hints: {
+              partial: 'Focus on claims that matter, then verify.',
+              wrong: 'Start with AI output, end with calibrated trust.'
+            },
+            explanation: 'Verification process: Get output → Prioritize → Sample-check → Track accuracy → Calibrate trust. Don\'t verify everything—focus on what matters.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'amp-dd-2',
+            instruction: 'Match each scenario to the appropriate AI prompt strategy:',
+            items: [
+              { id: 's1', text: 'Understanding overall architecture' },
+              { id: 's2', text: 'Finding where to add a new feature' },
+              { id: 's3', text: 'Debugging a specific error' },
+              { id: 's4', text: 'Learning team conventions' }
+            ],
+            zones: [
+              { id: 'broad', label: 'Broad "Shape" Questions', correct: ['s1', 's4'] },
+              { id: 'focused', label: 'Focused "Where/How" Questions', correct: ['s2', 's3'] }
+            ],
+            explanation: 'Architecture and conventions need broad shape questions. Feature addition and debugging need focused where/how questions. Match prompt strategy to goal.',
+            points: 20
+          }
+        ]
+      });
+      amplifiedApplication.init();
+
+      const amplifiedSynthesis = new ActivityCarousel('amplified-synthesis', {
+        type: 'synthesis',
+        sectionId: 'amplified',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'amp-scenario-1',
+            scenario: 'You\'re reviewing a PR in an unfamiliar service. AI tells you the change follows the "standard async pattern used throughout the service." You have 30 minutes to review. The change touches payment processing.',
+            question: 'How do you verify this AI claim given the time constraint and criticality of the code?',
+            evaluation: {
+              keywords: ['verify', 'sample', 'payment', 'pattern', 'check', 'example', 'risk', 'critical', 'async', 'convention'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Given payment criticality: Don\'t fully trust the AI claim. Sample-check 2-3 other async patterns in the payment service specifically. Verify error handling, retry logic, and idempotency match. Ask AI to show examples of "standard pattern." If the PR diverges from verified examples, flag for deeper review.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'amp-predict-1',
+            setup: {
+              type: 'code',
+              language: 'text',
+              code: 'AI Analysis Report:\n- Architecture: Microservices with event-driven communication\n- Entry Points: REST APIs on each service\n- Pattern: All services use CQRS\n- Risk: Legacy monolith still handles 40% of traffic'
+            },
+            question: 'Which AI claim should you verify FIRST given its potential impact on your understanding?',
+            correctAnswer: 'legacy monolith',
+            acceptableVariants: ['monolith', 'legacy', '40%', 'traffic', 'risk'],
+            explanation: 'The risk about legacy monolith handling 40% of traffic is critical. If true, it fundamentally changes your mental model. If false, you\'d waste time on a non-issue. High-impact claims get verified first.',
+            commonMistakes: {
+              'CQRS': 'Important but not as foundational as understanding where traffic actually goes.',
+              'microservices': 'Architecture matters but the legacy risk affects your entire approach.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'amp-scenario-2',
+            scenario: 'AI analysis of a codebase confidently states: "The system uses eventual consistency with a 5-second propagation delay." You\'re building a feature that requires data freshness. There\'s no documentation confirming this.',
+            question: 'Design a verification strategy that confirms or refutes this claim before you commit to your feature design.',
+            evaluation: {
+              keywords: ['test', 'verify', 'measure', 'log', 'trace', 'actual', 'observe', 'confirm', 'timing', 'propagation'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Verification strategy: 1) Search code for consistency-related configs, timeouts, or delays. 2) Check message queue or event bus configurations. 3) If possible, trace a write operation and measure actual propagation. 4) Ask AI where it found the "5-second" claim—demand source evidence. 5) If still uncertain, design feature to handle variable delays rather than assuming 5s.',
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'amp-reflect-1',
+            prompt: 'Think about a time you trusted documentation or someone\'s explanation about a codebase that turned out to be wrong. How did it affect your work? How would AI-assisted verification with sample-checking have helped?',
+            thinkingPrompts: [
+              'What was the incorrect assumption?',
+              'How long did it take to discover the truth?',
+              'What would sample-checking have revealed?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(I|my|me)', label: 'Personal experience', points: 5 },
+                { pattern: '(wrong|incorrect|false)', label: 'Error awareness', points: 5 },
+                { pattern: '(verify|check|confirm)', label: 'Verification mindset', points: 4 },
+                { pattern: '(time|hour|day|week)', label: 'Time impact', points: 4 },
+                { pattern: '(would have|could have)', label: 'Counterfactual', points: 3 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'amp-scenario-3',
+            scenario: 'You\'ve used AI to analyze a codebase and feel confident. A junior on your team asks: "How do you know the AI analysis is accurate?" They\'re skeptical of AI-assisted approaches.',
+            question: 'Explain your verification methodology in a way that addresses their concern and teaches them the amplified approach.',
+            evaluation: {
+              keywords: ['sample', 'verify', 'trust', 'check', 'judgment', 'code', 'claim', 'evidence', 'confirm', 'actual'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Great question—never trust AI blindly! Here\'s my approach: AI gives me a map, not truth. I pick the 3-5 most important claims and verify them against actual code. If AI says "Repository Pattern," I find 3 repositories and check. I track AI accuracy—if it\'s wrong 30% of the time on sample checks, I verify more. The goal is informed trust, not blind faith.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'amp-predict-2',
+            setup: {
+              type: 'text',
+              content: 'An engineer consistently skips the verification step, fully trusting AI analysis. They ship features quickly based on AI\'s architecture descriptions without checking.'
+            },
+            question: 'What type of bug or issue will likely surface within 3 months?',
+            correctAnswer: 'integration',
+            acceptableVariants: ['boundary', 'interface', 'edge case', 'assumption', 'inconsistency', 'compatibility'],
+            explanation: 'Integration/boundary issues arise when assumptions don\'t match reality. AI might describe ideal architecture while missing how components actually interact. The gaps between AI description and reality surface as integration bugs.',
+            commonMistakes: {
+              'none': 'AI makes enough mistakes that skipping verification guarantees issues.',
+              'performance': 'Possible but integration issues from wrong assumptions are more likely.'
+            },
+            points: 20
+          }
+        ]
+      });
+      amplifiedSynthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: THE RAPID ACQUISITION PROTOCOL
+      // ----------------------------------------
+
+      const protocolComprehension = new ActivityCarousel('protocol-comprehension', {
+        type: 'comprehension',
+        sectionId: 'protocol',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'prot-quiz-1',
+            question: 'What\'s the first step in the 6-step Rapid Acquisition Protocol?',
+            options: [
+              'Start coding to learn by doing',
+              'Initial reconnaissance—ask AI for structure, not details',
+              'Set up your development environment',
+              'Read the README file'
+            ],
+            correct: 1,
+            explanation: 'Step 1 is Initial Reconnaissance: Feed AI the codebase and ask for high-level structure—major components, relationships. Understand the SHAPE before diving into details.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'prot-tf-1',
+            statement: 'Entry points are the internal functions that do the main work in a codebase.',
+            correct: false,
+            explanation: 'Entry points are where EXTERNAL requests enter the system: API routes, CLI commands, job schedulers. They\'re the landmarks that help you trace how data flows through the codebase.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'prot-fill-1',
+            statement: 'Step 3 focuses on ___ models: database schemas, domain objects, and API types.',
+            correctAnswers: ['data', 'domain'],
+            caseSensitive: false,
+            hints: ['What represents the "nouns" in a system?'],
+            explanation: 'Data Model Analysis examines what the system works WITH—the nouns. Database schemas, domain objects, API types. Understanding data means understanding the system because data shapes behavior.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'prot-quiz-2',
+            question: 'What is the purpose of Step 4: Pattern Recognition?',
+            options: [
+              'Finding bugs in the code',
+              'Learning naming conventions, error handling, testing approaches—the local dialect',
+              'Identifying security vulnerabilities',
+              'Measuring code performance'
+            ],
+            correct: 1,
+            explanation: 'Pattern Recognition is about learning "how they do things here"—naming conventions, error handling, testing approaches. Learn the local dialect so your code fits in.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'prot-tf-2',
+            statement: 'Step 5 (Risk Assessment) is optional if the codebase looks well-maintained.',
+            correct: false,
+            explanation: 'Risk Assessment is never optional. Even well-maintained codebases have landmines—complex areas, hidden tech debt, missing tests, security concerns. Know what to avoid until you understand it deeply.',
+            requireReasoning: true,
+            minReasoningWords: 10,
+            points: 15
+          },
+          {
+            type: 'quiz',
+            id: 'prot-quiz-3',
+            question: 'What does Step 6 (Documentation Generation) produce?',
+            options: [
+              'Marketing materials for the product',
+              'Docs you wish existed: architecture diagrams, API docs, onboarding guides',
+              'Code comments on every function',
+              'User manuals for customers'
+            ],
+            correct: 1,
+            explanation: 'Step 6 creates missing documentation: architecture diagrams, API documentation, onboarding guides. Have AI draft them, then verify, refine, and contribute back to improve the codebase.',
+            points: 10
+          }
+        ]
+      });
+      protocolComprehension.init();
+
+      const protocolApplication = new ActivityCarousel('protocol-application', {
+        type: 'application',
+        sectionId: 'protocol',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'prot-seq-1',
+            instruction: 'Order the 6 steps of the Rapid Acquisition Protocol:',
+            items: [
+              { id: 'p1', text: 'Initial Reconnaissance (structure)' },
+              { id: 'p2', text: 'Entry Point Mapping' },
+              { id: 'p3', text: 'Data Model Analysis' },
+              { id: 'p4', text: 'Pattern Recognition' },
+              { id: 'p5', text: 'Risk Assessment' },
+              { id: 'p6', text: 'Documentation Generation' }
+            ],
+            correctOrder: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'],
+            hints: {
+              partial: 'Start broad, then focus on specifics, end with documentation.',
+              wrong: 'The protocol follows a logical progression from shape to details to risks to docs.'
+            },
+            explanation: 'The 6 steps: Reconnaissance → Entry Points → Data Models → Patterns → Risks → Documentation. Each step builds on the previous.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'prot-dd-1',
+            instruction: 'Match each protocol step to the AI prompt you would use:',
+            items: [
+              { id: 'q1', text: '"What are the major components and how do they relate?"' },
+              { id: 'q2', text: '"Where are the API routes, CLI commands, and schedulers?"' },
+              { id: 'q3', text: '"What are the main database tables and domain objects?"' },
+              { id: 'q4', text: '"What naming conventions and error handling patterns are used?"' },
+              { id: 'q5', text: '"What areas have complexity, tech debt, or security concerns?"' },
+              { id: 'q6', text: '"Generate an architecture diagram for this system."' }
+            ],
+            zones: [
+              { id: 's1', label: '1. Reconnaissance', correct: ['q1'] },
+              { id: 's2', label: '2. Entry Points', correct: ['q2'] },
+              { id: 's3', label: '3. Data Models', correct: ['q3'] },
+              { id: 's4', label: '4. Patterns', correct: ['q4'] },
+              { id: 's5', label: '5. Risks', correct: ['q5'] },
+              { id: 's6', label: '6. Documentation', correct: ['q6'] }
+            ],
+            explanation: 'Each step has a characteristic prompt: shape → entry → data → conventions → risks → artifacts.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'prot-connect-1',
+            instruction: 'Connect each protocol step to what it reveals about the codebase:',
+            nodes: [
+              { id: 'recon', label: '1️⃣ Reconnaissance' },
+              { id: 'entry', label: '2️⃣ Entry Points' },
+              { id: 'data', label: '3️⃣ Data Models' },
+              { id: 'shape', label: '🏗️ System Shape' },
+              { id: 'flow', label: '➡️ Request Flows' },
+              { id: 'domain', label: '📊 Business Domain' }
+            ],
+            solution: {
+              edges: [
+                { source: 'recon', target: 'shape' },
+                { source: 'entry', target: 'flow' },
+                { source: 'data', target: 'domain' }
+              ]
+            },
+            explanation: 'Reconnaissance reveals system shape. Entry points reveal request flows. Data models reveal the business domain.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'prot-quiz-apply-1',
+            question: 'You\'re at Step 4 (Pattern Recognition) and discover the codebase mixes 3 different error handling approaches. What do you do?',
+            options: [
+              'Immediately refactor to one pattern',
+              'Note it as inconsistency, continue to Step 5, then factor into Risk Assessment',
+              'Go back to Step 1 and start over',
+              'Skip documentation in Step 6'
+            ],
+            correct: 1,
+            explanation: 'Inconsistent patterns are valuable intel! Note the finding, continue the protocol, and incorporate it into Risk Assessment. Don\'t derail the protocol—capture insights and keep moving.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'prot-seq-2',
+            instruction: 'Order these AI prompts for Step 5 (Risk Assessment):',
+            items: [
+              { id: 'r1', text: '"What are the most complex areas of this codebase?"' },
+              { id: 'r2', text: '"Where is the technical debt concentrated?"' },
+              { id: 'r3', text: '"What areas have low test coverage?"' },
+              { id: 'r4', text: '"Are there security concerns I should be aware of?"' },
+              { id: 'r5', text: '"What would break if I changed X component?"' }
+            ],
+            correctOrder: ['r1', 'r2', 'r3', 'r4', 'r5'],
+            hints: {
+              partial: 'Start broad (complexity), then get specific (dependencies).',
+              wrong: 'Progress from general risk areas to specific impact analysis.'
+            },
+            explanation: 'Risk Assessment progression: Complexity → Tech debt → Test gaps → Security → Change impact. Broad to specific.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'prot-dd-2',
+            instruction: 'Categorize these findings by which protocol step would reveal them:',
+            items: [
+              { id: 'f1', text: 'The system has 12 microservices' },
+              { id: 'f2', text: 'All requests go through /api/v2/*' },
+              { id: 'f3', text: 'User table has 47 columns' },
+              { id: 'f4', text: 'They use snake_case everywhere' },
+              { id: 'f5', text: 'The payment module has 0% test coverage' },
+              { id: 'f6', text: 'No API documentation exists' }
+            ],
+            zones: [
+              { id: 'recon', label: 'Reconnaissance', correct: ['f1'] },
+              { id: 'entry', label: 'Entry Points', correct: ['f2'] },
+              { id: 'data', label: 'Data Models', correct: ['f3'] },
+              { id: 'pattern', label: 'Patterns', correct: ['f4'] },
+              { id: 'risk', label: 'Risks', correct: ['f5'] },
+              { id: 'docs', label: 'Documentation', correct: ['f6'] }
+            ],
+            explanation: 'Each finding type maps to a protocol step: architecture → entry → data → conventions → risks → gaps.',
+            points: 20
+          }
+        ]
+      });
+      protocolApplication.init();
+
+      const protocolSynthesis = new ActivityCarousel('protocol-synthesis', {
+        type: 'synthesis',
+        sectionId: 'protocol',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'prot-scenario-1',
+            scenario: 'You\'re using the protocol on a large monolith (300K lines). AI says "this is a standard MVC architecture" but you notice the codebase has multiple architectural styles mixed together. You\'re at Step 4.',
+            question: 'How do you adapt the protocol when AI provides an oversimplified or inaccurate characterization?',
+            evaluation: {
+              keywords: ['verify', 'sample', 'section', 'module', 'mixed', 'document', 'risk', 'note', 'pattern', 'inconsistent'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Don\'t trust the oversimplification. Sample-check different modules—ask AI about each separately. Document the ACTUAL patterns found: "Module A uses MVC, Module B is event-driven, Module C is procedural." This inconsistency becomes a key finding for Risk Assessment. Adjust your mental model from "standard MVC" to "mixed architecture with inconsistent patterns." Better intel than the simplified version.',
+            points: 30
+          },
+          {
+            type: 'prediction',
+            id: 'prot-predict-1',
+            setup: {
+              type: 'text',
+              content: 'An engineer follows the protocol but skips Step 5 (Risk Assessment) because "the codebase looks clean" and AI didn\'t flag any issues. They immediately start making changes in Step 6.'
+            },
+            question: 'What problem will likely occur when they start implementing features?',
+            correctAnswer: 'landmine',
+            acceptableVariants: ['hidden', 'unexpected', 'break', 'surprise', 'unknown', 'undocumented', 'gotcha'],
+            explanation: 'They\'ll hit a "landmine"—an undocumented constraint, fragile component, or hidden dependency. "Clean looking" codebases often have hidden complexity. Risk Assessment specifically probes for what\'s NOT obvious.',
+            commonMistakes: {
+              'nothing': 'Every codebase has risks. AI doesn\'t always flag them proactively.',
+              'slow progress': 'They\'ll have progress until they hit the first hidden issue.'
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'prot-graph-1',
+            instruction: 'Build a diagram showing the 6-step protocol flow with feedback loops:',
+            nodeTypes: [
+              { type: 'recon', label: '1️⃣ Recon', color: '#4a9eff' },
+              { type: 'entry', label: '2️⃣ Entry', color: '#66bb6a' },
+              { type: 'data', label: '3️⃣ Data', color: '#ffd54f' },
+              { type: 'pattern', label: '4️⃣ Pattern', color: '#ff9800' },
+              { type: 'risk', label: '5️⃣ Risk', color: '#ef5350' },
+              { type: 'docs', label: '6️⃣ Docs', color: '#9c27b0' }
+            ],
+            validation: {
+              requiredNodes: ['recon', 'entry', 'data', 'pattern', 'risk', 'docs'],
+              requiredEdges: [
+                { from: 'recon', to: 'entry' },
+                { from: 'entry', to: 'data' },
+                { from: 'data', to: 'pattern' }
+              ],
+              optionalNodes: [],
+              minNodes: 6,
+              maxNodes: 6
+            },
+            hints: [
+              'The protocol flows from Step 1 through Step 6',
+              'Each step builds on the previous',
+              'Consider where you might loop back for clarification'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'prot-scenario-2',
+            scenario: 'You\'ve completed the full protocol on a new codebase. A week later, a teammate asks you to document your findings for future onboarding. You realize your notes are scattered and incomplete.',
+            question: 'Design a reusable template/format for capturing protocol outputs that would help both you and future team members.',
+            evaluation: {
+              keywords: ['template', 'architecture', 'entry', 'data', 'pattern', 'risk', 'section', 'diagram', 'format', 'reusable'],
+              minWords: 60,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Template structure: 1) Architecture Overview (AI summary + my verification notes + diagram). 2) Entry Points Map (routes, CLI, schedulers with descriptions). 3) Data Model Summary (key entities, relationships, gotchas). 4) Pattern Guide (conventions with examples). 5) Risk Register (prioritized concerns with mitigation notes). 6) Knowledge Gaps (what I still don\'t understand). Each section: AI output → My verification → Open questions. Saves 80% of next person\'s time.',
+            points: 30
+          },
+          {
+            type: 'reflection',
+            id: 'prot-reflect-1',
+            prompt: 'Consider how you currently learn new codebases. Which of the 6 protocol steps do you already do naturally? Which would be new additions to your approach? What value do you see in having a systematic protocol?',
+            thinkingPrompts: [
+              'Which steps match your current habits?',
+              'Which steps would you normally skip?',
+              'How would a protocol help when you\'re stressed or time-pressured?'
+            ],
+            evaluation: {
+              minWords: 70,
+              depthIndicators: [
+                { pattern: '(I|my|me)', label: 'Personal reflection', points: 5 },
+                { pattern: '(step|protocol|process)', label: 'Protocol awareness', points: 5 },
+                { pattern: '(usually|normally|typically)', label: 'Current practice', points: 4 },
+                { pattern: '(new|different|add)', label: 'Growth mindset', points: 4 },
+                { pattern: '(systematic|consistent|reliable)', label: 'System value', points: 4 }
+              ],
+              maxScore: 25
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'prot-scenario-3',
+            scenario: 'Your company is standardizing on the Rapid Acquisition Protocol for all engineers. You\'re asked to create training materials. Some engineers argue it\'s "too structured" for creative work.',
+            question: 'How would you address the "too structured" objection while explaining the value of systematic acquisition?',
+            evaluation: {
+              keywords: ['creative', 'structure', 'freedom', 'flexible', 'baseline', 'adapt', 'systematic', 'time', 'focus', 'judgment'],
+              minWords: 50,
+              pointsPerKeyword: 3,
+              depthBonus: 15
+            },
+            modelAnswer: 'Structure enables creativity, it doesn\'t limit it. The protocol handles the BORING parts systematically (reconnaissance, documentation) so you can focus creative energy on the INTERESTING parts (design decisions, optimization). It\'s a checklist, not a cage—skip steps when appropriate, but know what you\'re skipping. Without structure, you waste creativity on reinventing how to learn a codebase every time.',
+            points: 30
+          }
+        ]
+      });
+      protocolSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Senior Ch 1: Stone');
     });
   </script>
 </body>
