@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <link rel="stylesheet" href="../../shared/css/activity-carousel.css" />
   </head>
   <body data-course="senior" data-lesson="ch0-origins">
     <header class="header">
@@ -151,21 +152,11 @@
           </div>
         </div>
 
-        <div class="quiz-card" id="multiplier-quiz">
-          <div class="quiz-header">
-            <h4>📝 Check Your Understanding</h4>
-            <div class="quiz-progress">
-              <span class="answered">0</span>/<span class="total">3</span>
-              answered
-              <span class="score"></span>
-            </div>
-          </div>
-          <div class="quiz-carousel"></div>
-          <div class="quiz-nav">
-            <button class="quiz-nav-btn prev" disabled>← Prev</button>
-            <div class="quiz-dots"></div>
-            <button class="quiz-nav-btn next">Next →</button>
-          </div>
+        <!-- Activity Carousels for Story 1: The Multiplier Effect -->
+        <div class="activity-carousels" data-story="multiplier-story">
+          <div id="multiplier-comprehension" class="carousel-container"></div>
+          <div id="multiplier-application" class="carousel-container"></div>
+          <div id="multiplier-synthesis" class="carousel-container"></div>
         </div>
       </section>
 
@@ -255,21 +246,11 @@
           </div>
         </div>
 
-        <div class="quiz-card" id="paradigm-quiz">
-          <div class="quiz-header">
-            <h4>📝 Check Your Understanding</h4>
-            <div class="quiz-progress">
-              <span class="answered">0</span>/<span class="total">3</span>
-              answered
-              <span class="score"></span>
-            </div>
-          </div>
-          <div class="quiz-carousel"></div>
-          <div class="quiz-nav">
-            <button class="quiz-nav-btn prev" disabled>← Prev</button>
-            <div class="quiz-dots"></div>
-            <button class="quiz-nav-btn next">Next →</button>
-          </div>
+        <!-- Activity Carousels for Story 2: The Paradigm Shift -->
+        <div class="activity-carousels" data-story="paradigm-story">
+          <div id="paradigm-comprehension" class="carousel-container"></div>
+          <div id="paradigm-application" class="carousel-container"></div>
+          <div id="paradigm-synthesis" class="carousel-container"></div>
         </div>
       </section>
 
@@ -359,21 +340,11 @@
           </div>
         </div>
 
-        <div class="quiz-card" id="strategy-quiz">
-          <div class="quiz-header">
-            <h4>📝 Check Your Understanding</h4>
-            <div class="quiz-progress">
-              <span class="answered">0</span>/<span class="total">3</span>
-              answered
-              <span class="score"></span>
-            </div>
-          </div>
-          <div class="quiz-carousel"></div>
-          <div class="quiz-nav">
-            <button class="quiz-nav-btn prev" disabled>← Prev</button>
-            <div class="quiz-dots"></div>
-            <button class="quiz-nav-btn next">Next →</button>
-          </div>
+        <!-- Activity Carousels for Story 3: Strategic AI Integration -->
+        <div class="activity-carousels" data-story="strategy-story">
+          <div id="strategy-comprehension" class="carousel-container"></div>
+          <div id="strategy-application" class="carousel-container"></div>
+          <div id="strategy-synthesis" class="carousel-container"></div>
         </div>
       </section>
 
@@ -423,6 +394,20 @@
     <script src="../../shared/js/interactive/audio-engine.js"></script>
     <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
     <script src="../../shared/js/interactive/quiz-system.js"></script>
+
+    <!-- Activity Carousel System -->
+    <script src="../../shared/js/interactive/base-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+    <script src="../../shared/js/interactive/activity-carousel.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
@@ -642,21 +627,960 @@
         });
 
         // ============================================
-        // INITIALIZE QUIZZES
+        // ACTIVITY CAROUSELS
         // ============================================
 
-        const storyToQuiz = {
-          "multiplier-story": "multiplier-quiz",
-          "paradigm-story": "paradigm-quiz",
-          "strategy-story": "strategy-quiz",
-        };
+        // ----------------------------------------
+        // STORY 1: THE MULTIPLIER EFFECT
+        // ----------------------------------------
 
-        pageData.quizzes.forEach((quiz) => {
-          const containerId = storyToQuiz[quiz.storyId];
-          if (!containerId) return;
-
-          new Quiz(containerId, quiz.questions);
+        // Comprehension Carousel - The Multiplier Effect
+        const multiplierComprehension = new ActivityCarousel('multiplier-comprehension', {
+          type: 'comprehension',
+          sectionId: 'multiplier',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'mult-quiz-1',
+              question: 'What fundamentally distinguishes a senior engineer using AI from a junior engineer using AI?',
+              options: [
+                'Seniors use more expensive AI models',
+                'Juniors ask "how to do X"; seniors direct AI with architectural intent and validate instantly',
+                'Seniors spend more time prompting',
+                'Juniors get faster responses from AI'
+              ],
+              correct: 1,
+              explanation: 'The key difference is intent and validation speed. Seniors direct AI with design vision and can validate output instantly because they\'ve seen patterns thousands of times before.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'mult-tf-1',
+              statement: 'The "multiplier effect" means AI adds to your capabilities linearly (e.g., 10 years experience + AI = 11 years equivalent).',
+              correct: false,
+              explanation: 'The multiplier effect is exponential, not linear. Experience × AI = unprecedented capability. Your pattern recognition doesn\'t just get slightly faster—it becomes a force multiplier.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'quiz',
+              id: 'mult-quiz-2',
+              question: 'Why can senior engineers validate AI output faster than junior engineers?',
+              options: [
+                'They have faster computers',
+                'AI gives them preferential treatment',
+                'Years of pattern recognition let them spot issues at a glance',
+                'They skip validation entirely'
+              ],
+              correct: 2,
+              explanation: 'Senior engineers have internalized thousands of patterns over years. They can immediately recognize when AI output matches or violates known architectural patterns.',
+              points: 10
+            },
+            {
+              type: 'fill-blank',
+              id: 'mult-fill-1',
+              statement: 'A junior with AI is a faster ___. A senior with AI is an entirely new category of engineer.',
+              correctAnswers: ['junior', 'beginner', 'novice'],
+              caseSensitive: false,
+              hints: ['What does "junior + AI" produce at a basic level?'],
+              explanation: 'Juniors use AI to speed up junior-level work. Seniors use AI to amplify expert-level architectural thinking—a qualitative difference.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'mult-tf-2',
+              statement: 'AI will eventually replace the need for senior engineers because it can learn from their patterns.',
+              correct: false,
+              explanation: 'AI amplifies senior engineers rather than replacing them. The combination of human judgment, contextual understanding, and AI velocity creates unprecedented capability that neither achieves alone.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'quiz',
+              id: 'mult-quiz-3',
+              question: 'According to the multiplier effect, what is the formula for AI-amplified senior impact?',
+              options: [
+                'Experience + AI = Better Developer',
+                'Experience × AI = Unprecedented Capability',
+                'AI ÷ Experience = Efficiency',
+                'Experience - AI overhead = Net Gain'
+              ],
+              correct: 1,
+              explanation: 'The multiplier effect uses multiplication, not addition. 10 years of experience × AI amplification = 100x impact, not 10+1=11.',
+              points: 10
+            }
+          ]
         });
+        multiplierComprehension.init();
+
+        // Application Carousel - The Multiplier Effect
+        const multiplierApplication = new ActivityCarousel('multiplier-application', {
+          type: 'application',
+          sectionId: 'multiplier',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'mult-seq-1',
+              instruction: 'Order these steps for how a senior engineer approaches an AI-assisted code generation task:',
+              items: [
+                { id: 's1', text: 'Define the architectural approach and constraints' },
+                { id: 's2', text: 'Direct AI with specific implementation requirements' },
+                { id: 's3', text: 'Validate output against known patterns instantly' },
+                { id: 's4', text: 'Iterate with precise architectural feedback' },
+                { id: 's5', text: 'Integrate the validated code into the system' }
+              ],
+              correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+              hints: {
+                partial: 'Seniors start with design vision before asking AI to implement.',
+                wrong: 'Think about the order: design first, then direct, then validate.'
+              },
+              explanation: 'Seniors lead with architectural intent, then direct AI, validate quickly using pattern recognition, iterate with precise feedback, and finally integrate.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'mult-dd-1',
+              instruction: 'Match each AI interaction style to the appropriate engineer level:',
+              items: [
+                { id: 'i1', text: '"How do I implement a cache?"' },
+                { id: 'i2', text: '"Implement Redis cache with 5-min TTL, LRU eviction, handle connection failures gracefully"' },
+                { id: 'i3', text: '"Debug this error for me"' },
+                { id: 'i4', text: '"Trace this race condition—I suspect it\'s in the order fulfillment saga between payment and inventory"' }
+              ],
+              zones: [
+                { id: 'z1', label: 'Junior AI Usage', correct: ['i1', 'i3'] },
+                { id: 'z2', label: 'Senior AI Usage', correct: ['i2', 'i4'] }
+              ],
+              explanation: 'Seniors provide architectural context and specific constraints. Juniors ask general "how-to" questions. The difference is intent and specificity.',
+              points: 20
+            },
+            {
+              type: 'connect-edges',
+              id: 'mult-connect-1',
+              instruction: 'Connect each senior capability to how AI amplifies it:',
+              nodes: [
+                { id: 'pattern', label: '🧠 Pattern Recognition' },
+                { id: 'system', label: '🏗️ System Design' },
+                { id: 'debug', label: '🐛 Debugging Intuition' },
+                { id: 'speed', label: '⚡ AI Velocity' },
+                { id: 'scale', label: '📈 Scaled Analysis' },
+                { id: 'impl', label: '🔧 Rapid Implementation' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'pattern', target: 'speed' },
+                  { source: 'system', target: 'impl' },
+                  { source: 'debug', target: 'scale' }
+                ]
+              },
+              explanation: 'Pattern recognition + AI velocity = instant validation. System design + rapid implementation = architectural vision at AI speed. Debugging intuition + scaled analysis = trace issues across entire systems.',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'mult-quiz-apply-1',
+              question: 'Your team asks you to review AI-generated code for a new microservice. What\'s the senior multiplier approach?',
+              options: [
+                'Read every line carefully like any code review',
+                'Focus on architectural patterns, boundaries, and error handling—let AI validate syntax',
+                'Reject AI code and rewrite it yourself',
+                'Auto-approve since AI doesn\'t make mistakes'
+              ],
+              correct: 1,
+              explanation: 'Seniors leverage their pattern recognition for high-value validation (architecture, boundaries, edge cases) while AI handles low-value verification (syntax, formatting).',
+              points: 15
+            },
+            {
+              type: 'sequence',
+              id: 'mult-seq-2',
+              instruction: 'Order the evolution from "junior + AI" to "new category engineer":',
+              items: [
+                { id: 'e1', text: 'Junior asks AI basic implementation questions' },
+                { id: 'e2', text: 'Developer gains experience and patterns' },
+                { id: 'e3', text: 'Senior directs AI with architectural intent' },
+                { id: 'e4', text: 'Experience × AI creates multiplier effect' },
+                { id: 'e5', text: 'Engineer becomes a new category of capability' }
+              ],
+              correctOrder: ['e1', 'e2', 'e3', 'e4', 'e5'],
+              hints: {
+                partial: 'This is a progression from novice AI usage to amplified capability.',
+                wrong: 'Think about the journey: learn, gain experience, then amplify.'
+              },
+              explanation: 'The journey goes from basic AI usage through experience accumulation to architectural direction, creating the multiplier effect and a new category of engineer.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'mult-dd-2',
+              instruction: 'Categorize these activities by who gains more value from AI assistance:',
+              items: [
+                { id: 'a1', text: 'Spotting SOLID violations in generated code' },
+                { id: 'a2', text: 'Learning what a REST API is' },
+                { id: 'a3', text: 'Directing implementation of complex state machine' },
+                { id: 'a4', text: 'Understanding basic async/await syntax' }
+              ],
+              zones: [
+                { id: 'senior', label: 'Senior-Level AI Amplification', correct: ['a1', 'a3'] },
+                { id: 'junior', label: 'Junior-Level AI Assistance', correct: ['a2', 'a4'] }
+              ],
+              explanation: 'Seniors amplify high-value architectural judgment. Juniors get assistance with learning fundamentals. Both benefit, but the nature of value is different.',
+              points: 20
+            }
+          ]
+        });
+        multiplierApplication.init();
+
+        // Synthesis Carousel - The Multiplier Effect
+        const multiplierSynthesis = new ActivityCarousel('multiplier-synthesis', {
+          type: 'synthesis',
+          sectionId: 'multiplier',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'mult-scenario-1',
+              scenario: 'You\'re a senior engineer joining a new team. They have 50,000 lines of legacy code with sparse documentation. The CTO wants you productive in 2 weeks. Your junior colleagues took 2 months to get up to speed.',
+              question: 'How would you apply the multiplier effect to accelerate your onboarding while demonstrating the "new category engineer" capability?',
+              evaluation: {
+                keywords: ['AI', 'pattern', 'architecture', 'dependency', 'trace', 'design', 'experience', 'validate', 'direct', 'map'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Use AI to map dependencies and trace data flows while your experience identifies architectural patterns. Direct AI to generate documentation of what you observe. Validate AI output against your pattern recognition—you\'ll spot anti-patterns juniors would miss. Your experience guides the exploration while AI provides velocity.',
+              points: 30
+            },
+            {
+              type: 'prediction',
+              id: 'mult-predict-1',
+              setup: {
+                type: 'text',
+                content: 'A company replaces all senior engineers with juniors who have AI access, assuming AI eliminates the need for experience.'
+              },
+              question: 'What specific technical outcomes would you predict within 6 months?',
+              correctAnswer: 'architectural drift',
+              acceptableVariants: ['technical debt', 'architecture problems', 'system degradation', 'design issues', 'inconsistency', 'poor architecture'],
+              explanation: 'Without senior pattern recognition, AI-generated code will accumulate architectural inconsistencies. Juniors can\'t validate against patterns they haven\'t learned. The codebase will drift into technical debt faster than AI can generate it.',
+              commonMistakes: {
+                'faster development': 'Initial velocity might increase, but without architectural guidance, technical debt will explode.',
+                'better code': 'AI generates syntactically correct code, but architectural coherence requires human judgment.'
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'mult-scenario-2',
+              scenario: 'A junior engineer on your team has been using AI extensively and believes they can now handle any task. They volunteer to architect a new payment system, saying "AI knows more about payment systems than I do."',
+              question: 'How would you mentor this junior about the difference between AI assistance and the multiplier effect?',
+              evaluation: {
+                keywords: ['experience', 'pattern', 'judgment', 'context', 'risk', 'architect', 'validate', 'learn', 'multiplier', 'intent'],
+                minWords: 50,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Explain that AI provides information, but architectural decisions require contextual judgment built from experience. Payment systems involve compliance, security, and edge cases that require pattern recognition AI can\'t replicate. Pair with them—let AI draft, but you both validate. Show them the multiplier: your experience guides AI toward robust solutions they\'d miss.',
+              points: 30
+            },
+            {
+              type: 'reflection',
+              id: 'mult-reflect-1',
+              prompt: 'Think about your own technical experience. What specific patterns, anti-patterns, or hard-won lessons do you possess that would take years to explain to an AI but can be applied instantly in validation?',
+              thinkingPrompts: [
+                'What\'s a mistake you made early in your career that you now spot instantly?',
+                'What architectural smell can you detect that a junior would miss?',
+                'How does your domain knowledge accelerate problem-solving?'
+              ],
+              evaluation: {
+                minWords: 60,
+                depthIndicators: [
+                  { pattern: '(I|my|me)', label: 'Personal experience', points: 5 },
+                  { pattern: '(pattern|recognize|spot|detect)', label: 'Pattern recognition', points: 5 },
+                  { pattern: '(mistake|learned|failure)', label: 'Hard-won lessons', points: 5 },
+                  { pattern: '(architecture|design|system)', label: 'Technical depth', points: 4 },
+                  { pattern: '(years|time|experience)', label: 'Experience value', points: 3 }
+                ],
+                maxScore: 25
+              },
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'mult-predict-2',
+              setup: {
+                type: 'code',
+                language: 'python',
+                code: '# AI-generated code for a senior to review\nclass OrderService:\n    def process_order(self, order):\n        payment = self.charge_payment(order)\n        inventory = self.reserve_inventory(order)\n        notification = self.send_confirmation(order)\n        return {"payment": payment, "inventory": inventory}'
+              },
+              question: 'What architectural issue would a senior engineer spot immediately that a junior might miss?',
+              correctAnswer: 'no transaction',
+              acceptableVariants: ['transaction', 'atomicity', 'rollback', 'saga', 'compensation', 'distributed transaction', 'no error handling', 'failure handling'],
+              explanation: 'A senior immediately spots the lack of transaction boundaries. What if inventory reservation fails after payment succeeds? No rollback mechanism exists. This requires the saga pattern or compensation logic—patterns seniors recognize instantly from experience.',
+              commonMistakes: {
+                'looks fine': 'The syntax is correct, but distributed operations need compensation patterns.',
+                'missing validation': 'Valid concern, but the critical architectural issue is atomicity across services.'
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'mult-scenario-3',
+              scenario: 'Your company is evaluating two candidates: a 15-year veteran who is skeptical of AI, and a 3-year developer who uses AI extensively. The CTO asks for your input on who would be more valuable in an AI-augmented team.',
+              question: 'Using the multiplier effect framework, what would you advise and what specific value would each candidate bring?',
+              evaluation: {
+                keywords: ['multiplier', 'experience', 'pattern', 'amplify', 'direct', 'validate', 'learn', 'velocity', 'judgment', 'potential'],
+                minWords: 60,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'The veteran has higher multiplier potential—15 years of patterns can be amplified immediately once they adopt AI. The 3-year dev has AI fluency but less to multiply. Ideal: help the veteran embrace AI (high immediate ROI) while the junior builds experience to multiply later. Both valuable, but the veteran + AI coaching is a bigger immediate win.',
+              points: 30
+            }
+          ]
+        });
+        multiplierSynthesis.init();
+
+        // ----------------------------------------
+        // STORY 2: THE PARADIGM SHIFT
+        // ----------------------------------------
+
+        // Comprehension Carousel - The Paradigm Shift
+        const paradigmComprehension = new ActivityCarousel('paradigm-comprehension', {
+          type: 'comprehension',
+          sectionId: 'paradigm',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'para-quiz-1',
+              question: 'In the traditional senior engineer model, how is value primarily measured?',
+              options: [
+                'Team amplification and scaled impact',
+                'Individual output: code written, bugs fixed, features shipped',
+                'AI prompts per day',
+                'Meetings facilitated'
+              ],
+              correct: 1,
+              explanation: 'The traditional model values individual output—how much complex code you write, how many bugs you fix. This "doing" model is being transformed by AI into a "directing" model.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'para-tf-1',
+              statement: 'In the AI-amplified paradigm, being the bottleneck for hard problems is still the most valuable senior trait.',
+              correct: false,
+              explanation: 'The old model valued being the bottleneck—the one person who could solve hard problems. The new model values team amplification—how many people can you make more effective? Bottlenecks limit scale.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'para-fill-1',
+              statement: 'The paradigm shift transforms the senior role from "doing" to ___.',
+              correctAnswers: ['directing', 'guiding', 'leading', 'orchestrating', 'architecting'],
+              caseSensitive: false,
+              hints: ['What verb describes guiding AI and team rather than coding yourself?'],
+              explanation: 'The new paradigm has seniors directing—providing architectural intent while AI and team members handle implementation. Value comes from amplification, not individual output.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'para-quiz-2',
+              question: 'What does "mentoring = teaching AI leverage" mean in the new paradigm?',
+              options: [
+                'AI should mentor junior developers',
+                'Seniors teach juniors to see AI as a thinking partner and force multiplier',
+                'Juniors should teach seniors about AI tools',
+                'Mentoring is no longer needed because of AI'
+              ],
+              correct: 1,
+              explanation: 'Mentoring evolves from pairing on code to teaching juniors how to leverage AI effectively. Help them understand how to direct AI rather than just query it.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'para-tf-2',
+              statement: 'In the AI-amplified model, code review shifts from line-by-line verification to architectural validation.',
+              correct: true,
+              explanation: 'Seniors review at the architectural level (design patterns, boundaries, error handling) while AI can catch syntax and formatting issues. This amplifies review capacity.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'para-fill-2',
+              statement: 'In the new model, value equals team ___: how many problems can you multiply your problem-solving across?',
+              correctAnswers: ['amplification', 'multiplication', 'leverage', 'scaling'],
+              caseSensitive: false,
+              hints: ['Think about spreading impact across more people'],
+              explanation: 'Team amplification means your impact scales through others. Instead of solving 5 problems yourself, you help 10 people each solve 5 problems—50x impact.',
+              points: 10
+            }
+          ]
+        });
+        paradigmComprehension.init();
+
+        // Application Carousel - The Paradigm Shift
+        const paradigmApplication = new ActivityCarousel('paradigm-application', {
+          type: 'application',
+          sectionId: 'paradigm',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'para-seq-1',
+              instruction: 'Order the evolution of the senior engineer role from traditional to AI-amplified:',
+              items: [
+                { id: 'e1', text: 'Individual contributor solving hard problems alone' },
+                { id: 'e2', text: 'Bottleneck for complex decisions' },
+                { id: 'e3', text: 'AI adoption increases implementation velocity' },
+                { id: 'e4', text: 'Shift to directing and architectural guidance' },
+                { id: 'e5', text: 'Team amplifier with scaled impact' }
+              ],
+              correctOrder: ['e1', 'e2', 'e3', 'e4', 'e5'],
+              hints: {
+                partial: 'The progression moves from individual doing to team amplification.',
+                wrong: 'Start with the traditional model, then show how AI changes it.'
+              },
+              explanation: 'The evolution: individual doer → decision bottleneck → AI speeds implementation → shift to directing → team amplification. Each step builds on the previous.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'para-dd-1',
+              instruction: 'Categorize these activities by which paradigm they belong to:',
+              items: [
+                { id: 'a1', text: 'Writing the most complex code yourself' },
+                { id: 'a2', text: 'Teaching 5 engineers to direct AI effectively' },
+                { id: 'a3', text: 'Being the only one who can debug production issues' },
+                { id: 'a4', text: 'Reviewing architecture while AI validates syntax' },
+                { id: 'a5', text: 'Measuring success by lines of code written' },
+                { id: 'a6', text: 'Measuring success by team velocity improvement' }
+              ],
+              zones: [
+                { id: 'old', label: 'Traditional Model (Doing)', correct: ['a1', 'a3', 'a5'] },
+                { id: 'new', label: 'AI-Amplified Model (Directing)', correct: ['a2', 'a4', 'a6'] }
+              ],
+              explanation: 'Traditional: individual output, bottleneck status, code quantity. AI-amplified: team teaching, architectural focus, team velocity.',
+              points: 20
+            },
+            {
+              type: 'connect-edges',
+              id: 'para-connect-1',
+              instruction: 'Connect each traditional metric to its AI-amplified equivalent:',
+              nodes: [
+                { id: 'loc', label: '📝 Lines of Code' },
+                { id: 'bugs', label: '🐛 Bugs Fixed' },
+                { id: 'bottleneck', label: '🚧 Decision Bottleneck' },
+                { id: 'velocity', label: '⚡ Team Velocity' },
+                { id: 'prevent', label: '🛡️ Issues Prevented' },
+                { id: 'amplify', label: '📈 People Amplified' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'loc', target: 'velocity' },
+                  { source: 'bugs', target: 'prevent' },
+                  { source: 'bottleneck', target: 'amplify' }
+                ]
+              },
+              explanation: 'LOC → Team velocity (output scales). Bugs fixed → Issues prevented (proactive). Bottleneck → Amplifier (remove yourself as constraint).',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'para-quiz-apply-1',
+              question: 'Your manager measures your performance by PRs merged per sprint. How would you reframe this using the paradigm shift?',
+              options: [
+                'Ask for more complex PRs to show your value',
+                'Propose measuring team PRs/sprint and architectural quality improvements',
+                'Merge more small PRs to increase the count',
+                'Explain that senior engineers shouldn\'t be measured'
+              ],
+              correct: 1,
+              explanation: 'The paradigm shift means individual output metrics (your PRs) become team amplification metrics (team PRs, quality improvements). Your value is in making others more effective.',
+              points: 15
+            },
+            {
+              type: 'sequence',
+              id: 'para-seq-2',
+              instruction: 'Order the steps to transition your code review approach from traditional to AI-amplified:',
+              items: [
+                { id: 'r1', text: 'Currently reviewing every line for syntax and logic' },
+                { id: 'r2', text: 'Identify what AI tools can automate (linting, formatting)' },
+                { id: 'r3', text: 'Focus your review on architectural decisions and patterns' },
+                { id: 'r4', text: 'Train team on AI-assisted self-review before human review' },
+                { id: 'r5', text: 'Review 3x more PRs at the architectural level' }
+              ],
+              correctOrder: ['r1', 'r2', 'r3', 'r4', 'r5'],
+              hints: {
+                partial: 'Move from detailed to strategic review while leveraging AI.',
+                wrong: 'Start with current state, identify AI opportunities, then scale up.'
+              },
+              explanation: 'Transition: current state → identify AI automation → elevate your focus → train team on self-review → scale your architectural impact.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'para-dd-2',
+              instruction: 'Match each scenario to the appropriate paradigm response:',
+              items: [
+                { id: 's1', text: 'Junior asks you to write a complex algorithm' },
+                { id: 's2', text: 'Sprint needs 10 features implemented' },
+                { id: 's3', text: 'Production bug needs immediate fix' },
+                { id: 's4', text: 'New team member needs onboarding' }
+              ],
+              zones: [
+                { id: 'direct', label: 'Directing (Pair + AI)', correct: ['s1', 's3'] },
+                { id: 'amplify', label: 'Amplifying (Enable team)', correct: ['s2', 's4'] }
+              ],
+              explanation: 'Direct: pair on complex/urgent work with AI assistance. Amplify: enable team to deliver features and onboard with AI leverage.',
+              points: 20
+            }
+          ]
+        });
+        paradigmApplication.init();
+
+        // Synthesis Carousel - The Paradigm Shift
+        const paradigmSynthesis = new ActivityCarousel('paradigm-synthesis', {
+          type: 'synthesis',
+          sectionId: 'paradigm',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'para-scenario-1',
+              scenario: 'Your company\'s performance review system still measures senior engineers on individual contribution metrics: commits, PRs, tickets closed. Management is skeptical that "soft skills" like team amplification can be measured.',
+              question: 'How would you propose measurable metrics that capture the paradigm shift value while being concrete enough for management?',
+              evaluation: {
+                keywords: ['team', 'velocity', 'amplification', 'multiply', 'measure', 'metric', 'impact', 'scale', 'enable', 'architecture'],
+                minWords: 50,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Propose: Team velocity improvement (before/after your involvement), PR cycle time reduction, number of engineers unblocked, architectural decisions documented and adopted, AI adoption rate on team. These are measurable outcomes of amplification—concrete numbers that show your impact multiplied across the team.',
+              points: 30
+            },
+            {
+              type: 'prediction',
+              id: 'para-predict-1',
+              setup: {
+                type: 'text',
+                content: 'A senior engineer resists the paradigm shift, continuing to be the team\'s bottleneck for all complex decisions while refusing to teach AI leverage to juniors.'
+              },
+              question: 'What happens to this engineer\'s relative value over 2 years as AI capabilities improve?',
+              correctAnswer: 'decreases',
+              acceptableVariants: ['diminishes', 'reduces', 'declines', 'falls', 'drops', 'less valuable', 'obsolete'],
+              explanation: 'As AI improves, juniors with AI can handle increasingly complex tasks. A bottleneck who doesn\'t multiply their value becomes a constraint on team velocity. Their relative value decreases as the team could move faster without the bottleneck.',
+              commonMistakes: {
+                'stays same': 'AI is improving rapidly—standing still means falling behind.',
+                'increases': 'Bottlenecks don\'t scale. AI + juniors will eventually route around them.'
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'para-scenario-2',
+              scenario: 'You\'ve successfully shifted to the directing paradigm. Your team\'s velocity has tripled, but your personal commit count has dropped by 80%. A VP who doesn\'t understand the paradigm shift questions your productivity in a meeting.',
+              question: 'How do you explain the paradigm shift and demonstrate your actual value contribution?',
+              evaluation: {
+                keywords: ['team', 'velocity', 'amplification', 'multiply', 'direct', 'architecture', 'enable', 'scale', 'outcome', 'impact'],
+                minWords: 50,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Reframe: "My commits are down because I\'ve shifted from doing to directing. Here\'s the impact: team velocity tripled, PR cycle time halved, zero production incidents this quarter, and I\'ve enabled 5 engineers to handle complexity they couldn\'t before. My value isn\'t in my commits—it\'s in the team\'s outcomes."',
+              points: 30
+            },
+            {
+              type: 'reflection',
+              id: 'para-reflect-1',
+              prompt: 'Reflect on your current role. What percentage of your time is spent "doing" vs "directing"? What would need to change in your work environment to shift more toward amplification?',
+              thinkingPrompts: [
+                'What tasks do you do that could be delegated with AI assistance?',
+                'What architectural decisions are you making that could enable others?',
+                'What\'s preventing you from being more of an amplifier?'
+              ],
+              evaluation: {
+                minWords: 60,
+                depthIndicators: [
+                  { pattern: '(I|my|me)', label: 'Personal reflection', points: 5 },
+                  { pattern: '(doing|directing|amplify)', label: 'Paradigm awareness', points: 5 },
+                  { pattern: '(change|shift|transition)', label: 'Change orientation', points: 4 },
+                  { pattern: '(team|enable|help)', label: 'Team focus', points: 4 },
+                  { pattern: '(\\d+%|percent)', label: 'Quantified assessment', points: 4 }
+                ],
+                maxScore: 25
+              },
+              points: 25
+            },
+            {
+              type: 'scenario',
+              id: 'para-scenario-3',
+              scenario: 'You\'re leading a team of 6 engineers with mixed experience levels. The company wants to double feature output without hiring. Traditional approach: you work overtime and push the team harder.',
+              question: 'Design a paradigm-shift strategy to double output through amplification rather than increased effort.',
+              evaluation: {
+                keywords: ['AI', 'amplify', 'enable', 'direct', 'architecture', 'automate', 'mentor', 'velocity', 'leverage', 'multiply'],
+                minWords: 60,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Strategy: 1) Identify bottlenecks in current workflow. 2) Train all engineers on AI-assisted development—pair with each to show directive prompting. 3) Create architectural templates AI can use to generate boilerplate. 4) Shift my role from coding to architecture review and AI guidance. 5) Measure team velocity weekly, iterate on what amplifies most.',
+              points: 30
+            },
+            {
+              type: 'prediction',
+              id: 'para-predict-2',
+              setup: {
+                type: 'text',
+                content: 'A tech lead implements the paradigm shift: stops coding entirely, focuses on architecture docs, team enablement, and AI training. The team\'s velocity increases 50% in 3 months.'
+              },
+              question: 'What risk should this tech lead monitor to ensure sustainable amplification?',
+              correctAnswer: 'disconnect',
+              acceptableVariants: ['disconnected', 'out of touch', 'relevance', 'credibility', 'skills', 'hands-on', 'technical depth', 'atrophy'],
+              explanation: 'The risk is becoming disconnected from the technical reality. Pure directing without any hands-on work can lead to unrealistic expectations and loss of team credibility. Balance directing with selective deep-dives to stay grounded.',
+              commonMistakes: {
+                'burnout': 'They\'re doing less hands-on work, so burnout risk actually decreases.',
+                'team resentment': 'If velocity is up 50%, the team is likely happy with the change.'
+              },
+              points: 20
+            }
+          ]
+        });
+        paradigmSynthesis.init();
+
+        // ----------------------------------------
+        // STORY 3: STRATEGIC AI INTEGRATION
+        // ----------------------------------------
+
+        // Comprehension Carousel - Strategic AI Integration
+        const strategyComprehension = new ActivityCarousel('strategy-comprehension', {
+          type: 'comprehension',
+          sectionId: 'strategy',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'strat-quiz-1',
+              question: 'What does "Rapid Acquisition" (Strategy 1) refer to in this course?',
+              options: [
+                'Quickly purchasing AI tools',
+                'Understanding any codebase in hours instead of weeks',
+                'Rapidly hiring AI-skilled engineers',
+                'Fast acquisition of stock options'
+              ],
+              correct: 1,
+              explanation: 'Rapid Acquisition is the ability to understand any codebase in hours, not weeks. AI maps dependencies and traces data flows while your experience navigates and interprets the patterns.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'strat-tf-1',
+              statement: 'System-Wide Debugging (Strategy 2) is about fixing individual bugs faster with AI assistance.',
+              correct: false,
+              explanation: 'System-Wide Debugging is about tracing bugs across service boundaries—root cause analysis at scale. It\'s about turning days of distributed system investigation into hours, not just speeding up single-bug fixes.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'strat-fill-1',
+              statement: 'In Platform Integration (Strategy 3), you design ___ and error handling while AI generates the glue code.',
+              correctAnswers: ['contracts', 'interfaces', 'APIs', 'boundaries', 'schemas'],
+              caseSensitive: false,
+              hints: ['What defines how systems communicate?'],
+              explanation: 'You focus on contracts (the what and how of communication) and error handling strategies (what happens when things fail). AI handles the implementation boilerplate.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'strat-quiz-2',
+              question: 'What is the essence of Architectural Direction (Strategy 4)?',
+              options: [
+                'Let AI make all architecture decisions',
+                'Express architectural intent, let AI draft implementation',
+                'Write detailed architecture docs before any AI involvement',
+                'Direct AI to copy existing architectures'
+              ],
+              correct: 1,
+              explanation: 'Architectural Direction means you express the intent and make design decisions while AI handles execution velocity. Your design vision, AI\'s implementation speed.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'strat-tf-2',
+              statement: 'The four strategies work independently—you typically use one at a time for specific tasks.',
+              correct: false,
+              explanation: 'The four strategies often combine. Rapid Acquisition feeds into System-Wide Debugging (understand the system, then debug it). Platform Integration requires Architectural Direction. They\'re interconnected tools.',
+              requireReasoning: true,
+              minReasoningWords: 10,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'strat-fill-2',
+              statement: 'All four strategies share a common pattern: your ___ guides while AI provides velocity.',
+              correctAnswers: ['experience', 'expertise', 'judgment', 'knowledge', 'intuition'],
+              caseSensitive: false,
+              hints: ['What do you bring that AI cannot?'],
+              explanation: 'The common thread: your experience/judgment sets direction, AI provides execution speed. This is the amplification point—human insight + AI velocity.',
+              points: 10
+            }
+          ]
+        });
+        strategyComprehension.init();
+
+        // Application Carousel - Strategic AI Integration
+        const strategyApplication = new ActivityCarousel('strategy-application', {
+          type: 'application',
+          sectionId: 'strategy',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'strat-seq-1',
+              instruction: 'Order the steps of Rapid Acquisition when joining a new codebase:',
+              items: [
+                { id: 'r1', text: 'Direct AI to map high-level dependencies' },
+                { id: 'r2', text: 'Use experience to identify critical paths and patterns' },
+                { id: 'r3', text: 'Have AI trace data flows through key features' },
+                { id: 'r4', text: 'Validate AI findings against your architectural intuition' },
+                { id: 'r5', text: 'Generate documentation of what you\'ve learned' }
+              ],
+              correctOrder: ['r1', 'r2', 'r3', 'r4', 'r5'],
+              hints: {
+                partial: 'Start with broad AI mapping, then apply your experience to focus.',
+                wrong: 'Think: AI provides the map, you navigate with experience.'
+              },
+              explanation: 'Map (AI) → Navigate (experience) → Trace (AI) → Validate (experience) → Document (AI). The interplay of AI breadth and experience depth.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'strat-dd-1',
+              instruction: 'Match each scenario to the primary strategy you would use:',
+              items: [
+                { id: 's1', text: 'New team member needs to understand payment flow' },
+                { id: 's2', text: 'Orders failing intermittently across services' },
+                { id: 's3', text: 'Building connector to new shipping provider' },
+                { id: 's4', text: 'Redesigning the notification system' }
+              ],
+              zones: [
+                { id: 'rapid', label: '🗺️ Rapid Acquisition', correct: ['s1'] },
+                { id: 'debug', label: '🐛 System-Wide Debugging', correct: ['s2'] },
+                { id: 'platform', label: '🔌 Platform Integration', correct: ['s3'] },
+                { id: 'arch', label: '📐 Architectural Direction', correct: ['s4'] }
+              ],
+              explanation: 'Acquisition for understanding, Debugging for tracing issues, Integration for connections, Direction for design work.',
+              points: 20
+            },
+            {
+              type: 'connect-edges',
+              id: 'strat-connect-1',
+              instruction: 'Connect each strategy to its key AI capability:',
+              nodes: [
+                { id: 'rapid', label: '🗺️ Rapid Acquisition' },
+                { id: 'debug', label: '🐛 System Debugging' },
+                { id: 'platform', label: '🔌 Platform Integration' },
+                { id: 'arch', label: '📐 Architectural Direction' },
+                { id: 'map', label: '📊 Dependency Mapping' },
+                { id: 'trace', label: '🔍 Log/Trace Analysis' },
+                { id: 'glue', label: '🔧 Boilerplate Generation' },
+                { id: 'impl', label: '⚡ Implementation Drafting' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'rapid', target: 'map' },
+                  { source: 'debug', target: 'trace' },
+                  { source: 'platform', target: 'glue' },
+                  { source: 'arch', target: 'impl' }
+                ]
+              },
+              explanation: 'Each strategy leverages specific AI capabilities: mapping for acquisition, trace analysis for debugging, boilerplate for integration, implementation drafting for architecture.',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'strat-quiz-apply-1',
+              question: 'A production incident involves slow API responses. After initial triage, you suspect database connection pooling. Which strategy combination would you use?',
+              options: [
+                'Only Rapid Acquisition to understand the codebase',
+                'System-Wide Debugging to trace the issue, then Architectural Direction to fix it',
+                'Platform Integration to connect to a new database',
+                'Only Architectural Direction to redesign from scratch'
+              ],
+              correct: 1,
+              explanation: 'Debug to trace the actual cause across services (confirm the connection pool hypothesis), then Architectural Direction to design and implement the fix with AI velocity.',
+              points: 15
+            },
+            {
+              type: 'sequence',
+              id: 'strat-seq-2',
+              instruction: 'Order the System-Wide Debugging workflow for a distributed system issue:',
+              items: [
+                { id: 'd1', text: 'Use experience to form hypothesis about likely cause' },
+                { id: 'd2', text: 'Direct AI to analyze logs across affected services' },
+                { id: 'd3', text: 'Have AI trace the request path with correlation IDs' },
+                { id: 'd4', text: 'Validate findings against your system knowledge' },
+                { id: 'd5', text: 'Direct AI to generate fix based on your diagnosis' }
+              ],
+              correctOrder: ['d1', 'd2', 'd3', 'd4', 'd5'],
+              hints: {
+                partial: 'Start with your hypothesis, then use AI to validate.',
+                wrong: 'Experience guides the investigation, AI provides scale.'
+              },
+              explanation: 'Hypothesis (experience) → Analyze (AI) → Trace (AI) → Validate (experience) → Fix (AI). Your intuition directs AI\'s analytical power.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'strat-dd-2',
+              instruction: 'Categorize what YOU provide vs what AI provides in Platform Integration:',
+              items: [
+                { id: 'p1', text: 'Error handling strategy (retry, fallback, circuit breaker)' },
+                { id: 'p2', text: 'HTTP client boilerplate code' },
+                { id: 'p3', text: 'Contract/schema design decisions' },
+                { id: 'p4', text: 'Serialization/deserialization code' },
+                { id: 'p5', text: 'Edge case identification' },
+                { id: 'p6', text: 'Logging and monitoring scaffolding' }
+              ],
+              zones: [
+                { id: 'you', label: 'You Provide (Strategy)', correct: ['p1', 'p3', 'p5'] },
+                { id: 'ai', label: 'AI Provides (Implementation)', correct: ['p2', 'p4', 'p6'] }
+              ],
+              explanation: 'You provide strategy, design decisions, and edge case judgment. AI provides implementation boilerplate. This division maximizes the value of your experience.',
+              points: 20
+            }
+          ]
+        });
+        strategyApplication.init();
+
+        // Synthesis Carousel - Strategic AI Integration
+        const strategySynthesis = new ActivityCarousel('strategy-synthesis', {
+          type: 'synthesis',
+          sectionId: 'strategy',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'strat-scenario-1',
+              scenario: 'You\'ve just been assigned to lead the migration of a 10-year-old monolith to microservices. The codebase has 500K lines, minimal documentation, and the original developers have left. You have 6 months.',
+              question: 'Design a strategy using all four approaches to tackle this migration. Which do you start with and why?',
+              evaluation: {
+                keywords: ['rapid', 'acquisition', 'debug', 'integration', 'architecture', 'direction', 'map', 'trace', 'contract', 'dependency'],
+                minWords: 60,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Start with Rapid Acquisition—use AI to map dependencies, identify bounded contexts, trace data flows. Then System-Wide Debugging to understand how components actually interact (not just how they\'re supposed to). Use Architectural Direction to design service boundaries. Finally, Platform Integration for the actual service connections. The strategies layer: understand → validate → design → implement.',
+              points: 30
+            },
+            {
+              type: 'prediction',
+              id: 'strat-predict-1',
+              setup: {
+                type: 'text',
+                content: 'An engineer uses Architectural Direction without first using Rapid Acquisition on an unfamiliar codebase. They direct AI to implement a caching layer based on assumptions about the data model.'
+              },
+              question: 'What specific technical problem is most likely to occur?',
+              correctAnswer: 'cache invalidation',
+              acceptableVariants: ['stale data', 'consistency', 'wrong assumptions', 'incorrect model', 'data integrity', 'cache coherence'],
+              explanation: 'Without understanding the actual data flows (Rapid Acquisition), the caching layer will likely have invalidation issues. Assumptions about data relationships will be wrong, leading to stale or inconsistent data.',
+              commonMistakes: {
+                'works fine': 'Caching without understanding data flows almost always creates invalidation bugs.',
+                'performance issues': 'Performance might actually improve short-term, but data consistency will fail.'
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'strat-scenario-2',
+              scenario: 'Your team experiences a mysterious production issue: every Monday at 9 AM, the checkout service slows to a crawl for 30 minutes. No errors in logs, no infrastructure changes. This has happened for 3 weeks.',
+              question: 'Walk through how you would use System-Wide Debugging to diagnose this issue. What AI prompts would you use?',
+              evaluation: {
+                keywords: ['trace', 'correlation', 'pattern', 'time', 'logs', 'metrics', 'dependency', 'hypothesis', 'load', 'schedule'],
+                minWords: 50,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Hypothesis: time-based pattern suggests scheduled job or traffic pattern. Direct AI: "Analyze checkout service logs and metrics for Mondays 8:30-10 AM, compare to other days. Look for correlation with any scheduled jobs, batch processes, or external system calls." Trace downstream dependencies for the same window. The AI finds the pattern, experience identifies the cause (likely scheduled report hitting same DB).',
+              points: 30
+            },
+            {
+              type: 'graph-builder',
+              id: 'strat-graph-1',
+              instruction: 'Build a diagram showing how the four strategies connect for a complex project:',
+              nodeTypes: [
+                { type: 'rapid', label: '🗺️ Rapid Acquisition', color: '#4a9eff' },
+                { type: 'debug', label: '🐛 System Debugging', color: '#ef5350' },
+                { type: 'platform', label: '🔌 Platform Integration', color: '#66bb6a' },
+                { type: 'arch', label: '📐 Architectural Direction', color: '#ffd54f' },
+                { type: 'start', label: '📋 Project Start', color: '#9c27b0' },
+                { type: 'end', label: '🚀 Project Complete', color: '#ff9800' }
+              ],
+              validation: {
+                requiredNodes: ['start', 'rapid', 'arch', 'end'],
+                requiredEdges: [
+                  { from: 'start', to: 'rapid' },
+                  { from: 'rapid', to: 'arch' }
+                ],
+                optionalNodes: ['debug', 'platform'],
+                minNodes: 4,
+                maxNodes: 6
+              },
+              hints: [
+                'Start with understanding (Rapid Acquisition)',
+                'Architectural Direction needs input from other strategies',
+                'The strategies feed into each other'
+              ],
+              points: 30
+            },
+            {
+              type: 'reflection',
+              id: 'strat-reflect-1',
+              prompt: 'Consider a recent complex project you worked on. Which of the four strategies would have provided the most value? How would you have applied it differently with AI amplification?',
+              thinkingPrompts: [
+                'What was the hardest part of that project?',
+                'How much time did you spend understanding vs implementing?',
+                'Where did your experience provide the most value?'
+              ],
+              evaluation: {
+                minWords: 70,
+                depthIndicators: [
+                  { pattern: '(I|my|me)', label: 'Personal experience', points: 5 },
+                  { pattern: '(rapid|debug|integration|architecture)', label: 'Strategy reference', points: 5 },
+                  { pattern: '(AI|amplif)', label: 'AI awareness', points: 4 },
+                  { pattern: '(time|hours|days)', label: 'Time impact', points: 4 },
+                  { pattern: '(understand|trace|design)', label: 'Strategy application', points: 4 }
+                ],
+                maxScore: 25
+              },
+              points: 25
+            },
+            {
+              type: 'scenario',
+              id: 'strat-scenario-3',
+              scenario: 'You\'re evaluating whether to build an in-house integration with a complex third-party API (500+ endpoints, poor documentation, frequent changes) or use a commercial adapter. The build option would take an estimated 3 months.',
+              question: 'Using the Platform Integration strategy framework, analyze this build vs buy decision. What specific factors would AI-assisted integration change?',
+              evaluation: {
+                keywords: ['contract', 'error', 'maintenance', 'AI', 'glue', 'boilerplate', 'change', 'adapt', 'time', 'strategy'],
+                minWords: 50,
+                pointsPerKeyword: 3,
+                depthBonus: 15
+              },
+              modelAnswer: 'Platform Integration changes the equation: AI can generate boilerplate for 500+ endpoints quickly. Your focus: contract stability, error handling strategy, adaptation patterns for API changes. Key factors: How stable is the API? AI speeds building but not maintaining. If API changes frequently, commercial adapter might still win. If stable, AI-assisted build could be done in weeks, not months.',
+              points: 30
+            }
+          ]
+        });
+        strategySynthesis.init();
+
+        console.log('🎠 All activity carousels initialized for Senior Ch 0: Origins');
       });
     </script>
   </body>
