@@ -110,6 +110,12 @@ class BaseActivity {
     this.render();
     this.bindEvents();
     this.loadPreviousAttempt();
+    
+    // Register with ActivityTracker for progress tracking
+    if (window.ActivityTracker && window.ActivityTracker.registerActivity) {
+      window.ActivityTracker.registerActivity(this);
+    }
+    
     return this;
   }
   

@@ -8,11 +8,14 @@ const ActivityTracker = {
   // State
   courseId: null,
   lessonId: null,
-  activities: [],
+  activities: [],              // Legacy discovered activities
+  registeredActivities: {},    // NEW: BaseActivity instances by ID
+  completedActivities: {},     // NEW: Track completed activity IDs
   activityTimers: {},
-  correctAnswers: {}, // Cached from Firestore
+  correctAnswers: {},          // Cached from Firestore
   attemptCounts: {},
   isInitialized: false,
+  lessonProgressThreshold: 0.9, // 90% to mark lesson complete
   
   // localStorage keys
   QUEUE_KEY: 'activityTracker_queue',
@@ -54,6 +57,126 @@ const ActivityTracker = {
     });
   },
   
+  // ============================================
+  // PROGRESS TRACKING (BaseActivity Integration)
+  // ============================================
+  
+  /**
+   * Register a BaseActivity instance for progress tracking
+   * @param {BaseActivity} activity - The activity instance
+   */
+  registerActivity(activity) {
+    if (!activity || !activity.id) {
+      console.warn('🎯 Cannot register activity without ID');
+      return;
+    }
+    
+    this.registeredActivities[activity.id] = {
+      id: activity.id,
+      type: activity.type,
+      carouselType: activity.carouselType,
+      instance: activity,
+      completed: false,
+      attempts: 0,
+      bestScore: 0
+    };
+    
+    // Check if already completed (from previous session)
+    if (this.attemptCounts[activity.id] > 0) {
+      this.registeredActivities[activity.id].completed = true;
+      this.registeredActivities[activity.id].attempts = this.attemptCounts[activity.id];
+      this.completedActivities[activity.id] = true;
+    }
+    
+    console.log('🎯 Activity registered:', activity.id, `(${Object.keys(this.registeredActivities).length} total)`);
+  },
+  
+  /**
+   * Mark an activity as completed and update progress
+   * @param {string} activityId - The activity ID
+   * @param {number} score - The score achieved
+   */
+  markActivityCompleted(activityId, score) {
+    if (this.registeredActivities[activityId]) {
+      const reg = this.registeredActivities[activityId];
+      reg.completed = true;
+      reg.attempts++;
+      reg.bestScore = Math.max(reg.bestScore, score);
+      this.completedActivities[activityId] = true;
+    }
+    
+    // Check lesson progress
+    this.checkLessonProgress();
+  },
+  
+  /**
+   * Get current lesson progress
+   * @returns {{ completed: number, total: number, percent: number, isComplete: boolean }}
+   */
+  getProgress() {
+    const total = Object.keys(this.registeredActivities).length;
+    const completed = Object.keys(this.completedActivities).length;
+    const percent = total > 0 ? completed / total : 0;
+    const isComplete = percent >= this.lessonProgressThreshold;
+    
+    return { completed, total, percent, isComplete };
+  },
+  
+  /**
+   * Check if lesson should be marked complete and update Firestore
+   */
+  async checkLessonProgress() {
+    const progress = this.getProgress();
+    
+    console.log('🎯 Lesson progress:', `${progress.completed}/${progress.total}`, `(${Math.round(progress.percent * 100)}%)`);
+    
+    if (progress.isComplete && window.DataService) {
+      console.log('🎉 Lesson complete! Updating progress...');
+      await this.updateLessonProgress(progress);
+    }
+  },
+  
+  /**
+   * Update lesson progress in Firestore
+   * @param {object} progress - Progress data
+   */
+  async updateLessonProgress(progress) {
+    if (!window.DataService) return;
+    
+    try {
+      await window.DataService.updateLessonProgress(this.courseId, this.lessonId, {
+        activitiesCompleted: progress.completed,
+        activitiesTotal: progress.total,
+        percentComplete: progress.percent,
+        completedAt: progress.isComplete ? new Date().toISOString() : null,
+        lastActivityAt: new Date().toISOString()
+      });
+      console.log('🎯 Lesson progress saved to Firestore');
+    } catch (error) {
+      console.error('🎯 Error saving lesson progress:', error);
+    }
+  },
+  
+  /**
+   * Get all registered activities
+   * @returns {object} Map of activity ID to registration data
+   */
+  getRegisteredActivities() {
+    return this.registeredActivities;
+  },
+  
+  /**
+   * Reset an activity for re-attempt
+   * @param {string} activityId - The activity ID to reset
+   */
+  resetActivity(activityId) {
+    const reg = this.registeredActivities[activityId];
+    if (reg && reg.instance && typeof reg.instance.reset === 'function') {
+      reg.instance.reset();
+      console.log('🎯 Activity reset for re-attempt:', activityId);
+    }
+  },
+  
   /**
    * Generic method to complete any activity (called by BaseActivity)
    * @param {string} activityId - Unique activity identifier
@@ -89,6 +212,9 @@ const ActivityTracker = {
     
     // Save (with offline support)
     await this.saveAttemptWithCache(attemptData);
+    
+    // Update progress tracking
+    this.markActivityCompleted(activityId, attemptData.score);
     
     // Clean up timer
     delete this.activityTimers[activityId];
