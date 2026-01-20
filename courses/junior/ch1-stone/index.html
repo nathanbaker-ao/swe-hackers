@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="junior" data-lesson="ch1-stone">
   <header class="header">
@@ -130,6 +131,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Career Path Section -->
+      <div class="activity-carousels" data-story="career-path-story">
+        <div id="career-path-comprehension" class="carousel-container"></div>
+        <div id="career-path-application" class="carousel-container"></div>
+        <div id="career-path-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Story 2: Acceleration Principles -->
@@ -208,6 +216,13 @@
           <div class="quiz-dots"></div>
           <button class="quiz-nav-btn next">Next →</button>
         </div>
+      </div>
+
+      <!-- Activity Carousels for Acceleration Section -->
+      <div class="activity-carousels" data-story="acceleration-story">
+        <div id="acceleration-comprehension" class="carousel-container"></div>
+        <div id="acceleration-application" class="carousel-container"></div>
+        <div id="acceleration-synthesis" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,6 +303,13 @@
           <button class="quiz-nav-btn next">Next →</button>
         </div>
       </div>
+
+      <!-- Activity Carousels for Production Code Section -->
+      <div class="activity-carousels" data-story="production-code-story">
+        <div id="production-code-comprehension" class="carousel-container"></div>
+        <div id="production-code-application" class="carousel-container"></div>
+        <div id="production-code-synthesis" class="carousel-container"></div>
+      </div>
     </section>
 
     <!-- Next Steps -->
@@ -332,6 +354,20 @@
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
   <script src="../../shared/js/interactive/quiz-system.js"></script>
+  
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -449,6 +485,976 @@
 
         new Quiz(containerId, quiz.questions);
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS - CAREER PATH SECTION
+      // ============================================
+
+      // Career Path Comprehension Carousel
+      const careerPathComprehension = new ActivityCarousel('career-path-comprehension', {
+        type: 'comprehension',
+        sectionId: 'career-path',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'career-quiz-1',
+            question: 'What does "AI as a force multiplier" mean in the context of career acceleration?',
+            options: [
+              'AI replaces engineers so companies need fewer developers',
+              'AI amplifies what engineers can do, making them more effective',
+              'AI forces engineers to work harder',
+              'AI multiplies the number of job applications you can send'
+            ],
+            correct: 1,
+            explanation: 'Force multiplier means AI enhances your capabilities—you learn faster, build more, and tackle bigger problems. It amplifies your effectiveness, not replaces you.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'career-quiz-2',
+            question: 'In the AI-accelerated timeline, how long does it take to go from junior to mid-level?',
+            options: [
+              '1-3 months',
+              '6-12 months',
+              '2-3 years',
+              '3-5 years'
+            ],
+            correct: 1,
+            explanation: 'With AI augmentation, junior to mid-level takes 6-12 months. Combined with 12-18 more months to senior, the total journey is 18-24 months.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'career-tf-1',
+            statement: 'AI tools help juniors learn faster because they provide instant, contextual explanations tailored to your exact code.',
+            correct: true,
+            explanation: 'This is exactly right. Instead of searching documentation for hours, AI explains concepts in the context of what you\'re actually building.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'career-tf-2',
+            statement: 'The accelerated career path means you can skip learning fundamentals because AI handles them for you.',
+            correct: false,
+            explanation: 'The accelerated path doesn\'t skip learning—it compresses it. You still learn fundamentals, but AI helps you learn and apply them faster.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'career-fill-1',
+            statement: 'AI handles the ___ so you can focus on architecture and business logic problems.',
+            correctAnswers: ['boilerplate', 'boilerplate code', 'repetitive code', 'routine work', 'tedious work'],
+            caseSensitive: false,
+            hints: ['Think about the repetitive coding that AI can automate'],
+            explanation: 'AI excels at generating boilerplate code, freeing you to work on the interesting problems that require human judgment.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'career-fill-2',
+            statement: 'With AI augmentation, you can learn ___ faster and build ___ more than traditional developers.',
+            correctAnswers: ['10x', 'ten times', '5x', 'five times'],
+            caseSensitive: false,
+            hints: ['The lesson mentions specific multipliers'],
+            explanation: 'The lesson states AI enables 10x faster learning and 5x more building capacity.',
+            points: 10
+          }
+        ]
+      });
+      careerPathComprehension.init();
+
+      // Career Path Application Carousel
+      const careerPathApplication = new ActivityCarousel('career-path-application', {
+        type: 'application',
+        sectionId: 'career-path',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'career-seq-1',
+            instruction: 'Order these career milestones from earliest to latest in the AI-accelerated path:',
+            items: [
+              { id: 'm1', text: 'Junior: Learning syntax, basic patterns, first PRs' },
+              { id: 'm2', text: 'Mid-Level: Pattern recognition, independent features' },
+              { id: 'm3', text: 'Senior: Architectural decisions, leading projects' },
+              { id: 'm4', text: 'Staff/Principal: Cross-team influence, strategic thinking' }
+            ],
+            correctOrder: ['m1', 'm2', 'm3', 'm4'],
+            hints: {
+              partial: 'Each level expands your scope of impact.',
+              wrong: 'Start with the basics, end with organization-wide influence.'
+            },
+            explanation: 'Career progression expands your scope: code → features → systems → organization.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'career-dd-1',
+            instruction: 'Categorize these activities by their learning acceleration impact:',
+            items: [
+              { id: 'h1', text: 'Ask AI to explain unfamiliar code patterns' },
+              { id: 'h2', text: 'Use AI to review your code before PR' },
+              { id: 'l1', text: 'Copy-paste AI code without understanding' },
+              { id: 'h3', text: 'Build projects with AI assistance while learning' },
+              { id: 'l2', text: 'Memorize syntax instead of understanding concepts' },
+              { id: 'l3', text: 'Wait to be told exactly what to code' }
+            ],
+            zones: [
+              { id: 'accelerating', label: '🚀 Accelerating', correct: ['h1', 'h2', 'h3'] },
+              { id: 'stagnating', label: '🐌 Stagnating', correct: ['l1', 'l2', 'l3'] }
+            ],
+            explanation: 'Accelerating activities involve active learning with AI. Stagnating activities are passive or avoid understanding.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'career-connect-1',
+            instruction: 'Connect each AI capability to the career acceleration benefit it provides:',
+            nodes: [
+              { id: 'ai-explain', label: '📖 AI Explanations' },
+              { id: 'ai-generate', label: '💻 AI Code Generation' },
+              { id: 'ai-review', label: '🔍 AI Code Review' },
+              { id: 'learn-faster', label: '📚 Learn 10x Faster' },
+              { id: 'build-more', label: '🏗️ Build 5x More' },
+              { id: 'quality-up', label: '✅ Higher Quality Code' }
+            ],
+            solution: {
+              edges: [
+                { source: 'ai-explain', target: 'learn-faster' },
+                { source: 'ai-generate', target: 'build-more' },
+                { source: 'ai-review', target: 'quality-up' }
+              ]
+            },
+            explanation: 'Each AI capability accelerates a different aspect of development: explanations → learning, generation → building, review → quality.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'career-quiz-apply-1',
+            question: 'A junior developer says "I ship features as fast as seniors now thanks to AI." What\'s the most accurate response?',
+            options: [
+              'They\'ve achieved senior level already',
+              'Shipping speed is one metric, but senior-level also requires systems thinking and decision-making',
+              'AI is making engineering titles meaningless',
+              'They should stop using AI to develop real skills'
+            ],
+            correct: 1,
+            explanation: 'AI can accelerate shipping, but senior level also requires understanding trade-offs, designing systems, and making architectural decisions. Speed is just one dimension.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'career-seq-2',
+            instruction: 'Order these AI-assisted learning activities from most effective to least effective:',
+            items: [
+              { id: 'a1', text: 'Ask AI to explain, then implement yourself, then ask for review' },
+              { id: 'a2', text: 'Ask AI to generate, review it, understand it, modify it' },
+              { id: 'a3', text: 'Copy AI code without review, move to next task' },
+              { id: 'a4', text: 'Never use AI, figure everything out yourself slowly' }
+            ],
+            correctOrder: ['a1', 'a2', 'a4', 'a3'],
+            hints: {
+              partial: 'The best approaches maintain your learning while using AI.',
+              wrong: 'Copying without understanding is worse than slow learning.'
+            },
+            explanation: 'Best: Learn with AI, implement yourself. Next: Generate but understand. Then: Slow self-learning. Worst: Copy without understanding.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'career-dd-2',
+            instruction: 'Match each timeline to the appropriate career path:',
+            items: [
+              { id: 't1', text: '6-12 months to mid-level' },
+              { id: 't2', text: '3-5 years to mid-level' },
+              { id: 't3', text: '18-24 months total to senior' },
+              { id: 't4', text: '5-10 years total to senior' }
+            ],
+            zones: [
+              { id: 'traditional', label: '🐌 Traditional Path', correct: ['t2', 't4'] },
+              { id: 'accelerated', label: '⚡ AI-Accelerated Path', correct: ['t1', 't3'] }
+            ],
+            explanation: 'AI acceleration compresses the timeline roughly 5x: 6-12 months to mid (vs 3-5 years), 18-24 months to senior (vs 5-10 years).',
+            points: 15
+          }
+        ]
+      });
+      careerPathApplication.init();
+
+      // Career Path Synthesis Carousel
+      const careerPathSynthesis = new ActivityCarousel('career-path-synthesis', {
+        type: 'synthesis',
+        sectionId: 'career-path',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'career-scenario-1',
+            scenario: 'Two developers started at the same company on the same day. After 18 months, Developer A got promoted to senior while Developer B is still at junior level. Both have access to the same AI tools.',
+            question: 'What behaviors likely differentiate Developer A from Developer B?',
+            evaluation: {
+              keywords: ['learn', 'understand', 'ask', 'systems', 'architect', 'why', 'visible', 'impact', 'deliberate', 'feedback'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'Developer A likely: 1) Uses AI to understand, not just generate, 2) Thinks about systems and architecture, 3) Makes their impact visible, 4) Seeks feedback and learns deliberately. Developer B might just use AI as a code generator without developing senior-level thinking.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'career-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Junior Dev A: "I can build anything with AI now. I don\'t need to learn the fundamentals."\n\nJunior Dev B: "AI helps me learn fundamentals faster, but I still need to understand them."'
+            },
+            question: 'Who will have the stronger career trajectory long-term?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'junior b', 'second', 'the second one'],
+            explanation: 'Dev B understands that AI accelerates learning but doesn\'t replace it. When AI fails or produces incorrect code, Dev B can debug it. Dev A will struggle without foundational understanding.',
+            commonMistakes: {
+              'A': 'Without fundamentals, you can\'t debug AI mistakes, make architectural decisions, or adapt to new technologies.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'career-scenario-2',
+            scenario: 'Your manager notices you\'re shipping features 3x faster than other juniors. They ask how you\'re doing it. Some coworkers are skeptical about AI-assisted development.',
+            question: 'How would you explain your approach while addressing their concerns?',
+            evaluation: {
+              keywords: ['understand', 'learn', 'review', 'not just generate', 'quality', 'explain', 'think', 'amplify', 'multiply'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'I\'d explain that AI is a force multiplier—it handles boilerplate so I can focus on design and logic. I always review and understand AI code before committing. I use AI for explanations, not just generation. The result is faster shipping WITH understanding, not instead of it.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'career-reflect-1',
+            prompt: 'Think about your current use of AI tools. Are you on the "accelerated path" or the "traditional path"? What one change could move you toward acceleration?',
+            thinkingPrompts: [
+              'Do you understand the code AI generates for you?',
+              'Do you ask AI to explain concepts, or just to generate?',
+              'How do you handle AI mistakes?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: 'I (currently|usually|tend to)', label: 'Self-awareness', points: 5 },
+                { pattern: '(could|should|will|want to)', label: 'Growth intent', points: 5 },
+                { pattern: '(understand|learn|explain)', label: 'Learning focus', points: 5 },
+                { pattern: '(review|check|verify)', label: 'Quality focus', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'career-graph-1',
+            instruction: 'Build the AI-accelerated career flywheel: Learn Faster → Build More → Visible Impact → Better Opportunities → (cycle back to Learn Faster)',
+            nodeTypes: [
+              { type: 'learn', label: '📚 Learn Faster', color: '#42a5f5' },
+              { type: 'build', label: '🏗️ Build More', color: '#66bb6a' },
+              { type: 'impact', label: '📈 Visible Impact', color: '#ffa726' },
+              { type: 'opportunities', label: '🎯 Better Opportunities', color: '#7986cb' }
+            ],
+            validation: {
+              requiredNodes: ['learn', 'build', 'impact', 'opportunities'],
+              requiredEdges: [
+                { from: 'learn', to: 'build' },
+                { from: 'build', to: 'impact' },
+                { from: 'impact', to: 'opportunities' }
+              ],
+              optionalNodes: [],
+              minNodes: 4,
+              maxNodes: 5
+            },
+            hints: [
+              'This is a reinforcing cycle',
+              'Learning leads to building capacity',
+              'Building leads to impact, which creates opportunities'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'career-scenario-3',
+            scenario: 'A friend who\'s been coding for 5 years says "AI coding tools are a crutch. Real engineers don\'t need them. You\'re cheating yourself out of learning."',
+            question: 'How would you respond to this perspective?',
+            evaluation: {
+              keywords: ['tool', 'amplify', 'multiply', 'calculator', 'still understand', 'learn faster', 'not replace', 'complement'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d compare AI to calculators—engineers use them without losing math understanding. AI amplifies capability, doesn\'t replace understanding. The key is HOW you use it: for learning and acceleration, not as a crutch to avoid understanding. Senior engineers using AI strategically will outperform those who don\'t.',
+            points: 25
+          }
+        ]
+      });
+      careerPathSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - ACCELERATION PRINCIPLES SECTION
+      // ============================================
+
+      // Acceleration Principles Comprehension Carousel
+      const accelerationComprehension = new ActivityCarousel('acceleration-comprehension', {
+        type: 'comprehension',
+        sectionId: 'acceleration',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'accel-quiz-1',
+            question: 'What are the four acceleration principles from the lesson?',
+            options: [
+              'Code faster, Work longer, Skip meetings, Avoid reviews',
+              'Think like an architect, Use AI strategically, Build visible impact, Learn deliberately',
+              'Memorize syntax, Write more code, Work alone, Ship fast',
+              'Read docs, Watch tutorials, Copy code, Deploy often'
+            ],
+            correct: 1,
+            explanation: 'The four principles are: Think like an architect, Use AI strategically, Build visible impact, and Learn deliberately.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'accel-quiz-2',
+            question: 'What does "Think like an architect" mean in practice?',
+            options: [
+              'Focus on making buildings look good',
+              'Understand systems, see patterns, design before building',
+              'Never write code yourself',
+              'Only work on architecture diagrams'
+            ],
+            correct: 1,
+            explanation: 'Thinking like an architect means seeing the big picture: understanding systems, recognizing patterns across codebases, and designing before implementing.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'accel-tf-1',
+            statement: 'Impact that nobody sees doesn\'t advance your career, even if the work is excellent.',
+            correct: true,
+            explanation: 'Unfortunately true. You need to make your work visible—ship features, fix production bugs, document systems. Invisible impact doesn\'t help promotions.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'accel-tf-2',
+            statement: 'Learning deliberately means only studying when you have free time outside of work.',
+            correct: false,
+            explanation: 'Deliberate learning happens during work: reading seniors\' code, understanding PR feedback, asking "why" not just "how." Every review is a free lesson.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'accel-fill-1',
+            statement: 'AI isn\'t just for code generation—use it for explanations, code review assistance, and exploring ___ approaches.',
+            correctAnswers: ['alternative', 'different', 'other', 'various'],
+            caseSensitive: false,
+            hints: ['AI can help you see options you might not consider'],
+            explanation: 'Strategic AI use includes exploring alternative approaches—asking "what are other ways to solve this?" expands your thinking.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'accel-fill-2',
+            statement: 'Every PR review is a free ___ from someone more experienced.',
+            correctAnswers: ['lesson', 'learning', 'teaching moment', 'mentoring session', 'education'],
+            caseSensitive: false,
+            hints: ['Feedback from experienced developers is valuable for learning'],
+            explanation: 'PR reviews are learning opportunities. Don\'t just fix the comment—understand why the feedback was given.',
+            points: 10
+          }
+        ]
+      });
+      accelerationComprehension.init();
+
+      // Acceleration Principles Application Carousel
+      const accelerationApplication = new ActivityCarousel('acceleration-application', {
+        type: 'application',
+        sectionId: 'acceleration',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'accel-dd-1',
+            instruction: 'Match each behavior to its acceleration principle:',
+            items: [
+              { id: 'b1', text: 'Asking "why are we building this?" before "how?"' },
+              { id: 'b2', text: 'Using AI to explore design alternatives' },
+              { id: 'b3', text: 'Documenting a confusing system for the team' },
+              { id: 'b4', text: 'Understanding feedback before fixing it' }
+            ],
+            zones: [
+              { id: 'architect', label: '🏛️ Think Like Architect', correct: ['b1'] },
+              { id: 'ai', label: '🤖 Use AI Strategically', correct: ['b2'] },
+              { id: 'visible', label: '📈 Build Visible Impact', correct: ['b3'] },
+              { id: 'learn', label: '📖 Learn Deliberately', correct: ['b4'] }
+            ],
+            explanation: 'Each principle manifests in specific behaviors: architects ask why, AI exploration is strategic, documentation creates visibility, understanding feedback is deliberate learning.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'accel-connect-1',
+            instruction: 'Connect each principle to its opposite (the behavior it replaces):',
+            nodes: [
+              { id: 'architect', label: '🏛️ Think Architect' },
+              { id: 'strategic-ai', label: '🤖 Strategic AI' },
+              { id: 'visible', label: '📈 Visible Impact' },
+              { id: 'deliberate', label: '📖 Deliberate Learning' },
+              { id: 'task-focus', label: '📋 Just Complete Tasks' },
+              { id: 'code-gen', label: '💻 Only Generate Code' },
+              { id: 'invisible', label: '👻 Work Goes Unnoticed' },
+              { id: 'passive', label: '😴 Passive Learning' }
+            ],
+            solution: {
+              edges: [
+                { source: 'architect', target: 'task-focus' },
+                { source: 'strategic-ai', target: 'code-gen' },
+                { source: 'visible', target: 'invisible' },
+                { source: 'deliberate', target: 'passive' }
+              ]
+            },
+            explanation: 'Each accelerator principle replaces a stagnating behavior: systems thinking vs task focus, strategic vs generative AI, visible vs invisible work, active vs passive learning.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'accel-seq-1',
+            instruction: 'Order these activities from most to least impactful for career acceleration:',
+            items: [
+              { id: 'a1', text: 'Design and ship a feature that many users interact with' },
+              { id: 'a2', text: 'Fix a critical production bug under pressure' },
+              { id: 'a3', text: 'Complete assigned tickets on time' },
+              { id: 'a4', text: 'Help a teammate understand a complex system' }
+            ],
+            correctOrder: ['a1', 'a2', 'a4', 'a3'],
+            hints: {
+              partial: 'Impact and visibility matter more than just completing tasks.',
+              wrong: 'What creates the most visible value for users, team, and company?'
+            },
+            explanation: 'Shipping user-facing features and fixing production issues have high visibility. Helping teammates builds relationships and reputation. Completing tickets is baseline expectation.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'accel-quiz-apply-1',
+            question: 'A junior asks you: "I got feedback on my PR but I don\'t agree with it. Should I just make the change anyway?" What\'s the best advice?',
+            options: [
+              'Yes, just make the change to get the PR approved',
+              'No, ignore feedback you disagree with',
+              'Ask the reviewer to explain their reasoning—understand before deciding',
+              'Escalate to your manager'
+            ],
+            correct: 2,
+            explanation: 'Deliberate learning means understanding feedback. The reviewer might know something you don\'t, or you might have a valid counter-argument. Discuss to learn either way.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'accel-dd-2',
+            instruction: 'Sort these into "Makes Work Visible" or "Keeps Work Invisible":',
+            items: [
+              { id: 'v1', text: 'Ship a feature and demo it in team meeting' },
+              { id: 'v2', text: 'Write documentation for a confusing system' },
+              { id: 'i1', text: 'Refactor code without telling anyone' },
+              { id: 'i2', text: 'Fix bugs quietly without tracking them' },
+              { id: 'v3', text: 'Share learnings in Slack after solving hard problems' },
+              { id: 'i3', text: 'Help teammate but never mention it' }
+            ],
+            zones: [
+              { id: 'visible', label: '📈 Makes Work Visible', correct: ['v1', 'v2', 'v3'] },
+              { id: 'invisible', label: '👻 Keeps Work Invisible', correct: ['i1', 'i2', 'i3'] }
+            ],
+            explanation: 'Visibility requires communication: demos, documentation, sharing learnings. Good work done quietly doesn\'t help your career as much.',
+            points: 20
+          },
+          {
+            type: 'sequence',
+            id: 'accel-seq-2',
+            instruction: 'Order these steps for applying "Think Like an Architect" to a new feature:',
+            items: [
+              { id: 's1', text: 'Understand the business problem being solved' },
+              { id: 's2', text: 'Map how this feature connects to existing systems' },
+              { id: 's3', text: 'Identify potential edge cases and failure modes' },
+              { id: 's4', text: 'Write the implementation code' },
+              { id: 's5', text: 'Consider scalability and maintenance implications' }
+            ],
+            correctOrder: ['s1', 's2', 's5', 's3', 's4'],
+            hints: {
+              partial: 'Understanding comes before systems mapping, systems before code.',
+              wrong: 'Architects think business → systems → implications → code'
+            },
+            explanation: 'Architectural thinking: understand business need → map systems → consider scale/maintenance → edge cases → finally implement.',
+            points: 20
+          }
+        ]
+      });
+      accelerationApplication.init();
+
+      // Acceleration Principles Synthesis Carousel
+      const accelerationSynthesis = new ActivityCarousel('acceleration-synthesis', {
+        type: 'synthesis',
+        sectionId: 'acceleration',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'accel-scenario-1',
+            scenario: 'You completed an important refactoring that makes the codebase much cleaner and faster. Your manager doesn\'t seem to know about it. Your coworkers don\'t either. The code is better, but nobody noticed.',
+            question: 'What principle did you miss, and how would you handle this differently next time?',
+            evaluation: {
+              keywords: ['visible', 'impact', 'communicate', 'share', 'demo', 'document', 'tell', 'show', 'slack', 'meeting'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'You missed "Build Visible Impact." Next time: communicate before starting (get buy-in), document the before/after, share results in team meeting or Slack, add metrics if possible. Good work needs visibility to help your career.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'accel-predict-1',
+            setup: {
+              type: 'text',
+              content: 'Developer A: Gets feedback on PR, makes changes immediately without questions.\n\nDeveloper B: Gets feedback on PR, asks "Can you help me understand why this approach is better?" then makes informed changes.'
+            },
+            question: 'Who will learn more from the same code review?',
+            correctAnswer: 'B',
+            acceptableVariants: ['b', 'dev b', 'developer b', 'second', 'the second one'],
+            explanation: 'Developer B practices deliberate learning—understanding the "why" behind feedback leads to deeper learning that transfers to future situations. Developer A learns what to do but not why.',
+            commonMistakes: {
+              'A': 'Just making changes without understanding doesn\'t build lasting knowledge.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'accel-scenario-2',
+            scenario: 'You\'re asked to implement a feature. You could start coding immediately (estimated 4 hours) or spend 30 minutes discussing the design with a senior first. Your manager is asking for quick delivery.',
+            question: 'Which approach aligns better with acceleration principles, and why?',
+            evaluation: {
+              keywords: ['architect', 'design', 'understand', 'why', 'before', 'rework', 'senior', 'learn', 'strategic'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'The 30-minute design discussion aligns with "Think Like an Architect" and "Learn Deliberately." It might feel slower initially, but prevents rework and learns from senior experience. Quick delivery with rework is slower than thoughtful delivery.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'accel-reflect-1',
+            prompt: 'Which of the four acceleration principles do you currently practice well, and which needs the most improvement? Create a specific plan for the one that needs work.',
+            thinkingPrompts: [
+              'Do you ask "why" before "how"?',
+              'Is your work visible to your team and leadership?',
+              'How do you use AI beyond code generation?',
+              'Do you learn from every PR review?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(strong|good|well) at', label: 'Identifies strengths', points: 4 },
+                { pattern: '(need|improve|work on|weak)', label: 'Identifies growth areas', points: 4 },
+                { pattern: '(will|plan|going to|start)', label: 'Action commitment', points: 4 },
+                { pattern: '(specific|concrete|example)', label: 'Specific planning', points: 4 },
+                { pattern: '(this week|daily|tomorrow)', label: 'Timeline', points: 4 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'accel-graph-1',
+            instruction: 'Build a diagram showing how the four principles connect to the "Accelerator Mindset" outcome:',
+            nodeTypes: [
+              { type: 'architect', label: '🏛️ Architect Thinking', color: '#42a5f5' },
+              { type: 'ai', label: '🤖 Strategic AI', color: '#66bb6a' },
+              { type: 'visible', label: '📈 Visible Impact', color: '#ffa726' },
+              { type: 'learn', label: '📖 Deliberate Learning', color: '#7986cb' },
+              { type: 'mindset', label: '🚀 Accelerator Mindset', color: '#ef5350' }
+            ],
+            validation: {
+              requiredNodes: ['architect', 'ai', 'visible', 'learn', 'mindset'],
+              requiredEdges: [
+                { from: 'architect', to: 'mindset' },
+                { from: 'ai', to: 'mindset' },
+                { from: 'visible', to: 'mindset' },
+                { from: 'learn', to: 'mindset' }
+              ],
+              optionalNodes: [],
+              minNodes: 5,
+              maxNodes: 6
+            },
+            hints: [
+              'All four principles feed into the accelerator mindset',
+              'You need all four to truly accelerate',
+              'Missing any principle slows your growth'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'accel-scenario-3',
+            scenario: 'You\'ve been using AI mainly for code generation. A coworker suggests using it to explore alternative architectures before starting a project. You\'ve never done this.',
+            question: 'Describe how you would use AI strategically to explore architectures for a new feature (user authentication system).',
+            evaluation: {
+              keywords: ['alternative', 'trade-off', 'compare', 'pros cons', 'options', 'ask', 'explain', 'design', 'approach'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Ask AI: "What are different approaches to implement user authentication? Compare JWT vs sessions vs OAuth. What are the trade-offs of each?" Then: "For my use case (describe it), which approach would you recommend and why?" This explores the design space before committing to an approach.',
+            points: 25
+          }
+        ]
+      });
+      accelerationSynthesis.init();
+
+      // ============================================
+      // ACTIVITY CAROUSELS - PRODUCTION CODE SECTION
+      // ============================================
+
+      // Production Code Comprehension Carousel
+      const productionCodeComprehension = new ActivityCarousel('production-code-comprehension', {
+        type: 'comprehension',
+        sectionId: 'production-code',
+        title: 'Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'prod-quiz-1',
+            question: 'What\'s the main problem with "junior code that works"?',
+            options: [
+              'It\'s always slow',
+              'It never actually works',
+              'It solves immediate problems but creates future problems',
+              'It uses too many files'
+            ],
+            correct: 2,
+            explanation: 'Junior code often works but is fragile—missing types, docs, validation. It solves today\'s problem while creating technical debt.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'prod-quiz-2',
+            question: 'What do type hints provide in production code?',
+            options: [
+              'Faster execution speed',
+              'Smaller file sizes',
+              'Bug detection before runtime and self-documentation',
+              'Automatic testing'
+            ],
+            correct: 2,
+            explanation: 'Type hints catch bugs before runtime (IDEs flag mismatches) and serve as documentation—readers know exactly what\'s expected.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'prod-tf-1',
+            statement: 'Docstrings should explain "what" the code does, not "why" it does it.',
+            correct: false,
+            explanation: 'Good docstrings explain the "why"—the purpose, edge cases, and errors. The code itself shows "what" it does.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'true-false',
+            id: 'prod-tf-2',
+            statement: 'You can ask AI to transform junior code into senior-quality production code.',
+            correct: true,
+            explanation: 'This is a powerful AI use case! Ask AI to add type hints, docstrings, validation, and error handling to transform fragile code.',
+            requireReasoning: true,
+            minReasoningWords: 8,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'prod-fill-1',
+            statement: 'Never trust input. Use ___ queries to prevent SQL injection.',
+            correctAnswers: ['parameterized', 'prepared', 'parametrized'],
+            caseSensitive: false,
+            hints: ['The opposite of string concatenation for SQL'],
+            explanation: 'Parameterized queries prevent SQL injection by separating code from data.',
+            points: 10
+          },
+          {
+            type: 'fill-blank',
+            id: 'prod-fill-2',
+            statement: 'The principle of "___ in depth" means multiple layers of protection against problems.',
+            correctAnswers: ['defense', 'security', 'protection'],
+            caseSensitive: false,
+            hints: ['A military concept applied to code security'],
+            explanation: 'Defense in depth means multiple validation layers—if one fails, others still protect.',
+            points: 10
+          }
+        ]
+      });
+      productionCodeComprehension.init();
+
+      // Production Code Application Carousel
+      const productionCodeApplication = new ActivityCarousel('production-code-application', {
+        type: 'application',
+        sectionId: 'production-code',
+        title: 'Apply What You Learned',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'prod-seq-1',
+            instruction: 'Order these transformations from junior code to senior code:',
+            items: [
+              { id: 's1', text: 'Start with working but fragile code' },
+              { id: 's2', text: 'Add type hints for parameters and returns' },
+              { id: 's3', text: 'Add docstrings explaining purpose and edge cases' },
+              { id: 's4', text: 'Add input validation and error handling' },
+              { id: 's5', text: 'Production-ready code' }
+            ],
+            correctOrder: ['s1', 's2', 's3', 's4', 's5'],
+            hints: {
+              partial: 'Types come before docs, docs before validation.',
+              wrong: 'Follow the lesson\'s progression: types → docs → validation → done'
+            },
+            explanation: 'The transformation path: working code → types (self-documenting) → docstrings (explain why) → validation (secure) → production-ready.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'prod-dd-1',
+            instruction: 'Categorize these code characteristics as Junior or Senior quality:',
+            items: [
+              { id: 'j1', text: 'No type hints' },
+              { id: 's1', text: 'Comprehensive type annotations' },
+              { id: 'j2', text: 'No input validation' },
+              { id: 's2', text: 'Parameterized SQL queries' },
+              { id: 'j3', text: 'Comments say "fix later"' },
+              { id: 's3', text: 'Docstrings explain edge cases' }
+            ],
+            zones: [
+              { id: 'junior', label: '👶 Junior Code', correct: ['j1', 'j2', 'j3'] },
+              { id: 'senior', label: '🏆 Senior Code', correct: ['s1', 's2', 's3'] }
+            ],
+            explanation: 'Senior code has types, validation, security, and meaningful documentation. Junior code lacks these production qualities.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'prod-connect-1',
+            instruction: 'Connect each production code practice to the problem it prevents:',
+            nodes: [
+              { id: 'types', label: '🏷️ Type Hints' },
+              { id: 'docs', label: '📝 Docstrings' },
+              { id: 'validation', label: '🛡️ Validation' },
+              { id: 'type-bugs', label: '🐛 Type Mismatch Bugs' },
+              { id: 'confusion', label: '❓ Developer Confusion' },
+              { id: 'security', label: '🔓 Security Vulnerabilities' }
+            ],
+            solution: {
+              edges: [
+                { source: 'types', target: 'type-bugs' },
+                { source: 'docs', target: 'confusion' },
+                { source: 'validation', target: 'security' }
+              ]
+            },
+            explanation: 'Each practice prevents specific problems: types → type bugs, docs → confusion, validation → security issues.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'prod-quiz-apply-1',
+            question: 'You see this code in a PR: `def get_user(id): return db.query(f"SELECT * FROM users WHERE id = {id}")`. What\'s the biggest concern?',
+            options: [
+              'Missing type hints',
+              'No docstring',
+              'SQL injection vulnerability',
+              'Function name is too short'
+            ],
+            correct: 2,
+            explanation: 'This is a SQL injection vulnerability! The f-string concatenates user input directly into SQL. Must use parameterized queries.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'prod-dd-2',
+            instruction: 'Match each AI prompt to what it will help you produce:',
+            items: [
+              { id: 'p1', text: '"Add type hints to this function"' },
+              { id: 'p2', text: '"Add a docstring explaining edge cases"' },
+              { id: 'p3', text: '"Make this SQL query safe from injection"' },
+              { id: 'p4', text: '"Add error handling for invalid inputs"' }
+            ],
+            zones: [
+              { id: 'types', label: '🏷️ Type Annotations', correct: ['p1'] },
+              { id: 'docs', label: '📝 Documentation', correct: ['p2'] },
+              { id: 'security', label: '🔒 Security', correct: ['p3'] },
+              { id: 'validation', label: '🛡️ Validation', correct: ['p4'] }
+            ],
+            explanation: 'AI is excellent at transforming code quality. Each prompt targets a specific improvement.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'prod-seq-2',
+            instruction: 'Order these from least to most production-ready:',
+            items: [
+              { id: 'c1', text: 'def calc(x): return x * 2' },
+              { id: 'c2', text: 'def calc(x: int) -> int: return x * 2' },
+              { id: 'c3', text: 'def double_value(x: int) -> int:\\n    """Double an integer."""\\n    return x * 2' },
+              { id: 'c4', text: 'Full function with types, docstring, and input validation' }
+            ],
+            correctOrder: ['c1', 'c2', 'c3', 'c4'],
+            hints: {
+              partial: 'Each step adds more production qualities.',
+              wrong: 'Least: no types → types → types+docs → full production'
+            },
+            explanation: 'Production readiness builds: basic → typed → documented → validated.',
+            points: 20
+          }
+        ]
+      });
+      productionCodeApplication.init();
+
+      // Production Code Synthesis Carousel
+      const productionCodeSynthesis = new ActivityCarousel('production-code-synthesis', {
+        type: 'synthesis',
+        sectionId: 'production-code',
+        title: 'Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'prod-scenario-1',
+            scenario: 'You\'re reviewing a junior\'s PR. The code works, but has no type hints, no docstrings, and uses string concatenation for SQL. The deadline is tomorrow and the junior says "it works, let\'s ship it."',
+            question: 'How would you handle this code review while balancing quality and deadline?',
+            evaluation: {
+              keywords: ['type', 'doc', 'sql injection', 'security', 'AI', 'transform', 'help', 'pair', 'learn', 'quick'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Security issues (SQL injection) are non-negotiable—must fix. For types and docs, I\'d offer to pair for 30 minutes, using AI to quickly add them. Frame it as learning: "Let me show you a quick way to level up this code." Tech debt for real emergency, but not for preventable security issues.',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'prod-predict-1',
+            setup: {
+              type: 'code',
+              language: 'python',
+              code: '# Junior code\ndef process(data):\n    result = []\n    for item in data:\n        result.append(item * 2)\n    return result'
+            },
+            question: 'What improvements would make this production-ready? (List at least 3)',
+            correctAnswer: 'types',
+            acceptableVariants: ['type hints', 'types', 'docstring', 'validation', 'error handling', 'type annotations'],
+            explanation: 'Production improvements: 1) Type hints (def process(data: list[int]) -> list[int]), 2) Docstring explaining purpose, 3) Validation (check if data is actually iterable), 4) Descriptive name like "double_values".',
+            commonMistakes: {
+              'none': 'Even simple code benefits from types and documentation.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'prod-scenario-2',
+            scenario: 'Your team\'s codebase has almost no type hints or docstrings—it grew fast without these practices. You want to improve it, but it\'s a huge task. Leadership is focused on features, not code quality.',
+            question: 'How would you approach improving code quality incrementally without dedicated refactoring time?',
+            evaluation: {
+              keywords: ['incremental', 'touch', 'boy scout', 'new code', 'PR', 'AI', 'quick', 'gradually', 'standard'],
+              minWords: 45,
+              pointsPerKeyword: 4,
+              depthBonus: 12
+            },
+            modelAnswer: 'Apply the "Boy Scout Rule": leave code better than you found it. Every file you touch, add types/docs to that file. Use AI to do it quickly. All new code follows the standard. Over time, the codebase improves without dedicated refactoring sprints.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'prod-reflect-1',
+            prompt: 'Think about code you\'ve written recently. How production-ready was it? What\'s one habit you could adopt to consistently write more senior-quality code?',
+            thinkingPrompts: [
+              'Did your code have type hints?',
+              'Would another developer understand your code without asking you?',
+              'Did you validate inputs?',
+              'Could AI help you improve quickly?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(my code|I wrote|recently)', label: 'Self-reflection', points: 5 },
+                { pattern: '(type|doc|validation)', label: 'Specific practice', points: 5 },
+                { pattern: '(will|habit|start|adopt)', label: 'Commitment', points: 5 },
+                { pattern: '(AI|automate|quick)', label: 'Efficiency thinking', points: 5 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'graph-builder',
+            id: 'prod-graph-1',
+            instruction: 'Build the code quality transformation pipeline: Junior Code → Types → Docs → Validation → Production Code',
+            nodeTypes: [
+              { type: 'junior', label: '👶 Junior Code', color: '#ef5350' },
+              { type: 'types', label: '🏷️ Add Types', color: '#42a5f5' },
+              { type: 'docs', label: '📝 Add Docs', color: '#66bb6a' },
+              { type: 'validation', label: '🛡️ Add Validation', color: '#ffa726' },
+              { type: 'production', label: '🏆 Production Code', color: '#7986cb' }
+            ],
+            validation: {
+              requiredNodes: ['junior', 'types', 'docs', 'validation', 'production'],
+              requiredEdges: [
+                { from: 'junior', to: 'types' },
+                { from: 'types', to: 'docs' },
+                { from: 'docs', to: 'validation' },
+                { from: 'validation', to: 'production' }
+              ],
+              optionalNodes: [],
+              minNodes: 5,
+              maxNodes: 6
+            },
+            hints: [
+              'This is a linear progression',
+              'Each step adds more production quality',
+              'The order matches the lesson\'s transformation'
+            ],
+            points: 30
+          },
+          {
+            type: 'scenario',
+            id: 'prod-scenario-3',
+            scenario: 'A senior engineer says "Type hints are optional in Python, so they\'re a waste of time. Just write good code." They\'ve been coding for 15 years.',
+            question: 'How would you respectfully make the case for type hints to this experienced engineer?',
+            evaluation: {
+              keywords: ['bug', 'before runtime', 'IDE', 'documentation', 'refactor', 'team', 'scale', 'maintain', 'catch'],
+              minWords: 40,
+              pointsPerKeyword: 4,
+              depthBonus: 10
+            },
+            modelAnswer: 'I\'d acknowledge their experience, then share: "Types catch bugs before runtime—the IDE flags issues immediately. They serve as documentation for the whole team. They make refactoring safer. As teams and codebases scale, types prevent miscommunication between developers. It\'s about team productivity, not individual ability."',
+            points: 25
+          }
+        ]
+      });
+      productionCodeSynthesis.init();
+
+      console.log('🎠 All activity carousels initialized for Junior Ch1: The Junior Accelerator');
     });
   </script>
 </body>
