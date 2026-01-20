@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="apprentice" data-lesson="ch5-capstone1">
   <header class="header">
@@ -115,20 +116,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="adventure-vision-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Adventure Vision -->
+      <div class="activity-carousels" data-story="adventure-vision-story">
+        <div id="adventure-vision-comprehension" class="carousel-container"></div>
+        <div id="adventure-vision-application" class="carousel-container"></div>
+        <div id="adventure-vision-synthesis" class="carousel-container"></div>
+        <div id="adventure-vision-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,20 +187,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="game-planning-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Game Planning -->
+      <div class="activity-carousels" data-story="game-planning-story">
+        <div id="game-planning-comprehension" class="carousel-container"></div>
+        <div id="game-planning-application" class="carousel-container"></div>
+        <div id="game-planning-synthesis" class="carousel-container"></div>
+        <div id="game-planning-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,20 +258,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="skills-integration-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Skills Integration -->
+      <div class="activity-carousels" data-story="skills-integration-story">
+        <div id="skills-integration-comprehension" class="carousel-container"></div>
+        <div id="skills-integration-application" class="carousel-container"></div>
+        <div id="skills-integration-synthesis" class="carousel-container"></div>
+        <div id="skills-integration-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -341,7 +318,19 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -457,22 +446,865 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from old Quiz system)
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'adventure-vision-story': 'adventure-vision-quiz',
         'game-planning-story': 'game-planning-quiz',
         'skills-integration-story': 'skills-integration-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // ----------------------------------------
+      // STORY 1: ADVENTURE VISION - Activity Carousels
+      // ----------------------------------------
+
+      const adventureVision_Comprehension = new ActivityCarousel('adventure-vision-comprehension', {
+        type: 'comprehension',
+        sectionId: 'adventure-vision',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'av-comp-q1',
+            question: 'What is a text adventure game?',
+            options: [
+              'A game with realistic 3D graphics',
+              'An interactive story controlled by typed commands',
+              'A typing speed test',
+              'A book you read passively'
+            ],
+            correct: 1,
+            explanation: 'Text adventures are interactive stories where players type commands like "go north" or "pick up key" to explore and progress through the game.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'av-comp-tf1',
+            statement: 'Text adventures were some of the earliest computer games and helped pioneer interactive fiction.',
+            correct: true,
+            explanation: 'Games like "Zork" in the 1970s-80s were pioneering text adventures that showed games could be interactive stories.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'av-comp-fill1',
+            statement: 'In a text adventure, players ___ commands to interact with the game world.',
+            correctAnswers: ['type', 'enter', 'input', 'write'],
+            caseSensitive: false,
+            hints: ['How do you tell the game what to do?'],
+            explanation: 'Players type commands like "look around", "go north", or "take sword" to interact with the game.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'av-comp-q2',
+            question: 'What makes this capstone project a good test of your skills?',
+            options: [
+              'It only uses one concept',
+              'It combines variables, conditionals, loops, and functions together',
+              'It requires no thinking',
+              'It\'s just about memorization'
+            ],
+            correct: 1,
+            explanation: 'Building a text adventure requires Stone (variables for game state), Lightning (conditionals and loops), and Magnetism (functions for actions).',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'av-comp-tf2',
+            statement: 'A text adventure needs graphics to be engaging.',
+            correct: false,
+            explanation: 'Text adventures prove that compelling storytelling, good writing, and interesting puzzles can create engaging experiences without any graphics!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'av-comp-fill2',
+            statement: 'The main loop of a game that keeps running until the player wins or quits is called the ___ loop.',
+            correctAnswers: ['game', 'main', 'game loop'],
+            caseSensitive: false,
+            hints: ['What do we call the repeating cycle of a game?'],
+            explanation: 'The game loop continuously: shows the current state, gets player input, processes it, and repeats until the game ends.',
+            points: 10
+          }
+        ]
+      });
+      adventureVision_Comprehension.init();
+
+      const adventureVision_Application = new ActivityCarousel('adventure-vision-application', {
+        type: 'application',
+        sectionId: 'adventure-vision',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'av-app-seq1',
+            instruction: 'Order the main components of a text adventure game:',
+            items: [
+              { id: 'rooms', text: 'Rooms/locations the player can explore' },
+              { id: 'items', text: 'Items the player can collect' },
+              { id: 'commands', text: 'Commands the player can type' },
+              { id: 'win', text: 'Win condition to end the game' }
+            ],
+            correctOrder: ['rooms', 'items', 'commands', 'win'],
+            hints: {
+              partial: 'Start with the world, then what\'s in it, then how to interact, then the goal.',
+              wrong: 'Think: environment → objects → actions → victory.'
+            },
+            explanation: 'A text adventure needs: places to explore, things to find, ways to interact, and a goal to achieve.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'av-app-dd1',
+            instruction: 'Match each game element to the Python concept it uses:',
+            items: [
+              { id: 'concept-var', text: 'Variables (Stone)' },
+              { id: 'concept-if', text: 'If/else (Lightning)' },
+              { id: 'concept-loop', text: 'While loop (Lightning)' },
+              { id: 'concept-func', text: 'Functions (Magnetism)' }
+            ],
+            zones: [
+              { id: 'elem-state', label: 'Tracking player location', correct: 'concept-var' },
+              { id: 'elem-choice', label: 'Handling player commands', correct: 'concept-if' },
+              { id: 'elem-game', label: 'Main game loop', correct: 'concept-loop' },
+              { id: 'elem-action', label: 'Reusable move/look functions', correct: 'concept-func' }
+            ],
+            explanation: 'Variables track state, if/else handles choices, while loop keeps game running, functions organize reusable code.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'av-app-q1',
+            question: 'What Python concept is best for storing room descriptions and connections?',
+            options: [
+              'A single variable',
+              'A dictionary with room data',
+              'A print statement',
+              'A while loop'
+            ],
+            correct: 1,
+            explanation: 'Dictionaries are perfect for rooms! You can store description, exits, and items for each room with keys and values.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'av-app-connect1',
+            instruction: 'Connect the game loop steps in order:',
+            nodes: [
+              { id: 'show', label: '📺 Show Room' },
+              { id: 'get', label: '⌨️ Get Input' },
+              { id: 'process', label: '⚙️ Process Command' },
+              { id: 'update', label: '🔄 Update State' },
+              { id: 'check', label: '✅ Check Win' }
+            ],
+            solution: {
+              edges: [
+                { source: 'show', target: 'get' },
+                { source: 'get', target: 'process' },
+                { source: 'process', target: 'update' },
+                { source: 'update', target: 'check' },
+                { source: 'check', target: 'show' }
+              ]
+            },
+            nodeDescriptions: {
+              'show': 'Display current location',
+              'get': 'Wait for player command',
+              'process': 'Figure out what to do',
+              'update': 'Change game state',
+              'check': 'See if player won'
+            },
+            explanation: 'Show → Get → Process → Update → Check → Show (repeat). This cycle is the heartbeat of your game!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'av-app-q2',
+            question: 'Why would you use functions in a text adventure?',
+            options: [
+              'Functions are required by Python',
+              'To avoid repeating code for common actions like moving or looking',
+              'Functions make the game slower',
+              'You wouldn\'t use functions in a game'
+            ],
+            correct: 1,
+            explanation: 'Functions like move_player(), look_around(), and take_item() keep your code organized and reusable. DRY principle!',
+            points: 15
+          }
+        ]
+      });
+      adventureVision_Application.init();
+
+      const adventureVision_Synthesis = new ActivityCarousel('adventure-vision-synthesis', {
+        type: 'synthesis',
+        sectionId: 'adventure-vision',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'av-syn-sc1',
+            scenario: 'You\'re designing a text adventure set in a haunted house. The player needs to find 3 keys to unlock the front door and escape.',
+            question: 'What variables would you need to track the game state?',
+            evaluation: {
+              keywords: ['current_room', 'inventory', 'keys', 'found', 'location', 'items', 'collected'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Variables needed: current_room (where the player is), inventory or items_collected (list of items they have), keys_found or key_count (track progress toward goal), maybe game_over (boolean for win state). These let you track everything about the player\'s progress.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'av-syn-ref1',
+            prompt: 'Think about your favorite games or stories. What elements make them engaging? How could you apply those elements to a text adventure you create?',
+            thinkingPrompts: [
+              'What creates tension or excitement?',
+              'What makes you want to keep playing?',
+              'How do good stories create atmosphere with just words?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(mystery|puzzle|challenge)', label: 'Engaging elements', points: 5 },
+                { pattern: '(choice|decision|consequence)', label: 'Player agency', points: 4 },
+                { pattern: '(story|atmosphere|world)', label: 'Narrative focus', points: 4 },
+                { pattern: '(I could|I would|my game)', label: 'Personal application', points: 4 },
+                { pattern: '(example|like|favorite)', label: 'Specific examples', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'av-syn-pred1',
+            setup: {
+              type: 'code',
+              language: 'python',
+              code: 'while not game_over:\n    show_room(current_room)\n    command = input("> ")\n    process_command(command)'
+            },
+            question: 'What\'s missing from this game loop that would be a problem?',
+            correctAnswer: 'Updating game_over',
+            acceptableVariants: ['game_over', 'check win', 'exit', 'quit', 'end', 'never ends'],
+            explanation: 'The loop never changes game_over! Without setting game_over = True when the player wins (or quits), this creates an infinite loop. Always ensure your loop condition can become False.',
+            commonMistakes: {
+              'Nothing': 'game_over is never set to True anywhere, so the loop runs forever!'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'av-syn-sc2',
+            scenario: 'A player types "take the shiny sword" but your game only recognizes "take sword". The command fails.',
+            question: 'How would you make your command parser more flexible to handle variations like this?',
+            evaluation: {
+              keywords: ['split', 'keyword', 'in', 'check', 'word', 'parse', 'flexible', 'contains'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Instead of exact matching, parse the command: split it into words and check if key words are present. Use "if \'take\' in command and \'sword\' in command". Or extract the action verb and object noun, ignoring articles like "the" and adjectives like "shiny".',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'av-syn-q1',
+            question: 'What\'s the most important thing to plan BEFORE writing your text adventure code?',
+            options: [
+              'The exact Python syntax to use',
+              'The game map, rooms, items, and win condition',
+              'How many lines of code it will be',
+              'What color the terminal text should be'
+            ],
+            correct: 1,
+            explanation: 'Design before code! Knowing your rooms, items, connections, and goal makes coding much easier. The architect plans first.',
+            points: 15
+          }
+        ]
+      });
+      adventureVision_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: GAME PLANNING - Activity Carousels
+      // ----------------------------------------
+
+      const gamePlanning_Comprehension = new ActivityCarousel('game-planning-comprehension', {
+        type: 'comprehension',
+        sectionId: 'game-planning',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'gp-comp-q1',
+            question: 'Why should architects "draw a map first" before coding?',
+            options: [
+              'It looks professional',
+              'It helps you think through the system and catch problems early',
+              'Python requires it',
+              'It\'s just for decoration'
+            ],
+            correct: 1,
+            explanation: 'Planning reveals problems before you code them! A map shows if rooms connect logically, if the game is winnable, and what you need to build.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'gp-comp-tf1',
+            statement: 'You should start coding immediately and figure out the design as you go.',
+            correct: false,
+            explanation: 'Architects plan first! Jumping into code without a plan leads to confusion, backtracking, and bugs. A few minutes of planning saves hours of fixing.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'gp-comp-fill1',
+            statement: 'Each room in a text adventure needs a ___ (what the player sees) and exits (where they can go).',
+            correctAnswers: ['description', 'text', 'message'],
+            caseSensitive: false,
+            hints: ['What tells the player about the room?'],
+            explanation: 'Every room needs: a description (what the player sees), and exits (connections to other rooms). Items are optional but add depth.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'gp-comp-q2',
+            question: 'What is a "win condition" in a game?',
+            options: [
+              'How you compile the code',
+              'The goal players must achieve to complete the game',
+              'A type of variable',
+              'The game\'s title'
+            ],
+            correct: 1,
+            explanation: 'The win condition defines success: find all keys, reach the treasure room, defeat the dragon, etc. Without it, the game has no goal!',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'gp-comp-tf2',
+            statement: 'A game map is just a picture—it doesn\'t affect your code structure.',
+            correct: false,
+            explanation: 'Your map directly becomes your data structure! Room connections become dictionary entries, items become variables, paths become conditional logic.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'gp-comp-fill2',
+            statement: 'Items in a text adventure give players things to ___ and goals to achieve.',
+            correctAnswers: ['collect', 'find', 'gather', 'pick up', 'take'],
+            caseSensitive: false,
+            hints: ['What do players do with items?'],
+            explanation: 'Items create objectives (find the key!) and puzzles (use the key to open the door). They make the game more interesting.',
+            points: 10
+          }
+        ]
+      });
+      gamePlanning_Comprehension.init();
+
+      const gamePlanning_Application = new ActivityCarousel('game-planning-application', {
+        type: 'application',
+        sectionId: 'game-planning',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'gp-app-seq1',
+            instruction: 'Order the game planning steps:',
+            items: [
+              { id: 'draw', text: 'Draw the map of rooms and connections' },
+              { id: 'define', text: 'Define each room\'s description and exits' },
+              { id: 'add', text: 'Add items to specific rooms' },
+              { id: 'win', text: 'Decide the win condition' }
+            ],
+            correctOrder: ['draw', 'define', 'add', 'win'],
+            hints: {
+              partial: 'Start with the big picture (map), then details.',
+              wrong: 'Map → rooms → items → goal.'
+            },
+            explanation: 'First sketch the overall map, then flesh out each room, add items for interest, finally define how to win.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'gp-app-dd1',
+            instruction: 'Match each planning element to what it becomes in code:',
+            items: [
+              { id: 'code-dict', text: 'Dictionary with room data' },
+              { id: 'code-list', text: 'List of collected items' },
+              { id: 'code-str', text: 'String variable' },
+              { id: 'code-bool', text: 'Boolean check' }
+            ],
+            zones: [
+              { id: 'plan-rooms', label: 'Room map', correct: 'code-dict' },
+              { id: 'plan-inv', label: 'Player inventory', correct: 'code-list' },
+              { id: 'plan-loc', label: 'Current location', correct: 'code-str' },
+              { id: 'plan-win', label: 'Win condition', correct: 'code-bool' }
+            ],
+            explanation: 'Planning translates directly to code: map→dictionary, inventory→list, location→string, win check→boolean.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'gp-app-q1',
+            question: 'You\'re planning a 5-room adventure. What\'s a good way to represent room connections?',
+            options: [
+              'One giant if/else chain',
+              'A dictionary where each room has exits pointing to other rooms',
+              'Print statements',
+              'Random number generation'
+            ],
+            correct: 1,
+            explanation: 'rooms["kitchen"]["north"] = "dining_room" clearly shows connections. Dictionaries make navigation code clean and maintainable.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'gp-app-connect1',
+            instruction: 'Connect to show a simple 4-room game map:',
+            nodes: [
+              { id: 'entrance', label: '🚪 Entrance' },
+              { id: 'hallway', label: '🏛️ Hallway' },
+              { id: 'kitchen', label: '🍳 Kitchen' },
+              { id: 'treasure', label: '💎 Treasure Room' }
+            ],
+            solution: {
+              edges: [
+                { source: 'entrance', target: 'hallway' },
+                { source: 'hallway', target: 'kitchen' },
+                { source: 'hallway', target: 'treasure' }
+              ]
+            },
+            nodeDescriptions: {
+              'entrance': 'Where the player starts',
+              'hallway': 'Central connecting room',
+              'kitchen': 'Contains a key item',
+              'treasure': 'The goal room'
+            },
+            explanation: 'This map shows: Entrance→Hallway, Hallway→Kitchen, Hallway→Treasure. The hallway is a hub connecting other rooms.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'gp-app-q2',
+            question: 'Your win condition is "collect 3 gems". What do you need to track?',
+            options: [
+              'Only the current room',
+              'A count of gems collected and their locations',
+              'Just the player\'s name',
+              'The time of day'
+            ],
+            correct: 1,
+            explanation: 'You need: gems_collected (count or list), and where each gem is located. The game checks if gems_collected >= 3 to determine victory.',
+            points: 15
+          }
+        ]
+      });
+      gamePlanning_Application.init();
+
+      const gamePlanning_Synthesis = new ActivityCarousel('game-planning-synthesis', {
+        type: 'synthesis',
+        sectionId: 'game-planning',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'gp-syn-sc1',
+            scenario: 'You\'re planning a pirate treasure hunt game. The player starts on a beach, can explore a jungle, cave, and shipwreck, and needs to find a map and key to unlock treasure.',
+            question: 'Sketch out the room connections and where you\'d place the items.',
+            evaluation: {
+              keywords: ['beach', 'jungle', 'cave', 'shipwreck', 'map', 'key', 'treasure', 'connect'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Map: Beach (start) → Jungle (north) → Cave (has key). Beach → Shipwreck (east, has map). Cave → Treasure Room (needs both key and map to enter). This creates exploration with a puzzle: find both items before accessing treasure.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'gp-syn-ref1',
+            prompt: 'Why do you think professional game designers spend so much time on planning and documentation before writing any code?',
+            thinkingPrompts: [
+              'What happens if you discover a design flaw late in development?',
+              'How does planning help teams work together?',
+              'What\'s cheaper to change: a sketch or thousands of lines of code?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(time|expensive|cost|save)', label: 'Resource awareness', points: 5 },
+                { pattern: '(team|communicate|understand)', label: 'Collaboration', points: 4 },
+                { pattern: '(bug|error|problem|fix)', label: 'Problem prevention', points: 4 },
+                { pattern: '(plan|design|think)', label: 'Planning value', points: 4 },
+                { pattern: '(because|since|therefore)', label: 'Reasoning', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'gp-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'A developer skips planning and starts coding a 20-room adventure game. Halfway through, they realize room 15 should connect to room 3, but room 3 was coded to only connect to rooms 2 and 4.'
+            },
+            question: 'What problem will they face, and how would planning have prevented it?',
+            correctAnswer: 'Rewriting existing code',
+            acceptableVariants: ['rewrite', 'change code', 'modify', 'refactor', 'go back', 'fix'],
+            explanation: 'They\'ll have to go back and change completed code—time-consuming and error-prone. A map would have shown all connections upfront, preventing this rework.',
+            commonMistakes: {
+              'No problem': 'Changing code late is expensive! It can introduce bugs and waste time.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'gp-syn-sc2',
+            scenario: 'Your friend plans a game where the player must find a key to open a door, but forgets to put the key anywhere on the map.',
+            question: 'What kind of bug is this, and how does planning with a checklist prevent it?',
+            evaluation: {
+              keywords: ['unwinnable', 'impossible', 'item', 'missing', 'checklist', 'verify', 'test', 'path'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'This creates an unwinnable game—the player can never complete it! A planning checklist would include: "For each required item, verify it exists in a reachable location." Trace through your design to confirm the win condition is achievable.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'gp-syn-q1',
+            question: 'What\'s the relationship between your game map and your code structure?',
+            options: [
+              'They\'re completely unrelated',
+              'The map becomes your data structures and the logic that connects them',
+              'The map replaces the need for code',
+              'Code should be written without any map'
+            ],
+            correct: 1,
+            explanation: 'Your map is a blueprint for code! Rooms become dictionary entries, connections become navigation logic, items become variables. Plan = code structure.',
+            points: 15
+          }
+        ]
+      });
+      gamePlanning_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: SKILLS INTEGRATION - Activity Carousels
+      // ----------------------------------------
+
+      const skillsIntegration_Comprehension = new ActivityCarousel('skills-integration-comprehension', {
+        type: 'comprehension',
+        sectionId: 'skills-integration',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'si-comp-q1',
+            question: 'Which "force" from your training tracks the player\'s location and inventory?',
+            options: [
+              'Lightning (decisions)',
+              'Stone (variables/memory)',
+              'Magnetism (functions)',
+              'None of them'
+            ],
+            correct: 1,
+            explanation: 'Stone = memory! Variables like current_room and inventory store the game state that persists between turns.',
+            points: 10
+          },
+          {
+            type: 'drag-drop',
+            id: 'si-comp-dd1',
+            instruction: 'Match each force to its role in the game:',
+            items: [
+              { id: 'role-state', text: 'Remembering game state' },
+              { id: 'role-choice', text: 'Handling player choices' },
+              { id: 'role-reuse', text: 'Organizing reusable code' }
+            ],
+            zones: [
+              { id: 'force-stone', label: '🪨 Stone', correct: 'role-state' },
+              { id: 'force-lightning', label: '⚡ Lightning', correct: 'role-choice' },
+              { id: 'force-magnetism', label: '🧲 Magnetism', correct: 'role-reuse' }
+            ],
+            explanation: 'Stone=variables (state), Lightning=conditionals/loops (choices), Magnetism=functions (reusable code).',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'si-comp-tf1',
+            statement: 'The game loop demonstrates how all three forces work together.',
+            correct: true,
+            explanation: 'The game loop uses: variables (Stone) to track state, while loops (Lightning) to keep running, conditionals (Lightning) to process commands, and functions (Magnetism) for each action.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'si-comp-fill1',
+            statement: 'The game loop pattern is: show state → get input → process → update → ___ → repeat.',
+            correctAnswers: ['check', 'check win', 'test', 'verify'],
+            caseSensitive: false,
+            hints: ['What do you check before repeating?'],
+            explanation: 'After updating state, check if the player won (or lost). If not, the loop continues. This ensures the game ends at the right time.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'si-comp-q2',
+            question: 'Which force makes your code organized and prevents repetition?',
+            options: [
+              'Stone (variables)',
+              'Lightning (conditionals)',
+              'Magnetism (functions)',
+              'Gravity'
+            ],
+            correct: 2,
+            explanation: 'Magnetism = functions! They pull related code together, making it reusable. move_player(), look_around(), take_item() keep your code DRY.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'si-comp-tf2',
+            statement: 'You could build a text adventure using only variables, without any conditionals or functions.',
+            correct: false,
+            explanation: 'Impossible! You need conditionals to handle different commands and check conditions, and functions to organize the code. All three forces are essential.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Comprehension.init();
+
+      const skillsIntegration_Application = new ActivityCarousel('skills-integration-application', {
+        type: 'application',
+        sectionId: 'skills-integration',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'si-app-seq1',
+            instruction: 'Order these code concepts from most basic to most complex:',
+            items: [
+              { id: 'var', text: 'Variables (Stone)' },
+              { id: 'cond', text: 'Conditionals (Lightning)' },
+              { id: 'loop', text: 'Loops (Lightning)' },
+              { id: 'func', text: 'Functions (Magnetism)' }
+            ],
+            correctOrder: ['var', 'cond', 'loop', 'func'],
+            hints: {
+              partial: 'Variables are the foundation everything else uses.',
+              wrong: 'You need variables before you can make decisions about them.'
+            },
+            explanation: 'Building blocks: Variables store data → Conditionals make decisions → Loops repeat → Functions organize. Each builds on previous concepts.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'si-app-connect1',
+            instruction: 'Connect to show how the forces combine in the game loop:',
+            nodes: [
+              { id: 'stone', label: '🪨 Stone' },
+              { id: 'lightning', label: '⚡ Lightning' },
+              { id: 'magnetism', label: '🧲 Magnetism' },
+              { id: 'gameloop', label: '🔄 Game Loop' },
+              { id: 'game', label: '🎮 Working Game' }
+            ],
+            solution: {
+              edges: [
+                { source: 'stone', target: 'gameloop' },
+                { source: 'lightning', target: 'gameloop' },
+                { source: 'magnetism', target: 'gameloop' },
+                { source: 'gameloop', target: 'game' }
+              ]
+            },
+            nodeDescriptions: {
+              'stone': 'Variables for game state',
+              'lightning': 'While loop and if/else',
+              'magnetism': 'Functions for actions',
+              'gameloop': 'All forces combined',
+              'game': 'The final result'
+            },
+            explanation: 'All three forces flow into the game loop, and together they create a working game!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'si-app-q1',
+            question: 'If your game has 10 rooms and each needs a "look" description, which force helps avoid writing 10 similar print statements?',
+            options: [
+              'Stone—use 10 variables',
+              'Lightning—use 10 if statements',
+              'Magnetism—use a function with room parameter',
+              'None, you must write all 10'
+            ],
+            correct: 2,
+            explanation: 'A function! def look(room): print(rooms[room]["description"]) handles ALL rooms with one reusable piece of code.',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'si-app-dd1',
+            instruction: 'Match each game action to the force it primarily uses:',
+            items: [
+              { id: 'use-stone', text: 'Stone (Variables)' },
+              { id: 'use-lightning', text: 'Lightning (Decisions)' },
+              { id: 'use-magnetism', text: 'Magnetism (Functions)' }
+            ],
+            zones: [
+              { id: 'action-save', label: 'Saving current room', correct: 'use-stone' },
+              { id: 'action-valid', label: 'Checking if move is valid', correct: 'use-lightning' },
+              { id: 'action-move', label: 'Reusable move_player()', correct: 'use-magnetism' }
+            ],
+            explanation: 'Saving state=variables, checking conditions=if/else, reusable code=functions. They work together!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'si-app-q2',
+            question: 'The game loop runs "while not game_won". Which force is this?',
+            options: [
+              'Stone (the variable game_won)',
+              'Lightning (the while loop)',
+              'Magnetism (function calls inside)',
+              'All three together'
+            ],
+            correct: 3,
+            explanation: 'It\'s all three! Stone: game_won variable. Lightning: while loop structure. Magnetism: functions called inside. Integration!',
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Application.init();
+
+      const skillsIntegration_Synthesis = new ActivityCarousel('skills-integration-synthesis', {
+        type: 'synthesis',
+        sectionId: 'skills-integration',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'si-syn-sc1',
+            scenario: 'You\'re explaining to a friend why learning these fundamentals matters, even with AI coding tools available.',
+            question: 'How would you explain why understanding Stone, Lightning, and Magnetism is valuable for working with AI?',
+            evaluation: {
+              keywords: ['understand', 'verify', 'debug', 'review', 'AI', 'foundation', 'check', 'design'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'These fundamentals let you understand AI-generated code, verify it\'s correct, and debug when it\'s not. You can\'t review code you don\'t understand! Plus, you need these concepts to explain what you want to AI. The architect needs to understand the building.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'si-syn-ref1',
+            prompt: 'Reflect on your learning journey through this course. What concept was hardest to grasp? What "clicked" and made it clearer?',
+            thinkingPrompts: [
+              'Variables, conditionals, loops, or functions?',
+              'What helped you understand—examples, practice, or connecting to real life?',
+              'How will you remember these concepts?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(variable|conditional|loop|function)', label: 'Specific concepts', points: 4 },
+                { pattern: '(hard|difficult|confusing|tricky)', label: 'Honest challenges', points: 4 },
+                { pattern: '(clicked|understood|realized|aha)', label: 'Learning moments', points: 5 },
+                { pattern: '(practice|example|try|build)', label: 'Learning methods', points: 4 },
+                { pattern: '(I will|I learned|I now)', label: 'Personal growth', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'si-syn-pred1',
+            setup: {
+              type: 'code',
+              language: 'python',
+              code: 'def process_command(cmd):\n    if cmd == "north":\n        move("north")\n    elif cmd == "look":\n        look_around()\n    elif cmd == "inventory":\n        show_inventory()\n    else:\n        print("Unknown command")'
+            },
+            question: 'Which forces are demonstrated in this function?',
+            correctAnswer: 'All three',
+            acceptableVariants: ['all', 'all three', 'stone lightning magnetism', 'every force'],
+            explanation: 'All three! Magnetism: it\'s a function calling other functions. Lightning: if/elif/else decisions. Stone: cmd is a variable passed in. Perfect integration!',
+            commonMistakes: {
+              'Just Lightning': 'Look closer—it\'s a function (Magnetism) using a variable (Stone) and conditionals (Lightning).'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'si-syn-sc2',
+            scenario: 'You completed the text adventure capstone and want to add a new feature: a health system where monsters can hurt the player.',
+            question: 'What variables, conditionals, and functions would you add?',
+            evaluation: {
+              keywords: ['health', 'variable', 'if', 'check', 'function', 'damage', 'monster', 'fight'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Variables (Stone): player_health = 100, monster_damage values. Conditionals (Lightning): if player_health <= 0: game_over, if monster in room. Functions (Magnetism): def fight(monster), def take_damage(amount), def heal(amount). All three forces working together for the new feature!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'si-syn-q1',
+            question: 'What\'s the most important lesson from building this capstone project?',
+            options: [
+              'Memorizing Python syntax is the key to programming',
+              'Real programs combine multiple concepts working together',
+              'You only need one programming concept to build things',
+              'Planning is optional'
+            ],
+            correct: 1,
+            explanation: 'Real programming is about integration! Variables, conditionals, loops, and functions all work together. Understanding how they combine is the key skill.',
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Synthesis.init();
+
+      console.log('✅ All activity carousels initialized for Ch5: Capstone I');
     });
   </script>
 </body>

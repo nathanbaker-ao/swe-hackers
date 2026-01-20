@@ -187,27 +187,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="datatypes-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Data Types -->
       <div class="activity-carousels" data-story="datatypes-story">
         <div id="datatypes-comprehension" class="carousel-container"></div>
         <div id="datatypes-application" class="carousel-container"></div>
         <div id="datatypes-synthesis" class="carousel-container"></div>
+        <div id="datatypes-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,27 +258,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="input-output-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Input/Output -->
       <div class="activity-carousels" data-story="input-output-story">
         <div id="input-output-comprehension" class="carousel-container"></div>
         <div id="input-output-application" class="carousel-container"></div>
         <div id="input-output-synthesis" class="carousel-container"></div>
+        <div id="input-output-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -482,21 +452,36 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from old Quiz system)
       // ============================================
 
       // Map story IDs to quiz container IDs
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'variables-story': 'variables-quiz',
         'datatypes-story': 'datatypes-quiz',
         'input-output-story': 'input-output-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        // Transform quiz questions to ActivityCarousel format
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
 
       // ============================================

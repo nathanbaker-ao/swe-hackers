@@ -116,27 +116,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="architect-shift-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Architect Shift -->
       <div class="activity-carousels" data-story="architect-shift-story">
         <div id="architect-shift-comprehension" class="carousel-container"></div>
         <div id="architect-shift-application" class="carousel-container"></div>
         <div id="architect-shift-synthesis" class="carousel-container"></div>
+        <div id="architect-shift-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -202,27 +187,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="evolution-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Evolution -->
       <div class="activity-carousels" data-story="evolution-story">
         <div id="evolution-comprehension" class="carousel-container"></div>
         <div id="evolution-application" class="carousel-container"></div>
         <div id="evolution-synthesis" class="carousel-container"></div>
+        <div id="evolution-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,27 +258,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="new-skills-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for New Skills -->
       <div class="activity-carousels" data-story="new-skills-story">
         <div id="new-skills-comprehension" class="carousel-container"></div>
         <div id="new-skills-application" class="carousel-container"></div>
         <div id="new-skills-synthesis" class="carousel-container"></div>
+        <div id="new-skills-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -353,8 +308,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
-  
   <!-- Activity Carousel System -->
     <!-- Firebase & Activity Tracking -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -493,22 +446,877 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from old Quiz system)
       // ============================================
 
-      // Map story IDs to quiz container IDs
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'architect-shift-story': 'architect-shift-quiz',
         'evolution-story': 'evolution-quiz',
         'new-skills-story': 'new-skills-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // ----------------------------------------
+      // STORY 1: ARCHITECT SHIFT - Activity Carousels
+      // ----------------------------------------
+
+      const architectShift_Comprehension = new ActivityCarousel('architect-shift-comprehension', {
+        type: 'comprehension',
+        sectionId: 'architect-shift',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'arch-comp-q1',
+            question: 'What does it mean to be an "architect" in programming today?',
+            options: [
+              'Someone who designs buildings',
+              'Someone who designs and directs while AI helps build the code',
+              'Someone who only writes code by hand',
+              'Someone who manages a team of programmers'
+            ],
+            correct: 1,
+            explanation: 'In the age of AI tools, programmers are becoming architects—they design the vision and direct AI assistants to help build it, rather than writing every line themselves.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'arch-comp-tf1',
+            statement: 'AI coding tools like Cursor can generate code, but humans still need to understand and verify what the AI creates.',
+            correct: true,
+            explanation: 'Exactly! AI is a powerful assistant, but humans must understand the code, catch errors, and make design decisions. The architect role requires understanding.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'arch-comp-fill1',
+            statement: 'Modern programmers work WITH AI, not ___ by AI.',
+            correctAnswers: ['replaced', 'instead of', 'against'],
+            caseSensitive: false,
+            hints: ['AI is a tool to collaborate with, not something that takes over'],
+            explanation: 'AI enhances programmer capabilities rather than replacing them. The best results come from human-AI collaboration.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'arch-comp-q2',
+            question: 'In the old way of coding, what did programmers spend most of their time doing?',
+            options: [
+              'Designing systems and reviewing AI output',
+              'Writing every line of code by hand',
+              'Managing servers',
+              'Drawing diagrams'
+            ],
+            correct: 1,
+            explanation: 'Before AI tools, programmers wrote every line manually. Now they can focus more on design and problem-solving while AI helps with implementation.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'arch-comp-tf2',
+            statement: 'AI tools make learning programming basics unnecessary.',
+            correct: false,
+            explanation: 'Understanding fundamentals is MORE important now! You need to verify AI output, debug issues, and make design decisions. Architects must understand what they\'re building.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'arch-comp-fill2',
+            statement: 'An architect ___ the vision while AI helps execute the details.',
+            correctAnswers: ['designs', 'creates', 'defines', 'sets'],
+            caseSensitive: false,
+            hints: ['What does an architect do with a building plan?'],
+            explanation: 'Architects create the overall design and vision. AI tools help implement the details, but the human provides direction and judgment.',
+            points: 10
+          }
+        ]
+      });
+      architectShift_Comprehension.init();
+
+      const architectShift_Application = new ActivityCarousel('architect-shift-application', {
+        type: 'application',
+        sectionId: 'architect-shift',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'arch-app-seq1',
+            instruction: 'Order the steps of working with an AI coding assistant:',
+            items: [
+              { id: 'describe', text: 'Describe what you want to build clearly' },
+              { id: 'review', text: 'Review the AI-generated code' },
+              { id: 'test', text: 'Test that the code works correctly' },
+              { id: 'refine', text: 'Refine and iterate based on results' }
+            ],
+            correctOrder: ['describe', 'review', 'test', 'refine'],
+            hints: {
+              partial: 'Start by telling the AI what you want, then check its work.',
+              wrong: 'Think: communicate → review → verify → improve.'
+            },
+            explanation: 'The architect workflow: describe your vision clearly, review AI output, test thoroughly, and iterate to improve.',
+            points: 20
+          },
+          {
+            type: 'drag-drop',
+            id: 'arch-app-dd1',
+            instruction: 'Match each role to who does it best—Human or AI:',
+            items: [
+              { id: 'role-design', text: 'Making design decisions' },
+              { id: 'role-boilerplate', text: 'Writing repetitive code' },
+              { id: 'role-verify', text: 'Verifying correctness' },
+              { id: 'role-generate', text: 'Generating code quickly' }
+            ],
+            zones: [
+              { id: 'zone-human1', label: 'Human (Design)', correct: 'role-design' },
+              { id: 'zone-ai1', label: 'AI (Boilerplate)', correct: 'role-boilerplate' },
+              { id: 'zone-human2', label: 'Human (Verify)', correct: 'role-verify' },
+              { id: 'zone-ai2', label: 'AI (Generate)', correct: 'role-generate' }
+            ],
+            explanation: 'Humans excel at design decisions and verification. AI excels at generating code and handling repetitive tasks.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'arch-app-q1',
+            question: 'You ask AI to write a login function and it generates code. What should you do next?',
+            options: [
+              'Use it immediately without looking at it',
+              'Delete it and write your own',
+              'Review the code, understand it, and test it',
+              'Ask AI to explain it but don\'t check yourself'
+            ],
+            correct: 2,
+            explanation: 'Always review AI-generated code! Understand what it does, look for potential issues, and test it thoroughly. You\'re responsible for the final result.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'arch-app-connect1',
+            instruction: 'Connect each step in the architect workflow:',
+            nodes: [
+              { id: 'vision', label: '🎯 Vision' },
+              { id: 'prompt', label: '💬 Prompt AI' },
+              { id: 'code', label: '📝 Generated Code' },
+              { id: 'review', label: '👀 Review' },
+              { id: 'product', label: '✅ Working Product' }
+            ],
+            solution: {
+              edges: [
+                { source: 'vision', target: 'prompt' },
+                { source: 'prompt', target: 'code' },
+                { source: 'code', target: 'review' },
+                { source: 'review', target: 'product' }
+              ]
+            },
+            nodeDescriptions: {
+              'vision': 'Your idea of what to build',
+              'prompt': 'Describing it to AI',
+              'code': 'What AI generates',
+              'review': 'Your verification step',
+              'product': 'The final working result'
+            },
+            explanation: 'Vision → Prompt → Generated Code → Review → Product. The human bookends the process with vision and verification.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'arch-app-q2',
+            question: 'Why is clear communication with AI tools important?',
+            options: [
+              'AI can read your mind if you\'re vague',
+              'Better prompts lead to better code generation',
+              'It doesn\'t matter, AI figures it out',
+              'Clear communication slows things down'
+            ],
+            correct: 1,
+            explanation: 'Garbage in, garbage out! The clearer your instructions to AI, the better the results. This is why communication skills matter more than ever.',
+            points: 15
+          }
+        ]
+      });
+      architectShift_Application.init();
+
+      const architectShift_Synthesis = new ActivityCarousel('architect-shift-synthesis', {
+        type: 'synthesis',
+        sectionId: 'architect-shift',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'arch-syn-sc1',
+            scenario: 'A friend says: "Why bother learning to code if AI can do it all? I\'ll just let AI write everything and never learn the fundamentals."',
+            question: 'What would you say to explain why understanding code still matters?',
+            evaluation: {
+              keywords: ['understand', 'verify', 'debug', 'design', 'decision', 'review', 'error', 'architect'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Without understanding code, you can\'t verify if AI output is correct, debug when things break, or make smart design decisions. AI makes mistakes! The architect needs to understand the building to direct construction. Plus, knowing fundamentals helps you give better instructions to AI.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'arch-syn-ref1',
+            prompt: 'How do you think the role of programmers will continue to evolve as AI tools get even better? What skills will become more important, and which might become less important?',
+            thinkingPrompts: [
+              'What can only humans do well?',
+              'What might AI handle entirely in the future?',
+              'What new skills might emerge?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(design|creative|vision)', label: 'Human strengths', points: 5 },
+                { pattern: '(AI|automate|generate)', label: 'AI capabilities', points: 4 },
+                { pattern: '(communication|explain|collaborate)', label: 'Soft skills', points: 5 },
+                { pattern: '(future|will|might|could)', label: 'Forward thinking', points: 4 },
+                { pattern: '(I think|believe|predict)', label: 'Personal insight', points: 3 }
+              ],
+              maxScore: 21
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'arch-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'You ask AI: "Make a website." The AI responds: "What kind of website? What features? What style?"'
+            },
+            question: 'Why does AI need more information, and what does this teach about being an effective architect?',
+            correctAnswer: 'AI needs clear direction',
+            acceptableVariants: ['specifics', 'details', 'clarity', 'vision', 'requirements', 'clear'],
+            explanation: 'AI can\'t read minds! A good architect provides clear, specific requirements. The more detailed your vision, the better AI can help execute it. Vague inputs = vague outputs.',
+            commonMistakes: {
+              'AI is dumb': 'AI is powerful but needs direction—just like a skilled contractor needs blueprints from an architect.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'arch-syn-sc2',
+            scenario: 'AI generates a function that looks correct, but when you test it with edge cases (empty inputs, very large numbers), it fails.',
+            question: 'What does this teach about the architect\'s responsibility, and how should you approach AI-generated code?',
+            evaluation: {
+              keywords: ['test', 'verify', 'edge case', 'review', 'responsible', 'understand', 'check', 'trust'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'This shows AI can miss edge cases. The architect is responsible for quality—you must test thoroughly, not trust blindly. Always test with normal cases, edge cases, and error cases. Understanding the code helps you know what to test.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'arch-syn-q1',
+            question: 'What\'s the most important mindset shift from "coder" to "architect"?',
+            options: [
+              'Writing more code faster',
+              'Focusing on design, communication, and verification rather than just typing',
+              'Avoiding all tools and writing everything manually',
+              'Letting AI make all decisions'
+            ],
+            correct: 1,
+            explanation: 'Architects think bigger—design the system, communicate clearly, and verify quality. The actual code writing is now shared with AI tools.',
+            points: 15
+          }
+        ]
+      });
+      architectShift_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: EVOLUTION - Activity Carousels
+      // ----------------------------------------
+
+      const evolution_Comprehension = new ActivityCarousel('evolution-comprehension', {
+        type: 'comprehension',
+        sectionId: 'evolution',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'evo-comp-q1',
+            question: 'What was programming like in the "Stone Age" of computing?',
+            options: [
+              'Using modern IDEs with AI assistance',
+              'Using physical punch cards with holes',
+              'Writing code on tablets',
+              'Using voice commands'
+            ],
+            correct: 1,
+            explanation: 'Early programmers used punch cards—physical cards with holes that represented instructions. One mistake meant re-punching the entire card!',
+            points: 10
+          },
+          {
+            type: 'sequence',
+            id: 'evo-comp-seq1',
+            instruction: 'Order the four ages of programming from oldest to newest:',
+            items: [
+              { id: 'stone', text: 'Stone Age: Punch cards' },
+              { id: 'bronze', text: 'Bronze Age: Keyboards and screens' },
+              { id: 'iron', text: 'Iron Age: Frameworks and libraries' },
+              { id: 'architect', text: 'Age of Architects: AI tools' }
+            ],
+            correctOrder: ['stone', 'bronze', 'iron', 'architect'],
+            hints: {
+              partial: 'Punch cards came first, AI is the newest.',
+              wrong: 'Think about technological progress over time.'
+            },
+            explanation: 'Programming evolved: physical cards → keyboards/screens → reusable frameworks → AI assistance. Each age made development more accessible.',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'evo-comp-tf1',
+            statement: 'Each age of programming made it easier for more people to build software.',
+            correct: true,
+            explanation: 'Absolutely! Punch cards required specialists. Now, with AI tools, more people than ever can build software. The barrier keeps lowering.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'evo-comp-fill1',
+            statement: 'Frameworks in the Iron Age let programmers reuse ___ instead of writing everything from scratch.',
+            correctAnswers: ['code', 'components', 'libraries', 'solutions'],
+            caseSensitive: false,
+            hints: ['What do frameworks provide that you don\'t have to write yourself?'],
+            explanation: 'Frameworks like React, Django, and Rails provide pre-built code. Instead of reinventing the wheel, you build on existing solutions.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'evo-comp-q2',
+            question: 'Why is NOW considered the "perfect time" to learn programming?',
+            options: [
+              'Programming is becoming obsolete',
+              'AI tools make learning and building faster than ever',
+              'There are fewer jobs in tech',
+              'Computers are getting slower'
+            ],
+            correct: 1,
+            explanation: 'AI assistants help you learn faster, build more quickly, and focus on the interesting parts. You\'re learning at the best time in history!',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'evo-comp-tf2',
+            statement: 'The transition from punch cards to keyboards was a bigger leap than keyboards to AI tools.',
+            correct: false,
+            explanation: 'Both are transformative, but AI fundamentally changes HOW we program—from writing every line to directing AI assistants. It\'s arguably the biggest shift yet.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      evolution_Comprehension.init();
+
+      const evolution_Application = new ActivityCarousel('evolution-application', {
+        type: 'application',
+        sectionId: 'evolution',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'evo-app-dd1',
+            instruction: 'Match each programming age to its defining characteristic:',
+            items: [
+              { id: 'char-physical', text: 'Physical cards with holes' },
+              { id: 'char-type', text: 'Type code and see it on screen' },
+              { id: 'char-reuse', text: 'Pre-built frameworks to reuse' },
+              { id: 'char-ai', text: 'AI generates code from descriptions' }
+            ],
+            zones: [
+              { id: 'age-stone', label: 'Stone Age', correct: 'char-physical' },
+              { id: 'age-bronze', label: 'Bronze Age', correct: 'char-type' },
+              { id: 'age-iron', label: 'Iron Age', correct: 'char-reuse' },
+              { id: 'age-architect', label: 'Age of Architects', correct: 'char-ai' }
+            ],
+            explanation: 'Each age introduced new tools: punch cards → keyboards → frameworks → AI. The tools evolved to make programming more accessible.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'evo-app-q1',
+            question: 'A programmer in the 1960s had to re-punch an entire card deck if they found one error. What modern equivalent helps us fix mistakes more easily?',
+            options: [
+              'Using bigger monitors',
+              'Instant feedback, syntax highlighting, and AI suggestions',
+              'Faster typing',
+              'Better chairs'
+            ],
+            correct: 1,
+            explanation: 'Modern tools catch errors instantly, highlight problems, and even suggest fixes. What took hours in the Stone Age takes seconds today.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'evo-app-connect1',
+            instruction: 'Connect each age to what it enabled:',
+            nodes: [
+              { id: 'punch', label: '🪨 Punch Cards' },
+              { id: 'keyboard', label: '⌨️ Keyboards' },
+              { id: 'framework', label: '📦 Frameworks' },
+              { id: 'ai-tool', label: '🤖 AI Tools' },
+              { id: 'everyone', label: '👥 Everyone Builds' }
+            ],
+            solution: {
+              edges: [
+                { source: 'punch', target: 'keyboard' },
+                { source: 'keyboard', target: 'framework' },
+                { source: 'framework', target: 'ai-tool' },
+                { source: 'ai-tool', target: 'everyone' }
+              ]
+            },
+            nodeDescriptions: {
+              'punch': 'Only specialists could program',
+              'keyboard': 'More interactive development',
+              'framework': 'Build on existing code',
+              'ai-tool': 'AI assists with coding',
+              'everyone': 'Programming becomes accessible to all'
+            },
+            explanation: 'Each evolution lowered the barrier: specialists → trained programmers → developers with frameworks → everyone with AI assistance.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'evo-app-q2',
+            question: 'Why did frameworks (Iron Age) become so popular?',
+            options: [
+              'They made computers faster',
+              'They let programmers avoid solving already-solved problems',
+              'They were required by law',
+              'They eliminated the need for any coding knowledge'
+            ],
+            correct: 1,
+            explanation: 'Why build a login system from scratch when someone already built a secure, tested one? Frameworks let you focus on your unique problems.',
+            points: 15
+          },
+          {
+            type: 'sequence',
+            id: 'evo-app-seq1',
+            instruction: 'Order these tasks from most manual to most AI-assisted:',
+            items: [
+              { id: 'manual', text: 'Writing every line by hand' },
+              { id: 'copy', text: 'Copying code from Stack Overflow' },
+              { id: 'framework', text: 'Using framework components' },
+              { id: 'ai-gen', text: 'Describing features and AI generates code' }
+            ],
+            correctOrder: ['manual', 'copy', 'framework', 'ai-gen'],
+            hints: {
+              partial: 'Manual writing is most effort, AI generation is least.',
+              wrong: 'Think about how much you have to do yourself vs. getting help.'
+            },
+            explanation: 'Over time, we moved from 100% manual to increasingly assisted development. AI represents the most assistance yet.',
+            points: 20
+          }
+        ]
+      });
+      evolution_Application.init();
+
+      const evolution_Synthesis = new ActivityCarousel('evolution-synthesis', {
+        type: 'synthesis',
+        sectionId: 'evolution',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'evo-syn-sc1',
+            scenario: 'Imagine explaining to a 1960s programmer (who uses punch cards) what programming is like today with AI assistants.',
+            question: 'What would be most surprising to them, and what would still be familiar?',
+            evaluation: {
+              keywords: ['AI', 'instant', 'fast', 'logic', 'thinking', 'design', 'problem', 'solve'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Most surprising: AI generating code from plain English, instant feedback, fixing errors in seconds instead of hours. Still familiar: the need for logical thinking, breaking down problems, testing, and the satisfaction of making something work. The core skills remain!',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'evo-syn-ref1',
+            prompt: 'What do you think the "next age" of programming might look like? What tools might exist that don\'t today?',
+            thinkingPrompts: [
+              'Could you program without typing at all?',
+              'What if AI could understand your thoughts?',
+              'What problems might the next age solve?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(voice|thought|brain|gesture)', label: 'Novel input methods', points: 5 },
+                { pattern: '(AI|automate|intelligent)', label: 'AI advancement', points: 4 },
+                { pattern: '(might|could|imagine|maybe)', label: 'Speculation', points: 4 },
+                { pattern: '(problem|solve|help)', label: 'Problem focus', points: 4 },
+                { pattern: '(I think|I wonder|I imagine)', label: 'Personal vision', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'evo-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Each age of programming made it possible for MORE people to build software. Stone Age: thousands. Bronze Age: hundreds of thousands. Iron Age: millions. Age of Architects: ???'
+            },
+            question: 'How many people might be able to build software in the Age of Architects?',
+            correctAnswer: 'Billions or everyone',
+            acceptableVariants: ['billions', 'everyone', 'anyone', 'all', 'most people'],
+            explanation: 'With AI lowering the barrier further, potentially billions of people could build software—not just professional programmers. Software creation becomes as accessible as writing documents!',
+            commonMistakes: {
+              'millions': 'That was the Iron Age! AI tools should enable even more people.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'evo-syn-sc2',
+            scenario: 'Your younger sibling says they want to learn programming. They ask: "Should I start with the hard stuff first, or use AI tools right away?"',
+            question: 'What advice would you give about balancing fundamentals with AI-assisted learning?',
+            evaluation: {
+              keywords: ['both', 'understand', 'fundamentals', 'AI', 'tool', 'help', 'learn', 'practice'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Use both! Learn fundamentals so you understand what\'s happening, but use AI to speed up learning and building. AI can explain concepts, help debug, and let you build cool things while learning. The key is understanding what AI generates, not just copying blindly.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'evo-syn-q1',
+            question: 'What\'s the main lesson from seeing how programming has evolved?',
+            options: [
+              'Old methods were better',
+              'Tools keep improving to make building easier, but core thinking skills remain valuable',
+              'We should go back to punch cards',
+              'AI will replace all human thought'
+            ],
+            correct: 1,
+            explanation: 'Technology evolves, but the need for logical thinking, problem-solving, and creativity remains. New tools amplify human capabilities rather than replacing human value.',
+            points: 15
+          }
+        ]
+      });
+      evolution_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: NEW SKILLS - Activity Carousels
+      // ----------------------------------------
+
+      const newSkills_Comprehension = new ActivityCarousel('new-skills-comprehension', {
+        type: 'comprehension',
+        sectionId: 'new-skills',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'skills-comp-q1',
+            question: 'Which skill has become MORE important in the age of AI tools?',
+            options: [
+              'Memorizing syntax perfectly',
+              'Typing speed',
+              'Clear communication and explaining what you want',
+              'Writing code without any help'
+            ],
+            correct: 2,
+            explanation: 'When working with AI, your ability to clearly describe what you want directly affects the quality of results. Communication is now a coding superpower!',
+            points: 10
+          },
+          {
+            type: 'drag-drop',
+            id: 'skills-comp-dd1',
+            instruction: 'Sort skills into "More Important Now" or "Less Important Now":',
+            items: [
+              { id: 'skill-mem', text: 'Memorizing exact syntax' },
+              { id: 'skill-comm', text: 'Clear communication' },
+              { id: 'skill-read', text: 'Reading and reviewing code' },
+              { id: 'skill-type', text: 'Typing speed' }
+            ],
+            zones: [
+              { id: 'zone-more1', label: 'MORE Important (Comm)', correct: 'skill-comm' },
+              { id: 'zone-more2', label: 'MORE Important (Read)', correct: 'skill-read' },
+              { id: 'zone-less1', label: 'LESS Important (Memory)', correct: 'skill-mem' },
+              { id: 'zone-less2', label: 'LESS Important (Typing)', correct: 'skill-type' }
+            ],
+            explanation: 'AI can handle memorization and typing. Humans add value through communication, critical thinking, and code review.',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'skills-comp-tf1',
+            statement: 'Understanding how code works deeply is less important now that AI can generate it.',
+            correct: false,
+            explanation: 'Deep understanding is MORE important! You need to verify AI output, debug issues, and make design decisions. You can\'t review what you don\'t understand.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'skills-comp-fill1',
+            statement: 'The four superpowers of modern programmers are: Understanding, Communicating, Reading code, and ___.',
+            correctAnswers: ['Planning', 'planning with diagrams', 'diagramming'],
+            caseSensitive: false,
+            hints: ['What do architects do before building?'],
+            explanation: 'Planning with diagrams helps you think through systems before building. Sketching ideas is a superpower for designing with AI.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'skills-comp-q2',
+            question: 'Why is "reading code critically" a superpower?',
+            options: [
+              'It helps you type faster',
+              'AI always generates perfect code',
+              'You need to verify and understand AI-generated code',
+              'It\'s not actually important'
+            ],
+            correct: 2,
+            explanation: 'AI makes mistakes. Being able to read code critically lets you catch errors, understand what\'s happening, and ensure quality.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'skills-comp-tf2',
+            statement: 'Sketching system designs on paper or with diagrams is a waste of time when you have AI.',
+            correct: false,
+            explanation: 'Planning is MORE valuable now! A clear diagram helps you communicate your vision to AI and think through the system before building.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      newSkills_Comprehension.init();
+
+      const newSkills_Application = new ActivityCarousel('new-skills-application', {
+        type: 'application',
+        sectionId: 'new-skills',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'skills-app-seq1',
+            instruction: 'Order these steps for building a feature with AI assistance:',
+            items: [
+              { id: 'plan', text: 'Plan/sketch the design' },
+              { id: 'describe', text: 'Describe clearly to AI' },
+              { id: 'read', text: 'Read and understand the generated code' },
+              { id: 'verify', text: 'Test and verify it works' }
+            ],
+            correctOrder: ['plan', 'describe', 'read', 'verify'],
+            hints: {
+              partial: 'Planning comes first, verification comes last.',
+              wrong: 'Think: plan → communicate → review → verify.'
+            },
+            explanation: 'The modern workflow: plan your approach → communicate clearly → read/understand output → verify correctness. All four superpowers in action!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'skills-app-q1',
+            question: 'You get AI-generated code that looks complex. What\'s the best approach?',
+            options: [
+              'Use it without understanding—AI knows best',
+              'Delete it and write simpler code yourself',
+              'Read it carefully, ask AI to explain parts you don\'t understand',
+              'Ignore it and try a different prompt'
+            ],
+            correct: 2,
+            explanation: 'Use AI to help you understand! Ask it to explain the code. This builds your knowledge while leveraging AI assistance.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'skills-app-connect1',
+            instruction: 'Connect each superpower to how it\'s used with AI:',
+            nodes: [
+              { id: 'understand', label: '🧠 Understanding' },
+              { id: 'communicate', label: '💬 Communicating' },
+              { id: 'reading', label: '👀 Reading Code' },
+              { id: 'planning', label: '📊 Planning' },
+              { id: 'quality', label: '✅ Quality Result' }
+            ],
+            solution: {
+              edges: [
+                { source: 'planning', target: 'communicate' },
+                { source: 'communicate', target: 'reading' },
+                { source: 'understand', target: 'reading' },
+                { source: 'reading', target: 'quality' }
+              ]
+            },
+            nodeDescriptions: {
+              'understand': 'Know how code works',
+              'communicate': 'Clear prompts to AI',
+              'reading': 'Review AI output',
+              'planning': 'Design before building',
+              'quality': 'Working, correct software'
+            },
+            explanation: 'All superpowers work together: plan → communicate → read (with understanding) → quality output.',
+            points: 25
+          },
+          {
+            type: 'drag-drop',
+            id: 'skills-app-dd1',
+            instruction: 'Match each situation to the most important superpower:',
+            items: [
+              { id: 'sp-plan', text: 'Planning' },
+              { id: 'sp-comm', text: 'Communicating' },
+              { id: 'sp-read', text: 'Reading Code' },
+              { id: 'sp-understand', text: 'Understanding' }
+            ],
+            zones: [
+              { id: 'sit-start', label: 'Before starting a project', correct: 'sp-plan' },
+              { id: 'sit-prompt', label: 'Writing prompts for AI', correct: 'sp-comm' },
+              { id: 'sit-review', label: 'Checking AI output', correct: 'sp-read' },
+              { id: 'sit-debug', label: 'Fixing a bug', correct: 'sp-understand' }
+            ],
+            explanation: 'Different situations call for different superpowers, but they all matter!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'skills-app-q2',
+            question: 'What makes a prompt to AI "clear"?',
+            options: [
+              'Using the longest words possible',
+              'Being vague so AI has freedom',
+              'Specific details about what you want, context, and expected outcome',
+              'Using only technical jargon'
+            ],
+            correct: 2,
+            explanation: 'Clear prompts include: what you\'re building, the context, specific requirements, and what success looks like. Details matter!',
+            points: 15
+          }
+        ]
+      });
+      newSkills_Application.init();
+
+      const newSkills_Synthesis = new ActivityCarousel('new-skills-synthesis', {
+        type: 'synthesis',
+        sectionId: 'new-skills',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'skills-syn-sc1',
+            scenario: 'A student focuses only on memorizing Python syntax, spending hours on flashcards. They struggle to build actual projects because they can\'t think through the design.',
+            question: 'What advice would you give them about which skills to prioritize?',
+            evaluation: {
+              keywords: ['understand', 'design', 'think', 'plan', 'AI', 'lookup', 'build', 'practice'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Stop memorizing—you can always look up syntax or ask AI. Focus on understanding concepts deeply, practicing design thinking, and building projects. The ability to break down problems and plan solutions is worth more than memorized syntax.',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'skills-syn-ref1',
+            prompt: 'Which of the four superpowers (Understanding, Communicating, Reading Code, Planning) do you think is your current strength? Which do you want to develop more?',
+            thinkingPrompts: [
+              'What comes naturally to you?',
+              'What do you find challenging?',
+              'How could you practice your weaker areas?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(understand|communicate|read|plan)', label: 'Names superpowers', points: 4 },
+                { pattern: '(strong|good|easy|natural)', label: 'Self-awareness strength', points: 4 },
+                { pattern: '(weak|improve|develop|practice)', label: 'Growth mindset', points: 5 },
+                { pattern: '(because|since|due to)', label: 'Reasoning', points: 4 },
+                { pattern: '(I will|I want|I need)', label: 'Action orientation', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'skills-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'Two programmers ask AI to build a login system.\n\nProgrammer A: "Make a login"\nProgrammer B: "Create a secure login with email/password, password hashing, rate limiting for failed attempts, and a clean error message for invalid credentials"'
+            },
+            question: 'Which programmer will get better results and why?',
+            correctAnswer: 'Programmer B',
+            acceptableVariants: ['B', 'second', 'detailed', 'specific'],
+            explanation: 'Programmer B will get much better results! Their detailed prompt gives AI clear requirements. Programmer A\'s vague prompt leaves too much to chance—AI will have to guess what they want.',
+            commonMistakes: {
+              'Both same': 'The specificity of the prompt dramatically affects AI output quality.'
+            },
+            points: 15
+          },
+          {
+            type: 'scenario',
+            id: 'skills-syn-sc2',
+            scenario: 'You\'re starting a new project—a personal finance tracker. Before writing any code or asking AI, what planning would you do?',
+            question: 'Describe your planning process using the superpowers you\'ve learned.',
+            evaluation: {
+              keywords: ['sketch', 'diagram', 'features', 'design', 'user', 'data', 'flow', 'think'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'First, sketch the main features (add expenses, view reports, set budgets). Draw a simple diagram of how data flows. Think about what the user needs to see and do. List the main components. THEN communicate this plan clearly to AI to start building.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'skills-syn-q1',
+            question: 'Why are these skills called "superpowers" in the age of AI?',
+            options: [
+              'They sound cool',
+              'They multiply your effectiveness when working with AI tools',
+              'They replace the need for AI',
+              'They\'re rare genetic abilities'
+            ],
+            correct: 1,
+            explanation: 'These skills are force multipliers! With AI, good communication gets you better code. Good planning leads to better systems. Good code reading catches AI mistakes. They make you exponentially more effective.',
+            points: 15
+          }
+        ]
+      });
+      newSkills_Synthesis.init();
+
+      console.log('✅ All activity carousels initialized for Ch4: Architect');
     });
   </script>
 </body>

@@ -116,27 +116,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="functions-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Functions -->
       <div class="activity-carousels" data-story="functions-story">
         <div id="functions-comprehension" class="carousel-container"></div>
         <div id="functions-application" class="carousel-container"></div>
         <div id="functions-synthesis" class="carousel-container"></div>
+        <div id="functions-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -202,27 +187,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="parameters-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Parameters -->
       <div class="activity-carousels" data-story="parameters-story">
         <div id="parameters-comprehension" class="carousel-container"></div>
         <div id="parameters-application" class="carousel-container"></div>
         <div id="parameters-synthesis" class="carousel-container"></div>
+        <div id="parameters-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,27 +258,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="return-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
-      </div>
-
       <!-- Activity Carousels for Return Values -->
       <div class="activity-carousels" data-story="return-story">
         <div id="return-comprehension" class="carousel-container"></div>
         <div id="return-application" class="carousel-container"></div>
         <div id="return-synthesis" class="carousel-container"></div>
+        <div id="return-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -353,8 +308,6 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
-  
   <!-- Activity Carousel System -->
     <!-- Firebase & Activity Tracking -->
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
@@ -486,21 +439,36 @@
       });
 
       // ============================================
-      // INITIALIZE QUIZZES
+      // INITIALIZE QUIZ CAROUSELS (Migrated from old Quiz system)
       // ============================================
 
       // Map story IDs to quiz container IDs
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'functions-story': 'functions-quiz',
         'parameters-story': 'parameters-quiz',
         'return-story': 'return-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
 
-        new Quiz(containerId, quiz.questions);
+        // Transform quiz questions to ActivityCarousel format
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
 
       // ============================================

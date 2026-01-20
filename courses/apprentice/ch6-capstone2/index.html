@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
+  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
 </head>
 <body data-course="apprentice" data-lesson="ch6-capstone2">
   <header class="header">
@@ -115,20 +116,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="ai-architecture-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for AI Architecture -->
+      <div class="activity-carousels" data-story="ai-architecture-story">
+        <div id="ai-architecture-comprehension" class="carousel-container"></div>
+        <div id="ai-architecture-application" class="carousel-container"></div>
+        <div id="ai-architecture-synthesis" class="carousel-container"></div>
+        <div id="ai-architecture-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,20 +187,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="skills-integration-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Skills Integration -->
+      <div class="activity-carousels" data-story="skills-integration-story">
+        <div id="skills-integration-comprehension" class="carousel-container"></div>
+        <div id="skills-integration-application" class="carousel-container"></div>
+        <div id="skills-integration-synthesis" class="carousel-container"></div>
+        <div id="skills-integration-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -273,20 +258,12 @@
         </div>
       </div>
 
-      <div class="quiz-card" id="journey-complete-quiz">
-        <div class="quiz-header">
-          <h4>📝 Check Your Understanding</h4>
-          <div class="quiz-progress">
-            <span class="answered">0</span>/<span class="total">3</span> answered
-            <span class="score"></span>
-          </div>
-        </div>
-        <div class="quiz-carousel"></div>
-        <div class="quiz-nav">
-          <button class="quiz-nav-btn prev" disabled>← Prev</button>
-          <div class="quiz-dots"></div>
-          <button class="quiz-nav-btn next">Next →</button>
-        </div>
+      <!-- Activity Carousels for Journey Complete -->
+      <div class="activity-carousels" data-story="journey-complete-story">
+        <div id="journey-complete-comprehension" class="carousel-container"></div>
+        <div id="journey-complete-application" class="carousel-container"></div>
+        <div id="journey-complete-synthesis" class="carousel-container"></div>
+        <div id="journey-complete-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -341,7 +318,19 @@
   <script src="../../shared/js/interactive/diagram-utils.js"></script>
   <script src="../../shared/js/interactive/audio-engine.js"></script>
   <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
-  <script src="../../shared/js/interactive/quiz-system.js"></script>
+  <!-- Activity Carousel System -->
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+  <script src="../../shared/js/interactive/activity-carousel.js"></script>
   
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
@@ -462,17 +451,887 @@
       // INITIALIZE QUIZZES
       // ============================================
 
-      const storyToQuiz = {
+      const storyToQuizContainer = {
         'ai-architecture-story': 'ai-architecture-quiz',
         'skills-integration-story': 'skills-integration-quiz',
         'journey-complete-story': 'journey-complete-quiz'
       };
 
       pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuiz[quiz.storyId];
+        const containerId = storyToQuizContainer[quiz.storyId];
         if (!containerId) return;
-        new Quiz(containerId, quiz.questions);
+
+        const quizActivities = quiz.questions.map((q, i) => ({
+          type: 'quiz',
+          id: `${quiz.storyId}-quiz-${i + 1}`,
+          question: q.question,
+          options: q.options,
+          correct: q.correct,
+          explanation: q.explanation
+        }));
+
+        new ActivityCarousel(containerId, {
+          type: 'knowledge-check',
+          sectionId: quiz.storyId,
+          title: '📝 Knowledge Check',
+          activities: quizActivities
+        });
       });
+
+      // ============================================
+      // ACTIVITY CAROUSELS
+      // ============================================
+
+      // ----------------------------------------
+      // STORY 1: AI ARCHITECTURE - Activity Carousels
+      // ----------------------------------------
+
+      const aiArchitecture_Comprehension = new ActivityCarousel('ai-architecture-comprehension', {
+        type: 'comprehension',
+        sectionId: 'ai-architecture',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'ai-arch-comp-q1',
+            question: 'What is the first step when a user types something to your AI helper?',
+            options: [
+              'Generate a random response',
+              'Parse and analyze the input',
+              'Exit the program',
+              'Print an error'
+            ],
+            correct: 1,
+            explanation: 'First, you need to read and understand what the user typed. Parsing means breaking down the input to figure out what they want.',
+            points: 10
+          },
+          {
+            type: 'sequence',
+            id: 'ai-arch-comp-seq1',
+            instruction: 'Order the steps of the AI helper conversation loop:',
+            items: [
+              { id: 'input', text: 'Get user input' },
+              { id: 'parse', text: 'Parse/analyze the input' },
+              { id: 'detect', text: 'Detect user intent' },
+              { id: 'respond', text: 'Generate and show response' }
+            ],
+            correctOrder: ['input', 'parse', 'detect', 'respond'],
+            hints: {
+              partial: 'Start with getting input, end with responding.',
+              wrong: 'Input → Understand → Respond.'
+            },
+            explanation: 'The conversation loop: get input → parse it → figure out intent → respond appropriately → repeat.',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'ai-arch-comp-tf1',
+            statement: 'An AI helper needs to understand user intent to provide relevant responses.',
+            correct: true,
+            explanation: 'Intent detection is key! "Tell me a joke" and "What\'s the weather?" need completely different handling. Your code routes to the right feature.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'ai-arch-comp-fill1',
+            statement: 'The AI helper uses a ___ to keep the conversation going until the user says quit.',
+            correctAnswers: ['loop', 'while loop', 'main loop', 'conversation loop'],
+            caseSensitive: false,
+            hints: ['What structure repeats code?'],
+            explanation: 'A while loop keeps the conversation alive: while not quit: get input, process, respond, repeat.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'ai-arch-comp-q2',
+            question: 'What happens after generating a response?',
+            options: [
+              'The program ends',
+              'Loop back to get more input',
+              'Delete all data',
+              'Restart the computer'
+            ],
+            correct: 1,
+            explanation: 'After responding, loop back to get more input! The conversation continues until the user explicitly quits.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'ai-arch-comp-tf2',
+            statement: 'You need to handle the case where the user input doesn\'t match any known command.',
+            correct: true,
+            explanation: 'Always have a fallback! If input doesn\'t match joke, fact, todo, etc., say "I don\'t understand" rather than crashing.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      aiArchitecture_Comprehension.init();
+
+      const aiArchitecture_Application = new ActivityCarousel('ai-architecture-application', {
+        type: 'application',
+        sectionId: 'ai-architecture',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'ai-arch-app-dd1',
+            instruction: 'Match each user input to the feature it should trigger:',
+            items: [
+              { id: 'feat-joke', text: 'tell_joke() function' },
+              { id: 'feat-fact', text: 'share_fact() function' },
+              { id: 'feat-todo', text: 'add_todo() function' },
+              { id: 'feat-unknown', text: 'unknown_command() function' }
+            ],
+            zones: [
+              { id: 'input-joke', label: '"tell me a joke"', correct: 'feat-joke' },
+              { id: 'input-fact', label: '"give me a fact"', correct: 'feat-fact' },
+              { id: 'input-todo', label: '"add buy milk"', correct: 'feat-todo' },
+              { id: 'input-random', label: '"asdfghjkl"', correct: 'feat-unknown' }
+            ],
+            explanation: 'Your if/elif/else chain routes each input type to the right function. Unknown inputs get a friendly fallback.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'ai-arch-app-q1',
+            question: 'How would you check if the user wants a joke in their input?',
+            options: [
+              'if input == "joke"',
+              'if "joke" in user_input.lower()',
+              'if joke == True',
+              'while "joke"'
+            ],
+            correct: 1,
+            explanation: '"joke" in user_input.lower() is flexible—it catches "tell me a joke", "I want a joke", "JOKE please", etc.',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'ai-arch-app-connect1',
+            instruction: 'Connect the conversation flow:',
+            nodes: [
+              { id: 'start', label: '▶️ Start' },
+              { id: 'greet', label: '👋 Greeting' },
+              { id: 'loop', label: '🔄 Main Loop' },
+              { id: 'process', label: '⚙️ Process' },
+              { id: 'quit', label: '👋 Goodbye' }
+            ],
+            solution: {
+              edges: [
+                { source: 'start', target: 'greet' },
+                { source: 'greet', target: 'loop' },
+                { source: 'loop', target: 'process' },
+                { source: 'process', target: 'loop' },
+                { source: 'loop', target: 'quit' }
+              ]
+            },
+            nodeDescriptions: {
+              'start': 'Program begins',
+              'greet': 'Welcome the user',
+              'loop': 'Get input, check for quit',
+              'process': 'Handle the command',
+              'quit': 'Exit when user says quit'
+            },
+            explanation: 'Start → Greet → Loop (process until quit) → Goodbye. The loop is the heart of the helper.',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'ai-arch-app-seq1',
+            instruction: 'Order the code structure for intent detection:',
+            items: [
+              { id: 'check-quit', text: 'if "quit" in input: break' },
+              { id: 'check-joke', text: 'elif "joke" in input: tell_joke()' },
+              { id: 'check-fact', text: 'elif "fact" in input: share_fact()' },
+              { id: 'else', text: 'else: print("I don\'t understand")' }
+            ],
+            correctOrder: ['check-quit', 'check-joke', 'check-fact', 'else'],
+            hints: {
+              partial: 'Check quit first, fallback last.',
+              wrong: 'Quit should be checked first to exit cleanly.'
+            },
+            explanation: 'Check quit first (to exit), then specific features, then fallback for unknown input.',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'ai-arch-app-q2',
+            question: 'Why store jokes in a list rather than hardcoding one joke?',
+            options: [
+              'Lists are required by Python',
+              'Variety—you can randomly pick different jokes each time',
+              'Lists are faster',
+              'There\'s no reason'
+            ],
+            correct: 1,
+            explanation: 'A list of jokes lets you use random.choice(jokes) to give different responses. Same for facts!',
+            points: 15
+          }
+        ]
+      });
+      aiArchitecture_Application.init();
+
+      const aiArchitecture_Synthesis = new ActivityCarousel('ai-architecture-synthesis', {
+        type: 'synthesis',
+        sectionId: 'ai-architecture',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'ai-arch-syn-sc1',
+            scenario: 'Your AI helper currently has jokes and facts. You want to add a to-do list feature where users can add and view tasks.',
+            question: 'What variables, functions, and conditionals would you add?',
+            evaluation: {
+              keywords: ['list', 'todos', 'add', 'function', 'if', 'show', 'append', 'input'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Variables: todos = [] to store tasks. Functions: add_todo(task) to append, show_todos() to display. Conditionals: if "add" in input, extract the task and call add_todo(). If "todos" or "list" in input, call show_todos().',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'ai-arch-syn-ref1',
+            prompt: 'How is building this AI helper similar to and different from the text adventure game? What patterns do you notice?',
+            thinkingPrompts: [
+              'Both have a main loop...',
+              'Both process user input...',
+              'What\'s different about the goal?'
+            ],
+            evaluation: {
+              minWords: 40,
+              depthIndicators: [
+                { pattern: '(loop|while|repeat)', label: 'Loop pattern', points: 4 },
+                { pattern: '(input|command|user)', label: 'Input handling', points: 4 },
+                { pattern: '(if|condition|route)', label: 'Decision making', points: 4 },
+                { pattern: '(similar|same|both)', label: 'Pattern recognition', points: 5 },
+                { pattern: '(different|but|however)', label: 'Distinguishing', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'ai-arch-syn-pred1',
+            setup: {
+              type: 'code',
+              language: 'python',
+              code: 'while True:\n    user_input = input("> ").lower()\n    if "joke" in user_input:\n        tell_joke()\n    elif "quit" in user_input:\n        break\n    # Missing else!'
+            },
+            question: 'What happens if the user types "hello"?',
+            correctAnswer: 'Nothing happens, silently loops',
+            acceptableVariants: ['nothing', 'silent', 'no response', 'loops', 'ignores'],
+            explanation: 'Without an else clause, unrecognized input is silently ignored—confusing! Always add: else: print("I don\'t understand, try \'joke\' or \'quit\'")',
+            commonMistakes: {
+              'Error': 'No error—the code runs, it just doesn\'t respond to unknown input.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'ai-arch-syn-sc2',
+            scenario: 'You want your helper to remember the user\'s name and use it in responses, like "Hi Sarah, here\'s a joke!"',
+            question: 'How would you implement this personalization feature?',
+            evaluation: {
+              keywords: ['variable', 'name', 'input', 'ask', 'store', 'f-string', 'greeting', 'remember'],
+              minWords: 25,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'At start, ask: user_name = input("What\'s your name? "). Store it in a variable. Then use f-strings in responses: print(f"Hi {user_name}, here\'s a joke: ..."). The variable persists through the conversation!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'ai-arch-syn-q1',
+            question: 'What makes an AI helper feel more "intelligent"?',
+            options: [
+              'Using complicated code',
+              'Variety in responses, handling edge cases, and remembering context',
+              'Making it run slowly',
+              'Using only one response per feature'
+            ],
+            correct: 1,
+            explanation: 'Smart helpers have variety (multiple jokes), handle unexpected input gracefully, and remember things. It\'s about user experience!',
+            points: 15
+          }
+        ]
+      });
+      aiArchitecture_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 2: SKILLS INTEGRATION - Activity Carousels
+      // ----------------------------------------
+
+      const skillsIntegration_Comprehension = new ActivityCarousel('skills-integration-comprehension', {
+        type: 'comprehension',
+        sectionId: 'skills-integration',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'si-comp-q1',
+            question: 'In the AI helper, what does Stone (variables) handle?',
+            options: [
+              'The if/else routing',
+              'Storing jokes, facts, todos, and user data',
+              'The main loop',
+              'Printing output'
+            ],
+            correct: 1,
+            explanation: 'Stone = memory! Variables store your data: jokes list, facts list, todos list, maybe user_name. This data persists through the conversation.',
+            points: 10
+          },
+          {
+            type: 'drag-drop',
+            id: 'si-comp-dd1',
+            instruction: 'Match each force to its role in the AI helper:',
+            items: [
+              { id: 'role-data', text: 'Storing jokes, facts, todos' },
+              { id: 'role-route', text: 'Routing to correct feature' },
+              { id: 'role-organize', text: 'Organizing reusable code' }
+            ],
+            zones: [
+              { id: 'force-stone', label: '🪨 Stone', correct: 'role-data' },
+              { id: 'force-lightning', label: '⚡ Lightning', correct: 'role-route' },
+              { id: 'force-magnetism', label: '🧲 Magnetism', correct: 'role-organize' }
+            ],
+            explanation: 'Stone stores data, Lightning makes decisions, Magnetism organizes functions. Same pattern as the text adventure!',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'si-comp-tf1',
+            statement: 'The AI helper project uses all the same fundamental concepts as the text adventure.',
+            correct: true,
+            explanation: 'Same building blocks! Variables, conditionals, loops, functions. Different application, same foundations. This is the power of fundamentals.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'si-comp-fill1',
+            statement: 'Functions like tell_joke() and share_fact() demonstrate the ___ principle—write once, use anywhere.',
+            correctAnswers: ['DRY', 'dont repeat yourself', 'reusability', 'magnetism'],
+            caseSensitive: false,
+            hints: ['What principle prevents code duplication?'],
+            explanation: 'DRY = Don\'t Repeat Yourself. Functions let you define behavior once and call it from multiple places.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'si-comp-q2',
+            question: 'The if/elif/else chain in the main loop demonstrates which force?',
+            options: [
+              'Stone (variables)',
+              'Lightning (conditionals)',
+              'Magnetism (functions)',
+              'None of them'
+            ],
+            correct: 1,
+            explanation: 'Lightning = decision-making! The if/elif/else chain routes input to the right feature based on conditions.',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'si-comp-tf2',
+            statement: 'The Architect mindset is about designing the system before coding.',
+            correct: true,
+            explanation: 'Architects plan first! What features? How do they connect? What data do I need? Then code. This applies to AI helpers, games, and all software.',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Comprehension.init();
+
+      const skillsIntegration_Application = new ActivityCarousel('skills-integration-application', {
+        type: 'application',
+        sectionId: 'skills-integration',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'sequence',
+            id: 'si-app-seq1',
+            instruction: 'Order how the forces work together when user asks for a joke:',
+            items: [
+              { id: 'input-stone', text: 'Stone: Store input in variable' },
+              { id: 'check-lightning', text: 'Lightning: Check if "joke" in input' },
+              { id: 'call-magnetism', text: 'Magnetism: Call tell_joke() function' },
+              { id: 'data-stone', text: 'Stone: Access jokes list' },
+              { id: 'output', text: 'Print the joke to user' }
+            ],
+            correctOrder: ['input-stone', 'check-lightning', 'call-magnetism', 'data-stone', 'output'],
+            hints: {
+              partial: 'Start with storing input, end with output.',
+              wrong: 'Input → Decision → Function → Data → Output.'
+            },
+            explanation: 'All forces in action: store input (Stone) → check condition (Lightning) → call function (Magnetism) → access data (Stone) → output.',
+            points: 20
+          },
+          {
+            type: 'connect-edges',
+            id: 'si-app-connect1',
+            instruction: 'Connect to show how skills combine in your code:',
+            nodes: [
+              { id: 'stone', label: '🪨 Stone (Data)' },
+              { id: 'lightning', label: '⚡ Lightning (Logic)' },
+              { id: 'magnetism', label: '🧲 Magnetism (Functions)' },
+              { id: 'architect', label: '🏛️ Architect (Design)' },
+              { id: 'helper', label: '🤖 AI Helper' }
+            ],
+            solution: {
+              edges: [
+                { source: 'architect', target: 'stone' },
+                { source: 'architect', target: 'lightning' },
+                { source: 'architect', target: 'magnetism' },
+                { source: 'stone', target: 'helper' },
+                { source: 'lightning', target: 'helper' },
+                { source: 'magnetism', target: 'helper' }
+              ]
+            },
+            nodeDescriptions: {
+              'stone': 'Variables and data structures',
+              'lightning': 'Conditionals and loops',
+              'magnetism': 'Reusable functions',
+              'architect': 'Design and planning',
+              'helper': 'The final product'
+            },
+            explanation: 'Architect thinking guides how you use Stone, Lightning, and Magnetism. Together they create the AI helper!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'si-app-q1',
+            question: 'If you want to add a "weather" feature, what would you need from each force?',
+            options: [
+              'Just a new function',
+              'Stone: weather data | Lightning: check for "weather" | Magnetism: get_weather() function',
+              'Just a new variable',
+              'Just a new if statement'
+            ],
+            correct: 1,
+            explanation: 'Complete features need all forces: data to work with (Stone), routing logic (Lightning), and organized code (Magnetism).',
+            points: 15
+          },
+          {
+            type: 'drag-drop',
+            id: 'si-app-dd1',
+            instruction: 'Match each code snippet to its primary force:',
+            items: [
+              { id: 'is-stone', text: 'Stone' },
+              { id: 'is-lightning', text: 'Lightning' },
+              { id: 'is-magnetism', text: 'Magnetism' }
+            ],
+            zones: [
+              { id: 'code-list', label: 'jokes = ["Why did...", "What do..."]', correct: 'is-stone' },
+              { id: 'code-if', label: 'if "joke" in user_input:', correct: 'is-lightning' },
+              { id: 'code-func', label: 'def tell_joke(): print(random.choice(jokes))', correct: 'is-magnetism' }
+            ],
+            explanation: 'List = Stone (data storage). If statement = Lightning (decision). Function = Magnetism (reusable code).',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'si-app-q2',
+            question: 'What\'s the Architect\'s role when adding a new feature?',
+            options: [
+              'Just start coding immediately',
+              'Plan what data, logic, and functions are needed before coding',
+              'Copy code from the internet',
+              'Ask someone else to do it'
+            ],
+            correct: 1,
+            explanation: 'Architects plan first! Before coding a new feature, think: What data do I need? What conditions? What functions? Then implement.',
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Application.init();
+
+      const skillsIntegration_Synthesis = new ActivityCarousel('skills-integration-synthesis', {
+        type: 'synthesis',
+        sectionId: 'skills-integration',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'scenario',
+            id: 'si-syn-sc1',
+            scenario: 'A friend says: "I learned variables, but I don\'t see how they connect to the bigger picture of building real programs."',
+            question: 'Using the AI helper as an example, explain how variables (Stone) connect to everything else.',
+            evaluation: {
+              keywords: ['store', 'data', 'list', 'condition', 'function', 'access', 'persist', 'use'],
+              minWords: 30,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Variables store the data your program works with—jokes list, facts list, user input. Conditions CHECK variables (if "joke" in input). Functions USE variables (random.choice(jokes)). Without Stone, Lightning has nothing to decide about and Magnetism has no data to process!',
+            points: 25
+          },
+          {
+            type: 'reflection',
+            id: 'si-syn-ref1',
+            prompt: 'Now that you\'ve built two capstone projects, how has your understanding of programming changed from when you started the course?',
+            thinkingPrompts: [
+              'What seemed confusing at first that now makes sense?',
+              'How do you approach problems differently?',
+              'What would you tell someone just starting?'
+            ],
+            evaluation: {
+              minWords: 50,
+              depthIndicators: [
+                { pattern: '(understand|grasp|get it|click)', label: 'Growing understanding', points: 5 },
+                { pattern: '(before|at first|used to)', label: 'Recognizing progress', points: 4 },
+                { pattern: '(now I|I can|I know)', label: 'Confidence', points: 4 },
+                { pattern: '(practice|build|try)', label: 'Learning through doing', points: 4 },
+                { pattern: '(connect|combine|together)', label: 'Integration thinking', points: 3 }
+              ],
+              maxScore: 20
+            },
+            points: 20
+          },
+          {
+            type: 'prediction',
+            id: 'si-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'You want to build a quiz app where users answer questions and get a score. Think about what you\'d need from each force.'
+            },
+            question: 'What would Stone (variables) store in a quiz app?',
+            correctAnswer: 'Questions, answers, score, current question',
+            acceptableVariants: ['questions', 'answers', 'score', 'list', 'data', 'correct', 'count'],
+            explanation: 'Stone stores: questions list, correct answers, user\'s score (counter), current question index. All the data the quiz needs to function!',
+            commonMistakes: {
+              'Just questions': 'You also need answers, score tracking, and position in the quiz.'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'si-syn-sc2',
+            scenario: 'You\'re explaining to a junior programmer why understanding fundamentals matters even with AI coding tools.',
+            question: 'Using your capstone experience, make the case for why Stone, Lightning, Magnetism, and Architect thinking are essential.',
+            evaluation: {
+              keywords: ['understand', 'verify', 'debug', 'design', 'AI', 'review', 'foundation', 'build'],
+              minWords: 35,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'AI generates code, but YOU need to understand it, verify it works, and debug when it doesn\'t. The fundamentals let you read AI output, design good systems, and know what to ask for. You can\'t be an architect if you don\'t understand the building materials!',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'si-syn-q1',
+            question: 'What\'s the most important takeaway from seeing how all skills integrate?',
+            options: [
+              'Memorize more syntax',
+              'Real programs combine concepts—understanding how they work together is key',
+              'Focus on just one concept at a time forever',
+              'Avoid building projects'
+            ],
+            correct: 1,
+            explanation: 'Integration is the superpower! Variables alone, conditionals alone, functions alone don\'t make programs. Understanding how they combine creates real software.',
+            points: 15
+          }
+        ]
+      });
+      skillsIntegration_Synthesis.init();
+
+      // ----------------------------------------
+      // STORY 3: JOURNEY COMPLETE - Activity Carousels
+      // ----------------------------------------
+
+      const journeyComplete_Comprehension = new ActivityCarousel('journey-complete-comprehension', {
+        type: 'comprehension',
+        sectionId: 'journey-complete',
+        title: '🧠 Check Your Understanding',
+        activities: [
+          {
+            type: 'quiz',
+            id: 'jc-comp-q1',
+            question: 'What was the first concept you learned in this course (Chapter 0)?',
+            options: [
+              'Advanced algorithms',
+              'The origins of computing—three forces that power all technology',
+              'Machine learning',
+              'Web development'
+            ],
+            correct: 1,
+            explanation: 'You started by understanding WHY computers work—silicon (stone), electricity (lightning), and magnetism. This foundation made everything else make sense!',
+            points: 10
+          },
+          {
+            type: 'sequence',
+            id: 'jc-comp-seq1',
+            instruction: 'Order the chapters from your learning journey:',
+            items: [
+              { id: 'origins', text: 'Origins: Computing foundations' },
+              { id: 'stone', text: 'Stone: Variables and data' },
+              { id: 'lightning', text: 'Lightning: Conditionals and loops' },
+              { id: 'magnetism', text: 'Magnetism: Functions' },
+              { id: 'architect', text: 'Architect: Design thinking' },
+              { id: 'capstones', text: 'Capstones: Real projects' }
+            ],
+            correctOrder: ['origins', 'stone', 'lightning', 'magnetism', 'architect', 'capstones'],
+            hints: {
+              partial: 'Start with origins, end with capstones.',
+              wrong: 'Follow the chapter numbers: 0, 1, 2, 3, 4, 5-6.'
+            },
+            explanation: 'Your journey: understand computing → learn fundamentals → apply them → think like an architect → build real things.',
+            points: 20
+          },
+          {
+            type: 'true-false',
+            id: 'jc-comp-tf1',
+            statement: 'The capstone projects proved you can combine all the concepts you learned.',
+            correct: true,
+            explanation: 'Building real projects (text adventure, AI helper) showed that variables, conditionals, loops, and functions work together to create useful software!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          },
+          {
+            type: 'fill-blank',
+            id: 'jc-comp-fill1',
+            statement: 'The Apprentice course transformed you from beginner to ___.',
+            correctAnswers: ['architect', 'programmer', 'developer', 'coder'],
+            caseSensitive: false,
+            hints: ['What do you design and direct?'],
+            explanation: 'You\'ve become an architect—someone who can design systems, understand code, work with AI, and build real projects.',
+            points: 10
+          },
+          {
+            type: 'quiz',
+            id: 'jc-comp-q2',
+            question: 'What skill from Chapter 4 (Architect) helps you work effectively with AI coding tools?',
+            options: [
+              'Typing speed',
+              'Clear communication and design thinking',
+              'Memorizing syntax',
+              'None of them help with AI'
+            ],
+            correct: 1,
+            explanation: 'Architect skills—clear communication, design thinking, code review—are exactly what you need to work WITH AI effectively!',
+            points: 10
+          },
+          {
+            type: 'true-false',
+            id: 'jc-comp-tf2',
+            statement: 'After this course, there\'s nothing more to learn about programming.',
+            correct: false,
+            explanation: 'This is just the beginning! You have foundations to build on. Next: more advanced Python, web development, databases, and more. Keep learning!',
+            requireReasoning: true,
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]
+      });
+      journeyComplete_Comprehension.init();
+
+      const journeyComplete_Application = new ActivityCarousel('journey-complete-application', {
+        type: 'application',
+        sectionId: 'journey-complete',
+        title: '⚡ Apply Your Knowledge',
+        activities: [
+          {
+            type: 'drag-drop',
+            id: 'jc-app-dd1',
+            instruction: 'Match each chapter to its key concept:',
+            items: [
+              { id: 'concept-mem', text: 'Variables store data' },
+              { id: 'concept-decide', text: 'Conditionals make decisions' },
+              { id: 'concept-reuse', text: 'Functions organize code' },
+              { id: 'concept-design', text: 'Design before coding' }
+            ],
+            zones: [
+              { id: 'ch-stone', label: 'Ch1: Stone', correct: 'concept-mem' },
+              { id: 'ch-lightning', label: 'Ch2: Lightning', correct: 'concept-decide' },
+              { id: 'ch-magnetism', label: 'Ch3: Magnetism', correct: 'concept-reuse' },
+              { id: 'ch-architect', label: 'Ch4: Architect', correct: 'concept-design' }
+            ],
+            explanation: 'Stone=memory, Lightning=decisions, Magnetism=organization, Architect=design. These are your programming superpowers!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'jc-app-q1',
+            question: 'You want to build a personal expense tracker app. Which concepts would you use?',
+            options: [
+              'Only variables',
+              'Only functions',
+              'All of them: variables, conditionals, loops, functions, and design thinking',
+              'None—it\'s too advanced'
+            ],
+            correct: 2,
+            explanation: 'Real apps use everything! Variables (expenses data), conditionals (categorize), loops (process entries), functions (add, view, total), design (plan first).',
+            points: 15
+          },
+          {
+            type: 'connect-edges',
+            id: 'jc-app-connect1',
+            instruction: 'Connect your learning path from concept to application:',
+            nodes: [
+              { id: 'learn', label: '📚 Learn Concept' },
+              { id: 'practice', label: '💪 Practice' },
+              { id: 'combine', label: '🔗 Combine Skills' },
+              { id: 'build', label: '🏗️ Build Projects' },
+              { id: 'grow', label: '🌱 Keep Growing' }
+            ],
+            solution: {
+              edges: [
+                { source: 'learn', target: 'practice' },
+                { source: 'practice', target: 'combine' },
+                { source: 'combine', target: 'build' },
+                { source: 'build', target: 'grow' },
+                { source: 'grow', target: 'learn' }
+              ]
+            },
+            nodeDescriptions: {
+              'learn': 'Understand new concepts',
+              'practice': 'Apply through exercises',
+              'combine': 'See how concepts connect',
+              'build': 'Create real projects',
+              'grow': 'Continue learning more'
+            },
+            explanation: 'Learning is a cycle: learn → practice → combine → build → learn more. You\'ll keep going through this cycle!',
+            points: 25
+          },
+          {
+            type: 'sequence',
+            id: 'jc-app-seq1',
+            instruction: 'Order the steps for tackling a new programming challenge:',
+            items: [
+              { id: 'understand', text: 'Understand the problem' },
+              { id: 'plan', text: 'Plan your approach' },
+              { id: 'break', text: 'Break into smaller parts' },
+              { id: 'code', text: 'Code each part' },
+              { id: 'test', text: 'Test and refine' }
+            ],
+            correctOrder: ['understand', 'plan', 'break', 'code', 'test'],
+            hints: {
+              partial: 'Understand first, test last.',
+              wrong: 'Think like an architect: understand → plan → build → verify.'
+            },
+            explanation: 'This is the architect approach: understand → plan → decompose → implement → verify. It works for any programming challenge!',
+            points: 20
+          },
+          {
+            type: 'quiz',
+            id: 'jc-app-q2',
+            question: 'What\'s the best way to continue improving after this course?',
+            options: [
+              'Stop practicing',
+              'Build more projects that interest you',
+              'Only read about programming',
+              'Wait for someone to tell you what to do'
+            ],
+            correct: 1,
+            explanation: 'Build things! Projects teach you more than any course. Pick something you want to create and figure out how to make it happen.',
+            points: 15
+          }
+        ]
+      });
+      journeyComplete_Application.init();
+
+      const journeyComplete_Synthesis = new ActivityCarousel('journey-complete-synthesis', {
+        type: 'synthesis',
+        sectionId: 'journey-complete',
+        title: '🔧 Think Deeper',
+        activities: [
+          {
+            type: 'reflection',
+            id: 'jc-syn-ref1',
+            prompt: 'Reflect on your complete journey through the Apprentice course. What are you most proud of learning? What surprised you? What do you want to build next?',
+            thinkingPrompts: [
+              'What was your biggest "aha!" moment?',
+              'What concept seemed impossible at first but now makes sense?',
+              'What project ideas excite you now?'
+            ],
+            evaluation: {
+              minWords: 60,
+              depthIndicators: [
+                { pattern: '(proud|accomplished|achieved)', label: 'Pride in progress', points: 5 },
+                { pattern: '(surprised|didnt expect|wow)', label: 'Discovery', points: 4 },
+                { pattern: '(want to|going to|plan to|will)', label: 'Future goals', points: 5 },
+                { pattern: '(understand|learned|know)', label: 'Knowledge growth', points: 4 },
+                { pattern: '(project|build|create|make)', label: 'Builder mindset', points: 4 }
+              ],
+              maxScore: 22
+            },
+            points: 25
+          },
+          {
+            type: 'scenario',
+            id: 'jc-syn-sc1',
+            scenario: 'A friend who wants to learn programming asks: "What should I focus on first? There\'s so much out there!"',
+            question: 'Based on your experience, what advice would you give them about starting their programming journey?',
+            evaluation: {
+              keywords: ['fundamentals', 'variables', 'practice', 'build', 'project', 'understand', 'basics', 'don\'t give up'],
+              minWords: 35,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Start with fundamentals—variables, conditionals, loops, functions. Don\'t try to learn everything at once. Practice by building small projects you care about. It will feel hard at first, but concepts click with practice. Use AI tools to help you learn faster, but make sure you understand what the code does!',
+            points: 25
+          },
+          {
+            type: 'prediction',
+            id: 'jc-syn-pred1',
+            setup: {
+              type: 'text',
+              content: 'You\'ve completed the Apprentice course. The Junior course covers: data structures (lists, dictionaries in depth), file handling, error handling, and object-oriented programming basics.'
+            },
+            question: 'Which of your current skills will be most useful for learning these advanced topics?',
+            correctAnswer: 'All of them build on the fundamentals',
+            acceptableVariants: ['all', 'everything', 'fundamentals', 'foundation', 'variables', 'functions', 'all skills'],
+            explanation: 'Everything builds on fundamentals! Data structures extend variables, error handling uses conditionals, OOP organizes functions. Your foundation makes advanced topics accessible.',
+            commonMistakes: {
+              'None': 'Actually, ALL your skills are foundations for advanced concepts!'
+            },
+            points: 20
+          },
+          {
+            type: 'scenario',
+            id: 'jc-syn-sc2',
+            scenario: 'You\'re brainstorming your next personal project. You want something that uses everything you learned.',
+            question: 'Describe a project idea and explain how it would use Stone, Lightning, Magnetism, and Architect thinking.',
+            evaluation: {
+              keywords: ['variables', 'if', 'loop', 'function', 'plan', 'design', 'data', 'project'],
+              minWords: 40,
+              pointsPerKeyword: 3,
+              depthBonus: 10
+            },
+            modelAnswer: 'Project: Personal habit tracker. Stone: store habits list, daily logs, streak counts. Lightning: conditionals to check if habit done, loops for displaying weekly stats. Magnetism: functions for add_habit(), log_day(), show_stats(). Architect: plan the data structure and user flow before coding.',
+            points: 25
+          },
+          {
+            type: 'quiz',
+            id: 'jc-syn-q1',
+            question: 'What\'s the most important mindset for continuing to grow as a programmer?',
+            options: [
+              'Perfection—never make mistakes',
+              'Curiosity and persistence—keep learning and building',
+              'Speed—type as fast as possible',
+              'Isolation—never ask for help'
+            ],
+            correct: 1,
+            explanation: 'Curiosity drives learning, persistence gets you through challenges. The best programmers are lifelong learners who aren\'t afraid to struggle, ask questions, and build things!',
+            points: 15
+          }
+        ]
+      });
+      journeyComplete_Synthesis.init();
+
+      console.log('✅ All activity carousels initialized for Ch6: Capstone II');
     });
   </script>
 </body>
