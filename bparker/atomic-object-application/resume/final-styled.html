@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brittany Parker - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 0.5in 0.6in;
+      max-width: 8.5in;
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #2563eb;
+    }
+    
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: #1a1a1a;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    
+    .contact {
+      font-size: 9.5pt;
+      color: #4b5563;
+    }
+    
+    .contact span {
+      margin: 0 8px;
+    }
+    
+    .contact .separator {
+      color: #d1d5db;
+    }
+    
+    /* Tagline */
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      color: #4b5563;
+      margin-bottom: 20px;
+      font-size: 10pt;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 18px;
+    }
+    
+    .section-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    /* Current Focus */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .focus-item {
+      background: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border-left: 3px solid #2563eb;
+    }
+    
+    .focus-item h4 {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+    
+    .focus-item p {
+      font-size: 8.5pt;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+    
+    /* Growth Path */
+    .growth-path {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    
+    .phase {
+      padding: 10px 12px;
+      background: #fafafa;
+      border-radius: 6px;
+    }
+    
+    .phase-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    
+    .phase-number {
+      background: #2563eb;
+      color: white;
+      font-size: 8pt;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 8px;
+    }
+    
+    .phase-number.current {
+      background: #16a34a;
+    }
+    
+    .phase-title {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    
+    .phase ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .phase li {
+      font-size: 8.5pt;
+      color: #4b5563;
+      padding-left: 12px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    
+    .phase li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+    }
+    
+    /* Education & Experience */
+    .entry {
+      margin-bottom: 12px;
+    }
+    
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+    
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    
+    .entry-title {
+      font-weight: 600;
+      font-size: 10pt;
+      color: #1a1a1a;
+    }
+    
+    .entry-org {
+      color: #2563eb;
+      font-weight: 500;
+    }
+    
+    .entry-date {
+      font-size: 9pt;
+      color: #6b7280;
+    }
+    
+    .entry-description {
+      font-size: 9pt;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+    
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 20px;
+    }
+    
+    .skill-row {
+      display: flex;
+      font-size: 9pt;
+    }
+    
+    .skill-label {
+      font-weight: 600;
+      color: #1a1a1a;
+      min-width: 90px;
+    }
+    
+    .skill-value {
+      color: #4b5563;
+    }
+    
+    /* Closing Statement */
+    .closing {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+    }
+    
+    .closing p {
+      font-size: 9pt;
+      color: #374151;
+      line-height: 1.5;
+      text-align: center;
+    }
+    
+    .closing p:first-child {
+      margin-bottom: 8px;
+    }
+    
+    .closing p:last-child {
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+    
+    /* Two column layout for education/experience */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    
+    .col .section-title {
+      font-size: 10pt;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="name">Brittany Parker</h1>
+    <div class="contact">
+      <span>Grand Rapids, MI</span>
+      <span class="separator">|</span>
+      <span>bparker49442@gmail.com</span>
+      <span class="separator">|</span>
+      <span>231-329-3682</span>
+    </div>
+  </header>
+
+  <p class="tagline">From console calculators to AI-powered tools. From coursework to real-world collaboration. A builder who never stops learning.</p>
+
+  <section class="section">
+    <h2 class="section-title">Current Focus</h2>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <h4>Engineering Collaboration</h4>
+        <p>Contributing to an education tech platform with software engineers. Weekly meetings, feature development, shipping real code.</p>
+      </div>
+      <div class="focus-item">
+        <h4>AI & Machine Learning</h4>
+        <p>Taking courses and building AI-powered tools. Exploring practical ML applications in software development.</p>
+      </div>
+      <div class="focus-item">
+        <h4>CS Fundamentals</h4>
+        <p>Deep-diving into data structures and algorithms to strengthen foundation for complex technical challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Technical Growth Path</h2>
+    <div class="growth-path">
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-number current">4</span>
+          <span class="phase-title">AI & Collaboration (Current)</span>
+        </div>
+        <ul>
+          <li>AI/ML coursework and tool development</li>
+          <li>Contributing to education platform with engineering team</li>
+          <li>Data structures and algorithms deep dive</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-number">3</span>
+          <span class="phase-title">Web Development (Self-Taught)</span>
+        </div>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Building web interfaces</li>
+          <li>Modern front-end development skills</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-number">2</span>
+          <span class="phase-title">Desktop & Game Development</span>
+        </div>
+        <ul>
+          <li>Desktop Apps: Finance Tracker, Weather App, Notes</li>
+          <li>Game Dev: 2D/3D platformers, physics, rendering</li>
+          <li>GUI development and system architecture</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <div class="phase-header">
+          <span class="phase-number">1</span>
+          <span class="phase-title">C# Foundations (Davenport)</span>
+        </div>
+        <ul>
+          <li>Console apps: Calculator, Todo, Password Gen</li>
+          <li>Dependency Injection, Separation of Concerns</li>
+          <li>Object-oriented programming fundamentals</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <div class="col">
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Davenport University</span>
+            <span class="entry-date">2015–2019</span>
+          </div>
+          <p class="entry-description">Computer Science Coursework — Visual Studio, C# programming, software design principles</p>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Collegiate Athlete — Track & Field</span>
+          </div>
+          <p class="entry-description">Invited to compete in Australia during senior year of high school; later ran college track. Developed discipline, performance optimization, and competitive mindset.</p>
+        </div>
+      </section>
+    </div>
+    
+    <div class="col">
+      <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Deployment Technician — <span class="entry-org">MCPc</span></span>
+            <span class="entry-date">2019–2020</span>
+          </div>
+          <p class="entry-description">Enterprise Windows 10 deployments for Meijer, Steelcase, Spectrum. Client coordination, security config.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">GOA Lead — <span class="entry-org">Avflight</span></span>
+            <span class="entry-date">2020–2021</span>
+          </div>
+          <p class="entry-description">Team leadership, safety compliance, operational coordination in high-pressure aviation environment.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">Customer Service — <span class="entry-org">Randstad</span></span>
+            <span class="entry-date">2024</span>
+          </div>
+          <p class="entry-description">Benefits support with clear communication, data accuracy, empathetic problem-solving.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        <span class="skill-value">C# (Primary), JavaScript, HTML, CSS, Java</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Concepts</span>
+        <span class="skill-value">OOP, Dependency Injection, Modular Design, Separation of Concerns</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Applications</span>
+        <span class="skill-value">Desktop GUI, Game Dev (2D/3D), Web Development</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tools</span>
+        <span class="skill-value">Visual Studio, Git, Windows Imaging, MS Office</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="closing">
+    <p>I've built my technical foundation through coursework, self-study, and hands-on projects. I've delivered for enterprise clients, developed communication skills in customer-facing roles, and proven I can balance work, learning, and raising two children—while continuing to grow.</p>
+    <p>Now I'm ready for an environment that will accelerate that growth. Ready to learn from experienced consultants, work on real client projects, and become the software developer I've been building toward.</p>
+  </div>
+</body>
+</html>
