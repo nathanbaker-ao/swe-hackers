@@ -13,4 +13,5 @@ initializeApp();
 
 // Export analytics functions
 export { onActivityComplete } from './analytics/onActivityComplete.js';
+export { onLessonComplete } from './analytics/onLessonComplete.js';
 export { computeUserAnalytics } from './analytics/computeUserAnalytics.js';
