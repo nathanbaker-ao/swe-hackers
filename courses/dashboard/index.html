@@ -380,37 +380,89 @@
         
         <!-- Component-Based Analytics Section (Agent 4) -->
         <section class="analytics-section" id="component-analytics-section" style="display: none;">
-          <div class="analytics-section__header">
-            <div>
-              <h3 class="analytics-section__title">
-                <span>📊</span> Performance Overview
-              </h3>
-              <p class="analytics-section__subtitle">Powered by server-computed analytics</p>
+          
+          <!-- Row 1: Activity Heatmap (full width) -->
+          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h4 style="font-size: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+                <span>📅</span> Activity Overview
+              </h4>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Last 12 weeks</span>
+            </div>
+            <div id="activity-heatmap-container">
+              <!-- ActivityHeatmap rendered here -->
             </div>
           </div>
           
-          <!-- Metrics Row -->
-          <div class="analytics-metrics-row" id="metrics-row">
-            <!-- MetricCards rendered here by JS -->
-          </div>
-          
-          <!-- Insights Row - Skill Radar and Timeline Graph side by side -->
-          <div class="analytics-insights-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem; align-items: start;">
-            <!-- Skill Radar -->
-            <div id="skill-radar-container" style="overflow: visible; padding: 1rem;">
-              <!-- SkillRadar rendered here by JS -->
+          <!-- Row 2: Streak + Weekly Activity + Quick Stats -->
+          <div style="display: grid; grid-template-columns: 280px 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            
+            <!-- Streak Display -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1rem;">
+              <div id="streak-display-container">
+                <!-- StreakDisplay rendered here -->
+              </div>
             </div>
             
-            <!-- Interactive Timeline Graph - fixed height, zoomable, selectable nodes -->
-            <div id="progress-timeline-container">
-              <!-- TimelineGraph rendered here by JS -->
+            <!-- Weekly Activity Pattern -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📊</span> Weekly Pattern
+              </h4>
+              <div id="weekly-chart-container">
+                <!-- WeeklyChart rendered here -->
+              </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>⚡</span> Quick Stats
+              </h4>
+              <div id="metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <!-- MetricCards rendered here by JS -->
+              </div>
             </div>
           </div>
           
-          <!-- Recommendations Section -->
-          <div class="analytics-recommendations">
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm);">
-              <span>💡</span> Personalized Recommendations
+          <!-- Row 3: Progress Over Time (full width) -->
+          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>📈</span> Progress Over Time
+            </h4>
+            <div id="progress-chart-container" style="height: 220px;">
+              <!-- ProgressChart rendered here -->
+            </div>
+          </div>
+          
+          <!-- Row 4: Skills + Journey Timeline -->
+          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            
+            <!-- Skill Radar -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; overflow: visible;">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🎯</span> Skill Breakdown
+              </h4>
+              <div id="skill-radar-container" style="overflow: visible;">
+                <!-- SkillRadar rendered here by JS -->
+              </div>
+            </div>
+            
+            <!-- Journey Timeline -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
+              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🗺️</span> Learning Journey
+              </h4>
+              <div id="progress-timeline-container">
+                <!-- TimelineGraph rendered here by JS -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 5: Recommendations -->
+          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>💡</span> Recommended Next Steps
             </h4>
             <div id="recommendations-container">
               <!-- RecommendationCards rendered here by JS -->
@@ -462,6 +514,12 @@
   <script src="../shared/js/components/analytics/progress-timeline.js"></script>
   <script src="../shared/js/components/analytics/timeline-graph.js"></script>
   <script src="../shared/js/components/analytics/recommendation-card.js"></script>
+  
+  <!-- New Visual Components -->
+  <script src="../shared/js/components/analytics/activity-heatmap.js"></script>
+  <script src="../shared/js/components/analytics/progress-chart.js"></script>
+  <script src="../shared/js/components/analytics/weekly-chart.js"></script>
+  <script src="../shared/js/components/analytics/streak-display.js"></script>
   
   <script>
     // Course data
@@ -1097,8 +1155,12 @@
           console.log('📊 No analytics data found, showing empty state');
         }
         
-        // Render with server data (or null for empty state)
+        // Render all visualization components
+        await renderActivityHeatmap(user.uid);
+        await renderStreakDisplay(analytics);
+        await renderWeeklyChart(analytics);
         await renderMetricCards(analytics, user.uid);
+        await renderProgressChart(user.uid);
         await renderSkillRadar(analytics);
         await renderProgressTimeline(user.uid);
         await renderRecommendations(user.uid, analytics);
@@ -1398,6 +1460,173 @@
         }
       });
       recommendationList.render();
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // NEW VISUAL COMPONENTS
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    async function renderActivityHeatmap(userId) {
+      const container = document.getElementById('activity-heatmap-container');
+      if (!container || !window.ActivityHeatmap) return;
+      
+      // Build activity data from attempts
+      const activityData = [];
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        const dateMap = new Map();
+        
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.values(course.lessons).forEach(lesson => {
+              if (lesson.completedAt || lesson.lastViewedAt) {
+                const ts = lesson.completedAt || lesson.lastViewedAt;
+                const date = ts._seconds 
+                  ? new Date(ts._seconds * 1000) 
+                  : ts.seconds 
+                    ? new Date(ts.seconds * 1000)
+                    : new Date(ts);
+                const dateStr = date.toISOString().split('T')[0];
+                dateMap.set(dateStr, (dateMap.get(dateStr) || 0) + 1);
+              }
+            });
+          }
+        });
+        
+        dateMap.forEach((count, date) => {
+          activityData.push({ date, count });
+        });
+      } catch (e) {
+        console.log('📊 Could not load activity data for heatmap');
+      }
+      
+      const heatmap = new ActivityHeatmap(container, {
+        data: activityData,
+        weeks: 12
+      });
+      heatmap.render();
+    }
+    
+    async function renderStreakDisplay(analytics) {
+      const container = document.getElementById('streak-display-container');
+      if (!container || !window.StreakDisplay) return;
+      
+      const currentStreak = analytics?.engagementPatterns?.currentStreak || 0;
+      const streakRecord = analytics?.engagementPatterns?.streakRecord || 0;
+      
+      const streakDisplay = new StreakDisplay(container, {
+        currentStreak,
+        streakRecord,
+        animate: true
+      });
+      streakDisplay.render();
+    }
+    
+    async function renderWeeklyChart(analytics) {
+      const container = document.getElementById('weekly-chart-container');
+      if (!container || !window.WeeklyChart) return;
+      
+      // Build weekly data
+      const weeklyData = { Sun: 0, Mon: 0, Tue: 0, Wed: 0, Thu: 0, Fri: 0, Sat: 0 };
+      const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.values(course.lessons).forEach(lesson => {
+              if (lesson.completedAt || lesson.lastViewedAt) {
+                const ts = lesson.completedAt || lesson.lastViewedAt;
+                const date = ts._seconds 
+                  ? new Date(ts._seconds * 1000) 
+                  : ts.seconds 
+                    ? new Date(ts.seconds * 1000)
+                    : new Date(ts);
+                const dayName = dayNames[date.getDay()];
+                weeklyData[dayName]++;
+              }
+            });
+          }
+        });
+      } catch (e) {
+        console.log('📊 Could not load weekly data');
+      }
+      
+      const weeklyChart = new WeeklyChart(container, {
+        data: weeklyData,
+        height: 100,
+        animate: true
+      });
+      weeklyChart.render();
+    }
+    
+    async function renderProgressChart(userId) {
+      const container = document.getElementById('progress-chart-container');
+      if (!container || !window.ProgressChart) return;
+      
+      // Build progress data over time
+      const progressData = [];
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        const progressByDate = new Map();
+        let cumulativeCompleted = 0;
+        
+        // Collect all completion dates
+        const completions = [];
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.entries(course.lessons).forEach(([lessonId, lesson]) => {
+              if (lesson.completed && (lesson.completedAt || lesson.lastViewedAt)) {
+                const ts = lesson.completedAt || lesson.lastViewedAt;
+                const date = ts._seconds 
+                  ? new Date(ts._seconds * 1000) 
+                  : ts.seconds 
+                    ? new Date(ts.seconds * 1000)
+                    : new Date(ts);
+                completions.push({ date, lessonId });
+              }
+            });
+          }
+        });
+        
+        // Sort by date and build cumulative progress
+        completions.sort((a, b) => a.date - b.date);
+        const totalLessons = completions.length + 5; // Estimate total
+        
+        completions.forEach((c, i) => {
+          const dateStr = c.date.toISOString().split('T')[0];
+          const progress = ((i + 1) / totalLessons) * 100;
+          progressData.push({
+            date: dateStr,
+            value: Math.min(progress, 100),
+            label: c.lessonId
+          });
+        });
+        
+      } catch (e) {
+        console.log('📊 Could not load progress data');
+      }
+      
+      if (progressData.length === 0) {
+        container.innerHTML = `
+          <div style="display: flex; align-items: center; justify-content: center; height: 200px; color: var(--text-muted);">
+            <div style="text-align: center;">
+              <div style="font-size: 2rem; opacity: 0.5;">📈</div>
+              <div>Complete lessons to see your progress over time</div>
+            </div>
+          </div>
+        `;
+        return;
+      }
+      
+      const progressChart = new ProgressChart(container, {
+        data: progressData,
+        height: 200,
+        animate: true,
+        formatValue: (v) => `${Math.round(v)}% complete`
+      });
+      progressChart.render();
     }
     
     function renderErrorState(error) {
