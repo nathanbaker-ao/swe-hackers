@@ -1210,26 +1210,65 @@
       
       try {
         const courses = await window.DataService.getEnrolledCourses();
+        console.log('📊 Timeline: Got courses', courses);
         
         for (const course of courses.slice(0, 3)) {
+          const courseId = course.courseId || course.id;
           if (course.lessons) {
             Object.entries(course.lessons).forEach(([lessonId, lessonData]) => {
-              if (lessonData.completed && lessonData.completedAt) {
-                const completedAt = lessonData.completedAt._seconds 
-                  ? new Date(lessonData.completedAt._seconds * 1000)
-                  : new Date(lessonData.completedAt);
+              // Check if lesson is completed
+              if (lessonData.completed) {
+                let completedAt = null;
                 
-                if (!isNaN(completedAt.getTime())) {
+                // Handle different timestamp formats
+                if (lessonData.completedAt) {
+                  if (lessonData.completedAt._seconds) {
+                    // Firestore Timestamp from REST API
+                    completedAt = new Date(lessonData.completedAt._seconds * 1000);
+                  } else if (lessonData.completedAt.seconds) {
+                    // Firestore Timestamp object
+                    completedAt = new Date(lessonData.completedAt.seconds * 1000);
+                  } else if (lessonData.completedAt.toDate) {
+                    // Firestore Timestamp with toDate method
+                    completedAt = lessonData.completedAt.toDate();
+                  } else if (typeof lessonData.completedAt === 'string') {
+                    completedAt = new Date(lessonData.completedAt);
+                  } else {
+                    completedAt = new Date(lessonData.completedAt);
+                  }
+                }
+                
+                // Use lastViewedAt or course lastActivity as fallback
+                if (!completedAt || isNaN(completedAt.getTime())) {
+                  if (lessonData.lastViewedAt) {
+                    completedAt = lessonData.lastViewedAt._seconds 
+                      ? new Date(lessonData.lastViewedAt._seconds * 1000)
+                      : new Date(lessonData.lastViewedAt.seconds * 1000);
+                  } else if (course.lastActivity) {
+                    completedAt = course.lastActivity._seconds
+                      ? new Date(course.lastActivity._seconds * 1000)
+                      : new Date(course.lastActivity.seconds * 1000);
+                  } else {
+                    completedAt = new Date(); // Fallback to now
+                  }
+                }
+                
+                if (completedAt && !isNaN(completedAt.getTime())) {
+                  const formattedLesson = lessonId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
                   milestones.push({
-                    title: `Completed ${lessonId}`,
+                    title: `Completed ${formattedLesson}`,
                     timestamp: completedAt.toISOString(),
-                    type: 'course-complete'
+                    type: 'course-complete',
+                    course: courseId
                   });
                 }
               }
             });
           }
         }
+        
+        console.log('📊 Timeline: Found milestones', milestones);
+        
       } catch (error) {
         console.log('📊 Error loading timeline data:', error);
       }
@@ -1246,9 +1285,12 @@
         return;
       }
       
+      // Sort by timestamp descending (most recent first)
+      milestones.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      
       progressTimeline = new ProgressTimeline(container, {
         activities: activities,
-        milestones: milestones,
+        milestones: milestones.slice(0, 8),
         maxItems: 8,
         showDates: true,
         animate: true
@@ -1261,6 +1303,10 @@
       if (!container) return;
       
       container.innerHTML = '';
+      
+      console.log('📊 Recommendations: analytics received', analytics);
+      console.log('📊 Recommendations: growthAreas', analytics?.growthAreas);
+      console.log('📊 Recommendations: engagementPatterns', analytics?.engagementPatterns);
       
       // Generate recommendations from analytics data
       let recommendations = [];
