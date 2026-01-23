@@ -1294,44 +1294,53 @@
       const accuracyData = [];
       
       try {
-        // Get quiz attempts and group by date
-        const courses = await window.DataService.getEnrolledCourses();
+        // Fetch all activity attempts from Firestore (quizzes and graded activities)
+        const db = firebase.firestore();
+        const attemptsSnapshot = await db
+          .collection('users')
+          .doc(userId)
+          .collection('activityAttempts')
+          .orderBy('createdAt', 'desc')
+          .limit(100)
+          .get();
+        
         const attemptsByDate = new Map();
         
-        courses.forEach(course => {
-          if (course.lessons) {
-            Object.values(course.lessons).forEach(lesson => {
-              if (lesson.completedAt) {
-                const ts = lesson.completedAt;
-                const date = ts._seconds 
-                  ? new Date(ts._seconds * 1000) 
-                  : ts.seconds 
-                    ? new Date(ts.seconds * 1000)
-                    : new Date(ts);
-                if (!isNaN(date.getTime())) {
-                  const dateStr = date.toISOString().split('T')[0];
-                  const current = attemptsByDate.get(dateStr) || { correct: 0, total: 0 };
-                  current.total++;
-                  if (lesson.progressPercent >= 80) current.correct++;
-                  attemptsByDate.set(dateStr, current);
-                }
-              }
-            });
+        attemptsSnapshot.forEach(doc => {
+          const attempt = doc.data();
+          // Only include activities with a score or correct/incorrect status
+          if (attempt.createdAt && (attempt.score !== undefined || attempt.correct !== undefined)) {
+            const ts = attempt.createdAt;
+            const date = ts.toDate ? ts.toDate() : new Date(ts._seconds * 1000);
+            
+            if (!isNaN(date.getTime())) {
+              const dateStr = date.toISOString().split('T')[0];
+              const current = attemptsByDate.get(dateStr) || { totalScore: 0, count: 0 };
+              
+              // Use score if available, otherwise use correct (100) / incorrect (0)
+              const score = attempt.score !== undefined 
+                ? attempt.score 
+                : (attempt.correct ? 100 : 0);
+              
+              current.totalScore += score;
+              current.count++;
+              attemptsByDate.set(dateStr, current);
+            }
           }
         });
         
         attemptsByDate.forEach((stats, date) => {
-          if (stats.total > 0) {
+          if (stats.count > 0) {
             accuracyData.push({
               date,
-              accuracy: Math.round((stats.correct / stats.total) * 100)
+              accuracy: Math.round(stats.totalScore / stats.count)
             });
           }
         });
         
         accuracyData.sort((a, b) => new Date(a.date) - new Date(b.date));
       } catch (e) {
-        console.log('📊 Could not load accuracy data');
+        console.log('📊 Could not load accuracy data:', e);
       }
       
       const chart = new AccuracyChart(container, {
