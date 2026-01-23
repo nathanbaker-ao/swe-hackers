@@ -30,10 +30,10 @@ class ActivityTypesChart {
     
     const total = entries.reduce((sum, [_, v]) => sum + v, 0);
     const containerHeight = this.container.offsetHeight || this.options.height;
-    const chartSize = Math.min(100, containerHeight - 30);
+    const chartSize = Math.min(110, containerHeight - 20);
     const cx = chartSize / 2;
     const cy = chartSize / 2;
-    const radius = chartSize * 0.45;
+    const radius = chartSize * 0.46;
     
     let svg = `<svg viewBox="0 0 ${chartSize} ${chartSize}" style="width: ${chartSize}px; height: ${chartSize}px; flex-shrink: 0;">`;
     
