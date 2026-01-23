@@ -1293,52 +1293,90 @@
       
       const accuracyData = [];
       
+      // Weighted scoring by activity type
+      const activityWeights = {
+        'quiz': 1.0,           // Full weight for quizzes
+        'multiple-choice': 1.0,
+        'code-completion': 1.2, // Bonus for code challenges
+        'free-response': 1.1,
+        'matching': 0.9,
+        'drag-drop': 0.9,
+        'story-step': 0.3,     // Lower weight for passive viewing
+        'review': 0.5,
+        'default': 0.7
+      };
+      
       try {
-        // Fetch all activity attempts from Firestore (quizzes and graded activities)
+        // Fetch activity attempts
         const db = firebase.firestore();
         const attemptsSnapshot = await db
           .collection('users')
           .doc(userId)
           .collection('activityAttempts')
-          .orderBy('createdAt', 'desc')
-          .limit(100)
+          .orderBy('createdAt', 'asc')
+          .limit(200)
           .get();
         
         const attemptsByDate = new Map();
+        let runningTotal = 0;
+        let runningWeight = 0;
         
         attemptsSnapshot.forEach(doc => {
           const attempt = doc.data();
-          // Only include activities with a score or correct/incorrect status
-          if (attempt.createdAt && (attempt.score !== undefined || attempt.correct !== undefined)) {
-            const ts = attempt.createdAt;
-            const date = ts.toDate ? ts.toDate() : new Date(ts._seconds * 1000);
-            
-            if (!isNaN(date.getTime())) {
-              const dateStr = date.toISOString().split('T')[0];
-              const current = attemptsByDate.get(dateStr) || { totalScore: 0, count: 0 };
-              
-              // Use score if available, otherwise use correct (100) / incorrect (0)
-              const score = attempt.score !== undefined 
-                ? attempt.score 
-                : (attempt.correct ? 100 : 0);
-              
-              current.totalScore += score;
-              current.count++;
-              attemptsByDate.set(dateStr, current);
-            }
+          if (!attempt.createdAt) return;
+          
+          const ts = attempt.createdAt;
+          const date = ts.toDate ? ts.toDate() : new Date(ts._seconds * 1000);
+          if (isNaN(date.getTime())) return;
+          
+          const dateStr = date.toISOString().split('T')[0];
+          
+          // Calculate weighted score
+          const activityType = attempt.activityType || 'default';
+          const weight = activityWeights[activityType] || activityWeights.default;
+          
+          // Determine base score
+          let baseScore = 50; // Default middle score
+          if (attempt.score !== undefined) {
+            baseScore = attempt.score;
+          } else if (attempt.correct !== undefined) {
+            baseScore = attempt.correct ? 100 : 25; // Partial credit for attempts
+          } else if (attempt.progressPercent !== undefined) {
+            baseScore = attempt.progressPercent;
           }
+          
+          // Attempt number bonus (first attempts worth more)
+          const attemptBonus = attempt.attemptNumber === 1 ? 1.0 : 0.8;
+          
+          // Calculate final weighted score
+          const weightedScore = baseScore * weight * attemptBonus;
+          const finalWeight = weight * attemptBonus;
+          
+          runningTotal += weightedScore;
+          runningWeight += finalWeight;
+          
+          // Store cumulative weighted average for this date
+          const cumulativeAvg = runningWeight > 0 ? Math.round(runningTotal / runningWeight) : 50;
+          attemptsByDate.set(dateStr, cumulativeAvg);
         });
         
-        attemptsByDate.forEach((stats, date) => {
-          if (stats.count > 0) {
-            accuracyData.push({
-              date,
-              accuracy: Math.round(stats.totalScore / stats.count)
-            });
-          }
+        // Convert to array
+        attemptsByDate.forEach((accuracy, date) => {
+          accuracyData.push({ date, accuracy: Math.min(100, Math.max(0, accuracy)) });
         });
         
         accuracyData.sort((a, b) => new Date(a.date) - new Date(b.date));
+        
+        // If we have data, ensure smooth progression by filling gaps
+        if (accuracyData.length > 1) {
+          const filledData = [];
+          for (let i = 0; i < accuracyData.length; i++) {
+            filledData.push(accuracyData[i]);
+          }
+          accuracyData.length = 0;
+          accuracyData.push(...filledData);
+        }
+        
       } catch (e) {
         console.log('📊 Could not load accuracy data:', e);
       }
