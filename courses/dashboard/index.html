@@ -1293,89 +1293,85 @@
       
       const accuracyData = [];
       
-      // Weighted scoring by activity type
-      const activityWeights = {
-        'quiz': 1.0,           // Full weight for quizzes
-        'multiple-choice': 1.0,
-        'code-completion': 1.2, // Bonus for code challenges
-        'free-response': 1.1,
-        'matching': 0.9,
-        'drag-drop': 0.9,
-        'story-step': 0.3,     // Lower weight for passive viewing
-        'review': 0.5,
-        'default': 0.7
-      };
-      
       try {
-        // Fetch activity attempts
-        const db = firebase.firestore();
-        const attemptsSnapshot = await db
-          .collection('users')
-          .doc(userId)
-          .collection('activityAttempts')
-          .orderBy('createdAt', 'asc')
-          .limit(200)
-          .get();
+        // Use course progress data to build accuracy over time
+        // This is more reliable as it tracks lesson completion with timestamps
+        const courses = await window.DataService.getEnrolledCourses();
         
-        const attemptsByDate = new Map();
-        let runningTotal = 0;
-        let runningWeight = 0;
+        // Collect all completed lessons with timestamps
+        const lessonsByDate = new Map();
         
-        attemptsSnapshot.forEach(doc => {
-          const attempt = doc.data();
-          if (!attempt.createdAt) return;
-          
-          const ts = attempt.createdAt;
-          const date = ts.toDate ? ts.toDate() : new Date(ts._seconds * 1000);
-          if (isNaN(date.getTime())) return;
-          
-          const dateStr = date.toISOString().split('T')[0];
-          
-          // Calculate weighted score
-          const activityType = attempt.activityType || 'default';
-          const weight = activityWeights[activityType] || activityWeights.default;
-          
-          // Determine base score
-          let baseScore = 50; // Default middle score
-          if (attempt.score !== undefined) {
-            baseScore = attempt.score;
-          } else if (attempt.correct !== undefined) {
-            baseScore = attempt.correct ? 100 : 25; // Partial credit for attempts
-          } else if (attempt.progressPercent !== undefined) {
-            baseScore = attempt.progressPercent;
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.entries(course.lessons).forEach(([lessonId, lesson]) => {
+              if (lesson.completedAt || lesson.lastViewedAt) {
+                const ts = lesson.completedAt || lesson.lastViewedAt;
+                let date;
+                if (ts._seconds) {
+                  date = new Date(ts._seconds * 1000);
+                } else if (ts.seconds) {
+                  date = new Date(ts.seconds * 1000);
+                } else if (ts.toDate) {
+                  date = ts.toDate();
+                } else {
+                  date = new Date(ts);
+                }
+                
+                if (!isNaN(date.getTime())) {
+                  const dateStr = date.toISOString().split('T')[0];
+                  const current = lessonsByDate.get(dateStr) || [];
+                  current.push({
+                    lessonId,
+                    courseId: course.courseId,
+                    progress: lesson.progressPercent || 0,
+                    completed: lesson.completed || false,
+                    viewedSections: lesson.viewedSections || 0,
+                    totalSections: lesson.totalSections || 1
+                  });
+                  lessonsByDate.set(dateStr, current);
+                }
+              }
+            });
           }
-          
-          // Attempt number bonus (first attempts worth more)
-          const attemptBonus = attempt.attemptNumber === 1 ? 1.0 : 0.8;
-          
-          // Calculate final weighted score
-          const weightedScore = baseScore * weight * attemptBonus;
-          const finalWeight = weight * attemptBonus;
-          
-          runningTotal += weightedScore;
-          runningWeight += finalWeight;
-          
-          // Store cumulative weighted average for this date
-          const cumulativeAvg = runningWeight > 0 ? Math.round(runningTotal / runningWeight) : 50;
-          attemptsByDate.set(dateStr, cumulativeAvg);
         });
         
-        // Convert to array
-        attemptsByDate.forEach((accuracy, date) => {
-          accuracyData.push({ date, accuracy: Math.min(100, Math.max(0, accuracy)) });
+        // Calculate cumulative score over time
+        let cumulativeCorrect = 0;
+        let cumulativeTotal = 0;
+        
+        // Sort dates and calculate running accuracy
+        const sortedDates = Array.from(lessonsByDate.keys()).sort();
+        
+        sortedDates.forEach(dateStr => {
+          const lessons = lessonsByDate.get(dateStr);
+          
+          lessons.forEach(lesson => {
+            cumulativeTotal++;
+            // Score based on progress and completion
+            if (lesson.completed) {
+              cumulativeCorrect += 1;
+            } else if (lesson.progress >= 80) {
+              cumulativeCorrect += 0.9;
+            } else if (lesson.progress >= 50) {
+              cumulativeCorrect += 0.7;
+            } else if (lesson.progress > 0) {
+              cumulativeCorrect += 0.4;
+            } else {
+              cumulativeCorrect += 0.1; // Started but no progress
+            }
+          });
+          
+          const accuracy = cumulativeTotal > 0 
+            ? Math.round((cumulativeCorrect / cumulativeTotal) * 100)
+            : 50;
+          
+          accuracyData.push({ 
+            date: dateStr, 
+            accuracy: Math.min(100, Math.max(0, accuracy)) 
+          });
         });
         
-        accuracyData.sort((a, b) => new Date(a.date) - new Date(b.date));
-        
-        // If we have data, ensure smooth progression by filling gaps
-        if (accuracyData.length > 1) {
-          const filledData = [];
-          for (let i = 0; i < accuracyData.length; i++) {
-            filledData.push(accuracyData[i]);
-          }
-          accuracyData.length = 0;
-          accuracyData.push(...filledData);
-        }
+        console.log('📊 Accuracy data points:', accuracyData.length, accuracyData);
         
       } catch (e) {
         console.log('📊 Could not load accuracy data:', e);
