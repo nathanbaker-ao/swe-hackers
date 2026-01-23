@@ -395,14 +395,14 @@
           </div>
           
           <!-- Insights Grid -->
-          <div class="analytics-insights-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;">
+          <div class="analytics-insights-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
             <!-- Skill Radar -->
-            <div id="skill-radar-container" style="min-height: 350px;">
+            <div id="skill-radar-container">
               <!-- SkillRadar rendered here by JS -->
             </div>
             
-            <!-- Progress Timeline -->
-            <div id="progress-timeline-container" style="max-height: 350px; overflow-y: auto; padding-right: 0.5rem;">
+            <!-- Progress Timeline - height synced to radar via JS, scrolls if needed -->
+            <div id="progress-timeline-container" style="overflow-y: auto; padding-right: 0.5rem;">
               <!-- ProgressTimeline rendered here by JS -->
             </div>
           </div>
@@ -1101,6 +1101,16 @@
         await renderSkillRadar(analytics);
         await renderProgressTimeline(user.uid);
         await renderRecommendations(user.uid, analytics);
+        
+        // Sync timeline height to match skill radar after render
+        requestAnimationFrame(() => {
+          const radar = document.getElementById('skill-radar-container');
+          const timeline = document.getElementById('progress-timeline-container');
+          if (radar && timeline) {
+            const radarHeight = radar.offsetHeight;
+            timeline.style.maxHeight = radarHeight + 'px';
+          }
+        });
         
         console.log('📊 Component analytics rendered successfully');
         
