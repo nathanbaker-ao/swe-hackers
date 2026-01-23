@@ -1166,6 +1166,7 @@
       // Build skills object from analytics
       const skills = {};
       
+      // Add strength and growth areas
       if (analytics?.strengthAreas) {
         analytics.strengthAreas.forEach(area => {
           skills[area.topic] = area.score;
@@ -1174,6 +1175,24 @@
       if (analytics?.growthAreas) {
         analytics.growthAreas.forEach(area => {
           skills[area.topic] = area.score;
+        });
+      }
+      
+      // Also use learning style breakdown for more skill data
+      if (analytics?.learningStyle?.breakdown) {
+        const activityTypeNames = {
+          'drag-drop': 'Drag & Drop',
+          'matching': 'Matching',
+          'code-completion': 'Code',
+          'free-response': 'Writing',
+          'multiple-choice': 'Quiz',
+          'fill-blank': 'Fill-in'
+        };
+        Object.entries(analytics.learningStyle.breakdown).forEach(([type, score]) => {
+          const displayName = activityTypeNames[type] || type;
+          if (!skills[displayName]) {
+            skills[displayName] = score;
+          }
         });
       }
       

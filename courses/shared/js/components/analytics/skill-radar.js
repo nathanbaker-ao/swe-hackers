@@ -69,7 +69,7 @@ class SkillRadar {
       return this;
     }
     
-    if (skills.length < 3) {
+    if (skills.length < 2) {
       this._renderMinimumRequired();
       return this;
     }
@@ -311,7 +311,7 @@ class SkillRadar {
       <div class="skill-radar__empty">
         <span class="skill-radar__empty-icon">📊</span>
         <p class="skill-radar__empty-text">Complete more activities to unlock the skill radar</p>
-        <p class="skill-radar__empty-subtext">Need at least 3 skill areas</p>
+        <p class="skill-radar__empty-subtext">Need at least 2 skill areas</p>
       </div>
     `;
     this.container.appendChild(this.element);
