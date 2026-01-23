@@ -57,16 +57,22 @@ const QueryService = {
     const cacheKey = `${collection}:${docId}`;
     
     try {
-      // 1. Check cache first
-      const cached = await window.CacheService.get(cacheKey);
-      if (cached !== null) {
-        console.log(`📊 QueryService: Cache hit for ${cacheKey}`);
-        return cached;
+      // 1. Check cache first (if CacheService is available)
+      if (window.CacheService) {
+        const cached = await window.CacheService.get(cacheKey);
+        if (cached !== null) {
+          console.log(`📊 QueryService: Cache hit for ${cacheKey}`);
+          return cached;
+        }
       }
       
       // 2. Fetch from Firestore
       console.log(`📊 QueryService: Fetching ${cacheKey} from Firestore`);
-      const db = window.FirebaseApp.getDb();
+      const db = window.FirebaseApp?.getDb();
+      if (!db) {
+        console.error('📊 QueryService: Firestore not available');
+        return null;
+      }
       const doc = await db.collection(collection).doc(docId).get();
       
       if (!doc.exists) {
@@ -76,8 +82,10 @@ const QueryService = {
       
       const data = doc.data();
       
-      // 3. Cache for future requests
-      await window.CacheService.set(cacheKey, data, ttlSeconds);
+      // 3. Cache for future requests (if CacheService is available)
+      if (window.CacheService) {
+        await window.CacheService.set(cacheKey, data, ttlSeconds);
+      }
       
       return data;
       
@@ -123,7 +131,11 @@ const QueryService = {
     const uniqueIds = [...new Set(docIds)];
     console.log(`📊 QueryService: Batch fetching ${uniqueIds.length} docs from ${collection}`);
     
-    const db = window.FirebaseApp.getDb();
+    const db = window.FirebaseApp?.getDb();
+    if (!db) {
+      console.error('📊 QueryService: Firestore not available');
+      return {};
+    }
     const results = {};
     
     // Process in chunks to respect Firestore limits
@@ -186,7 +198,11 @@ const QueryService = {
     
     console.log(`📊 QueryService: Aggregating ${collection} with pagination (pageSize: ${pageSize})`);
     
-    const db = window.FirebaseApp.getDb();
+    const db = window.FirebaseApp?.getDb();
+    if (!db) {
+      console.error('📊 QueryService: Firestore not available');
+      return [];
+    }
     let query = db.collection(collection);
     
     // Apply where clauses
@@ -258,8 +274,10 @@ const QueryService = {
    */
   async invalidateCache(collection, docId) {
     const cacheKey = `${collection}:${docId}`;
-    await window.CacheService.invalidate(cacheKey);
-    console.log(`📊 QueryService: Invalidated cache for ${cacheKey}`);
+    if (window.CacheService) {
+      await window.CacheService.invalidate(cacheKey);
+      console.log(`📊 QueryService: Invalidated cache for ${cacheKey}`);
+    }
   },
   
   /**
@@ -269,6 +287,7 @@ const QueryService = {
    * @returns {Promise<number>} Number of entries invalidated
    */
   async invalidateCollection(collection) {
+    if (!window.CacheService) return 0;
     const count = await window.CacheService.invalidatePattern(`${collection}:*`);
     console.log(`📊 QueryService: Invalidated ${count} cache entries for ${collection}`);
     return count;

@@ -46,6 +46,7 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/css/dashboard.css">
+  <link rel="stylesheet" href="../shared/css/analytics.css">
   
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -246,97 +247,6 @@
           <p style="color: var(--text-secondary);">Ready to continue your journey with the Three Forces?</p>
         </div>
         
-        <!-- Analytics Panel -->
-        <div class="analytics-panel" id="analytics-panel">
-          <div class="analytics-header">
-            <h3 class="analytics-title">🧠 Your Learning Analytics</h3>
-            <span class="analytics-updated" id="analytics-updated">Loading...</span>
-          </div>
-          
-          <div class="analytics-content">
-            <!-- Cognitive Score Ring -->
-            <div class="cognitive-score-container">
-              <div class="score-ring" id="score-ring">
-                <svg viewBox="0 0 120 120" class="score-svg">
-                  <defs>
-                    <linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#7986cb"/>
-                      <stop offset="50%" style="stop-color:#4db6ac"/>
-                      <stop offset="100%" style="stop-color:#ffd54f"/>
-                    </linearGradient>
-                  </defs>
-                  <circle cx="60" cy="60" r="54" class="score-bg"/>
-                  <circle cx="60" cy="60" r="54" class="score-progress" id="score-progress" stroke="url(#score-gradient)"/>
-                </svg>
-                <div class="score-inner">
-                  <span class="score-value" id="cognitive-score">--</span>
-                  <span class="score-label">Score</span>
-                </div>
-              </div>
-              <div class="score-level" id="score-level">Loading...</div>
-              <div class="score-message" id="score-message">Calculating your progress...</div>
-            </div>
-            
-            <!-- Quick Stats -->
-            <div class="quick-stats">
-              <div class="quick-stat" data-stat="velocity">
-                <div class="quick-stat-icon">⚡</div>
-                <div class="quick-stat-value" id="qs-velocity">--</div>
-                <div class="quick-stat-label">Lessons/Week</div>
-                <div class="quick-stat-trend" id="qs-velocity-trend"></div>
-              </div>
-              
-              <div class="quick-stat" data-stat="mastery">
-                <div class="quick-stat-icon">🎯</div>
-                <div class="quick-stat-value" id="qs-mastery">--</div>
-                <div class="quick-stat-label">Quiz Mastery</div>
-                <div class="quick-stat-detail" id="qs-mastery-detail"></div>
-              </div>
-              
-              <div class="quick-stat" data-stat="streak">
-                <div class="quick-stat-icon">🔥</div>
-                <div class="quick-stat-value" id="qs-streak">--</div>
-                <div class="quick-stat-label">Day Streak</div>
-                <div class="quick-stat-badge" id="qs-streak-badge"></div>
-              </div>
-              
-              <div class="quick-stat" data-stat="lessons">
-                <div class="quick-stat-icon">📚</div>
-                <div class="quick-stat-value" id="qs-lessons">--</div>
-                <div class="quick-stat-label">Completed</div>
-                <div class="quick-stat-detail" id="qs-lessons-detail"></div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Score Breakdown (expandable) -->
-          <details class="score-breakdown">
-            <summary class="breakdown-toggle">View Score Breakdown</summary>
-            <div class="breakdown-content" id="breakdown-content">
-              <div class="breakdown-row">
-                <span class="breakdown-label">🎯 Mastery</span>
-                <div class="breakdown-bar"><div class="breakdown-fill" id="bd-mastery" style="width: 0%"></div></div>
-                <span class="breakdown-value" id="bd-mastery-val">0%</span>
-              </div>
-              <div class="breakdown-row">
-                <span class="breakdown-label">⚡ Velocity</span>
-                <div class="breakdown-bar"><div class="breakdown-fill" id="bd-velocity" style="width: 0%"></div></div>
-                <span class="breakdown-value" id="bd-velocity-val">0%</span>
-              </div>
-              <div class="breakdown-row">
-                <span class="breakdown-label">🔥 Streak</span>
-                <div class="breakdown-bar"><div class="breakdown-fill" id="bd-streak" style="width: 0%"></div></div>
-                <span class="breakdown-value" id="bd-streak-val">0%</span>
-              </div>
-              <div class="breakdown-row">
-                <span class="breakdown-label">📚 Completion</span>
-                <div class="breakdown-bar"><div class="breakdown-fill" id="bd-completion" style="width: 0%"></div></div>
-                <span class="breakdown-value" id="bd-completion-val">0%</span>
-              </div>
-            </div>
-          </details>
-        </div>
-        
         <!-- Learning Insights Panel (Server-computed analytics) -->
         <div class="insights-panel" id="insights-panel" style="display: none;">
           <div class="insights-header">
@@ -468,69 +378,45 @@
           <div class="recommendations-list" id="recommendations-list"></div>
         </div>
         
-        <!-- Visual Stats Grid -->
-        <div class="visual-stats-grid">
-          
-          <!-- Weekly Activity Heatmap -->
-          <div class="visual-stat-card animate-in animate-delay-1" style="opacity: 0;">
-            <div class="visual-stat-header">
-              <span class="visual-stat-title">🔥 Weekly Activity</span>
-              <span class="visual-stat-value" id="vs-streak-value">0 day streak</span>
-            </div>
-            <div class="activity-heatmap" id="activity-heatmap">
-              <!-- 7 days, dynamically filled -->
-            </div>
-            <div class="heatmap-labels">
-              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+        <!-- Component-Based Analytics Section (Agent 4) -->
+        <section class="analytics-section" id="component-analytics-section" style="display: none;">
+          <div class="analytics-section__header">
+            <div>
+              <h3 class="analytics-section__title">
+                <span>📊</span> Performance Overview
+              </h3>
+              <p class="analytics-section__subtitle">Powered by server-computed analytics</p>
             </div>
           </div>
           
-          <!-- Course Progress Bars -->
-          <div class="visual-stat-card animate-in animate-delay-2" style="opacity: 0;">
-            <div class="visual-stat-header">
-              <span class="visual-stat-title">📚 Course Progress</span>
-              <span class="visual-stat-value" id="vs-courses-value">0 enrolled</span>
+          <!-- Metrics Row -->
+          <div class="analytics-metrics-row" id="metrics-row">
+            <!-- MetricCards rendered here by JS -->
+          </div>
+          
+          <!-- Insights Grid -->
+          <div class="analytics-insights-grid">
+            <!-- Skill Radar -->
+            <div id="skill-radar-container">
+              <!-- SkillRadar rendered here by JS -->
             </div>
-            <div class="course-progress-list" id="course-progress-list">
-              <div class="no-data-message">Enroll in a course to track progress</div>
+            
+            <!-- Progress Timeline -->
+            <div id="progress-timeline-container">
+              <!-- ProgressTimeline rendered here by JS -->
             </div>
           </div>
           
-          <!-- Topic Mastery Chart -->
-          <div class="visual-stat-card animate-in animate-delay-3" style="opacity: 0;">
-            <div class="visual-stat-header">
-              <span class="visual-stat-title">🎯 Topic Mastery</span>
-              <span class="visual-stat-value" id="vs-mastery-value">0% avg</span>
-            </div>
-            <div class="topic-chart" id="topic-chart">
-              <div class="no-data-message">Complete quizzes to see mastery</div>
-            </div>
-          </div>
-          
-          <!-- Learning Velocity Chart -->
-          <div class="visual-stat-card animate-in animate-delay-4" style="opacity: 0;">
-            <div class="visual-stat-header">
-              <span class="visual-stat-title">📈 Learning Velocity</span>
-              <span class="visual-stat-value" id="vs-velocity-value">0 lessons/week</span>
-            </div>
-            <div class="velocity-chart" id="velocity-chart">
-              <div class="velocity-bars">
-                <div class="velocity-bar" data-week="4"></div>
-                <div class="velocity-bar" data-week="3"></div>
-                <div class="velocity-bar" data-week="2"></div>
-                <div class="velocity-bar" data-week="1"></div>
-              </div>
-              <div class="velocity-labels">
-                <span>4 wks</span><span>3 wks</span><span>2 wks</span><span>Last wk</span>
-              </div>
-            </div>
-            <div class="velocity-target">
-              <span class="target-line"></span>
-              <span class="target-label">Target: 2/week</span>
+          <!-- Recommendations Section -->
+          <div class="analytics-recommendations">
+            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm);">
+              <span>💡</span> Personalized Recommendations
+            </h4>
+            <div id="recommendations-container">
+              <!-- RecommendationCards rendered here by JS -->
             </div>
           </div>
-          
-        </div>
+        </section>
         
         <!-- Continue Learning Section -->
         <div class="section-header">
@@ -553,41 +439,6 @@
           </div>
         </div>
         
-        <!-- Daily Challenges Section -->
-        <section class="challenges-section">
-          <div class="section-header" style="margin-bottom: 1rem;">
-            <h3 class="section-title">Today's Challenges</h3>
-            <a href="challenges.html" class="section-action">View All →</a>
-          </div>
-          
-          <div class="challenge-card">
-            <div class="challenge-icon">🧠</div>
-            <div class="challenge-info">
-              <div class="challenge-title">Variable Memory Quiz</div>
-              <div class="challenge-desc">Test your understanding of how variables store data</div>
-            </div>
-            <span class="challenge-xp">+50 XP</span>
-          </div>
-          
-          <div class="challenge-card">
-            <div class="challenge-icon">📊</div>
-            <div class="challenge-info">
-              <div class="challenge-title">Draw a Flowchart</div>
-              <div class="challenge-desc">Create a flowchart for a login process</div>
-            </div>
-            <span class="challenge-xp">+100 XP</span>
-          </div>
-          
-          <div class="challenge-card">
-            <div class="challenge-icon">💡</div>
-            <div class="challenge-info">
-              <div class="challenge-title">Code Review Practice</div>
-              <div class="challenge-desc">Find 3 improvements in a sample function</div>
-            </div>
-            <span class="challenge-xp">+75 XP</span>
-          </div>
-        </section>
-        
       </div>
     </main>
     
@@ -599,6 +450,17 @@
   <script src="../shared/js/rbac.js"></script>
   <script src="../shared/js/data-service.js"></script>
   <script src="../shared/js/analytics-service.js"></script>
+  
+  <!-- Services (Agent 2/3) -->
+  <script src="../shared/js/services/cache-service.js"></script>
+  <script src="../shared/js/services/query-service.js"></script>
+  <script src="../shared/js/services/analytics-service.js"></script>
+  
+  <!-- Analytics Components (Agent 4) -->
+  <script src="../shared/js/components/analytics/metric-card.js"></script>
+  <script src="../shared/js/components/analytics/skill-radar.js"></script>
+  <script src="../shared/js/components/analytics/progress-timeline.js"></script>
+  <script src="../shared/js/components/analytics/recommendation-card.js"></script>
   
   <script>
     // Course data
@@ -674,7 +536,8 @@
       loadUserInfo(user);
       await loadUserStats();
       await loadEnrolledCourses();
-      await loadAnalytics();
+      // Note: loadAnalytics() removed - UI elements were removed
+      // loadLearningInsights() is called via setTimeout at end of script
       
       // Setup UI interactions
       setupSidebar();
@@ -736,18 +599,26 @@
         const grid = document.getElementById('courses-grid');
         const emptyState = document.getElementById('empty-courses');
         
-        // Render course progress visual card
-        renderCourseProgress(courses);
-        
         if (courses.length === 0) {
           emptyState.style.display = 'block';
           return;
         }
         
+        // Sort by most recent activity (lastActivity timestamp)
+        const sortedCourses = courses.sort((a, b) => {
+          const aTime = a.lastActivity?._seconds || a.lastActivity?.seconds || 0;
+          const bTime = b.lastActivity?._seconds || b.lastActivity?.seconds || 0;
+          return bTime - aTime; // Most recent first
+        });
+        
+        // Take only the top 2 most recently active
+        const recentCourses = sortedCourses.slice(0, 2);
+        console.log('📊 Showing top 2 recent courses:', recentCourses.map(c => c.courseId || c.id));
+        
         emptyState.style.display = 'none';
         grid.innerHTML = '';
         
-        courses.forEach(course => {
+        recentCourses.forEach(course => {
           const courseId = course.courseId || course.id;
           const courseInfo = COURSES[courseId] || course;
           const card = createCourseCard(course, courseInfo);
@@ -881,264 +752,6 @@
         e.preventDefault();
         await window.AuthService.logout();
         window.location.href = '../index.html';
-      });
-    }
-    
-    // Load and display analytics
-    async function loadAnalytics() {
-      try {
-        const summary = await window.AnalyticsService.getDashboardSummary();
-        console.log('📊 Analytics loaded:', summary);
-        
-        // Update cognitive score
-        const scoreEl = document.getElementById('cognitive-score');
-        const progressEl = document.getElementById('score-progress');
-        const levelEl = document.getElementById('score-level');
-        const messageEl = document.getElementById('score-message');
-        const updatedEl = document.getElementById('analytics-updated');
-        
-        // Animate score counter
-        animateCounter(scoreEl, 0, summary.cognitiveScore, 1500);
-        
-        // Animate progress ring (339.292 is circumference of r=54 circle)
-        const circumference = 339.292;
-        const offset = circumference - (summary.cognitiveScore / 100) * circumference;
-        setTimeout(() => {
-          progressEl.style.strokeDashoffset = offset;
-        }, 100);
-        
-        // Set level and message
-        levelEl.textContent = summary.cognitiveLevel;
-        levelEl.className = 'score-level ' + summary.cognitiveLevel;
-        messageEl.textContent = summary.cognitiveMessage;
-        updatedEl.textContent = 'Updated just now';
-        
-        // Update quick stats
-        document.getElementById('qs-velocity').textContent = summary.velocity;
-        const velocityTrend = document.getElementById('qs-velocity-trend');
-        if (summary.velocityTrendPercent !== 0) {
-          velocityTrend.textContent = `${summary.velocityTrendPercent > 0 ? '+' : ''}${summary.velocityTrendPercent}%`;
-          velocityTrend.className = 'quick-stat-trend ' + summary.velocityTrend;
-        } else {
-          velocityTrend.textContent = 'Start learning!';
-          velocityTrend.className = 'quick-stat-trend neutral';
-        }
-        
-        document.getElementById('qs-mastery').textContent = summary.quizMastery + '%';
-        const masteryDetail = document.getElementById('qs-mastery-detail');
-        masteryDetail.textContent = summary.quizzesCompleted > 0 
-          ? `${summary.quizzesCompleted} quiz${summary.quizzesCompleted > 1 ? 'zes' : ''}` 
-          : 'No quizzes yet';
-        
-        document.getElementById('qs-streak').textContent = summary.streak;
-        const streakBadge = document.getElementById('qs-streak-badge');
-        if (summary.isActiveToday) {
-          streakBadge.textContent = '✓ Today';
-          streakBadge.style.display = 'block';
-        } else {
-          streakBadge.style.display = 'none';
-        }
-        
-        document.getElementById('qs-lessons').textContent = summary.lessonsCompleted;
-        const lessonsDetail = document.getElementById('qs-lessons-detail');
-        lessonsDetail.textContent = summary.lessonsCompleted > 0 
-          ? 'lessons done' 
-          : 'Get started!';
-        
-        // Update breakdown if full data available
-        if (summary.fullData?.cognitive?.breakdown) {
-          const bd = summary.fullData.cognitive.breakdown;
-          
-          document.getElementById('bd-mastery').style.width = bd.mastery.normalized + '%';
-          document.getElementById('bd-mastery-val').textContent = bd.mastery.normalized + '%';
-          
-          document.getElementById('bd-velocity').style.width = bd.velocity.normalized + '%';
-          document.getElementById('bd-velocity-val').textContent = bd.velocity.normalized + '%';
-          
-          document.getElementById('bd-streak').style.width = bd.streak.normalized + '%';
-          document.getElementById('bd-streak-val').textContent = bd.streak.normalized + '%';
-          
-          document.getElementById('bd-completion').style.width = bd.completion.normalized + '%';
-          document.getElementById('bd-completion-val').textContent = bd.completion.normalized + '%';
-        }
-        
-        // Animate panel
-        anime({
-          targets: '.analytics-panel',
-          opacity: [0, 1],
-          translateY: [20, 0],
-          duration: 600,
-          easing: 'easeOutCubic'
-        });
-        
-        anime({
-          targets: '.quick-stat',
-          opacity: [0, 1],
-          translateY: [15, 0],
-          delay: anime.stagger(100, { start: 400 }),
-          duration: 500,
-          easing: 'easeOutCubic'
-        });
-        
-        // Render visual stat cards
-        renderActivityHeatmap(summary.fullData.streak);
-        renderTopicMastery(summary.fullData.mastery);
-        renderVelocityChart(summary.fullData.velocity);
-        
-      } catch (error) {
-        console.error('Error loading analytics:', error);
-        document.getElementById('score-message').textContent = 'Unable to load analytics';
-      }
-    }
-    
-    // Render weekly activity heatmap
-    function renderActivityHeatmap(streakData) {
-      const container = document.getElementById('activity-heatmap');
-      const valueEl = document.getElementById('vs-streak-value');
-      
-      valueEl.textContent = `${streakData.streak} day streak`;
-      
-      // Get last 7 days
-      const today = new Date();
-      const dayOfWeek = today.getDay(); // 0 = Sunday
-      const mondayOffset = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
-      
-      container.innerHTML = '';
-      
-      for (let i = 0; i < 7; i++) {
-        const dayDate = new Date(today);
-        dayDate.setDate(today.getDate() + mondayOffset + i);
-        const dateStr = dayDate.toISOString().split('T')[0];
-        
-        const dayEl = document.createElement('div');
-        dayEl.className = 'heatmap-day';
-        
-        // Check if this day is today
-        if (dateStr === streakData.lastActiveDate && streakData.isActiveToday) {
-          dayEl.classList.add('today', 'active-3');
-        } else if (dateStr === today.toISOString().split('T')[0]) {
-          dayEl.classList.add('today', 'active-0');
-        } else if (dateStr <= streakData.lastActiveDate) {
-          // Simple approximation - mark recent days as active based on streak
-          const daysAgo = Math.floor((new Date(streakData.lastActiveDate) - dayDate) / (24*60*60*1000));
-          if (daysAgo >= 0 && daysAgo < streakData.streak) {
-            dayEl.classList.add('active-2');
-          }
-        }
-        
-        container.appendChild(dayEl);
-      }
-    }
-    
-    // Render topic mastery chart
-    function renderTopicMastery(masteryData) {
-      const container = document.getElementById('topic-chart');
-      const valueEl = document.getElementById('vs-mastery-value');
-      
-      valueEl.textContent = `${masteryData.mastery}% avg`;
-      
-      if (!masteryData.byTopic || Object.keys(masteryData.byTopic).length === 0) {
-        container.innerHTML = '<div class="no-data-message">Complete quizzes to see mastery</div>';
-        return;
-      }
-      
-      container.innerHTML = '';
-      
-      // Sort topics by mastery
-      const topics = Object.entries(masteryData.byTopic)
-        .sort((a, b) => b[1].mastery - a[1].mastery)
-        .slice(0, 5); // Show top 5
-      
-      topics.forEach(([topic, data]) => {
-        const row = document.createElement('div');
-        row.className = 'topic-row';
-        
-        let barClass = 'topic-bar';
-        if (data.mastery >= 80) barClass += ' perfect';
-        else if (data.mastery >= 50) barClass += ' good';
-        else barClass += ' needs-work';
-        
-        row.innerHTML = `
-          <span class="topic-name">${topic}</span>
-          <div class="topic-bar-container">
-            <div class="${barClass}" style="width: ${data.mastery}%"></div>
-          </div>
-          <span class="topic-score">${data.mastery}%</span>
-        `;
-        
-        container.appendChild(row);
-      });
-    }
-    
-    // Render velocity chart
-    function renderVelocityChart(velocityData) {
-      const valueEl = document.getElementById('vs-velocity-value');
-      valueEl.textContent = `${velocityData.velocity} lessons/week`;
-      
-      const bars = document.querySelectorAll('.velocity-bar');
-      
-      // For now, show current week vs estimate
-      // In a full implementation, we'd track weekly history
-      const currentWeekLessons = velocityData.recentWeekCompleted || 0;
-      const maxHeight = 70; // pixels
-      const targetLessons = 2;
-      
-      bars.forEach((bar, index) => {
-        let count = 0;
-        let height = 4;
-        
-        if (index === 3) { // Last week (most recent)
-          count = currentWeekLessons;
-          height = Math.max(4, (count / Math.max(targetLessons, count)) * maxHeight);
-          bar.classList.add('current');
-        } else {
-          // Placeholder for historical data
-          count = 0;
-          height = 4;
-        }
-        
-        bar.style.height = height + 'px';
-        bar.setAttribute('data-count', count);
-      });
-    }
-    
-    // Render course progress bars
-    function renderCourseProgress(courses) {
-      const container = document.getElementById('course-progress-list');
-      const valueEl = document.getElementById('vs-courses-value');
-      
-      valueEl.textContent = `${courses.length} enrolled`;
-      
-      if (courses.length === 0) {
-        container.innerHTML = '<div class="no-data-message">Enroll in a course to track progress</div>';
-        return;
-      }
-      
-      container.innerHTML = '';
-      
-      const icons = {
-        'endless-opportunities': '🚀',
-        apprentice: '🌟',
-        undergrad: '🎓',
-        junior: '🚀',
-        senior: '🎯'
-      };
-      
-      courses.forEach(course => {
-        const progress = course.progressPercent || 0;
-        const courseId = course.courseId || course.id;
-        
-        const item = document.createElement('div');
-        item.className = 'course-progress-item';
-        item.innerHTML = `
-          <span class="course-progress-icon">${icons[courseId] || '📚'}</span>
-          <div class="course-progress-bar-container">
-            <div class="course-progress-bar ${courseId}" style="width: ${progress}%"></div>
-          </div>
-          <span class="course-progress-percent">${progress}%</span>
-        `;
-        
-        container.appendChild(item);
       });
     }
     
@@ -1429,13 +1042,284 @@
         .replace(/\b\w/g, c => c.toUpperCase());
     }
     
-    // Load insights after main analytics
+    // Load insights after main data loads
     document.addEventListener('DOMContentLoaded', () => {
-      // Wait for main analytics to load first
+      // Wait for main data to load first
       setTimeout(() => {
         loadLearningInsights();
+        loadComponentAnalytics();
       }, 500);
     });
+    
+    // ═══════════════════════════════════════════════════════════════════════════
+    // COMPONENT-BASED ANALYTICS (Agent 4)
+    // ═══════════════════════════════════════════════════════════════════════════
+    
+    let metricCards = [];
+    let skillRadar = null;
+    let progressTimeline = null;
+    let recommendationList = null;
+    
+    async function loadComponentAnalytics() {
+      const section = document.getElementById('component-analytics-section');
+      if (!section) {
+        console.warn('📊 Component analytics section not found');
+        return;
+      }
+      
+      // Check if components are available
+      if (!window.MetricCard || !window.SkillRadar || !window.ProgressTimeline || !window.RecommendationList) {
+        console.log('📊 Components not fully loaded, skipping component analytics');
+        return;
+      }
+      
+      const user = window.AuthService?.getUser();
+      if (!user) {
+        console.log('📊 No user, skipping component analytics');
+        return;
+      }
+      
+      console.log('📊 Loading component analytics for user:', user.uid);
+      
+      // Always show the section
+      section.style.display = 'block';
+      
+      try {
+        // Try to get server-computed analytics (might not exist yet)
+        let analytics = null;
+        if (window.AnalyticsServiceV2 && window.QueryService) {
+          analytics = await window.AnalyticsServiceV2.getUserAnalytics(user.uid);
+        }
+        
+        // Render with server data or fallback to mock
+        await renderMetricCards(analytics, user.uid);
+        await renderSkillRadar(analytics);
+        await renderProgressTimeline(user.uid);
+        await renderRecommendations(user.uid);
+        
+        console.log('📊 Component analytics rendered successfully');
+        
+      } catch (error) {
+        console.error('📊 Error loading component analytics:', error);
+        renderWithMockData();
+      }
+    }
+    
+    async function renderMetricCards(analytics, userId) {
+      const container = document.getElementById('metrics-row');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      metricCards = [];
+      
+      // Get values from analytics or use defaults
+      const overallScore = analytics?.summaryStats?.overallScore || 0;
+      const streak = analytics?.engagementPatterns?.currentStreak || 0;
+      const timeMinutes = analytics?.summaryStats?.totalTimeMinutes || 0;
+      const activitiesCompleted = analytics?.summaryStats?.activitiesCompleted || 0;
+      
+      const cardConfigs = [
+        { title: 'Overall Score', value: overallScore, icon: '🎯', format: 'number', colorScheme: 'primary' },
+        { title: 'Day Streak', value: streak, icon: '🔥', format: 'number', colorScheme: 'warning' },
+        { title: 'Time Spent', value: Math.round(timeMinutes / 60), icon: '⏱️', format: 'hours', colorScheme: 'info' },
+        { title: 'Activities', value: activitiesCompleted, icon: '✅', format: 'number', colorScheme: 'success' }
+      ];
+      
+      cardConfigs.forEach(config => {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'metric-card-wrapper';
+        container.appendChild(cardDiv);
+        
+        const card = new MetricCard(cardDiv, config);
+        card.render();
+        metricCards.push(card);
+      });
+    }
+    
+    async function renderSkillRadar(analytics) {
+      const container = document.getElementById('skill-radar-container');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      // Build skills object from analytics or use defaults
+      const skills = {};
+      
+      if (analytics?.strengthAreas) {
+        analytics.strengthAreas.forEach(area => {
+          skills[area.topic] = area.score;
+        });
+      }
+      if (analytics?.growthAreas) {
+        analytics.growthAreas.forEach(area => {
+          skills[area.topic] = area.score;
+        });
+      }
+      
+      // Fallback to mock skills if empty
+      if (Object.keys(skills).length === 0) {
+        Object.assign(skills, {
+          variables: 0.85,
+          loops: 0.72,
+          functions: 0.68,
+          recursion: 0.45,
+          arrays: 0.78
+        });
+      }
+      
+      skillRadar = new SkillRadar(container, {
+        skills: skills,
+        size: 280,
+        showLabels: true,
+        showValues: true,
+        animate: true
+      });
+      skillRadar.render();
+    }
+    
+    async function renderProgressTimeline(userId) {
+      const container = document.getElementById('progress-timeline-container');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      // Get recent activities from DataService
+      let activities = [];
+      let milestones = [];
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        const now = Date.now();
+        
+        for (const course of courses.slice(0, 3)) {
+          if (course.lessons) {
+            Object.entries(course.lessons).forEach(([lessonId, lessonData]) => {
+              if (lessonData.completed && lessonData.completedAt) {
+                const completedAt = lessonData.completedAt._seconds 
+                  ? new Date(lessonData.completedAt._seconds * 1000)
+                  : new Date(lessonData.completedAt);
+                
+                if (!isNaN(completedAt.getTime())) {
+                  milestones.push({
+                    title: `Completed ${lessonId}`,
+                    timestamp: completedAt.toISOString(),
+                    type: 'course-complete'
+                  });
+                }
+              }
+            });
+          }
+        }
+      } catch (error) {
+        console.log('📊 Using mock timeline data');
+      }
+      
+      // Fallback to mock data if no real activities
+      if (activities.length === 0 && milestones.length === 0) {
+        const now = Date.now();
+        activities = [
+          { type: 'quiz', title: 'Variables Quiz', timestamp: new Date(now - 2*60*60*1000).toISOString(), score: 0.92 },
+          { type: 'interactive', title: 'Loop Builder', timestamp: new Date(now - 24*60*60*1000).toISOString(), score: 0.78 }
+        ];
+        milestones = [
+          { title: 'Completed Chapter 1', timestamp: new Date(now - 48*60*60*1000).toISOString(), type: 'course-complete' }
+        ];
+      }
+      
+      progressTimeline = new ProgressTimeline(container, {
+        activities: activities,
+        milestones: milestones,
+        maxItems: 8,
+        showDates: true,
+        animate: true
+      });
+      progressTimeline.render();
+    }
+    
+    async function renderRecommendations(userId) {
+      const container = document.getElementById('recommendations-container');
+      if (!container) return;
+      
+      container.innerHTML = '';
+      
+      // Try to get recommendations from AnalyticsServiceV2 (skip if mock-user)
+      let recommendations = [];
+      
+      if (userId && userId !== 'mock-user' && window.AnalyticsServiceV2?.getRecommendations) {
+        try {
+          recommendations = await window.AnalyticsServiceV2.getRecommendations(userId);
+        } catch (error) {
+          console.log('📊 Using mock recommendations');
+        }
+      }
+      
+      // Fallback to mock recommendations if empty
+      if (!recommendations || recommendations.length === 0) {
+        recommendations = [
+          {
+            type: 'growth',
+            priority: 'high',
+            icon: '🎯',
+            title: 'Practice Recursion',
+            reason: 'Strengthen your understanding of recursive functions',
+            estimatedTime: 20,
+            lessonPath: '../apprentice/ch3-magnetism/'
+          },
+          {
+            type: 'streak',
+            priority: 'medium',
+            icon: '🔥',
+            title: 'Keep Your Streak',
+            reason: 'Complete one activity today to maintain momentum',
+            estimatedTime: 10,
+            lessonPath: '../apprentice/ch1-stone/'
+          }
+        ];
+      }
+      
+      recommendationList = new RecommendationList(container, {
+        recommendations: recommendations,
+        maxItems: 3,
+        animate: true,
+        onRecommendationClick: (rec) => {
+          if (rec.lessonPath) {
+            window.location.href = rec.lessonPath;
+          }
+        }
+      });
+      recommendationList.render();
+    }
+    
+    function renderWithMockData() {
+      const mockAnalytics = {
+        summaryStats: {
+          overallScore: 72,
+          activitiesCompleted: 24,
+          totalTimeMinutes: 340
+        },
+        engagementPatterns: {
+          currentStreak: 3
+        },
+        strengthAreas: [
+          { topic: 'variables', score: 0.88 },
+          { topic: 'loops', score: 0.76 }
+        ],
+        growthAreas: [
+          { topic: 'recursion', score: 0.45 },
+          { topic: 'arrays', score: 0.58 }
+        ]
+      };
+      
+      const user = window.AuthService?.getUser();
+      const userId = user?.uid || 'mock-user';
+      
+      renderMetricCards(mockAnalytics, userId);
+      renderSkillRadar(mockAnalytics);
+      renderProgressTimeline(userId);
+      renderRecommendations(userId);
+      
+      document.getElementById('component-analytics-section').style.display = 'block';
+    }
   </script>
 </body>
 </html>

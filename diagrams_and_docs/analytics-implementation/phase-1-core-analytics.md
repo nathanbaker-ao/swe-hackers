@@ -74,7 +74,7 @@ flowchart LR
 
 ### Prompt for Agent 1
 
-```
+````text
 You are building the Data Layer for the SWE Hackers Analytics system.
 
 ## Context
@@ -129,7 +129,7 @@ Report completion with:
 - List of files created
 - Any design decisions you made
 - Console output from test script
-```
+````
 
 ---
 
@@ -174,7 +174,7 @@ flowchart TB
 
 ### Prompt for Agent 2
 
-```
+````text
 You are building the Services Layer for the SWE Hackers Analytics system.
 
 ## Context
@@ -237,7 +237,7 @@ Report completion with:
 - List of files created
 - Method signatures implemented
 - Any assumptions about CacheService interface
-```
+````
 
 ---
 
@@ -274,7 +274,7 @@ flowchart TB
 
 ### Prompt for Agent 3
 
-```
+````text
 You are building the Cache Layer for the SWE Hackers Analytics system.
 
 ## Context
@@ -354,7 +354,7 @@ Report completion with:
 - File created
 - Test output
 - Memory/localStorage behavior explanation
-```
+````
 
 ---
 
@@ -394,7 +394,7 @@ flowchart TB
 
 ### Prompt for Agent 4
 
-```
+````text
 You are building the Student Dashboard redesign for the SWE Hackers Analytics system.
 
 ## Context
@@ -492,7 +492,7 @@ Report completion with:
 - List of files created
 - Screenshot or description of the new dashboard section
 - Any dependencies added
-```
+````
 
 ---
 

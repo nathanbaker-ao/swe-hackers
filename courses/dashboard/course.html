@@ -450,9 +450,14 @@
         updateOverviewStats(courseProgress, completedCount);
       }
       
-      // Load chapter analytics
-      chapterAnalytics = await window.AnalyticsService.getChapterAnalytics(currentCourseId);
-      console.log('📊 Chapter analytics:', chapterAnalytics);
+      // Load chapter analytics (defensive check for AnalyticsService)
+      if (window.AnalyticsService?.getChapterAnalytics) {
+        chapterAnalytics = await window.AnalyticsService.getChapterAnalytics(currentCourseId);
+        console.log('📊 Chapter analytics:', chapterAnalytics);
+      } else {
+        console.warn('📊 AnalyticsService not available, skipping chapter analytics');
+        chapterAnalytics = null;
+      }
       
       try {
         renderChaptersList();
@@ -612,8 +617,46 @@
     
     // Render analytics
     function renderAnalytics() {
-      if (!chapterAnalytics || !chapterAnalytics.totals) {
-        console.warn('No analytics data available');
+      if (!chapterAnalytics) {
+        console.warn('📊 No chapter analytics available, using defaults');
+        // Create default analytics from courseProgress.lessons data
+        chapterAnalytics = {
+          totals: {
+            completed: 0,
+            avgQuizScore: null,
+            totalTimeMs: 0,
+            totalActivities: 0
+          },
+          chapters: [],
+          timeline: []
+        };
+        
+        // Build from courseProgress if available
+        if (courseProgress?.lessons) {
+          let completedCount = 0;
+          let totalTime = 0;
+          
+          lessons.forEach((lesson, i) => {
+            const lessonData = courseProgress.lessons[lesson.id];
+            const isComplete = lessonData?.completed || lessonData?.progressPercent >= 100;
+            if (isComplete) completedCount++;
+            if (lessonData?.totalTimeSpent) totalTime += lessonData.totalTimeSpent * 1000;
+            
+            chapterAnalytics.chapters.push({
+              status: isComplete ? 'completed' : (lessonData?.progressPercent > 0 ? 'in_progress' : 'not_started'),
+              timeSpentFormatted: lessonData?.totalTimeSpent ? formatDuration(lessonData.totalTimeSpent * 1000) : '0m',
+              quizScore: null,
+              activitiesCompleted: 0
+            });
+          });
+          
+          chapterAnalytics.totals.completed = completedCount;
+          chapterAnalytics.totals.totalTimeMs = totalTime;
+        }
+      }
+      
+      if (!chapterAnalytics.totals) {
+        console.warn('No analytics totals available');
         return;
       }
       

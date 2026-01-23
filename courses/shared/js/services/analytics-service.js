@@ -58,6 +58,12 @@ const AnalyticsService = {
       return null;
     }
     
+    // Check if QueryService is available
+    if (!window.QueryService) {
+      console.warn('📊 AnalyticsService: QueryService not available');
+      return null;
+    }
+    
     console.log(`📊 AnalyticsService: Getting analytics for user ${userId}`);
     
     try {

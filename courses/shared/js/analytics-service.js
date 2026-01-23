@@ -817,10 +817,9 @@ const AnalyticsService = {
         streak: 0
       };
     }
-  }
-};
+  },
 
-// ═══════════════════════════════════════════════════════════════════════════
+  // ═══════════════════════════════════════════════════════════════════════════
   // USER ANALYTICS (from Firestore userAnalytics collection)
   // Server-computed analytics with learning style, persistence metrics, etc.
   // ═══════════════════════════════════════════════════════════════════════════
@@ -1059,4 +1058,5 @@ const AnalyticsService = {
 
 // Export for global access
 window.AnalyticsService = AnalyticsService;
+console.log('📊 AnalyticsService loaded and exported to window');
 
