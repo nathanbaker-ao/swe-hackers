@@ -1085,10 +1085,11 @@
       section.style.display = 'block';
       
       try {
-        // Try to get server-computed analytics
+        // Try to get server-computed analytics (use same service as Learning Insights)
         let analytics = null;
-        if (window.AnalyticsServiceV2 && window.QueryService) {
-          analytics = await window.AnalyticsServiceV2.getUserAnalytics(user.uid);
+        if (window.AnalyticsService?.getUserAnalytics) {
+          analytics = await window.AnalyticsService.getUserAnalytics();
+          console.log('📊 Loaded analytics for Performance Overview:', analytics);
         }
         
         if (!analytics) {
@@ -1261,14 +1262,61 @@
       
       container.innerHTML = '';
       
-      // Try to get recommendations from AnalyticsServiceV2
+      // Generate recommendations from analytics data
       let recommendations = [];
       
-      if (userId && window.AnalyticsServiceV2?.getRecommendations) {
-        try {
-          recommendations = await window.AnalyticsServiceV2.getRecommendations(userId);
-        } catch (error) {
-          console.log('📊 Error getting recommendations:', error);
+      if (analytics) {
+        // Build recommendations from growth areas
+        if (analytics.growthAreas && analytics.growthAreas.length > 0) {
+          analytics.growthAreas.slice(0, 2).forEach(area => {
+            const resource = area.suggestedResources?.[0];
+            recommendations.push({
+              type: 'growth',
+              priority: 'high',
+              icon: '🎯',
+              title: `Practice ${area.topic.charAt(0).toUpperCase() + area.topic.slice(1)}`,
+              reason: `Your score is ${Math.round(area.score * 100)}%. ${resource ? `Try: ${resource.title}` : 'Keep practicing!'}`,
+              estimatedTime: 15
+            });
+          });
+        }
+        
+        // Streak recommendation
+        const streak = analytics.engagementPatterns?.currentStreak || 0;
+        const streakRecord = analytics.engagementPatterns?.streakRecord || 0;
+        if (streak > 0 && streak < streakRecord) {
+          recommendations.push({
+            type: 'streak',
+            priority: 'medium',
+            icon: '🔥',
+            title: `Keep Your ${streak}-Day Streak`,
+            reason: `You're ${streakRecord - streak} days from your record!`,
+            estimatedTime: 10
+          });
+        } else if (streak === 0 && streakRecord > 0) {
+          recommendations.push({
+            type: 'streak',
+            priority: 'medium',
+            icon: '🔥',
+            title: 'Restart Your Streak',
+            reason: `You had a ${streakRecord}-day streak before!`,
+            estimatedTime: 10
+          });
+        }
+        
+        // Learning style tip
+        if (analytics.learningStyle?.primary) {
+          const styleNames = { kinesthetic: 'Hands-On', visual: 'Visual', auditory: 'Auditory', reading: 'Reading' };
+          recommendations.push({
+            type: 'style',
+            priority: 'low',
+            icon: '💡',
+            title: `${styleNames[analytics.learningStyle.primary] || 'Your'} Learning Tip`,
+            reason: analytics.learningStyle.primary === 'kinesthetic' 
+              ? 'Try the interactive code exercises for better retention'
+              : 'Focus on content that matches your style',
+            estimatedTime: 5
+          });
         }
       }
       
