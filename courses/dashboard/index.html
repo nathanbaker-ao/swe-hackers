@@ -378,96 +378,134 @@
           <div class="recommendations-list" id="recommendations-list"></div>
         </div>
         
-        <!-- Component-Based Analytics Section (Agent 4) -->
+        <!-- Component-Based Analytics Section - 3x3 Grid -->
         <section class="analytics-section" id="component-analytics-section" style="display: none;">
           
-          <!-- Row 1: Activity Heatmap (full width) -->
-          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-              <h4 style="font-size: 1rem; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
-                <span>📅</span> Activity Overview
-              </h4>
-              <span style="font-size: 0.8rem; color: var(--text-muted);">Last 12 weeks</span>
-            </div>
-            <div id="activity-heatmap-container">
-              <!-- ActivityHeatmap rendered here -->
-            </div>
-          </div>
-          
-          <!-- Row 2: Streak + Weekly Activity + Quick Stats -->
-          <div style="display: grid; grid-template-columns: 280px 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <!-- 3x3 Analytics Grid -->
+          <div class="analytics-grid" style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+          ">
             
-            <!-- Streak Display -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1rem;">
-              <div id="streak-display-container">
-                <!-- StreakDisplay rendered here -->
+            <!-- Row 1 -->
+            
+            <!-- 1. Activity Heatmap -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📅</span> Activity
+              </h4>
+              <div id="activity-heatmap-container" style="height: 140px; overflow: hidden;">
+                <!-- ActivityHeatmap rendered here -->
               </div>
             </div>
             
-            <!-- Weekly Activity Pattern -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <!-- 2. Weekly Pattern -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
                 <span>📊</span> Weekly Pattern
               </h4>
-              <div id="weekly-chart-container">
+              <div id="weekly-chart-container" style="height: 140px;">
                 <!-- WeeklyChart rendered here -->
               </div>
             </div>
             
-            <!-- Quick Stats -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>⚡</span> Quick Stats
-              </h4>
-              <div id="metrics-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                <!-- MetricCards rendered here by JS -->
+            <!-- 3. Streak -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <div id="streak-display-container" style="height: 160px;">
+                <!-- StreakDisplay rendered here -->
               </div>
             </div>
+            
+            <!-- Row 2 -->
+            
+            <!-- 4. Progress Over Time -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📈</span> Progress
+              </h4>
+              <div id="progress-chart-container" style="height: 140px;">
+                <!-- ProgressChart rendered here -->
+              </div>
+            </div>
+            
+            <!-- 5. Accuracy Trend -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🎯</span> Accuracy
+              </h4>
+              <div id="accuracy-chart-container" style="height: 140px;">
+                <!-- Accuracy trend chart -->
+              </div>
+            </div>
+            
+            <!-- 6. Time Spent -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>⏱️</span> Time Spent
+              </h4>
+              <div id="time-distribution-container" style="height: 140px;">
+                <!-- Time distribution chart -->
+              </div>
+            </div>
+            
+            <!-- Row 3 -->
+            
+            <!-- 7. Skill Radar -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem; overflow: visible;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🧠</span> Skills
+              </h4>
+              <div id="skill-radar-container" style="height: 160px; overflow: visible;">
+                <!-- SkillRadar rendered here -->
+              </div>
+            </div>
+            
+            <!-- 8. Course Breakdown -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>📚</span> Courses
+              </h4>
+              <div id="course-breakdown-container" style="height: 140px;">
+                <!-- Course breakdown chart -->
+              </div>
+            </div>
+            
+            <!-- 9. Activity Types -->
+            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>🎮</span> Activity Types
+              </h4>
+              <div id="activity-types-container" style="height: 140px;">
+                <!-- Activity types pie chart -->
+              </div>
+            </div>
+            
           </div>
           
-          <!-- Row 3: Progress Over Time (full width) -->
-          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span>📈</span> Progress Over Time
+          <!-- Journey Timeline (full width below grid) -->
+          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>🗺️</span> Learning Journey
             </h4>
-            <div id="progress-chart-container" style="height: 220px;">
-              <!-- ProgressChart rendered here -->
+            <div id="progress-timeline-container" style="height: 200px;">
+              <!-- TimelineGraph rendered here -->
             </div>
           </div>
           
-          <!-- Row 4: Skills + Journey Timeline -->
-          <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-            
-            <!-- Skill Radar -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem; overflow: visible;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>🎯</span> Skill Breakdown
-              </h4>
-              <div id="skill-radar-container" style="overflow: visible;">
-                <!-- SkillRadar rendered here by JS -->
-              </div>
-            </div>
-            
-            <!-- Journey Timeline -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>🗺️</span> Learning Journey
-              </h4>
-              <div id="progress-timeline-container">
-                <!-- TimelineGraph rendered here by JS -->
-              </div>
-            </div>
-          </div>
-          
-          <!-- Row 5: Recommendations -->
-          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 16px; padding: 1.5rem;">
-            <h4 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <!-- Recommendations (full width) -->
+          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
               <span>💡</span> Recommended Next Steps
             </h4>
             <div id="recommendations-container">
-              <!-- RecommendationCards rendered here by JS -->
+              <!-- RecommendationCards rendered here -->
             </div>
           </div>
+          
+          <!-- Hidden containers for backward compatibility -->
+          <div id="metrics-row" style="display: none;"></div>
         </section>
         
         <!-- Continue Learning Section -->
@@ -515,11 +553,15 @@
   <script src="../shared/js/components/analytics/timeline-graph.js"></script>
   <script src="../shared/js/components/analytics/recommendation-card.js"></script>
   
-  <!-- New Visual Components -->
+  <!-- New Visual Components (3x3 Grid) -->
   <script src="../shared/js/components/analytics/activity-heatmap.js"></script>
   <script src="../shared/js/components/analytics/progress-chart.js"></script>
   <script src="../shared/js/components/analytics/weekly-chart.js"></script>
   <script src="../shared/js/components/analytics/streak-display.js"></script>
+  <script src="../shared/js/components/analytics/accuracy-chart.js"></script>
+  <script src="../shared/js/components/analytics/time-distribution-chart.js"></script>
+  <script src="../shared/js/components/analytics/course-breakdown-chart.js"></script>
+  <script src="../shared/js/components/analytics/activity-types-chart.js"></script>
   
   <script>
     // Course data
@@ -1155,17 +1197,24 @@
           console.log('📊 No analytics data found, showing empty state');
         }
         
-        // Render all visualization components
-        await renderActivityHeatmap(user.uid);
-        await renderStreakDisplay(analytics);
-        await renderWeeklyChart(analytics);
-        await renderMetricCards(analytics, user.uid);
-        await renderProgressChart(user.uid);
-        await renderSkillRadar(analytics);
+        // Render 3x3 grid components
+        await Promise.all([
+          renderActivityHeatmap(user.uid),
+          renderWeeklyChart(analytics),
+          renderStreakDisplay(analytics),
+          renderProgressChart(user.uid),
+          renderAccuracyChart(user.uid),
+          renderTimeDistributionChart(user.uid),
+          renderSkillRadar(analytics),
+          renderCourseBreakdownChart(user.uid),
+          renderActivityTypesChart(user.uid),
+        ]);
+        
+        // Full-width components
         await renderProgressTimeline(user.uid);
         await renderRecommendations(user.uid, analytics);
         
-        console.log('📊 Component analytics rendered successfully');
+        console.log('📊 3x3 Grid analytics rendered successfully');
         
       } catch (error) {
         console.error('📊 Error loading component analytics:', error);
@@ -1564,16 +1613,12 @@
       const container = document.getElementById('progress-chart-container');
       if (!container || !window.ProgressChart) return;
       
-      // Build progress data over time
       const progressData = [];
       
       try {
         const courses = await window.DataService.getEnrolledCourses();
-        const progressByDate = new Map();
-        let cumulativeCompleted = 0;
-        
-        // Collect all completion dates
         const completions = [];
+        
         courses.forEach(course => {
           if (course.lessons) {
             Object.entries(course.lessons).forEach(([lessonId, lesson]) => {
@@ -1584,49 +1629,203 @@
                   : ts.seconds 
                     ? new Date(ts.seconds * 1000)
                     : new Date(ts);
-                completions.push({ date, lessonId });
+                if (!isNaN(date.getTime())) {
+                  completions.push({ date, lessonId });
+                }
               }
             });
           }
         });
         
-        // Sort by date and build cumulative progress
         completions.sort((a, b) => a.date - b.date);
-        const totalLessons = completions.length + 5; // Estimate total
+        const totalLessons = completions.length + 5;
         
         completions.forEach((c, i) => {
-          const dateStr = c.date.toISOString().split('T')[0];
-          const progress = ((i + 1) / totalLessons) * 100;
           progressData.push({
-            date: dateStr,
-            value: Math.min(progress, 100),
+            date: c.date.toISOString().split('T')[0],
+            value: Math.min(((i + 1) / totalLessons) * 100, 100),
             label: c.lessonId
           });
         });
-        
       } catch (e) {
         console.log('📊 Could not load progress data');
       }
       
-      if (progressData.length === 0) {
-        container.innerHTML = `
-          <div style="display: flex; align-items: center; justify-content: center; height: 200px; color: var(--text-muted);">
-            <div style="text-align: center;">
-              <div style="font-size: 2rem; opacity: 0.5;">📈</div>
-              <div>Complete lessons to see your progress over time</div>
-            </div>
-          </div>
-        `;
-        return;
-      }
-      
       const progressChart = new ProgressChart(container, {
         data: progressData,
-        height: 200,
+        height: 130,
         animate: true,
-        formatValue: (v) => `${Math.round(v)}% complete`
+        formatValue: (v) => `${Math.round(v)}%`
       });
       progressChart.render();
+    }
+    
+    async function renderAccuracyChart(userId) {
+      const container = document.getElementById('accuracy-chart-container');
+      if (!container || !window.AccuracyChart) return;
+      
+      const accuracyData = [];
+      
+      try {
+        // Get quiz attempts and group by date
+        const courses = await window.DataService.getEnrolledCourses();
+        const attemptsByDate = new Map();
+        
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.values(course.lessons).forEach(lesson => {
+              if (lesson.completedAt) {
+                const ts = lesson.completedAt;
+                const date = ts._seconds 
+                  ? new Date(ts._seconds * 1000) 
+                  : ts.seconds 
+                    ? new Date(ts.seconds * 1000)
+                    : new Date(ts);
+                if (!isNaN(date.getTime())) {
+                  const dateStr = date.toISOString().split('T')[0];
+                  const current = attemptsByDate.get(dateStr) || { correct: 0, total: 0 };
+                  current.total++;
+                  if (lesson.progressPercent >= 80) current.correct++;
+                  attemptsByDate.set(dateStr, current);
+                }
+              }
+            });
+          }
+        });
+        
+        attemptsByDate.forEach((stats, date) => {
+          if (stats.total > 0) {
+            accuracyData.push({
+              date,
+              accuracy: Math.round((stats.correct / stats.total) * 100)
+            });
+          }
+        });
+        
+        accuracyData.sort((a, b) => new Date(a.date) - new Date(b.date));
+      } catch (e) {
+        console.log('📊 Could not load accuracy data');
+      }
+      
+      const chart = new AccuracyChart(container, {
+        data: accuracyData,
+        height: 130
+      });
+      chart.render();
+    }
+    
+    async function renderTimeDistributionChart(userId) {
+      const container = document.getElementById('time-distribution-container');
+      if (!container || !window.TimeDistributionChart) return;
+      
+      const timeData = { 'Stories': 0, 'Quizzes': 0, 'Practice': 0 };
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.values(course.lessons).forEach(lesson => {
+              // Estimate time based on progress
+              const baseTime = 15; // 15 min per lesson estimate
+              const pct = (lesson.progressPercent || 0) / 100;
+              const storyTime = baseTime * pct * 0.6;
+              const quizTime = baseTime * pct * 0.3;
+              const practiceTime = baseTime * pct * 0.1;
+              
+              timeData['Stories'] += storyTime;
+              timeData['Quizzes'] += quizTime;
+              timeData['Practice'] += practiceTime;
+            });
+          }
+        });
+      } catch (e) {
+        console.log('📊 Could not load time data');
+      }
+      
+      const chart = new TimeDistributionChart(container, {
+        data: timeData,
+        height: 130
+      });
+      chart.render();
+    }
+    
+    async function renderCourseBreakdownChart(userId) {
+      const container = document.getElementById('course-breakdown-container');
+      if (!container || !window.CourseBreakdownChart) return;
+      
+      const courseData = [];
+      const chaptersPerCourse = {
+        'apprentice': 7,
+        'junior': 7,
+        'senior': 7,
+        'undergrad': 7,
+        'endless-opportunities': 5
+      };
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        
+        courses.forEach(course => {
+          const total = chaptersPerCourse[course.courseId] || 7;
+          let completed = 0;
+          
+          if (course.lessons) {
+            completed = Object.values(course.lessons).filter(l => l.completed).length;
+          }
+          
+          courseData.push({
+            course: course.courseId,
+            completed,
+            total
+          });
+        });
+      } catch (e) {
+        console.log('📊 Could not load course data');
+      }
+      
+      const chart = new CourseBreakdownChart(container, {
+        data: courseData,
+        height: 130
+      });
+      chart.render();
+    }
+    
+    async function renderActivityTypesChart(userId) {
+      const container = document.getElementById('activity-types-container');
+      if (!container || !window.ActivityTypesChart) return;
+      
+      const activityData = {};
+      
+      try {
+        const courses = await window.DataService.getEnrolledCourses();
+        
+        courses.forEach(course => {
+          if (course.lessons) {
+            Object.values(course.lessons).forEach(lesson => {
+              if (lesson.viewedSections) {
+                activityData['Story'] = (activityData['Story'] || 0) + lesson.viewedSections;
+              }
+              if (lesson.completed) {
+                activityData['Quiz'] = (activityData['Quiz'] || 0) + 1;
+              }
+            });
+          }
+        });
+        
+        // Add some default categories if we have any data
+        if (Object.keys(activityData).length > 0) {
+          activityData['Review'] = Math.round((activityData['Story'] || 0) * 0.2);
+        }
+      } catch (e) {
+        console.log('📊 Could not load activity types');
+      }
+      
+      const chart = new ActivityTypesChart(container, {
+        data: activityData,
+        height: 130
+      });
+      chart.render();
     }
     
     function renderErrorState(error) {
