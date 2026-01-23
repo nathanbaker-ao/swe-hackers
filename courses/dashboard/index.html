@@ -395,14 +395,14 @@
           </div>
           
           <!-- Insights Grid -->
-          <div class="analytics-insights-grid">
+          <div class="analytics-insights-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start;">
             <!-- Skill Radar -->
-            <div id="skill-radar-container">
+            <div id="skill-radar-container" style="min-height: 350px;">
               <!-- SkillRadar rendered here by JS -->
             </div>
             
             <!-- Progress Timeline -->
-            <div id="progress-timeline-container">
+            <div id="progress-timeline-container" style="max-height: 350px; overflow-y: auto; padding-right: 0.5rem;">
               <!-- ProgressTimeline rendered here by JS -->
             </div>
           </div>
@@ -1302,9 +1302,16 @@
       const container = document.getElementById('recommendations-container');
       if (!container) return;
       
+      console.log('📊 Recommendations: analytics received', analytics);
+      
+      // Don't overwrite if called with undefined (second call from elsewhere)
+      if (!analytics) {
+        console.log('📊 Recommendations: No analytics, skipping render');
+        return;
+      }
+      
       container.innerHTML = '';
       
-      console.log('📊 Recommendations: analytics received', analytics);
       console.log('📊 Recommendations: growthAreas', analytics?.growthAreas);
       console.log('📊 Recommendations: engagementPatterns', analytics?.engagementPatterns);
       

@@ -19,7 +19,7 @@
  * @module services/analytics-service
  */
 
-const AnalyticsService = {
+const AnalyticsServiceV2Internal = {
   
   // ═══════════════════════════════════════════════════════════════════════════
   // CONFIGURATION
@@ -709,7 +709,7 @@ const AnalyticsService = {
 };
 
 // Export for global access
-window.AnalyticsServiceV2 = AnalyticsService;
+window.AnalyticsServiceV2 = AnalyticsServiceV2Internal;
 
 // ═══════════════════════════════════════════════════════════════════════════
 // MANUAL TESTING
