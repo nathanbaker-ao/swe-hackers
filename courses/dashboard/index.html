@@ -250,127 +250,151 @@
         <!-- Component-Based Analytics Section - 3x3 Grid -->
         <section class="analytics-section" id="component-analytics-section" style="display: none;">
           
-          <!-- 3x3 Analytics Grid -->
-          <div class="analytics-grid" style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-          ">
+          <!-- Glassmorphism Styles -->
+          <style>
+            .glass-card {
+              background: rgba(255, 255, 255, 0.03);
+              backdrop-filter: blur(20px);
+              -webkit-backdrop-filter: blur(20px);
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              padding: 1.25rem;
+              position: relative;
+              overflow: hidden;
+              transition: all 0.3s ease;
+            }
             
-            <!-- Row 1 -->
+            .glass-card::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              height: 1px;
+              background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent
+              );
+            }
+            
+            .glass-card:hover {
+              background: rgba(255, 255, 255, 0.05);
+              border-color: rgba(255, 255, 255, 0.12);
+              transform: translateY(-2px);
+              box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                0 0 60px rgba(99, 102, 241, 0.1);
+            }
+            
+            .glass-card--overflow {
+              overflow: visible;
+            }
+            
+            .glass-card__title {
+              font-size: 0.75rem;
+              font-weight: 500;
+              color: rgba(255, 255, 255, 0.5);
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              margin-bottom: 1rem;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+            
+            .glass-card__title span {
+              font-size: 1rem;
+            }
+            
+            .analytics-grid-glass {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 1.25rem;
+              margin-bottom: 1.25rem;
+            }
+            
+            @media (max-width: 1024px) {
+              .analytics-grid-glass {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+            
+            @media (max-width: 640px) {
+              .analytics-grid-glass {
+                grid-template-columns: 1fr;
+              }
+            }
+          </style>
+          
+          <!-- 3x3 Analytics Grid -->
+          <div class="analytics-grid-glass">
             
             <!-- 1. Activity Heatmap -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>📅</span> Activity
-              </h4>
-              <div id="activity-heatmap-container" style="height: 140px; overflow: hidden;">
-                <!-- ActivityHeatmap rendered here -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>📅</span> Activity</h4>
+              <div id="activity-heatmap-container" style="height: 140px; overflow: hidden;"></div>
             </div>
             
             <!-- 2. Weekly Pattern -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>📊</span> Weekly Pattern
-              </h4>
-              <div id="weekly-chart-container" style="height: 140px;">
-                <!-- WeeklyChart rendered here -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>📊</span> Weekly Pattern</h4>
+              <div id="weekly-chart-container" style="height: 140px;"></div>
             </div>
             
             <!-- 3. Streak -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <div id="streak-display-container" style="height: 160px;">
-                <!-- StreakDisplay rendered here -->
-              </div>
+            <div class="glass-card">
+              <div id="streak-display-container" style="height: 160px;"></div>
             </div>
             
-            <!-- Row 2 -->
-            
             <!-- 4. Progress Over Time -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>📈</span> Progress
-              </h4>
-              <div id="progress-chart-container" style="height: 140px;">
-                <!-- ProgressChart rendered here -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>📈</span> Progress</h4>
+              <div id="progress-chart-container" style="height: 140px;"></div>
             </div>
             
             <!-- 5. Accuracy Trend -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>🎯</span> Accuracy
-              </h4>
-              <div id="accuracy-chart-container" style="height: 140px;">
-                <!-- Accuracy trend chart -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>🎯</span> Accuracy</h4>
+              <div id="accuracy-chart-container" style="height: 140px;"></div>
             </div>
             
             <!-- 6. Time Spent -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>⏱️</span> Time Spent
-              </h4>
-              <div id="time-distribution-container" style="height: 140px;">
-                <!-- Time distribution chart -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>⏱️</span> Time Spent</h4>
+              <div id="time-distribution-container" style="height: 140px;"></div>
             </div>
             
-            <!-- Row 3 -->
-            
             <!-- 7. Skill Radar -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem; overflow: visible;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>🧠</span> Skills
-              </h4>
-              <div id="skill-radar-container" style="height: 160px; overflow: visible;">
-                <!-- SkillRadar rendered here -->
-              </div>
+            <div class="glass-card glass-card--overflow">
+              <h4 class="glass-card__title"><span>🧠</span> Skills</h4>
+              <div id="skill-radar-container" style="height: 160px; overflow: visible;"></div>
             </div>
             
             <!-- 8. Course Breakdown -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>📚</span> Courses
-              </h4>
-              <div id="course-breakdown-container" style="height: 140px;">
-                <!-- Course breakdown chart -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>📚</span> Courses</h4>
+              <div id="course-breakdown-container" style="height: 140px;"></div>
             </div>
             
             <!-- 9. Activity Types -->
-            <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-              <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                <span>🎮</span> Activity Types
-              </h4>
-              <div id="activity-types-container" style="height: 140px;">
-                <!-- Activity types pie chart -->
-              </div>
+            <div class="glass-card">
+              <h4 class="glass-card__title"><span>🎮</span> Activity Types</h4>
+              <div id="activity-types-container" style="height: 140px;"></div>
             </div>
             
           </div>
           
-          <!-- Journey Timeline (full width below grid) -->
-          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span>🗺️</span> Learning Journey
-            </h4>
-            <div id="progress-timeline-container" style="height: 200px;">
-              <!-- TimelineGraph rendered here -->
-            </div>
+          <!-- Journey Timeline (full width) -->
+          <div class="glass-card" style="margin-bottom: 1.25rem;">
+            <h4 class="glass-card__title"><span>🗺️</span> Learning Journey</h4>
+            <div id="progress-timeline-container" style="height: 200px;"></div>
           </div>
           
           <!-- Recommendations (full width) -->
-          <div class="analytics-card" style="background: var(--surface-elevated); border-radius: 12px; padding: 1rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span>💡</span> Recommended Next Steps
-            </h4>
-            <div id="recommendations-container">
-              <!-- RecommendationCards rendered here -->
-            </div>
+          <div class="glass-card">
+            <h4 class="glass-card__title"><span>💡</span> Recommended Next Steps</h4>
+            <div id="recommendations-container"></div>
           </div>
           
           <!-- Hidden containers for backward compatibility -->
