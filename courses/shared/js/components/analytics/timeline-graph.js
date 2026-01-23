@@ -23,7 +23,7 @@ class TimelineGraph {
     
     this.options = {
       milestones: [],
-      height: 300,
+      height: 'auto', // Will match container or sibling
       nodeRadius: 12,
       lineColor: 'var(--accent-primary, #6366f1)',
       nodeColor: 'var(--accent-primary, #6366f1)',
@@ -116,9 +116,19 @@ class TimelineGraph {
   _createTimeline() {
     const wrapper = document.createElement('div');
     wrapper.className = 'timeline-graph-wrapper';
+    
+    // Calculate height - match sibling (skill radar) or use container height
+    let height = 400; // Default
+    const sibling = this.container.previousElementSibling || this.container.parentElement?.querySelector('#skill-radar-container');
+    if (sibling && sibling.offsetHeight > 100) {
+      height = sibling.offsetHeight;
+    } else if (this.container.parentElement?.offsetHeight > 100) {
+      height = this.container.parentElement.offsetHeight;
+    }
+    
     wrapper.style.cssText = `
       position: relative;
-      height: ${this.options.height}px;
+      height: ${height}px;
       background: ${this.options.backgroundColor};
       border-radius: 12px;
       overflow: hidden;
@@ -127,7 +137,6 @@ class TimelineGraph {
     
     // Create SVG
     const width = this.container.offsetWidth || 600;
-    const height = this.options.height;
     
     this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     this.svg.setAttribute('width', '100%');
@@ -313,26 +322,26 @@ class TimelineGraph {
     panel.className = 'timeline-detail-panel';
     panel.style.cssText = `
       position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 200px;
-      padding: 12px;
-      background: rgba(0,0,0,0.6);
+      width: 180px;
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(10px);
       border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.1);
       color: ${this.options.textColor};
-      font-size: 13px;
+      font-size: 12px;
       opacity: 0;
-      transform: translateX(10px);
+      transform: translateY(10px);
       transition: opacity 0.2s, transform 0.2s;
       pointer-events: none;
-      z-index: 10;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     `;
     
     return panel;
   }
   
-  _showDetailPanel(milestone) {
+  _showDetailPanel(milestone, nodeX, nodeY) {
     const courseColors = {
       'apprentice': '#6366f1',
       'endless-opportunities': '#22c55e',
@@ -344,21 +353,48 @@ class TimelineGraph {
     const courseColor = courseColors[milestone.course] || this.options.nodeColor;
     
     this.detailPanel.innerHTML = `
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-        <div style="width: 10px; height: 10px; border-radius: 50%; background: ${courseColor};"></div>
-        <span style="font-weight: 600; font-size: 14px;">${milestone.title}</span>
+      <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: ${courseColor};"></div>
+        <span style="font-weight: 600;">${milestone.title}</span>
       </div>
-      <div style="color: ${this.options.mutedColor}; font-size: 12px;">
-        <div style="margin-bottom: 4px;">📅 ${milestone.displayDate} at ${milestone.displayTime}</div>
+      <div style="color: ${this.options.mutedColor}; font-size: 11px;">
+        <div>📅 ${milestone.displayDate} at ${milestone.displayTime}</div>
         <div>📚 ${this._formatCourse(milestone.course)}</div>
-      </div>
-      <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; color: ${this.options.mutedColor};">
-        Click elsewhere to close
       </div>
     `;
     
+    // Position panel near the node
+    const wrapperRect = this.wrapper.getBoundingClientRect();
+    const svgRect = this.svg.getBoundingClientRect();
+    
+    // Calculate node position in screen coordinates (accounting for zoom/pan)
+    const { width, height } = this.dimensions;
+    const centerX = width / 2;
+    const centerY = height / 2;
+    
+    // Transform node coordinates
+    const transformedX = (nodeX - centerX) * this.zoom + centerX + this.panX;
+    const transformedY = (nodeY - centerY) * this.zoom + centerY;
+    
+    // Position panel above and to the right of the node
+    let panelX = transformedX + 20;
+    let panelY = transformedY - 60;
+    
+    // Keep panel within bounds
+    const panelWidth = 180;
+    const panelHeight = 80;
+    
+    if (panelX + panelWidth > wrapperRect.width - 10) {
+      panelX = transformedX - panelWidth - 20; // Show on left instead
+    }
+    if (panelY < 10) {
+      panelY = transformedY + 30; // Show below instead
+    }
+    
+    this.detailPanel.style.left = panelX + 'px';
+    this.detailPanel.style.top = panelY + 'px';
     this.detailPanel.style.opacity = '1';
-    this.detailPanel.style.transform = 'translateX(0)';
+    this.detailPanel.style.transform = 'translateY(0)';
     this.detailPanel.style.pointerEvents = 'auto';
   }
   
@@ -453,7 +489,7 @@ class TimelineGraph {
     if (node) {
       this.selectedNode = node;
       this._highlightNode(node, true, true);
-      this._showDetailPanel(node._milestone);
+      this._showDetailPanel(node._milestone, node._x, node._y);
     }
   }
   
@@ -497,6 +533,11 @@ class TimelineGraph {
     this.mainGroup.setAttribute('transform', 
       `translate(${centerX + this.panX}, ${centerY}) scale(${this.zoom}) translate(${-centerX}, ${-centerY})`
     );
+    
+    // Update detail panel position if a node is selected
+    if (this.selectedNode) {
+      this._showDetailPanel(this.selectedNode._milestone, this.selectedNode._x, this.selectedNode._y);
+    }
   }
   
   _resetView() {
