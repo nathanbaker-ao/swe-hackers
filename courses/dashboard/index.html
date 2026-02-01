@@ -47,6 +47,75 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/css/dashboard.css">
   <link rel="stylesheet" href="../shared/css/analytics.css">
+
+  <!-- Coming Soon Styles -->
+  <style>
+    .coming-soon-badge {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: linear-gradient(135deg, rgba(121, 134, 203, 0.3), rgba(159, 122, 234, 0.3));
+      color: #b8bfff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .coming-soon-link {
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+    .coming-soon-link:hover {
+      opacity: 1;
+    }
+
+    .coming-soon-toast {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(15, 15, 25, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(121, 134, 203, 0.3);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      color: #e8e8f0;
+      font-family: var(--font-body, 'Inter', sans-serif);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(121, 134, 203, 0.1);
+      transform: translateX(120%);
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      max-width: 320px;
+    }
+    .coming-soon-toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    .coming-soon-toast__icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .coming-soon-toast__content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+    .coming-soon-toast__title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #b8bfff;
+    }
+    .coming-soon-toast__message {
+      font-size: 0.8rem;
+      color: rgba(232, 232, 240, 0.7);
+    }
+  </style>
   
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -116,15 +185,17 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="achievements.html" class="nav-link">
+              <a href="#" class="nav-link coming-soon-link" data-feature="Achievements">
                 <span class="nav-icon">🏆</span>
                 <span class="nav-text">Achievements</span>
+                <span class="coming-soon-badge">Soon</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="notes.html" class="nav-link">
+              <a href="#" class="nav-link coming-soon-link" data-feature="Notes">
                 <span class="nav-icon">📝</span>
                 <span class="nav-text">Notes</span>
+                <span class="coming-soon-badge">Soon</span>
               </a>
             </li>
           </ul>
@@ -140,9 +211,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="leaderboard.html" class="nav-link">
+              <a href="#" class="nav-link coming-soon-link" data-feature="Leaderboard">
                 <span class="nav-icon">🏅</span>
                 <span class="nav-text">Leaderboard</span>
+                <span class="coming-soon-badge">Soon</span>
               </a>
             </li>
           </ul>
@@ -158,9 +230,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="settings.html" class="nav-link">
+              <a href="#" class="nav-link coming-soon-link" data-feature="Settings">
                 <span class="nav-icon">⚙️</span>
                 <span class="nav-text">Settings</span>
+                <span class="coming-soon-badge">Soon</span>
               </a>
             </li>
             <li class="nav-item">
@@ -1674,6 +1747,52 @@
       chart.render();
     }
     
+    // ═══════════════════════════════════════════════════════════════════════════
+    // COMING SOON TOAST
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    (function setupComingSoon() {
+      // Create toast element
+      const toast = document.createElement('div');
+      toast.className = 'coming-soon-toast';
+      toast.innerHTML = `
+        <span class="coming-soon-toast__icon">🚧</span>
+        <div class="coming-soon-toast__content">
+          <span class="coming-soon-toast__title">Coming Soon!</span>
+          <span class="coming-soon-toast__message"></span>
+        </div>
+      `;
+      document.body.appendChild(toast);
+
+      let toastTimeout = null;
+
+      function showComingSoonToast(featureName) {
+        const message = toast.querySelector('.coming-soon-toast__message');
+        message.textContent = `${featureName} is under development. Stay tuned!`;
+
+        // Reset animation
+        clearTimeout(toastTimeout);
+        toast.classList.remove('show');
+
+        // Trigger reflow then show
+        requestAnimationFrame(() => {
+          toast.classList.add('show');
+          toastTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+          }, 3000);
+        });
+      }
+
+      // Attach click handlers to all coming-soon links
+      document.querySelectorAll('.coming-soon-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const feature = link.getAttribute('data-feature') || 'This feature';
+          showComingSoonToast(feature);
+        });
+      });
+    })();
+
     function renderErrorState(error) {
       const section = document.getElementById('component-analytics-section');
       if (!section) return;
