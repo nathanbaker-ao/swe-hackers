@@ -982,13 +982,19 @@
           const userData = userDoc.data();
           let stats = { totalPoints: 0, currentStreak: 0, achievementsUnlocked: 0 };
 
-          // Fetch achievements and stats in parallel
-          const [achievementsDoc, statsDoc] = await Promise.all([
+          // First, check main user document for streak (where DataService.updateStreak writes)
+          stats.currentStreak = userData.currentStreak || 0;
+
+          // Fetch achievements, stats, and course progress in parallel
+          const [achievementsDoc, statsDoc, courseProgressSnapshot] = await Promise.all([
             db.collection('users').doc(userDoc.id)
               .collection('gamification').doc('achievements').get()
               .catch(() => null),
             db.collection('users').doc(userDoc.id)
               .collection('stats').doc('current').get()
+              .catch(() => null),
+            db.collection('users').doc(userDoc.id)
+              .collection('courseProgress').get()
               .catch(() => null)
           ]);
 
@@ -998,8 +1004,23 @@
             stats.achievementsUnlocked = Object.keys(data.unlocked || {}).length;
           }
 
+          // Also check stats subcollection for streak (fallback/alternate location)
           if (statsDoc && statsDoc.exists) {
-            stats.currentStreak = statsDoc.data().currentStreak || 0;
+            const statsData = statsDoc.data();
+            // Use whichever streak is higher (main doc or stats subcollection)
+            stats.currentStreak = Math.max(stats.currentStreak, statsData.currentStreak || 0);
+          }
+
+          // Calculate estimated points from course progress if no gamification points yet
+          // This ensures users who haven't visited achievements page still appear
+          if (stats.totalPoints === 0 && courseProgressSnapshot && !courseProgressSnapshot.empty) {
+            let completedLessons = 0;
+            courseProgressSnapshot.docs.forEach(doc => {
+              const course = doc.data();
+              completedLessons += course.completedLessons || 0;
+            });
+            // Award 25 points per completed lesson as baseline
+            stats.totalPoints = completedLessons * 25;
           }
 
           return {
