@@ -854,6 +854,47 @@
         </div>
       </header>
 
+      <div class="notification-panel" id="notification-panel" aria-hidden="true">
+        <div class="notification-panel-header">
+          <div>
+            <div class="notification-panel-title">Notifications</div>
+            <div class="notification-panel-subtitle">Your latest updates</div>
+          </div>
+          <button class="notification-panel-action" id="notification-mark-all">Mark all read</button>
+        </div>
+        <div class="notification-tabs">
+          <button class="notification-tab active" data-notification-filter="all">All</button>
+          <button class="notification-tab" data-notification-filter="unread">Unread</button>
+        </div>
+        <div class="notification-list" id="notification-list"></div>
+        <div class="notification-preferences">
+          <div class="notification-pref">
+            <span>In-app</span>
+            <input type="checkbox" checked disabled>
+          </div>
+          <div class="notification-pref">
+            <span>Remove when read</span>
+            <input type="checkbox" id="pref-remove-read">
+          </div>
+          <div class="notification-pref">
+            <span>Email digest</span>
+            <input type="checkbox" id="pref-email">
+          </div>
+          <div class="notification-pref">
+            <span>Push (optional)</span>
+            <input type="checkbox" id="pref-push">
+          </div>
+          <div class="notification-pref">
+            <span>Frequency</span>
+            <select id="pref-frequency">
+              <option value="instant">Instant</option>
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <!-- Content Area -->
       <div class="content-area">
 

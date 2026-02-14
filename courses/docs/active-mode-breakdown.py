@@ -407,8 +407,16 @@ def build_pdf():
     pdf.section_title("7. Dashboard Page Integration")
 
     pdf.sub_title("Script Tag Addition")
-    pdf.body_text("All 11 dashboard pages received a new script tag for active-mode-service.js, placed after rbac.js (or after data-service.js on pages where rbac.js is not explicitly loaded):")
-    pdf.code_block('<script src="../shared/js/active-mode-service.js"></script>')
+    pdf.body_text(
+        "All 11 dashboard pages received a new script tag for active-mode-service.js, placed "
+        "after rbac.js. Six pages (courses, challenges, progress, achievements, leaderboard, "
+        "notes) were also missing rbac.js entirely, so it was added as a prerequisite. "
+        "ActiveModeService depends on RBACService.hasRole('admin') to detect admin users."
+    )
+    pdf.code_block(
+        '<script src="../shared/js/rbac.js"></script>           <!-- added to 6 pages -->\n'
+        '<script src="../shared/js/active-mode-service.js"></script>  <!-- added to all 11 -->'
+    )
 
     pdf.sub_title("RBAC Block Replacement")
     pdf.body_text("The existing RBAC admin-check block on 9 simple pages was replaced:")
@@ -509,6 +517,7 @@ def build_pdf():
     pdf.set_text_color(*ACCENT)
     pdf.cell(0, 7, "  courses/dashboard/{9 simple pages}  [MODIFIED]", new_x="LMARGIN", new_y="NEXT")
     pdf.bullet("Script tag: active-mode-service.js added", indent=10)
+    pdf.bullet("Script tag: rbac.js added (was missing on 6 of these pages)", indent=10)
     pdf.bullet("RBAC admin-check block replaced with ActiveModeService.init()", indent=10)
     pdf.bullet("Pages: " + ", ".join(simple_pages), indent=10)
 
