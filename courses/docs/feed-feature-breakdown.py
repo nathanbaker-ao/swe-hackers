@@ -152,7 +152,7 @@ def build_pdf():
     pdf.ln(2)
     pdf.set_font("Helvetica", "I", 9)
     pdf.set_text_color(*TEXT_MUTED)
-    pdf.cell(0, 8, "Version 1.0  |  Status: In Development", align="C", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 8, "Version 2.0  |  Status: Pushed to Main", align="C", new_x="LMARGIN", new_y="NEXT")
 
     pdf.ln(30)
 
@@ -186,11 +186,14 @@ def build_pdf():
         "3.  Feature Overview & Status",
         "4.  Post Card 3-Dot Menu - Architecture",
         "5.  Feed & Post Settings - Architecture",
-        "6.  File Change Map",
-        "7.  Data Model & Firestore Schema",
-        "8.  UI/UX Design Decisions",
-        "9.  Security Considerations",
-        "10. Rollout Checklist",
+        "6.  Profile Picture Upload - Architecture",
+        "7.  Profile Page Updates",
+        "8.  Navbar Consistency Fixes",
+        "9.  File Change Map",
+        "10. Data Model & Firestore Schema",
+        "11. UI/UX Design Decisions",
+        "12. Security Considerations",
+        "13. Rollout Checklist",
     ]
     for item in toc:
         pdf.set_font("Helvetica", "", 11)
@@ -308,6 +311,29 @@ def build_pdf():
     pdf.status_badge("Load settings from Firestore", "complete")
     pdf.status_badge("Auto-save with debounce to Firestore", "complete")
     pdf.status_badge("Feed page reads settings on load", "planned")
+
+    pdf.ln(4)
+    pdf.sub_title("Profile Picture Upload (Settings Page)")
+    pdf.status_badge("Avatar preview with instant local display", "complete")
+    pdf.status_badge("Firebase Storage upload with progress bar", "complete")
+    pdf.status_badge("Parallel Auth + Firestore photoURL update", "complete")
+    pdf.status_badge("Remove avatar functionality", "complete")
+
+    pdf.ln(4)
+    pdf.sub_title("Profile Page Updates")
+    pdf.status_badge("Edit Profile links to Settings page", "complete")
+    pdf.status_badge("Bio/status always visible with auto-save", "complete")
+
+    pdf.ln(4)
+    pdf.sub_title("Feed Page Mobile Sidebar")
+    pdf.status_badge("Mobile sidebar toggle matches dashboard standard", "complete")
+    pdf.status_badge("localStorage sidebar collapse persistence", "complete")
+
+    pdf.ln(4)
+    pdf.sub_title("Navbar Consistency")
+    pdf.status_badge("Notes link added to challenges.html sidebar", "complete")
+    pdf.status_badge("Feed + Settings links on all dashboard pages", "complete")
+    pdf.status_badge("Navbar audit PDF published", "complete")
 
     # ============================================================
     # 4. POST CARD 3-DOT MENU - ARCHITECTURE
@@ -458,34 +484,154 @@ def build_pdf():
     )
 
     # ============================================================
-    # 6. FILE CHANGE MAP
+    # 6. PROFILE PICTURE UPLOAD - ARCHITECTURE
     # ============================================================
     pdf.add_page()
     pdf.dark_bg()
-    pdf.section_title("6. File Change Map")
+    pdf.section_title("6. Profile Picture Upload - Architecture")
+
+    pdf.sub_title("Optimistic UI Preview")
+    pdf.body_text(
+        "When a user selects an image file, the avatar preview updates instantly using "
+        "URL.createObjectURL(file) before the upload even begins. This eliminates the perception "
+        "of a slow upload - the user sees their new photo immediately while the actual Firebase "
+        "Storage upload happens in the background with a progress bar."
+    )
+
+    pdf.sub_title("Upload Flow")
+    pdf.body_text(
+        "1. User clicks Upload Photo, file picker opens (accepts JPG, PNG, WebP, max 2MB).\n"
+        "2. Local preview rendered instantly via URL.createObjectURL().\n"
+        "3. File uploaded to Firebase Storage at avatars/{uid}/profile.{ext}.\n"
+        "4. Progress bar shows real-time upload percentage.\n"
+        "5. On completion, download URL retrieved from Storage.\n"
+        "6. Firebase Auth profile and Firestore user doc updated in parallel via Promise.all().\n"
+        "7. All sidebar avatars across pages reflect the new photo on next load."
+    )
+
+    pdf.sub_title("Storage Path")
+    pdf.code_block(
+        "Firebase Storage: avatars/{uid}/profile.{ext}\n"
+        "Firebase Auth:    user.updateProfile({ photoURL: downloadURL })\n"
+        "Firestore:        users/{uid} -> { photoURL: downloadURL }"
+    )
+
+    # ============================================================
+    # 7. PROFILE PAGE UPDATES
+    # ============================================================
+    pdf.add_page()
+    pdf.dark_bg()
+    pdf.section_title("7. Profile Page Updates")
+
+    pdf.sub_title("Edit Profile -> Settings Shortcut")
+    pdf.body_text(
+        "The Edit Profile button in the profile header was changed from a toggle button "
+        "(that opened a bio textarea) to a direct link to settings.html. This provides "
+        "a clean shortcut for users who want to update their profile picture, display name, "
+        "or other account settings without hunting for the Settings page."
+    )
+
+    pdf.sub_title("Always-Visible Bio/Status")
+    pdf.body_text(
+        "The bio textarea is now always visible on the profile page instead of being hidden "
+        "behind the Edit Profile toggle. Users can type their status/bio at any time and it "
+        "auto-saves to Firestore after 800ms of inactivity (debounced). This removes friction "
+        "and makes the profile feel more like a living document. The old <p> display element "
+        "was removed in favor of the single editable textarea."
+    )
+    pdf.code_block(
+        "// Auto-save with debounce\n"
+        "bioEdit.addEventListener('input', () => {\n"
+        "  clearTimeout(saveTimeout);\n"
+        "  saveTimeout = setTimeout(() => {\n"
+        "    this.saveBio(bioEdit.value.trim());\n"
+        "  }, 800);\n"
+        "});"
+    )
+
+    # ============================================================
+    # 8. NAVBAR CONSISTENCY FIXES
+    # ============================================================
+    pdf.add_page()
+    pdf.dark_bg()
+    pdf.section_title("8. Navbar Consistency Fixes")
+
+    pdf.sub_title("Challenges Page - Missing Notes Link")
+    pdf.body_text(
+        "The challenges.html page was missing the Notes nav item in the Learning section of "
+        "its sidebar. All other dashboard pages had Dashboard > Courses > Challenges under Main, "
+        "then Progress > Achievements > Notes under Learning. Challenges only had Progress and "
+        "Achievements. The Notes link was added to match the gold standard (index.html)."
+    )
+
+    pdf.sub_title("Feed Page Mobile Sidebar")
+    pdf.body_text(
+        "The feed page sidebar toggle was using a non-standard CSS class 'mobile-open' with "
+        "an 'active' overlay toggle, while all other dashboard pages use the 'open' class. "
+        "The dashboard.css stylesheet only has styles for .sidebar.open, so the feed sidebar "
+        "did not respond to the mobile toggle. Fixed by switching to the standard 'open' class "
+        "and adding localStorage persistence for the collapsed state."
+    )
+
+    pdf.sub_title("Navbar Audit PDF")
+    pdf.body_text(
+        "A comprehensive Navbar Consistency Audit PDF was generated and pushed to main, "
+        "documenting all sidebar inconsistencies across the 11 dashboard pages. The audit "
+        "covers a full matrix of which pages have which nav items, detailed issue descriptions "
+        "with severity ratings, and a recommended fix plan."
+    )
+
+    # ============================================================
+    # 9. FILE CHANGE MAP
+    # ============================================================
+    pdf.add_page()
+    pdf.dark_bg()
+    pdf.section_title("9. File Change Map")
     pdf.body_text(
         "The following files were modified to implement this feature set:"
     )
 
     files = [
-        ("courses/dashboard/feed.html", "MODIFIED", [
-            "Post card template: Added .post-card__menu-wrapper with conditional dropdown",
-            "bindPostInteractions(): Replaced per-element listeners with event delegation",
-            "Added handleMenuAction() dispatcher for edit/delete/copy-link/report/mute",
-            "Added openEditPost() with modal creation, textarea, optimistic save",
-            "Added confirmDeletePost() with confirm dialog, local removal, Firestore delete",
+        ("courses/dashboard/feed.html", "NEW", [
+            "Full feed page with post composer, reactions, comments, bookmarks",
+            "Post card template with .post-card__menu-wrapper and conditional dropdown",
+            "Event delegation for all post interactions via #feed-posts container",
+            "handleMenuAction() dispatcher for edit/delete/copy-link/report/mute",
+            "openEditPost() with modal creation, textarea, optimistic save",
+            "confirmDeletePost() with confirm dialog, local removal, Firestore delete",
+            "Mobile sidebar fix: changed from 'mobile-open' to standard 'open' class",
         ]),
-        ("courses/shared/css/feed.css", "MODIFIED", [
-            "Added .post-card__menu-wrapper, .post-card__dropdown (display:none/block)",
-            "Added .post-card__dropdown-item with hover states and --danger variant",
-            "Added .post-edit-overlay and .post-edit-modal styles",
-            "Added [data-theme='light'] variants for dropdown and edit modal",
+        ("courses/shared/css/feed.css", "NEW", [
+            "Complete feed page styling with dark theme glass-card design",
+            ".post-card__menu-wrapper, .post-card__dropdown (display:none/block)",
+            ".post-card__dropdown-item with hover states and --danger variant",
+            ".post-edit-overlay and .post-edit-modal styles",
+            "[data-theme='light'] variants for all feed components",
         ]),
         ("courses/dashboard/settings.html", "MODIFIED", [
-            "Added Feed & Posts section with 3 glass-cards",
-            "Added 9 controls: 6 toggles + 3 selects with descriptions",
+            "Added Feed & Posts section with 3 glass-cards (9 controls)",
             "Added loadFeedSettings() and setupFeedSettingsSave() to controller",
+            "Added Firebase Storage SDK for avatar uploads",
+            "Added profile picture upload with optimistic preview and progress bar",
+            "Added loadProfilePicture() and setupProfilePictureUpload() methods",
         ]),
+        ("courses/dashboard/profile.html", "MODIFIED", [
+            "Edit Profile button changed from toggle to link to settings.html",
+            "Bio textarea always visible with 800ms debounced auto-save",
+            "Removed old toggle-based edit mode and <p> bio display element",
+        ]),
+        ("courses/dashboard/challenges.html", "MODIFIED", [
+            "Added missing Notes link to Learning section in sidebar",
+        ]),
+    ]
+
+    new_services = [
+        ("courses/shared/js/feed-service.js", "Feed CRUD, queries, pagination"),
+        ("courses/shared/js/follow-service.js", "Follow/unfollow, follower counts"),
+        ("courses/shared/js/reaction-service.js", "Post reactions (like, celebrate, etc.)"),
+        ("courses/shared/js/comment-service.js", "Comment CRUD on posts"),
+        ("courses/shared/js/bookmark-service.js", "Bookmark/unbookmark posts"),
+        ("courses/shared/js/story-service.js", "Stories/ephemeral content"),
     ]
 
     sidebar_files = [
@@ -496,23 +642,38 @@ def build_pdf():
     for filepath, status, changes in files:
         pdf.set_font("Courier", "B", 9)
         pdf.set_text_color(*ACCENT)
-        pdf.cell(0, 7, f"  {filepath}", new_x="LMARGIN", new_y="NEXT")
+        pdf.cell(0, 7, f"  {filepath}  [{status}]", new_x="LMARGIN", new_y="NEXT")
         for change in changes:
             pdf.bullet(change, indent=10)
         pdf.ln(2)
 
+    # New service files
+    pdf.set_font("Helvetica", "B", 11)
+    pdf.set_text_color(*ACCENT)
+    pdf.cell(0, 8, "New Service Layer Files", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(1)
+    for filepath, desc in new_services:
+        pdf.set_font("Courier", "B", 9)
+        pdf.set_text_color(*ACCENT)
+        pdf.cell(0, 5, f"  {filepath}", new_x="LMARGIN", new_y="NEXT")
+        pdf.set_font("Helvetica", "", 9)
+        pdf.set_text_color(*TEXT_MUTED)
+        pdf.cell(0, 5, f"     {desc}", new_x="LMARGIN", new_y="NEXT")
+        pdf.ln(1)
+
+    pdf.ln(2)
     # Sidebar files grouped
     pdf.set_font("Courier", "B", 9)
     pdf.set_text_color(*ACCENT)
     pdf.cell(0, 7, "  courses/dashboard/{8 sidebar pages}", new_x="LMARGIN", new_y="NEXT")
-    pdf.bullet("Added Settings sidebar link to: " + ", ".join(sidebar_files), indent=10)
+    pdf.bullet("Added Feed + Settings sidebar links to: " + ", ".join(sidebar_files), indent=10)
 
     # ============================================================
-    # 7. DATA MODEL & FIRESTORE SCHEMA
+    # 10. DATA MODEL & FIRESTORE SCHEMA
     # ============================================================
     pdf.add_page()
     pdf.dark_bg()
-    pdf.section_title("7. Data Model & Firestore Schema")
+    pdf.section_title("10. Data Model & Firestore Schema")
 
     pdf.sub_title("User Settings (users/{uid})")
     pdf.body_text(
@@ -568,11 +729,11 @@ def build_pdf():
     )
 
     # ============================================================
-    # 8. UI/UX DESIGN DECISIONS
+    # 11. UI/UX DESIGN DECISIONS
     # ============================================================
     pdf.add_page()
     pdf.dark_bg()
-    pdf.section_title("8. UI/UX Design Decisions")
+    pdf.section_title("11. UI/UX Design Decisions")
 
     pdf.sub_title("Why display:none Over opacity:0")
     pdf.body_text(
@@ -611,11 +772,11 @@ def build_pdf():
     )
 
     # ============================================================
-    # 9. SECURITY CONSIDERATIONS
+    # 12. SECURITY CONSIDERATIONS
     # ============================================================
     pdf.add_page()
     pdf.dark_bg()
-    pdf.section_title("9. Security Considerations")
+    pdf.section_title("12. Security Considerations")
 
     pdf.sub_title("Client-Side Ownership Check")
     pdf.body_text(
@@ -651,11 +812,11 @@ def build_pdf():
     )
 
     # ============================================================
-    # 10. ROLLOUT CHECKLIST
+    # 13. ROLLOUT CHECKLIST
     # ============================================================
     pdf.add_page()
     pdf.dark_bg()
-    pdf.section_title("10. Rollout Checklist")
+    pdf.section_title("13. Rollout Checklist")
 
     pdf.body_text("Items to complete before this feature is considered production-ready:")
     pdf.ln(2)
@@ -673,7 +834,15 @@ def build_pdf():
         ("Feed Settings UI renders in Settings page", True),
         ("Feed Settings load from Firestore on page load", True),
         ("Feed Settings auto-save to Firestore on change", True),
-        ("Settings sidebar link added to all dashboard pages", True),
+        ("Settings/Feed sidebar links on all dashboard pages", True),
+        ("Profile picture upload with instant preview", True),
+        ("Profile picture saved to Firebase Storage + Auth + Firestore", True),
+        ("Edit Profile links to Settings page", True),
+        ("Bio/status always visible with auto-save", True),
+        ("Feed mobile sidebar matches dashboard standard", True),
+        ("Notes link added to challenges.html sidebar", True),
+        ("Navbar audit PDF published to main", True),
+        ("All feature code pushed to main", True),
         ("Feed page reads user settings on load", False),
         ("Firestore Security Rules enforce post ownership", False),
         ("Report/Mute persist to Firestore collections", False),
