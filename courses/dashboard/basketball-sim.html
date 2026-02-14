@@ -96,6 +96,54 @@
         </div>
 
         <div class="nav-section">
+          <span class="nav-section-title">Learning</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="progress.html" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-text">Achievements</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="notes.html" class="nav-link">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">Notes</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <span class="nav-section-title">Community</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="feed.html" class="nav-link">
+                <span class="nav-icon">📰</span>
+                <span class="nav-text">Feed</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
+                <span class="nav-icon">💬</span>
+                <span class="nav-text">Discord</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leaderboard.html" class="nav-link">
+                <span class="nav-icon">🏅</span>
+                <span class="nav-text">Leaderboard</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
           <span class="nav-section-title" style="color: #ef4444;">Basketball</span>
           <ul class="nav-list">
             <li class="nav-item">
@@ -335,6 +383,7 @@
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
   <script src="../shared/js/rbac.js"></script>
+  <script src="../shared/js/active-mode-service.js"></script>
   <script src="../shared/js/data-service.js"></script>
 
   <!-- Basketball Modules -->
@@ -377,9 +426,9 @@
         return;
       }
 
-      // Show admin section if admin
-      if (isAdmin) {
-        document.getElementById('admin-section').style.display = 'block';
+      // Admin/User mode toggle (handles admin-section visibility only; basketball stays visible on this page)
+      if (window.ActiveModeService) {
+        await window.ActiveModeService.init();
       }
 
       // Show dashboard

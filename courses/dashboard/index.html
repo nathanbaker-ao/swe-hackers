@@ -568,6 +568,7 @@
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
   <script src="../shared/js/rbac.js"></script>
+  <script src="../shared/js/active-mode-service.js"></script>
   <script src="../shared/js/data-service.js"></script>
   <script src="../shared/js/analytics-service.js"></script>
   <script src="../shared/js/notification-service.js"></script>
@@ -661,19 +662,28 @@
       const params = new URLSearchParams(window.location.search);
       const isTestEnabled = params.has('adminTest');
 
-      // Check if user is admin and show admin section
-      if (window.RBACService) {
-        const isAdmin = await window.RBACService.hasRole('admin');
-        if (isAdmin) {
-          document.getElementById('admin-section').style.display = 'block';
-          isAdminUser = true;
+      // Admin/User mode toggle (handles admin-section + basketball-section visibility)
+      if (window.ActiveModeService) {
+        await window.ActiveModeService.init();
+        isAdminUser = window.ActiveModeService.isAdminUser();
+
+        // Also show basketball section for non-admin org members
+        if (!window.ActiveModeService.isAdminMode() || !isAdminUser) {
+          const hasBasketball = window.RBACService && await window.RBACService.belongsToOrganization('city-high-basketball');
+          if (hasBasketball) {
+            document.getElementById('basketball-section').style.display = 'block';
+          }
         }
 
-        // Show basketball section for city-high-basketball org members or admins
-        const hasBasketball = isAdmin || await window.RBACService.belongsToOrganization('city-high-basketball');
-        if (hasBasketball) {
-          document.getElementById('basketball-section').style.display = 'block';
-        }
+        // Re-evaluate on mode change
+        window.ActiveModeService.onModeChange(async (mode) => {
+          const basketballEl = document.getElementById('basketball-section');
+          if (mode === 'user' && basketballEl) {
+            // In user mode, only show basketball for org members
+            const hasBasketball = window.RBACService && await window.RBACService.belongsToOrganization('city-high-basketball');
+            basketballEl.style.display = hasBasketball ? 'block' : 'none';
+          }
+        });
       }
       
       // Setup UI interactions immediately so sidebar/nav is responsive

@@ -194,6 +194,7 @@ def build_pdf():
         "11. UI/UX Design Decisions",
         "12. Security Considerations",
         "13. Rollout Checklist",
+        "14. Admin/User Mode Switch",
     ]
     for item in toc:
         pdf.set_font("Helvetica", "", 11)
@@ -862,6 +863,59 @@ def build_pdf():
         pdf.set_font("Helvetica", "", 10)
         pdf.set_text_color(*TEXT_SECONDARY)
         pdf.cell(0, 6, label, new_x="LMARGIN", new_y="NEXT")
+
+    # ============================================================
+    # 14. ADMIN/USER MODE SWITCH
+    # ============================================================
+    pdf.add_page()
+    pdf.dark_bg()
+    pdf.section_title("14. Admin/User Mode Switch")
+
+    pdf.body_text(
+        "A new feature was added to the platform allowing admin users to toggle between "
+        "'Admin' and 'User' view modes. When in User mode, admin-only sidebar sections "
+        "(Basketball and Admin) are hidden, giving admins a preview of the standard user "
+        "experience without logging out."
+    )
+
+    pdf.sub_title("Implementation")
+    pdf.bullet(
+        "New shared service: active-mode-service.js - A singleton service following the "
+        "existing const ServiceName = { ... } pattern used across the platform."
+    )
+    pdf.bullet(
+        "Toggle UI: A red-accented pill toggle dynamically injected into the sidebar "
+        "between </nav> and .sidebar-user. Only visible to admin users."
+    )
+    pdf.bullet(
+        "Persistence: Mode stored in Firestore (users/{uid}.activeMode) and cached in "
+        "localStorage (autonateai_activeMode) with 1-hour TTL."
+    )
+    pdf.bullet(
+        "All 11 dashboard pages updated: Script tag added, RBAC admin-check blocks replaced "
+        "with ActiveModeService.init() calls."
+    )
+
+    pdf.sub_title("Key Design Decisions")
+    pdf.bullet(
+        "UI-only toggle: Does not change actual permissions. Admin in User mode still has "
+        "full admin access via direct URLs and Firestore rules."
+    )
+    pdf.bullet(
+        "Security gates unchanged: basketball-sim.html access gate still uses RBACService "
+        "directly, preventing mode toggle from locking admins out."
+    )
+    pdf.bullet(
+        "Injected, not hardcoded: Toggle HTML and CSS injected by JS to maintain a single "
+        "source of truth across 11 pages."
+    )
+
+    pdf.ln(2)
+    pdf.status_badge("ActiveModeService created and integrated", "complete")
+    pdf.status_badge("Toggle UI injected on all dashboard pages", "complete")
+    pdf.status_badge("Firestore persistence", "complete")
+    pdf.status_badge("localStorage caching with TTL", "complete")
+    pdf.status_badge("Build breakdown PDF generated", "complete")
 
     # ============================================================
     # OUTPUT

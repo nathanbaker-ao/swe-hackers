@@ -170,6 +170,19 @@
           </ul>
         </div>
 
+        <!-- Basketball Section (hidden by default, shown for admins) -->
+        <div class="nav-section" id="basketball-section" style="display: none;">
+          <span class="nav-section-title" style="color: #ef4444;">Basketball</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="basketball-sim.html" class="nav-link">
+                <span class="nav-icon">🏀</span>
+                <span class="nav-text">Play Simulator</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div class="nav-section" id="admin-section" style="display: none;">
           <span class="nav-section-title" style="color: #f44336;">Admin</span>
           <ul class="nav-list">
@@ -428,6 +441,7 @@
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
   <script src="../shared/js/rbac.js"></script>
+  <script src="../shared/js/active-mode-service.js"></script>
   <script src="../shared/js/notification-service.js"></script>
   <script src="../shared/js/feed-service.js"></script>
   <script src="../shared/js/follow-service.js"></script>
@@ -484,12 +498,9 @@
         // Setup infinite scroll
         this.setupInfiniteScroll();
 
-        // Admin check
-        if (window.RBACService) {
-          const isAdmin = await window.RBACService.hasRole('admin');
-          if (isAdmin) {
-            document.getElementById('admin-section').style.display = 'block';
-          }
+        // Admin/User mode toggle (handles admin-section + basketball-section visibility)
+        if (window.ActiveModeService) {
+          await window.ActiveModeService.init();
         }
       },
 
