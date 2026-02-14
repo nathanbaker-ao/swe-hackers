@@ -147,6 +147,7 @@ const AuthService = {
     const auth = window.FirebaseApp.getAuth();
     
     try {
+      localStorage.removeItem('navAuthState');
       await auth.signOut();
       return { success: true };
     } catch (error) {

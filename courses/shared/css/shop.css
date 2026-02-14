@@ -1,0 +1,452 @@
+/**
+ * Shop Page Styles for AutoNateAI Marketplace
+ * Uses CSS variables from marketing.css
+ */
+
+/* ===== Shop Hero Banner ===== */
+.shop-hero {
+  padding: calc(var(--nav-height) + 4rem) 2rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(121, 134, 203, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.shop-hero-content {
+  position: relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.shop-hero h1 {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shop-hero p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== Filter Buttons ===== */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.25rem;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--text-primary);
+  border-color: rgba(121, 134, 203, 0.3);
+  background: rgba(121, 134, 203, 0.1);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border-color: transparent;
+}
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(121, 134, 203, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.product-card-header {
+  padding: 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ===== Platform Icon Badge ===== */
+.platform-badge {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(121, 134, 203, 0.15), rgba(77, 182, 172, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.product-card-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-card-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.product-card-platform {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.product-card-body {
+  padding: 1rem 1.5rem;
+  flex: 1;
+}
+
+.product-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Tag Pills ===== */
+.product-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+}
+
+.tag-pill {
+  padding: 0.2rem 0.55rem;
+  background: rgba(121, 134, 203, 0.1);
+  border: 1px solid rgba(121, 134, 203, 0.2);
+  border-radius: 50px;
+  font-size: 0.65rem;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+/* ===== Product Card Footer ===== */
+.product-card-footer {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: auto;
+}
+
+/* ===== Price Display ===== */
+.product-price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+}
+
+/* ===== Buy Now Button ===== */
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(121, 134, 203, 0.35);
+}
+
+.btn-buy:active {
+  transform: translateY(0);
+}
+
+/* ===== Success Toast ===== */
+.purchase-toast {
+  position: fixed;
+  top: calc(var(--nav-height) + 1rem);
+  right: 1rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(102, 187, 106, 0.4);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: toastSlideIn 0.4s ease, toastFadeOut 0.4s ease 5s forwards;
+}
+
+.purchase-toast-icon {
+  font-size: 1.5rem;
+}
+
+.purchase-toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.purchase-toast-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-success);
+}
+
+.purchase-toast-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.purchase-toast-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+  transition: color var(--transition-fast);
+}
+
+.purchase-toast-close:hover {
+  color: var(--text-primary);
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toastFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* ===== Email Prompt Modal ===== */
+.email-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.email-modal {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.email-modal h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.email-modal p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.email-modal input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.email-modal input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.email-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.email-modal-actions .btn-buy {
+  flex: 1;
+}
+
+.email-modal-actions .btn-cancel {
+  padding: 0.7rem 1.25rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.email-modal-actions .btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== No Results Message ===== */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shop-hero h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .shop-hero {
+    padding-top: calc(var(--nav-height) + 2rem);
+  }
+
+  .shop-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .filter-bar {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .btn-buy {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .product-price {
+    text-align: center;
+  }
+}

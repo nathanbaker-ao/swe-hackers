@@ -3,50 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <title>Page Moved | AutoNateAI</title>
+  <meta http-equiv="refresh" content="3;url=index.html">
+  <style>
+    body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .redirect-banner { text-align: center; padding: 2rem; }
+    .redirect-banner h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .redirect-banner p { color: rgba(232, 232, 240, 0.7); margin-bottom: 1.5rem; }
+    .redirect-banner a { color: #7986cb; text-decoration: none; font-weight: 600; }
+    .redirect-banner a:hover { text-decoration: underline; }
+  </style>
+  <script>setTimeout(() => window.location.href = 'index.html', 3000);</script>
+</head>
+<body>
+  <div class="redirect-banner">
+    <h1>This page has moved</h1>
+    <p>We've updated our site. Redirecting you to the homepage...</p>
+    <a href="index.html">Go to Homepage now &rarr;</a>
+  </div>
+</body>
+</html>
+<!--
+DISCONNECTED PAGE - Original content preserved below
+======================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Primary Meta Tags -->
   <title>Course Catalog | AutoNateAI</title>
   <meta name="description" content="Explore our AI-augmented learning courses. From complete beginners to senior engineers - find your path to mastering development with AI.">
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autonateai.com/catalog">
   <meta property="og:title" content="Course Catalog | AutoNateAI">
   <meta property="og:description" content="Explore our AI-augmented learning courses for all skill levels.">
   <meta property="og:image" content="https://autonateai.com/assets/og-catalog.png">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Course Catalog | AutoNateAI">
   <meta name="twitter:image" content="https://autonateai.com/assets/og-catalog.png">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="shared/css/marketing.css">
-  
+
   <!-- Anime.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
+
   <!-- Shared Components -->
   <script src="shared/js/navbar.js" defer></script>
   <script src="shared/js/footer.js" defer></script>
-  
+
   <style>
     .catalog-hero {
       padding: calc(var(--nav-height) + 4rem) 2rem 3rem;
       text-align: center;
-      background: 
+      background:
         radial-gradient(ellipse at 50% 0%, rgba(121, 134, 203, 0.15) 0%, transparent 60%),
         var(--bg-primary);
     }
-    
+
     .catalog-title {
       font-family: var(--font-display);
       font-size: clamp(2.5rem, 5vw, 4rem);
@@ -57,14 +85,14 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .catalog-subtitle {
       font-size: 1.25rem;
       color: var(--text-secondary);
       max-width: 600px;
       margin: 0 auto;
     }
-    
+
     .catalog-filters {
       display: flex;
       justify-content: center;
@@ -72,7 +100,7 @@
       padding: 2rem;
       flex-wrap: wrap;
     }
-    
+
     .filter-btn {
       padding: 0.75rem 1.5rem;
       background: var(--bg-card);
@@ -83,14 +111,14 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    
+
     .filter-btn:hover,
     .filter-btn.active {
       background: var(--accent-primary);
       color: white;
       border-color: var(--accent-primary);
     }
-    
+
     .catalog-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -99,14 +127,14 @@
       margin: 0 auto;
       padding: 2rem;
     }
-    
+
     @media (max-width: 900px) {
       .catalog-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
       }
     }
-    
+
     .catalog-card {
       background: var(--bg-card);
       border-radius: var(--radius-lg);
@@ -116,26 +144,26 @@
       display: flex;
       flex-direction: column;
     }
-    
+
     .catalog-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 60px rgba(0,0,0,0.3);
       border-color: var(--accent-primary);
     }
-    
+
     .catalog-card-image {
       width: 100%;
       aspect-ratio: 1536 / 1024;
       object-fit: cover;
     }
-    
+
     .catalog-card-body {
       padding: 1.5rem;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    
+
     .catalog-card-badge {
       display: inline-block;
       padding: 0.35rem 0.75rem;
@@ -147,12 +175,12 @@
       margin-bottom: 0.75rem;
       width: fit-content;
     }
-    
+
     .catalog-card-badge.beginner { background: rgba(255, 213, 79, 0.2); color: #ffd54f; }
     .catalog-card-badge.junior { background: rgba(0, 188, 212, 0.2); color: #00bcd4; }
     .catalog-card-badge.senior { background: rgba(156, 39, 176, 0.2); color: #ce93d8; }
     .catalog-card-badge.undergrad { background: rgba(63, 81, 181, 0.2); color: #7986cb; }
-    
+
     .catalog-card-title {
       font-family: var(--font-display);
       font-size: 1.5rem;
@@ -160,7 +188,7 @@
       margin-bottom: 0.5rem;
       color: var(--text-primary);
     }
-    
+
     .catalog-card-desc {
       color: var(--text-secondary);
       font-size: 0.95rem;
@@ -168,7 +196,7 @@
       margin-bottom: 1.5rem;
       flex: 1;
     }
-    
+
     .catalog-card-meta {
       display: flex;
       gap: 1.5rem;
@@ -176,13 +204,13 @@
       color: var(--text-muted);
       font-size: 0.85rem;
     }
-    
+
     .catalog-card-meta span {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .catalog-card-btn {
       display: block;
       text-align: center;
@@ -194,32 +222,32 @@
       border-radius: var(--radius-md);
       transition: all 0.2s;
     }
-    
+
     .catalog-card-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 30px rgba(121, 134, 203, 0.3);
     }
-    
+
     .coming-soon-section {
       text-align: center;
       padding: 4rem 2rem;
       background: var(--bg-secondary);
       margin-top: 4rem;
     }
-    
+
     .coming-soon-title {
       font-family: var(--font-display);
       font-size: 2rem;
       margin-bottom: 1rem;
       color: var(--text-primary);
     }
-    
+
     .coming-soon-text {
       color: var(--text-secondary);
       max-width: 500px;
       margin: 0 auto 2rem;
     }
-    
+
     .notify-form {
       display: flex;
       gap: 1rem;
@@ -228,7 +256,7 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    
+
     .notify-input {
       flex: 1;
       min-width: 200px;
@@ -239,12 +267,12 @@
       color: var(--text-primary);
       font-size: 1rem;
     }
-    
+
     .notify-input:focus {
       outline: none;
       border-color: var(--accent-primary);
     }
-    
+
     .notify-btn {
       padding: 1rem 2rem;
       background: var(--accent-primary);
@@ -255,26 +283,26 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    
+
     .notify-btn:hover {
       background: var(--accent-secondary);
     }
   </style>
 </head>
 <body>
-  
+
   <!-- Navigation (injected) -->
   <div id="navbar-container"></div>
-  
+
   <!-- Hero -->
   <section class="catalog-hero">
     <h1 class="catalog-title">Course Catalog</h1>
     <p class="catalog-subtitle">
-      Choose your path. From complete beginners to senior engineers, 
+      Choose your path. From complete beginners to senior engineers,
       we have a course designed for your journey.
     </p>
   </section>
-  
+
   <!-- Filters -->
   <div class="catalog-filters">
     <button class="filter-btn active" data-filter="all">All Courses</button>
@@ -282,10 +310,10 @@
     <button class="filter-btn" data-filter="intermediate">Intermediate</button>
     <button class="filter-btn" data-filter="advanced">Advanced</button>
   </div>
-  
+
   <!-- Course Grid -->
   <div class="catalog-grid">
-    
+
     <!-- Endless Opportunities (Partner Course) -->
     <div class="catalog-card" data-level="beginner" data-partner="true" style="border: 2px solid #4CAF50;">
       <img src="assets/courses/course-endless-opportunities.png" alt="AI Freelancing Bootcamp" class="catalog-card-image">
@@ -293,7 +321,7 @@
         <span class="catalog-card-badge" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">🌟 Partner Course</span>
         <h2 class="catalog-card-title">AI Freelancing Bootcamp</h2>
         <p class="catalog-card-desc">
-          Learn AI tools, build a portfolio, and launch your freelance business. 
+          Learn AI tools, build a portfolio, and launch your freelance business.
           A 4-week program for youth in partnership with Endless Opportunities.
         </p>
         <div class="catalog-card-meta">
@@ -304,7 +332,7 @@
         <a href="course/endless-opportunities.html" class="catalog-card-btn" style="background: linear-gradient(135deg, #2E7D32, #4CAF50);">View Course →</a>
       </div>
     </div>
-    
+
     <!-- Apprentice -->
     <div class="catalog-card" data-level="beginner">
       <img src="assets/courses/course-apprentice.png" alt="The Apprentice's Path" class="catalog-card-image">
@@ -312,7 +340,7 @@
         <span class="catalog-card-badge beginner">Beginner</span>
         <h2 class="catalog-card-title">The Apprentice's Path</h2>
         <p class="catalog-card-desc">
-          Start from zero. Learn Python programming fundamentals through the "Three Forces" 
+          Start from zero. Learn Python programming fundamentals through the "Three Forces"
           narrative — data as stone, control flow as lightning, functions as magnetism.
         </p>
         <div class="catalog-card-meta">
@@ -323,7 +351,7 @@
         <a href="course/apprentice.html" class="catalog-card-btn">View Course →</a>
       </div>
     </div>
-    
+
     <!-- Undergrad -->
     <div class="catalog-card" data-level="intermediate">
       <img src="assets/courses/course-undergrad.png" alt="The Bridge to Industry" class="catalog-card-image">
@@ -331,7 +359,7 @@
         <span class="catalog-card-badge undergrad">CS Students</span>
         <h2 class="catalog-card-title">The Bridge to Industry</h2>
         <p class="catalog-card-desc">
-          Bridge the gap between academia and industry. Transform your CS knowledge into 
+          Bridge the gap between academia and industry. Transform your CS knowledge into
           job-ready skills with AI-augmented workflows and real-world projects.
         </p>
         <div class="catalog-card-meta">
@@ -342,7 +370,7 @@
         <a href="course/undergrad.html" class="catalog-card-btn">View Course →</a>
       </div>
     </div>
-    
+
     <!-- Junior -->
     <div class="catalog-card" data-level="intermediate">
       <img src="assets/courses/course-junior.png" alt="The Junior Accelerator" class="catalog-card-image">
@@ -350,7 +378,7 @@
         <span class="catalog-card-badge junior">Junior Engineers</span>
         <h2 class="catalog-card-title">The Junior Accelerator</h2>
         <p class="catalog-card-desc">
-          Skip the 5-year grind. Learn to think like a senior engineer with AI as your 
+          Skip the 5-year grind. Learn to think like a senior engineer with AI as your
           accelerator. Build systems, not just features.
         </p>
         <div class="catalog-card-meta">
@@ -361,7 +389,7 @@
         <a href="course/junior.html" class="catalog-card-btn">View Course →</a>
       </div>
     </div>
-    
+
     <!-- Senior -->
     <div class="catalog-card" data-level="advanced">
       <img src="assets/courses/course-senior.png" alt="The Senior Amplifier" class="catalog-card-image">
@@ -369,7 +397,7 @@
         <span class="catalog-card-badge senior">Mid-to-Senior</span>
         <h2 class="catalog-card-title">The Senior Amplifier</h2>
         <p class="catalog-card-desc">
-          Multiply your impact. Learn agentic workflows, architecture patterns, and how to 
+          Multiply your impact. Learn agentic workflows, architecture patterns, and how to
           10x your output with AI-augmented development.
         </p>
         <div class="catalog-card-meta">
@@ -380,14 +408,14 @@
         <a href="course/senior.html" class="catalog-card-btn">View Course →</a>
       </div>
     </div>
-    
+
   </div>
-  
+
   <!-- Coming Soon -->
   <section class="coming-soon-section">
     <h2 class="coming-soon-title">🚧 More Courses Coming Soon</h2>
     <p class="coming-soon-text">
-      We're building specialized tracks for DevOps, Frontend, Backend, and AI/ML. 
+      We're building specialized tracks for DevOps, Frontend, Backend, and AI/ML.
       Get notified when they launch.
     </p>
     <form class="notify-form" onsubmit="return false;">
@@ -395,29 +423,29 @@
       <button type="submit" class="notify-btn">Notify Me</button>
     </form>
   </section>
-  
+
   <!-- Footer (injected) -->
   <div id="footer-container"></div>
-  
+
   <!-- Scripts -->
   <script>
     // Initialize shared components
     document.addEventListener('DOMContentLoaded', () => {
       NavbarComponent.inject('navbar-container');
       FooterComponent.inject('footer-container');
-      
+
       // Filter functionality
       const filterBtns = document.querySelectorAll('.filter-btn');
       const cards = document.querySelectorAll('.catalog-card');
-      
+
       filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           // Update active state
           filterBtns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          
+
           const filter = btn.dataset.filter;
-          
+
           cards.forEach(card => {
             if (filter === 'all' || card.dataset.level === filter) {
               card.style.display = 'flex';
@@ -434,7 +462,7 @@
           });
         });
       });
-      
+
       // Animate cards on load
       anime({
         targets: '.catalog-card',
@@ -448,3 +476,4 @@
   </script>
 </body>
 </html>
+-->

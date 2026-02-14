@@ -3,34 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <title>Page Moved | AutoNateAI</title>
+  <meta http-equiv="refresh" content="3;url=index.html">
+  <style>
+    body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .redirect-banner { text-align: center; padding: 2rem; }
+    .redirect-banner h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .redirect-banner p { color: rgba(232, 232, 240, 0.7); margin-bottom: 1.5rem; }
+    .redirect-banner a { color: #7986cb; text-decoration: none; font-weight: 600; }
+    .redirect-banner a:hover { text-decoration: underline; }
+  </style>
+  <script>setTimeout(() => window.location.href = 'index.html', 3000);</script>
+</head>
+<body>
+  <div class="redirect-banner">
+    <h1>This page has moved</h1>
+    <p>We've updated our site. Redirecting you to the homepage...</p>
+    <a href="index.html">Go to Homepage now &rarr;</a>
+  </div>
+</body>
+</html>
+<!--
+DISCONNECTED PAGE - Original content preserved below
+======================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Primary Meta Tags -->
   <title>Daily Challenges | AutoNateAI</title>
   <meta name="description" content="Daily AI challenges to sharpen your prompt engineering, context design, and agentic workflow skills. Compete, learn, and level up.">
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autonateai.com/challenges">
   <meta property="og:title" content="Daily Challenges | AutoNateAI">
   <meta property="og:description" content="Daily AI challenges to sharpen your prompt engineering and context design skills.">
   <meta property="og:image" content="https://autonateai.com/assets/og-preview.png">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Daily Challenges | AutoNateAI">
   <meta name="twitter:image" content="https://autonateai.com/assets/og-preview.png">
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="shared/css/marketing.css">
-  
+
   <style>
     /* Challenge Preview Cards */
     .daily-challenges-grid {
@@ -38,7 +66,7 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .challenge-preview-card {
       background: var(--bg-card, #1e1e32);
       border-radius: var(--radius-lg, 12px);
@@ -46,12 +74,12 @@
       overflow: hidden;
       transition: border-color 0.3s ease, transform 0.3s ease;
     }
-    
+
     .challenge-preview-card:hover {
       border-color: rgba(121, 134, 203, 0.4);
       transform: translateY(-4px);
     }
-    
+
     .challenge-preview-header {
       display: flex;
       align-items: center;
@@ -60,7 +88,7 @@
       background: var(--bg-tertiary, #1a1a2e);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-    
+
     .challenge-badge {
       padding: 0.35rem 0.85rem;
       border-radius: 20px;
@@ -69,32 +97,32 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-    
+
     .challenge-badge.ai-fundamentals {
       background: rgba(121, 134, 203, 0.2);
       color: var(--accent-primary, #7986cb);
     }
-    
+
     .challenge-badge.rag-systems {
       background: rgba(77, 182, 172, 0.2);
       color: var(--accent-secondary, #4db6ac);
     }
-    
+
     .challenge-badge.agentic-systems {
       background: rgba(171, 71, 188, 0.2);
       color: #ab47bc;
     }
-    
+
     .challenge-xp {
       font-size: 0.9rem;
       color: var(--accent-secondary, #4db6ac);
       font-weight: 600;
     }
-    
+
     .challenge-preview-content {
       padding: 1.5rem;
     }
-    
+
     .challenge-title {
       font-size: 1.25rem;
       font-weight: 600;
@@ -102,21 +130,21 @@
       margin-bottom: 0.5rem;
       font-family: var(--font-display, 'Space Grotesk', sans-serif);
     }
-    
+
     .challenge-description {
       font-size: 0.95rem;
       color: var(--text-secondary, #b8b8c8);
       line-height: 1.6;
       margin-bottom: 1.25rem;
     }
-    
+
     .challenge-nodes-preview {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 1rem;
     }
-    
+
     .preview-node {
       padding: 0.4rem 0.75rem;
       background: var(--bg-tertiary, #1a1a2e);
@@ -125,7 +153,7 @@
       font-size: 0.85rem;
       color: var(--text-primary, #e8e8f0);
     }
-    
+
     .challenge-preview-hint {
       font-size: 0.85rem;
       color: var(--text-muted, #888);
@@ -133,7 +161,7 @@
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .challenge-start-btn {
       display: block;
       padding: 1rem 1.5rem;
@@ -145,110 +173,110 @@
       font-size: 0.95rem;
       transition: opacity 0.2s ease;
     }
-    
+
     .challenge-start-btn:hover {
       opacity: 0.9;
     }
-    
+
     /* Mobile responsiveness */
     @media (max-width: 768px) {
       .daily-challenges-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
       }
-      
+
       .challenge-preview-card {
         border-radius: var(--radius-md, 8px);
       }
-      
+
       .challenge-preview-header {
         padding: 0.75rem 1rem;
       }
-      
+
       .challenge-badge {
         font-size: 0.65rem;
         padding: 0.3rem 0.6rem;
       }
-      
+
       .challenge-xp {
         font-size: 0.85rem;
       }
-      
+
       .challenge-preview-content {
         padding: 1rem;
       }
-      
+
       .challenge-title {
         font-size: 1.1rem;
         margin-bottom: 0.35rem;
       }
-      
+
       .challenge-description {
         font-size: 0.9rem;
         margin-bottom: 1rem;
         line-height: 1.5;
       }
-      
+
       .challenge-nodes-preview {
         gap: 0.35rem;
         margin-bottom: 0.75rem;
       }
-      
+
       .preview-node {
         padding: 0.35rem 0.6rem;
         font-size: 0.8rem;
       }
-      
+
       .challenge-preview-hint {
         font-size: 0.8rem;
       }
-      
+
       .challenge-start-btn {
         padding: 0.85rem 1.25rem;
         font-size: 0.9rem;
         min-height: 48px;
       }
     }
-    
+
     /* How It Works section mobile */
     @media (max-width: 900px) {
       .how-it-works-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (max-width: 600px) {
       .how-it-works-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
-      
+
       .challenge-preview-header {
         flex-direction: row;
         align-items: center;
       }
     }
-    
+
     /* Extra small devices */
     @media (max-width: 380px) {
       .challenge-preview-content {
         padding: 0.85rem;
       }
-      
+
       .challenge-title {
         font-size: 1rem;
       }
-      
+
       .challenge-description {
         font-size: 0.85rem;
       }
-      
+
       .preview-node {
         font-size: 0.75rem;
         padding: 0.3rem 0.5rem;
       }
     }
-    
+
     /* Leaderboard mobile */
     @media (max-width: 600px) {
       .leaderboard-row {
@@ -256,40 +284,40 @@
         padding: 0.75rem 1rem !important;
         font-size: 0.85rem;
       }
-      
+
       .leaderboard-header {
         grid-template-columns: 40px 1fr 70px 60px !important;
         padding: 0.75rem 1rem !important;
       }
     }
-    
+
     /* Features grid mobile */
     @media (max-width: 900px) {
       .features-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    
+
     @media (max-width: 600px) {
       .features-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .feature-card {
         padding: 1.25rem;
       }
     }
   </style>
-  
+
   <!-- External Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
+
   <!-- Shared Components -->
   <script src="shared/js/navbar.js" defer></script>
   <script src="shared/js/footer.js" defer></script>
 </head>
 <body>
-  
+
   <!-- Navigation -->
   <nav class="marketing-nav" id="nav">
     <div class="nav-container">
@@ -297,7 +325,7 @@
         <span class="nav-logo-icon">🏛️</span>
         <span>AutoNateAI</span>
       </a>
-      
+
       <div class="nav-links">
         <a href="catalog.html" class="nav-link">Courses</a>
         <a href="blog/" class="nav-link">Blog</a>
@@ -305,16 +333,16 @@
         <a href="enterprise.html" class="nav-link">Enterprise</a>
         <a href="challenges.html" class="nav-link" style="color: var(--accent-primary);">Challenges</a>
       </div>
-      
+
       <div class="nav-cta" id="nav-auth">
         <a href="auth/login.html" class="nav-btn secondary">Sign In</a>
         <a href="auth/register.html" class="nav-btn primary">Get Started</a>
       </div>
-      
+
       <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
     </div>
   </nav>
-  
+
   <!-- Loading Overlay (while checking auth) -->
   <div id="auth-check-loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-primary, #0a0a0f); z-index: 9999; display: flex; align-items: center; justify-content: center;">
     <div style="text-align: center; color: var(--text-primary, #e8e8f0);">
@@ -326,7 +354,7 @@
   <style>
     @keyframes spin { to { transform: rotate(360deg); } }
   </style>
-  
+
   <!-- Hero -->
   <section class="section blog-hero">
     <div class="section-container">
@@ -334,13 +362,13 @@
         <div class="section-badge">⚡ Daily Challenges</div>
         <h1 class="section-title">Train Your AI Muscle Daily</h1>
         <p class="section-subtitle">
-          Sharpen your prompt engineering, context design, and agentic workflow skills 
+          Sharpen your prompt engineering, context design, and agentic workflow skills
           with bite-sized daily challenges. Compete with the community and climb the leaderboard.
         </p>
       </div>
     </div>
   </section>
-  
+
   <!-- Streak Display (Authenticated Only) -->
   <section class="section" id="streak-section" style="padding-top: 0; display: none;">
     <div class="section-container">
@@ -353,7 +381,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Today's Challenges (Dynamic - changes based on auth state) -->
   <section class="section" id="todays-challenges" style="padding-top: 0;">
     <div class="section-container">
@@ -363,12 +391,12 @@
           Sign in to attempt today's challenges and track your progress.
         </p>
       </div>
-      
+
       <!-- Challenges Grid - Populated by JS based on auth state -->
       <div class="daily-challenges-grid" id="challenges-grid">
         <!-- Challenge cards will be inserted here -->
       </div>
-      
+
       <!-- Sign Up CTA (Unauthenticated only) -->
       <div id="signup-cta" style="text-align: center; margin-top: 3rem;">
         <a href="auth/register.html" class="btn btn-primary" style="padding: 1rem 3rem;">
@@ -377,7 +405,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Challenge Categories -->
   <section class="section" style="background: var(--bg-secondary);">
     <div class="section-container">
@@ -387,15 +415,15 @@
           Each day features 3 challenges from different categories. Complete all 3 to maintain your streak!
         </p>
       </div>
-      
+
       <div class="features-grid">
-        
+
         <!-- Prompt Craft -->
         <div class="feature-card">
           <div class="feature-icon">🎯</div>
           <h3 class="feature-title">Prompt Craft</h3>
           <p class="feature-desc">
-            Write the perfect prompt to achieve a specific output. Master the art of clear, 
+            Write the perfect prompt to achieve a specific output. Master the art of clear,
             effective communication with AI.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -405,13 +433,13 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Context Engineering -->
         <div class="feature-card">
           <div class="feature-icon">🧩</div>
           <h3 class="feature-title">Context Engineering</h3>
           <p class="feature-desc">
-            Structure information for optimal AI consumption. Learn what context to include, 
+            Structure information for optimal AI consumption. Learn what context to include,
             what to omit, and how to organize it.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -421,13 +449,13 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Non-Deterministic Thinking -->
         <div class="feature-card">
           <div class="feature-icon">🔮</div>
           <h3 class="feature-title">Non-Deterministic Thinking</h3>
           <p class="feature-desc">
-            Handle AI uncertainty like a pro. Learn to evaluate multiple responses, 
+            Handle AI uncertainty like a pro. Learn to evaluate multiple responses,
             identify hallucinations, and build robust workflows.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -437,13 +465,13 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Agentic Workflows -->
         <div class="feature-card">
           <div class="feature-icon">🤖</div>
           <h3 class="feature-title">Agentic Workflows</h3>
           <p class="feature-desc">
-            Design multi-step AI processes. Break complex tasks into agent-friendly chunks 
+            Design multi-step AI processes. Break complex tasks into agent-friendly chunks
             and chain them together effectively.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -453,13 +481,13 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Visual Challenges -->
         <div class="feature-card">
           <div class="feature-icon">🎨</div>
           <h3 class="feature-title">Visual Challenges</h3>
           <p class="feature-desc">
-            Create beautiful UI animations and visualizations. Master anime.js, CSS animations, 
+            Create beautiful UI animations and visualizations. Master anime.js, CSS animations,
             and interactive data displays.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -469,13 +497,13 @@
             </p>
           </div>
         </div>
-        
+
         <!-- Code Review -->
         <div class="feature-card">
           <div class="feature-icon">🔍</div>
           <h3 class="feature-title">Code Review</h3>
           <p class="feature-desc">
-            Spot bugs, suggest improvements, and learn to read code critically. 
+            Spot bugs, suggest improvements, and learn to read code critically.
             Train your eye for quality like a senior engineer.
           </p>
           <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.85rem;">
@@ -485,11 +513,11 @@
             </p>
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
-  
+
   <!-- How It Works -->
   <section class="section">
     <div class="section-container">
@@ -497,7 +525,7 @@
         <div class="section-badge">How It Works</div>
         <h2 class="section-title">Daily Challenge Mechanics</h2>
       </div>
-      
+
       <div class="how-it-works-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
         <div>
           <div style="font-size: 3rem; margin-bottom: 1rem;">🌅</div>
@@ -522,7 +550,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- Leaderboard Preview -->
   <section class="section" style="background: var(--bg-secondary);">
     <div class="section-container">
@@ -530,7 +558,7 @@
         <div class="section-badge">🏆 Leaderboard</div>
         <h2 class="section-title">This Week's Top Performers</h2>
       </div>
-      
+
       <div style="max-width: 600px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
         <div class="leaderboard-header" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; background: var(--bg-tertiary); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
           <span>Rank</span>
@@ -538,42 +566,42 @@
           <span style="text-align: right;">Streak</span>
           <span style="text-align: right;">XP</span>
         </div>
-        
+
         <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥇</span>
           <span style="font-weight: 500;">CodeArchitect42</span>
           <span style="text-align: right; color: var(--accent-warning);">🔥 23</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">4,250</span>
         </div>
-        
+
         <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥈</span>
           <span style="font-weight: 500;">PromptMaster</span>
           <span style="text-align: right; color: var(--accent-warning);">🔥 19</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,875</span>
         </div>
-        
+
         <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.5rem;">🥉</span>
           <span style="font-weight: 500;">AIWhisperer</span>
           <span style="text-align: right; color: var(--accent-warning);">🔥 15</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,650</span>
         </div>
-        
+
         <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
           <span style="font-size: 1.25rem; color: var(--text-muted);">4</span>
           <span style="font-weight: 500;">SystemsThinker</span>
           <span style="text-align: right; color: var(--accent-warning);">🔥 12</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">3,200</span>
         </div>
-        
+
         <div class="leaderboard-row" style="display: grid; grid-template-columns: 60px 1fr 100px 80px; padding: 1rem 1.5rem; align-items: center;">
           <span style="font-size: 1.25rem; color: var(--text-muted);">5</span>
           <span style="font-weight: 500;">AgenticDev</span>
           <span style="text-align: right; color: var(--accent-warning);">🔥 10</span>
           <span style="text-align: right; font-family: var(--font-display); font-weight: 600; color: var(--accent-secondary);">2,950</span>
         </div>
-        
+
         <div style="padding: 1.25rem; background: var(--bg-tertiary); text-align: center;">
           <a href="auth/register.html" style="color: var(--accent-primary); text-decoration: none; font-weight: 500;">
             Sign up to see your rank →
@@ -582,7 +610,7 @@
       </div>
     </div>
   </section>
-  
+
   <!-- CTA -->
   <section class="cta-section">
     <h2 class="cta-title">Ready to Challenge Yourself?</h2>
@@ -598,7 +626,7 @@
       </a>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer class="footer" id="footer-placeholder">
     <div class="footer-container">
@@ -612,7 +640,7 @@
             AI-augmented learning for developers who want to think like architects and build like pros.
           </p>
         </div>
-        
+
         <div class="footer-column">
           <h4>Learning</h4>
           <ul class="footer-links">
@@ -622,7 +650,7 @@
             <li><a href="challenges.html">Daily Challenges</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h4>Company</h4>
           <ul class="footer-links">
@@ -632,7 +660,7 @@
             <li><a href="https://discord.gg/Me5N8tCdkC" target="_blank">Discord</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-column">
           <h4>Account</h4>
           <ul class="footer-links">
@@ -642,7 +670,7 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 AutoNateAI. All rights reserved.</p>
         <div class="footer-social">
@@ -653,14 +681,14 @@
       </div>
     </div>
   </footer>
-  
+
   <!-- Firebase (for auth check) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="shared/js/firebase-config.js"></script>
   <script src="shared/js/auth.js"></script>
-  
-  
+
+
   <!-- Page Script -->
   <script>
     // Today's puzzle challenges (matching dashboard)
@@ -693,7 +721,7 @@
         nodes: ['👁️ Observe', '🧠 Think', '📋 Plan', '⚡ Act', '🔧 Tools', '💾 Memory']
       }
     ];
-    
+
     // Render challenge preview card
     function renderChallengeCard(challenge, index) {
       return `
@@ -702,43 +730,43 @@
             <span class="challenge-badge ${challenge.category}">${challenge.categoryLabel}</span>
             <span class="challenge-xp">+${challenge.xp} XP</span>
           </div>
-          
+
           <div class="challenge-preview-content">
             <h3 class="challenge-title">${challenge.title}</h3>
             <p class="challenge-description">${challenge.description}</p>
-            
+
             <!-- Node preview -->
             <div class="challenge-nodes-preview">
               ${challenge.nodes.map(node => `<span class="preview-node">${node}</span>`).join('')}
             </div>
-            
+
             <div class="challenge-preview-hint">
               <span>🔗</span> Click nodes to connect them in the right order
             </div>
           </div>
-          
+
           <a href="dashboard/challenges.html?challenge=${challenge.id}" class="challenge-start-btn">
             Start Challenge #${index + 1} →
           </a>
         </div>
       `;
     }
-    
+
     // Check auth state and render appropriate view
     async function initPage() {
       const grid = document.getElementById('challenges-grid');
       const signupCta = document.getElementById('signup-cta');
       const streakSection = document.getElementById('streak-section');
       const subtitle = document.getElementById('challenges-subtitle');
-      
+
       // Initialize Firebase and check auth
       if (window.FirebaseApp && window.AuthService) {
         try {
           window.FirebaseApp.init();
           window.AuthService.init();
-          
+
           const user = await window.AuthService.waitForAuthState();
-          
+
           if (user) {
             // User is logged in - redirect to the dashboard challenges page
             window.location.href = 'dashboard/challenges.html';
@@ -748,28 +776,28 @@
           console.log('Auth check failed:', e);
         }
       }
-      
+
       // User is NOT authenticated - show preview/marketing page
       grid.innerHTML = todaysChallenges.map((c, i) => renderChallengeCard(c, i)).join('');
-      
+
       // Show unauthenticated preview UI
       signupCta.style.display = 'block';
       streakSection.style.display = 'none';
       subtitle.textContent = 'Sign in to attempt today\'s interactive diagram challenges.';
-      
+
       // Hide loading overlay
       const loadingOverlay = document.getElementById('auth-check-loading');
       if (loadingOverlay) {
         loadingOverlay.style.display = 'none';
       }
     }
-    
+
     // Navigation scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 50);
     });
-    
+
     // Entry animations
     document.addEventListener('DOMContentLoaded', () => {
       initPage().then(() => {
@@ -786,3 +814,4 @@
   </script>
 </body>
 </html>
+-->

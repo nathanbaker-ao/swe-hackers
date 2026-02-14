@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed | AutoNateAI</title>
+  <title>My Tools Library | AutoNateAI</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../shared/css/dashboard.css">
-  <link rel="stylesheet" href="../shared/css/feed.css">
+  <link rel="stylesheet" href="../shared/css/library.css">
 
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -64,9 +64,9 @@
   <!-- Loading Screen -->
   <div class="auth-loading" id="auth-loading">
     <div class="loading-content">
-      <div class="loading-icon">📡</div>
+      <div class="loading-icon">📦</div>
       <div class="loading-spinner"></div>
-      <p>Loading your feed...</p>
+      <p>Loading your library...</p>
     </div>
   </div>
 
@@ -84,20 +84,19 @@
           <span class="nav-section-title">Main</span>
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="feed.html" class="nav-link active">
+              <a href="feed.html" class="nav-link">
                 <span class="nav-icon">🏠</span>
                 <span class="nav-text">Feed</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="library.html" class="nav-link">
+              <a href="library.html" class="nav-link active">
                 <span class="nav-icon">🔧</span>
                 <span class="nav-text">Tools Library</span>
               </a>
             </li>
           </ul>
         </div>
-
 
         <div class="nav-section">
           <span class="nav-section-title">Account</span>
@@ -174,26 +173,38 @@
       <header class="main-header">
         <div class="header-left">
           <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-          <h1 class="page-title">Feed</h1>
+          <h1 class="page-title">My Tools Library</h1>
         </div>
       </header>
 
       <!-- Content -->
       <div class="content-area">
 
-        <!-- Category Filter Pills -->
-        <div class="feed-filters" id="feed-filters">
-          <button class="filter-pill active" data-category="all">All</button>
-          <button class="filter-pill" data-category="strategies">Strategies</button>
-          <button class="filter-pill" data-category="results">Results</button>
-          <button class="filter-pill" data-category="tips">Tips</button>
-          <button class="filter-pill" data-category="jobs">Jobs</button>
-          <button class="filter-pill" data-category="keywords">Keywords</button>
+        <!-- Stats Bar (populated by JS) -->
+        <div class="library-stats" id="library-stats" style="display: none;">
+          <div class="library-stat">
+            <div class="library-stat__icon">🔧</div>
+            <span class="library-stat__value" id="stat-total">0</span>
+            <span class="library-stat__label">Tools Owned</span>
+          </div>
+          <div class="library-stat">
+            <div class="library-stat__icon">📅</div>
+            <span class="library-stat__value" id="stat-recent">0</span>
+            <span class="library-stat__label">Added This Month</span>
+          </div>
+          <div class="library-stat">
+            <div class="library-stat__icon">🎯</div>
+            <span class="library-stat__value" id="stat-platforms">0</span>
+            <span class="library-stat__label">Platforms Covered</span>
+          </div>
         </div>
 
-        <!-- Feed Grid -->
-        <div class="feed-container" id="feed-container">
-          <!-- Feed cards rendered by JS -->
+        <!-- Featured Tool (populated by JS) -->
+        <div id="library-featured-container"></div>
+
+        <!-- Library Grid -->
+        <div id="library-content">
+          <!-- Cards or empty state rendered by JS -->
         </div>
 
       </div>
@@ -206,195 +217,135 @@
   <script src="../shared/js/auth.js"></script>
   <script src="../shared/js/rbac.js"></script>
   <script src="../shared/js/whop-service.js"></script>
+  <script src="../shared/js/purchase-service.js"></script>
 
   <script>
-    // =========================================================================
-    // FEED DATA (hardcoded initial set)
-    // =========================================================================
-    const FEED_POSTS = [
-      {
-        id: 'post-1',
-        category: 'strategies',
-        title: 'How I Built a $5K/mo Automation Agency in 90 Days',
-        content: 'The key was niching down hard into real estate follow-ups. I used a simple Make.com + OpenAI pipeline to generate personalized follow-up emails for realtors. Started with 3 free trials, converted 2, then scaled through referrals. The secret? Charging for outcomes, not hours.',
-        author: 'Marcus Chen',
-        authorInitial: 'M',
-        date: 'Feb 12, 2026',
-        tags: ['automation', 'agency', 'real-estate'],
-        premium: false
-      },
-      {
-        id: 'post-2',
-        category: 'results',
-        title: 'Client Case Study: 340% ROI on AI Chatbot Deployment',
-        content: 'Deployed a custom RAG chatbot for an e-commerce store. It handles 78% of support tickets autonomously. Setup cost was $2,400, and the client saves $8,200/month in support staff costs. Full breakdown of the tech stack and prompting strategy inside.',
-        author: 'Aisha Patel',
-        authorInitial: 'A',
-        date: 'Feb 11, 2026',
-        tags: ['case-study', 'chatbot', 'ROI'],
-        premium: true
-      },
-      {
-        id: 'post-3',
-        category: 'tips',
-        title: '5 Prompt Engineering Patterns That Actually Work in Production',
-        content: 'After shipping 40+ AI features, these are the patterns I keep coming back to: 1) Chain of Thought with guardrails, 2) Few-shot with dynamic example selection, 3) Role-based system prompts with constraints, 4) Output schema enforcement, 5) Confidence scoring with fallbacks.',
-        author: 'Jordan Rivera',
-        authorInitial: 'J',
-        date: 'Feb 10, 2026',
-        tags: ['prompt-engineering', 'production', 'patterns'],
-        premium: false
-      },
-      {
-        id: 'post-4',
-        category: 'jobs',
-        title: 'Hiring: AI Automation Specialist - Remote, $120-150K',
-        content: 'We are looking for someone to build and maintain our internal AI automation suite. You will work on document processing pipelines, customer service AI, and data enrichment flows. Must have experience with LangChain, Make.com or n8n, and at least one vector database.',
-        author: 'TechCorp Recruiting',
-        authorInitial: 'T',
-        date: 'Feb 10, 2026',
-        tags: ['remote', 'full-time', 'AI-automation'],
-        premium: false
-      },
-      {
-        id: 'post-5',
-        category: 'keywords',
-        title: 'Trending Keywords This Week: "AI Agent Framework" +280%',
-        content: 'Search volume analysis for the AI tools space: "AI agent framework" is up 280%, "vibe coding" up 190%, "MCP servers" up 340%, "cursor rules" up 150%. These signal where demand is heading. Build tools targeting these terms now.',
-        author: 'AutoNateAI Research',
-        authorInitial: 'A',
-        date: 'Feb 9, 2026',
-        tags: ['SEO', 'trends', 'market-intel'],
-        premium: true
-      },
-      {
-        id: 'post-6',
-        category: 'strategies',
-        title: 'The "Productized Service" Model for AI Freelancers',
-        content: 'Stop trading time for money. Package your AI skills into fixed-scope offerings: "AI Email Responder Setup - $997" or "Custom GPT Training - $1,500". I went from $50/hr freelancing to $12K/mo with just 3 productized offerings. Here is the exact playbook.',
-        author: 'Damon Wright',
-        authorInitial: 'D',
-        date: 'Feb 8, 2026',
-        tags: ['freelancing', 'pricing', 'productized'],
-        premium: false
-      },
-      {
-        id: 'post-7',
-        category: 'results',
-        title: 'Monthly Revenue Report: AutoNateAI Tool Sellers (Jan 2026)',
-        content: 'Aggregate data from our top 50 sellers: Average revenue $3,400/mo, median $1,800/mo. Top category: Workflow automation templates. Fastest growing: AI agent starter kits. Best conversion rates on tools priced $29-$49. Full data and charts available.',
-        author: 'AutoNateAI Analytics',
-        authorInitial: 'A',
-        date: 'Feb 7, 2026',
-        tags: ['revenue', 'analytics', 'marketplace'],
-        premium: true
-      },
-      {
-        id: 'post-8',
-        category: 'tips',
-        title: 'How to Structure Your AI Tool README for Maximum Sales',
-        content: 'Your README is your sales page. After A/B testing 20+ listings, this structure wins: 1) One-line value prop, 2) 30-second demo GIF, 3) "What you get" bullet list, 4) Setup in 3 steps, 5) Before/after comparison, 6) FAQ addressing objections. Template included.',
-        author: 'Priya Sharma',
-        authorInitial: 'P',
-        date: 'Feb 6, 2026',
-        tags: ['copywriting', 'conversion', 'selling'],
-        premium: false
-      },
-      {
-        id: 'post-9',
-        category: 'jobs',
-        title: 'Contract: Build a Multi-Agent System for Legal Research',
-        content: 'Law firm needs a multi-agent AI system that can analyze case law, summarize depositions, and draft initial briefs. 3-month contract, $15K budget. Must have experience with multi-agent orchestration and legal domain knowledge preferred.',
-        author: 'LegalTech Solutions',
-        authorInitial: 'L',
-        date: 'Feb 5, 2026',
-        tags: ['contract', 'multi-agent', 'legal'],
-        premium: false
-      },
-      {
-        id: 'post-10',
-        category: 'keywords',
-        title: 'Underserved Niches: AI Tools Nobody Is Building Yet',
-        content: 'After analyzing 10K+ search queries with zero or low-competition results: AI-powered inventory forecasting for small retailers, automated grant writing for nonprofits, AI meal prep planners with grocery API integration, and pet health monitoring AI. Each has 1K+ monthly searches.',
-        author: 'AutoNateAI Research',
-        authorInitial: 'A',
-        date: 'Feb 4, 2026',
-        tags: ['niches', 'opportunity', 'research'],
-        premium: true
-      }
-    ];
-
-    let hasPremiumAccess = false;
-
     // =========================================================================
     // RENDER
     // =========================================================================
 
-    function renderFeed(category = 'all') {
-      const container = document.getElementById('feed-container');
-      const filtered = category === 'all'
-        ? FEED_POSTS
-        : FEED_POSTS.filter(p => p.category === category);
+    const PLATFORM_LABELS = {
+      linkedin: 'LinkedIn',
+      facebook: 'Facebook',
+      reddit: 'Reddit',
+      twitter: 'Twitter/X',
+      google: 'Google',
+      multi: 'Multi-Platform'
+    };
 
-      container.innerHTML = filtered.map(post => {
-        const isPremiumLocked = post.premium && !hasPremiumAccess;
-        return `
-          <div class="feed-card ${isPremiumLocked ? 'feed-card--premium' : ''}" data-category="${post.category}">
-            <div class="feed-card__header">
-              <span class="feed-card__category feed-card__category--${post.category}">${post.category}</span>
-              ${post.premium ? '<span class="feed-card__premium-badge">&#9733; Premium</span>' : ''}
-            </div>
-            <h3 class="feed-card__title">${post.title}</h3>
-            <div class="feed-card__content">
-              <p>${post.content}</p>
-            </div>
-            ${isPremiumLocked ? `
-              <button class="feed-card__unlock" onclick="handleUnlock()">
-                &#128274; Unlock Premium Content
-              </button>
-            ` : ''}
-            <div class="feed-card__tags">
-              ${post.tags.map(t => `<span class="feed-tag">#${t}</span>`).join('')}
-            </div>
-            <div class="feed-card__author">
-              <div class="feed-card__avatar">${post.authorInitial}</div>
-              <div class="feed-card__author-info">
-                <span class="feed-card__author-name">${post.author}</span>
-                <span class="feed-card__date">${post.date}</span>
+    function renderLibrary(products) {
+      const content = document.getElementById('library-content');
+      const statsBar = document.getElementById('library-stats');
+      const featuredContainer = document.getElementById('library-featured-container');
+
+      if (!products || products.length === 0) {
+        statsBar.style.display = 'none';
+        featuredContainer.innerHTML = '';
+        content.innerHTML = `
+          <div class="library-empty">
+            <div class="library-empty__icon">📦</div>
+            <h2 class="library-empty__title">No tools yet</h2>
+            <p class="library-empty__desc">
+              Your purchased tools and resources will appear here.
+              Browse the shop to find search query packs, automation tools, and more.
+            </p>
+            <a href="../shop.html" class="library-empty__cta">
+              Browse Tools &#8594;
+            </a>
+          </div>
+        `;
+        return;
+      }
+
+      // Show stats
+      statsBar.style.display = 'grid';
+      document.getElementById('stat-total').textContent = products.length;
+
+      const now = new Date();
+      const thisMonth = products.filter(p => {
+        const d = p.purchaseDate ? new Date(p.purchaseDate) : null;
+        return d && d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+      });
+      document.getElementById('stat-recent').textContent = thisMonth.length;
+
+      // Count unique platforms
+      const platforms = new Set(products.map(p => p.platform).filter(Boolean));
+      document.getElementById('stat-platforms').textContent = platforms.size;
+
+      // Render featured tool (most recently purchased)
+      const sorted = [...products].sort((a, b) => {
+        const da = a.purchaseDate ? new Date(a.purchaseDate) : 0;
+        const db = b.purchaseDate ? new Date(b.purchaseDate) : 0;
+        return db - da;
+      });
+      const featured = sorted[0];
+
+      featuredContainer.innerHTML = `
+        <div class="library-featured">
+          <div class="library-featured__label">⭐ Latest Addition</div>
+          <div class="library-featured__content">
+            <div class="library-featured__icon">${featured.icon || '🔧'}</div>
+            <div class="library-featured__info">
+              <h3>${featured.name || 'Untitled Tool'}</h3>
+              <p>${featured.description || 'No description available.'}</p>
+              <div class="library-featured__tags">
+                ${(featured.tags || []).map(t => `<span class="library-featured__tag">${t}</span>`).join('')}
               </div>
             </div>
           </div>
-        `;
-      }).join('');
+        </div>
+      `;
+
+      // Render grid with section header
+      content.innerHTML = `
+        <div class="library-section-header">
+          <h2>Your Tools</h2>
+          <span class="count">${products.length} tool${products.length !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="library-grid">
+          ${products.map(product => `
+            <div class="library-card">
+              ${product.platform ? `<span class="library-card__platform">${PLATFORM_LABELS[product.platform] || product.platform}</span>` : ''}
+              <div class="library-card__icon">${product.icon || '🔧'}</div>
+              <div class="library-card__name">${product.name || 'Untitled Tool'}</div>
+              <div class="library-card__description">${product.description || 'No description available.'}</div>
+              <div class="library-card__tags">
+                ${(product.tags || []).map(t => `<span class="library-card__tag">${t}</span>`).join('')}
+              </div>
+              <span class="library-card__status">✓ Owned</span>
+              <div class="library-card__date">
+                <span class="library-card__date-icon">📅</span>
+                Purchased ${formatDate(product.purchaseDate)}
+              </div>
+              <a href="${product.url || '#'}" class="library-card__open" target="_blank" rel="noopener">
+                Open Tool &#8594;
+              </a>
+            </div>
+          `).join('')}
+        </div>
+        <div class="library-browse-cta">
+          <p>Looking for more tools to level up your sourcing game?</p>
+          <a href="../shop.html">Browse All Tools &#8594;</a>
+        </div>
+      `;
 
       // Animate cards in
       anime({
-        targets: '.feed-card',
+        targets: '.library-card',
         opacity: [0, 1],
         translateY: [20, 0],
-        delay: anime.stagger(80),
+        scale: [0.98, 1],
+        delay: anime.stagger(100),
         easing: 'easeOutCubic',
         duration: 500
       });
     }
 
-    function handleUnlock() {
-      alert('Premium access required. Visit the shop to upgrade your plan.');
-    }
-
-    // =========================================================================
-    // FILTERS
-    // =========================================================================
-
-    function setupFilters() {
-      const pills = document.querySelectorAll('.filter-pill');
-      pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          pills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          renderFeed(pill.dataset.category);
-        });
-      });
+    function formatDate(dateStr) {
+      if (!dateStr) return 'Unknown date';
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return 'Unknown date';
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     }
 
     // =========================================================================
@@ -440,18 +391,28 @@
         if (hasBasketball) document.getElementById('basketball-section').style.display = 'block';
       }
 
-      // Check premium access
+      // Load library from WhopService and normalize data
+      let products = [];
       try {
-        if (window.WhopService?.checkAccess) {
-          hasPremiumAccess = await window.WhopService.checkAccess();
+        if (window.WhopService?.getLibrary) {
+          const rawLibrary = await window.WhopService.getLibrary();
+          products = rawLibrary.map(item => ({
+            id: item.id,
+            name: item.product?.name || item.name || 'Untitled Tool',
+            description: item.product?.description || item.description || '',
+            icon: item.product?.platformIcon || item.icon || '🔧',
+            platform: item.product?.platform || item.platform || '',
+            tags: item.product?.tags || item.tags || [],
+            price: item.product?.price || item.price || 0,
+            url: item.url || '#',
+            purchaseDate: item.purchasedAt || item.purchaseDate || null
+          }));
         }
       } catch (e) {
-        console.log('Could not check premium access:', e);
+        console.error('Error loading library:', e);
       }
 
-      // Render feed and setup filters
-      renderFeed();
-      setupFilters();
+      renderLibrary(products);
 
       // Listen for auth changes
       window.AuthService.onAuthStateChanged((user) => {

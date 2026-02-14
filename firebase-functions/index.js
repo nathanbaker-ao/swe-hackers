@@ -15,3 +15,6 @@ initializeApp();
 export { onActivityComplete } from './analytics/onActivityComplete.js';
 export { onLessonComplete } from './analytics/onLessonComplete.js';
 export { computeUserAnalytics } from './analytics/computeUserAnalytics.js';
+
+// Export marketplace / Whop webhook functions
+export { onWhopWebhook } from './whop/onWhopWebhook.js';

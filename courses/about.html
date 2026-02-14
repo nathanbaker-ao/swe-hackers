@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>About - AutoNateAI</title>
+  <meta name="title" content="About - AutoNateAI">
+  <meta name="description" content="Learn about AutoNateAI and our mission to help people find 6-figure opportunities using advanced search techniques.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+
+  <!-- Firebase (for auth-aware navbar) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
+  <script src="shared/js/footer.js" defer></script>
+
+  <style>
+    .about-hero {
+      padding: calc(var(--nav-height) + 5rem) 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 40% 30%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 70%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .about-hero-content {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .about-hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .about-content-block {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-content-block h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    .about-content-block p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-value-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-normal);
+    }
+
+    .about-value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(121, 134, 203, 0.3);
+    }
+
+    .about-value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-value-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-value-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .founder-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+    }
+
+    .founder-avatar {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 50%;
+      font-size: 2.5rem;
+      flex-shrink: 0;
+      color: white;
+      font-family: var(--font-display);
+      font-weight: 700;
+    }
+
+    .founder-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .founder-role {
+      font-size: 0.85rem;
+      color: var(--accent-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .founder-info p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .about-values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation (injected) -->
+  <div id="navbar-container"></div>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>About AutoNateAI</h1>
+      <p>
+        We provide the tools and knowledge to efficiently source 6-figure opportunities.
+        Our mission is to level the playing field with advanced search techniques
+        that anyone can use.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section">
+    <div class="section-container">
+      <div class="about-content-block">
+        <h2>Our Mission</h2>
+        <p>
+          The best opportunities are rarely found on the first page of a job board.
+          They are hidden in niche communities, behind Boolean queries, and within
+          networks that most people never tap into.
+        </p>
+        <p>
+          AutoNateAI was built to change that. We create expertly crafted search
+          query packs that help professionals cut through the noise and find
+          high-value opportunities -- roles paying $100K and above -- across
+          LinkedIn, Facebook, Reddit, Twitter/X, Google, and more.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">What We Do</div>
+        <h2 class="section-title">Search Packs, Optimized for Results</h2>
+        <p class="section-subtitle">
+          We research, test, and refine Boolean search strings so you do not have to.
+          Each pack is tailored for a specific platform and use case.
+        </p>
+      </div>
+
+      <div class="about-values-grid">
+        <div class="about-value-card">
+          <div class="about-value-icon">&#x1F50D;</div>
+          <h3 class="about-value-title">Research-Backed Queries</h3>
+          <p class="about-value-desc">
+            Every search string is tested against real platforms to ensure
+            it returns high-quality, relevant results.
+          </p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-icon">&#x1F4CA;</div>
+          <h3 class="about-value-title">Multi-Platform Coverage</h3>
+          <p class="about-value-desc">
+            From LinkedIn to Reddit to Google dorking, we cover the platforms
+            where opportunities live.
+          </p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-icon">&#x26A1;</div>
+          <h3 class="about-value-title">Instant Access</h3>
+          <p class="about-value-desc">
+            Purchase once, use forever. No subscriptions, no recurring fees.
+            Just the tools you need.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">The Team</div>
+        <h2 class="section-title">Who is Behind AutoNateAI</h2>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">NB</div>
+        <div class="founder-info">
+          <h3>Nathan Baker</h3>
+          <div class="founder-role">Founder</div>
+          <p>
+            Nathan built AutoNateAI to solve a problem he experienced firsthand:
+            the best opportunities are not always visible. With a background in
+            engineering and a passion for automation, he created search tools that
+            make sourcing high-value roles faster and more effective.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Get Started?</h2>
+    <p class="cta-subtitle">
+      Browse our search packs and start sourcing 6-figure opportunities today.
+    </p>
+    <div class="cta-buttons">
+      <a href="shop.html" class="btn btn-primary">
+        Browse the Shop
+        <span>&#x2192;</span>
+      </a>
+      <a href="contact.html" class="btn btn-secondary">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+
+      anime({
+        targets: '.about-hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: entry.target.querySelectorAll('.about-value-card, .founder-card'),
+            opacity: [0, 1],
+            translateY: [30, 0],
+            delay: anime.stagger(100),
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-container').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

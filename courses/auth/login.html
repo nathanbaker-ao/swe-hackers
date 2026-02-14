@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In | AutoNateAI Learning Hub</title>
+  <title>Sign In | AutoNateAI</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,9 @@
       <span class="nav-logo-text">AutoNateAI</span>
     </a>
     <div class="nav-links">
-      <a href="../index.html" class="nav-link">Courses</a>
+      <a href="../shop.html" class="nav-link">Shop</a>
       <a href="login.html" class="nav-link active">Sign In</a>
-      <a href="register.html" class="nav-btn">Get Started</a>
+      <a href="../shop.html" class="nav-btn">Browse Tools</a>
     </div>
   </nav>
 
@@ -59,25 +59,15 @@
             <span class="logo-text">AutoNateAI</span>
           </a>
           
-          <div class="three-forces-mini">
-            <div class="force-mini">
-              <div class="force-mini-icon">🪨</div>
-              <div>Stone</div>
-            </div>
-            <div class="force-mini">
-              <div class="force-mini-icon">⚡</div>
-              <div>Lightning</div>
-            </div>
-            <div class="force-mini">
-              <div class="force-mini-icon">🧲</div>
-              <div>Magnetism</div>
-            </div>
-          </div>
-          
           <h1 class="auth-title">Welcome Back</h1>
-          <p class="auth-subtitle">Continue your journey as an architect</p>
+          <p class="auth-subtitle">Sign in to access your tools and resources</p>
         </header>
         
+        <!-- Purchase Context Banner -->
+        <div class="purchase-context" id="purchase-context" style="display:none; background: rgba(121, 134, 203, 0.15); border: 1px solid rgba(121, 134, 203, 0.3); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #b8bfff;">
+          Create an account to access your purchase: <strong id="purchase-product-name"></strong>
+        </div>
+
         <!-- Error Message -->
         <div class="form-error hidden" id="error-message">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -152,26 +142,56 @@
   <!-- Scripts -->
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
-  
+  <script src="../shared/js/whop-service.js"></script>
+  <script src="../shared/js/purchase-service.js"></script>
+
   <script>
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       // Create particles
       createParticles();
-      
+
+      // Show purchase context banner if pending purchase
+      if (window.PurchaseService && window.PurchaseService.hasPendingPurchase()) {
+        const pending = window.PurchaseService.getPendingPurchase();
+        const banner = document.getElementById('purchase-context');
+        const productName = document.getElementById('purchase-product-name');
+        if (banner && pending) {
+          productName.textContent = pending.productId || 'your item';
+          banner.style.display = 'block';
+        }
+        // Pre-fill email if available
+        if (pending && pending.email) {
+          const emailInput = document.getElementById('email');
+          if (emailInput) emailInput.value = pending.email;
+        }
+      }
+
       // Initialize Firebase
       if (window.FirebaseApp.init()) {
         window.AuthService.init();
-        
+
         // Check if already logged in
-        window.AuthService.onAuthStateChanged((user) => {
+        window.AuthService.onAuthStateChanged(async (user) => {
           if (user) {
-            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/index.html';
+            // Claim pending purchase if exists
+            if (window.PurchaseService && window.PurchaseService.hasPendingPurchase()) {
+              try {
+                const claimed = await window.PurchaseService.claimPendingPurchase();
+                if (claimed) {
+                  window.location.href = '../dashboard/library.html';
+                  return;
+                }
+              } catch (e) {
+                console.error('Error claiming purchase:', e);
+              }
+            }
+            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/feed.html';
             window.location.href = redirect;
           }
         });
       }
-      
+
       // Animate form elements
       animateFormElements();
     });

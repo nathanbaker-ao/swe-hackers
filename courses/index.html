@@ -3,757 +3,531 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Primary Meta Tags -->
-  <title>AutoNateAI - AI-Augmented Learning Platform</title>
-  <meta name="title" content="AutoNateAI - AI-Augmented Learning Platform">
-  <meta name="description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community. Track your cognitive progress with our analytics dashboard.">
-  
+  <title>AutoNateAI - Source 6-Figure Opportunities with Precision</title>
+  <meta name="title" content="AutoNateAI - Source 6-Figure Opportunities with Precision">
+  <meta name="description" content="We provide the tools and knowledge to efficiently source 6-figure opportunities. Advanced Boolean search packs for LinkedIn, Facebook, Reddit, and more.">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autonateai.com/">
-  <meta property="og:title" content="AutoNateAI - AI-Augmented Learning Platform">
-  <meta property="og:description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community. Track your cognitive progress with our analytics dashboard.">
+  <meta property="og:title" content="AutoNateAI - Source 6-Figure Opportunities with Precision">
+  <meta property="og:description" content="We provide the tools and knowledge to efficiently source 6-figure opportunities. Advanced Boolean search packs for LinkedIn, Facebook, Reddit, and more.">
   <meta property="og:image" content="https://autonateai.com/assets/og-preview.png">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://autonateai.com/">
-  <meta name="twitter:title" content="AutoNateAI - AI-Augmented Learning Platform">
-  <meta name="twitter:description" content="Master AI-augmented development through interactive lessons, real projects, and a supportive community.">
+  <meta name="twitter:title" content="AutoNateAI - Source 6-Figure Opportunities with Precision">
+  <meta name="twitter:description" content="We provide the tools and knowledge to efficiently source 6-figure opportunities.">
   <meta name="twitter:image" content="https://autonateai.com/assets/og-preview.png">
-  
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
-  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Styles -->
   <link rel="stylesheet" href="shared/css/marketing.css">
-  <link rel="stylesheet" href="shared/css/public-feed.css">
-  
-  <!-- Anime.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  
-  <!-- Cytoscape for interactive diagrams -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
-  
-  <!-- Firebase (for auth popup) -->
+
+  <!-- Firebase (for auth-aware navbar) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="shared/js/firebase-config.js"></script>
   <script src="shared/js/auth.js"></script>
 
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
   <!-- Shared Components -->
   <script src="shared/js/navbar.js" defer></script>
   <script src="shared/js/footer.js" defer></script>
-  <script src="shared/js/interactive/diagram-utils.js" defer></script>
-  <script src="shared/js/interactive/marketing-diagram.js" defer></script>
-  <script src="shared/js/marketing-diagram.js" defer></script>
+  <script src="shared/js/whop-service.js" defer></script>
 
-  <!-- Public Feed -->
-  <script src="shared/js/public-feed.js" defer></script>
+  <style>
+    /* Featured Products Grid */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .featured-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    }
+
+    .featured-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .featured-card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .featured-card-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .featured-card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .featured-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .featured-card-price {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-secondary);
+    }
+
+    .featured-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+    }
+
+    .featured-card-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(121, 134, 203, 0.3);
+    }
+
+    .featured-card-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .featured-tag {
+      padding: 0.25rem 0.6rem;
+      background: rgba(121, 134, 203, 0.1);
+      border: 1px solid rgba(121, 134, 203, 0.2);
+      border-radius: 50px;
+      font-size: 0.7rem;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    /* How It Works */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 50%;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 auto 1.25rem;
+    }
+
+    .step-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Results Section */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .result-card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-normal);
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(77, 182, 172, 0.3);
+    }
+
+    .result-value {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+
+    .result-label {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .result-detail {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Testimonial */
+    .testimonial-block {
+      max-width: 700px;
+      margin: 3rem auto 0;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(121, 134, 203, 0.05);
+      border: 1px solid rgba(121, 134, 203, 0.15);
+      border-radius: var(--radius-lg);
+    }
+
+    .testimonial-text {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .featured-grid,
+      .steps-grid,
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .steps-grid,
+      .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid,
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  
+
   <!-- Navigation (injected) -->
   <div id="navbar-container"></div>
-  
+
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
-    
-    <div class="hero-content">
-      <div class="hero-text">
+
+    <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; justify-items: center;">
+      <div class="hero-text" style="max-width: 800px;">
         <div class="hero-badge">
-          <span>🚀</span>
-          <span>AI-Augmented Learning</span>
+          <span>&#x1F50D;</span>
+          <span>Advanced Search Tools</span>
         </div>
-        
-        <h1 class="hero-title">Master Development with AI as Your Copilot</h1>
-        
+
+        <h1 class="hero-title">Source 6-Figure Opportunities with Precision</h1>
+
         <p class="hero-subtitle">
-          Stop watching tutorials you'll forget. Learn by building real projects with AI assistance, 
-          track your cognitive progress, and join a community of architects thinking at the systems level.
+          We provide the tools and knowledge to efficiently source 6-figure opportunities.
+          Our expertly crafted Boolean search packs help you find hidden roles, decision-makers,
+          and high-value leads across every major platform.
         </p>
-        
-        <div class="hero-cta">
-          <a href="auth/register.html" class="btn btn-primary">
-            Start Learning Free
-            <span>→</span>
+
+        <div class="hero-cta" style="justify-content: center;">
+          <a href="shop.html" class="btn btn-primary">
+            Browse Tools
+            <span>&#x2192;</span>
           </a>
-          <a href="#platform" class="btn btn-secondary">
-            See the Platform
+          <a href="#how-it-works" class="btn btn-secondary">
+            Learn More
           </a>
         </div>
-        
-        <div class="hero-stats">
+
+        <div class="hero-stats" style="justify-content: center;">
           <div class="hero-stat">
-            <div class="hero-stat-value">4</div>
-            <div class="hero-stat-label">Learning Paths</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-value">28</div>
-            <div class="hero-stat-label">Interactive Lessons</div>
+            <div class="hero-stat-value">6+</div>
+            <div class="hero-stat-label">Search Packs</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-value">∞</div>
-            <div class="hero-stat-label">Daily Challenges</div>
+            <div class="hero-stat-value">5+</div>
+            <div class="hero-stat-label">Platforms</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">$100K+</div>
+            <div class="hero-stat-label">Avg Target Salary</div>
           </div>
         </div>
       </div>
-      
-      <div class="hero-visual">
-        <div class="hero-float hero-float-1">
-          <span style="font-size: 1.5rem;">🧠</span>
-          <span style="margin-left: 0.5rem; font-size: 0.9rem; color: var(--accent-secondary);">Cognitive Score: 78</span>
-        </div>
-        <div class="hero-float hero-float-2">
-          <span style="font-size: 1.5rem;">🔥</span>
-          <span style="margin-left: 0.5rem; font-size: 0.9rem;">7 Day Streak!</span>
-        </div>
-        <div class="hero-float hero-float-3">
-          <span style="font-size: 1.5rem;">✅</span>
-          <span style="margin-left: 0.5rem; font-size: 0.9rem; color: var(--accent-success);">Quiz: 100%</span>
-        </div>
-        <!-- Dashboard screenshot -->
-        <img src="assets/screenshots/dashboard-preview.png" alt="AutoNateAI Dashboard showing learning analytics, weekly activity, and course progress" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 60px rgba(0,0,0,0.4);">
-      </div>
-    </div>
-  </section>
-  
-  <!-- Interactive Preview Section -->
-  <section class="section interactive-preview" id="preview">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">See It In Action</div>
-        <h2 class="section-title">Interactive Learning, Visualized</h2>
-        <p class="section-subtitle">
-          Watch how our animated diagrams bring concepts to life. These mini-stories help you 
-          understand complex ideas at a glance.
-        </p>
-      </div>
-      
-      <div class="diagrams-showcase">
-        <!-- Stone: Variables -->
-        <div class="marketing-diagram-wrapper">
-          <div class="diagram-header">
-            <div class="diagram-title">
-              <span class="icon">🪨</span>
-              <span>Variables</span>
-              <span class="theme-badge stone">Stone</span>
-            </div>
-            <button class="audio-toggle muted" title="Enable audio">🔇</button>
-          </div>
-          <div class="marketing-diagram-canvas" id="diagram-variables"></div>
-          <div class="marketing-caption">Data finds a home in memory...</div>
-        </div>
-        
-        <!-- Lightning: Data Flow -->
-        <div class="marketing-diagram-wrapper">
-          <div class="diagram-header">
-            <div class="diagram-title">
-              <span class="icon">⚡</span>
-              <span>Data Flow</span>
-              <span class="theme-badge lightning">Lightning</span>
-            </div>
-            <button class="audio-toggle muted" title="Enable audio">🔇</button>
-          </div>
-          <div class="marketing-diagram-canvas" id="diagram-dataflow"></div>
-          <div class="marketing-caption">Input transforms into output...</div>
-        </div>
-        
-        <!-- Magnetism: API -->
-        <div class="marketing-diagram-wrapper">
-          <div class="diagram-header">
-            <div class="diagram-title">
-              <span class="icon">🧲</span>
-              <span>API Connection</span>
-              <span class="theme-badge magnetism">Magnetism</span>
-            </div>
-            <button class="audio-toggle muted" title="Enable audio">🔇</button>
-          </div>
-          <div class="marketing-diagram-canvas" id="diagram-api"></div>
-          <div class="marketing-caption">Systems connect and communicate...</div>
-        </div>
-      </div>
-      
-      <p class="diagrams-hint">
-        <span>✨</span> Try dragging the nodes around — these diagrams are fully interactive
-      </p>
-    </div>
-  </section>
-  
-  <!-- Community Feed Preview -->
-  <section class="section public-feed-section" id="community-feed">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">Live Community</div>
-        <h2 class="section-title">See What Builders Are Sharing</h2>
-        <p class="section-subtitle">
-          Real posts from developers learning, building, and shipping on AutoNateAI.
-          Code snippets, project showcases, challenge wins, and more.
-        </p>
-      </div>
-      <div id="public-feed-container"></div>
     </div>
   </section>
 
-  <!-- Floating CTA -->
-  <div class="public-feed-floating-cta" id="public-feed-floating-cta">
-    <span class="pf-floating-text">Join 500+ builders sharing code and projects</span>
-    <button class="pf-btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8rem;">Sign Up Free</button>
-    <button class="pf-floating-dismiss">&times;</button>
-  </div>
-
-  <!-- Quick Quiz Section -->
-  <section class="section quick-quiz-section">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">Test Yourself</div>
-        <h2 class="section-title">Think You Get It?</h2>
-        <p class="section-subtitle">
-          Three quick questions. No signup required. See how you'd do in our courses.
-        </p>
-      </div>
-      
-      <div class="quick-quiz" id="landing-quiz">
-        <div class="quiz-questions">
-          <!-- Question 1 -->
-          <div class="quiz-question active" data-question="1">
-            <div class="question-number">1 of 3</div>
-            <h3 class="question-text">What does a variable do?</h3>
-            <div class="question-options">
-              <button class="quiz-option" data-correct="false">Runs your code faster</button>
-              <button class="quiz-option" data-correct="true">Stores data with a name you can reference</button>
-              <button class="quiz-option" data-correct="false">Connects to the internet</button>
-              <button class="quiz-option" data-correct="false">Displays graphics on screen</button>
-            </div>
-            <div class="question-feedback"></div>
-          </div>
-          
-          <!-- Question 2 -->
-          <div class="quiz-question" data-question="2">
-            <div class="question-number">2 of 3</div>
-            <h3 class="question-text">In "data flow," what happens to input?</h3>
-            <div class="question-options">
-              <button class="quiz-option" data-correct="false">It gets deleted</button>
-              <button class="quiz-option" data-correct="false">It stays exactly the same</button>
-              <button class="quiz-option" data-correct="true">It gets transformed into output</button>
-              <button class="quiz-option" data-correct="false">It becomes a variable name</button>
-            </div>
-            <div class="question-feedback"></div>
-          </div>
-          
-          <!-- Question 3 -->
-          <div class="quiz-question" data-question="3">
-            <div class="question-number">3 of 3</div>
-            <h3 class="question-text">What do APIs enable?</h3>
-            <div class="question-options">
-              <button class="quiz-option" data-correct="false">Faster typing speed</button>
-              <button class="quiz-option" data-correct="false">Better graphics</button>
-              <button class="quiz-option" data-correct="false">Storing passwords</button>
-              <button class="quiz-option" data-correct="true">Different systems to communicate</button>
-            </div>
-            <div class="question-feedback"></div>
-          </div>
-        </div>
-        
-        <!-- Results -->
-        <div class="quiz-results" style="display: none;">
-          <div class="results-score">
-            <span class="score-value">0</span>/3
-          </div>
-          <h3 class="results-title">Nice work!</h3>
-          <p class="results-message">You've got the basics down. Imagine what you could learn with our full interactive courses.</p>
-          <a href="auth/register.html" class="btn btn-primary">
-            Start Learning Free
-            <span>→</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Problem Section -->
+  <!-- Featured Products Section -->
   <section class="section" style="background: var(--bg-secondary);">
     <div class="section-container">
       <div class="section-header">
-        <div class="section-badge">The Problem</div>
-        <h2 class="section-title">Traditional Learning is Broken</h2>
+        <div class="section-badge">Top Picks</div>
+        <h2 class="section-title">Featured Products</h2>
         <p class="section-subtitle">
-          You watch hours of tutorials, take notes you never revisit, and forget 90% within a week.
-          Meanwhile, AI is transforming how code gets written — and most courses ignore it entirely.
+          Our most popular search packs, trusted by professionals to land high-value opportunities.
         </p>
       </div>
-      
-      <div class="problem-diagram-container">
-        <div class="marketing-diagram-wrapper large">
-          <div class="diagram-header">
-            <div class="diagram-title">
-              <span class="icon">🔄</span>
-              <span>The Broken Learning Cycle</span>
-              <span class="theme-badge" style="background: rgba(239, 83, 80, 0.15); color: #ef5350; border-color: rgba(239, 83, 80, 0.3);">Problem</span>
-            </div>
-          </div>
-          <div class="marketing-diagram-canvas large" id="diagram-problem"></div>
-          <div class="marketing-caption">This cycle keeps you stuck. Let's break it.</div>
-        </div>
+
+      <div class="featured-grid" id="featured-products">
+        <!-- Populated by JS -->
       </div>
-    </div>
-  </section>
-  
-  <!-- Solution Section -->
-  <section class="section">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">Our Approach</div>
-        <h2 class="section-title">Learn Like an Architect, Build Like a Pro</h2>
-        <p class="section-subtitle">
-          AutoNateAI teaches you to think in systems, communicate with AI, and build real projects —
-          not just copy code from tutorials.
-        </p>
-      </div>
-      
-      <!-- Three Forces Diagram -->
-      <div class="approach-showcase">
-        <div class="approach-diagram">
-          <div class="marketing-diagram-wrapper">
-            <div class="diagram-header">
-              <div class="diagram-title">
-                <span class="icon">🏗️</span>
-                <span>The Three Forces</span>
-                <span class="theme-badge stone">Core Model</span>
-              </div>
-            </div>
-            <div class="marketing-diagram-canvas" id="diagram-three-forces"></div>
-            <div class="marketing-caption">Master these three forces and you can build anything.</div>
-          </div>
-        </div>
-        <div class="approach-text">
-          <h3>Systems Thinking</h3>
-          <p>Every program is made of three forces working together:</p>
-          <ul class="approach-list">
-            <li><span class="force-icon">🪨</span> <strong>Stone (Data)</strong> — Information that persists and transforms</li>
-            <li><span class="force-icon">⚡</span> <strong>Lightning (Flow)</strong> — Logic that decides what happens when</li>
-            <li><span class="force-icon">🧲</span> <strong>Magnetism (Connections)</strong> — How systems talk to each other</li>
-          </ul>
-          <p class="approach-cta">Understand these, and you'll see the matrix in any codebase.</p>
-        </div>
-      </div>
-      
-      <!-- AI Workflow Diagram -->
-      <div class="approach-showcase reverse">
-        <div class="approach-diagram">
-          <div class="marketing-diagram-wrapper">
-            <div class="diagram-header">
-              <div class="diagram-title">
-                <span class="icon">🤖</span>
-                <span>AI-Augmented Workflow</span>
-                <span class="theme-badge lightning">Multiplier</span>
-              </div>
-            </div>
-            <div class="marketing-diagram-canvas" id="diagram-ai-workflow"></div>
-            <div class="marketing-caption">You architect. AI implements. Together, you ship faster.</div>
-          </div>
-        </div>
-        <div class="approach-text">
-          <h3>AI as Your Copilot</h3>
-          <p>Stop writing boilerplate. Start thinking bigger:</p>
-          <ul class="approach-list">
-            <li><span class="force-icon">🎯</span> <strong>You define</strong> — Requirements, architecture, edge cases</li>
-            <li><span class="force-icon">🤖</span> <strong>AI generates</strong> — Code, tests, documentation</li>
-            <li><span class="force-icon">✅</span> <strong>You validate</strong> — Review, refine, ship</li>
-          </ul>
-          <p class="approach-cta">10x your output without sacrificing quality.</p>
-        </div>
-      </div>
-      
-      <!-- Learning Loop Diagram -->
-      <div class="approach-showcase">
-        <div class="approach-diagram">
-          <div class="marketing-diagram-wrapper">
-            <div class="diagram-header">
-              <div class="diagram-title">
-                <span class="icon">📈</span>
-                <span>The Learning Loop</span>
-                <span class="theme-badge magnetism">Growth</span>
-              </div>
-            </div>
-            <div class="marketing-diagram-canvas" id="diagram-learning-loop"></div>
-            <div class="marketing-caption">Learn, practice, track, improve. Repeat.</div>
-          </div>
-        </div>
-        <div class="approach-text">
-          <h3>Track Your Growth</h3>
-          <p>See your progress in real-time:</p>
-          <ul class="approach-list">
-            <li><span class="force-icon">🧠</span> <strong>Cognitive Score</strong> — Your overall learning health</li>
-            <li><span class="force-icon">🔥</span> <strong>Streak Tracking</strong> — Build consistent habits</li>
-            <li><span class="force-icon">📊</span> <strong>Quiz Mastery</strong> — Know what you know</li>
-          </ul>
-          <p class="approach-cta">Data-driven learning that actually works.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Interactive Platform Preview Section -->
-  <section class="section interactive-preview-section" id="platform">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">The Platform</div>
-        <h2 class="section-title">Your Learning Journey, Visualized</h2>
-        <p class="section-subtitle">
-          See how our platform takes you from beginner to AI-augmented developer with interactive lessons, 
-          progress tracking, and community support.
-        </p>
-      </div>
-      
-      <!-- Tab Navigation -->
-      <div class="preview-tabs" style="margin: 0 auto 2rem;">
-        <button class="preview-tab active" data-tab="flow">Platform Flow</button>
-        <button class="preview-tab" data-tab="journey">Learning Paths</button>
-        <button class="preview-tab" data-tab="analytics">Analytics</button>
-      </div>
-      
-      <!-- Tab Content: Platform Flow -->
-      <div class="preview-tab-content active" data-content="flow">
-        <div class="preview-layout">
-          <div class="preview-content">
-            <h3>From Curiosity to Mastery</h3>
-            <p>
-              Our platform guides you through every step — from your first lesson to becoming a 
-              systems-thinking developer who can leverage AI as a coding partner.
-            </p>
-            
-            <ul class="preview-features-list">
-              <li>
-                <span class="feature-icon">🏠</span>
-                <span>Explore courses and learning paths tailored to your level</span>
-              </li>
-              <li>
-                <span class="feature-icon">📊</span>
-                <span>Track your progress with real-time analytics dashboard</span>
-              </li>
-              <li>
-                <span class="feature-icon">⚡</span>
-                <span>Test your skills with interactive quizzes and activities</span>
-              </li>
-              <li>
-                <span class="feature-icon">💬</span>
-                <span>Connect with peers and mentors in our Discord community</span>
-              </li>
-            </ul>
-            
-            <button class="replay-btn" onclick="platformDiagram.replay()">
-              <span>▶</span> Replay Animation
-            </button>
-          </div>
-          
-          <div class="preview-diagram-wrapper">
-            <div id="platform-flow-diagram" class="marketing-diagram"></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Tab Content: Learning Journey -->
-      <div class="preview-tab-content" data-content="journey">
-        <div class="preview-layout reverse">
-          <div class="preview-content">
-            <h3>Choose Your Path</h3>
-            <p>
-              Whether you're just starting out or looking to multiply your impact, we have a learning 
-              path designed for you. Each course builds on systems thinking and AI-augmented workflows.
-            </p>
-            
-            <div class="tour-steps">
-              <div class="tour-step active" data-node="beginner">
-                <div class="tour-step-number">1</div>
-                <div class="tour-step-content">
-                  <h5>The Apprentice's Path</h5>
-                  <p>Start from zero with the "Three Forces" narrative — data, control flow, and connections.</p>
-                </div>
-              </div>
-              <div class="tour-step" data-node="junior">
-                <div class="tour-step-number">2</div>
-                <div class="tour-step-content">
-                  <h5>Junior Accelerator</h5>
-                  <p>Skip the 5-year grind. Learn to think like a senior engineer with AI assistance.</p>
-                </div>
-              </div>
-              <div class="tour-step" data-node="senior">
-                <div class="tour-step-number">3</div>
-                <div class="tour-step-content">
-                  <h5>Senior Amplifier</h5>
-                  <p>Multiply your impact with agentic workflows and advanced architecture patterns.</p>
-                </div>
-              </div>
-            </div>
-            
-            <button class="replay-btn" onclick="journeyDiagram.replay()">
-              <span>▶</span> Replay Animation
-            </button>
-          </div>
-          
-          <div class="preview-diagram-wrapper">
-            <div id="learning-journey-diagram" class="marketing-diagram"></div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Tab Content: Analytics -->
-      <div class="preview-tab-content" data-content="analytics">
-        <div class="preview-layout">
-          <div class="preview-content">
-            <h3>Track Your Growth</h3>
-            <p>
-              Our analytics dashboard gives you real-time insights into your learning progress, 
-              helping you understand your strengths and areas for improvement.
-            </p>
-            
-            <div class="interactive-demo-card">
-              <div class="demo-header">
-                <div class="demo-header-icon">📊</div>
-                <div class="demo-header-text">
-                  <h4>Your Progress Dashboard</h4>
-                  <p>Real-time learning analytics</p>
-                </div>
-              </div>
-              
-              <div class="demo-stats">
-                <div class="demo-stat">
-                  <div class="demo-stat-value">78</div>
-                  <div class="demo-stat-label">Cognitive Score</div>
-                </div>
-                <div class="demo-stat">
-                  <div class="demo-stat-value">92%</div>
-                  <div class="demo-stat-label">Quiz Accuracy</div>
-                </div>
-                <div class="demo-stat">
-                  <div class="demo-stat-value">7</div>
-                  <div class="demo-stat-label">Day Streak</div>
-                </div>
-              </div>
-            </div>
-            
-            <ul class="preview-features-list" style="margin-top: 1.5rem;">
-              <li>
-                <span class="feature-icon">🧠</span>
-                <span>Cognitive Score — composite metric of your learning health</span>
-              </li>
-              <li>
-                <span class="feature-icon">📈</span>
-                <span>Learning Velocity — lessons per week with trend analysis</span>
-              </li>
-              <li>
-                <span class="feature-icon">🎯</span>
-                <span>Quiz Mastery — first-try accuracy by topic</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div class="preview-diagram-wrapper">
-            <img src="assets/screenshots/analytics0preview.png" alt="AutoNateAI Course Analytics" style="width: 100%; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 25px 80px rgba(0,0,0,0.4);">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Courses Section -->
-  <section class="section courses-section" id="courses">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">Learning Paths</div>
-        <h2 class="section-title">Choose Your Journey</h2>
-        <p class="section-subtitle">
-          Whether you're a complete beginner or a senior engineer, we have a path designed for you.
-        </p>
-      </div>
-      
-      <div class="courses-grid">
-        <!-- Apprentice -->
-        <div class="course-card">
-          <img src="assets/courses/course-apprentice.png" alt="The Apprentice's Path" class="course-banner-img">
-          <div class="course-body">
-            <h3 class="course-title">The Apprentice's Path</h3>
-            <div class="course-audience">For Complete Beginners</div>
-            <p class="course-desc">
-              Start from zero. Learn programming fundamentals through the "Three Forces" narrative — 
-              data as stone, control flow as lightning, functions as magnetism.
-            </p>
-            <div class="course-meta">
-              <span>📚 7 Chapters</span>
-              <span>⏱️ 6 Weeks</span>
-            </div>
-            <a href="course/apprentice.html" class="course-link">Learn More →</a>
-          </div>
-        </div>
-        
-        <!-- Junior -->
-        <div class="course-card">
-          <img src="assets/courses/course-junior.png" alt="The Junior Accelerator" class="course-banner-img">
-          <div class="course-body">
-            <h3 class="course-title">The Junior Accelerator</h3>
-            <div class="course-audience">For Junior Engineers</div>
-            <p class="course-desc">
-              Skip the 5-year grind. Learn to think like a senior engineer with AI as your accelerator.
-              Build systems, not just features.
-            </p>
-            <div class="course-meta">
-              <span>📚 7 Chapters</span>
-              <span>⏱️ 4-8 Weeks</span>
-            </div>
-            <a href="course/junior.html" class="course-link">Learn More →</a>
-          </div>
-        </div>
-        
-        <!-- Senior -->
-        <div class="course-card">
-          <img src="assets/courses/course-senior.png" alt="The Senior Amplifier" class="course-banner-img">
-          <div class="course-body">
-            <h3 class="course-title">The Senior Amplifier</h3>
-            <div class="course-audience">For Mid-to-Senior Engineers</div>
-            <p class="course-desc">
-              Multiply your impact. Learn agentic workflows, architecture patterns, and how to 
-              10x your output with AI-augmented development.
-            </p>
-            <div class="course-meta">
-              <span>📚 7 Chapters</span>
-              <span>⏱️ 4-8 Weeks</span>
-            </div>
-            <a href="course/senior.html" class="course-link">Learn More →</a>
-          </div>
-        </div>
-      </div>
-      
+
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="catalog.html" style="
-          display: inline-flex;
-          align-items: center;
-          gap: 0.75rem;
-          padding: 1rem 2.5rem;
-          background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          font-size: 1.1rem;
-          border-radius: 50px;
-          box-shadow: 0 10px 40px rgba(121, 134, 203, 0.3);
-          transition: all 0.3s ease;
-        " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 15px 50px rgba(121, 134, 203, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 40px rgba(121, 134, 203, 0.3)';">
-          <span>📚</span>
-          View All Courses
-          <span>→</span>
+        <a href="shop.html" class="btn btn-primary">
+          View All Products
+          <span>&#x2192;</span>
         </a>
       </div>
     </div>
   </section>
-  
+
+  <!-- How It Works Section -->
+  <section class="section" id="how-it-works">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Three Simple Steps</h2>
+        <p class="section-subtitle">
+          Get from browsing to sourcing opportunities in minutes, not hours.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">&#x1F4E6;</div>
+          <h3 class="step-title">Browse Our Search Packs</h3>
+          <p class="step-desc">
+            Explore our collection of expertly crafted Boolean search strings,
+            optimized for LinkedIn, Facebook, Reddit, Google, and more.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">&#x26A1;</div>
+          <h3 class="step-title">Get Instant Access</h3>
+          <p class="step-desc">
+            Purchase securely through Whop and get immediate access to your
+            search pack. No subscriptions, no recurring fees.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">&#x1F3AF;</div>
+          <h3 class="step-title">Start Sourcing Opportunities</h3>
+          <p class="step-desc">
+            Copy, paste, and customize the search strings to uncover
+            6-figure roles and high-value leads on your target platforms.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Results</div>
+        <h2 class="section-title">Real Results, Real Opportunities</h2>
+        <p class="section-subtitle">
+          Our search packs are designed to surface the opportunities that most people never find.
+        </p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-value">$100K+</div>
+          <div class="result-label">Average Target Salary</div>
+          <p class="result-detail">
+            Our search strings are tuned specifically for senior-level and high-value positions.
+          </p>
+        </div>
+        <div class="result-card">
+          <div class="result-value">10x</div>
+          <div class="result-label">Faster Sourcing</div>
+          <p class="result-detail">
+            Stop manually scrolling. Our Boolean queries surface relevant results in seconds.
+          </p>
+        </div>
+        <div class="result-card">
+          <div class="result-value">5+</div>
+          <div class="result-label">Platforms Covered</div>
+          <p class="result-detail">
+            LinkedIn, Facebook, Reddit, Twitter/X, and Google -- all in one toolkit.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-block">
+        <p class="testimonial-text">
+          "I used the LinkedIn Boolean Pack and found three hiring managers for roles
+          that weren't even listed on job boards. Landed interviews within a week."
+        </p>
+        <p class="testimonial-author">-- Early Access User</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Community Section -->
   <section class="section community-section">
     <div class="section-container">
       <div class="community-card">
-        <div class="community-icon">💬</div>
+        <div class="community-icon">&#x1F4AC;</div>
         <h2 class="community-title">Join the Community</h2>
         <p class="community-desc">
-          Learning is better together. Join our Discord for daily challenges, study groups, 
-          code reviews, and mentorship from experienced developers.
+          Connect with other professionals sourcing 6-figure opportunities.
+          Share strategies, get tips, and stay updated on new search packs.
         </p>
-        
+
         <div class="community-stats">
           <div class="community-stat">
             <div class="community-stat-value">500+</div>
-            <div class="community-stat-label">Learners</div>
+            <div class="community-stat-label">Members</div>
           </div>
           <div class="community-stat">
             <div class="community-stat-value">Daily</div>
-            <div class="community-stat-label">Challenges</div>
+            <div class="community-stat-label">Tips Shared</div>
           </div>
           <div class="community-stat">
             <div class="community-stat-value">24/7</div>
             <div class="community-stat-label">Support</div>
           </div>
         </div>
-        
+
         <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-primary">
           Join Discord
-          <span>→</span>
+          <span>&#x2192;</span>
         </a>
       </div>
     </div>
   </section>
-  
-  <!-- Enterprise CTA -->
-  <section class="section" style="background: var(--bg-secondary);">
-    <div class="section-container">
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
-          <h3 class="service-title">For Partnerships</h3>
-          <p class="service-desc">
-            Upskill your engineering team with custom training programs. Track progress, 
-            measure ROI, and build an AI-augmented workforce.
-          </p>
-          <a href="partnerships.html" class="btn btn-secondary" style="margin-top: 1.5rem;">
-            Learn More →
-          </a>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">💼</div>
-          <h3 class="service-title">Consulting Services</h3>
-          <p class="service-desc">
-            Need help integrating AI into your development workflow? Our consultants 
-            bring hands-on experience building AI-augmented systems.
-          </p>
-          <a href="consulting.html" class="btn btn-secondary" style="margin-top: 1.5rem;">
-            Learn More →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
   <!-- Final CTA -->
   <section class="cta-section">
-    <h2 class="cta-title">Ready to Level Up?</h2>
+    <h2 class="cta-title">Ready to Find Your Next Opportunity?</h2>
     <p class="cta-subtitle">
-      Join thousands of developers learning to build with AI. Start free today.
+      Stop guessing. Start sourcing 6-figure opportunities with precision search tools built by professionals.
     </p>
     <div class="cta-buttons">
-      <a href="auth/register.html" class="btn btn-primary">
-        Start Learning Free
-        <span>→</span>
+      <a href="shop.html" class="btn btn-primary">
+        Browse the Shop
+        <span>&#x2192;</span>
       </a>
       <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-secondary">
         Join Discord Community
       </a>
     </div>
   </section>
-  
+
   <!-- Footer (injected) -->
   <div id="footer-container"></div>
-  
+
   <!-- Scripts -->
   <script>
-    // Initialize shared components
-    
-    // Marketing Diagram instances
-    let platformDiagram = null;
-    let journeyDiagram = null;
     document.addEventListener('DOMContentLoaded', () => {
       NavbarComponent.inject('navbar-container');
       FooterComponent.inject('footer-container');
-      
+
       // Hero animations
       anime({
         targets: '.hero-badge',
@@ -762,7 +536,7 @@
         duration: 800,
         easing: 'easeOutCubic'
       });
-      
+
       anime({
         targets: '.hero-title',
         opacity: [0, 1],
@@ -771,7 +545,7 @@
         delay: 200,
         easing: 'easeOutCubic'
       });
-      
+
       anime({
         targets: '.hero-subtitle',
         opacity: [0, 1],
@@ -780,7 +554,7 @@
         delay: 400,
         easing: 'easeOutCubic'
       });
-      
+
       anime({
         targets: '.hero-cta',
         opacity: [0, 1],
@@ -789,7 +563,7 @@
         delay: 600,
         easing: 'easeOutCubic'
       });
-      
+
       anime({
         targets: '.hero-stats',
         opacity: [0, 1],
@@ -798,148 +572,61 @@
         delay: 800,
         easing: 'easeOutCubic'
       });
-      
-      anime({
-        targets: '.hero-visual',
-        opacity: [0, 1],
-        translateX: [50, 0],
-        duration: 1200,
-        delay: 500,
-        easing: 'easeOutCubic'
+
+      // Load featured products
+      loadFeaturedProducts();
+    });
+
+    function loadFeaturedProducts() {
+      const container = document.getElementById('featured-products');
+      if (!container || typeof WhopService === 'undefined') return;
+
+      const featured = WhopService.getFeaturedProducts();
+
+      featured.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'featured-card';
+
+        const tagsHtml = product.tags.map(tag =>
+          `<span class="featured-tag">${tag}</span>`
+        ).join('');
+
+        card.innerHTML = `
+          <div class="featured-card-icon">${product.platformIcon}</div>
+          <h3 class="featured-card-name">${product.name}</h3>
+          <div class="featured-card-tags">${tagsHtml}</div>
+          <p class="featured-card-desc">${product.description}</p>
+          <div class="featured-card-footer">
+            <span class="featured-card-price">$${product.price}</span>
+            <a href="shop.html" class="featured-card-link">View Details &#x2192;</a>
+          </div>
+        `;
+
+        container.appendChild(card);
       });
-      
+
+      // Animate cards in
       anime({
-        targets: '.hero-float',
+        targets: '.featured-card',
         opacity: [0, 1],
-        scale: [0.8, 1],
-        delay: anime.stagger(200, { start: 1000 }),
+        translateY: [30, 0],
+        delay: anime.stagger(150),
         duration: 600,
         easing: 'easeOutCubic'
       });
-      
-      // Initialize Platform Preview Diagrams
-      initPlatformDiagrams();
-      
-      // Setup Tab Navigation
-      setupPreviewTabs();
-      
-      // Setup Tour Step Interactivity
-      setupTourSteps();
-    });
-    
-    // Initialize the interactive marketing diagrams
-    function initPlatformDiagrams() {
-      // Platform Flow Diagram
-      platformDiagram = new PlatformDiagram('platform-flow-diagram', {
-        autoPlay: true,
-        autoPlayDelay: 800,
-        nodeAnimationDuration: 500,
-        edgeAnimationDuration: 350
-      });
-      platformDiagram.setData(PLATFORM_FLOW_DATA.nodes, PLATFORM_FLOW_DATA.edges);
-      
-      // Learning Journey Diagram  
-      journeyDiagram = new PlatformDiagram('learning-journey-diagram', {
-        autoPlay: false, // Will play when tab is activated
-        nodeAnimationDuration: 600,
-        edgeAnimationDuration: 400
-      });
-      journeyDiagram.setData(LEARNING_JOURNEY_DATA.nodes, LEARNING_JOURNEY_DATA.edges);
     }
-    
-    // Setup the preview tab navigation
-    function setupPreviewTabs() {
-      const tabs = document.querySelectorAll('.preview-tab');
-      const contents = document.querySelectorAll('.preview-tab-content');
-      
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const targetTab = tab.dataset.tab;
-          
-          // Update active tab
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          
-          // Update active content
-          contents.forEach(content => {
-            content.classList.remove('active');
-            if (content.dataset.content === targetTab) {
-              content.classList.add('active');
-              
-              // Trigger diagram animation when journey tab becomes active
-              if (targetTab === 'journey' && journeyDiagram && !journeyDiagram.hasAnimated) {
-                setTimeout(() => journeyDiagram.animate(), 300);
-              }
-            }
-          });
-        });
-      });
-    }
-    
-    // Setup tour step interactivity (for learning journey section)
-    function setupTourSteps() {
-      const tourSteps = document.querySelectorAll('.tour-step');
-      
-      tourSteps.forEach(step => {
-        step.addEventListener('click', () => {
-          // Update active step
-          tourSteps.forEach(s => s.classList.remove('active'));
-          step.classList.add('active');
-          
-          // Highlight corresponding node in diagram
-          const nodeId = step.dataset.node;
-          if (nodeId && journeyDiagram) {
-            const nodeEl = document.querySelector(`#learning-journey-diagram [data-node-id="${nodeId}"]`);
-            if (nodeEl) {
-              // Flash the node
-              const rect = nodeEl.querySelector('rect');
-              if (rect) {
-                const originalStroke = rect.getAttribute('stroke');
-                rect.setAttribute('stroke', '#4db6ac');
-                rect.setAttribute('stroke-width', '4');
-                setTimeout(() => {
-                  rect.setAttribute('stroke', originalStroke);
-                  rect.setAttribute('stroke-width', '2');
-                }, 600);
-              }
-            }
-          }
-        });
-        
-        // Hover effect
-        step.addEventListener('mouseenter', () => {
-          const nodeId = step.dataset.node;
-          if (nodeId && journeyDiagram) {
-            const nodeEl = document.querySelector(`#learning-journey-diagram [data-node-id="${nodeId}"]`);
-            if (nodeEl) {
-              journeyDiagram.highlightNode(nodeEl);
-            }
-          }
-        });
-        
-        step.addEventListener('mouseleave', () => {
-          const nodeId = step.dataset.node;
-          if (nodeId && journeyDiagram) {
-            const nodeEl = document.querySelector(`#learning-journey-diagram [data-node-id="${nodeId}"]`);
-            if (nodeEl && !step.classList.contains('active')) {
-              journeyDiagram.unhighlightNode(nodeEl);
-            }
-          }
-        });
-      });
-    }
-    
+
     // Intersection Observer for scroll animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           anime({
-            targets: entry.target.querySelectorAll('.feature-card, .course-card, .service-card, .preview-feature, .tour-step'),
+            targets: entry.target.querySelectorAll('.step-card, .result-card, .featured-card, .community-card'),
             opacity: [0, 1],
             translateY: [30, 0],
             delay: anime.stagger(100),
@@ -950,281 +637,10 @@
         }
       });
     }, observerOptions);
-    
+
     document.querySelectorAll('.section-container').forEach(section => {
       observer.observe(section);
     });
-    
-    // ============================================
-    // Initialize Marketing Diagrams
-    // ============================================
-    
-    // Wait for MarketingDiagram to be available
-    function initMarketingDiagrams() {
-      if (typeof MarketingDiagram === 'undefined') {
-        setTimeout(initMarketingDiagrams, 100);
-        return;
-      }
-      
-      // Story: Variables (Stone)
-      const variablesStory = {
-        id: 'variables-story',
-        elements: [
-          { data: { id: 'memory', label: '🧠 Memory', type: 'data' } },
-          { data: { id: 'variable', label: '📦 Variable', type: 'concept' } },
-          { data: { source: 'memory', target: 'variable' } }
-        ],
-        steps: [
-          { nodeId: 'memory', caption: 'Your computer has memory — raw storage space waiting to be used...' },
-          { nodeId: 'variable', edges: [{ from: 'memory', to: 'variable' }], caption: 'Variables give that memory a name. Now you can store and retrieve data!' }
-        ]
-      };
-      
-      // Story: Data Flow (Lightning)
-      const dataFlowStory = {
-        id: 'dataflow-story',
-        elements: [
-          { data: { id: 'input', label: '📊 Input', type: 'external' } },
-          { data: { id: 'transform', label: '⚡ Transform', type: 'service' } },
-          { data: { id: 'output', label: '📈 Output', type: 'example' } },
-          { data: { source: 'input', target: 'transform' } },
-          { data: { source: 'transform', target: 'output' } }
-        ],
-        steps: [
-          { nodeId: 'input', caption: 'Data enters your program — raw, unprocessed, full of potential...' },
-          { nodeId: 'output', edges: [{ from: 'input', to: 'transform' }, { from: 'transform', to: 'output' }], caption: 'Your code transforms it into something valuable. That\'s the flow!' }
-        ]
-      };
-      
-      // Story: API Connection (Magnetism)
-      const apiStory = {
-        id: 'api-story',
-        elements: [
-          { data: { id: 'client', label: '💻 Your App', type: 'page' } },
-          { data: { id: 'api', label: '🌐 API', type: 'service' } },
-          { data: { id: 'response', label: '✅ Response', type: 'example' } },
-          { data: { source: 'client', target: 'api' } },
-          { data: { source: 'api', target: 'response' } }
-        ],
-        steps: [
-          { nodeId: 'client', caption: 'Your app needs data from somewhere else...' },
-          { nodeId: 'response', edges: [{ from: 'client', to: 'api' }, { from: 'api', to: 'response' }], caption: 'APIs connect systems. Request sent, response received. Magic!' }
-        ]
-      };
-      
-      // Initialize diagrams (they auto-play on scroll)
-      MarketingDiagram.init('diagram-variables', variablesStory, {
-        canvasHeight: 280,
-        stepDuration: 2500,
-        loopDelay: 2500
-      });
-      
-      MarketingDiagram.init('diagram-dataflow', dataFlowStory, {
-        canvasHeight: 280,
-        stepDuration: 2500,
-        loopDelay: 2500
-      });
-      
-      MarketingDiagram.init('diagram-api', apiStory, {
-        canvasHeight: 280,
-        stepDuration: 2500,
-        loopDelay: 2500
-      });
-      
-      // Story: Broken Learning Cycle (Problem)
-      const problemStory = {
-        id: 'problem-story',
-        elements: [
-          { data: { id: 'watch', label: '📺 Watch Tutorial', type: 'external' } },
-          { data: { id: 'forget', label: '😴 Forget 90%', type: 'auth' } },
-          { data: { id: 'stuck', label: '😫 Get Stuck', type: 'external' } },
-          { data: { id: 'repeat', label: '🔄 Start Over', type: 'external' } },
-          { data: { source: 'watch', target: 'forget' } },
-          { data: { source: 'forget', target: 'stuck' } },
-          { data: { source: 'stuck', target: 'repeat' } },
-          { data: { source: 'repeat', target: 'watch' } }
-        ],
-        steps: [
-          { nodeId: 'watch', caption: 'You watch hours of tutorials, feeling productive...' },
-          { nodeId: 'forget', edges: [{ from: 'watch', to: 'forget' }], caption: 'A week later, you\'ve forgotten almost everything.' },
-          { nodeId: 'stuck', edges: [{ from: 'forget', to: 'stuck' }], caption: 'When you try to build, you get stuck immediately.' },
-          { nodeId: 'repeat', edges: [{ from: 'stuck', to: 'repeat' }, { from: 'repeat', to: 'watch' }], caption: 'So you start another tutorial... and the cycle repeats.' }
-        ]
-      };
-      
-      MarketingDiagram.init('diagram-problem', problemStory, {
-        canvasHeight: 320,
-        stepDuration: 2500,
-        loopDelay: 3000
-      });
-      
-      // Story: Three Forces (Systems Thinking)
-      const threeForcesStory = {
-        id: 'three-forces-story',
-        elements: [
-          { data: { id: 'stone', label: '🪨 Stone\n(Data)', type: 'data' } },
-          { data: { id: 'lightning', label: '⚡ Lightning\n(Flow)', type: 'auth' } },
-          { data: { id: 'magnetism', label: '🧲 Magnetism\n(Connections)', type: 'service' } },
-          { data: { id: 'system', label: '🏛️ Working\nSystem', type: 'example' } },
-          { data: { source: 'stone', target: 'system' } },
-          { data: { source: 'lightning', target: 'system' } },
-          { data: { source: 'magnetism', target: 'system' } }
-        ],
-        steps: [
-          { nodeId: 'stone', caption: 'Data is the foundation — variables, databases, state.' },
-          { nodeId: 'lightning', edges: [{ from: 'stone', to: 'system' }], caption: 'Control flow decides what happens and when.' },
-          { nodeId: 'magnetism', edges: [{ from: 'lightning', to: 'system' }], caption: 'Connections link systems together — APIs, events, imports.' },
-          { nodeId: 'system', edges: [{ from: 'magnetism', to: 'system' }], caption: 'Together, they create any system you can imagine.' }
-        ]
-      };
-      
-      MarketingDiagram.init('diagram-three-forces', threeForcesStory, {
-        canvasHeight: 280,
-        stepDuration: 2500,
-        loopDelay: 2500
-      });
-      
-      // Story: AI Workflow
-      const aiWorkflowStory = {
-        id: 'ai-workflow-story',
-        elements: [
-          { data: { id: 'you', label: '🧠 You\n(Architect)', type: 'concept' } },
-          { data: { id: 'requirements', label: '📋 Requirements', type: 'data' } },
-          { data: { id: 'ai', label: '🤖 AI\n(Generator)', type: 'service' } },
-          { data: { id: 'code', label: '💻 Code', type: 'example' } },
-          { data: { id: 'ship', label: '🚀 Ship It', type: 'example' } },
-          { data: { source: 'you', target: 'requirements' } },
-          { data: { source: 'requirements', target: 'ai' } },
-          { data: { source: 'ai', target: 'code' } },
-          { data: { source: 'code', target: 'you', label: 'review' } },
-          { data: { source: 'you', target: 'ship' } }
-        ],
-        steps: [
-          { nodeId: 'you', caption: 'You think about what to build and why...' },
-          { nodeId: 'requirements', edges: [{ from: 'you', to: 'requirements' }], caption: 'You define requirements, architecture, edge cases.' },
-          { nodeId: 'ai', edges: [{ from: 'requirements', to: 'ai' }], caption: 'AI generates code, tests, and documentation.' },
-          { nodeId: 'code', edges: [{ from: 'ai', to: 'code' }, { from: 'code', to: 'you' }], caption: 'You review, refine, and approve.' },
-          { nodeId: 'ship', edges: [{ from: 'you', to: 'ship' }], caption: 'Ship faster than ever. That\'s the AI advantage.' }
-        ]
-      };
-      
-      MarketingDiagram.init('diagram-ai-workflow', aiWorkflowStory, {
-        canvasHeight: 280,
-        stepDuration: 2200,
-        loopDelay: 2500
-      });
-      
-      // Story: Learning Loop
-      const learningLoopStory = {
-        id: 'learning-loop-story',
-        elements: [
-          { data: { id: 'learn', label: '📚 Learn\nConcept', type: 'concept' } },
-          { data: { id: 'practice', label: '🎮 Practice\nInteractive', type: 'service' } },
-          { data: { id: 'track', label: '📊 Track\nProgress', type: 'data' } },
-          { data: { id: 'improve', label: '📈 Improve\n& Level Up', type: 'example' } },
-          { data: { source: 'learn', target: 'practice' } },
-          { data: { source: 'practice', target: 'track' } },
-          { data: { source: 'track', target: 'improve' } },
-          { data: { source: 'improve', target: 'learn' } }
-        ],
-        steps: [
-          { nodeId: 'learn', caption: 'Learn new concepts through interactive stories...' },
-          { nodeId: 'practice', edges: [{ from: 'learn', to: 'practice' }], caption: 'Practice with quizzes, challenges, and activities.' },
-          { nodeId: 'track', edges: [{ from: 'practice', to: 'track' }], caption: 'Your dashboard tracks everything — scores, streaks, velocity.' },
-          { nodeId: 'improve', edges: [{ from: 'track', to: 'improve' }, { from: 'improve', to: 'learn' }], caption: 'See your growth, identify gaps, keep leveling up.' }
-        ]
-      };
-      
-      MarketingDiagram.init('diagram-learning-loop', learningLoopStory, {
-        canvasHeight: 280,
-        stepDuration: 2500,
-        loopDelay: 2500
-      });
-    }
-    
-    // Start initialization
-    initMarketingDiagrams();
-    
-    // ============================================
-    // Quick Quiz Logic
-    // ============================================
-    
-    (function() {
-      const quiz = document.getElementById('landing-quiz');
-      if (!quiz) return;
-      
-      const questions = quiz.querySelectorAll('.quiz-question');
-      const results = quiz.querySelector('.quiz-results');
-      const scoreValue = quiz.querySelector('.score-value');
-      const resultsTitle = quiz.querySelector('.results-title');
-      const resultsMessage = quiz.querySelector('.results-message');
-      
-      let currentQuestion = 0;
-      let score = 0;
-      
-      questions.forEach((question, qIndex) => {
-        const options = question.querySelectorAll('.quiz-option');
-        const feedback = question.querySelector('.question-feedback');
-        
-        options.forEach(option => {
-          option.addEventListener('click', () => {
-            // Disable all options
-            options.forEach(opt => opt.disabled = true);
-            
-            const isCorrect = option.dataset.correct === 'true';
-            
-            if (isCorrect) {
-              option.classList.add('correct');
-              score++;
-              feedback.textContent = '✓ Correct! You got it.';
-              feedback.className = 'question-feedback show correct';
-            } else {
-              option.classList.add('incorrect');
-              // Highlight the correct one
-              options.forEach(opt => {
-                if (opt.dataset.correct === 'true') {
-                  opt.classList.add('correct');
-                }
-              });
-              feedback.textContent = '✗ Not quite — but now you know!';
-              feedback.className = 'question-feedback show incorrect';
-            }
-            
-            // Move to next question after delay
-            setTimeout(() => {
-              question.classList.remove('active');
-              
-              if (qIndex < questions.length - 1) {
-                questions[qIndex + 1].classList.add('active');
-              } else {
-                // Show results
-                showResults();
-              }
-            }, 1500);
-          });
-        });
-      });
-      
-      function showResults() {
-        quiz.querySelector('.quiz-questions').style.display = 'none';
-        results.style.display = 'block';
-        scoreValue.textContent = score;
-        
-        if (score === 3) {
-          resultsTitle.textContent = 'Perfect score! 🎉';
-          resultsMessage.textContent = 'You clearly have a knack for this. Our courses will take you even further.';
-        } else if (score === 2) {
-          resultsTitle.textContent = 'Nice work!';
-          resultsMessage.textContent = 'You\'ve got the basics down. Imagine what you could learn with our full interactive courses.';
-        } else if (score === 1) {
-          resultsTitle.textContent = 'Good start!';
-          resultsMessage.textContent = 'Everyone starts somewhere. Our courses make these concepts crystal clear.';
-        } else {
-          resultsTitle.textContent = 'No worries!';
-          resultsMessage.textContent = 'That\'s exactly why we built this platform. Let us help you master these concepts.';
-        }
-      }
-    })();
   </script>
 </body>
 </html>

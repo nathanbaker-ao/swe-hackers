@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Contact - AutoNateAI</title>
+  <meta name="title" content="Contact - AutoNateAI">
+  <meta name="description" content="Get in touch with AutoNateAI. Questions about our search packs or need support? We are here to help.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+
+  <!-- Firebase (for auth-aware navbar) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
+  <script src="shared/js/footer.js" defer></script>
+
+  <style>
+    .contact-hero {
+      padding: calc(var(--nav-height) + 5rem) 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .contact-hero-content {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-hero h1 {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .contact-hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: all var(--transition-normal);
+    }
+
+    .social-link:hover {
+      transform: translateY(-3px);
+      border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-link-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(121, 134, 203, 0.15), rgba(77, 182, 172, 0.15));
+      border-radius: var(--radius-md);
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .social-link-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-link-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .social-link-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .contact-form-wrapper {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+    }
+
+    .contact-form-wrapper h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-success-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-success h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation (injected) -->
+  <div id="navbar-container"></div>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <h1>Get in Touch</h1>
+      <p>
+        Have a question about our search packs? Need support?
+        We would love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="section">
+    <div class="section-container">
+      <div class="contact-layout">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form" class="contact-form" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">&#x2705;</div>
+            <h4>Message Sent!</h4>
+            <p>Thank you for reaching out. We will get back to you as soon as possible.</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="social-link">
+            <div class="social-link-icon">&#x1F4AC;</div>
+            <div class="social-link-text">
+              <span class="social-link-name">Discord</span>
+              <span class="social-link-desc">Join our community for live support and discussions</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/AutoNateAI" target="_blank" class="social-link">
+            <div class="social-link-icon">&#x1F4BB;</div>
+            <div class="social-link-text">
+              <span class="social-link-name">GitHub</span>
+              <span class="social-link-desc">Check out our open-source projects</span>
+            </div>
+          </a>
+
+          <a href="https://twitter.com/AutoNateAI" target="_blank" class="social-link">
+            <div class="social-link-icon">&#x1F426;</div>
+            <div class="social-link-text">
+              <span class="social-link-name">Twitter / X</span>
+              <span class="social-link-desc">Follow us for tips and product updates</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+
+      anime({
+        targets: '.contact-hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
+      });
+
+      anime({
+        targets: '.contact-layout > *',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(150, { start: 300 }),
+        duration: 600,
+        easing: 'easeOutCubic'
+      });
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+
+      // For now, just show success message (backend integration can be added later)
+      form.style.display = 'none';
+      success.style.display = 'block';
+
+      anime({
+        targets: success,
+        opacity: [0, 1],
+        scale: [0.95, 1],
+        duration: 400,
+        easing: 'easeOutCubic'
+      });
+
+      return false;
+    }
+  </script>
+</body>
+</html>

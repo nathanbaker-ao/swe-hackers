@@ -3,417 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Moved | AutoNateAI</title>
+  <meta http-equiv="refresh" content="3;url=../index.html">
+  <style>
+    body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .redirect-banner { text-align: center; padding: 2rem; }
+    .redirect-banner h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .redirect-banner p { color: rgba(232, 232, 240, 0.7); margin-bottom: 1.5rem; }
+    .redirect-banner a { color: #7986cb; text-decoration: none; font-weight: 600; }
+    .redirect-banner a:hover { text-decoration: underline; }
+  </style>
+  <script>setTimeout(() => window.location.href = '../index.html', 3000);</script>
+</head>
+<body>
+  <div class="redirect-banner">
+    <h1>This page has moved</h1>
+    <p>We've updated our site. Redirecting you to the homepage...</p>
+    <a href="../index.html">Go to Homepage now &rarr;</a>
+  </div>
+</body>
+</html>
+<!--
+DISCONNECTED PAGE - Original content preserved below
+======================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Senior Amplifier | AutoNateAI Learning Hub</title>
   <meta name="description" content="Multiply your impact. Learn agentic workflows, architecture patterns, and 10x your output with AI.">
-  
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autonateai.com/course/senior.html">
   <meta property="og:title" content="The Senior Amplifier | AutoNateAI">
   <meta property="og:description" content="Multiply your impact. Learn agentic workflows and architecture patterns.">
   <meta property="og:image" content="https://autonateai.com/assets/courses/course-senior.png">
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Senior Amplifier | AutoNateAI">
   <meta name="twitter:image" content="https://autonateai.com/assets/courses/course-senior.png">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../shared/css/course-detail.css">
-  
+
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
-  
-  <section class="course-hero senior">
-    <div class="hero-content">
-      <nav class="hero-nav">
-        <a href="../index.html" class="back-link">← Back to Courses</a>
-        <div class="auth-buttons" id="auth-buttons">
-          <a href="../auth/login.html" class="auth-btn login">Sign In</a>
-          <a href="../auth/register.html" class="auth-btn register">Get Started</a>
-        </div>
-      </nav>
-      
-      <div class="hero-main">
-        <div class="hero-text">
-          <span class="course-badge">For Mid-to-Senior Engineers</span>
-          <img src="../assets/courses/course-senior.png" alt="The Senior Amplifier" class="course-hero-image">
-          <h1 class="course-title">The Senior Amplifier</h1>
-          <p class="course-tagline">
-            You've built the skills over years. Now multiply your impact with AI. Take on bigger 
-            projects, lead more initiatives, and future-proof your career as an amplified engineer.
-          </p>
-          
-          <div class="course-meta-row">
-            <span class="meta-item"><span class="icon">📅</span> 6 weeks</span>
-            <span class="meta-item"><span class="icon">📖</span> 6 chapters</span>
-            <span class="meta-item"><span class="icon">🔨</span> 6 projects</span>
-            <span class="meta-item"><span class="icon">🐍</span> Python</span>
-          </div>
-          
-          <div class="three-forces-preview">
-            <div class="force-preview">
-              <div class="icon">🪨</div>
-              <div class="name">Stone</div>
-              <div class="desc">Rapid Acquisition</div>
-            </div>
-            <div class="force-preview">
-              <div class="icon">⚡</div>
-              <div class="name">Lightning</div>
-              <div class="desc">System Debugging</div>
-            </div>
-            <div class="force-preview">
-              <div class="icon">🧲</div>
-              <div class="name">Magnetism</div>
-              <div class="desc">Platform Integration</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="enrollment-card">
-          <div class="enrollment-price">
-            <div class="price-tag">Free</div>
-            <div class="price-note">Multiply your impact</div>
-          </div>
-          
-          <button class="enroll-btn" id="enroll-btn">Start Learning →</button>
-          
-          <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">
-            Join 150+ senior engineers amplifying their impact
-          </p>
-          
-          <ul class="enrollment-features">
-            <li><span class="check">✓</span> AI-augmented system design</li>
-            <li><span class="check">✓</span> Rapid codebase acquisition</li>
-            <li><span class="check">✓</span> Platform-level architecture</li>
-            <li><span class="check">✓</span> Technical leadership skills</li>
-            <li><span class="check">✓</span> Future-proof your career</li>
-            <li><span class="check">✓</span> Personal AI workflow system</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <div class="course-content">
-    
-    <section class="content-section">
-      <h2 class="section-title">What You'll Learn</h2>
-      <div class="learn-grid">
-        <div class="learn-item">
-          <div class="icon">⚡</div>
-          <div><h4>Rapid Codebase Acquisition</h4><p>Understand massive codebases in days, not months</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">🔍</div>
-          <div><h4>System-Wide Debugging</h4><p>Trace issues across distributed systems with AI</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">🏗️</div>
-          <div><h4>Platform Architecture</h4><p>Design systems that scale across teams</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">🤖</div>
-          <div><h4>AI-Augmented Design</h4><p>Use AI to explore design space faster</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">👑</div>
-          <div><h4>Technical Leadership</h4><p>Lead initiatives with multiplied capacity</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">🛡️</div>
-          <div><h4>Career Longevity</h4><p>Stay relevant and valuable in the AI era</p></div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="content-section">
-      <h2 class="section-title">The Senior's Dilemma</h2>
-      <div class="learn-grid">
-        <div class="learn-item" style="border-left: 3px solid var(--accent-warning);">
-          <div class="icon">🤔</div>
-          <div>
-            <h4>The Question</h4>
-            <p>"I've spent years building expertise. Will AI make me obsolete?"</p>
-          </div>
-        </div>
-        <div class="learn-item" style="border-left: 3px solid var(--accent-success);">
-          <div class="icon">💪</div>
-          <div>
-            <h4>The Answer</h4>
-            <p>Your expertise + AI = 10x impact. AI amplifies senior engineers, it doesn't replace them.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="content-section">
-      <h2 class="section-title">Curriculum</h2>
-      <div class="curriculum-list">
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">0</div>
-            <div class="chapter-info">
-              <div class="chapter-title">⚡ The Amplification Point</div>
-              <div class="chapter-subtitle">Pre-Quest: Multiply Your Impact</div>
-            </div>
-            <div class="chapter-meta"><span>📖 30 min</span><span>🎯 Foundation</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>The multiplier effect</li>
-              <li>Your impact, amplified</li>
-              <li>The paradigm shift</li>
-              <li>Strategic AI integration</li>
-              <li>Your potential ROI calculator</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">1</div>
-            <div class="chapter-info">
-              <div class="chapter-title">🪨 Rapid Codebase Acquisition</div>
-              <div class="chapter-subtitle">Master Any Codebase Quickly</div>
-            </div>
-            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Codebase Map</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Strategic codebase exploration</li>
-              <li>AI-assisted code understanding</li>
-              <li>Building architectural mental models</li>
-              <li>Documenting for future you and others</li>
-              <li>Project: Map a Large Codebase</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">2</div>
-            <div class="chapter-info">
-              <div class="chapter-title">⚡ System-Wide Debugging</div>
-              <div class="chapter-subtitle">Trace Issues Across Systems</div>
-            </div>
-            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Debug Playbook</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Cross-service issue tracing</li>
-              <li>Using AI to analyze distributed logs</li>
-              <li>Pattern recognition in failures</li>
-              <li>Building debugging playbooks</li>
-              <li>Project: Create a Debug Playbook</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">3</div>
-            <div class="chapter-info">
-              <div class="chapter-title">🧲 Platform Integration</div>
-              <div class="chapter-subtitle">Architecture at Scale</div>
-            </div>
-            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Platform Design</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Platform vs. product engineering</li>
-              <li>Cross-service integration patterns</li>
-              <li>API design for internal platforms</li>
-              <li>Scaling integration points</li>
-              <li>Project: Design a Platform Component</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">4</div>
-            <div class="chapter-info">
-              <div class="chapter-title">🏛️ AI-Augmented System Design</div>
-              <div class="chapter-subtitle">Explore the Design Space Faster</div>
-            </div>
-            <div class="chapter-meta"><span>📖 2 hours</span><span>🔨 Design Analysis</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Using AI for design exploration</li>
-              <li>Trade-off analysis with AI</li>
-              <li>Validating architectural decisions</li>
-              <li>Documentation generation</li>
-              <li>Project: AI-Assisted Design Review</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">5</div>
-            <div class="chapter-info">
-              <div class="chapter-title">👑 Capstone I: Lead a Major Initiative</div>
-              <div class="chapter-subtitle">Technical Leadership at Scale</div>
-            </div>
-            <div class="chapter-meta"><span>📖 4 hours</span><span>🔨 Initiative Plan</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Scoping large technical initiatives</li>
-              <li>Stakeholder management</li>
-              <li>Technical roadmapping with AI</li>
-              <li>Multiplying your influence</li>
-              <li>Project: Plan a Major Initiative</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="chapter-item">
-          <div class="chapter-header" onclick="toggleChapter(this)">
-            <div class="chapter-number">6</div>
-            <div class="chapter-info">
-              <div class="chapter-title">🛡️ Capstone II: Your Amplified Workflow</div>
-              <div class="chapter-subtitle">Build Your Personal System</div>
-            </div>
-            <div class="chapter-meta"><span>📖 4 hours</span><span>🔨 AI System</span></div>
-          </div>
-          <div class="chapter-content">
-            <ul class="chapter-topics">
-              <li>Designing your personal AI workflow</li>
-              <li>Custom prompts and templates</li>
-              <li>Automation for repetitive tasks</li>
-              <li>Measuring and improving impact</li>
-              <li>Project: Build Your Amplified Workflow</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="content-section">
-      <h2 class="section-title">This Course Is Perfect For</h2>
-      <div class="learn-grid">
-        <div class="learn-item">
-          <div class="icon">👨‍💻</div>
-          <div><h4>Mid-Level Engineers</h4><p>3-5 years experience, ready to step up</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">⭐</div>
-          <div><h4>Senior Engineers</h4><p>Want to multiply impact without burning out</p></div>
-        </div>
-        <div class="learn-item">
-          <div class="icon">🎯</div>
-          <div><h4>Tech Leads</h4><p>Need to do more with limited time</p></div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="content-section">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>I already know how to code. What will I learn?</span>
-            <span class="toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            This isn't about learning to code—it's about amplifying your existing expertise with AI. 
-            You'll learn to navigate codebases faster, debug more efficiently, and design systems 
-            with AI as your thought partner.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>Will AI really make me more productive, or is it hype?</span>
-            <span class="toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            When used strategically, AI genuinely multiplies senior engineer productivity. The key 
-            is knowing when to use it and how to prompt it effectively. This course teaches you both.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            <span>I'm worried about my career in the AI era. Will this help?</span>
-            <span class="toggle">+</span>
-          </div>
-          <div class="faq-answer">
-            Absolutely. Engineers who learn to work with AI will thrive. Those who ignore it risk 
-            becoming less competitive. This course positions you as someone who uses AI strategically 
-            to deliver more value.
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <section class="cta-section">
-    <h2 class="cta-title">Ready to Amplify Your Impact?</h2>
-    <p class="cta-subtitle">
-      Your experience is valuable. With AI, it becomes invaluable. Learn to multiply your impact without multiplying your hours.
-    </p>
-    <a href="#" class="cta-btn" id="cta-enroll-btn">Start Learning Free →</a>
-  </section>
-  
-  <footer class="course-footer">
-    <p>Built with 🧠 by <a href="https://github.com/nathanbaker-ao" target="_blank">Nathan Baker</a> • AutoNateAI</p>
-  </footer>
-  
-  <script src="../shared/js/firebase-config.js"></script>
-  <script src="../shared/js/auth.js"></script>
-  <script src="../shared/js/data-service.js"></script>
-  
-  <script>
-    const COURSE_ID = 'senior';
-    const COURSE_DATA = { name: "The Senior Amplifier", icon: "🎯", subtitle: "For Mid-to-Senior Engineers" };
-    
-    function toggleChapter(h) { h.closest('.chapter-item').classList.toggle('open'); }
-    function toggleFaq(q) { q.closest('.faq-item').classList.toggle('open'); }
-    
-    document.addEventListener('DOMContentLoaded', async () => {
-      if (!window.FirebaseApp.init()) return;
-      window.AuthService.init();
-      
-      window.AuthService.onAuthStateChanged(async (user) => {
-        document.getElementById('auth-buttons').innerHTML = user 
-          ? '<a href="../dashboard/index.html" class="auth-btn register">My Dashboard</a>'
-          : '<a href="../auth/login.html" class="auth-btn login">Sign In</a><a href="../auth/register.html" class="auth-btn register">Get Started</a>';
-        if (user) {
-          const p = await window.DataService.getCourseProgress(COURSE_ID);
-          if (p) {
-            document.getElementById('enroll-btn').textContent = 'Continue Learning →';
-            document.getElementById('cta-enroll-btn').textContent = 'Continue Learning →';
-          }
-        }
-      });
-      
-      const handleEnroll = async (e) => {
-        e.preventDefault();
-        const user = window.AuthService.getUser();
-        if (!user) { window.AuthService.setRedirectUrl(location.href); location.href = '../auth/register.html'; return; }
-        const p = await window.DataService.getCourseProgress(COURSE_ID);
-        if (p) { location.href = `../${COURSE_ID}/ch0-origins/`; return; }
-        e.target.disabled = true; e.target.textContent = 'Enrolling...';
-        const r = await window.DataService.enrollInCourse(COURSE_ID, COURSE_DATA);
-        if (r.success) location.href = `../${COURSE_ID}/ch0-origins/`;
-        else { e.target.disabled = false; e.target.textContent = 'Start Learning →'; }
-      };
-      
-      document.getElementById('enroll-btn').addEventListener('click', handleEnroll);
-      document.getElementById('cta-enroll-btn').addEventListener('click', handleEnroll);
-      
-      anime({ targets: '.hero-text > *', opacity: [0,1], translateY: [30,0], delay: anime.stagger(100, {start:200}), easing: 'easeOutCubic', duration: 800 });
-      anime({ targets: '.enrollment-card', opacity: [0,1], translateX: [30,0], delay: 500, easing: 'easeOutCubic', duration: 800 });
-    });
-  </script>
+  [... full senior.html body content ...]
 </body>
 </html>
-
+-->

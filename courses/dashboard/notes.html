@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notes | AutoNateAI Learning Hub</title>
+  <title>Redirecting... | AutoNateAI</title>
+  <!-- This page has been disconnected — redirecting to Feed -->
+  <meta http-equiv="refresh" content="0;url=feed.html">
+  <script>window.location.replace('feed.html');</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -809,36 +812,23 @@
           <span class="nav-section-title">Main</span>
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">
+              <a href="feed.html" class="nav-link">
                 <span class="nav-icon">🏠</span>
-                <span class="nav-text">Dashboard</span>
+                <span class="nav-text">Feed</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="courses.html" class="nav-link">
+              <a href="library.html" class="nav-link">
                 <span class="nav-icon">📚</span>
-                <span class="nav-text">Course Library</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="challenges.html" class="nav-link">
-                <span class="nav-icon">⚡</span>
-                <span class="nav-text">Daily Challenges</span>
-                <span class="nav-badge">3</span>
+                <span class="nav-text">Tools Library</span>
               </a>
             </li>
           </ul>
         </div>
 
         <div class="nav-section">
-          <span class="nav-section-title">Learning</span>
+          <span class="nav-section-title">Activity</span>
           <ul class="nav-list">
-            <li class="nav-item">
-              <a href="progress.html" class="nav-link">
-                <span class="nav-icon">📊</span>
-                <span class="nav-text">My Progress</span>
-              </a>
-            </li>
             <li class="nav-item">
               <a href="achievements.html" class="nav-link">
                 <span class="nav-icon">🏆</span>
@@ -846,33 +836,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="notes.html" class="nav-link active">
-                <span class="nav-icon">📝</span>
-                <span class="nav-text">Notes</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav-section">
-          <span class="nav-section-title">Community</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="feed.html" class="nav-link">
-                <span class="nav-icon">📰</span>
-                <span class="nav-text">Feed</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
-                <span class="nav-icon">💬</span>
-                <span class="nav-text">Discord</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="leaderboard.html" class="nav-link">
                 <span class="nav-icon">🏅</span>
                 <span class="nav-text">Leaderboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="notes.html" class="nav-link active">
+                <span class="nav-icon">📝</span>
+                <span class="nav-text">Notes</span>
               </a>
             </li>
           </ul>
@@ -888,41 +860,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="settings.html" class="nav-link">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-text">Settings</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="#" class="nav-link" id="logout-link">
                 <span class="nav-icon">🚪</span>
                 <span class="nav-text">Sign Out</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Basketball Section (hidden by default, shown for admins) -->
-        <div class="nav-section" id="basketball-section" style="display: none;">
-          <span class="nav-section-title" style="color: #ef4444;">Basketball</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="basketball-sim.html" class="nav-link">
-                <span class="nav-icon">🏀</span>
-                <span class="nav-text">Play Simulator</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Admin Section (hidden by default, shown for admins) -->
-        <div class="nav-section" id="admin-section" style="display: none;">
-          <span class="nav-section-title" style="color: #f44336;">Admin</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="../admin/" class="nav-link">
-                <span class="nav-icon">🛡️</span>
-                <span class="nav-text">Admin Dashboard</span>
               </a>
             </li>
           </ul>
@@ -961,57 +901,7 @@
           <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
           <h1 class="page-title">Notes</h1>
         </div>
-        <div class="header-right">
-          <div class="header-actions">
-            <button class="action-btn" id="notification-btn" title="Notifications">
-              🔔
-              <span class="notification-dot" id="notification-dot"></span>
-              <span class="notification-count" id="notification-count"></span>
-            </button>
-          </div>
-        </div>
       </header>
-
-      <div class="notification-panel" id="notification-panel" aria-hidden="true">
-        <div class="notification-panel-header">
-          <div>
-            <div class="notification-panel-title">Notifications</div>
-            <div class="notification-panel-subtitle">Your latest updates</div>
-          </div>
-          <button class="notification-panel-action" id="notification-mark-all">Mark all read</button>
-        </div>
-        <div class="notification-tabs">
-          <button class="notification-tab active" data-notification-filter="all">All</button>
-          <button class="notification-tab" data-notification-filter="unread">Unread</button>
-        </div>
-        <div class="notification-list" id="notification-list"></div>
-        <div class="notification-preferences">
-          <div class="notification-pref">
-            <span>In-app</span>
-            <input type="checkbox" checked disabled>
-          </div>
-          <div class="notification-pref">
-            <span>Remove when read</span>
-            <input type="checkbox" id="pref-remove-read">
-          </div>
-          <div class="notification-pref">
-            <span>Email digest</span>
-            <input type="checkbox" id="pref-email">
-          </div>
-          <div class="notification-pref">
-            <span>Push (optional)</span>
-            <input type="checkbox" id="pref-push">
-          </div>
-          <div class="notification-pref">
-            <span>Frequency</span>
-            <select id="pref-frequency">
-              <option value="instant">Instant</option>
-              <option value="daily">Daily</option>
-              <option value="weekly">Weekly</option>
-            </select>
-          </div>
-        </div>
-      </div>
 
       <!-- Content -->
       <div class="content-area">
@@ -1137,10 +1027,7 @@ Tips:
   <!-- Scripts -->
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
-  <script src="../shared/js/rbac.js"></script>
   <script src="../shared/js/data-service.js"></script>
-  <script src="../shared/js/active-mode-service.js"></script>
-  <script src="../shared/js/notification-service.js"></script>
 
   <script>
     // Course definitions
@@ -1190,14 +1077,6 @@ Tips:
       setupEventListeners();
       setupSidebar();
       setupLogout();
-
-      // Admin/User mode toggle (handles admin-section + basketball-section visibility)
-      if (window.ActiveModeService) {
-        await window.ActiveModeService.init();
-      }
-
-      // Initialize notifications
-      window.NotificationService.init();
     });
 
     // Load user info

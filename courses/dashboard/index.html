@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard | AutoNateAI Learning Hub</title>
-  
+  <title>Redirecting... | AutoNateAI</title>
+  <!-- This page has been disconnected — Feed is now the main dashboard page -->
+  <meta http-equiv="refresh" content="0;url=feed.html">
+  <script>window.location.replace('feed.html');</script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Critical styles - must load before body renders -->
   <style>
     /* Hide content until auth is confirmed */
@@ -163,34 +166,33 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="courses.html" class="nav-link">
-                <span class="nav-icon">📚</span>
-                <span class="nav-text">Course Library</span>
+              <a href="feed.html" class="nav-link">
+                <span class="nav-icon">📡</span>
+                <span class="nav-text">Feed</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="challenges.html" class="nav-link">
-                <span class="nav-icon">⚡</span>
-                <span class="nav-text">Daily Challenges</span>
-                <span class="nav-badge">3</span>
+              <a href="library.html" class="nav-link">
+                <span class="nav-icon">🔧</span>
+                <span class="nav-text">Tools Library</span>
               </a>
             </li>
           </ul>
         </div>
-        
+
         <div class="nav-section">
-          <span class="nav-section-title">Learning</span>
+          <span class="nav-section-title">Activity</span>
           <ul class="nav-list">
-            <li class="nav-item">
-              <a href="progress.html" class="nav-link">
-                <span class="nav-icon">📊</span>
-                <span class="nav-text">My Progress</span>
-              </a>
-            </li>
             <li class="nav-item">
               <a href="achievements.html" class="nav-link">
                 <span class="nav-icon">🏆</span>
                 <span class="nav-text">Achievements</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="leaderboard.html" class="nav-link">
+                <span class="nav-icon">🏅</span>
+                <span class="nav-text">Leaderboard</span>
               </a>
             </li>
             <li class="nav-item">
@@ -201,31 +203,7 @@
             </li>
           </ul>
         </div>
-        
-        <div class="nav-section">
-          <span class="nav-section-title">Community</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="feed.html" class="nav-link">
-                <span class="nav-icon">📰</span>
-                <span class="nav-text">Feed</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="nav-link">
-                <span class="nav-icon">💬</span>
-                <span class="nav-text">Discord</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="leaderboard.html" class="nav-link">
-                <span class="nav-icon">🏅</span>
-                <span class="nav-text">Leaderboard</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        
+
         <div class="nav-section">
           <span class="nav-section-title">Account</span>
           <ul class="nav-list">
@@ -236,12 +214,6 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="settings.html" class="nav-link">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-text">Settings</span>
-              </a>
-            </li>
-            <li class="nav-item">
               <a href="#" class="nav-link" id="logout-link">
                 <span class="nav-icon">🚪</span>
                 <span class="nav-text">Sign Out</span>
@@ -249,7 +221,7 @@
             </li>
           </ul>
         </div>
-
+        
         <!-- Basketball Section (hidden by default, shown for city-high-basketball org or admin) -->
         <div class="nav-section" id="basketball-section" style="display: none;">
           <span class="nav-section-title" style="color: #ef4444;">Basketball</span>
@@ -316,7 +288,7 @@
               <circle cx="11" cy="11" r="8"></circle>
               <path d="M21 21l-4.35-4.35"></path>
             </svg>
-            <input type="text" class="search-input" placeholder="Search courses, lessons...">
+            <input type="text" class="search-input" placeholder="Search tools, strategies...">
           </div>
           
           <div class="header-actions">
@@ -381,7 +353,7 @@
           <h2 style="font-family: var(--font-display); font-size: 1.75rem; margin-bottom: 0.5rem;">
             Welcome back, <span id="welcome-name">Architect</span>! 👋
           </h2>
-          <p style="color: var(--text-secondary);">Ready to continue your journey with the Three Forces?</p>
+          <p style="color: var(--text-secondary);">Ready to discover your next 6-figure opportunity?</p>
         </div>
         
         <!-- Component-Based Analytics Section - 3x3 Grid -->
@@ -538,22 +510,22 @@
           <div id="metrics-row" style="display: none;"></div>
         </section>
         
-        <!-- Continue Learning Section -->
+        <!-- Quick Actions Section -->
         <div class="section-header">
-          <h3 class="section-title">Continue Learning</h3>
-          <a href="courses.html" class="section-action">
-            View All Courses →
+          <h3 class="section-title">Your Tools</h3>
+          <a href="library.html" class="section-action">
+            View Library →
           </a>
         </div>
-        
+
         <div class="courses-grid" id="courses-grid">
-          <!-- Courses will be loaded dynamically -->
+          <!-- Tools will be loaded dynamically -->
           <div class="empty-state" id="empty-courses">
-            <div class="empty-icon">📚</div>
-            <h3 class="empty-title">No courses yet</h3>
-            <p class="empty-desc">Start your architect journey by enrolling in a course!</p>
-            <a href="courses.html" class="empty-action">
-              <span>Browse Courses</span>
+            <div class="empty-icon">🔧</div>
+            <h3 class="empty-title">No tools yet</h3>
+            <p class="empty-desc">Browse our search query packs to start sourcing 6-figure opportunities!</p>
+            <a href="../shop.html" class="empty-action">
+              <span>Browse Tools</span>
               <span>→</span>
             </a>
           </div>
@@ -568,7 +540,6 @@
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
   <script src="../shared/js/rbac.js"></script>
-  <script src="../shared/js/active-mode-service.js"></script>
   <script src="../shared/js/data-service.js"></script>
   <script src="../shared/js/analytics-service.js"></script>
   <script src="../shared/js/notification-service.js"></script>
@@ -662,28 +633,19 @@
       const params = new URLSearchParams(window.location.search);
       const isTestEnabled = params.has('adminTest');
 
-      // Admin/User mode toggle (handles admin-section + basketball-section visibility)
-      if (window.ActiveModeService) {
-        await window.ActiveModeService.init();
-        isAdminUser = window.ActiveModeService.isAdminUser();
-
-        // Also show basketball section for non-admin org members
-        if (!window.ActiveModeService.isAdminMode() || !isAdminUser) {
-          const hasBasketball = window.RBACService && await window.RBACService.belongsToOrganization('city-high-basketball');
-          if (hasBasketball) {
-            document.getElementById('basketball-section').style.display = 'block';
-          }
+      // Check if user is admin and show admin section
+      if (window.RBACService) {
+        const isAdmin = await window.RBACService.hasRole('admin');
+        if (isAdmin) {
+          document.getElementById('admin-section').style.display = 'block';
+          isAdminUser = true;
         }
 
-        // Re-evaluate on mode change
-        window.ActiveModeService.onModeChange(async (mode) => {
-          const basketballEl = document.getElementById('basketball-section');
-          if (mode === 'user' && basketballEl) {
-            // In user mode, only show basketball for org members
-            const hasBasketball = window.RBACService && await window.RBACService.belongsToOrganization('city-high-basketball');
-            basketballEl.style.display = hasBasketball ? 'block' : 'none';
-          }
-        });
+        // Show basketball section for city-high-basketball org members or admins
+        const hasBasketball = isAdmin || await window.RBACService.belongsToOrganization('city-high-basketball');
+        if (hasBasketball) {
+          document.getElementById('basketball-section').style.display = 'block';
+        }
       }
       
       // Setup UI interactions immediately so sidebar/nav is responsive

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Account | AutoNateAI Learning Hub</title>
+  <title>Create Account | AutoNateAI</title>
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,9 @@
       <span class="nav-logo-text">AutoNateAI</span>
     </a>
     <div class="nav-links">
-      <a href="../index.html" class="nav-link">Courses</a>
+      <a href="../shop.html" class="nav-link">Shop</a>
       <a href="login.html" class="nav-link">Sign In</a>
-      <a href="register.html" class="nav-btn">Get Started</a>
+      <a href="../shop.html" class="nav-btn">Browse Tools</a>
     </div>
   </nav>
 
@@ -59,25 +59,15 @@
             <span class="logo-text">AutoNateAI</span>
           </a>
           
-          <div class="three-forces-mini">
-            <div class="force-mini">
-              <div class="force-mini-icon">🪨</div>
-              <div>Stone</div>
-            </div>
-            <div class="force-mini">
-              <div class="force-mini-icon">⚡</div>
-              <div>Lightning</div>
-            </div>
-            <div class="force-mini">
-              <div class="force-mini-icon">🧲</div>
-              <div>Magnetism</div>
-            </div>
-          </div>
-          
-          <h1 class="auth-title">Begin Your Journey</h1>
-          <p class="auth-subtitle">Join the community of AI-augmented architects</p>
+          <h1 class="auth-title">Join AutoNateAI</h1>
+          <p class="auth-subtitle">Create your account to access search tools and resources</p>
         </header>
         
+        <!-- Purchase Context Banner -->
+        <div class="purchase-context" id="purchase-context" style="display:none; background: rgba(121, 134, 203, 0.15); border: 1px solid rgba(121, 134, 203, 0.3); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.85rem; color: #b8bfff;">
+          Create an account to access your purchase: <strong id="purchase-product-name"></strong>
+        </div>
+
         <!-- Error Message -->
         <div class="form-error hidden" id="error-message">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -189,22 +179,8 @@
       <!-- Success Message (hidden initially) -->
       <div class="auth-card success-message" id="success-card" style="display: none;">
         <div class="success-icon">✨</div>
-        <h2>Welcome, Architect!</h2>
-        <p>Your account has been created successfully. Redirecting you to your dashboard...</p>
-        <div class="three-forces-mini" style="margin-top: 2rem;">
-          <div class="force-mini">
-            <div class="force-mini-icon">🪨</div>
-            <div>Stone</div>
-          </div>
-          <div class="force-mini">
-            <div class="force-mini-icon">⚡</div>
-            <div>Lightning</div>
-          </div>
-          <div class="force-mini">
-            <div class="force-mini-icon">🧲</div>
-            <div>Magnetism</div>
-          </div>
-        </div>
+        <h2>Welcome to AutoNateAI!</h2>
+        <p>Your account has been created. Redirecting to your dashboard...</p>
       </div>
     </div>
   </div>
@@ -212,25 +188,43 @@
   <!-- Scripts -->
   <script src="../shared/js/firebase-config.js"></script>
   <script src="../shared/js/auth.js"></script>
-  
+  <script src="../shared/js/whop-service.js"></script>
+  <script src="../shared/js/purchase-service.js"></script>
+
   <script>
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       // Create particles
       createParticles();
-      
+
+      // Pre-fill email from pending purchase
+      if (window.PurchaseService && window.PurchaseService.hasPendingPurchase()) {
+        const pending = window.PurchaseService.getPendingPurchase();
+        if (pending && pending.email) {
+          const emailInput = document.getElementById('email');
+          if (emailInput) emailInput.value = pending.email;
+        }
+        // Show purchase context banner
+        const banner = document.getElementById('purchase-context');
+        const productName = document.getElementById('purchase-product-name');
+        if (banner && pending) {
+          productName.textContent = pending.productId || 'your item';
+          banner.style.display = 'block';
+        }
+      }
+
       // Initialize Firebase
       if (window.FirebaseApp.init()) {
         window.AuthService.init();
-        
+
         // Check if already logged in
         window.AuthService.onAuthStateChanged((user) => {
           if (user && !showingSuccess) {
-            window.location.href = '../dashboard/index.html';
+            window.location.href = '../dashboard/feed.html';
           }
         });
       }
-      
+
       // Animate form elements
       animateFormElements();
     });
@@ -327,11 +321,25 @@
     });
     
     // Show success message
-    function showSuccess() {
+    async function showSuccess() {
       showingSuccess = true;
       const registerCard = document.getElementById('register-card');
       const successCard = document.getElementById('success-card');
-      
+
+      // Claim any pending purchase
+      let claimedPurchase = null;
+      if (window.PurchaseService && window.PurchaseService.hasPendingPurchase()) {
+        try {
+          const claimed = await window.PurchaseService.claimPendingPurchase();
+          if (claimed) {
+            claimedPurchase = claimed;
+            console.log('Claimed pending purchase:', claimed.productId);
+          }
+        } catch (e) {
+          console.error('Error claiming purchase:', e);
+        }
+      }
+
       anime({
         targets: registerCard,
         opacity: 0,
@@ -341,7 +349,7 @@
         complete: () => {
           registerCard.style.display = 'none';
           successCard.style.display = 'block';
-          
+
           anime({
             targets: successCard,
             opacity: [0, 1],
@@ -349,11 +357,15 @@
             duration: 600,
             easing: 'easeOutCubic'
           });
-          
+
           // Redirect after 2 seconds
           setTimeout(() => {
-            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/index.html';
-            window.location.href = redirect;
+            if (claimedPurchase) {
+              window.location.href = '../dashboard/library.html';
+            } else {
+              const redirect = window.AuthService.getRedirectUrl() || '../dashboard/feed.html';
+              window.location.href = redirect;
+            }
           }, 2000);
         }
       });

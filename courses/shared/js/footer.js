@@ -19,26 +19,25 @@ const FooterComponent = {
               <span>AutoNateAI</span>
             </div>
             <p class="footer-desc">
-              AI-augmented learning for developers who want to think like architects and build like pros.
+              We provide the tools and knowledge to efficiently source 6-figure opportunities.
             </p>
           </div>
           
           <div class="footer-column">
-            <h4>Learning</h4>
+            <h4>Products</h4>
             <ul class="footer-links">
-              <li><a href="{{baseUrl}}course/apprentice.html">Apprentice Path</a></li>
-              <li><a href="{{baseUrl}}course/junior.html">Junior Accelerator</a></li>
-              <li><a href="{{baseUrl}}course/senior.html">Senior Amplifier</a></li>
-              <li><a href="{{baseUrl}}challenges.html">Daily Challenges</a></li>
+              <li><a href="{{baseUrl}}shop.html">Browse Tools</a></li>
+              <li><a href="{{baseUrl}}dashboard/feed.html">Feed</a></li>
+              <li><a href="{{baseUrl}}dashboard/library.html">My Library</a></li>
             </ul>
           </div>
-          
+
           <div class="footer-column">
             <h4>Company</h4>
             <ul class="footer-links">
+              <li><a href="{{baseUrl}}about.html">About</a></li>
+              <li><a href="{{baseUrl}}contact.html">Contact</a></li>
               <li><a href="{{baseUrl}}blog/">Blog</a></li>
-              <li><a href="{{baseUrl}}consulting.html">Consulting</a></li>
-              <li><a href="{{baseUrl}}partnerships.html">Partnerships</a></li>
               <li><a href="https://discord.gg/Me5N8tCdkC" target="_blank">Discord</a></li>
             </ul>
           </div>

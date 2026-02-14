@@ -21,29 +21,27 @@ const NavbarComponent = {
         </a>
         
         <div class="nav-links">
-          <a href="{{baseUrl}}catalog.html" class="nav-link" data-page="catalog">Courses</a>
-          <a href="{{baseUrl}}blog/" class="nav-link" data-page="blog">Blog</a>
-          <a href="{{baseUrl}}partnerships.html" class="nav-link" data-page="partnerships">Partnerships</a>
-          <a href="{{baseUrl}}challenges.html" class="nav-link" data-page="challenges">Challenges</a>
+          <a href="{{baseUrl}}shop.html" class="nav-link" data-page="shop">Shop</a>
+          <a href="{{baseUrl}}about.html" class="nav-link" data-page="about">About</a>
+          <a href="{{baseUrl}}contact.html" class="nav-link" data-page="contact">Contact</a>
         </div>
-        
+
         <div class="nav-cta">
           <a href="{{baseUrl}}auth/login.html" class="nav-btn secondary">Sign In</a>
-          <a href="{{baseUrl}}auth/register.html" class="nav-btn primary">Get Started</a>
+          <a href="{{baseUrl}}shop.html" class="nav-btn primary">Browse Tools</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
       </div>
       
       <div class="mobile-menu" id="mobile-menu">
-        <a href="{{baseUrl}}catalog.html">Courses</a>
-        <a href="{{baseUrl}}blog/">Blog</a>
-        <a href="{{baseUrl}}partnerships.html">Partnerships</a>
-        <a href="{{baseUrl}}challenges.html">Challenges</a>
+        <a href="{{baseUrl}}shop.html">Shop</a>
+        <a href="{{baseUrl}}about.html">About</a>
+        <a href="{{baseUrl}}contact.html">Contact</a>
         <div class="mobile-divider"></div>
         <div class="mobile-cta">
           <a href="{{baseUrl}}auth/login.html" class="nav-btn secondary">Sign In</a>
-          <a href="{{baseUrl}}auth/register.html" class="nav-btn primary">Get Started</a>
+          <a href="{{baseUrl}}shop.html" class="nav-btn primary">Browse Tools</a>
         </div>
       </div>
     </nav>
@@ -62,17 +60,56 @@ const NavbarComponent = {
       console.warn(`NavbarComponent: Container #${containerId} not found`);
       return;
     }
-    
+
     const baseUrl = options.baseUrl || this.detectBaseUrl();
-    const html = this.template.replace(/\{\{baseUrl\}\}/g, baseUrl);
-    
+    let html = this.template.replace(/\{\{baseUrl\}\}/g, baseUrl);
+
+    // Apply cached auth state immediately to prevent flicker
+    const isLoggedIn = localStorage.getItem('navAuthState') === 'true';
+    if (isLoggedIn) {
+      const feedUrl = baseUrl + 'dashboard/feed.html';
+      html = html.replace(
+        new RegExp(`href="${baseUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}auth/login\\.html" class="nav-btn secondary">Sign In</`, 'g'),
+        `href="${feedUrl}" class="nav-btn secondary">My Feed</`
+      );
+    }
+
     container.innerHTML = html;
-    
+
     const activePage = options.activePage || this.detectCurrentPage();
     this.highlightActiveLink(activePage);
-    
+
     this.setupMobileMenu();
     this.setupScrollEffect();
+    this.setupAuthAwareButtons(baseUrl);
+  },
+
+  /**
+   * Check Firebase auth state and swap Sign In → My Feed if logged in
+   */
+  async setupAuthAwareButtons(baseUrl) {
+    // Use the same Firebase + AuthService pattern as dashboard pages
+    if (!window.FirebaseApp || !window.AuthService) return;
+
+    if (!window.FirebaseApp.init()) return;
+    window.AuthService.init();
+
+    const user = await window.AuthService.waitForAuthState();
+    const feedUrl = baseUrl + 'dashboard/feed.html';
+
+    if (user) {
+      localStorage.setItem('navAuthState', 'true');
+      document.querySelectorAll('.nav-cta a.secondary, .mobile-cta a.secondary').forEach(btn => {
+        btn.href = feedUrl;
+        btn.textContent = 'My Feed';
+      });
+    } else {
+      localStorage.removeItem('navAuthState');
+      document.querySelectorAll('.nav-cta a.secondary, .mobile-cta a.secondary').forEach(btn => {
+        btn.href = baseUrl + 'auth/login.html';
+        btn.textContent = 'Sign In';
+      });
+    }
   },
   
   /**
@@ -96,11 +133,11 @@ const NavbarComponent = {
   detectCurrentPage() {
     const path = window.location.pathname;
     
-    if (path.includes('catalog')) return 'catalog';
+    if (path.includes('shop')) return 'shop';
+    if (path.includes('about')) return 'about';
+    if (path.includes('contact')) return 'contact';
     if (path.includes('/blog')) return 'blog';
-    if (path.includes('partnerships') || path.includes('enterprise')) return 'partnerships';
-    if (path.includes('challenges')) return 'challenges';
-    
+
     return '';
   },
   

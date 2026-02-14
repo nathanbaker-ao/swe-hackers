@@ -153,13 +153,36 @@ service cloud.firestore {
     // ══════════════════════════════════════════════════════════════════
     // ACHIEVEMENTS (earned by users)
     // ══════════════════════════════════════════════════════════════════
-    
+
     // Users can read their own achievements
     // Only Cloud Functions can create/update achievements
     match /achievements/{achievementId} {
-      allow read: if isAuthenticated() && 
+      allow read: if isAuthenticated() &&
                      request.auth.uid == resource.data.userId;
       allow write: if false; // Only Cloud Functions can write
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // PRODUCTS (marketplace)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /products/{productId} {
+      // Anyone can read products (public catalog)
+      allow read: if true;
+      // Only admins can write products
+      allow write: if isAdmin();
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // PURCHASES (marketplace transactions)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /purchases/{purchaseId} {
+      // Users can read their own purchases
+      allow read: if isAuthenticated() &&
+                     resource.data.userId == request.auth.uid;
+      // Only Cloud Functions can write (via Admin SDK)
+      allow write: if false;
     }
   }
 }

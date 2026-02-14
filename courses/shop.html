@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Shop - AutoNateAI Search Query Packs</title>
+  <meta name="title" content="Shop - AutoNateAI Search Query Packs">
+  <meta name="description" content="Browse our collection of Boolean search packs for LinkedIn, Facebook, Reddit, and more. Source 6-figure opportunities with precision.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+  <link rel="stylesheet" href="shared/css/shop.css">
+
+  <!-- Firebase (for auth-aware navbar) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
+  <script src="shared/js/footer.js" defer></script>
+  <script src="shared/js/whop-service.js" defer></script>
+  <script src="shared/js/purchase-service.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation (injected) -->
+  <div id="navbar-container"></div>
+
+  <!-- Shop Hero -->
+  <section class="shop-hero">
+    <div class="shop-hero-content">
+      <h1>Search Query Packs</h1>
+      <p>
+        Expertly crafted Boolean search strings to help you source
+        6-figure opportunities across every major platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons -->
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="linkedin">LinkedIn</button>
+    <button class="filter-btn" data-filter="facebook">Facebook</button>
+    <button class="filter-btn" data-filter="reddit">Reddit</button>
+    <button class="filter-btn" data-filter="multi">Multi-Platform</button>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="product-grid" id="product-grid">
+    <!-- Populated by JS -->
+  </div>
+
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <h2 class="cta-title">Can't Decide?</h2>
+    <p class="cta-subtitle">
+      The Multi-Platform Power Bundle gives you everything at a discount.
+      One purchase, every platform covered.
+    </p>
+    <div class="cta-buttons">
+      <a href="https://discord.gg/Me5N8tCdkC" target="_blank" class="btn btn-secondary">
+        Ask in Discord
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    let allProducts = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+
+      // Check for purchase return
+      if (typeof PurchaseService !== 'undefined') {
+        const purchaseResult = PurchaseService.handlePurchaseReturn();
+        if (purchaseResult) {
+          showPurchaseToast(purchaseResult);
+        }
+      }
+
+      // Load products
+      loadProducts();
+
+      // Setup filters
+      setupFilters();
+
+      // Hero animation
+      anime({
+        targets: '.shop-hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
+      });
+
+      anime({
+        targets: '.filter-bar',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        delay: 200,
+        easing: 'easeOutCubic'
+      });
+    });
+
+    function loadProducts(filter) {
+      const grid = document.getElementById('product-grid');
+      if (!grid || typeof WhopService === 'undefined') return;
+
+      allProducts = WhopService.getProducts();
+      renderProducts(filter || 'all');
+    }
+
+    function renderProducts(filter) {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = '';
+
+      const filtered = filter === 'all'
+        ? allProducts
+        : allProducts.filter(p => p.platform === filter);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">No products found for this filter.</div>';
+        return;
+      }
+
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.dataset.platform = product.platform;
+
+        const tagsHtml = product.tags.map(tag =>
+          `<span class="tag-pill">${tag}</span>`
+        ).join('');
+
+        card.innerHTML = `
+          <div class="product-card-header">
+            <div class="platform-badge">${product.platformIcon}</div>
+            <div class="product-card-header-text">
+              <h3 class="product-card-name">${product.name}</h3>
+              <div class="product-card-platform">${product.platform}</div>
+            </div>
+          </div>
+          <div class="product-card-body">
+            <p class="product-card-desc">${product.description}</p>
+          </div>
+          <div class="product-tags">${tagsHtml}</div>
+          <div class="product-card-footer">
+            <span class="product-price">$${product.price}</span>
+            <button class="btn-buy" data-product-id="${product.id}">
+              Buy Now <span>&#x2192;</span>
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      // Attach buy button handlers
+      grid.querySelectorAll('.btn-buy').forEach(btn => {
+        btn.addEventListener('click', () => handleBuyClick(btn.dataset.productId));
+      });
+
+      // Animate cards
+      anime({
+        targets: '.product-card',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        delay: anime.stagger(80),
+        duration: 500,
+        easing: 'easeOutCubic'
+      });
+    }
+
+    function setupFilters() {
+      const filterBar = document.getElementById('filter-bar');
+      if (!filterBar) return;
+
+      filterBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+
+        // Update active state
+        filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Re-render products
+        renderProducts(btn.dataset.filter);
+      });
+    }
+
+    function handleBuyClick(productId) {
+      // Check if user is logged in via AuthService
+      const user = window.AuthService?.getUser?.();
+
+      if (user && user.email) {
+        // User is logged in, proceed directly
+        WhopService.createCheckout(productId, user.email);
+      } else {
+        // Show email prompt modal
+        showEmailModal(productId);
+      }
+    }
+
+    function showEmailModal(productId) {
+      const product = WhopService.getProduct(productId);
+      if (!product) return;
+
+      const overlay = document.createElement('div');
+      overlay.className = 'email-modal-overlay';
+      overlay.innerHTML = `
+        <div class="email-modal">
+          <h3>Complete Your Purchase</h3>
+          <p>Enter your email to purchase <strong>${product.name}</strong> for $${product.price}.</p>
+          <input type="email" id="checkout-email" placeholder="your@email.com" autocomplete="email">
+          <div class="email-modal-actions">
+            <button class="btn-cancel" id="modal-cancel">Cancel</button>
+            <button class="btn-buy" id="modal-confirm">Continue to Checkout <span>&#x2192;</span></button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(overlay);
+
+      const emailInput = overlay.querySelector('#checkout-email');
+      const confirmBtn = overlay.querySelector('#modal-confirm');
+      const cancelBtn = overlay.querySelector('#modal-cancel');
+
+      emailInput.focus();
+
+      confirmBtn.addEventListener('click', () => {
+        const email = emailInput.value.trim();
+        if (!email || !email.includes('@')) {
+          emailInput.style.borderColor = 'var(--accent-error)';
+          return;
+        }
+        overlay.remove();
+        WhopService.createCheckout(productId, email);
+      });
+
+      cancelBtn.addEventListener('click', () => overlay.remove());
+
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.remove();
+      });
+
+      emailInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') confirmBtn.click();
+        if (e.key === 'Escape') overlay.remove();
+      });
+    }
+
+    function showPurchaseToast(purchaseResult) {
+      const productName = purchaseResult.product?.name || 'your product';
+
+      const toast = document.createElement('div');
+      toast.className = 'purchase-toast';
+      toast.innerHTML = `
+        <span class="purchase-toast-icon">&#x2705;</span>
+        <div class="purchase-toast-text">
+          <span class="purchase-toast-title">Purchase Successful!</span>
+          <span class="purchase-toast-desc">You now have access to ${productName}.</span>
+        </div>
+        <button class="purchase-toast-close" aria-label="Close">&times;</button>
+      `;
+
+      document.body.appendChild(toast);
+
+      toast.querySelector('.purchase-toast-close').addEventListener('click', () => {
+        toast.remove();
+      });
+
+      // Auto-remove after 6 seconds
+      setTimeout(() => {
+        if (toast.parentNode) toast.remove();
+      }, 6000);
+    }
+  </script>
+</body>
+</html>
