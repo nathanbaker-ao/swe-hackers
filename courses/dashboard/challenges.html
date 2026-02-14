@@ -174,34 +174,8 @@
             </li>
           </ul>
         </div>
-
-        <!-- Basketball Section (hidden by default, shown for city-high-basketball org or admin) -->
-        <div class="nav-section" id="basketball-section" style="display: none;">
-          <span class="nav-section-title" style="color: #ef4444;">Basketball</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="basketball-sim.html" class="nav-link">
-                <span class="nav-icon">🏀</span>
-                <span class="nav-text">Play Simulator</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Admin Section (hidden by default, shown for admins) -->
-        <div class="nav-section" id="admin-section" style="display: none;">
-          <span class="nav-section-title" style="color: #f44336;">Admin</span>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="../admin/" class="nav-link">
-                <span class="nav-icon">🛡️</span>
-                <span class="nav-text">Admin Dashboard</span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </nav>
-
+      
       <div class="sidebar-user">
         <div class="user-card" id="user-card">
           <div class="user-avatar" id="user-avatar">?</div>
@@ -669,19 +643,7 @@
       
       loadingScreen.classList.add('hidden');
       dashboardContent.classList.add('ready');
-
-      // Show basketball/admin sections based on role
-      if (window.RBACService) {
-        const isAdmin = await window.RBACService.hasRole('admin');
-        if (isAdmin) {
-          document.getElementById('admin-section').style.display = 'block';
-        }
-        const hasBasketball = isAdmin || await window.RBACService.belongsToOrganization('city-high-basketball');
-        if (hasBasketball) {
-          document.getElementById('basketball-section').style.display = 'block';
-        }
-      }
-
+      
       loadUserInfo(user);
       
       const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
