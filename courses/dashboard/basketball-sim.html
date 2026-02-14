@@ -95,8 +95,7 @@
           </ul>
         </div>
 
-        <!-- Learning Section (admin only) -->
-        <div class="nav-section" id="learning-section" style="display: none;">
+        <div class="nav-section">
           <span class="nav-section-title">Learning</span>
           <ul class="nav-list">
             <li class="nav-item">
@@ -120,8 +119,7 @@
           </ul>
         </div>
 
-        <!-- Community Section (admin only) -->
-        <div class="nav-section" id="community-section" style="display: none;">
+        <div class="nav-section">
           <span class="nav-section-title">Community</span>
           <ul class="nav-list">
             <li class="nav-item">
@@ -427,10 +425,8 @@
         return;
       }
 
-      // Show full nav sections for admins
+      // Show admin sections for admins
       if (isAdmin) {
-        document.getElementById('learning-section').style.display = '';
-        document.getElementById('community-section').style.display = '';
         document.getElementById('admin-section').style.display = 'block';
       }
 
