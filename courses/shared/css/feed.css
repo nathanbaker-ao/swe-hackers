@@ -1,6 +1,6 @@
 /**
  * Feed Page Styles for AutoNateAI Marketplace
- * Social media-style feed with glassmorphism cards
+ * Vibrant card design matching the Tools Library aesthetic
  */
 
 /* ===== Feed Layout ===== */
@@ -22,8 +22,8 @@
 
 .filter-pill {
   padding: 0.5rem 1.25rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   color: var(--text-secondary);
   font-size: 0.85rem;
@@ -48,11 +48,9 @@
 
 /* ===== Feed Card ===== */
 .feed-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
@@ -65,21 +63,14 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
 }
 
 .feed-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-2px);
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.25),
-    0 0 40px rgba(99, 102, 241, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(121, 134, 203, 0.3);
 }
 
 /* ===== Card Header ===== */
@@ -208,17 +199,19 @@
 
 .feed-tag {
   padding: 0.2rem 0.6rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 6px;
+  background: rgba(121, 134, 203, 0.15);
+  border: 1px solid rgba(121, 134, 203, 0.2);
+  border-radius: 10px;
   font-size: 0.75rem;
-  color: var(--text-muted);
-  transition: color 0.2s;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
 }
 
 .feed-tag:hover {
-  color: var(--text-secondary);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(121, 134, 203, 0.25);
+  border-color: rgba(121, 134, 203, 0.35);
 }
 
 /* ===== Author Info ===== */
@@ -242,6 +235,12 @@
   font-weight: 600;
   color: #fff;
   flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(121, 134, 203, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feed-card:hover .feed-card__avatar {
+  box-shadow: 0 0 30px rgba(121, 134, 203, 0.5);
 }
 
 .feed-card__author-info {
@@ -268,12 +267,12 @@
 
 [data-theme="light"] .feed-card:hover {
   background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .filter-pill {
-  background: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.06);
 }
 
 [data-theme="light"] .feed-card--premium .feed-card__content::after {

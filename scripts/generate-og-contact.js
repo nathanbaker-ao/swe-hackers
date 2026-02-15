@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 /**
- * OpenAI Image Generation Script for AutoNateAI
- * 
- * Generates social preview images using GPT Image 1.5
- * 
+ * OpenAI Image Generation Script for AutoNateAI - Contact Page
+ *
+ * Generates social preview images using GPT Image 1
+ *
  * Usage:
- *   node generate-og-image.js
- * 
+ *   node generate-og-contact.js
+ *
  * Environment:
  *   OPENAI_API_KEY - Your OpenAI API key
- * 
+ *
  * Output:
- *   courses/assets/og-preview.png
+ *   courses/assets/og-contact.png
  */
 
 const https = require('https');
@@ -43,17 +43,17 @@ const CONFIG = {
   // OpenAI API
   apiKey: process.env.OPENAI_API_KEY,
   model: 'gpt-image-1', // Use gpt-image-1 for image generation
-  
+
   // Output
   outputDir: path.join(__dirname, '..', 'courses', 'assets'),
-  outputFile: 'og-preview.png',
-  
+  outputFile: 'og-contact.png',
+
   // Image specs
   size: '1536x1024', // Will be cropped to 1200x630
   quality: 'high',
-  
+
   // Prompt for the image
-  prompt: `Create a stunning social media preview image for "AutoNateAI" - an AI-powered research and opportunity intelligence platform.
+  prompt: `Create a stunning social media preview image for "AutoNateAI" contact page - reaching out and connecting.
 
 Design specifications:
 - Dark background color: #0a0a0f (nearly black)
@@ -63,23 +63,24 @@ Design specifications:
 
 Visual elements to include:
 - The text "AutoNateAI" prominently displayed in a modern, clean sans-serif font
-- Subtitle text: "Deep Research. Real Strategies. Real Opportunities."
-- Abstract data visualization patterns: flowing graph lines, trend arrows, network connections
-- Social platform icons subtly floating (LinkedIn, Reddit, X logos as abstract shapes)
-- A glowing search/magnifying glass motif representing advanced search tools
-- Neural network/AI brain patterns connecting various data points
+- Subtitle text: "Let's Connect"
+- Abstract communication imagery: glowing envelope icon, chat bubble shapes, message trails
+- Connection lines radiating outward from a central point
+- Abstract handshake or reaching-out gesture represented through light and geometry
+- Subtle social media and communication iconography (mail, chat, signal waves)
+- Warm, inviting glow suggesting openness and approachability
 
 Style:
 - Modern, sleek, professional
-- Data intelligence / opportunity sourcing aesthetic
+- Communication / connection aesthetic
 - High contrast with the dark background
 - Glowing/luminous effects on accent colors
-- Conveys power, intelligence, and connectivity
+- Conveys approachability, collaboration, and partnership
 
-The image should convey: "AI-powered research and tools that help you find real opportunities."
+The image should convey: "We are building this together -- reach out and connect with us."
 
 Dimensions: 1200x630 pixels (social media preview optimal size)
-Only text allowed: "AutoNateAI" and "Deep Research. Real Strategies. Real Opportunities."`
+Only text allowed: "AutoNateAI" and "Let's Connect"`
 };
 
 // ============================================================================
@@ -87,46 +88,46 @@ Only text allowed: "AutoNateAI" and "Deep Research. Real Strategies. Real Opport
 // ============================================================================
 
 async function main() {
-  console.log('🎨 AutoNateAI OG Image Generator\n');
-  
+  console.log('🎨 AutoNateAI OG Image Generator (Contact)\n');
+
   // Check for API key
   if (!CONFIG.apiKey) {
     console.error('❌ Error: OPENAI_API_KEY environment variable not set.\n');
     console.log('To set your API key, run:');
     console.log('  export OPENAI_API_KEY="your-key-here"\n');
     console.log('Then run this script again:');
-    console.log('  node scripts/generate-og-image.js\n');
+    console.log('  node scripts/generate-og-contact.js\n');
     process.exit(1);
   }
-  
+
   console.log('✅ API key found');
   console.log(`📁 Output: ${path.join(CONFIG.outputDir, CONFIG.outputFile)}\n`);
-  
+
   // Ensure output directory exists
   if (!fs.existsSync(CONFIG.outputDir)) {
     fs.mkdirSync(CONFIG.outputDir, { recursive: true });
     console.log('📁 Created assets directory');
   }
-  
+
   try {
     console.log('🚀 Generating image with GPT Image...');
     console.log('   This may take 30-60 seconds...\n');
-    
+
     const imageUrl = await generateImage();
     console.log('✅ Image generated!');
     console.log(`🔗 URL: ${imageUrl}\n`);
-    
+
     console.log('📥 Downloading image...');
     await downloadImage(imageUrl, path.join(CONFIG.outputDir, CONFIG.outputFile));
     console.log('✅ Image saved!\n');
-    
+
     console.log('🎉 Success! Your OG preview image is ready at:');
     console.log(`   courses/assets/${CONFIG.outputFile}\n`);
     console.log('Next steps:');
     console.log('1. Review the generated image');
     console.log('2. If needed, tweak the prompt in this script and regenerate');
     console.log('3. Commit and push to deploy\n');
-    
+
   } catch (error) {
     console.error('❌ Error:', error.message);
     if (error.response) {
@@ -149,7 +150,7 @@ async function generateImage() {
       size: CONFIG.size,
       quality: CONFIG.quality
     });
-    
+
     const options = {
       hostname: 'api.openai.com',
       port: 443,
@@ -161,23 +162,23 @@ async function generateImage() {
         'Content-Length': Buffer.byteLength(requestBody)
       }
     };
-    
+
     const req = https.request(options, (res) => {
       let data = '';
-      
+
       res.on('data', (chunk) => {
         data += chunk;
       });
-      
+
       res.on('end', () => {
         try {
           const response = JSON.parse(data);
-          
+
           if (response.error) {
             reject(new Error(response.error.message));
             return;
           }
-          
+
           if (response.data && response.data[0]) {
             // Check for URL or b64_json
             if (response.data[0].url) {
@@ -199,11 +200,11 @@ async function generateImage() {
         }
       });
     });
-    
+
     req.on('error', (e) => {
       reject(new Error(`Request failed: ${e.message}`));
     });
-    
+
     req.write(requestBody);
     req.end();
   });
@@ -213,13 +214,13 @@ async function downloadImage(url, outputPath) {
   if (url === 'BASE64_SAVED') {
     return; // Already saved from base64
   }
-  
+
   return new Promise((resolve, reject) => {
     const file = fs.createWriteStream(outputPath);
-    
+
     https.get(url, (response) => {
       response.pipe(file);
-      
+
       file.on('finish', () => {
         file.close();
         resolve();
@@ -236,4 +237,3 @@ async function downloadImage(url, outputPath) {
 // ============================================================================
 
 main();
-
