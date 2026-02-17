@@ -448,6 +448,7 @@
 .carousel-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
@@ -461,12 +462,13 @@
   position: relative;
   background: #000;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .carousel-slides {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
 }
 
 .carousel-slide {
@@ -593,7 +595,8 @@
   display: flex;
   flex-direction: column;
   background: var(--bg-card);
-  max-height: calc(100vh - 120px);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .comments-side__header {
