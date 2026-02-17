@@ -437,7 +437,7 @@
 
 /* ===== Carousel Post Layout ===== */
 .feed-card--carousel {
-  padding: 0;
+  padding: 1.5rem;
   overflow: hidden;
 }
 
@@ -448,12 +448,21 @@
 .carousel-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: start;
+  gap: 1.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
 @media (max-width: 900px) {
   .carousel-layout {
     grid-template-columns: 1fr;
+  }
+  .carousel-side {
+    max-height: 70vh;
+  }
+  .comments-side {
+    aspect-ratio: auto;
+    max-height: 60vh;
   }
 }
 
@@ -462,11 +471,16 @@
   position: relative;
   background: #000;
   overflow: hidden;
+  border-radius: 12px;
+  /* Force square: width comes from grid, height matches */
   aspect-ratio: 1 / 1;
+  max-height: 80vh;
 }
 
 .carousel-slides {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -594,8 +608,11 @@
 .comments-side {
   display: flex;
   flex-direction: column;
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
   aspect-ratio: 1 / 1;
+  max-height: 80vh;
   overflow: hidden;
 }
 
