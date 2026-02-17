@@ -7,7 +7,7 @@ const log = createLogger('image-generator');
  * Generate an image using OpenAI's gpt-image-1 model.
  * Returns { url, revisedPrompt } or null on failure.
  */
-export async function generateImage({ prompt, size = '1024x1024', quality = 'medium' }) {
+export async function generateImage({ prompt, size = '1024x1024', quality = 'medium' } = {}) {
   const openai = getOpenAI();
 
   log.info('Generating image', { promptPreview: prompt.slice(0, 80) });
