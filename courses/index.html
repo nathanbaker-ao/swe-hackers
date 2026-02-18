@@ -100,72 +100,25 @@
     </div>
   </nav>
 
-  <!-- ==================== HERO STAGE (Manifesto ↔ Hero) ==================== -->
-  <div class="hero-stage" id="hero-stage">
-
-    <!-- Layer 1: Manifesto -->
-    <section class="manifesto-section manifesto-layer" id="manifesto">
-      <div class="manifesto-bg">
-        <div class="manifesto-particles"></div>
-        <div class="manifesto-streak"></div>
-        <div class="manifesto-streak streak-2"></div>
-        <div class="manifesto-streak streak-3"></div>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero-stage" id="hero-stage">
+    <div class="hero-bg">
+      <div class="hero-particles"></div>
+      <div class="hero-light-streak"></div>
+      <div class="hero-light-streak streak-2"></div>
+    </div>
+    <div class="hero-brand-animation" id="hero-brand-animation">
+      <h1 class="hero-brand-name" id="hero-brand-name">AutoNateAI</h1>
+      <p class="hero-brand-tagline" id="hero-brand-tagline">We Bot That Life.</p>
+    </div>
+    <div class="hero-content" id="hero-content">
+      <p class="hero-subtitle">Scroll Courses built from real pros. Digital tools. Tech gear.</p>
+      <div class="hero-ctas">
+        <a href="#courses" class="btn btn-primary btn-lg">START SCROLLING</a>
+        <a href="#products" class="btn btn-secondary btn-lg">BROWSE THE SHOP</a>
       </div>
-      <div class="manifesto-glow"></div>
-      <div class="manifesto-container">
-        <p class="manifesto-lead" data-i18n="shop.manifesto_lead">Learn by Scrolling. Build by Doing.</p>
-        <h2 class="manifesto-headline" data-i18n="shop.manifesto_headline">Your Digital Tech Shop.</h2>
-        <div class="manifesto-body">
-          <p data-i18n="shop.manifesto_p1">Scroll Courses powered by real professionals.</p>
-          <p data-i18n-html="shop.manifesto_p2">AI agents built from LinkedIn pros who are too busy winning to teach.<br>Their knowledge. Their process. Their results.<br>Delivered to your feed.</p>
-          <p data-i18n-html="shop.manifesto_p3">This isn't another course platform.<br>It's how builders actually learn now.</p>
-          <p data-i18n-html="shop.manifesto_p4">Real expertise. AI-delivered. <span class="manifesto-bold">All in one scroll.</span></p>
-        </div>
-        <p class="manifesto-tagline" data-i18n="shop.manifesto_tagline">We Bot Dat Life.</p>
-      </div>
-    </section>
-
-    <!-- Layer 2: Hero Banner -->
-    <section class="shop-hero-banner hero-layer" id="hero">
-      <div class="shop-hero-bg">
-        <div class="hero-particles"></div>
-        <div class="hero-light-streak"></div>
-        <div class="hero-light-streak streak-2"></div>
-      </div>
-      <div class="shop-hero-container">
-        <div class="shop-hero-text">
-          <h1 class="shop-hero-title">
-            <span data-i18n="shop.hero_line1">TOOLS. COURSES. GEAR.</span><br>
-            <span class="hero-accent" data-i18n="shop.hero_line2">BUILT FOR BUILDERS.</span>
-          </h1>
-          <p class="shop-hero-subtitle" data-i18n="shop.hero_subtitle">Scroll Courses built from real pros. Digital tools. Tech gear. Everything you need to level up.</p>
-          <div class="shop-hero-ctas">
-            <a href="#courses" class="btn btn-primary btn-lg" data-i18n="shop.shop_now">START SCROLLING</a>
-            <a href="#products" class="btn btn-secondary btn-lg" data-i18n="shop.explore_collections">BROWSE THE SHOP</a>
-          </div>
-          <div class="trust-badges">
-            <div class="trust-badge">
-              <span class="trust-icon">&#9733;</span>
-              <span data-i18n="shop.rating">4.8 Rating</span>
-            </div>
-            <div class="trust-badge">
-              <span class="trust-icon">&#127891;</span>
-              <span data-i18n="shop.free_ship_50">AI-Powered Courses</span>
-            </div>
-            <div class="trust-badge">
-              <span class="trust-icon">&#128200;</span>
-              <span data-i18n="shop.returns_30">Progress Tracking</span>
-            </div>
-          </div>
-        </div>
-        <div class="shop-hero-image">
-          <div class="hero-glow"></div>
-          <img src="assets/shop/logo-glow.png" alt="AutoNateAI" class="hero-logo-img">
-        </div>
-      </div>
-    </section>
-
-  </div>
+    </div>
+  </section>
 
   <!-- ==================== PRODUCT GRID ==================== -->
   <section class="shop-products" id="products">
@@ -1198,98 +1151,62 @@
       }
     }
 
+    /* ---- HERO BRAND ANIMATION ---- */
+    function runHeroBrandAnimation() {
+      const brandName = document.getElementById('hero-brand-name');
+      const tagline = document.getElementById('hero-brand-tagline');
+      const heroContent = document.getElementById('hero-content');
+
+      if (!brandName || !tagline || !heroContent) return;
+
+      // Reset state
+      brandName.style.opacity = '0';
+      tagline.style.opacity = '0';
+      heroContent.style.opacity = '0';
+
+      // Step 1: "AutoNateAI" scales up huge then shrinks to resting size
+      anime.timeline()
+        .add({
+          targets: brandName,
+          opacity: [0, 1],
+          scale: [3, 1],
+          duration: 1200,
+          easing: 'easeOutExpo'
+        })
+        // Step 2: "We Bot That Life." scales up huge then shrinks
+        .add({
+          targets: tagline,
+          opacity: [0, 1],
+          scale: [2.5, 1],
+          duration: 1000,
+          easing: 'easeOutExpo'
+        }, '+=200')
+        // Step 3: Subtitle + CTAs fade in
+        .add({
+          targets: heroContent,
+          opacity: [0, 1],
+          translateY: [30, 0],
+          duration: 700,
+          easing: 'easeOutCubic'
+        }, '+=300');
+    }
+
     /* ---- ENTRY ANIMATIONS ---- */
     function runEntryAnimations() {
-      const manifestoLayer = document.querySelector('.manifesto-layer');
-      const heroLayer = document.querySelector('.hero-layer');
+      // Run hero animation on first load
+      runHeroBrandAnimation();
 
-      // Manifesto — staggered reveal
-      anime({
-        targets: '.manifesto-lead',
-        opacity: [0, 1],
-        translateY: [20, 0],
-        duration: 800,
-        delay: 100,
-        easing: 'easeOutCubic'
-      });
+      // Re-run hero animation every time it's scrolled into view
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runHeroBrandAnimation();
+          }
+        });
+      }, { threshold: 0.3 });
 
-      anime({
-        targets: '.manifesto-headline',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        duration: 900,
-        delay: 400,
-        easing: 'easeOutCubic'
-      });
-
-      anime({
-        targets: '.manifesto-body p',
-        opacity: [0, 1],
-        translateY: [20, 0],
-        delay: anime.stagger(200, { start: 700 }),
-        duration: 700,
-        easing: 'easeOutCubic'
-      });
-
-      anime({
-        targets: '.manifesto-tagline',
-        opacity: [0, 1],
-        scale: [0.9, 1],
-        duration: 800,
-        delay: 1800,
-        easing: 'easeOutCubic'
-      });
-
-      // Looping crossfade between manifesto ↔ hero
-      let showingManifesto = true;
-      const crossfadeDelay = 3500;  // time each layer is visible
-      const cycleDuration = 6000;   // full cycle time
-
-      function crossfade() {
-        if (showingManifesto) {
-          manifestoLayer.classList.add('fade-out');
-          heroLayer.classList.add('fade-in');
-        } else {
-          manifestoLayer.classList.remove('fade-out');
-          heroLayer.classList.remove('fade-in');
-        }
-        showingManifesto = !showingManifesto;
-      }
-
-      // First crossfade after manifesto text finishes
-      setTimeout(() => {
-        crossfade();
-        // Then loop
-        setInterval(crossfade, cycleDuration);
-      }, crossfadeDelay);
-
-      // Hero content — keep visible (no delayed fade, it loops)
-      anime({
-        targets: '.shop-hero-text',
-        opacity: [0, 1],
-        translateY: [40, 0],
-        duration: 900,
-        delay: 4200,
-        easing: 'easeOutCubic'
-      });
-
-      anime({
-        targets: '.shop-hero-image',
-        opacity: [0, 1],
-        translateX: [60, 0],
-        duration: 900,
-        delay: 4400,
-        easing: 'easeOutCubic'
-      });
-
-      anime({
-        targets: '.trust-badges',
-        opacity: [0, 1],
-        translateY: [20, 0],
-        duration: 600,
-        delay: 4700,
-        easing: 'easeOutCubic'
-      });
+      const heroStage = document.getElementById('hero-stage');
+      if (heroStage) heroObserver.observe(heroStage);
 
       anime({
         targets: '.shop-subnav',
@@ -1300,7 +1217,7 @@
         easing: 'easeOutCubic'
       });
 
-      // Scroll-triggered animations
+      // Scroll-triggered animations for other sections
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
