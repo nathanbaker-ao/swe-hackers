@@ -2,6 +2,7 @@ import { readFile, rename, readdir } from 'fs/promises';
 import { resolve, join } from 'path';
 import { fileURLToPath } from 'url';
 import { getFirestore, FieldValue, Timestamp } from 'firebase-admin/firestore';
+import { getStorage } from 'firebase-admin/storage';
 import { getDb } from '../lib/firebase-admin-init.mjs';
 import { createLogger } from '../lib/logger.mjs';
 
@@ -10,6 +11,25 @@ const logger = createLogger('feed-publisher');
 const VALID_CATEGORIES = new Set(['strategies', 'results', 'tips', 'jobs', 'keywords']);
 const VALID_CONTENT_TYPES = new Set(['text', 'interactive', 'chart', 'carousel']);
 const MAX_BATCH_OPS = 500;
+const STORAGE_BUCKET = 'autonateai-learning-hub.firebasestorage.app';
+
+/**
+ * Upload a base64-encoded image to Firebase Storage.
+ * Returns the public URL.
+ */
+async function uploadImageToStorage(b64Data, postId, slideNumber) {
+  const bucket = getStorage().bucket(STORAGE_BUCKET);
+  const filePath = `feed-images/${postId}/slide-${slideNumber}.png`;
+  const file = bucket.file(filePath);
+
+  const buffer = Buffer.from(b64Data, 'base64');
+  await file.save(buffer, {
+    metadata: { contentType: 'image/png', cacheControl: 'public, max-age=31536000' },
+    public: true,
+  });
+
+  return `https://storage.googleapis.com/${STORAGE_BUCKET}/${filePath}`;
+}
 
 /**
  * Discover generated-posts JSON files in the data/ directory.
@@ -153,6 +173,28 @@ export async function publishPosts() {
       let feedPostData;
 
       if (contentType === 'carousel') {
+        // Upload base64 images to Firebase Storage before writing to Firestore
+        const slides = post.slides || [];
+        const uploadedSlides = await Promise.all(
+          slides.map(async (s) => {
+            let imageUrl = s.imageUrl || null;
+            if (!imageUrl && s.imageB64) {
+              try {
+                imageUrl = await uploadImageToStorage(s.imageB64, feedPostRef.id, s.slideNumber);
+                logger.debug(`Uploaded slide ${s.slideNumber} for post ${feedPostRef.id}`);
+              } catch (err) {
+                logger.error(`Failed to upload slide ${s.slideNumber}`, { error: err.message });
+              }
+            }
+            return {
+              slideNumber: s.slideNumber,
+              type: s.type,
+              hasImage: !!imageUrl,
+              imageUrl,
+            };
+          })
+        );
+
         feedPostData = {
           id: feedPostRef.id,
           contentType: 'carousel',
@@ -160,12 +202,7 @@ export async function publishPosts() {
           questionContext: post.questionContext || '',
           themes: post.themes || [],
           keywords: post.keywords || [],
-          slides: (post.slides || []).map(s => ({
-            slideNumber: s.slideNumber,
-            type: s.type,
-            hasImage: s.hasImage,
-            imageUrl: s.imageUrl || null,
-          })),
+          slides: uploadedSlides,
           carouselStyle: post.carouselStyle || '',
           author: post.author,
           authorInitial: post.author.charAt(0),

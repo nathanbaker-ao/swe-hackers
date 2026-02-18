@@ -16,7 +16,8 @@ export function getDb() {
     const serviceAccount = JSON.parse(readFileSync(SERVICE_ACCOUNT_PATH, 'utf-8'));
     initializeApp({
       credential: cert(serviceAccount),
-      projectId: 'autonateai-learning-hub'
+      projectId: 'autonateai-learning-hub',
+      storageBucket: 'autonateai-learning-hub.firebasestorage.app'
     });
   }
 

@@ -4,19 +4,24 @@ import { createLogger } from './logger.mjs';
 const log = createLogger('image-generator');
 
 /**
- * Generate an image using OpenAI's gpt-image-1 model.
- * Returns { url, revisedPrompt } or null on failure.
+ * Generate a square 1:1 image using OpenAI's gpt-image-1 model.
+ * Size is always 1024x1024 — the feed UI renders in a square container.
+ * Returns { b64_json, url, revisedPrompt } or null on failure.
  */
 export async function generateImage({ prompt, size = '1024x1024', quality = 'medium' } = {}) {
   const openai = getOpenAI();
 
-  log.info('Generating image', { promptPreview: prompt.slice(0, 80) });
+  // Force square and prepend aspect ratio instruction to every prompt
+  const squareSize = '1024x1024';
+  const squarePrompt = `[IMPORTANT: Output must be a perfect square image, 1:1 aspect ratio. No letterboxing, no borders, fill the entire square canvas.]\n\n${prompt}`;
+
+  log.info('Generating square image', { promptPreview: prompt.slice(0, 80), size: squareSize });
 
   const response = await openai.images.generate({
     model: 'gpt-image-1',
-    prompt,
+    prompt: squarePrompt,
     n: 1,
-    size,
+    size: squareSize,
     quality,
   });
 
@@ -41,7 +46,7 @@ export async function generateImage({ prompt, size = '1024x1024', quality = 'med
  */
 export async function generateCarousel({ question, imagePrompts, style = 'modern bold graphic' }) {
   // Slide 1: The question as a bold graphic
-  const slide1Prompt = `Create a bold, eye-catching social media graphic with the following question displayed prominently in large stylized text. The design should be ${style} with a dark background and vibrant accent colors. No small text. The question is: "${question}"`;
+  const slide1Prompt = `Create a bold, eye-catching square social media graphic (1:1 aspect ratio, fill entire canvas) with the following question displayed prominently in large stylized text. The design should be ${style} with a dark background and vibrant accent colors. No small text, no borders, no letterboxing. The question is: "${question}"`;
 
   // Build all slide tasks
   const slideTasks = [

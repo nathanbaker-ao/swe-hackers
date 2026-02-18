@@ -114,11 +114,13 @@ MEME OPPORTUNITIES: ${JSON.stringify(questionAnalysis.memeOpportunities)}
 THEMES: ${questionAnalysis.themes.join(', ')}
 
 Rules for image prompts:
+- ALL images MUST be designed for a perfect square (1:1 aspect ratio) canvas — no letterboxing, no borders, fill the entire square frame
 - Slide 1 is ALWAYS the question as bold text on a striking graphic background
 - Slides 2-4 should show different perspectives (serious, analytical, contrarian)
 - Slides 5-6 should be memes or humorous takes that are relatable
 - Slides 7+ should be diagrams, charts, or infographic-style knowledge drops
 - Each prompt should specify exact visual style, colors, composition
+- Every prompt MUST include "square format, 1:1 aspect ratio, fill entire canvas" in the visual direction
 - NO text-heavy slides except slide 1 — use visual metaphors instead
 - Make images that stop the scroll — bold, unexpected, visually diverse
 
