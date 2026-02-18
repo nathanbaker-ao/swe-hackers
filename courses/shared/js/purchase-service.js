@@ -8,7 +8,7 @@
  *
  * Flow:
  * 1. User clicks "Buy Now" -> WhopService.createCheckout() stores pending purchase in sessionStorage
- * 2. User completes payment on Whop -> redirected back to shop.html?purchased=productId
+ * 2. User completes payment on Whop -> redirected back to index.html?purchased=productId
  * 3. handlePurchaseReturn() detects the return and shows success
  * 4. If user wasn't logged in, they register/login -> claimPendingPurchase() links purchase to account
  */
@@ -17,7 +17,7 @@ const PurchaseService = {
 
   /**
    * Handle return from Whop checkout
-   * Called on shop.html load to detect ?purchased= query param
+   * Called on index.html load to detect ?purchased= query param
    * @returns {Object|null} Purchase info if returning from checkout, null otherwise
    */
   handlePurchaseReturn() {

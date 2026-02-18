@@ -21,7 +21,7 @@ const NavbarComponent = {
         </a>
         
         <div class="nav-links">
-          <a href="{{baseUrl}}shop.html" class="nav-link" data-page="shop">Shop</a>
+          <a href="{{baseUrl}}index.html" class="nav-link" data-page="shop">Shop</a>
           <a href="{{baseUrl}}about.html" class="nav-link" data-page="about">About</a>
           <a href="{{baseUrl}}contact.html" class="nav-link" data-page="contact">Contact</a>
         </div>
@@ -32,21 +32,21 @@ const NavbarComponent = {
             <span>Orders & Returns</span>
           </a>
           <a href="{{baseUrl}}auth/login.html" class="nav-btn secondary">Sign In</a>
-          <a href="{{baseUrl}}shop.html" class="nav-btn primary">Browse Tools</a>
+          <a href="{{baseUrl}}index.html" class="nav-btn primary">Browse Tools</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">☰</button>
       </div>
       
       <div class="mobile-menu" id="mobile-menu">
-        <a href="{{baseUrl}}shop.html">Shop</a>
+        <a href="{{baseUrl}}index.html">Shop</a>
         <a href="{{baseUrl}}about.html">About</a>
         <a href="{{baseUrl}}contact.html">Contact</a>
         <a href="{{baseUrl}}dashboard/orders.html" class="mobile-orders-link" data-auth-only="true">Orders & Returns</a>
         <div class="mobile-divider"></div>
         <div class="mobile-cta">
           <a href="{{baseUrl}}auth/login.html" class="nav-btn secondary">Sign In</a>
-          <a href="{{baseUrl}}shop.html" class="nav-btn primary">Browse Tools</a>
+          <a href="{{baseUrl}}index.html" class="nav-btn primary">Browse Tools</a>
         </div>
       </div>
     </nav>
@@ -149,10 +149,13 @@ const NavbarComponent = {
   detectCurrentPage() {
     const path = window.location.pathname;
     
-    if (path.includes('shop')) return 'shop';
     if (path.includes('about')) return 'about';
     if (path.includes('contact')) return 'contact';
     if (path.includes('/blog')) return 'blog';
+    if (path.includes('personas')) return 'personas';
+
+    // Homepage (index.html) is the shop
+    if (path.endsWith('/') || path.endsWith('/index.html')) return 'shop';
 
     return '';
   },

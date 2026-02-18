@@ -26,7 +26,7 @@ const FooterComponent = {
           <div class="footer-column">
             <h4>Products</h4>
             <ul class="footer-links">
-              <li><a href="{{baseUrl}}shop.html">Browse Tools</a></li>
+              <li><a href="{{baseUrl}}index.html">Browse Tools</a></li>
               <li><a href="{{baseUrl}}dashboard/feed.html">Feed</a></li>
               <li><a href="{{baseUrl}}dashboard/library.html">My Library</a></li>
             </ul>

@@ -600,7 +600,7 @@ const WhopService = {
 
     // Build Whop checkout URL
     // The return URL will include our site so we can handle post-purchase
-    const returnUrl = `${window.location.origin}${this._detectBaseUrl()}shop.html?purchased=${product.id}`;
+    const returnUrl = `${window.location.origin}${this._detectBaseUrl()}index.html?purchased=${product.id}`;
     const checkoutUrl = `${this.WHOP_CHECKOUT_BASE}/${product.whopProductId}?d=${encodeURIComponent(returnUrl)}`;
 
     // Redirect to Whop checkout
