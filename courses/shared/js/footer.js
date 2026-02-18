@@ -19,7 +19,7 @@ const FooterComponent = {
               <span>AutoNateAI</span>
             </div>
             <p class="footer-desc">
-              We provide the tools and knowledge to efficiently source 6-figure opportunities.
+              Scroll Courses powered by AI agents built from real professionals. Plus digital tools and tech gear for builders.
             </p>
           </div>
           

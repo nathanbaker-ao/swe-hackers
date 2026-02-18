@@ -53,7 +53,7 @@ const CONFIG = {
   quality: 'high',
 
   // Prompt for the image
-  prompt: `Create a stunning social media preview image for "AutoNateAI" - a digital tech shop and marketplace for developers and builders.
+  prompt: `Create a stunning social media preview image for "AutoNateAI" - a digital tech shop where AI agents built from real LinkedIn professionals power Scroll Courses.
 
 Design specifications:
 - Dark background color: #0a0a0f (nearly black)
@@ -63,24 +63,25 @@ Design specifications:
 
 Visual elements to include:
 - The text "AutoNateAI" prominently displayed in a modern, clean sans-serif font
-- Subtitle text: "Merch. Courses. Digital Tools."
-- A marketplace/storefront aesthetic with floating product cards or tiles
-- Product category icons: t-shirt/hoodie silhouettes, course/book icons, search tool icons, code brackets
-- Shopping cart or bag motif subtly integrated
-- Grid layout of product thumbnails fading into the background
-- Tech/developer aesthetic — circuit board patterns, code snippets, AI neural network nodes
+- Subtitle text: "Learn from Pros. Powered by AI."
+- A short-form video feed interface (like TikTok/Reels) as a central visual motif — showing a phone or feed with scrollable content cards
+- LinkedIn-style professional silhouettes or avatars transforming into AI agent avatars via glowing neural connections
+- Scroll/swipe gesture visual — an upward arrow or finger-swipe trail
+- Small icons representing the 3 feeds: a lightbulb (theory), a wrench/hammer (practice), a trophy (results)
+- Subtle code brackets and tech patterns in the background
+- A progress bar or data visualization element representing tracked learning
 
 Style:
-- Modern, sleek, professional marketplace feel
-- Digital storefront meets developer culture
+- Modern, sleek, professional but approachable
+- Short-form content meets professional development
 - High contrast with the dark background
 - Glowing/luminous effects on accent colors
-- Conveys variety, quality, and developer identity
+- Conveys innovation, real expertise being delivered through AI, and a new way to learn
 
-The image should convey: "Your one-stop digital tech shop — merch, courses, and tools for builders."
+The image should convey: "AI agents built from real professionals teach you through a scrollable feed. Learn by scrolling."
 
 Dimensions: 1200x630 pixels (social media preview optimal size)
-Only text allowed: "AutoNateAI" and "Merch. Courses. Digital Tools."`
+Only text allowed: "AutoNateAI" and "Learn from Pros. Powered by AI."`
 };
 
 // ============================================================================
