@@ -88,6 +88,28 @@
       line-height: 1.7;
     }
 
+    .details-hero h1,
+    .details-hero p,
+    .details-meta,
+    .details-hero .hero-image {
+      opacity: 0;
+    }
+
+    .details-hero .hero-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .details-hero .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .details-meta {
       display: flex;
       gap: 2rem;
@@ -339,6 +361,9 @@
         <span><strong>$450</strong> per seat</span>
         <span><strong>75 students</strong> max</span>
         <span><strong>4 hours</strong> live & hands-on</span>
+      </div>
+      <div class="hero-image">
+        <img src="assets/og-workshop-details.png" alt="Vibe Coding for Production — Workshop Details">
       </div>
     </div>
   </section>
@@ -621,13 +646,36 @@
       NavbarComponent.inject('navbar-container');
       FooterComponent.inject('footer-container');
 
-      anime({
-        targets: '.details-hero-content',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        duration: 800,
-        easing: 'easeOutCubic'
-      });
+      anime.timeline()
+        .add({
+          targets: '.details-hero h1',
+          opacity: [0, 1],
+          scale: [2.5, 1],
+          duration: 1200,
+          easing: 'easeOutExpo'
+        })
+        .add({
+          targets: '.details-hero p',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 700,
+          easing: 'easeOutCubic'
+        }, '-=400')
+        .add({
+          targets: '.details-meta',
+          opacity: [0, 1],
+          translateY: [15, 0],
+          duration: 500,
+          easing: 'easeOutCubic'
+        }, '-=200')
+        .add({
+          targets: '.details-hero .hero-image',
+          opacity: [0, 1],
+          translateY: [30, 0],
+          scale: [0.95, 1],
+          duration: 800,
+          easing: 'easeOutCubic'
+        }, '-=200');
     });
 
     const observer = new IntersectionObserver((entries) => {

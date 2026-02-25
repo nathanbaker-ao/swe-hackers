@@ -97,6 +97,29 @@
       line-height: 1.7;
     }
 
+    .about-avatar-large,
+    .about-hero h1,
+    .about-hero .hero-name,
+    .about-hero p,
+    .about-hero .hero-image {
+      opacity: 0;
+    }
+
+    .about-hero .hero-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-hero .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .about-avatar-large {
       width: 140px;
       height: 140px;
@@ -241,6 +264,9 @@
         Vibe Coding for Production workshop. Nathan teaches the engineering discipline
         that makes AI-assisted development production-ready.
       </p>
+      <div class="hero-image">
+        <img src="assets/og-about.png" alt="About Nathan Baker — AutoNateAI">
+      </div>
     </div>
   </section>
 
@@ -376,13 +402,43 @@
       NavbarComponent.inject('navbar-container');
       FooterComponent.inject('footer-container');
 
-      anime({
-        targets: '.about-hero-content',
-        opacity: [0, 1],
-        translateY: [30, 0],
-        duration: 800,
-        easing: 'easeOutCubic'
-      });
+      anime.timeline()
+        .add({
+          targets: '.about-avatar-large',
+          opacity: [0, 1],
+          scale: [0.5, 1],
+          duration: 600,
+          easing: 'easeOutCubic'
+        })
+        .add({
+          targets: '.about-hero h1',
+          opacity: [0, 1],
+          scale: [2.5, 1],
+          duration: 1200,
+          easing: 'easeOutExpo'
+        }, '-=200')
+        .add({
+          targets: '.about-hero .hero-name',
+          opacity: [0, 1],
+          translateY: [15, 0],
+          duration: 500,
+          easing: 'easeOutCubic'
+        }, '-=400')
+        .add({
+          targets: '.about-hero p',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 700,
+          easing: 'easeOutCubic'
+        }, '-=200')
+        .add({
+          targets: '.about-hero .hero-image',
+          opacity: [0, 1],
+          translateY: [30, 0],
+          scale: [0.95, 1],
+          duration: 800,
+          easing: 'easeOutCubic'
+        }, '-=200');
     });
 
     const observer = new IntersectionObserver((entries) => {

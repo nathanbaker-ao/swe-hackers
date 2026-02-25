@@ -88,9 +88,25 @@
     .hero-badge,
     .hero-subtitle,
     .hero-cta-group,
-    .hero-meta {
+    .hero-meta,
+    .workshop-hero .hero-image {
       opacity: 0;
       will-change: transform, opacity;
+    }
+
+    .workshop-hero .hero-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 2.5rem auto 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .workshop-hero .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .workshop-hero-content {
@@ -471,6 +487,9 @@
         <div class="hero-meta-item"><strong>4 Hours</strong> live</div>
         <div class="hero-meta-item"><strong>75 Seats</strong> max</div>
       </div>
+      <div class="hero-image">
+        <img src="assets/og-workshop.png" alt="Vibe Coding for Production Workshop">
+      </div>
     </div>
   </section>
 
@@ -696,6 +715,14 @@
           opacity: [0, 1],
           translateY: [20, 0],
           duration: 600,
+          easing: 'easeOutCubic'
+        }, '-=200')
+        .add({
+          targets: '.workshop-hero .hero-image',
+          opacity: [0, 1],
+          translateY: [30, 0],
+          scale: [0.95, 1],
+          duration: 800,
           easing: 'easeOutCubic'
         }, '-=200')
         .add({
