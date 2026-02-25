@@ -49,92 +49,198 @@
   <script src="shared/js/footer.js" defer></script>
 
   <style>
-    /* Hero */
-    .workshop-hero {
-      padding: calc(var(--nav-height) + 5rem) 2rem 5rem;
-      text-align: center;
+    /* ================================================================
+       STICKY SECTION NAVIGATION
+       ================================================================ */
+    .section-nav {
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: rgba(10, 10, 15, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+      overflow-x: auto;
+    }
+
+    .section-nav.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .section-nav-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.6rem 1.5rem;
+      white-space: nowrap;
+    }
+
+    .section-nav-link {
+      padding: 0.4rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+    }
+
+    .section-nav-link:hover {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .section-nav-link.active {
+      color: var(--accent-primary);
+      background: rgba(121, 134, 203, 0.12);
+    }
+
+    /* ================================================================
+       HERO SECTION
+       ================================================================ */
+    .landing-hero {
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
       overflow: hidden;
     }
 
-    .workshop-hero::before {
+    /* Animated gradient mesh background */
+    .landing-hero::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background:
-        radial-gradient(ellipse at 30% 20%, rgba(121, 134, 203, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(77, 182, 172, 0.1) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 30%, rgba(121, 134, 203, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 70%, rgba(77, 182, 172, 0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 50%, rgba(255, 213, 79, 0.05) 0%, transparent 40%);
+      animation: gradientMesh 14s ease-in-out infinite;
       pointer-events: none;
+      z-index: 1;
     }
 
-    /* Hero glow that pulses behind the title */
-    .workshop-hero-glow {
+    @keyframes gradientMesh {
+      0%, 100% {
+        background:
+          radial-gradient(ellipse at 20% 30%, rgba(121, 134, 203, 0.18) 0%, transparent 55%),
+          radial-gradient(ellipse at 80% 70%, rgba(77, 182, 172, 0.12) 0%, transparent 55%),
+          radial-gradient(ellipse at 50% 50%, rgba(255, 213, 79, 0.05) 0%, transparent 40%);
+      }
+      33% {
+        background:
+          radial-gradient(ellipse at 40% 60%, rgba(121, 134, 203, 0.2) 0%, transparent 55%),
+          radial-gradient(ellipse at 60% 30%, rgba(77, 182, 172, 0.14) 0%, transparent 55%),
+          radial-gradient(ellipse at 30% 80%, rgba(255, 213, 79, 0.06) 0%, transparent 40%);
+      }
+      66% {
+        background:
+          radial-gradient(ellipse at 70% 40%, rgba(121, 134, 203, 0.16) 0%, transparent 55%),
+          radial-gradient(ellipse at 30% 80%, rgba(77, 182, 172, 0.1) 0%, transparent 55%),
+          radial-gradient(ellipse at 60% 20%, rgba(255, 213, 79, 0.07) 0%, transparent 40%);
+      }
+    }
+
+    /* Background photo overlay */
+    .landing-hero::after {
+      content: '';
       position: absolute;
-      top: 40%; left: 50%;
-      width: 600px; height: 600px;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(121, 134, 203, 0.08) 0%, rgba(77, 182, 172, 0.04) 40%, transparent 70%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80') center/cover no-repeat;
+      opacity: 0.07;
       pointer-events: none;
-      animation: heroGlowPulse 6s ease-in-out infinite;
     }
 
-    @keyframes heroGlowPulse {
-      0%, 100% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
-      50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+    /* Animated grid lines */
+    .hero-grid-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(121, 134, 203, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(121, 134, 203, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridDrift 25s linear infinite;
+      pointer-events: none;
+      z-index: 1;
     }
 
-    /* Hero elements start hidden for animation */
-    .workshop-hero h1,
-    .hero-badge,
-    .hero-subtitle,
+    @keyframes gridDrift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(60px, 60px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    /* Hero elements hidden for entrance animation */
+    .hero-badge-landing,
+    .hero-text h1,
+    .hero-text .hero-subtitle,
     .hero-cta-group,
-    .hero-meta,
-    .workshop-hero .hero-image {
+    .hero-meta-pills,
+    .hero-showcase {
       opacity: 0;
       will-change: transform, opacity;
     }
 
-    .workshop-hero .hero-image {
-      width: 100%;
-      max-width: 900px;
-      margin: 2.5rem auto 0;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    }
-
-    .workshop-hero .hero-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .workshop-hero-content {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
+    .hero-badge-landing {
+      display: inline-flex;
       align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: rgba(121, 134, 203, 0.15);
-      border: 1px solid rgba(121, 134, 203, 0.3);
+      gap: 0.5rem;
+      padding: 0.45rem 1.15rem;
+      background: rgba(121, 134, 203, 0.12);
+      border: 1px solid rgba(121, 134, 203, 0.25);
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--accent-primary);
       font-weight: 500;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .workshop-hero h1 {
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+      animation: badgePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero-text h1 {
       font-family: var(--font-display);
-      font-size: 3.25rem;
+      font-size: 3.75rem;
       font-weight: 700;
-      line-height: 1.15;
+      line-height: 1.1;
       margin-bottom: 1.25rem;
       background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
       -webkit-background-clip: text;
@@ -142,154 +248,419 @@
       background-clip: text;
     }
 
-    .workshop-hero .hero-subtitle {
-      font-size: 1.2rem;
+    .hero-text .hero-subtitle {
+      font-size: 1.15rem;
       color: var(--text-secondary);
-      line-height: 1.7;
-      max-width: 650px;
-      margin: 0 auto 2rem;
+      line-height: 1.75;
+      max-width: 520px;
+      margin: 0 0 2rem;
     }
 
     .hero-cta-group {
       display: flex;
       gap: 1rem;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .hero-meta {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-meta-item {
-      display: flex;
+    .btn-glow::after {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0.5;
+      filter: blur(12px);
+      animation: ctaGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes ctaGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+
+    .btn-video {
+      display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9rem;
+    }
+
+    .btn-video .play-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.75rem;
+    }
+
+    .hero-meta-pills {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .hero-pill {
+      padding: 0.4rem 1rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      font-size: 0.85rem;
       color: var(--text-secondary);
     }
 
-    .hero-meta-item strong {
+    .hero-pill strong {
       color: var(--text-primary);
     }
 
-    /* Problem Statement */
-    .problem-content {
-      max-width: 750px;
-      margin: 0 auto;
-      text-align: center;
+    /* Hero Showcase Image — right column */
+    .hero-showcase {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5), 0 0 40px rgba(121, 134, 203, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    .problem-content h2 {
+    .hero-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ================================================================
+       VIDEO MODAL
+       ================================================================ */
+    .video-modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .video-modal-backdrop.open {
+      display: flex;
+    }
+
+    .video-modal {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .video-modal iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      color: var(--text-primary);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    .video-modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ================================================================
+       PROBLEM STATEMENT — SPLIT LAYOUT
+       ================================================================ */
+    .problem-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .problem-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .problem-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.8);
+      transition: filter 0.4s ease;
+    }
+
+    .problem-image-wrapper:hover img {
+      filter: brightness(0.9);
+    }
+
+    .problem-image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(121, 134, 203, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .problem-text h2 {
       font-family: var(--font-display);
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       color: var(--text-primary);
+      line-height: 1.2;
     }
 
-    .problem-content p {
-      font-size: 1.1rem;
+    .problem-text p {
+      font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.8;
       margin-bottom: 1.25rem;
     }
 
-    /* Module Grid */
+    .problem-text .highlight-bar {
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ================================================================
+       M.A.P.P.E.R. FRAMEWORK — IMAGE CARDS
+       ================================================================ */
+    .framework-section {
+      position: relative;
+    }
+
+    .framework-section::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=60') right center/cover no-repeat;
+      opacity: 0.03;
+      mask-image: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+      -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+      pointer-events: none;
+    }
+
     .module-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 0 auto;
     }
 
     .module-card {
-      padding: 2rem 1.5rem;
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: var(--radius-lg);
-      transition: all var(--transition-normal);
+      overflow: hidden;
+      transition: all 0.35s ease;
     }
 
     .module-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
       border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    }
+
+    .module-card-image {
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .module-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6) saturate(0.8);
+      transition: all 0.4s ease;
+    }
+
+    .module-card:hover .module-card-image img {
+      filter: brightness(0.75) saturate(1);
+      transform: scale(1.05);
+    }
+
+    .module-card-body {
+      padding: 1.5rem;
     }
 
     .module-letter {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
       background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
       border-radius: var(--radius-md);
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       color: white;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .module-card h3 {
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
       color: var(--text-primary);
     }
 
     .module-card p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-secondary);
       line-height: 1.6;
     }
 
-    /* Workflow */
-    .workflow-steps {
+    /* ================================================================
+       PRODUCTION WORKFLOW — VISUAL PIPELINE
+       ================================================================ */
+    .workflow-section {
+      position: relative;
+    }
+
+    .workflow-pipeline {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .workflow-stage {
+      flex: 1;
+      min-width: 160px;
+      max-width: 200px;
+      position: relative;
+      text-align: center;
+      padding: 2rem 1.25rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    .workflow-stage:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(121, 134, 203, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .workflow-stage-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .workflow-stage h4 {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .workflow-stage p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .workflow-connector {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .workflow-step {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: var(--radius-md);
-      font-size: 0.9rem;
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    .workflow-arrow {
+      width: 30px;
       color: var(--accent-primary);
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+      flex-shrink: 0;
     }
 
-    /* Stats Strip */
+    /* ================================================================
+       STATS STRIP — ENHANCED
+       ================================================================ */
+    .stats-section {
+      position: relative;
+    }
+
     .stats-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      max-width: 800px;
+      gap: 1.5rem;
+      max-width: 900px;
       margin: 0 auto;
     }
 
     .stat-card {
       text-align: center;
+      padding: 1.75rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      border-color: rgba(121, 134, 203, 0.25);
+      transform: translateY(-3px);
     }
 
     .stat-number {
@@ -300,42 +671,131 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      line-height: 1;
     }
 
     .stat-label {
       font-size: 0.85rem;
       color: var(--text-secondary);
-      margin-top: 0.25rem;
+      margin-top: 0.5rem;
     }
 
-    /* Instructor Preview */
-    .instructor-preview {
+    /* ================================================================
+       VIDEO PREVIEW SECTION
+       ================================================================ */
+    .video-section {
+      position: relative;
+    }
+
+    .video-preview-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .video-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-embed-placeholder {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+    }
+
+    .video-embed-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      transition: filter 0.3s ease;
+    }
+
+    .video-embed-placeholder:hover img {
+      filter: brightness(0.6);
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(121, 134, 203, 0.85);
       display: flex;
       align-items: center;
-      gap: 2rem;
-      max-width: 700px;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      box-shadow: 0 8px 30px rgba(121, 134, 203, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .video-embed-placeholder:hover .video-play-overlay {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(121, 134, 203, 1);
+    }
+
+    /* ================================================================
+       INSTRUCTOR — ENHANCED SPLIT LAYOUT
+       ================================================================ */
+    .instructor-card {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      max-width: 750px;
       margin: 0 auto;
       padding: 2.5rem;
-      background: var(--bg-card);
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-lg);
-      transition: all var(--transition-normal);
+      transition: all 0.35s ease;
     }
 
-    .instructor-preview:hover {
+    .instructor-card:hover {
       border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
     }
 
-    .instructor-avatar {
-      width: 90px;
-      height: 90px;
+    .instructor-photo-wrapper {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid rgba(121, 134, 203, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .instructor-photo-wrapper .instructor-avatar-circle {
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      border-radius: 50%;
-      font-size: 2.25rem;
-      flex-shrink: 0;
+      font-size: 2.5rem;
       color: white;
       font-family: var(--font-display);
       font-weight: 700;
@@ -343,9 +803,10 @@
 
     .instructor-info h3 {
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.25rem;
+      color: var(--text-primary);
     }
 
     .instructor-role {
@@ -357,7 +818,7 @@
     .instructor-info p {
       font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .instructor-link {
@@ -367,93 +828,263 @@
       color: var(--accent-primary);
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.2s;
     }
 
     .instructor-link:hover {
+      color: var(--accent-secondary);
       text-decoration: underline;
     }
 
-    /* Blog Preview */
-    .blog-preview-grid {
+    /* ================================================================
+       BLOG PREVIEW — CARDS WITH IMAGES
+       ================================================================ */
+    .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 0 auto;
     }
 
-    .blog-preview-card {
-      padding: 1.5rem;
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+    .blog-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: var(--radius-lg);
-      transition: all var(--transition-normal);
+      overflow: hidden;
       text-decoration: none;
       display: block;
+      transition: all 0.35s ease;
     }
 
-    .blog-preview-card:hover {
-      transform: translateY(-4px);
+    .blog-card:hover {
+      transform: translateY(-5px);
       border-color: rgba(121, 134, 203, 0.3);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
     }
 
-    .blog-preview-category {
-      font-size: 0.75rem;
+    .blog-card-image {
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6) saturate(0.9);
+      transition: all 0.4s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+      filter: brightness(0.75) saturate(1);
+      transform: scale(1.05);
+    }
+
+    .blog-card-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .blog-card-category {
+      font-size: 0.72rem;
       color: var(--accent-primary);
-      font-weight: 500;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       margin-bottom: 0.5rem;
     }
 
-    .blog-preview-card h3 {
+    .blog-card h3 {
       font-family: var(--font-display);
       font-size: 1rem;
       font-weight: 600;
       color: var(--text-primary);
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
     }
 
-    .blog-preview-card p {
+    .blog-card p {
       font-size: 0.85rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
+    /* ================================================================
+       FINAL CTA — ENHANCED
+       ================================================================ */
+    .cta-enhanced {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-enhanced::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1920&q=80') center/cover no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .cta-enhanced::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(121, 134, 203, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-urgency-badge {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      background: rgba(255, 213, 79, 0.1);
+      border: 1px solid rgba(255, 213, 79, 0.25);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--accent-warning);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ================================================================
+       SHIMMER EFFECT
+       ================================================================ */
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .module-card::before,
+    .stat-card::before,
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.03) 50%,
+        transparent 100%
+      );
+      transform: translateX(-100%);
+      pointer-events: none;
+    }
+
+    .module-card:hover::before,
+    .stat-card:hover::before,
+    .blog-card:hover::before {
+      animation: shimmer 0.8s ease forwards;
+    }
+
+    .module-card,
+    .stat-card,
+    .blog-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ================================================================
+       RESPONSIVE
+       ================================================================ */
     @media (max-width: 768px) {
-      .workshop-hero h1 {
+      .landing-hero {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 2rem);
+        padding-bottom: 3rem;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text {
+        text-align: center;
+        align-items: center;
+      }
+
+      .hero-text h1 {
         font-size: 2.25rem;
+      }
+
+      .hero-text .hero-subtitle {
+        font-size: 1.05rem;
+        max-width: 100%;
+      }
+
+      .hero-cta-group {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-meta-pills {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .problem-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .module-grid {
         grid-template-columns: 1fr;
+      }
+
+      .workflow-pipeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .workflow-stage {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .workflow-connector {
+        transform: rotate(90deg);
+        width: auto;
+        height: 24px;
       }
 
       .stats-strip {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .instructor-preview {
-        flex-direction: column;
+      .instructor-card {
+        grid-template-columns: 1fr;
         text-align: center;
+        justify-items: center;
       }
 
-      .blog-preview-grid {
+      .blog-grid {
         grid-template-columns: 1fr;
       }
 
-      .workflow-steps {
-        flex-direction: column;
+      .section-nav-inner {
+        padding: 0.5rem 1rem;
+        gap: 0.15rem;
       }
 
-      .workflow-arrow {
-        transform: rotate(90deg);
+      .section-nav-link {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.7rem;
       }
     }
 
     @media (max-width: 1024px) {
       .module-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .blog-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -464,56 +1095,98 @@
   <!-- Navigation (injected) -->
   <div id="navbar-container"></div>
 
-  <!-- Hero -->
-  <section class="workshop-hero">
-    <div class="workshop-hero-glow"></div>
-    <div class="workshop-hero-content">
-      <div class="hero-badge">Live Workshop — Saturdays 10AM-2PM</div>
-      <h1>Vibe Coding for Production</h1>
-      <p class="hero-subtitle">
-        Engineering Discipline in the Age of AI. Learn to navigate real codebases,
-        prompt with architectural context, and verify every change before it ships.
-      </p>
-      <div class="hero-cta-group">
-        <a href="book.html" class="btn btn-primary">
-          Book Your Spot <span>&#x2192;</span>
-        </a>
-        <a href="workshop.html" class="btn btn-secondary">
-          Learn More
-        </a>
+  <!-- Sticky Section Navigation -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="section-nav-inner">
+      <a href="#problem" class="section-nav-link" data-section="problem">The Problem</a>
+      <a href="#framework" class="section-nav-link" data-section="framework">M.A.P.P.E.R.</a>
+      <a href="#workflow" class="section-nav-link" data-section="workflow">Workflow</a>
+      <a href="#preview" class="section-nav-link" data-section="preview">Preview</a>
+      <a href="#instructor" class="section-nav-link" data-section="instructor">Instructor</a>
+      <a href="#blog" class="section-nav-link" data-section="blog">Blog</a>
+    </div>
+  </nav>
+
+  <!-- Video Modal -->
+  <div class="video-modal-backdrop" id="videoModal">
+    <div class="video-modal">
+      <button class="video-modal-close" id="videoModalClose">&#x2715;</button>
+      <iframe id="videoIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="landing-hero">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge-landing">
+          <span class="hero-badge-dot"></span>
+          Live Workshop — Saturdays 10AM-2PM
+        </div>
+
+        <h1>Vibe Coding<br>for Production</h1>
+
+        <p class="hero-subtitle">
+          Engineering discipline in the age of AI. Learn to navigate real codebases,
+          prompt with architectural context, and verify every change before it ships.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="book.html" class="btn btn-primary btn-glow">
+            Book Your Spot <span>&#x2192;</span>
+          </a>
+          <a href="#" class="btn btn-secondary btn-video" id="heroVideoBtn">
+            <span class="play-icon">&#x25B6;</span> Watch Preview
+          </a>
+        </div>
+
+        <div class="hero-meta-pills">
+          <span class="hero-pill"><strong>$450</strong> per seat</span>
+          <span class="hero-pill"><strong>4 Hours</strong> live</span>
+          <span class="hero-pill"><strong>75 Seats</strong> max</span>
+        </div>
       </div>
-      <div class="hero-meta">
-        <div class="hero-meta-item"><strong>$450</strong> per seat</div>
-        <div class="hero-meta-item"><strong>4 Hours</strong> live</div>
-        <div class="hero-meta-item"><strong>75 Seats</strong> max</div>
-      </div>
-      <div class="hero-image">
-        <img src="assets/og-workshop.png" alt="Vibe Coding for Production Workshop">
+
+      <div class="hero-showcase">
+        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1200&q=80" alt="Diverse team of engineers collaborating at a modern tech workspace">
       </div>
     </div>
   </section>
 
-  <!-- Problem Statement -->
-  <section class="section">
+  <!-- ============================================================
+       PROBLEM STATEMENT — SPLIT LAYOUT
+       ============================================================ -->
+  <section class="section" id="problem" data-nav-section="problem">
     <div class="section-container">
-      <div class="problem-content">
-        <h2>AI Changed the Game. Most Developers Aren't Ready.</h2>
-        <p>
-          AI tools can generate code faster than ever. But speed without understanding
-          is dangerous. Developers who skip architecture, ignore blast radius, and
-          blindly accept AI output are building systems they can't maintain.
-        </p>
-        <p>
-          This workshop teaches the missing layer: the engineering discipline that
-          makes AI-generated code production-ready. You're not learning tricks.
-          You're learning architectural literacy in the AI era.
-        </p>
+      <div class="problem-split">
+        <div class="problem-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=700&q=80" alt="Developer deep in thought at screen" loading="lazy">
+        </div>
+        <div class="problem-text">
+          <div class="highlight-bar"></div>
+          <h2>AI Changed the Game.<br>Most Developers Aren't Ready.</h2>
+          <p>
+            AI tools can generate code faster than ever. But speed without understanding
+            is dangerous. Developers who skip architecture, ignore blast radius, and
+            blindly accept AI output are building systems they can't maintain.
+          </p>
+          <p>
+            This workshop teaches the missing layer: the engineering discipline that
+            makes AI-generated code production-ready. You're not learning tricks.
+            You're building architectural literacy for the AI era.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- What You'll Learn (M.A.P.P.E.R.) -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <!-- ============================================================
+       M.A.P.P.E.R. FRAMEWORK — IMAGE CARDS
+       ============================================================ -->
+  <section class="section framework-section" id="framework" data-nav-section="framework" style="background: var(--bg-secondary);">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">The M.A.P.P.E.R. Framework</div>
@@ -525,41 +1198,78 @@
 
       <div class="module-grid">
         <div class="module-card">
-          <div class="module-letter">M</div>
-          <h3>Map</h3>
-          <p>Map the codebase manually using VS Code's Peek References, Call Hierarchy, and Outline view. Understand before you change.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?w=500&q=80" alt="Code structure navigation" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">M</div>
+            <h3>Map</h3>
+            <p>Map the codebase manually using VS Code's Peek References, Call Hierarchy, and Outline view. Understand before you change.</p>
+          </div>
         </div>
+
         <div class="module-card">
-          <div class="module-letter">A</div>
-          <h3>Analyze</h3>
-          <p>Analyze contracts and blast radius. Classify changes and estimate impact before writing a single line of code.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&q=80" alt="Developer analyzing at dual monitors" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">A</div>
+            <h3>Analyze</h3>
+            <p>Analyze contracts and blast radius. Classify changes and estimate impact before writing a single line of code.</p>
+          </div>
         </div>
+
         <div class="module-card">
-          <div class="module-letter">P</div>
-          <h3>Prompt</h3>
-          <p>Prompt Claude Code with architectural context — constraints, dependencies, and scope boundaries that prevent hallucinations.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=500&q=80" alt="AI neural network interface" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">P</div>
+            <h3>Prompt</h3>
+            <p>Prompt Claude Code with architectural context — constraints, dependencies, and scope boundaries that prevent hallucinations.</p>
+          </div>
         </div>
+
         <div class="module-card">
-          <div class="module-letter">P</div>
-          <h3>Preview</h3>
-          <p>Preview every change visually in Fork. See exactly what the AI modified, line by line, before anything gets committed.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&q=80" alt="GitHub code review interface" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">P</div>
+            <h3>Preview</h3>
+            <p>Preview every change visually in Fork. See exactly what the AI modified, line by line, before anything gets committed.</p>
+          </div>
         </div>
+
         <div class="module-card">
-          <div class="module-letter">E</div>
-          <h3>Execute</h3>
-          <p>Execute with confidence. Run tests, validate contracts, and verify that the change matches your intent.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=500&q=80" alt="Terminal running tests" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">E</div>
+            <h3>Execute</h3>
+            <p>Execute with confidence. Run tests, validate contracts, and verify that the change matches your intent.</p>
+          </div>
         </div>
+
         <div class="module-card">
-          <div class="module-letter">R</div>
-          <h3>Review</h3>
-          <p>Review and commit. Use Fork's staging tools to craft clean, atomic commits that tell a story.</p>
+          <div class="module-card-image">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&q=80" alt="Collaborative code review" loading="lazy">
+          </div>
+          <div class="module-card-body">
+            <div class="module-letter">R</div>
+            <h3>Review</h3>
+            <p>Review and commit. Use Fork's staging tools to craft clean, atomic commits that tell a story.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- The Workflow -->
-  <section class="section">
+  <!-- ============================================================
+       PRODUCTION WORKFLOW — VISUAL PIPELINE
+       ============================================================ -->
+  <section class="section workflow-section" id="workflow" data-nav-section="workflow">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">The Closed Loop</div>
@@ -569,24 +1279,44 @@
         </p>
       </div>
 
-      <div class="workflow-steps">
-        <div class="workflow-step">Define the Problem</div>
-        <span class="workflow-arrow">&#x2192;</span>
-        <div class="workflow-step">Navigate in VS Code</div>
-        <span class="workflow-arrow">&#x2192;</span>
-        <div class="workflow-step">Prompt Claude Code</div>
-        <span class="workflow-arrow">&#x2192;</span>
-        <div class="workflow-step">Verify in Fork</div>
-        <span class="workflow-arrow">&#x2192;</span>
-        <div class="workflow-step">Commit</div>
-        <span class="workflow-arrow">&#x2192;</span>
-        <div class="workflow-step">Review</div>
+      <div class="workflow-pipeline">
+        <div class="workflow-stage">
+          <div class="workflow-stage-number">1</div>
+          <h4>Define</h4>
+          <p>Scope the problem and set boundaries</p>
+        </div>
+        <div class="workflow-connector">&#x2192;</div>
+        <div class="workflow-stage">
+          <div class="workflow-stage-number">2</div>
+          <h4>Navigate</h4>
+          <p>Map the codebase in VS Code</p>
+        </div>
+        <div class="workflow-connector">&#x2192;</div>
+        <div class="workflow-stage">
+          <div class="workflow-stage-number">3</div>
+          <h4>Prompt</h4>
+          <p>Feed context to Claude Code</p>
+        </div>
+        <div class="workflow-connector">&#x2192;</div>
+        <div class="workflow-stage">
+          <div class="workflow-stage-number">4</div>
+          <h4>Verify</h4>
+          <p>Inspect every diff in Fork</p>
+        </div>
+        <div class="workflow-connector">&#x2192;</div>
+        <div class="workflow-stage">
+          <div class="workflow-stage-number">5</div>
+          <h4>Ship</h4>
+          <p>Clean commit and push</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <!-- ============================================================
+       STATS STRIP — GLASS CARDS
+       ============================================================ -->
+  <section class="section stats-section" style="background: var(--bg-secondary);">
     <div class="section-container">
       <div class="stats-strip">
         <div class="stat-card">
@@ -609,16 +1339,42 @@
     </div>
   </section>
 
-  <!-- Instructor Preview -->
-  <section class="section">
+  <!-- ============================================================
+       VIDEO PREVIEW
+       ============================================================ -->
+  <section class="section video-section" id="preview" data-nav-section="preview">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Sneak Peek</div>
+        <h2 class="section-title">See the Workshop in Action</h2>
+        <p class="section-subtitle">
+          Watch a preview of the live session — see the tools, the workflow, and how it all comes together.
+        </p>
+      </div>
+
+      <div class="video-preview-wrapper">
+        <div class="video-embed-placeholder" id="videoPlaceholder">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1000&q=80" alt="Workshop presentation preview" loading="lazy">
+          <div class="video-play-overlay">&#x25B6;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSTRUCTOR — ENHANCED
+       ============================================================ -->
+  <section class="section" id="instructor" data-nav-section="instructor" style="background: var(--bg-secondary);">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">Your Instructor</div>
         <h2 class="section-title">Led by a Builder, Not a Lecturer</h2>
       </div>
 
-      <div class="instructor-preview">
-        <div class="instructor-avatar">NB</div>
+      <div class="instructor-card">
+        <div class="instructor-photo-wrapper">
+          <div class="instructor-avatar-circle">NB</div>
+        </div>
         <div class="instructor-info">
           <h3>Nathan Baker</h3>
           <div class="instructor-role">Software Engineer & Founder, AutoNateAI</div>
@@ -631,8 +1387,10 @@
     </div>
   </section>
 
-  <!-- Blog Preview -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <!-- ============================================================
+       BLOG PREVIEW — CARDS WITH IMAGES
+       ============================================================ -->
+  <section class="section" id="blog" data-nav-section="blog">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">From the Blog</div>
@@ -642,34 +1400,54 @@
         </p>
       </div>
 
-      <div class="blog-preview-grid">
-        <a href="blog/skill-developers-losing.html" class="blog-preview-card">
-          <div class="blog-preview-category">The Cognitive Shift</div>
-          <h3>The Skill Developers Are Losing in the AI Era</h3>
-          <p>AI writes code faster than ever. But the skill it's quietly eroding is the one that matters most.</p>
+      <div class="blog-grid">
+        <a href="blog/skill-developers-losing.html" class="blog-card">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=500&q=80" alt="AI cognitive shift" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-category">The Cognitive Shift</div>
+            <h3>The Skill Developers Are Losing in the AI Era</h3>
+            <p>AI writes code faster than ever. But the skill it's quietly eroding is the one that matters most.</p>
+          </div>
         </a>
-        <a href="blog/prompt-framework-prevent-hallucinations.html" class="blog-preview-card">
-          <div class="blog-preview-category">Tactical AI Control</div>
-          <h3>The Prompt Framework I Use to Prevent AI Hallucinations</h3>
-          <p>A structured approach to prompting that keeps AI grounded in your codebase reality.</p>
+
+        <a href="blog/prompt-framework-prevent-hallucinations.html" class="blog-card">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aede?w=500&q=80" alt="Tactical AI prompting" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-category">Tactical AI Control</div>
+            <h3>The Prompt Framework I Use to Prevent AI Hallucinations</h3>
+            <p>A structured approach to prompting that keeps AI grounded in your codebase reality.</p>
+          </div>
         </a>
-        <a href="blog/estimate-blast-radius.html" class="blog-preview-card">
-          <div class="blog-preview-category">Production Discipline</div>
-          <h3>How to Estimate Blast Radius Before Touching a Line of Code</h3>
-          <p>The mental model every developer needs before making changes to production systems.</p>
+
+        <a href="blog/estimate-blast-radius.html" class="blog-card">
+          <div class="blog-card-image">
+            <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=500&q=80" alt="System architecture and blast radius" loading="lazy">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-category">Production Discipline</div>
+            <h3>How to Estimate Blast Radius Before Touching a Line of Code</h3>
+            <p>The mental model every developer needs before making changes to production systems.</p>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="cta-section">
+  <!-- ============================================================
+       FINAL CTA — ENHANCED
+       ============================================================ -->
+  <section class="cta-section cta-enhanced">
+    <div class="cta-urgency-badge">Limited to 75 seats per session</div>
     <h2 class="cta-title">Lock In Your Spot</h2>
     <p class="cta-subtitle">
       75 seats. One Saturday. The engineering discipline that separates professionals from prompt-and-pray developers.
     </p>
     <div class="cta-buttons">
-      <a href="book.html" class="btn btn-primary">
+      <a href="book.html" class="btn btn-primary btn-glow">
         Book Your Spot <span>&#x2192;</span>
       </a>
       <a href="workshop.html" class="btn btn-secondary">
@@ -681,33 +1459,37 @@
   <!-- Footer (injected) -->
   <div id="footer-container"></div>
 
-  <!-- Scripts -->
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       NavbarComponent.inject('navbar-container');
       FooterComponent.inject('footer-container');
 
-      // Staggered hero entrance: badge, title scales in big, subtitle, CTAs, meta
+      // ==============================================================
+      // HERO ENTRANCE ANIMATION
+      // ==============================================================
       anime.timeline()
         .add({
-          targets: '.hero-badge',
+          targets: '.hero-badge-landing',
           opacity: [0, 1],
-          translateY: [20, 0],
+          translateY: [25, 0],
           duration: 600,
           easing: 'easeOutCubic'
         })
         .add({
-          targets: '.workshop-hero h1',
+          targets: '.hero-text h1',
           opacity: [0, 1],
-          scale: [2.5, 1],
-          duration: 1200,
+          translateX: [-40, 0],
+          duration: 900,
           easing: 'easeOutExpo'
-        }, '-=200')
+        }, '-=250')
         .add({
-          targets: '.hero-subtitle',
+          targets: '.hero-text .hero-subtitle',
           opacity: [0, 1],
           translateY: [20, 0],
-          duration: 700,
+          duration: 650,
           easing: 'easeOutCubic'
         }, '-=400')
         .add({
@@ -716,43 +1498,287 @@
           translateY: [20, 0],
           duration: 600,
           easing: 'easeOutCubic'
-        }, '-=200')
+        }, '-=250')
         .add({
-          targets: '.workshop-hero .hero-image',
-          opacity: [0, 1],
-          translateY: [30, 0],
-          scale: [0.95, 1],
-          duration: 800,
-          easing: 'easeOutCubic'
-        }, '-=200')
-        .add({
-          targets: '.hero-meta',
+          targets: '.hero-meta-pills',
           opacity: [0, 1],
           translateY: [15, 0],
           duration: 500,
           easing: 'easeOutCubic'
-        }, '-=200');
-    });
+        }, '-=200')
+        .add({
+          targets: '.hero-showcase',
+          opacity: [0, 1],
+          translateX: [50, 0],
+          scale: [0.93, 1],
+          duration: 900,
+          easing: 'easeOutCubic'
+        }, '-=500');
 
-    // Intersection Observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          anime({
-            targets: entry.target.querySelectorAll('.module-card, .stat-card, .workflow-step, .blog-preview-card, .instructor-preview'),
-            opacity: [0, 1],
-            translateY: [30, 0],
-            delay: anime.stagger(80),
-            duration: 600,
-            easing: 'easeOutCubic'
-          });
-          observer.unobserve(entry.target);
-        }
+      // ==============================================================
+      // STICKY SECTION NAVIGATION
+      // ==============================================================
+      const sectionNav = document.getElementById('sectionNav');
+      const heroSection = document.querySelector('.landing-hero');
+      const navLinks = document.querySelectorAll('.section-nav-link');
+      const sections = document.querySelectorAll('[data-nav-section]');
+
+      // Show/hide sticky nav based on hero visibility
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          sectionNav.classList.toggle('visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0 });
+
+      heroObserver.observe(heroSection);
+
+      // Highlight active section
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-nav-section');
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('data-section') === id);
+            });
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' });
+
+      sections.forEach(section => sectionObserver.observe(section));
+
+      // Smooth scroll for nav links
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById(link.getAttribute('data-section'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
       });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.section-container').forEach(section => {
-      observer.observe(section);
+      // ==============================================================
+      // VIDEO MODAL
+      // ==============================================================
+      const videoModal = document.getElementById('videoModal');
+      const videoIframe = document.getElementById('videoIframe');
+      const videoPlaceholder = document.getElementById('videoPlaceholder');
+      const videoSrc = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+
+      function openVideoModal() {
+        videoIframe.src = videoSrc;
+        videoModal.classList.add('open');
+      }
+
+      function closeVideoModal() {
+        videoModal.classList.remove('open');
+        videoIframe.src = '';
+      }
+
+      document.getElementById('heroVideoBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        openVideoModal();
+      });
+
+      videoPlaceholder.addEventListener('click', openVideoModal);
+
+      document.getElementById('videoModalClose').addEventListener('click', closeVideoModal);
+
+      videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) closeVideoModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeVideoModal();
+      });
+
+      // ==============================================================
+      // SECTION-SPECIFIC SCROLL ANIMATIONS
+      // ==============================================================
+
+      // Problem section — slide in from left
+      const problemObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.problem-image-wrapper',
+              opacity: [0, 1],
+              translateX: [-50, 0],
+              duration: 800,
+              easing: 'easeOutCubic'
+            });
+            anime({
+              targets: '.problem-text',
+              opacity: [0, 1],
+              translateX: [50, 0],
+              duration: 800,
+              delay: 150,
+              easing: 'easeOutCubic'
+            });
+            problemObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const problemSection = document.getElementById('problem');
+      if (problemSection) problemObserver.observe(problemSection);
+
+      // Framework cards — scale in with stagger
+      const frameworkObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.module-card',
+              opacity: [0, 1],
+              scale: [0.85, 1],
+              delay: anime.stagger(100),
+              duration: 600,
+              easing: 'easeOutBack'
+            });
+            frameworkObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      const frameworkSection = document.getElementById('framework');
+      if (frameworkSection) frameworkObserver.observe(frameworkSection);
+
+      // Workflow stages — slide up with stagger
+      const workflowObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.workflow-stage',
+              opacity: [0, 1],
+              translateY: [30, 0],
+              delay: anime.stagger(120),
+              duration: 600,
+              easing: 'easeOutCubic'
+            });
+            anime({
+              targets: '.workflow-connector',
+              opacity: [0, 1],
+              delay: anime.stagger(120, { start: 100 }),
+              duration: 400,
+              easing: 'easeOutCubic'
+            });
+            workflowObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const workflowSection = document.getElementById('workflow');
+      if (workflowSection) workflowObserver.observe(workflowSection);
+
+      // Stats — count up (just fade in for now)
+      const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.stat-card',
+              opacity: [0, 1],
+              translateY: [25, 0],
+              scale: [0.9, 1],
+              delay: anime.stagger(100),
+              duration: 500,
+              easing: 'easeOutCubic'
+            });
+            statsObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const statsSection = document.querySelector('.stats-section');
+      if (statsSection) statsObserver.observe(statsSection);
+
+      // Video preview — fade in with scale
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.video-preview-wrapper',
+              opacity: [0, 1],
+              scale: [0.92, 1],
+              duration: 800,
+              easing: 'easeOutCubic'
+            });
+            videoObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const videoSection = document.querySelector('.video-section');
+      if (videoSection) videoObserver.observe(videoSection);
+
+      // Instructor — slide from right
+      const instructorObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.instructor-card',
+              opacity: [0, 1],
+              translateX: [40, 0],
+              duration: 700,
+              easing: 'easeOutCubic'
+            });
+            instructorObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const instructorSection = document.getElementById('instructor');
+      if (instructorSection) instructorObserver.observe(instructorSection);
+
+      // Blog cards — cascade down
+      const blogObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.blog-card',
+              opacity: [0, 1],
+              translateY: [35, 0],
+              delay: anime.stagger(120),
+              duration: 650,
+              easing: 'easeOutCubic'
+            });
+            blogObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      const blogSection = document.getElementById('blog');
+      if (blogSection) blogObserver.observe(blogSection);
+
+      // CTA — fade in
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            anime({
+              targets: '.cta-enhanced .cta-urgency-badge, .cta-enhanced .cta-title, .cta-enhanced .cta-subtitle, .cta-enhanced .cta-buttons',
+              opacity: [0, 1],
+              translateY: [20, 0],
+              delay: anime.stagger(100),
+              duration: 600,
+              easing: 'easeOutCubic'
+            });
+            ctaObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const ctaSection = document.querySelector('.cta-enhanced');
+      if (ctaSection) ctaObserver.observe(ctaSection);
+
+      // Hide animated elements initially
+      document.querySelectorAll('.problem-image-wrapper, .problem-text').forEach(el => {
+        el.style.opacity = '0';
+      });
+      document.querySelectorAll('.module-card, .workflow-stage, .workflow-connector, .stat-card, .video-preview-wrapper, .instructor-card, .blog-card').forEach(el => {
+        el.style.opacity = '0';
+      });
+      document.querySelectorAll('.cta-enhanced .cta-urgency-badge, .cta-enhanced .cta-title, .cta-enhanced .cta-subtitle, .cta-enhanced .cta-buttons').forEach(el => {
+        el.style.opacity = '0';
+      });
     });
   </script>
 </body>
