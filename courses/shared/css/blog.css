@@ -137,6 +137,14 @@
   gap: 0.5rem;
 }
 
+/* Hero children start hidden for staggered scale-in animation */
+.hero-block .category-badge,
+.hero-block .article-title,
+.hero-block .article-meta {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
 .hero-block .hero-visual {
   position: absolute;
   top: 0;

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ===== Scroll-Triggered Block Animations =====
 function initScrollAnimations() {
-  const blocks = document.querySelectorAll('.blog-block');
+  const blocks = document.querySelectorAll('.blog-block:not(.hero-block)');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -380,33 +380,33 @@ function getRelatedArticles(currentSlug, allArticles, limit = 3) {
     .slice(0, limit);
 }
 
-// ===== Hero Animation =====
+// ===== Hero Animation (Scale-In) =====
 function initHeroAnimation() {
   const hero = document.querySelector('.hero-block');
   if (!hero || typeof anime === 'undefined') return;
-  
-  // Animate hero elements
-  anime.timeline({
-    easing: 'easeOutExpo'
-  })
-  .add({
-    targets: '.hero-block .category-badge',
-    opacity: [0, 1],
-    translateY: [-20, 0],
-    duration: 800
-  })
-  .add({
-    targets: '.hero-block .article-title',
-    opacity: [0, 1],
-    translateY: [30, 0],
-    duration: 1000
-  }, '-=600')
-  .add({
-    targets: '.hero-block .article-meta',
-    opacity: [0, 1],
-    translateY: [20, 0],
-    duration: 800
-  }, '-=700');
+
+  anime.timeline()
+    .add({
+      targets: '.hero-block .category-badge',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+      easing: 'easeOutCubic'
+    })
+    .add({
+      targets: '.hero-block .article-title',
+      opacity: [0, 1],
+      scale: [2.5, 1],
+      duration: 1200,
+      easing: 'easeOutExpo'
+    }, '-=200')
+    .add({
+      targets: '.hero-block .article-meta',
+      opacity: [0, 1],
+      translateY: [15, 0],
+      duration: 500,
+      easing: 'easeOutCubic'
+    }, '-=400');
 }
 
 // Run hero animation on load
