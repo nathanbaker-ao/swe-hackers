@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Workshop Details — Vibe Coding for Production | AutoNateAI</title>
+  <meta name="title" content="Workshop Details — Vibe Coding for Production | AutoNateAI">
+  <meta name="description" content="Full curriculum for the Vibe Coding for Production workshop. 4 modules covering codebase navigation, AI prompting with architectural context, visual verification, and production-ready commits.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autonateai.com/workshop">
+  <meta property="og:title" content="Workshop Details — Vibe Coding for Production | AutoNateAI">
+  <meta property="og:description" content="Full curriculum, tools, deliverables, and FAQ for the Vibe Coding for Production live workshop.">
+  <meta property="og:image" content="assets/og-workshop.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Workshop Details — Vibe Coding for Production | AutoNateAI">
+  <meta name="twitter:description" content="Full curriculum and details for the Vibe Coding for Production live workshop.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+
+  <!-- Firebase (for auth-aware navbar) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
+  <script src="shared/js/footer.js" defer></script>
+
+  <style>
+    .details-hero {
+      padding: calc(var(--nav-height) + 5rem) 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .details-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 40% 30%, rgba(121, 134, 203, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 70%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .details-hero-content {
+      position: relative;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .details-hero h1 {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .details-hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .details-meta {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .details-meta strong {
+      color: var(--text-primary);
+    }
+
+    /* Outcomes */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .outcome-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .outcome-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .outcome-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Curriculum */
+    .curriculum-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .curriculum-module {
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+      transition: all var(--transition-normal);
+    }
+
+    .curriculum-module:hover {
+      border-color: rgba(121, 134, 203, 0.3);
+    }
+
+    .curriculum-time {
+      font-size: 0.8rem;
+      color: var(--accent-secondary);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .curriculum-module h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .curriculum-module p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .curriculum-module ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 0;
+    }
+
+    .curriculum-module ul li {
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .curriculum-module ul li::before {
+      content: '\2713';
+      color: var(--accent-secondary);
+      margin-right: 0.5rem;
+      font-weight: 700;
+    }
+
+    /* Tools */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tool-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tool-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .tool-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Who This Is For */
+    .audience-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .audience-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    /* Deliverables */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .deliverable-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .deliverable-item h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--text-primary);
+    }
+
+    .deliverable-item p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      padding: 1.5rem 2rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .faq-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .details-hero h1 {
+        font-size: 2rem;
+      }
+
+      .outcomes-grid,
+      .deliverables-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation (injected) -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero -->
+  <section class="details-hero">
+    <div class="details-hero-content">
+      <h1>Vibe Coding for Production</h1>
+      <p>
+        Engineering Discipline in the Age of AI. A 4-hour live workshop that teaches
+        you the M.A.P.P.E.R. framework for making safe, verified changes to production
+        codebases with AI assistance.
+      </p>
+      <div class="details-meta">
+        <span><strong>Saturdays</strong> 10AM - 2PM</span>
+        <span><strong>$450</strong> per seat</span>
+        <span><strong>75 students</strong> max</span>
+        <span><strong>4 hours</strong> live & hands-on</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Promise -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">What You'll Walk Away With</div>
+        <h2 class="section-title">Six Outcomes That Change How You Ship Code</h2>
+      </div>
+
+      <div class="outcomes-grid">
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x1F9ED;</div>
+          <p>Navigate any codebase manually using VS Code's built-in tools — before asking AI for help</p>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x1F4A5;</div>
+          <p>Estimate blast radius and classify changes before touching a single line of code</p>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x1F4DD;</div>
+          <p>Write structured prompts that give AI the architectural context it needs to produce usable code</p>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x1F50D;</div>
+          <p>Visually verify every AI-generated change using Fork's diff and staging tools</p>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x2705;</div>
+          <p>Build a repeatable, closed-loop workflow from problem definition to clean commit</p>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon">&#x1F3D7;</div>
+          <p>Think like an architect: understand contracts, boundaries, and dependency chains in any system</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Curriculum -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Full Curriculum</div>
+        <h2 class="section-title">4 Hours, 4 Modules, 1 Complete Workflow</h2>
+      </div>
+
+      <div class="curriculum-list">
+        <div class="curriculum-module">
+          <div class="curriculum-time">10:00 AM - 10:30 AM</div>
+          <h3>Module 1: Problem Framing & Entry Strategy</h3>
+          <p>Before you touch the code, you need to understand the change. This module teaches you to classify changes, estimate risk, and find the right entry point.</p>
+          <ul>
+            <li>The Change Classification Matrix (cosmetic, behavioral, structural, cross-cutting)</li>
+            <li>Blast radius estimation: how far does this change ripple?</li>
+            <li>Identifying entry points and contract boundaries</li>
+          </ul>
+        </div>
+
+        <div class="curriculum-module">
+          <div class="curriculum-time">10:30 AM - 11:15 AM</div>
+          <h3>Module 2: Manual Mapping with VS Code</h3>
+          <p>Learn to navigate real codebases using VS Code's built-in intelligence — without relying on AI to tell you where things are.</p>
+          <ul>
+            <li>Peek References: who calls this? who depends on this?</li>
+            <li>Call Hierarchy: trace execution paths through the system</li>
+            <li>Outline view: understand file structure at a glance</li>
+            <li>Building a mental map of the architecture</li>
+          </ul>
+        </div>
+
+        <div class="curriculum-module" style="background: transparent; border-style: dashed;">
+          <div class="curriculum-time">11:15 AM - 11:25 AM</div>
+          <h3>Break</h3>
+        </div>
+
+        <div class="curriculum-module">
+          <div class="curriculum-time">11:25 AM - 12:15 PM</div>
+          <h3>Module 3: Prompting with Architectural Context</h3>
+          <p>Now the AI enters. But not blindly. You'll learn to give Claude Code the context it needs to produce safe, scoped changes.</p>
+          <ul>
+            <li>Structured prompts: scope, constraints, dependencies, and expected behavior</li>
+            <li>Why "rewrite this file" is always wrong</li>
+            <li>Feeding architectural context from your manual mapping</li>
+            <li>Iterating on AI output with surgical precision</li>
+          </ul>
+        </div>
+
+        <div class="curriculum-module">
+          <div class="curriculum-time">12:15 PM - 1:00 PM</div>
+          <h3>Module 4: Fork — Visual Verification & AI Code Review</h3>
+          <p>Every change gets verified visually before it ships. Fork is your safety net and your proof that you understand what happened.</p>
+          <ul>
+            <li>Reading diffs like a senior engineer</li>
+            <li>Staging hunks and lines for atomic commits</li>
+            <li>Using the diff as an AI code review input</li>
+            <li>Crafting commit messages that tell the story of the change</li>
+          </ul>
+        </div>
+
+        <div class="curriculum-module">
+          <div class="curriculum-time">1:00 PM - 1:40 PM</div>
+          <h3>Final Integration Simulation</h3>
+          <p>Put it all together. You'll work through a complete production change from start to finish — problem framing, mapping, prompting, verifying, and committing — using the full M.A.P.P.E.R. workflow.</p>
+        </div>
+
+        <div class="curriculum-module">
+          <div class="curriculum-time">1:40 PM - 2:00 PM</div>
+          <h3>Debrief & Cognitive Upgrade</h3>
+          <p>Reflect on what changed in how you think about code. Review the framework, discuss real-world application, and walk away with a system you can use tomorrow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Your Toolkit</div>
+        <h2 class="section-title">Three Tools, One Workflow</h2>
+        <p class="section-subtitle">
+          Each tool plays a specific role in the production loop. You'll learn exactly when and why to use each one.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon">&#x1F4BB;</div>
+          <h3>VS Code</h3>
+          <p>Your navigation layer. Peek References, Call Hierarchy, and Outline view give you the architectural understanding AI can't.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">&#x1F916;</div>
+          <h3>Claude Code</h3>
+          <p>Your AI collaborator. With the right architectural context, it produces scoped, safe changes — not random rewrites.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">&#x1F33F;</div>
+          <h3>Fork</h3>
+          <p>Your verification layer. Visual diffs, hunk staging, and atomic commits ensure nothing ships that you haven't reviewed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Who Should Attend</div>
+        <h2 class="section-title">Built for Developers Who Ship</h2>
+      </div>
+
+      <div class="audience-content">
+        <p>
+          This workshop is for developers who are already using AI tools but want to do it
+          responsibly. You've seen AI generate impressive code — but you've also seen it
+          hallucinate, break contracts, and create changes you can't explain.
+        </p>
+        <p>
+          Whether you're a junior developer building confidence or a senior engineer
+          refining your AI workflow, this workshop gives you a structured, repeatable
+          system for production-quality AI-assisted development.
+        </p>
+        <p>
+          <strong>You should be comfortable reading code and using a terminal.</strong>
+          The workshop focuses on workflow and discipline, not syntax basics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Take-Home Materials</div>
+        <h2 class="section-title">What You Take Home</h2>
+      </div>
+
+      <div class="deliverables-grid">
+        <div class="deliverable-item">
+          <div class="outcome-icon">&#x1F4CB;</div>
+          <div>
+            <h4>Blast Radius Checklist</h4>
+            <p>A step-by-step checklist for estimating the impact of any change before you make it.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="outcome-icon">&#x1F4DD;</div>
+          <div>
+            <h4>Prompt Framework Template</h4>
+            <p>The structured prompt template used in the workshop — ready to paste into Claude Code.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="outcome-icon">&#x1F5FA;</div>
+          <div>
+            <h4>Architecture Mapping Template</h4>
+            <p>A reusable template for documenting codebase structure, contracts, and dependency chains.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="outcome-icon">&#x2705;</div>
+          <div>
+            <h4>Production Change Preflight Checklist</h4>
+            <p>The final verification checklist — run this before every commit to catch issues early.</p>
+          </div>
+        </div>
+        <div class="deliverable-item">
+          <div class="outcome-icon">&#x1F4C2;</div>
+          <div>
+            <h4>Demo Repository Access</h4>
+            <p>Access to the workshop demo repo so you can practice the full M.A.P.P.E.R. workflow on your own.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What experience level do I need?</h3>
+          <p>You should be comfortable reading code and using a terminal. This workshop focuses on workflow discipline, not learning to code from scratch. Intermediate to advanced developers will get the most value.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will there be a recording?</h3>
+          <p>No. This is a live, interactive session. The value comes from real-time participation, hands-on exercises, and direct instructor interaction. That's also why we cap it at 75 students.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What do I need to install before the workshop?</h3>
+          <p>VS Code, Claude Code (CLI), and Fork (Git client). We'll send setup instructions a few days before the session to make sure everyone is ready to go.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this about a specific programming language?</h3>
+          <p>No. The M.A.P.P.E.R. framework is language-agnostic. The principles of codebase navigation, architectural context, and visual verification apply to any tech stack.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's the refund policy?</h3>
+          <p>Full refund up to 48 hours before the workshop. After that, you can transfer your seat to someone else. Contact us at the email on your booking confirmation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need a Claude Code subscription?</h3>
+          <p>You'll need access to Claude Code for the hands-on exercises. A free trial or any active plan works. We'll share details in the pre-workshop setup email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 class="cta-title">Ready to Level Up?</h2>
+    <p class="cta-subtitle">
+      75 seats, one Saturday, and a framework that changes how you work with AI forever.
+    </p>
+    <div class="cta-buttons">
+      <a href="book.html" class="btn btn-primary">
+        Book Your Spot <span>&#x2192;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+
+      anime({
+        targets: '.details-hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: entry.target.querySelectorAll('.outcome-item, .curriculum-module, .tool-card, .deliverable-item, .faq-item'),
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(80),
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-container').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Book Your Spot — Vibe Coding for Production | AutoNateAI</title>
+  <meta name="title" content="Book Your Spot — Vibe Coding for Production | AutoNateAI">
+  <meta name="description" content="Reserve your seat for the Vibe Coding for Production workshop. $450, 75 seats max, Saturdays 10AM-2PM. Secure checkout via Whop.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://autonateai.com/book">
+  <meta property="og:title" content="Book Your Spot — Vibe Coding for Production | AutoNateAI">
+  <meta property="og:description" content="Reserve your seat. $450, 75 seats max, Saturdays 10AM-2PM.">
+  <meta property="og:image" content="assets/og-workshop.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book Your Spot — Vibe Coding for Production | AutoNateAI">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="shared/css/marketing.css">
+
+  <!-- Firebase (for auth-aware navbar) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="shared/js/firebase-config.js"></script>
+  <script src="shared/js/auth.js"></script>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <!-- Shared Components -->
+  <script src="shared/js/navbar.js" defer></script>
+  <script src="shared/js/footer.js" defer></script>
+  <script src="shared/js/whop-service.js" defer></script>
+
+  <style>
+    .book-hero {
+      padding: calc(var(--nav-height) + 4rem) 2rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(ellipse at 40% 30%, rgba(121, 134, 203, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 70%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .book-hero-content {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .book-hero h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .book-hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .book-date {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(121, 134, 203, 0.15);
+      border: 1px solid rgba(121, 134, 203, 0.3);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+    }
+
+    /* Includes Grid */
+    .includes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .include-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .include-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .include-item h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .include-item p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Quick Facts */
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .fact-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .fact-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .fact-card h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .fact-card p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Pricing Card */
+    .pricing-wrapper {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      padding: 3rem;
+      background: var(--bg-card);
+      border: 2px solid rgba(121, 134, 203, 0.3);
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+
+    .pricing-label {
+      font-size: 0.85rem;
+      color: var(--accent-secondary);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-amount {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-per {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-includes {
+      text-align: left;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .pricing-includes li {
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      list-style: none;
+    }
+
+    .pricing-includes li::before {
+      content: '\2713';
+      color: var(--accent-secondary);
+      margin-right: 0.75rem;
+      font-weight: 700;
+    }
+
+    .pricing-cta {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      color: white;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .pricing-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(121, 134, 203, 0.3);
+    }
+
+    /* Trust Signals */
+    .trust-strip {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 2rem auto 0;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+    .book-faq {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .book-faq-item {
+      padding: 1.25rem 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-lg);
+    }
+
+    .book-faq-item h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .book-faq-item p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .book-hero h1 {
+        font-size: 2rem;
+      }
+
+      .includes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing-amount {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation (injected) -->
+  <div id="navbar-container"></div>
+
+  <!-- Hero -->
+  <section class="book-hero">
+    <div class="book-hero-content">
+      <h1>Book Your Spot</h1>
+      <p>
+        Vibe Coding for Production: Engineering Discipline in the Age of AI.
+        Limited to 75 students for maximum interaction.
+      </p>
+      <div class="book-date">Next session: Saturday 10AM - 2PM</div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">What's Included</div>
+        <h2 class="section-title">Everything You Get</h2>
+      </div>
+
+      <div class="includes-grid">
+        <div class="include-item">
+          <div class="include-icon">&#x1F4CB;</div>
+          <div>
+            <h4>Blast Radius Checklist</h4>
+            <p>Estimate impact before any change</p>
+          </div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">&#x1F4DD;</div>
+          <div>
+            <h4>Prompt Framework Template</h4>
+            <p>Structured prompts for Claude Code</p>
+          </div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">&#x1F5FA;</div>
+          <div>
+            <h4>Architecture Mapping Template</h4>
+            <p>Document contracts and dependencies</p>
+          </div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">&#x2705;</div>
+          <div>
+            <h4>Production Change Preflight</h4>
+            <p>Final verification before every commit</p>
+          </div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">&#x1F4C2;</div>
+          <div>
+            <h4>Demo Repository Access</h4>
+            <p>Practice the full workflow on your own</p>
+          </div>
+        </div>
+        <div class="include-item">
+          <div class="include-icon">&#x1F3AF;</div>
+          <div>
+            <h4>Live Instructor Support</h4>
+            <p>Real-time Q&A with Nathan Baker</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Facts -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">Quick Facts</div>
+        <h2 class="section-title">Workshop at a Glance</h2>
+      </div>
+
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="fact-icon">&#x23F1;</div>
+          <h4>4 Hours</h4>
+          <p>Live & hands-on session</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#x1F465;</div>
+          <h4>75 Max</h4>
+          <p>Small cohort, high interaction</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#x1F6E0;</div>
+          <h4>3 Pro Tools</h4>
+          <p>VS Code, Claude Code, Fork</p>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon">&#x1F4E6;</div>
+          <h4>5 Deliverables</h4>
+          <p>Templates, checklists, repo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="section-container">
+      <div class="pricing-wrapper">
+        <div class="pricing-card">
+          <div class="pricing-label">Workshop Seat</div>
+          <div class="pricing-amount">$450</div>
+          <div class="pricing-per">One-time payment per seat</div>
+
+          <ul class="pricing-includes">
+            <li>4-hour live workshop (Saturday 10AM-2PM)</li>
+            <li>Hands-on exercises with real codebases</li>
+            <li>All 5 take-home deliverables</li>
+            <li>Demo repository access</li>
+            <li>Direct instructor Q&A</li>
+          </ul>
+
+          <button class="pricing-cta" id="book-now-btn">
+            Book Your Spot &#x2192;
+          </button>
+        </div>
+
+        <div class="trust-strip">
+          <div class="trust-item">&#x1F512; Secure checkout via Whop</div>
+          <div class="trust-item">&#x1F3A4; Live & interactive</div>
+          <div class="trust-item">&#x1F4B0; Full refund up to 48h before</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Payment & Logistics</h2>
+      </div>
+
+      <div class="book-faq">
+        <div class="book-faq-item">
+          <h3>How does payment work?</h3>
+          <p>Clicking "Book Your Spot" redirects you to Whop.com for secure payment processing. You'll receive a confirmation email with workshop details and setup instructions.</p>
+        </div>
+        <div class="book-faq-item">
+          <h3>What do I need to prepare?</h3>
+          <p>Install VS Code, Claude Code (CLI), and Fork before the session. We'll send detailed setup instructions a few days before the workshop.</p>
+        </div>
+        <div class="book-faq-item">
+          <h3>What's the refund policy?</h3>
+          <p>Full refund up to 48 hours before the workshop. After that, you can transfer your seat to someone else. Contact us via the email on your booking confirmation.</p>
+        </div>
+        <div class="book-faq-item">
+          <h3>Can I attend remotely?</h3>
+          <p>Yes. The workshop is conducted live online. You'll receive a link to the session after booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (injected) -->
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+
+      anime({
+        targets: '.book-hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        easing: 'easeOutCubic'
+      });
+
+      // Book Now button — redirect to Whop checkout
+      const bookBtn = document.getElementById('book-now-btn');
+      if (bookBtn) {
+        bookBtn.addEventListener('click', () => {
+          if (window.WhopService) {
+            WhopService.createCheckout('workshop-vibe-coding');
+          }
+        });
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          anime({
+            targets: entry.target.querySelectorAll('.include-item, .fact-card, .pricing-card, .book-faq-item'),
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(80),
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-container').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

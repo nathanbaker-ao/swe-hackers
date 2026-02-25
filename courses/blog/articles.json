@@ -1,149 +1,190 @@
 {
   "articles": [
     {
-      "slug": "building-platform-30-days",
-      "title": "How We Built This Learning Platform in 30 Days with AI",
-      "excerpt": "A behind-the-scenes look at building AutoNateAI — from architecture decisions to AI-assisted coding, and the lessons learned along the way.",
-      "category": "Platform Updates",
-      "date": "2026-01-04",
-      "readTime": 12,
-      "icon": "🏗️",
+      "slug": "skill-developers-losing",
+      "title": "The Skill Developers Are Losing in the AI Era",
+      "excerpt": "AI writes code faster than ever. But the skill it's quietly eroding — codebase navigation — is the one that matters most for production work.",
+      "category": "The Cognitive Shift",
+      "date": "2026-02-24",
+      "readTime": 9,
+      "icon": "🧠",
       "featured": true,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["ai", "development", "cursor", "architecture", "startup"]
+      "tags": ["ai", "engineering", "codebase-navigation", "cognitive-shift"]
     },
     {
-      "slug": "context-engineering",
-      "title": "Context Engineering: The Skill That Will Define Your AI Career",
-      "excerpt": "Prompt engineering was just the beginning. Learn why context engineering is the real differentiator for AI-augmented developers.",
-      "category": "AI Workflows",
-      "date": "2025-12-28",
-      "readTime": 8,
-      "icon": "🤖",
-      "featured": false,
-      "author": {
-        "name": "Nathan Baker",
-        "role": "Founder, AutoNateAI",
-        "avatar": "/assets/team/nathan.jpg"
-      },
-      "tags": ["ai", "prompts", "context", "career", "productivity"]
-    },
-    {
-      "slug": "detroit-traffic-ai",
-      "title": "Analyzing Detroit's Traffic Patterns with AI",
-      "excerpt": "How we used GPT-4 and Python to analyze public traffic data and discover patterns in Detroit's morning commute.",
-      "category": "Local Research",
-      "date": "2025-12-20",
+      "slug": "vibe-coding-without-architecture",
+      "title": "Why Vibe Coding Without Architecture Is Dangerous",
+      "excerpt": "Generating code is easy. Generating code that fits into a production system without breaking contracts? That's the hard part.",
+      "category": "The Cognitive Shift",
+      "date": "2026-02-20",
       "readTime": 10,
-      "icon": "🏙️",
+      "icon": "⚠️",
       "featured": false,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["ai", "data-analysis", "detroit", "research", "python"]
+      "tags": ["vibe-coding", "architecture", "production", "risk"]
     },
     {
-      "slug": "three-forces-metaphor",
-      "title": "The Three Forces: Why We Teach Programming Through Metaphor",
-      "excerpt": "Data as stone, control flow as lightning, functions as magnetism — the pedagogical science behind our curriculum design.",
-      "category": "Learning Tips",
-      "date": "2025-12-15",
-      "readTime": 6,
-      "icon": "🧠",
+      "slug": "ai-raised-the-bar",
+      "title": "AI Didn't Replace Engineering — It Raised the Bar",
+      "excerpt": "The developers who thrive in the AI era aren't the ones generating the most code. They're the ones who understand the systems they're changing.",
+      "category": "The Cognitive Shift",
+      "date": "2026-02-17",
+      "readTime": 8,
+      "icon": "📈",
       "featured": false,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["education", "pedagogy", "metaphor", "curriculum", "learning"]
+      "tags": ["ai", "engineering", "career", "standards"]
     },
     {
-      "slug": "cognitive-progress-score",
-      "title": "Introducing the Cognitive Progress Score",
-      "excerpt": "How we designed a composite metric to track learning health — combining velocity, mastery, streak, and completion.",
-      "category": "Platform Updates",
-      "date": "2025-12-10",
-      "readTime": 5,
-      "icon": "📊",
+      "slug": "estimate-blast-radius",
+      "title": "How to Estimate Blast Radius Before Touching a Line of Code",
+      "excerpt": "Every change ripples. The question is how far. Learn the mental model for estimating impact before you make a single edit.",
+      "category": "Production Discipline",
+      "date": "2026-02-13",
+      "readTime": 11,
+      "icon": "💥",
       "featured": false,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["analytics", "metrics", "learning", "platform", "progress"]
+      "tags": ["blast-radius", "production", "risk-assessment", "engineering"]
     },
     {
-      "slug": "refactoring-agentic-ai",
-      "title": "From 10 Hours to 10 Minutes: Refactoring with Agentic AI",
-      "excerpt": "A case study on using Cursor and Claude to refactor a legacy codebase that would have taken days manually.",
-      "category": "AI Workflows",
-      "date": "2025-12-05",
-      "readTime": 7,
-      "icon": "⚡",
+      "slug": "contracts-over-code",
+      "title": "Contracts Over Code: The Real Structure of Large Systems",
+      "excerpt": "Functions come and go. What persists are the contracts between components — the promises they make to each other.",
+      "category": "Production Discipline",
+      "date": "2026-02-10",
+      "readTime": 10,
+      "icon": "📜",
       "featured": false,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["ai", "refactoring", "cursor", "productivity", "case-study"]
+      "tags": ["contracts", "architecture", "systems", "interfaces"]
     },
     {
-      "slug": "founding-learners",
-      "title": "Meet Our Founding Learners",
-      "excerpt": "Spotlight on the first cohort of AutoNateAI students — their backgrounds, goals, and progress so far.",
-      "category": "Community",
-      "date": "2025-12-01",
-      "readTime": 4,
-      "icon": "🎓",
+      "slug": "navigate-codebase-without-ai",
+      "title": "How to Navigate a Codebase Without AI (And Why You Should)",
+      "excerpt": "Before you ask AI for help, you should be able to find your way through any codebase using VS Code's built-in tools.",
+      "category": "Production Discipline",
+      "date": "2026-02-06",
+      "readTime": 9,
+      "icon": "🧭",
       "featured": false,
       "author": {
         "name": "Nathan Baker",
         "role": "Founder, AutoNateAI",
         "avatar": "/assets/team/nathan.jpg"
       },
-      "tags": ["community", "students", "spotlight", "stories"]
+      "tags": ["vs-code", "navigation", "codebase", "fundamentals"]
+    },
+    {
+      "slug": "prompt-framework-prevent-hallucinations",
+      "title": "The Prompt Framework I Use to Prevent AI Hallucinations",
+      "excerpt": "AI hallucinations aren't random — they're what happens when AI doesn't have enough context. Here's how to fix that.",
+      "category": "Tactical AI Control",
+      "date": "2026-02-03",
+      "readTime": 10,
+      "icon": "🎯",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["prompting", "hallucinations", "claude-code", "framework"]
+    },
+    {
+      "slug": "ai-full-rewrites-rookie-mistake",
+      "title": "Why Asking AI for Full Rewrites Is a Rookie Mistake",
+      "excerpt": "The instinct to say 'rewrite this file' is strong. It's also the fastest way to introduce bugs you can't trace.",
+      "category": "Tactical AI Control",
+      "date": "2026-01-30",
+      "readTime": 8,
+      "icon": "🚫",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["ai", "rewrites", "mistakes", "best-practices"]
+    },
+    {
+      "slug": "diff-based-ai-coding",
+      "title": "Diff-Based AI Coding: A Safer Workflow",
+      "excerpt": "Instead of accepting whole files from AI, learn to work in diffs — verifying every change line by line before it ships.",
+      "category": "Tactical AI Control",
+      "date": "2026-01-27",
+      "readTime": 9,
+      "icon": "🔍",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["diffs", "fork", "verification", "workflow"]
+    },
+    {
+      "slug": "future-developer-architect",
+      "title": "The Future Developer Is an Architect, Not a Typist",
+      "excerpt": "When AI handles the typing, the developer's job shifts to the thinking — understanding systems, defining scope, and verifying correctness.",
+      "category": "Philosophy of Engineering",
+      "date": "2026-01-24",
+      "readTime": 8,
+      "icon": "🏛️",
+      "featured": false,
+      "author": {
+        "name": "Nathan Baker",
+        "role": "Founder, AutoNateAI",
+        "avatar": "/assets/team/nathan.jpg"
+      },
+      "tags": ["future", "architecture", "philosophy", "ai-era"]
     }
   ],
   "categories": [
     {
-      "slug": "ai-workflows",
-      "name": "AI Workflows",
-      "description": "How we use AI to solve real problems",
+      "slug": "the-cognitive-shift",
+      "name": "The Cognitive Shift",
+      "description": "How AI is changing the developer skillset",
       "color": "#7986cb"
     },
     {
-      "slug": "local-research",
-      "name": "Local Research",
-      "description": "Detroit/Michigan focused analysis",
+      "slug": "production-discipline",
+      "name": "Production Discipline",
+      "description": "Engineering practices for safe, verified changes",
       "color": "#4db6ac"
     },
     {
-      "slug": "learning-tips",
-      "name": "Learning Tips",
-      "description": "Study techniques and retention strategies",
+      "slug": "tactical-ai-control",
+      "name": "Tactical AI Control",
+      "description": "Practical techniques for controlling AI output",
       "color": "#ffd54f"
     },
     {
-      "slug": "platform-updates",
-      "name": "Platform Updates",
-      "description": "New features and course announcements",
+      "slug": "philosophy-of-engineering",
+      "name": "Philosophy of Engineering",
+      "description": "The bigger picture of what it means to build software",
       "color": "#66bb6a"
-    },
-    {
-      "slug": "community",
-      "name": "Community",
-      "description": "Student spotlights and Discord highlights",
-      "color": "#ff7043"
     }
   ]
 }
-

@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <title>About - AutoNateAI | Deep Research, AI Intelligence & Real Opportunities</title>
-  <meta name="title" content="About - AutoNateAI | Deep Research, AI Intelligence & Real Opportunities">
-  <meta name="description" content="AutoNateAI is AI-powered deep research connecting the world through practical strategies, advanced search tools, and a community built on knowledge and opportunity.">
+  <title>About Nathan Baker | AutoNateAI — Workshop Instructor</title>
+  <meta name="title" content="About Nathan Baker | AutoNateAI — Workshop Instructor">
+  <meta name="description" content="Meet Nathan Baker, software engineer and founder of AutoNateAI. Learn about the builder behind the Vibe Coding for Production workshop.">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://autonateai.com/about">
-  <meta property="og:title" content="About - AutoNateAI | Deep Research, AI Intelligence & Real Opportunities">
-  <meta property="og:description" content="AutoNateAI is AI-powered deep research connecting the world through practical strategies, advanced search tools, and a community built on knowledge and opportunity.">
+  <meta property="og:title" content="About Nathan Baker | AutoNateAI">
+  <meta property="og:description" content="Meet the instructor behind Vibe Coding for Production. Software engineer, builder, and AI workflow specialist.">
   <meta property="og:image" content="assets/og-about.png">
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://autonateai.com/about">
-  <meta property="twitter:title" content="About - AutoNateAI | Deep Research, AI Intelligence & Real Opportunities">
-  <meta property="twitter:description" content="AutoNateAI is AI-powered deep research connecting the world through practical strategies, advanced search tools, and a community built on knowledge and opportunity.">
-  <meta property="twitter:image" content="assets/og-about.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://autonateai.com/about">
+  <meta name="twitter:title" content="About Nathan Baker | AutoNateAI">
+  <meta name="twitter:description" content="Meet the instructor behind Vibe Coding for Production.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3DB;</text></svg>">
@@ -59,10 +58,7 @@
     .about-hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background:
         radial-gradient(ellipse at 40% 30%, rgba(121, 134, 203, 0.1) 0%, transparent 50%),
         radial-gradient(ellipse at 60% 70%, rgba(77, 182, 172, 0.08) 0%, transparent 50%);
@@ -79,11 +75,19 @@
       font-family: var(--font-display);
       font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .about-hero .hero-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent-secondary);
+      margin-bottom: 1rem;
     }
 
     .about-hero p {
@@ -92,12 +96,28 @@
       line-height: 1.7;
     }
 
-    .about-content-block {
-      max-width: 800px;
+    .about-avatar-large {
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 50%;
+      font-size: 3.5rem;
+      color: white;
+      font-family: var(--font-display);
+      font-weight: 700;
+      margin: 0 auto 2rem;
+    }
+
+    /* Story */
+    .story-content {
+      max-width: 750px;
       margin: 0 auto;
     }
 
-    .about-content-block h2 {
+    .story-content h2 {
       font-family: var(--font-display);
       font-size: 1.75rem;
       font-weight: 600;
@@ -105,97 +125,88 @@
       color: var(--text-primary);
     }
 
-    .about-content-block p {
+    .story-content p {
       font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.8;
       margin-bottom: 1.5rem;
     }
 
-    .about-values-grid {
+    /* Credibility */
+    .cred-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .about-value-card {
+    .cred-card {
       text-align: center;
-      padding: 2rem 1.5rem;
+      padding: 2rem 1.25rem;
       background: var(--bg-card);
       border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: var(--radius-lg);
-      transition: all var(--transition-normal);
     }
 
-    .about-value-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(121, 134, 203, 0.3);
-    }
-
-    .about-value-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-value-title {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .about-value-desc {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .founder-card {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2.5rem;
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-lg);
-    }
-
-    .founder-avatar {
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      border-radius: 50%;
-      font-size: 2.5rem;
-      flex-shrink: 0;
-      color: white;
-      font-family: var(--font-display);
-      font-weight: 700;
-    }
-
-    .founder-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .founder-role {
-      font-size: 0.85rem;
-      color: var(--accent-secondary);
+    .cred-icon {
+      font-size: 2rem;
       margin-bottom: 0.75rem;
     }
 
-    .founder-info p {
+    .cred-card h3 {
+      font-family: var(--font-display);
       font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .cred-card p {
+      font-size: 0.8rem;
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.5;
+    }
+
+    /* Philosophy */
+    .philosophy-content {
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .philosophy-quote {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .philosophy-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Testimonials placeholder */
+    .testimonials-placeholder {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--bg-card);
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+    }
+
+    .testimonials-placeholder p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
     }
 
     @media (max-width: 768px) {
@@ -203,13 +214,12 @@
         font-size: 2.25rem;
       }
 
-      .about-values-grid {
-        grid-template-columns: 1fr;
+      .cred-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .founder-card {
-        flex-direction: column;
-        text-align: center;
+      .philosophy-quote {
+        font-size: 1.25rem;
       }
     }
   </style>
@@ -222,125 +232,136 @@
   <!-- About Hero -->
   <section class="about-hero">
     <div class="about-hero-content">
-      <h1>This Is AutoNateAI</h1>
+      <div class="about-avatar-large">NB</div>
+      <h1>Meet Your Instructor</h1>
+      <div class="hero-name">Nathan Baker</div>
       <p>
-        AI-powered deep research. Advanced search tools with tutorials. A daily feed
-        of strategies, opportunities, and analytics across the platforms that matter.
-        We are building a universe of opportunity -- and connecting more of the world
-        every single day.
+        Software engineer, founder of AutoNateAI, and the builder behind the
+        Vibe Coding for Production workshop. Nathan teaches the engineering discipline
+        that makes AI-assisted development production-ready.
       </p>
     </div>
   </section>
 
-  <!-- Mission Section -->
+  <!-- Story -->
   <section class="section">
     <div class="section-container">
-      <div class="about-content-block">
-        <h2>The Mission</h2>
+      <div class="story-content">
+        <h2>The Builder's Story</h2>
         <p>
-          The best opportunities do not show up on the first page of a job board.
-          The most valuable knowledge does not come from a single Google search.
-          And the strategies that actually move the needle? They come from deep
-          research, pattern recognition, and a relentless drive to connect the dots
-          that most people miss.
+          Nathan didn't start as an AI educator. He started as an engineer — building
+          production systems, debugging complex architectures, and learning (sometimes
+          the hard way) what happens when code ships without proper verification.
         </p>
         <p>
-          AutoNateAI exists to do that work for you -- and with you. Our AI-powered
-          research engine digs deep into what is happening across industries, social
-          platforms, and markets. The Feed delivers that intelligence daily: practical
-          strategies, real money opportunities, and data analytics on what is trending
-          across LinkedIn, Reddit, X, and beyond. Our search packs come with full
-          tutorials so you do not just get the tools -- you learn the craft.
+          When AI coding tools emerged, Nathan saw the same pattern he'd seen before:
+          powerful tools adopted without the discipline to use them safely. Developers
+          were generating code faster than ever, but the fundamentals — understanding
+          blast radius, reading dependency chains, verifying changes visually — were
+          being skipped entirely.
         </p>
         <p>
-          This is AutoNate, powered by AI, connecting more and more of the world and
-          growing a universe full of opportunities. We are just getting started.
+          That's why he built this workshop. Not to teach people how to use AI — they're
+          already doing that. But to teach the engineering layer that sits between "AI
+          generated this code" and "this code is safe to ship."
+        </p>
+        <p>
+          AutoNateAI is Nathan's platform for bridging the gap between AI capability
+          and production discipline. The workshop is the flagship product: a 4-hour,
+          hands-on session that gives developers a repeatable framework for AI-augmented
+          development that actually holds up in production.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- What We Do -->
+  <!-- Credibility -->
   <section class="section" style="background: var(--bg-secondary);">
     <div class="section-container">
       <div class="section-header">
-        <div class="section-badge">What We Deliver</div>
-        <h2 class="section-title">Research. Tools. Knowledge. Community.</h2>
-        <p class="section-subtitle">
-          Everything we build is designed to keep you informed, equipped, and ahead
-          of the curve.
-        </p>
+        <div class="section-badge">Background</div>
+        <h2 class="section-title">Built on Real Experience</h2>
       </div>
 
-      <div class="about-values-grid">
-        <div class="about-value-card">
-          <div class="about-value-icon">&#x1F9E0;</div>
-          <h3 class="about-value-title">The Feed</h3>
-          <p class="about-value-desc">
-            Daily deep research across AI, finance, career strategy, and emerging
-            opportunities. Engage through comments. Learn from the community. Stay sharp.
-          </p>
+      <div class="cred-grid">
+        <div class="cred-card">
+          <div class="cred-icon">&#x1F4BB;</div>
+          <h3>Software Engineer</h3>
+          <p>Years of production system development across multiple stacks</p>
         </div>
-        <div class="about-value-card">
-          <div class="about-value-icon">&#x1F50D;</div>
-          <h3 class="about-value-title">Search Packs + Tutorials</h3>
-          <p class="about-value-desc">
-            Advanced Boolean queries for every major platform, each paired with a
-            tutorial that teaches you the strategy and logic behind the search.
-          </p>
+        <div class="cred-card">
+          <div class="cred-icon">&#x1F3D7;</div>
+          <h3>System Builder</h3>
+          <p>Designed and shipped real architectures under real constraints</p>
         </div>
-        <div class="about-value-card">
-          <div class="about-value-icon">&#x1F4CA;</div>
-          <h3 class="about-value-title">Data & Analytics</h3>
-          <p class="about-value-desc">
-            We track what is moving across socials -- hiring trends, market signals,
-            opportunity hotspots -- and bring those insights straight to you.
-          </p>
+        <div class="cred-card">
+          <div class="cred-icon">&#x1F680;</div>
+          <h3>AutoNateAI Founder</h3>
+          <p>Built the platform, curriculum, and workshop from scratch</p>
+        </div>
+        <div class="cred-card">
+          <div class="cred-icon">&#x1F916;</div>
+          <h3>AI Integration</h3>
+          <p>Deep experience integrating AI tools into production workflows</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Team Section -->
+  <!-- Teaching Philosophy -->
   <section class="section">
     <div class="section-container">
       <div class="section-header">
-        <div class="section-badge">The Vision</div>
-        <h2 class="section-title">Who is Behind AutoNateAI</h2>
+        <div class="section-badge">Philosophy</div>
+        <h2 class="section-title">Teaching Approach</h2>
       </div>
 
-      <div class="founder-card">
-        <div class="founder-avatar">NB</div>
-        <div class="founder-info">
-          <h3>Nathan Baker</h3>
-          <div class="founder-role">Founder & Builder</div>
-          <p>
-            Nathan built AutoNateAI because he saw something most people miss: the
-            best opportunities are not always visible, and the best knowledge does not
-            always come easy. With a background in engineering, a deep passion for AI,
-            and an obsession with connecting dots across industries, he built AutoNateAI
-            as his AI-assisted platform for deep research, advanced tools, and a growing
-            community of people who refuse to settle for surface-level information.
-          </p>
-        </div>
+      <div class="philosophy-content">
+        <p class="philosophy-quote">
+          "Most AI courses teach generation. This one teaches governance."
+        </p>
+        <p>
+          Nathan's teaching philosophy is simple: AI is a collaborator, not a replacement.
+          The developers who will thrive in the AI era aren't the ones who generate the
+          most code — they're the ones who understand the systems they're changing, verify
+          every output, and ship with confidence.
+        </p>
+        <p>
+          The workshop isn't about tricks or shortcuts. It's about building the mental
+          models and habits that make you a better engineer — with or without AI.
+          The M.A.P.P.E.R. framework is just the structure that makes those habits stick.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Placeholder -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">What Students Say</div>
+        <h2 class="section-title">From Workshop Participants</h2>
+      </div>
+
+      <div class="testimonials-placeholder">
+        <p>Student testimonials coming soon. The first cohorts are in session now.</p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
-    <h2 class="cta-title">The Feed Is Live. The Tools Are Ready.</h2>
+    <h2 class="cta-title">Learn from Nathan</h2>
     <p class="cta-subtitle">
-      Jump into the Feed for daily research and strategies. Grab a search pack with
-      tutorials to start sourcing opportunities today. This is how you stay ahead.
+      Join the workshop and get the engineering discipline that makes AI-assisted
+      development production-ready.
     </p>
     <div class="cta-buttons">
-      <a href="dashboard/feed.html" class="btn btn-primary">
-        Explore the Feed
-        <span>&#x2192;</span>
+      <a href="book.html" class="btn btn-primary">
+        Book Your Spot <span>&#x2192;</span>
       </a>
-      <a href="index.html" class="btn btn-secondary">
-        Browse Search Packs
+      <a href="workshop.html" class="btn btn-secondary">
+        See the Curriculum
       </a>
     </div>
   </section>
@@ -363,14 +384,13 @@
       });
     });
 
-    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           anime({
-            targets: entry.target.querySelectorAll('.about-value-card, .founder-card'),
+            targets: entry.target.querySelectorAll('.cred-card, .story-content, .philosophy-content'),
             opacity: [0, 1],
-            translateY: [30, 0],
+            translateY: [20, 0],
             delay: anime.stagger(100),
             duration: 600,
             easing: 'easeOutCubic'

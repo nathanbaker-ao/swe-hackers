@@ -454,6 +454,26 @@ const WhopService = {
       platformIcon: '📚'
     },
 
+    // WORKSHOP PRODUCTS
+    {
+      id: 'workshop-vibe-coding',
+      type: 'workshop',
+      category: 'workshops',
+      name: 'Vibe Coding for Production: Engineering Discipline in the Age of AI',
+      description: '4-hour live workshop. Learn the M.A.P.P.E.R. framework: navigate codebases with VS Code, prompt with architectural context using Claude Code, and verify changes visually with Fork. 75 students max.',
+      price: 450,
+      originalPrice: null,
+      rating: null,
+      reviewCount: 0,
+      badge: 'new',
+      image: null,
+      tags: ['workshop', 'live', 'ai', 'production', 'engineering'],
+      featured: true,
+      whopProductId: 'prod_WORKSHOP_450',
+      platform: 'workshops',
+      platformIcon: '🎓'
+    },
+
     // BUNDLE PRODUCTS
     {
       id: 'starter-pack-dev',

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contracts Over Code: The Real Structure of Large Systems | Blog | AutoNateAI</title>
+  <meta name="description" content="Functions come and go. What persists are the contracts between components — the promises they make to each other.">
+  <link rel="canonical" href="https://autonateai.com/blog/contracts-over-code.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autonateai.com/blog/contracts-over-code.html">
+  <meta property="og:title" content="Contracts Over Code: The Real Structure of Large Systems | AutoNateAI">
+  <meta property="og:description" content="Functions come and go. What persists are the contracts between components — the promises they make to each other.">
+  <meta property="og:site_name" content="AutoNateAI">
+  <meta property="article:published_time" content="2026-02-10">
+  <meta property="article:author" content="Nathan Baker">
+  <meta property="article:section" content="Production Discipline">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autonateai">
+  <meta name="twitter:title" content="Contracts Over Code: The Real Structure of Large Systems">
+  <meta name="twitter:description" content="Functions come and go. What persists are the contracts between components — the promises they make to each other.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/marketing.css">
+  <link rel="stylesheet" href="../shared/css/blog.css">
+  <link rel="stylesheet" href="../shared/css/blog-post.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../shared/js/navbar.js" defer></script>
+  <script src="../shared/js/footer.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+</head>
+<body>
+  <div class="reading-progress"></div>
+  <div id="navbar-container"></div>
+
+  <header class="hero-block blog-block">
+    <span class="category-badge">Production Discipline</span>
+    <h1 class="article-title">Contracts Over Code: The Real Structure of Large Systems</h1>
+    <div class="article-meta">
+      <span>February 10, 2026</span>
+      <span>10 min read</span>
+      <span>Nathan Baker</span>
+    </div>
+  </header>
+
+  <article class="article-container">
+    <div class="text-block lead blog-block">
+      <p>
+        If you look at a large production system and try to understand it by reading individual functions, you will drown. Thousands of functions, hundreds of files, dozens of modules — the volume is overwhelming. But there is a shortcut that senior engineers use instinctively and that nobody teaches explicitly. <strong>Stop reading the code. Start reading the contracts.</strong>
+      </p>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">1</span>
+      <h2 class="section-title">What Is a Contract?</h2>
+      <p class="section-subtitle">The promises that hold systems together</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        A contract is the promise a component makes to every other component that interacts with it. It is the agreement that says: "If you give me this, I will give you that. I will behave this way. I will not do these things."
+      </p>
+      <p>
+        Contracts exist at every level of a system. A function has a contract: its parameter types, its return type, its side effects, and its error handling behavior. An API endpoint has a contract: its request schema, its response schema, its status codes, and its headers. A microservice has a contract: its published events, its consumed events, its API surface, and its data ownership boundaries.
+      </p>
+      <p>
+        Here is the critical insight: <strong>functions are implementation details. Contracts are architecture.</strong> You can rewrite every function inside a module and nothing breaks — as long as the contracts remain intact. But change a single contract, and everything that depends on it must change too.
+      </p>
+      <p>
+        This is why experienced engineers think in terms of contracts rather than code. The code is the how. The contracts are the what and the why. When you understand the contracts, you understand the system — regardless of how the code is written.
+      </p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">2</span>
+      <h2 class="section-title">The Anatomy of a Contract</h2>
+      <p class="section-subtitle">Five dimensions that define what a component promises</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        Every contract, whether implicit or explicit, has five dimensions:
+      </p>
+      <p>
+        <strong>Input shape.</strong> What data does the component accept? What are the types, the ranges, the required fields, and the optional fields? An API endpoint that accepts <code>{ email: string, password: string }</code> has an input contract. Every client that sends requests to that endpoint depends on that shape.
+      </p>
+      <p>
+        <strong>Output shape.</strong> What data does the component return? What are the types, the possible values, and the structure? A service function that returns <code>{ user: User, token: string }</code> has an output contract. Every caller that destructures that response depends on those exact keys.
+      </p>
+      <p>
+        <strong>Side effects.</strong> What does the component change in the outside world? Does it write to a database? Send an email? Publish an event? Update a cache? Side effects are the most dangerous part of contracts because they are often invisible in the type system. A function that writes to a database and returns <code>void</code> looks the same as a function that does nothing and returns <code>void</code>.
+      </p>
+      <p>
+        <strong>Error handling.</strong> What happens when things go wrong? Does the component throw? Return null? Return an error object? Retry? The error contract is frequently the least documented and the most depended upon. Callers build their error handling around the assumption that a component fails in a specific way. Change that failure mode and the callers' error handling becomes wrong.
+      </p>
+      <p>
+        <strong>Performance characteristics.</strong> How long does the component take? Is it synchronous or asynchronous? Does it block? Is it cached? Performance is a contract when other components depend on response times. A function that takes 5ms is fine in a request pipeline. The same function, after a "harmless" change, taking 500ms, breaks the pipeline's timeout budget.
+      </p>
+    </div>
+
+    <aside class="callout-block info blog-block">
+      <span class="callout-icon">&#128161;</span>
+      <div class="callout-content">
+        <div class="callout-title">Implicit vs. Explicit Contracts</div>
+        <div class="callout-text">
+          Explicit contracts are written in the code: TypeScript interfaces, API schemas, function signatures. Implicit contracts live in behavior: "this function always runs before that one," "this endpoint always responds within 200ms," "this handler never throws." <strong>Implicit contracts are far more dangerous because there is no mechanism to enforce them.</strong> They break silently.
+        </div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">3</span>
+      <h2 class="section-title">Why AI Breaks Contracts</h2>
+      <p class="section-subtitle">The fundamental limitation of context-free generation</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        AI code generation tools are extraordinarily good at producing code that works in isolation. Given a clear prompt, they will generate a function that accepts the right inputs, produces the right outputs, handles edge cases, and even follows best practices. The code is often beautiful.
+      </p>
+      <p>
+        But AI does not see contracts. It sees the code you give it as context and nothing more. When you ask it to modify a function, it modifies the function. It does not check whether the modification preserves the promises that function makes to its callers. It does not verify that the side effects remain consistent. It does not trace the dependency chain to find components that rely on the current behavior.
+      </p>
+      <p>
+        This leads to a specific failure pattern that we see repeatedly: <strong>AI-generated code that is locally correct and contractually wrong.</strong> The function works perfectly when you test it in isolation. It fails catastrophically when it runs in the context of the full system because it violated a contract that was never part of the AI's context window.
+      </p>
+      <p>
+        Consider a practical example. You ask AI to optimize a database query function. The AI produces a faster implementation that returns the same data. Excellent. But the original function also acquired a database lock that a separate cleanup process depended on. The optimized version skips the lock because it is unnecessary for the query itself. The cleanup process now runs without the lock, and data corruption begins accumulating silently.
+      </p>
+      <p>
+        The AI did exactly what you asked. It optimized the query. It preserved the input/output contract. But it broke the side-effect contract — a contract that was never written down, never typed, and never part of the context window.
+      </p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">4</span>
+      <h2 class="section-title">How to Identify Contracts Before Making Changes</h2>
+      <p class="section-subtitle">A practical method for contract discovery</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        Before you change any component in a production system, spend five minutes identifying its contracts. Here is a method that works:
+      </p>
+      <p>
+        <strong>Step 1: Read the type signature.</strong> This is the explicit contract. What are the parameter types? What is the return type? Are there generics? Are there union types that suggest multiple behavioral paths? The type signature is the public promise that the compiler can enforce.
+      </p>
+      <p>
+        <strong>Step 2: Read the callers.</strong> Use Peek References to find every file that uses this component. For each caller, note: what does it do with the output? Does it destructure specific fields? Does it check for specific error types? Does it depend on timing? The callers reveal implicit contracts that the type system does not capture.
+      </p>
+      <p>
+        <strong>Step 3: Read the body for side effects.</strong> Scan the function body for anything that changes state: database writes, API calls, event publications, cache updates, file system operations, logging. Each side effect is a potential contract. Ask: would anything break if this side effect disappeared?
+      </p>
+      <p>
+        <strong>Step 4: Check the tests.</strong> Tests are encoded contracts. A test that asserts a specific return value is encoding an output contract. A test that asserts a database call was made is encoding a side-effect contract. A test that asserts a specific error is thrown is encoding an error contract. Read the tests to find contracts that were important enough to verify.
+      </p>
+      <p>
+        <strong>Step 5: Ask the question.</strong> For each contract you have identified, ask: "Does my planned change preserve this promise?" If the answer is no, you have found the point where your change needs additional work — additional migration, additional communication, additional testing.
+      </p>
+    </div>
+
+    <aside class="callout-block warning blog-block">
+      <span class="callout-icon">&#9888;&#65039;</span>
+      <div class="callout-content">
+        <div class="callout-title">The Missing Test Problem</div>
+        <div class="callout-text">
+          If a contract is not covered by a test, it is invisible to automation. You cannot rely on CI to catch contract violations in untested areas. This is why manual contract identification is essential — it finds the promises that the test suite does not verify.
+        </div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">5</span>
+      <h2 class="section-title">Contracts in the M.A.P.P.E.R. Framework</h2>
+      <p class="section-subtitle">Why "Analyze contracts" is step two</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        In the M.A.P.P.E.R. framework, the second step — after mapping the system — is "Analyze contracts." This is not an accident. Contracts are the lens through which every subsequent step is viewed.
+      </p>
+      <p>
+        When you <strong>Plan</strong> a change, you plan around contracts: which ones are preserved, which ones are modified, and which ones are broken intentionally (with migration support).
+      </p>
+      <p>
+        When you <strong>Prompt</strong> the AI, you include contracts as context: "This function satisfies these contracts. Preserve them." This single addition dramatically improves the quality of AI-generated code because it gives the AI knowledge it would otherwise lack.
+      </p>
+      <p>
+        When you <strong>Evaluate</strong> the output, you evaluate against contracts: does the generated code preserve the promises? Does it introduce new side effects? Does it change the error handling behavior?
+      </p>
+      <p>
+        When you <strong>Review</strong> the integration, you review contract compliance: do the callers still work? Do the tests still pass? Do the implicit contracts still hold?
+      </p>
+      <p>
+        Contracts are the connective tissue of the entire framework. Without them, you are making changes in the dark. With them, every step has a clear success criterion: did we preserve the promises?
+      </p>
+    </div>
+
+    <div class="quote-block blog-block">
+      <blockquote>
+        "In a large system, you do not understand the code until you understand the contracts. The code tells you how things work. The contracts tell you why they must work that way."
+      </blockquote>
+      <cite>— Contracts Over Code Principle</cite>
+    </div>
+
+    <div class="text-block blog-block">
+      <p>
+        Functions come and go. Implementations change. Languages evolve. Frameworks rise and fall. But the contracts — the promises between components — persist. They are the real architecture. Learn to see them, and you will see the system as it truly is: not a collection of files, but a web of promises. Change the promises carefully, and the system evolves. Break them carelessly, and the system fails.
+      </p>
+    </div>
+
+    <!-- Workshop CTA -->
+    <div class="cta-block blog-block">
+      <h3 class="cta-title">Want to Learn This Hands-On?</h3>
+      <p class="cta-text">Join the Vibe Coding for Production workshop and learn the complete M.A.P.P.E.R. framework with live exercises, real codebases, and take-home materials.</p>
+      <a href="../book.html" class="cta-button">Book Your Spot &rarr;</a>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <div class="author-block blog-block">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%237986cb' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='white'%3ENB%3C/text%3E%3C/svg%3E" alt="Nathan Baker" class="author-avatar">
+      <div class="author-info">
+        <div class="author-name">Nathan Baker</div>
+        <div class="author-role">Founder, AutoNateAI</div>
+        <div class="author-bio">Nathan is a software engineer and AI workflow specialist who teaches developers the engineering discipline needed for production-quality AI-assisted development.</div>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+    });
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const bar = document.querySelector('.reading-progress');
+      if (bar) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = Math.min((window.scrollY / max) * 100, 100) + '%';
+      }
+    });
+  </script>
+</body>
+</html>

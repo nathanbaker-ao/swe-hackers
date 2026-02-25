@@ -16,7 +16,9 @@ const RouteGuard = {
     '/enterprise.html',
     '/consulting.html',
     '/blog/',
-    '/challenges.html'
+    '/challenges.html',
+    '/workshop.html',
+    '/book.html'
   ],
 
   // Course path patterns and their required access

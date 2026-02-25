@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diff-Based AI Coding: A Safer Workflow | Blog | AutoNateAI</title>
+  <meta name="description" content="Instead of accepting whole files from AI, learn to work in diffs — verifying every change line by line before it ships.">
+  <link rel="canonical" href="https://autonateai.com/blog/diff-based-ai-coding.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autonateai.com/blog/diff-based-ai-coding.html">
+  <meta property="og:title" content="Diff-Based AI Coding: A Safer Workflow | AutoNateAI">
+  <meta property="og:description" content="Instead of accepting whole files from AI, learn to work in diffs — verifying every change line by line before it ships.">
+  <meta property="og:site_name" content="AutoNateAI">
+  <meta property="article:published_time" content="2026-01-27">
+  <meta property="article:author" content="Nathan Baker">
+  <meta property="article:section" content="Tactical AI Control">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autonateai">
+  <meta name="twitter:title" content="Diff-Based AI Coding: A Safer Workflow">
+  <meta name="twitter:description" content="Instead of accepting whole files from AI, learn to work in diffs — verifying every change line by line before it ships.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/marketing.css">
+  <link rel="stylesheet" href="../shared/css/blog.css">
+  <link rel="stylesheet" href="../shared/css/blog-post.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../shared/js/navbar.js" defer></script>
+  <script src="../shared/js/footer.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+</head>
+<body>
+  <div class="reading-progress"></div>
+  <div id="navbar-container"></div>
+
+  <header class="hero-block blog-block">
+    <span class="category-badge">Tactical AI Control</span>
+    <h1 class="article-title">Diff-Based AI Coding: A Safer Workflow</h1>
+    <div class="article-meta">
+      <span>January 27, 2026</span>
+      <span>9 min read</span>
+      <span>Nathan Baker</span>
+    </div>
+  </header>
+
+  <article class="article-container">
+
+    <div class="text-block lead blog-block">
+      <p>Most developers using AI tools accept or reject whole files. The AI generates code, you glance at it, and you either take it all or throw it all away. This is the wrong unit of work. The diff -- the precise set of additions, deletions, and modifications -- is the artifact that matters. Learning to work in diffs instead of files is the single most impactful change you can make to your AI-assisted workflow. It is slower per interaction, but it is dramatically faster when measured in bugs avoided and rework eliminated.</p>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">1</span>
+      <h2 class="section-title">The Diff Is the Artifact That Matters</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>When you ship software, you are not shipping files. You are shipping changes. The commit that goes into your Git history, the pull request that your team reviews, the deployment that rolls out to production -- all of these are defined by their diffs, not by the files they touch. A file is the current state. A diff is the transition between states. And transitions are where bugs live.</p>
+      <p>Think about it this way: if you have a 300-line file and AI changes 5 lines, the risk is concentrated in those 5 lines. But if you accept the entire file without reviewing the diff, you have no way to know if the AI changed 5 lines or 50. You have no way to know if it "helpfully" reformatted your imports, tweaked an unrelated function, or subtly changed an error message that another system parses. The only way to know exactly what changed is to read the diff.</p>
+      <p>This is why professional software development has always been diff-centric. Code reviews are diff reviews. Merge conflict resolution is diff resolution. Bisecting a bug is searching through diffs. When you adopt a diff-based workflow with AI, you are not adding overhead -- you are plugging into the existing infrastructure that keeps software reliable.</p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">2</span>
+      <h2 class="section-title">The Five-Step Diff-Based Workflow</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>Here is the workflow I use every day when working with AI on production code. It takes slightly longer per change but produces code I can trust.</p>
+      <p><strong>Step 1: AI makes changes.</strong> You give AI a scoped prompt -- a specific function to modify, a specific behavior to add, a specific pattern to refactor. AI produces the code. At this point, you have not accepted anything. The changes exist in your editor or in the chat output, but they have not been committed.</p>
+      <p><strong>Step 2: You open your Git client.</strong> I use Fork, a visual Git client that excels at showing diffs. Other developers prefer GitKraken, Sourcetree, or the VS Code Git panel. The tool matters less than the practice. You open the changes view and look at every file AI touched.</p>
+      <p><strong>Step 3: You review every hunk.</strong> A hunk is a contiguous block of changes within a file. Fork shows each hunk separately, with context lines above and below so you can understand what the change touches. For each hunk, you ask: Does this change match what I asked for? Does it preserve existing contracts? Does it introduce any side effects? Is the logic correct for edge cases? This is the verification step, and it is non-negotiable.</p>
+      <p><strong>Step 4: You stage only what makes sense.</strong> This is the critical capability that separates diff-based development from file-based development. You do not have to accept or reject the entire file. You can stage individual hunks. If AI made three changes and two are correct but one is wrong, you stage the two good hunks and discard the bad one. This granular control is why Git clients like Fork are essential tools for AI-assisted development.</p>
+      <p><strong>Step 5: You commit atomically.</strong> Each commit should represent one logical change. If you asked AI to add input validation and it also reformatted the file, those are two separate changes. Stage the validation hunks and commit them with a message that describes the validation change. Then deal with the formatting separately, or discard it entirely. Atomic commits create a Git history that tells a clear story and makes future debugging possible.</p>
+    </div>
+
+    <aside class="callout-block info blog-block">
+      <span class="callout-icon">💡</span>
+      <div class="callout-content">
+        <div class="callout-title">Why Fork Is the Perfect Verification Layer</div>
+        <div class="callout-text">Fork's hunk-by-hunk staging interface was designed for exactly this kind of granular review. You can see additions in green, deletions in red, and context lines in gray. You can stage, unstage, and discard individual hunks with a single click. It turns diff review from a chore into a natural part of the workflow.</div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">3</span>
+      <h2 class="section-title">How to Read Diffs Like a Professional</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>Reading diffs is a skill, and most developers are not as good at it as they think. Here is what to look for when reviewing AI-generated diffs.</p>
+      <p><strong>Green lines (additions):</strong> These are new code. Read each one carefully. Does the new code do what you intended? Does it handle edge cases? Does it follow your codebase's patterns? Watch for AI adding imports you do not need, creating helper functions you did not ask for, or adding comments that are obvious or wrong.</p>
+      <p><strong>Red lines (deletions):</strong> These are removed code. This is where the most dangerous changes hide. Did AI delete something you did not ask it to remove? Was the deleted code handling an edge case that the new code does not? Was there a comment documenting a non-obvious behavior that has now been lost? Every red line deserves as much attention as every green line.</p>
+      <p><strong>Context lines (gray/unchanged):</strong> These are the lines surrounding the change. They show you where in the file the change occurs. Read the context to verify that the change makes sense in its location. Sometimes AI inserts code in a technically valid but logically wrong position -- like adding a validation check after the data has already been used.</p>
+      <p><strong>Watch for whitespace-only changes.</strong> AI models sometimes reformat code -- changing indentation, adding or removing blank lines, reorganizing imports. These changes clutter the diff and make it harder to spot real changes. If you see whitespace-only hunks, discard them immediately. They add noise and no value.</p>
+      <p><strong>Watch for scope creep.</strong> AI is helpful to a fault. You ask it to fix a bug in one function, and it also "improves" the adjacent function, adds type annotations to unrelated code, or reorganizes the file structure. Each of these might be a good change individually, but mixed into a diff with your intended change, they create confusion and risk. Stage only the hunks that match your intent.</p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">4</span>
+      <h2 class="section-title">Atomic Commits That Tell a Story</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>The final piece of the diff-based workflow is the commit. Each commit should be a self-contained, meaningful change with a message that explains the "why," not just the "what."</p>
+      <p>A good commit message for AI-assisted work looks like this: "Add retry logic to fetchUserData for transient HTTP errors." It describes what changed and why. It does not say "AI-generated code" because who wrote the code is irrelevant -- what matters is what the code does and why it was added.</p>
+      <p>A sequence of atomic commits creates a narrative in your Git history. Someone debugging a problem six months from now can read the commit log and understand the evolution of the code. They can bisect to find exactly which change introduced the bug. They can revert a single commit without disturbing anything else. None of this is possible if your commits are giant blobs of AI-generated changes with messages like "refactor auth module."</p>
+      <p>The discipline of atomic commits also forces you to think clearly about what you are changing and why. If you cannot write a clear, single-sentence commit message, the change is probably too big or too unfocused. Break it down. Ask AI for smaller, more targeted changes. Commit each one separately.</p>
+    </div>
+
+    <div class="quote-block blog-block">
+      <blockquote>"Your Git history is the story of your software. Every commit is a chapter. Make each one worth reading."</blockquote>
+      <cite>-- The diff-based development philosophy</cite>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">5</span>
+      <h2 class="section-title">Making This Your Default</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>The diff-based workflow feels slow at first. You are used to accepting whole files with a keystroke, and now you are reviewing individual hunks. But the speed you lose in the review step, you gain back many times over in reduced debugging, fewer reverts, cleaner code reviews, and higher confidence in what you ship.</p>
+      <p>Start with a simple rule: never commit AI-generated changes without opening a diff viewer first. Not the editor's inline diff. A proper Git client where you can see every hunk across every file. Make this non-negotiable for one week and observe what happens. You will catch things you would have missed. You will discard changes you would have accepted. You will ship code you actually understand.</p>
+      <p>Module 4 of the Vibe Coding for Production workshop is entirely about diff-based development. You will practice the five-step workflow on real codebases, learn advanced diff reading techniques, and build the habit of hunk-by-hunk staging until it becomes second nature. If there is one module that changes how you work with AI every day, it is this one.</p>
+    </div>
+
+    <div class="cta-block blog-block">
+      <h3 class="cta-title">Want to Learn This Hands-On?</h3>
+      <p class="cta-text">Join the Vibe Coding for Production workshop and learn the complete M.A.P.P.E.R. framework with live exercises, real codebases, and take-home materials.</p>
+      <a href="../book.html" class="cta-button">Book Your Spot &rarr;</a>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <div class="author-block blog-block">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%237986cb' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='white'%3ENB%3C/text%3E%3C/svg%3E" alt="Nathan Baker" class="author-avatar">
+      <div class="author-info">
+        <div class="author-name">Nathan Baker</div>
+        <div class="author-role">Founder, AutoNateAI</div>
+        <div class="author-bio">Nathan is a software engineer and AI workflow specialist who teaches developers the engineering discipline needed for production-quality AI-assisted development.</div>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+    });
+    window.addEventListener('scroll', () => {
+      const bar = document.querySelector('.reading-progress');
+      if (bar) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = Math.min((window.scrollY / max) * 100, 100) + '%';
+      }
+    });
+  </script>
+</body>
+</html>

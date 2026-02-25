@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Estimate Blast Radius Before Touching a Line of Code | Blog | AutoNateAI</title>
+  <meta name="description" content="Every change ripples. The question is how far. Learn the mental model for estimating impact before you make a single edit.">
+  <link rel="canonical" href="https://autonateai.com/blog/estimate-blast-radius.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autonateai.com/blog/estimate-blast-radius.html">
+  <meta property="og:title" content="How to Estimate Blast Radius Before Touching a Line of Code | AutoNateAI">
+  <meta property="og:description" content="Every change ripples. The question is how far. Learn the mental model for estimating impact before you make a single edit.">
+  <meta property="og:site_name" content="AutoNateAI">
+  <meta property="article:published_time" content="2026-02-13">
+  <meta property="article:author" content="Nathan Baker">
+  <meta property="article:section" content="Production Discipline">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autonateai">
+  <meta name="twitter:title" content="How to Estimate Blast Radius Before Touching a Line of Code">
+  <meta name="twitter:description" content="Every change ripples. The question is how far. Learn the mental model for estimating impact before you make a single edit.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/marketing.css">
+  <link rel="stylesheet" href="../shared/css/blog.css">
+  <link rel="stylesheet" href="../shared/css/blog-post.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../shared/js/navbar.js" defer></script>
+  <script src="../shared/js/footer.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+</head>
+<body>
+  <div class="reading-progress"></div>
+  <div id="navbar-container"></div>
+
+  <header class="hero-block blog-block">
+    <span class="category-badge">Production Discipline</span>
+    <h1 class="article-title">How to Estimate Blast Radius Before Touching a Line of Code</h1>
+    <div class="article-meta">
+      <span>February 13, 2026</span>
+      <span>11 min read</span>
+      <span>Nathan Baker</span>
+    </div>
+  </header>
+
+  <article class="article-container">
+    <div class="text-block lead blog-block">
+      <p>
+        Every change you make to a codebase ripples outward. A renamed function breaks its callers. A modified return type invalidates downstream assumptions. A deleted utility takes three services down at 2 AM. <strong>The question is never whether your change has impact. The question is how far that impact reaches — and whether you mapped it before you committed.</strong>
+      </p>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">1</span>
+      <h2 class="section-title">The Change Classification Matrix</h2>
+      <p class="section-subtitle">Not all changes are created equal</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        The first step in estimating blast radius is classifying the type of change you are about to make. Different change types carry fundamentally different risk profiles. Here is the matrix:
+      </p>
+      <p>
+        <strong>Cosmetic changes (Low risk).</strong> These are changes that do not affect behavior: renaming a variable within a function, updating a comment, adjusting whitespace, modifying a log message. The blast radius is effectively zero — the change is contained within the file and does not affect any callers or contracts. Most developers correctly identify these as safe.
+      </p>
+      <p>
+        <strong>Behavioral changes (Medium risk).</strong> These change what a function does while keeping its interface the same. Adding validation to an input, changing a sort order, modifying a default value, adding a cache layer. The type signatures stay the same, so the compiler will not catch issues. But callers who depended on the previous behavior may break silently. These are the sneaky ones.
+      </p>
+      <p>
+        <strong>Structural changes (High risk).</strong> These change the interface itself: renaming an exported function, changing a parameter type, modifying a return shape, splitting a module into two. The compiler catches some of these, but not all — especially across service boundaries, in dynamically typed languages, or in serialized data formats.
+      </p>
+      <p>
+        <strong>Cross-cutting changes (Highest risk).</strong> These touch shared infrastructure: authentication middleware, logging utilities, database connection pools, event bus configurations, environment variable handling. A cross-cutting change can affect every service in the system. These are the changes that take down production, and they are the ones most often underestimated.
+      </p>
+    </div>
+
+    <aside class="callout-block warning blog-block">
+      <span class="callout-icon">&#9888;&#65039;</span>
+      <div class="callout-content">
+        <div class="callout-title">The Classification Trap</div>
+        <div class="callout-text">
+          Developers consistently misclassify changes downward. What feels like a cosmetic change ("I'm just adding a field") is often a structural change ("that field changes the serialization contract"). Always classify based on what the system sees, not what your intent is.
+        </div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">2</span>
+      <h2 class="section-title">The Three Questions</h2>
+      <p class="section-subtitle">What to ask before every change</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        Once you have classified the change, ask three questions. These questions are simple but powerful, and they form the foundation of blast radius estimation:
+      </p>
+      <p>
+        <strong>Question 1: Who calls this?</strong> Use VS Code's Peek References (Shift+F12) on the function, class, or module you are about to change. Count the references. Are they all in one file? That is a small blast radius. Are they spread across ten files in four directories? That is a large blast radius. Are they in other repositories or services? That is a critical blast radius.
+      </p>
+      <p>
+        <strong>Question 2: What depends on this?</strong> This goes beyond direct callers. A function might be called by one handler, but that handler serves an API endpoint that three front-end applications consume. The direct caller count is one. The actual dependency count is four. Use Call Hierarchy (Shift+Alt+H) to trace the chain upward and outward.
+      </p>
+      <p>
+        <strong>Question 3: What contracts does this satisfy?</strong> Every piece of code exists because it makes a promise to something else. An API endpoint promises a response shape. A utility function promises deterministic output. A middleware function promises to run before the handler. Identify which contracts your change touches, and you have identified your true blast radius.
+      </p>
+    </div>
+
+    <aside class="callout-block info blog-block">
+      <span class="callout-icon">&#128161;</span>
+      <div class="callout-content">
+        <div class="callout-title">Pro Tip: The Dependency Spreadsheet</div>
+        <div class="callout-text">
+          For high-risk changes, create a quick spreadsheet with three columns: File, Contract, and Risk Level. List every file that references the thing you are changing, the contract it depends on, and whether your change affects that contract. This takes five minutes and has saved production systems countless times.
+        </div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">3</span>
+      <h2 class="section-title">Tracing Dependencies in VS Code</h2>
+      <p class="section-subtitle">The tools that make blast radius estimation practical</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        Blast radius estimation sounds time-consuming in theory. In practice, with the right tools, it takes minutes. VS Code ships with everything you need:
+      </p>
+      <p>
+        <strong>Peek References (Shift+F12)</strong> is your starting point. Place your cursor on any symbol — a function name, a class, a variable, a type — and press Shift+F12. A panel opens showing every file that references that symbol, with the exact line highlighted. This is your first-order blast radius: every place that directly uses the thing you are about to change.
+      </p>
+      <p>
+        <strong>Go to Definition (F12)</strong> works in the opposite direction. When you are looking at a caller and want to understand what it depends on, F12 takes you to the source. Use this to trace chains: start at the entry point, F12 into the handler, F12 into the service, F12 into the repository. Each hop reveals another layer of the dependency chain.
+      </p>
+      <p>
+        <strong>Call Hierarchy (Shift+Alt+H)</strong> is the power tool. Right-click a function and select "Show Call Hierarchy." This gives you a tree view of every function that calls your function, and every function that your function calls. You can expand the tree to see second-order, third-order, and deeper dependencies. This is blast radius estimation in tree form.
+      </p>
+      <p>
+        <strong>Outline View (Ctrl+Shift+O)</strong> gives you the structure of the current file at a glance. Before you change a file, open the outline to see every exported function, class, and type. This tells you what contracts the file exposes and helps you identify which of your changes affect the public interface.
+      </p>
+      <p>
+        <strong>Find All Implementations (Ctrl+F12)</strong> is critical for interface changes. If you are modifying a TypeScript interface or an abstract class, this command shows every concrete implementation. Each implementation is a place where your interface change will need to be reflected.
+      </p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">4</span>
+      <h2 class="section-title">Real Examples of Hidden Blast Radius</h2>
+      <p class="section-subtitle">Changes that looked small but were not</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        <strong>Example 1: The "optional" parameter.</strong> A developer added an optional parameter to a shared utility function: <code>formatDate(date, locale?)</code>. The change was backwards-compatible — existing callers did not need to change. But the function was used in a server-side rendering pipeline where the output was cached by its input hash. Adding a parameter changed the cache key behavior. Pages that were cached started returning stale data because the cache key no longer matched.
+      </p>
+      <p>
+        <strong>Example 2: The "harmless" refactor.</strong> A developer renamed an internal helper function from <code>validateInput</code> to <code>sanitizeInput</code> to better reflect what it did. The function was not exported, so no other file referenced it. Safe, right? Except the function name appeared in log messages, and the operations team had alerts configured to trigger on "validateInput" failures. The rename silenced the alerts. An invalid input bug went undetected for three days.
+      </p>
+      <p>
+        <strong>Example 3: The "simple" field addition.</strong> A developer added a <code>createdAt</code> field to a MongoDB document. The field was optional, so existing documents were fine. But the API response serialization included all document fields by default. Third-party consumers who parsed the API response with strict schemas started failing because they received an unexpected field. One partner's integration went down for four hours.
+      </p>
+      <p>
+        In every case, the developer correctly assessed the local impact. The code compiled. The tests passed. What they missed was the systemic impact — the contracts, the dependencies, and the assumptions that existed beyond the code they could see.
+      </p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">5</span>
+      <h2 class="section-title">The Blast Radius Checklist</h2>
+      <p class="section-subtitle">A practical tool from the workshop</p>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>
+        In the Vibe Coding for Production workshop, we teach a Blast Radius Checklist that developers use before every non-trivial change. Here is a simplified version:
+      </p>
+      <p>
+        <strong>1. Classify the change.</strong> Is it cosmetic, behavioral, structural, or cross-cutting? If you are unsure, classify it one level higher than your instinct suggests.
+      </p>
+      <p>
+        <strong>2. Count the references.</strong> Use Peek References on every symbol you plan to modify. Write down the count. If it is greater than five, slow down.
+      </p>
+      <p>
+        <strong>3. Trace the call hierarchy.</strong> For each function you are changing, trace one level up (who calls this?) and one level down (what does this call?). Identify any shared infrastructure in the chain.
+      </p>
+      <p>
+        <strong>4. Identify the contracts.</strong> List every contract your change touches. Input shapes, output shapes, side effects, temporal ordering, error handling behavior. For each contract, ask: does my change preserve this promise?
+      </p>
+      <p>
+        <strong>5. Check the boundaries.</strong> Does this change cross a module boundary? A service boundary? A package boundary? Changes that cross boundaries have exponentially larger blast radius because they affect systems you may not have visibility into.
+      </p>
+      <p>
+        <strong>6. Assess the test coverage.</strong> Are the affected areas well-tested? If a contract is not covered by a test, the blast radius is effectively unknown — you cannot rely on the test suite to catch regressions.
+      </p>
+      <p>
+        This checklist takes five to ten minutes. It prevents the kind of failures that take five to ten hours to diagnose and fix. The math is obvious. The discipline is the hard part.
+      </p>
+    </div>
+
+    <div class="quote-block blog-block">
+      <blockquote>
+        "A five-minute blast radius estimate saves five hours of production debugging. Every single time."
+      </blockquote>
+      <cite>— The Blast Radius Principle</cite>
+    </div>
+
+    <div class="text-block blog-block">
+      <p>
+        Estimating blast radius is not about being slow. It is about being precise. The fastest developers in production are not the ones who generate the most code. They are the ones who understand the impact of every change before they make it. Learn to estimate blast radius, and you will ship with confidence instead of crossing your fingers.
+      </p>
+    </div>
+
+    <!-- Workshop CTA -->
+    <div class="cta-block blog-block">
+      <h3 class="cta-title">Want to Learn This Hands-On?</h3>
+      <p class="cta-text">Join the Vibe Coding for Production workshop and learn the complete M.A.P.P.E.R. framework with live exercises, real codebases, and take-home materials.</p>
+      <a href="../book.html" class="cta-button">Book Your Spot &rarr;</a>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <div class="author-block blog-block">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%237986cb' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='white'%3ENB%3C/text%3E%3C/svg%3E" alt="Nathan Baker" class="author-avatar">
+      <div class="author-info">
+        <div class="author-name">Nathan Baker</div>
+        <div class="author-role">Founder, AutoNateAI</div>
+        <div class="author-bio">Nathan is a software engineer and AI workflow specialist who teaches developers the engineering discipline needed for production-quality AI-assisted development.</div>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+    });
+    // Reading progress
+    window.addEventListener('scroll', () => {
+      const bar = document.querySelector('.reading-progress');
+      if (bar) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = Math.min((window.scrollY / max) * 100, 100) + '%';
+      }
+    });
+  </script>
+</body>
+</html>

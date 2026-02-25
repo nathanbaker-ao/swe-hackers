@@ -19,41 +19,40 @@ const FooterComponent = {
               <span>AutoNateAI</span>
             </div>
             <p class="footer-desc">
-              Scroll Courses powered by AI agents built from real professionals. Plus digital tools and tech gear for builders.
+              Live workshops teaching engineering discipline in the age of AI. Learn to navigate codebases, prompt with precision, and ship with confidence.
             </p>
           </div>
-          
+
           <div class="footer-column">
-            <h4>Products</h4>
+            <h4>Workshop</h4>
             <ul class="footer-links">
-              <li><a href="{{baseUrl}}index.html">Browse Tools</a></li>
-              <li><a href="{{baseUrl}}dashboard/feed.html">Feed</a></li>
-              <li><a href="{{baseUrl}}dashboard/library.html">My Library</a></li>
+              <li><a href="{{baseUrl}}workshop.html">Details</a></li>
+              <li><a href="{{baseUrl}}book.html">Book Now</a></li>
+              <li><a href="{{baseUrl}}blog/">Blog</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
-            <h4>Company</h4>
+            <h4>Connect</h4>
             <ul class="footer-links">
               <li><a href="{{baseUrl}}about.html">About</a></li>
               <li><a href="{{baseUrl}}contact.html">Contact</a></li>
-              <li><a href="{{baseUrl}}blog/">Blog</a></li>
               <li><a href="https://discord.gg/Me5N8tCdkC" target="_blank">Discord</a></li>
+              <li><a href="https://twitter.com/autonateai" target="_blank">Twitter/X</a></li>
             </ul>
           </div>
-          
+
           <div class="footer-column">
             <h4>Account</h4>
             <ul class="footer-links">
               <li><a href="{{baseUrl}}auth/login.html">Sign In</a></li>
-              <li><a href="{{baseUrl}}auth/register.html">Create Account</a></li>
               <li><a href="{{baseUrl}}dashboard/">Dashboard</a></li>
             </ul>
           </div>
         </div>
-        
+
         <div class="footer-bottom">
-          <p class="footer-copy">© ${new Date().getFullYear()} AutoNateAI. All rights reserved.</p>
+          <p class="footer-copy">&copy; ${new Date().getFullYear()} AutoNateAI. All rights reserved.</p>
           <div class="footer-social">
             <a href="https://discord.gg/Me5N8tCdkC" target="_blank" title="Discord">💬</a>
             <a href="https://github.com/nathanbaker-ao" target="_blank" title="GitHub">🐙</a>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Prompt Framework I Use to Prevent AI Hallucinations | Blog | AutoNateAI</title>
+  <meta name="description" content="AI hallucinations aren't random — they're what happens when AI doesn't have enough context. Here's how to fix that.">
+  <link rel="canonical" href="https://autonateai.com/blog/prompt-framework-prevent-hallucinations.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://autonateai.com/blog/prompt-framework-prevent-hallucinations.html">
+  <meta property="og:title" content="The Prompt Framework I Use to Prevent AI Hallucinations | AutoNateAI">
+  <meta property="og:description" content="AI hallucinations aren't random — they're what happens when AI doesn't have enough context. Here's how to fix that.">
+  <meta property="og:site_name" content="AutoNateAI">
+  <meta property="article:published_time" content="2026-02-03">
+  <meta property="article:author" content="Nathan Baker">
+  <meta property="article:section" content="Tactical AI Control">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@autonateai">
+  <meta name="twitter:title" content="The Prompt Framework I Use to Prevent AI Hallucinations">
+  <meta name="twitter:description" content="AI hallucinations aren't random — they're what happens when AI doesn't have enough context. Here's how to fix that.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/marketing.css">
+  <link rel="stylesheet" href="../shared/css/blog.css">
+  <link rel="stylesheet" href="../shared/css/blog-post.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../shared/js/navbar.js" defer></script>
+  <script src="../shared/js/footer.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+</head>
+<body>
+  <div class="reading-progress"></div>
+  <div id="navbar-container"></div>
+
+  <header class="hero-block blog-block">
+    <span class="category-badge">Tactical AI Control</span>
+    <h1 class="article-title">The Prompt Framework I Use to Prevent AI Hallucinations</h1>
+    <div class="article-meta">
+      <span>February 3, 2026</span>
+      <span>10 min read</span>
+      <span>Nathan Baker</span>
+    </div>
+  </header>
+
+  <article class="article-container">
+
+    <div class="text-block lead blog-block">
+      <p>AI hallucinations are not random glitches. They are not bugs in the model. They are the predictable result of asking AI to produce output without giving it enough information to work with. When AI does not know something, it does not say "I don't know." It fills the gap with a confident guess. And that guess, delivered with the same authority as a correct answer, is what we call a hallucination. The good news is that hallucinations are largely preventable. Here is the framework I use every day to keep AI grounded in reality.</p>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">1</span>
+      <h2 class="section-title">Understanding Why AI Hallucinates</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>To prevent hallucinations, you first need to understand what causes them. AI language models are, at their core, pattern completion engines. They predict the most likely next token based on everything they have seen in training and everything you have given them in the current conversation. When you ask a question that has a clear, well-documented answer, the model retrieves and assembles that answer accurately. But when you ask something that requires specific knowledge about <em>your</em> codebase, <em>your</em> architecture, or <em>your</em> constraints -- knowledge the model does not have -- it does not stop. It keeps predicting tokens. It fills in the blanks with plausible-sounding but fabricated details.</p>
+      <p>This is why hallucinations cluster around certain kinds of questions. Ask AI about general JavaScript syntax and you will get a reliable answer. Ask it about the specific interface contract between your UserService and your AuthRepository, and it will invent one that sounds reasonable but might be completely wrong. The hallucination rate is directly proportional to how much the answer depends on context the model does not have.</p>
+      <p>The solution, then, is obvious: <strong>give the model the context it needs so it does not have to guess</strong>.</p>
+    </div>
+
+    <aside class="callout-block info blog-block">
+      <span class="callout-icon">💡</span>
+      <div class="callout-content">
+        <div class="callout-title">The Hallucination Rule</div>
+        <div class="callout-text">If your prompt requires knowledge that exists only in your codebase and you did not include that knowledge in the prompt, you are asking AI to hallucinate. Not might. Will. Every gap in context is an invitation for the model to guess.</div>
+      </div>
+    </aside>
+
+    <section class="section-block blog-block">
+      <span class="section-number">2</span>
+      <h2 class="section-title">The Four-Part Prompt Framework</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>After hundreds of hours of working with AI on production codebases, I have distilled my approach into four components. Every prompt I write for anything beyond trivial tasks includes all four. Skipping any one of them opens the door to hallucinations.</p>
+    </div>
+
+    <div class="text-block blog-block">
+      <p><strong>Part 1: Define the Change Scope.</strong> Tell the AI exactly what you want changed and where. Not "improve the authentication flow" but "modify the validateToken function in src/auth/tokenService.ts to handle expired refresh tokens." Scope eliminates the largest category of hallucinations: AI inventing files, functions, or modules that do not exist. When you define the scope precisely, the model knows exactly where to focus and does not have to guess about the surrounding landscape.</p>
+      <p><strong>Part 2: List Constraints and Contracts.</strong> Every function in a production codebase exists within a web of contracts. It accepts certain inputs, returns certain outputs, throws certain errors, and makes certain guarantees to its callers. If you do not tell the AI about these contracts, it will either break them accidentally or invent new ones. List the contracts explicitly: "This function is called by the AuthMiddleware and must return a Promise that resolves to a ValidToken or throws an AuthError with code TOKEN_EXPIRED." Now the AI knows exactly what it must preserve.</p>
+      <p><strong>Part 3: Provide Relevant Code Snippets.</strong> Do not make the AI guess what your code looks like. Paste in the function you want modified. Paste in the interface it implements. Paste in the tests that verify its behavior. This is the single most powerful anti-hallucination technique: when AI can see the actual code, it produces modifications that are consistent with what exists rather than inventing something from scratch.</p>
+      <p><strong>Part 4: Specify What NOT to Change.</strong> This is the step most developers skip, and it is often the most important. AI models are eager to help, and they will sometimes "improve" things you did not ask them to touch. By explicitly stating what should remain unchanged -- "Do not modify the function signature. Do not change the error handling in the catch block. Do not add new dependencies." -- you create guardrails that prevent scope creep and accidental breakage.</p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">3</span>
+      <h2 class="section-title">Bad Prompts vs. Good Prompts</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>Let me show you the difference this framework makes with a real example. Suppose you need to add retry logic to an API client.</p>
+      <p><strong>The bad prompt:</strong> "Write a function that retries failed API calls." This prompt is a hallucination factory. The AI does not know your API client. It does not know your error types. It does not know your retry strategy requirements. It will produce something generic that probably does not fit your codebase, uses different patterns, and might introduce incompatible error handling.</p>
+      <p><strong>The good prompt:</strong> "Modify the fetchUserData function in src/api/userClient.ts to add retry logic for transient failures. Here is the current function: [paste code]. It is called by the UserProfilePage component and must continue to return Promise&lt;UserData&gt; or throw an ApiError. Retry up to 3 times with exponential backoff (1s, 2s, 4s) for HTTP 429 and 5xx responses only. Do not retry on 4xx client errors. Do not change the function signature or the error types. Do not add new npm dependencies -- use setTimeout for delays."</p>
+      <p>The second prompt leaves almost nothing to the imagination. The AI knows the file, the function, the callers, the return type, the retry conditions, the backoff strategy, and the constraints. There is no room to hallucinate because every gap has been filled with real information.</p>
+    </div>
+
+    <div class="quote-block blog-block">
+      <blockquote>"The most dangerous AI output is not obviously wrong code. It is subtly wrong code that looks correct, passes basic tests, and fails in production at 2 AM."</blockquote>
+      <cite>-- Lessons from production incidents</cite>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">4</span>
+      <h2 class="section-title">Why "Write a Function That..." Always Fails</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>The phrase "write a function that..." is the hallmark of a prompt that will produce hallucinated code. It tells the AI to create something from nothing, with no anchor to your existing codebase. The AI must guess the language (probably right), the framework (maybe right), the patterns (probably wrong), the error handling strategy (almost certainly wrong), and the integration points (definitely wrong).</p>
+      <p>Compare this to "modify this function to... while preserving the contract with..." The word "modify" anchors the AI to existing code. The phrase "while preserving the contract" tells it what must not change. The AI is now editing, not inventing. It is working within constraints, not in a vacuum. The result is code that fits your codebase because it was derived from your codebase.</p>
+      <p>This is the fundamental shift in how you should think about AI-assisted development. You are not asking AI to write code for you. You are asking AI to modify code within the constraints you define. The developer's job is defining those constraints accurately. The AI's job is executing within them. When you frame the interaction this way, hallucinations drop dramatically because the AI has real code to work with instead of empty space to fill with guesses.</p>
+    </div>
+
+    <section class="section-block blog-block">
+      <span class="section-number">5</span>
+      <h2 class="section-title">Advanced Techniques: Verification Prompts</h2>
+    </section>
+
+    <div class="text-block blog-block">
+      <p>Even with the four-part framework, verification is essential. After AI produces code, I use a follow-up prompt to catch any remaining hallucinations: "Review the code you just produced. List every assumption you made that is not explicitly stated in the context I provided. For each assumption, explain what would break if that assumption is wrong."</p>
+      <p>This prompt forces the model to audit its own output. It surfaces hidden assumptions -- the kind that cause production bugs weeks later. Sometimes the model reveals that it assumed a certain import path, or that a specific error type exists, or that a configuration value is available. Each of these is a potential hallucination that you can verify before the code ever reaches a commit.</p>
+      <p>Another powerful technique is the <strong>negative test prompt</strong>: "What edge cases could cause this code to fail? What inputs would produce unexpected behavior?" This turns the AI's tendency to be comprehensive into an asset. It will often identify failure modes that you would have missed, giving you a checklist of things to test before shipping.</p>
+    </div>
+
+    <aside class="callout-block info blog-block">
+      <span class="callout-icon">💡</span>
+      <div class="callout-content">
+        <div class="callout-title">The Verification Stack</div>
+        <div class="callout-text">Use three layers of verification: (1) the four-part framework prevents hallucinations in generation, (2) the assumption audit catches what slipped through, and (3) diff review catches everything else. Module 3 of the workshop teaches all three layers with hands-on exercises.</div>
+      </div>
+    </aside>
+
+    <div class="text-block blog-block">
+      <p>The prompt framework described here is the core of what we teach in Module 3 of the Vibe Coding for Production workshop. In the workshop, you will practice writing prompts against real production codebases, see before-and-after comparisons of hallucination-prone vs. hallucination-resistant prompts, and build the muscle memory for including the right context every time. If you have ever been burned by AI-generated code that looked right but was not, this module will change how you work with AI permanently.</p>
+    </div>
+
+    <div class="cta-block blog-block">
+      <h3 class="cta-title">Want to Learn This Hands-On?</h3>
+      <p class="cta-text">Join the Vibe Coding for Production workshop and learn the complete M.A.P.P.E.R. framework with live exercises, real codebases, and take-home materials.</p>
+      <a href="../book.html" class="cta-button">Book Your Spot &rarr;</a>
+    </div>
+
+    <div class="divider-block blog-block"><span class="divider-icon">✦</span></div>
+
+    <div class="author-block blog-block">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%237986cb' cx='50' cy='50' r='50'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='white'%3ENB%3C/text%3E%3C/svg%3E" alt="Nathan Baker" class="author-avatar">
+      <div class="author-info">
+        <div class="author-name">Nathan Baker</div>
+        <div class="author-role">Founder, AutoNateAI</div>
+        <div class="author-bio">Nathan is a software engineer and AI workflow specialist who teaches developers the engineering discipline needed for production-quality AI-assisted development.</div>
+      </div>
+    </div>
+  </article>
+
+  <div id="footer-container"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      NavbarComponent.inject('navbar-container');
+      FooterComponent.inject('footer-container');
+    });
+    window.addEventListener('scroll', () => {
+      const bar = document.querySelector('.reading-progress');
+      if (bar) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = Math.min((window.scrollY / max) * 100, 100) + '%';
+      }
+    });
+  </script>
+</body>
+</html>
