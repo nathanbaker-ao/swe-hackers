@@ -951,75 +951,233 @@
     /* ================================================================
        BLOG PREVIEW — CARDS WITH IMAGES
        ================================================================ */
+    /* ===== Blog Section ===== */
+    .blog-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-section::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=1600&q=60') center/cover no-repeat;
+      opacity: 0.025;
+      pointer-events: none;
+    }
+
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       max-width: 1050px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .blog-card {
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(22, 22, 42, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: var(--radius-lg);
       overflow: hidden;
       text-decoration: none;
-      display: block;
-      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Per-card accent bottom stripe */
+    .blog-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease, height 0.3s ease;
+      z-index: 2;
+    }
+
+    .blog-card:nth-child(1)::after { background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); }
+    .blog-card:nth-child(2)::after { background: linear-gradient(90deg, rgba(255, 213, 79, 0.85), var(--accent-primary)); }
+    .blog-card:nth-child(3)::after { background: linear-gradient(90deg, rgba(102, 187, 106, 0.85), var(--accent-secondary)); }
+
+    .blog-card:hover::after {
+      opacity: 1;
+      height: 4px;
     }
 
     .blog-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(121, 134, 203, 0.3);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 56px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Per-card hover border & bg tint */
+    .blog-card:nth-child(1):hover {
+      border-color: rgba(121, 134, 203, 0.35);
+      background: linear-gradient(180deg, rgba(121, 134, 203, 0.08) 0%, rgba(22, 22, 42, 0.7) 50%);
+    }
+    .blog-card:nth-child(2):hover {
+      border-color: rgba(255, 213, 79, 0.3);
+      background: linear-gradient(180deg, rgba(255, 213, 79, 0.06) 0%, rgba(22, 22, 42, 0.7) 50%);
+    }
+    .blog-card:nth-child(3):hover {
+      border-color: rgba(102, 187, 106, 0.35);
+      background: linear-gradient(180deg, rgba(102, 187, 106, 0.07) 0%, rgba(22, 22, 42, 0.7) 50%);
     }
 
     .blog-card-image {
       width: 100%;
-      height: 150px;
+      height: 160px;
       overflow: hidden;
+      position: relative;
     }
 
     .blog-card-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.6) saturate(0.9);
+      filter: brightness(0.55) saturate(0.85);
       transition: all 0.4s ease;
     }
 
     .blog-card:hover .blog-card-image img {
       filter: brightness(0.75) saturate(1);
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
+    /* Per-card gradient overlay on image */
+    .blog-card-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+    .blog-card:nth-child(1) .blog-card-image::after { background: linear-gradient(135deg, rgba(121, 134, 203, 0.4), transparent 70%); }
+    .blog-card:nth-child(2) .blog-card-image::after { background: linear-gradient(135deg, rgba(255, 213, 79, 0.3), transparent 70%); }
+    .blog-card:nth-child(3) .blog-card-image::after { background: linear-gradient(135deg, rgba(102, 187, 106, 0.3), transparent 70%); }
+
     .blog-card-body {
-      padding: 1.25rem 1.5rem 1.5rem;
+      padding: 1.35rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      position: relative;
     }
 
     .blog-card-category {
-      font-size: 0.72rem;
-      color: var(--accent-primary);
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      width: fit-content;
+    }
+
+    /* Per-card category pill colors */
+    .blog-card:nth-child(1) .blog-card-category {
+      background: rgba(121, 134, 203, 0.12);
+      border: 1px solid rgba(121, 134, 203, 0.25);
+      color: var(--accent-primary);
+    }
+    .blog-card:nth-child(2) .blog-card-category {
+      background: rgba(255, 213, 79, 0.1);
+      border: 1px solid rgba(255, 213, 79, 0.25);
+      color: var(--accent-warning);
+    }
+    .blog-card:nth-child(3) .blog-card-category {
+      background: rgba(102, 187, 106, 0.1);
+      border: 1px solid rgba(102, 187, 106, 0.25);
+      color: var(--accent-success);
     }
 
     .blog-card h3 {
       font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--text-primary);
-      margin-bottom: 0.4rem;
-      line-height: 1.35;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+      transition: color 0.2s ease;
+    }
+
+    .blog-card:hover h3 {
+      color: #fff;
     }
 
     .blog-card p {
       font-size: 0.85rem;
       color: var(--text-secondary);
-      line-height: 1.55;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* Read more arrow */
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .blog-read-time {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .blog-read-arrow {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:nth-child(1) .blog-read-arrow { color: var(--accent-primary); }
+    .blog-card:nth-child(2) .blog-read-arrow { color: var(--accent-warning); }
+    .blog-card:nth-child(3) .blog-read-arrow { color: var(--accent-success); }
+
+    .blog-read-arrow svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-read-arrow svg {
+      transform: translateX(4px);
+    }
+
+    /* Article number watermark */
+    .blog-card-num {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.7);
+      z-index: 2;
     }
 
     /* ================================================================
@@ -1514,7 +1672,7 @@
   <!-- ============================================================
        BLOG PREVIEW — CARDS WITH IMAGES
        ============================================================ -->
-  <section class="section" id="blog" data-nav-section="blog">
+  <section class="section blog-section" id="blog" data-nav-section="blog">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">From the Blog</div>
@@ -1527,34 +1685,49 @@
       <div class="blog-grid">
         <a href="blog/skill-developers-losing.html" class="blog-card">
           <div class="blog-card-image">
+            <span class="blog-card-num">01</span>
             <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=500&q=80" alt="AI cognitive shift" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-category">The Cognitive Shift</div>
             <h3>The Skill Developers Are Losing in the AI Era</h3>
             <p>AI writes code faster than ever. But the skill it's quietly eroding is the one that matters most.</p>
+            <div class="blog-card-footer">
+              <span class="blog-read-time">6 min read</span>
+              <span class="blog-read-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
         </a>
 
         <a href="blog/prompt-framework-prevent-hallucinations.html" class="blog-card">
           <div class="blog-card-image">
+            <span class="blog-card-num">02</span>
             <img src="https://images.unsplash.com/photo-1515879218367-8466d910aede?w=500&q=80" alt="Tactical AI prompting" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-category">Tactical AI Control</div>
             <h3>The Prompt Framework I Use to Prevent AI Hallucinations</h3>
             <p>A structured approach to prompting that keeps AI grounded in your codebase reality.</p>
+            <div class="blog-card-footer">
+              <span class="blog-read-time">8 min read</span>
+              <span class="blog-read-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
         </a>
 
         <a href="blog/estimate-blast-radius.html" class="blog-card">
           <div class="blog-card-image">
+            <span class="blog-card-num">03</span>
             <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=500&q=80" alt="System architecture and blast radius" loading="lazy">
           </div>
           <div class="blog-card-body">
             <div class="blog-card-category">Production Discipline</div>
             <h3>How to Estimate Blast Radius Before Touching a Line of Code</h3>
             <p>The mental model every developer needs before making changes to production systems.</p>
+            <div class="blog-card-footer">
+              <span class="blog-read-time">7 min read</span>
+              <span class="blog-read-arrow">Read <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
           </div>
         </a>
       </div>
@@ -1853,17 +2026,18 @@
       const instructorSection = document.getElementById('instructor');
       if (instructorSection) instructorObserver.observe(instructorSection);
 
-      // Blog cards — cascade down
+      // Blog cards — scale in with bounce
       const blogObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             anime({
               targets: '.blog-card',
               opacity: [0, 1],
-              translateY: [35, 0],
-              delay: anime.stagger(120),
-              duration: 650,
-              easing: 'easeOutCubic'
+              scale: [0.85, 1],
+              translateY: [25, 0],
+              delay: anime.stagger(130),
+              duration: 700,
+              easing: 'easeOutBack'
             });
             blogObserver.unobserve(entry.target);
           }
