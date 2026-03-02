@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Like a Senior | AutoNateAI Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="../../shared/js/theme-loader.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0a0f; --bg2: #12121a; --bg3: #16162a;
+      --text: #e8e8f0; --text2: #a0a0b8; --muted: #6a6a80;
+      --purple: #ab47bc; --blue: #7986cb; --teal: #4db6ac;
+      --green: #66bb6a; --yellow: #ffd54f; --red: #ef5350; --orange: #ff8a65;
+    }
+
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; overflow: hidden; }
+
+    /* Auth loading */
+    #auth-loading { position: fixed; inset: 0; background: var(--bg); display: flex; align-items: center; justify-content: center; z-index: 9999; flex-direction: column; gap: 1rem; }
+    #auth-loading.hidden { display: none; }
+    .spin { width: 36px; height: 36px; border: 3px solid rgba(171,71,188,0.3); border-top-color: var(--purple); border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Shell */
+    #lecture-shell { display: none; height: 100vh; flex-direction: column; }
+    #lecture-shell.ready { display: flex; }
+
+    /* Top bar */
+    .lec-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1.5rem; background: rgba(10,10,15,0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.07); flex-shrink: 0;
+      backdrop-filter: blur(8px);
+    }
+    .lec-bar__back { color: var(--text2); text-decoration: none; font-size: 0.8rem; display: flex; align-items: center; gap: 0.4rem; transition: color .2s; }
+    .lec-bar__back:hover { color: var(--text); }
+    .lec-bar__title { font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .lec-bar__right { display: flex; align-items: center; gap: 1rem; }
+    .lec-bar__section { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .lec-bar__count { font-size: 0.8rem; color: var(--text2); font-family: 'Space Grotesk', sans-serif; }
+
+    /* Progress bar */
+    .lec-progress { height: 3px; background: rgba(255,255,255,0.07); flex-shrink: 0; }
+    .lec-progress__fill { height: 100%; background: linear-gradient(90deg, var(--purple), var(--blue)); transition: width .4s cubic-bezier(.4,0,.2,1); }
+
+    /* Slide stage */
+    .lec-stage { flex: 1; overflow: hidden; position: relative; }
+    #slide-wrap { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+
+    /* Nav */
+    .lec-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 1rem 1.5rem; flex-shrink: 0; border-top: 1px solid rgba(255,255,255,0.06); }
+    .lec-nav__btn {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.6rem 1.4rem; border-radius: 10px; font-size: 0.85rem; font-weight: 500;
+      cursor: pointer; border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05); color: var(--text2); transition: all .2s;
+    }
+    .lec-nav__btn:hover { color: var(--text); border-color: rgba(255,255,255,0.22); }
+    .lec-nav__btn.primary { background: var(--purple); border-color: var(--purple); color: #fff; }
+    .lec-nav__btn.primary:hover { opacity: .85; }
+    .lec-nav__btn:disabled { opacity: .3; cursor: default; }
+    .lec-nav__dots { display: flex; gap: 0.4rem; align-items: center; }
+    .lec-nav__dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.15); cursor: pointer; transition: all .2s; }
+    .lec-nav__dot.active { background: var(--purple); transform: scale(1.3); }
+    .lec-nav__dot.done { background: rgba(171,71,188,0.4); }
+
+    /* ─── SLIDE TYPES ────────────────────────────────── */
+
+    .slide { max-width: 820px; width: 100%; }
+
+    /* Title slide */
+    .slide--title { text-align: center; }
+    .slide--title .eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); margin-bottom: 1.5rem; }
+    .slide--title .big-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; color: var(--text); line-height: 1.1; margin-bottom: 1rem; }
+    .slide--title .big-title span { color: var(--purple); }
+    .slide--title .subtitle { font-size: 1.1rem; color: var(--text2); margin-bottom: 2.5rem; }
+    .slide--title .mapper-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .mapper-pill { padding: 0.5rem 1rem; border-radius: 8px; background: rgba(171,71,188,0.1); border: 1px solid rgba(171,71,188,0.25); }
+    .mapper-pill__char { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--purple); display: block; text-align: center; }
+    .mapper-pill__word { font-size: 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; display: block; text-align: center; }
+
+    /* Opportunity slide */
+    .slide--opportunity .headline { font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; }
+    .slide--opportunity .body-text { color: var(--text2); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem; max-width: 600px; }
+    .stats-row { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .stat-card { flex: 1; min-width: 140px; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.25rem; }
+    .stat-card__val { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--yellow); }
+    .stat-card__label { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+
+    /* Repo slide */
+    .slide--repo .headline { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .slide--repo .sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 1.75rem; }
+    .file-tree { background: var(--bg2); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; font-family: 'JetBrains Mono', monospace; }
+    .file-tree__root { color: var(--teal); font-size: 0.9rem; margin-bottom: 0.75rem; }
+    .file-row { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .file-row:last-child { border-bottom: none; }
+    .file-row__prefix { color: var(--muted); font-size: 0.8rem; }
+    .file-row__name { color: var(--teal); font-size: 0.85rem; font-weight: 500; }
+    .file-row__arrow { color: var(--muted); font-size: 0.75rem; }
+    .file-row__desc { color: var(--text2); font-size: 0.82rem; }
+    .repo-note { margin-top: 1.25rem; font-size: 0.85rem; color: var(--muted); padding: 0.75rem 1rem; background: rgba(255,213,79,0.06); border: 1px solid rgba(255,213,79,0.15); border-radius: 8px; }
+    .repo-note strong { color: var(--yellow); }
+
+    /* Gap slide */
+    .slide--gap .headline { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; }
+    .gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .gap-col { background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 1.5rem; }
+    .gap-col.senior { border-color: rgba(102,187,106,0.25); background: rgba(102,187,106,0.04); }
+    .gap-col__label { font-size: 0.72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 1rem; color: var(--muted); }
+    .gap-col.senior .gap-col__label { color: var(--green); }
+    .gap-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--text2); margin-bottom: 0.75rem; }
+    .gap-item::before { content: '→'; color: var(--muted); flex-shrink: 0; }
+    .gap-col.senior .gap-item::before { content: '✓'; color: var(--green); }
+    .gap-col.senior .gap-item { color: var(--text); }
+
+    /* Three questions */
+    .slide--questions .headline { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; }
+    .q-list { display: flex; flex-direction: column; gap: 1rem; }
+    .q-item { display: grid; grid-template-columns: 40px 1fr; gap: 1rem; align-items: start; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.25rem; }
+    .q-item__num { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--blue); }
+    .q-item__q { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+    .q-item__hint { font-size: 0.8rem; color: var(--muted); }
+
+    /* Prompt comparison */
+    .slide--comparison .headline { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .slide--comparison .sub { color: var(--text2); font-size: 0.88rem; margin-bottom: 1.5rem; }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .compare-col { border-radius: 12px; padding: 1.25rem; }
+    .compare-col.bad { background: rgba(239,83,80,0.06); border: 1px solid rgba(239,83,80,0.2); }
+    .compare-col.good { background: rgba(102,187,106,0.06); border: 1px solid rgba(102,187,106,0.2); }
+    .compare-col__label { font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .compare-col.bad .compare-col__label { color: var(--red); }
+    .compare-col.good .compare-col__label { color: var(--green); }
+    .compare-col__text { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text2); line-height: 1.6; }
+
+    /* MAPPER breakdown */
+    .slide--mapper .headline { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 2rem; text-align: center; }
+    .mapper-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem; }
+    .mapper-card { background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.1rem; }
+    .mapper-card__char { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 800; color: var(--purple); margin-bottom: 0.3rem; }
+    .mapper-card__word { font-size: 0.75rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--text2); margin-bottom: 0.5rem; }
+    .mapper-card__desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+    /* Fork slide */
+    .slide--fork .headline { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; }
+    .slide--fork .sub { color: var(--text2); font-size: 0.9rem; margin-bottom: 1.75rem; max-width: 560px; }
+    .fork-rules { display: flex; flex-direction: column; gap: 0.75rem; }
+    .fork-rule { display: flex; align-items: flex-start; gap: 0.875rem; background: var(--bg3); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 1rem 1.1rem; }
+    .fork-rule__num { width: 24px; height: 24px; border-radius: 6px; background: rgba(255,213,79,0.12); border: 1px solid rgba(255,213,79,0.25); color: var(--yellow); font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .fork-rule__text { font-size: 0.875rem; color: var(--text2); line-height: 1.5; }
+
+    /* Closing slide */
+    .slide--closing { text-align: center; }
+    .slide--closing .big { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--text); line-height: 1.15; margin-bottom: 0.5rem; }
+    .slide--closing .sub { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; color: var(--purple); margin-bottom: 2rem; }
+    .closing-recap { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 2rem; }
+    .closing-recap__item { background: rgba(171,71,188,0.1); border: 1px solid rgba(171,71,188,0.25); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.82rem; color: var(--text2); }
+    .closing-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--purple); color: #fff; padding: 0.875rem 2rem; border-radius: 12px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity .2s; }
+    .closing-cta:hover { opacity: .85; }
+
+    /* ─── ACTIVITY SLIDES ─────────────────────────────── */
+    .slide--activity { max-width: 860px; }
+    .activity-header { margin-bottom: 1.5rem; }
+    .activity-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(121,134,203,0.12); border: 1px solid rgba(121,134,203,0.25); color: var(--blue); font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 0.28rem 0.7rem; border-radius: 5px; margin-bottom: 0.75rem; }
+    .activity-headline { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; }
+    .activity-instruction { font-size: 0.875rem; color: var(--text2); line-height: 1.6; }
+
+    /* Bucket sort */
+    .bucket-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+    .bucket-source { background: var(--bg2); border: 1px dashed rgba(255,255,255,0.12); border-radius: 12px; padding: 1rem; min-height: 120px; }
+    .bucket-source__label { font-size: 0.68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+    .bucket-zone { border-radius: 12px; padding: 1rem; min-height: 140px; transition: border-color .2s; }
+    .bucket-zone.before { background: rgba(77,182,172,0.05); border: 2px dashed rgba(77,182,172,0.25); }
+    .bucket-zone.after { background: rgba(239,83,80,0.05); border: 2px dashed rgba(239,83,80,0.2); }
+    .bucket-zone.before.drag-over { border-color: var(--teal); background: rgba(77,182,172,0.1); }
+    .bucket-zone.after.drag-over { border-color: var(--red); background: rgba(239,83,80,0.08); }
+    .bucket-zone__label { font-size: 0.72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 0.6rem; }
+    .bucket-zone.before .bucket-zone__label { color: var(--teal); }
+    .bucket-zone.after .bucket-zone__label { color: var(--red); }
+    .sort-item { background: var(--bg3); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.6rem 0.875rem; font-size: 0.82rem; color: var(--text2); cursor: grab; user-select: none; margin-bottom: 0.5rem; transition: all .15s; }
+    .sort-item:last-child { margin-bottom: 0; }
+    .sort-item:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .sort-item.sortable-ghost { opacity: .3; background: rgba(121,134,203,0.2); }
+    .sort-item.sortable-chosen { cursor: grabbing; transform: rotate(1deg) scale(1.02); border-color: var(--blue); }
+    .sort-item.correct { border-color: var(--teal); background: rgba(77,182,172,0.08); color: var(--teal); }
+    .sort-item.incorrect { border-color: var(--red); background: rgba(239,83,80,0.06); color: var(--red); }
+    .activity-check-btn { margin-top: 1rem; padding: 0.55rem 1.25rem; border-radius: 8px; background: rgba(121,134,203,0.15); border: 1px solid rgba(121,134,203,0.3); color: var(--blue); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all .2s; }
+    .activity-check-btn:hover { background: rgba(121,134,203,0.25); }
+    .activity-feedback { margin-top: 0.875rem; font-size: 0.82rem; padding: 0.6rem 1rem; border-radius: 8px; display: none; }
+    .activity-feedback.show { display: block; }
+    .activity-feedback.pass { background: rgba(102,187,106,0.1); border: 1px solid rgba(102,187,106,0.25); color: var(--green); }
+    .activity-feedback.fail { background: rgba(255,213,79,0.08); border: 1px solid rgba(255,213,79,0.2); color: var(--yellow); }
+
+    /* Quiz */
+    .quiz-options { display: flex; flex-direction: column; gap: 0.625rem; margin-top: 1.25rem; }
+    .quiz-opt { background: var(--bg3); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.875rem 1.1rem; cursor: pointer; font-size: 0.875rem; color: var(--text2); transition: all .2s; display: flex; align-items: center; gap: 0.75rem; }
+    .quiz-opt:hover:not(.locked) { border-color: rgba(255,255,255,0.18); color: var(--text); }
+    .quiz-opt__radio { width: 18px; height: 18px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); flex-shrink: 0; transition: all .2s; }
+    .quiz-opt.selected .quiz-opt__radio { border-color: var(--blue); background: var(--blue); }
+    .quiz-opt.correct { border-color: var(--green); background: rgba(102,187,106,0.07); color: var(--green); }
+    .quiz-opt.correct .quiz-opt__radio { border-color: var(--green); background: var(--green); }
+    .quiz-opt.wrong { border-color: var(--red); background: rgba(239,83,80,0.06); color: var(--red); opacity: .7; }
+    .quiz-explanation { margin-top: 1rem; padding: 0.875rem 1rem; background: rgba(121,134,203,0.08); border: 1px solid rgba(121,134,203,0.2); border-radius: 10px; font-size: 0.82rem; color: var(--text2); line-height: 1.6; display: none; }
+    .quiz-explanation.show { display: block; }
+
+    /* Order sort */
+    .order-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1.25rem; }
+    .order-item { display: flex; align-items: center; gap: 0.875rem; background: var(--bg3); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem 1rem; cursor: grab; transition: all .15s; }
+    .order-item:hover { border-color: rgba(255,255,255,0.15); }
+    .order-item.sortable-ghost { opacity: .3; }
+    .order-item.sortable-chosen { cursor: grabbing; border-color: var(--purple); }
+    .order-item__handle { color: var(--muted); font-size: 0.8rem; cursor: grab; }
+    .order-item__text { font-size: 0.85rem; color: var(--text2); flex: 1; }
+    .order-item.correct { border-color: var(--green); background: rgba(102,187,106,0.06); }
+    .order-item.correct .order-item__text { color: var(--green); }
+    .order-item.incorrect { border-color: var(--red); background: rgba(239,83,80,0.05); }
+  </style>
+</head>
+<body>
+
+<div id="auth-loading">
+  <div style="font-size:2rem;margin-bottom:.5rem;">📡</div>
+  <div class="spin"></div>
+</div>
+
+<div id="lecture-shell">
+
+  <div class="lec-bar">
+    <a href="../workshop.html" class="lec-bar__back">← Workshop</a>
+    <span class="lec-bar__title">Build Like a Senior</span>
+    <div class="lec-bar__right">
+      <span class="lec-bar__section" id="bar-section"></span>
+      <span class="lec-bar__count" id="bar-count">1 / 13</span>
+    </div>
+  </div>
+
+  <div class="lec-progress"><div class="lec-progress__fill" id="progress-fill"></div></div>
+
+  <div class="lec-stage">
+    <div id="slide-wrap"></div>
+  </div>
+
+  <nav class="lec-nav">
+    <button class="lec-nav__btn" id="btn-prev" onclick="go(-1)">← Prev</button>
+    <div class="lec-nav__dots" id="nav-dots"></div>
+    <button class="lec-nav__btn primary" id="btn-next" onclick="go(1)">Next →</button>
+  </nav>
+
+</div>
+
+<script src="../../shared/js/firebase-config.js"></script>
+<script src="../../shared/js/auth.js"></script>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// SLIDE DATA
+// ─────────────────────────────────────────────────────────────────────────────
+const SLIDES = [
+  {
+    id: 's01', type: 'title', section: null,
+    data: {
+      eyebrow: 'AutoNateAI Workshop · The M.A.P.P.E.R. Framework',
+      title: ['Build Like', 'a <span>Senior</span>'],
+      subtitle: '4 skills · 30 minutes · the framework changes everything',
+      mapper: [
+        {char:'M',word:'Map'},{char:'A',word:'Analyze'},{char:'P',word:'Prompt'},
+        {char:'P',word:'Preview'},{char:'E',word:'Execute'},{char:'R',word:'Review'}
+      ]
+    }
+  },
+  {
+    id: 's02', type: 'opportunity', section: 'The Setup',
+    data: {
+      headline: "There's money on the table.",
+      body: "NBA Playoffs. March Madness. The next 3–4 months of basketball are the most active sports betting window of the year. The problem isn't information — it's signal extraction. Who wins? Why? With what confidence? That's a software engineering problem. And you're about to solve it.",
+      stats: [
+        {val:'$3B+', label:'NBA betting volume per playoff season'},
+        {val:'~52%', label:'Baseline prediction accuracy (coin flip)'},
+        {val:'3 files', label:'Where we start today'},
+      ]
+    }
+  },
+  {
+    id: 's03', type: 'repo', section: 'The Setup',
+    data: {
+      headline: 'This is what we\'re working with.',
+      sub: '3 Python files. No API. No tests. No deployment. We\'re going to fix all of that — in 3 hours.',
+      files: [
+        {name:'main.py', desc:'Entry point — runs the bot'},
+        {name:'predictor.py', desc:'LLM prediction logic'},
+        {name:'data_fetcher.py', desc:'Pulls game + player data'},
+      ],
+      note: '<strong>Your first move:</strong> Open main.py. Not predictor.py. Not requirements.txt. The entry point first — always.'
+    }
+  },
+  {
+    id: 's04', type: 'gap', section: 'Problem Framing',
+    data: {
+      headline: 'The gap between junior and senior.',
+      left: { label: 'Junior Engineer', items: ['Open the code and start editing','Ask the AI to fix the error','Copy the output and commit','Hope nothing breaks'] },
+      right: { label: 'Senior Engineer', items: ['Frame the problem first','Map the system before prompting','Load context, then ask precisely','Verify every output before accepting'] }
+    }
+  },
+  {
+    id: 's05', type: 'questions', section: 'Problem Framing',
+    data: {
+      headline: 'Three questions. Before you touch anything.',
+      questions: [
+        {num:'01', q:'What does this system do?', hint:'Say it in one sentence. Plain English. If you can\'t, you don\'t know it yet.'},
+        {num:'02', q:'What does it touch?', hint:'Files, APIs, databases, external services — where are the boundaries?'},
+        {num:'03', q:'What could break?', hint:'Your blast radius. Map it before you cause it.'},
+      ]
+    }
+  },
+  {
+    id: 'a01', type: 'activity-bucket', section: 'Problem Framing',
+    data: {
+      headline: 'Activity: Before or After?',
+      instruction: 'Drag each step into the correct bucket — do you do this BEFORE your first prompt, or AFTER?',
+      items: [
+        {id:'i1', text:'Map the file structure', correct:'before'},
+        {id:'i2', text:'Run the existing code once', correct:'before'},
+        {id:'i3', text:'Write the first prompt', correct:'after'},
+        {id:'i4', text:'Trace the entry point', correct:'before'},
+        {id:'i5', text:'Accept the AI output', correct:'after'},
+        {id:'i6', text:'Identify public interfaces', correct:'before'},
+      ]
+    }
+  },
+  {
+    id: 's06', type: 'comparison', section: 'Architecture Mapping',
+    data: {
+      headline: 'Context is the whole game.',
+      sub: 'Same task. Two prompts. One gets production code. One gets garbage. The difference is context.',
+      bad: 'Add error handling to the predictor',
+      good: `Project: Python sports betting bot. Files: main.py (entry), predictor.py (uses openai SDK v1, calls gpt-4), data_fetcher.py (Ball Don't Lie API).
+
+Task: Add timeout error handling to predictor.predict().
+Constraint: Do NOT change the function signature.
+On timeout: raise PredictionTimeoutError with message.
+Return format: unchanged.`
+    }
+  },
+  {
+    id: 'a02', type: 'activity-quiz', section: 'Architecture Mapping',
+    data: {
+      headline: 'Quick check: What\'s the entry point?',
+      question: 'You clone the repo. You see main.py, predictor.py, data_fetcher.py, requirements.txt. Which file do you open first — and why?',
+      options: [
+        {text:'requirements.txt — see what libraries it uses', correct: false},
+        {text:'main.py — it\'s the entry point, execution starts here', correct: true},
+        {text:'predictor.py — that\'s where the core logic lives', correct: false},
+        {text:'data_fetcher.py — data is the foundation of everything', correct: false},
+      ],
+      explanation: 'main.py is always first. It tells you where execution starts — and from there you trace the call graph outward. Everything else makes sense once you know the entry point.'
+    }
+  },
+  {
+    id: 's07', type: 'mapper', section: 'Prompting with Context',
+    data: {
+      headline: 'M.A.P.P.E.R.',
+      steps: [
+        {char:'M', word:'Map', desc:'Codebase context: files, stack, entry points, dependencies'},
+        {char:'A', word:'Analyze', desc:'Current behavior + desired outcome + constraints'},
+        {char:'P', word:'Prompt', desc:'The specific task instruction — scoped, unambiguous'},
+        {char:'P', word:'Preview', desc:'Read the output before accepting it — every time'},
+        {char:'E', word:'Execute', desc:'Apply the change to the codebase'},
+        {char:'R', word:'Review', desc:'Verify it works. Run the Preflight. Document what you learned.'},
+      ]
+    }
+  },
+  {
+    id: 'a03', type: 'activity-order', section: 'Prompting with Context',
+    data: {
+      headline: 'Activity: Build the Prompt',
+      instruction: 'Drag these prompt sections into the correct M.A.P.P.E.R. order. The framework you just learned — apply it.',
+      items: [
+        {id:'p1', text:'Output format: typed Prediction(winner, confidence, reasoning)', order:4},
+        {id:'p2', text:'Codebase: Python, 3 files, FastAPI, openai SDK', order:1},
+        {id:'p3', text:'Task: Refactor predict() to return a typed Prediction object', order:3},
+        {id:'p4', text:'Current problem: predict() returns raw string — no type safety', order:2},
+        {id:'p5', text:'Constraint: do not change the function signature', order:5},
+      ]
+    }
+  },
+  {
+    id: 's08', type: 'fork', section: 'Fork',
+    data: {
+      headline: 'The AI did 5 things. You asked for 1.',
+      sub: 'This happens on every other prompt. You ask for error handling. It refactors three functions, renames variables, adds a new import, and changes a return type. Each change is a blast radius you didn\'t plan for.',
+      rules: [
+        'Read the diff. Every. Single. Line.',
+        'Does it match exactly what you asked — nothing more, nothing less?',
+        'If it changed something you didn\'t ask for — ask why before accepting.',
+        'When in doubt: run the Blast Radius Checklist before committing.',
+      ]
+    }
+  },
+  {
+    id: 'a04', type: 'activity-quiz', section: 'Fork',
+    data: {
+      headline: 'Fork check: what do you do?',
+      question: 'You asked Claude to add a docstring to predict(). The output adds a docstring, renames a variable from \'result\' to \'prediction\', and changes the return type. What do you do?',
+      options: [
+        {text:'Accept it — the docstring is there and the other changes look fine', correct: false},
+        {text:'Accept just the docstring part and manually undo the other changes', correct: true},
+        {text:'Reject it completely and re-prompt with "only add the docstring, change nothing else"', correct: true},
+        {text:'Commit it — if tests pass, it\'s good', correct: false},
+      ],
+      explanation: 'Both B and C are correct. The AI exceeded the scope. Either surgically accept only what you asked for, or re-prompt with explicit scope constraints. Tests passing ≠ scope correct.',
+      multiCorrect: true
+    }
+  },
+  {
+    id: 's09', type: 'closing', section: null,
+    data: {
+      big: 'You know the framework.',
+      sub: 'Now build.',
+      recap: ['Map before you prompt','Context = better output','Verify every diff','Run the checklists'],
+      cta: 'Go to Module 02 →',
+      ctaHref: '../workshop.html'
+    }
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────────────────────────────────
+let current = 0;
+let sortInstances = [];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER ENGINE
+// ─────────────────────────────────────────────────────────────────────────────
+function renderSlide(idx) {
+  const s = SLIDES[idx];
+  const wrap = document.getElementById('slide-wrap');
+
+  // Kill old sortables
+  sortInstances.forEach(i => i.destroy());
+  sortInstances = [];
+
+  wrap.innerHTML = slideHTML(s);
+  updateBar(idx);
+  initActivity(s);
+
+  anime({
+    targets: '#slide-wrap > .slide > *',
+    opacity: [0, 1], translateY: [18, 0],
+    delay: anime.stagger(60), easing: 'easeOutCubic', duration: 380
+  });
+}
+
+function slideHTML(s) {
+  switch (s.type) {
+    case 'title':       return titleHTML(s.data);
+    case 'opportunity': return opportunityHTML(s.data);
+    case 'repo':        return repoHTML(s.data);
+    case 'gap':         return gapHTML(s.data);
+    case 'questions':   return questionsHTML(s.data);
+    case 'comparison':  return comparisonHTML(s.data);
+    case 'mapper':      return mapperHTML(s.data);
+    case 'fork':        return forkHTML(s.data);
+    case 'closing':     return closingHTML(s.data);
+    case 'activity-bucket': return bucketHTML(s.data);
+    case 'activity-quiz':   return quizHTML(s.data);
+    case 'activity-order':  return orderHTML(s.data);
+    default: return `<div class="slide"><p>${s.id}</p></div>`;
+  }
+}
+
+function titleHTML(d) {
+  const titleLines = d.title.map(l => `<div>${l}</div>`).join('');
+  const pills = d.mapper.map(m => `
+    <div class="mapper-pill">
+      <span class="mapper-pill__char">${m.char}</span>
+      <span class="mapper-pill__word">${m.word}</span>
+    </div>`).join('');
+  return `<div class="slide slide--title">
+    <div class="eyebrow">${d.eyebrow}</div>
+    <div class="big-title">${titleLines}</div>
+    <div class="subtitle">${d.subtitle}</div>
+    <div class="mapper-row">${pills}</div>
+  </div>`;
+}
+
+function opportunityHTML(d) {
+  const stats = d.stats.map(s => `
+    <div class="stat-card">
+      <div class="stat-card__val">${s.val}</div>
+      <div class="stat-card__label">${s.label}</div>
+    </div>`).join('');
+  return `<div class="slide slide--opportunity">
+    <div class="headline">${d.headline}</div>
+    <div class="body-text">${d.body}</div>
+    <div class="stats-row">${stats}</div>
+  </div>`;
+}
+
+function repoHTML(d) {
+  const rows = d.files.map(f => `
+    <div class="file-row">
+      <span class="file-row__prefix">├─</span>
+      <span class="file-row__name">${f.name}</span>
+      <span class="file-row__arrow">→</span>
+      <span class="file-row__desc">${f.desc}</span>
+    </div>`).join('');
+  return `<div class="slide slide--repo">
+    <div class="headline">${d.headline}</div>
+    <div class="sub">${d.sub}</div>
+    <div class="file-tree">
+      <div class="file-tree__root">LLM_Sports_Betting/</div>
+      ${rows}
+    </div>
+    <div class="repo-note">${d.note}</div>
+  </div>`;
+}
+
+function gapHTML(d) {
+  const leftItems = d.left.items.map(i => `<div class="gap-item">${i}</div>`).join('');
+  const rightItems = d.right.items.map(i => `<div class="gap-item">${i}</div>`).join('');
+  return `<div class="slide slide--gap">
+    <div class="headline">${d.headline}</div>
+    <div class="gap-grid">
+      <div class="gap-col">
+        <div class="gap-col__label">${d.left.label}</div>
+        ${leftItems}
+      </div>
+      <div class="gap-col senior">
+        <div class="gap-col__label">${d.right.label}</div>
+        ${rightItems}
+      </div>
+    </div>
+  </div>`;
+}
+
+function questionsHTML(d) {
+  const qs = d.questions.map(q => `
+    <div class="q-item">
+      <div class="q-item__num">${q.num}</div>
+      <div>
+        <div class="q-item__q">${q.q}</div>
+        <div class="q-item__hint">${q.hint}</div>
+      </div>
+    </div>`).join('');
+  return `<div class="slide slide--questions">
+    <div class="headline">${d.headline}</div>
+    <div class="q-list">${qs}</div>
+  </div>`;
+}
+
+function comparisonHTML(d) {
+  return `<div class="slide slide--comparison">
+    <div class="headline">${d.headline}</div>
+    <div class="sub">${d.sub}</div>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <div class="compare-col__label">✗ Generic prompt</div>
+        <div class="compare-col__text">${d.bad}</div>
+      </div>
+      <div class="compare-col good">
+        <div class="compare-col__label">✓ M.A.P.P.E.R. prompt</div>
+        <div class="compare-col__text">${d.good.replace(/\n/g,'<br>')}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function mapperHTML(d) {
+  const cards = d.steps.map(s => `
+    <div class="mapper-card">
+      <div class="mapper-card__char">${s.char}</div>
+      <div class="mapper-card__word">${s.word}</div>
+      <div class="mapper-card__desc">${s.desc}</div>
+    </div>`).join('');
+  return `<div class="slide slide--mapper">
+    <div class="headline">${d.headline}</div>
+    <div class="mapper-grid">${cards}</div>
+  </div>`;
+}
+
+function forkHTML(d) {
+  const rules = d.rules.map((r, i) => `
+    <div class="fork-rule">
+      <div class="fork-rule__num">${i+1}</div>
+      <div class="fork-rule__text">${r}</div>
+    </div>`).join('');
+  return `<div class="slide slide--fork">
+    <div class="headline">${d.headline}</div>
+    <div class="sub">${d.sub}</div>
+    <div class="fork-rules">${rules}</div>
+  </div>`;
+}
+
+function closingHTML(d) {
+  const recap = d.recap.map(r => `<div class="closing-recap__item">✓ ${r}</div>`).join('');
+  return `<div class="slide slide--closing">
+    <div class="big">${d.big}</div>
+    <div class="sub">${d.sub}</div>
+    <div class="closing-recap">${recap}</div>
+    <a href="${d.ctaHref}" class="closing-cta">${d.cta}</a>
+  </div>`;
+}
+
+function bucketHTML(d) {
+  const items = d.items.map(i => `<div class="sort-item" data-id="${i.id}" data-correct="${i.correct}">${i.text}</div>`).join('');
+  return `<div class="slide slide--activity">
+    <div class="activity-header">
+      <div class="activity-badge">✦ Activity</div>
+      <div class="activity-headline">${d.headline}</div>
+      <div class="activity-instruction">${d.instruction}</div>
+    </div>
+    <div class="bucket-layout">
+      <div class="bucket-source">
+        <div class="bucket-source__label">Unsorted</div>
+        <div id="sort-source">${items}</div>
+      </div>
+      <div class="bucket-zone before">
+        <div class="bucket-zone__label">✓ BEFORE first prompt</div>
+        <div id="bucket-before"></div>
+      </div>
+      <div class="bucket-zone after">
+        <div class="bucket-zone__label">→ AFTER first prompt</div>
+        <div id="bucket-after"></div>
+      </div>
+    </div>
+    <button class="activity-check-btn" onclick="checkBucket()">Check Answers</button>
+    <div class="activity-feedback" id="bucket-feedback"></div>
+  </div>`;
+}
+
+function quizHTML(d) {
+  const opts = d.options.map((o, i) => `
+    <div class="quiz-opt" data-idx="${i}" data-correct="${o.correct}" onclick="selectQuiz(this, ${d.multiCorrect||false})">
+      <div class="quiz-opt__radio"></div>
+      <span>${o.text}</span>
+    </div>`).join('');
+  return `<div class="slide slide--activity">
+    <div class="activity-header">
+      <div class="activity-badge">✦ Quiz</div>
+      <div class="activity-headline">${d.headline}</div>
+      <div class="activity-instruction">${d.question}</div>
+    </div>
+    <div class="quiz-options">${opts}</div>
+    <div class="quiz-explanation" id="quiz-explanation">${d.explanation}</div>
+  </div>`;
+}
+
+function orderHTML(d) {
+  const shuffled = [...d.items].sort(() => Math.random() - 0.5);
+  const items = shuffled.map(i => `
+    <div class="order-item" data-id="${i.id}" data-order="${i.order}">
+      <span class="order-item__handle">⠿</span>
+      <span class="order-item__text">${i.text}</span>
+    </div>`).join('');
+  return `<div class="slide slide--activity">
+    <div class="activity-header">
+      <div class="activity-badge">✦ Activity</div>
+      <div class="activity-headline">${d.headline}</div>
+      <div class="activity-instruction">${d.instruction}</div>
+    </div>
+    <div class="order-list" id="order-list">${items}</div>
+    <button class="activity-check-btn" onclick="checkOrder()">Check Order</button>
+    <div class="activity-feedback" id="order-feedback"></div>
+  </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ACTIVITY LOGIC
+// ─────────────────────────────────────────────────────────────────────────────
+function initActivity(s) {
+  if (s.type === 'activity-bucket') {
+    ['sort-source', 'bucket-before', 'bucket-after'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      sortInstances.push(new Sortable(el, {
+        group: 'bucket', animation: 180,
+        ghostClass: 'sortable-ghost', chosenClass: 'sortable-chosen',
+        onAdd(evt) {
+          const zone = evt.to;
+          if (zone.classList.contains('before')) zone.classList.add('drag-over');
+          if (zone.classList.contains('after')) zone.classList.add('drag-over');
+        }
+      }));
+    });
+  }
+  if (s.type === 'activity-order') {
+    const el = document.getElementById('order-list');
+    if (!el) return;
+    sortInstances.push(new Sortable(el, {
+      animation: 180, handle: '.order-item__handle',
+      ghostClass: 'sortable-ghost', chosenClass: 'sortable-chosen',
+    }));
+  }
+}
+
+function checkBucket() {
+  const beforeItems = document.querySelectorAll('#bucket-before .sort-item');
+  const afterItems = document.querySelectorAll('#bucket-after .sort-item');
+  let correct = 0, total = 0;
+  beforeItems.forEach(el => {
+    total++;
+    if (el.dataset.correct === 'before') { el.classList.add('correct'); correct++; }
+    else el.classList.add('incorrect');
+  });
+  afterItems.forEach(el => {
+    total++;
+    if (el.dataset.correct === 'after') { el.classList.add('correct'); correct++; }
+    else el.classList.add('incorrect');
+  });
+  const unsorted = document.querySelectorAll('#sort-source .sort-item').length;
+  const fb = document.getElementById('bucket-feedback');
+  if (unsorted > 0) {
+    fb.textContent = `Sort all items first — ${unsorted} still unsorted.`;
+    fb.className = 'activity-feedback show fail';
+  } else if (correct === total) {
+    fb.textContent = `✓ Perfect. You already think like a senior — map before you prompt, every time.`;
+    fb.className = 'activity-feedback show pass';
+  } else {
+    fb.textContent = `${correct}/${total} correct. Items highlighted. The ones in red go in the other bucket.`;
+    fb.className = 'activity-feedback show fail';
+  }
+}
+
+function selectQuiz(el, multiCorrect) {
+  if (el.classList.contains('locked')) return;
+  if (!multiCorrect) {
+    document.querySelectorAll('.quiz-opt').forEach(o => o.classList.remove('selected'));
+  }
+  el.classList.toggle('selected');
+  // Show result immediately
+  const isCorrect = el.dataset.correct === 'true';
+  el.classList.add(isCorrect ? 'correct' : 'wrong');
+  document.getElementById('quiz-explanation').classList.add('show');
+  document.querySelectorAll('.quiz-opt').forEach(o => o.classList.add('locked'));
+}
+
+function checkOrder() {
+  const items = document.querySelectorAll('#order-list .order-item');
+  let correct = 0;
+  items.forEach((el, i) => {
+    const expectedOrder = parseInt(el.dataset.order);
+    if (expectedOrder === i + 1) { el.classList.add('correct'); correct++; }
+    else el.classList.add('incorrect');
+  });
+  const total = items.length;
+  const fb = document.getElementById('order-feedback');
+  if (correct === total) {
+    fb.textContent = `✓ Exactly right. Map → Analyze → Prompt → Preview → constraints. That\'s your M.A.P.P.E.R. prompt structure.`;
+    fb.className = 'activity-feedback show pass';
+  } else {
+    fb.textContent = `${correct}/${total} in the right position. Green = correct position. Red = needs to move. Think about what context the AI needs first.`;
+    fb.className = 'activity-feedback show fail';
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NAVIGATION
+// ─────────────────────────────────────────────────────────────────────────────
+function go(dir) {
+  const next = current + dir;
+  if (next < 0 || next >= SLIDES.length) return;
+  const wrap = document.getElementById('slide-wrap');
+  anime({
+    targets: '#slide-wrap > .slide',
+    opacity: [1, 0], translateX: [0, dir * -40],
+    easing: 'easeInCubic', duration: 200,
+    complete() {
+      current = next;
+      renderSlide(current);
+      anime({
+        targets: '#slide-wrap > .slide',
+        opacity: [0, 1], translateX: [dir * 40, 0],
+        easing: 'easeOutCubic', duration: 280
+      });
+    }
+  });
+}
+
+function goTo(idx) {
+  if (idx === current) return;
+  const dir = idx > current ? 1 : -1;
+  current = idx;
+  renderSlide(current);
+}
+
+function updateBar(idx) {
+  const s = SLIDES[idx];
+  const pct = ((idx + 1) / SLIDES.length) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('bar-count').textContent = `${idx + 1} / ${SLIDES.length}`;
+  document.getElementById('bar-section').textContent = s.section || '';
+  document.getElementById('btn-prev').disabled = idx === 0;
+  document.getElementById('btn-next').textContent = idx === SLIDES.length - 1 ? 'Finish' : 'Next →';
+
+  // Dots
+  const dotsEl = document.getElementById('nav-dots');
+  dotsEl.innerHTML = SLIDES.map((_, i) => {
+    const cls = i === idx ? 'active' : i < idx ? 'done' : '';
+    return `<div class="lec-nav__dot ${cls}" onclick="goTo(${i})" title="Slide ${i+1}"></div>`;
+  }).join('');
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') go(1);
+  if (e.key === 'ArrowLeft') go(-1);
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// BOOT
+// ─────────────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+  const loading = document.getElementById('auth-loading');
+  const shell = document.getElementById('lecture-shell');
+
+  window.FirebaseApp.init();
+  window.AuthService.init();
+  const user = await window.AuthService.waitForAuthState();
+  if (!user) { window.location.href = '../../auth/login.html'; return; }
+
+  loading.classList.add('hidden');
+  shell.classList.add('ready');
+  renderSlide(0);
+});
+</script>
+</body>
+</html>

@@ -35,147 +35,102 @@
   <style>
     /* ── Workshop Page Styles ── */
 
-    /* --- Locked State --- */
-    .ws-locked {
-      display: flex; flex-direction: column; align-items: center;
-      justify-content: center; text-align: center;
-      min-height: 60vh; padding: 3rem 1rem;
-    }
-    .ws-locked__icon {
-      font-size: 4rem; margin-bottom: 1.5rem;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .ws-locked__title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.75rem; font-weight: 700; color: #e8e8f0; margin-bottom: 0.75rem;
-    }
-    .ws-locked__subtitle {
-      color: #a0a0b8; font-size: 1rem; max-width: 440px; line-height: 1.6; margin-bottom: 2rem;
-    }
-    .ws-countdown {
-      display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;
-    }
-    .ws-countdown__unit {
-      display: flex; flex-direction: column; align-items: center;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px; padding: 1rem 1.5rem; min-width: 90px;
-    }
-    .ws-countdown__num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.5rem; font-weight: 700; color: #7986cb;
-      line-height: 1; margin-bottom: 0.25rem;
-    }
-    .ws-countdown__label {
-      font-size: 0.65rem; color: #6a6a80; text-transform: uppercase; letter-spacing: 0.08em;
-    }
-    .ws-locked__date {
-      font-size: 0.85rem; color: #6a6a80;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 8px; padding: 0.5rem 1.25rem;
-    }
-    .ws-locked__date strong { color: #a0a0b8; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 
-    /* --- Unlocked State --- */
-    .ws-header {
-      margin-bottom: 2rem;
-    }
-    .ws-header__badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(102,187,106,0.12); border: 1px solid rgba(102,187,106,0.25);
-      color: #66bb6a; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 20px;
-      margin-bottom: 1rem;
-    }
-    .ws-header__title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.9rem; font-weight: 700; color: #e8e8f0; margin-bottom: 0.5rem;
-    }
-    .ws-header__subtitle { color: #a0a0b8; font-size: 0.95rem; max-width: 520px; line-height: 1.6; }
-    .ws-header__meta { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
-    .ws-header__meta-item { font-size: 0.8rem; color: #6a6a80; display: flex; align-items: center; gap: 0.35rem; }
-    .ws-header__meta-item strong { color: #a0a0b8; }
+    /* Locked State */
+    .ws-locked { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:60vh; padding:3rem 1rem; }
+    .ws-locked__icon { font-size:4rem; margin-bottom:1.5rem; animation:float 3s ease-in-out infinite; }
+    .ws-locked__title { font-family:'Space Grotesk',sans-serif; font-size:1.75rem; font-weight:700; color:#e8e8f0; margin-bottom:0.75rem; }
+    .ws-locked__subtitle { color:#a0a0b8; font-size:1rem; max-width:440px; line-height:1.6; margin-bottom:2rem; }
+    .ws-countdown { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-bottom:2rem; }
+    .ws-countdown__unit { display:flex; flex-direction:column; align-items:center; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:1rem 1.5rem; min-width:90px; }
+    .ws-countdown__num { font-family:'Space Grotesk',sans-serif; font-size:2.5rem; font-weight:700; color:#7986cb; line-height:1; margin-bottom:0.25rem; }
+    .ws-countdown__label { font-size:0.65rem; color:#6a6a80; text-transform:uppercase; letter-spacing:0.08em; }
+    .ws-locked__date { font-size:0.85rem; color:#6a6a80; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:0.5rem 1.25rem; }
+    .ws-locked__date strong { color:#a0a0b8; }
 
-    /* Module list */
-    .ws-modules { display: flex; flex-direction: column; gap: 0.75rem; }
+    /* Unlocked: Header */
+    .ws-header { margin-bottom:2rem; }
+    .ws-header__badge { display:inline-flex; align-items:center; gap:0.5rem; background:rgba(102,187,106,0.12); border:1px solid rgba(102,187,106,0.25); color:#66bb6a; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:0.35rem 0.85rem; border-radius:20px; margin-bottom:1rem; }
+    .ws-header__title { font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700; color:#e8e8f0; margin-bottom:0.5rem; }
+    .ws-header__subtitle { color:#a0a0b8; font-size:0.95rem; max-width:520px; line-height:1.6; }
+    .ws-header__meta { display:flex; gap:1.5rem; margin-top:1rem; flex-wrap:wrap; }
+    .ws-header__meta-item { font-size:0.8rem; color:#6a6a80; display:flex; align-items:center; gap:0.35rem; }
+    .ws-header__meta-item strong { color:#a0a0b8; }
+
+    /* Timeline connector */
+    .ws-timeline { position:relative; }
+    .ws-timeline::before { content:''; position:absolute; left:17px; top:20px; bottom:20px; width:2px; background:linear-gradient(to bottom, rgba(121,134,203,0.3), rgba(255,255,255,0.05)); z-index:0; }
+
+    /* Module cards */
+    .ws-modules { display:flex; flex-direction:column; gap:0.625rem; position:relative; z-index:1; }
     .ws-module {
-      background: #16162a; border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 14px; padding: 1.25rem 1.5rem;
-      display: grid; grid-template-columns: auto 1fr auto;
-      gap: 1rem; align-items: center;
-      cursor: pointer; transition: all 0.2s; position: relative; overflow: hidden;
+      background:#16162a; border:1px solid rgba(255,255,255,0.07); border-radius:14px;
+      overflow:hidden; transition:all 0.2s; position:relative;
     }
-    .ws-module::before {
-      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      background: var(--mod-color, #7986cb); opacity: 0; transition: opacity 0.2s;
-    }
-    .ws-module:hover { border-color: rgba(255,255,255,0.14); transform: translateX(3px); }
-    .ws-module:hover::before { opacity: 1; }
-    .ws-module.break-module {
-      background: rgba(255,255,255,0.02); border-style: dashed;
-      cursor: default; opacity: 0.6;
-    }
-    .ws-module.break-module:hover { transform: none; border-color: rgba(255,255,255,0.07); }
+    .ws-module::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--mod-color,#7986cb); opacity:0; transition:opacity 0.2s; border-radius:3px 0 0 3px; }
+    .ws-module:not(.ws-module--break):hover { border-color:rgba(255,255,255,0.13); box-shadow:0 4px 20px rgba(0,0,0,0.3); }
+    .ws-module:not(.ws-module--break):hover::before { opacity:1; }
+    .ws-module--break { background:rgba(255,255,255,0.015); border-style:dashed; opacity:0.5; }
 
-    .ws-module__num {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: var(--mod-bg, rgba(121,134,203,0.1));
-      color: var(--mod-color, #7986cb);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 700;
-    }
-    .ws-module__body { }
-    .ws-module__title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem; font-weight: 600; color: #e8e8f0; margin-bottom: 0.2rem;
-    }
-    .ws-module__time { font-size: 0.75rem; color: #6a6a80; }
-    .ws-module__right { text-align: right; }
-    .ws-module__duration {
-      font-size: 0.75rem; color: #a0a0b8;
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 6px; padding: 0.2rem 0.5rem; white-space: nowrap;
-    }
-    .ws-module__icon { font-size: 0.9rem; margin-top: 0.4rem; display: block; }
+    .ws-module__top { display:grid; grid-template-columns:36px 1fr auto; gap:1rem; align-items:center; padding:1.1rem 1.25rem; cursor:pointer; }
+    .ws-module--break .ws-module__top { cursor:default; }
+    .ws-module__num { width:36px; height:36px; border-radius:10px; background:var(--mod-bg,rgba(121,134,203,0.1)); color:var(--mod-color,#7986cb); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-size:0.8rem; font-weight:700; flex-shrink:0; }
+    .ws-module__meta { }
+    .ws-module__title-row { display:flex; align-items:center; gap:0.6rem; margin-bottom:0.2rem; flex-wrap:wrap; }
+    .ws-module__title { font-family:'Space Grotesk',sans-serif; font-size:0.92rem; font-weight:600; color:#e8e8f0; }
+    .ws-module__type-badge { font-size:0.6rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:0.18rem 0.5rem; border-radius:5px; background:var(--mod-bg); color:var(--mod-color); border:1px solid; border-color:var(--mod-color); opacity:0.8; }
+    .ws-module__time { font-size:0.73rem; color:#6a6a80; }
+    .ws-module__right { display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem; flex-shrink:0; }
+    .ws-module__duration { font-size:0.72rem; color:#a0a0b8; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:6px; padding:0.2rem 0.5rem; white-space:nowrap; }
+    .ws-module__chevron { font-size:0.65rem; color:#6a6a80; transition:transform 0.25s; }
+    .ws-module.expanded .ws-module__chevron { transform:rotate(90deg); }
 
-    .ws-module__expand {
-      display: none; grid-column: 1 / -1; padding-top: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.06); margin-top: 0.5rem;
-      color: #a0a0b8; font-size: 0.875rem; line-height: 1.6;
-    }
-    .ws-module.expanded .ws-module__expand { display: block; }
-    .ws-module__activities {
-      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;
-    }
-    .ws-module__activity {
-      font-size: 0.72rem; color: #7986cb;
-      background: rgba(121,134,203,0.1); border: 1px solid rgba(121,134,203,0.2);
-      border-radius: 6px; padding: 0.2rem 0.6rem;
-    }
+    /* Expanded content */
+    .ws-module__body { display:none; padding:0 1.25rem 1.25rem; border-top:1px solid rgba(255,255,255,0.05); }
+    .ws-module.expanded .ws-module__body { display:block; }
+    .ws-module__desc { font-size:0.85rem; color:#a0a0b8; line-height:1.65; margin:1rem 0; }
 
-    .ws-repo-card {
-      margin-top: 2rem;
-      background: linear-gradient(135deg, rgba(77,182,172,0.08), rgba(121,134,203,0.05));
-      border: 1px solid rgba(77,182,172,0.25); border-radius: 16px; padding: 1.5rem;
-      display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap;
+    /* Task checklist (BUILD modules) */
+    .ws-tasks { display:flex; flex-direction:column; gap:0.45rem; }
+    .ws-task { display:flex; align-items:flex-start; gap:0.75rem; padding:0.65rem 0.85rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:9px; cursor:pointer; transition:all 0.15s; }
+    .ws-task:hover { border-color:rgba(255,255,255,0.1); background:rgba(255,255,255,0.05); }
+    .ws-task.done { background:rgba(102,187,106,0.05); border-color:rgba(102,187,106,0.2); }
+    .ws-task__box { width:18px; height:18px; border-radius:5px; border:1.5px solid rgba(255,255,255,0.2); flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all 0.2s; margin-top:1px; }
+    .ws-task.done .ws-task__box { background:#66bb6a; border-color:#66bb6a; }
+    .ws-task__check { color:#fff; font-size:0.65rem; opacity:0; transition:opacity 0.15s; }
+    .ws-task.done .ws-task__check { opacity:1; }
+    .ws-task__text { font-size:0.82rem; color:#c8c8d8; line-height:1.5; }
+    .ws-task.done .ws-task__text { color:#6a6a80; text-decoration:line-through; }
+
+    /* Skills list (LECTURE modules) */
+    .ws-skills { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.75rem; }
+    .ws-skill { font-size:0.75rem; padding:0.3rem 0.75rem; border-radius:6px; background:var(--mod-bg); border:1px solid; border-color:var(--mod-color); color:var(--mod-color); opacity:0.9; }
+
+    /* Lecture launch button */
+    .ws-lecture-btn {
+      display:inline-flex; align-items:center; gap:0.5rem; margin-top:1rem;
+      padding:0.65rem 1.25rem; border-radius:10px; font-size:0.875rem; font-weight:600;
+      background:var(--mod-bg); border:1px solid; border-color:var(--mod-color);
+      color:var(--mod-color); text-decoration:none; transition:all 0.2s;
     }
-    .ws-repo-card__icon { font-size: 2.5rem; }
-    .ws-repo-card__body { flex: 1; min-width: 200px; }
-    .ws-repo-card__title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem; font-weight: 600; color: #e8e8f0; margin-bottom: 0.25rem;
-    }
-    .ws-repo-card__desc { font-size: 0.85rem; color: #a0a0b8; }
-    .ws-repo-card__link {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: #4db6ac; color: #0a0a0f; font-size: 0.85rem; font-weight: 600;
-      padding: 0.6rem 1.25rem; border-radius: 8px; text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .ws-repo-card__link:hover { opacity: 0.85; }
+    .ws-lecture-btn:hover { opacity:0.8; transform:translateY(-1px); }
+
+    /* Repo card */
+    .ws-repo-card { margin-top:2rem; background:linear-gradient(135deg,rgba(77,182,172,0.08),rgba(121,134,203,0.05)); border:1px solid rgba(77,182,172,0.25); border-radius:16px; padding:1.5rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap; }
+    .ws-repo-card__icon { font-size:2.5rem; }
+    .ws-repo-card__body { flex:1; min-width:200px; }
+    .ws-repo-card__title { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600; color:#e8e8f0; margin-bottom:0.25rem; }
+    .ws-repo-card__desc { font-size:0.85rem; color:#a0a0b8; }
+    .ws-repo-card__link { display:inline-flex; align-items:center; gap:0.5rem; background:#4db6ac; color:#0a0a0f; font-size:0.85rem; font-weight:600; padding:0.6rem 1.25rem; border-radius:8px; text-decoration:none; transition:opacity 0.2s; }
+    .ws-repo-card__link:hover { opacity:0.85; }
+
+    /* Progress summary bar */
+    .ws-progress-bar { display:flex; align-items:center; gap:1rem; padding:0.85rem 1.25rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:12px; margin-bottom:1.5rem; }
+    .ws-progress-bar__label { font-size:0.78rem; color:#6a6a80; }
+    .ws-progress-bar__track { flex:1; height:5px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden; }
+    .ws-progress-bar__fill { height:100%; background:linear-gradient(90deg,#66bb6a,#4db6ac); border-radius:3px; transition:width 0.4s cubic-bezier(0.4,0,0.2,1); width:0%; }
+    .ws-progress-bar__count { font-size:0.78rem; color:#a0a0b8; white-space:nowrap; }
   </style>
 
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
@@ -300,54 +255,85 @@
 
     const MODULES = [
       {
-        num: '01', time: '10:00 – 10:30 AM', duration: '30 min',
-        title: 'Problem Framing & Entry Strategy',
-        icon: '🎯', color: '#7986cb', bg: 'rgba(121,134,203,0.1)',
-        desc: 'We open the repo together. You\'ll learn how a principal engineer enters an unknown codebase — without guessing. We use Architecture Mapping Template live.',
-        activities: ['Architecture Mapping Template', 'Define your blast radius', 'Identify entry points']
+        id: 'welcome', type: 'intro', num: '00', time: '10:00 AM', duration: '5 min',
+        title: 'Welcome + Agenda', icon: '👋', color: '#7986cb', bg: 'rgba(121,134,203,0.1)',
+        desc: 'Set context, set energy. What we\'re building, why it matters, and exactly how the next 4 hours run. No fluff — we move fast.',
       },
       {
-        num: '02', time: '10:30 – 11:15 AM', duration: '45 min',
-        title: 'Manual Mapping with VS Code',
-        icon: '🗺️', color: '#4db6ac', bg: 'rgba(77,182,172,0.1)',
-        desc: 'Before prompting, you document. Walk the file tree, trace the contracts, note the dependencies. This is the M in M.A.P.P.E.R. — and it changes everything.',
-        activities: ['Fill Architecture Mapping Template', 'VS Code navigation patterns', 'Dependency tracing exercise']
+        id: 'lecture', type: 'lecture', num: '01', time: '10:05 AM', duration: '30 min',
+        title: 'Build Like a Senior: The M.A.P.P.E.R. Framework', icon: '📡', color: '#ab47bc', bg: 'rgba(171,71,188,0.1)',
+        desc: '4 skills in 30 minutes. Interactive quizzes and drag-and-drop activities woven in. By the time we\'re done, you have the framework in your hands. Then we build.',
+        skills: ['Problem Framing + Entry Strategy', 'Architecture Mapping', 'Prompting with Context', 'Fork — Verify Before Accept'],
+        link: 'workshop/lecture.html'
       },
       {
-        num: '–', time: '11:15 – 11:25 AM', duration: '10 min',
-        title: 'Break',
-        icon: '☕', color: '#6a6a80', bg: 'rgba(106,106,128,0.08)',
-        isBreak: true,
-        desc: '', activities: []
+        id: 'build-1', type: 'build', num: '02', time: '10:35 AM', duration: '45 min',
+        title: 'Build: Map the Repo + Frame the Problem', icon: '🗺️', color: '#4db6ac', bg: 'rgba(77,182,172,0.1)',
+        desc: 'Open the demo repo. Map it with Claude. Use the Architecture Mapping Template. Frame the problem before writing a single line — this is where most engineers skip and pay for it later.',
+        tasks: [
+          'Clone github.com/gneeraj2001/LLM_Sports_Betting',
+          'Open main.py → trace the call graph outward',
+          'Fill Architecture Mapping Template: entry points, contracts, data flow',
+          'Ask Claude to explain each function in plain English',
+          'Define the prediction problem: what do we predict, with what data?',
+          'Run the Blast Radius Checklist on your first planned change',
+        ]
       },
       {
-        num: '03', time: '11:25 AM – 12:15 PM', duration: '50 min',
-        title: 'Prompting with Architectural Context',
-        icon: '🧠', color: '#ab47bc', bg: 'rgba(171,71,188,0.1)',
-        desc: 'Now we prompt — but with full context loaded. You\'ll use the Prompt Framework Template to build structured prompts that get production-grade output on the first try.',
-        activities: ['Prompt Framework Template', 'Context loading strategy', 'Live prompt iteration with Claude Code']
+        id: 'build-2', type: 'build', num: '03', time: '11:20 AM', duration: '45 min',
+        title: 'Build: API Server + Data Layer', icon: '⚙️', color: '#ff8a65', bg: 'rgba(255,138,101,0.1)',
+        desc: 'Design the API contract first. Then load the architecture map and prompt Claude to scaffold a FastAPI server. Fork every output — verify it matches the ask before accepting.',
+        tasks: [
+          'Design API contract: endpoints, request/response shapes (write it first)',
+          'Use Prompt Framework Template — load architecture context before prompting',
+          'Prompt Claude Code: scaffold FastAPI server around existing predictor logic',
+          'Fork check: does the diff match exactly what you asked — nothing more?',
+          'Run the API locally, test all endpoints with curl or Postman',
+          'Production Preflight before your first commit',
+        ]
       },
       {
-        num: '04', time: '12:15 – 1:00 PM', duration: '45 min',
-        title: 'Fork — Visual Verification & AI Code Review',
-        icon: '🔱', color: '#ffd54f', bg: 'rgba(255,213,79,0.1)',
-        desc: 'Your AI wrote code. Now review it like a senior. We run the Blast Radius Checklist, do visual verification, and learn to catch AI errors before they ship.',
-        activities: ['Blast Radius Checklist', 'AI code review patterns', 'Visual diff verification']
+        id: 'break', type: 'break', num: '—', time: '12:05 PM', duration: '10 min',
+        title: 'Break', icon: '☕', color: '#6a6a80', bg: 'rgba(106,106,128,0.08)',
       },
       {
-        num: '05', time: '1:00 – 1:40 PM', duration: '40 min',
-        title: 'Final Integration Simulation',
-        icon: '🚀', color: '#ef5350', bg: 'rgba(239,83,80,0.1)',
-        desc: 'We integrate everything into the repo and simulate a production deployment. Production Change Preflight Checklist runs here — every step, every time.',
-        activities: ['Production Change Preflight', 'Integration testing', 'Simulation run-through']
+        id: 'build-3', type: 'build', num: '04', time: '12:15 PM', duration: '40 min',
+        title: 'Build: Intelligence Layer + Claude Predictions', icon: '🧠', color: '#7986cb', bg: 'rgba(121,134,203,0.1)',
+        desc: 'Integrate the Anthropic SDK. Engineer a structured prediction prompt — game data, player stats, odds → typed output with confidence score. Iterate until the predictions make sense.',
+        tasks: [
+          'pip install anthropic — add to requirements.txt',
+          'Design the prediction prompt with Prompt Framework Template',
+          'Add Pydantic model: Prediction(winner, confidence, reasoning, data_sources)',
+          'Wire Claude API into predictor.py — replace raw LLM call with structured output',
+          'Test with a real upcoming NBA game, check the confidence score',
+          'Iterate the prompt — tune until reasoning is coherent',
+        ]
       },
       {
-        num: '06', time: '1:40 – 2:00 PM', duration: '20 min',
-        title: 'Debrief & Cognitive Upgrade',
-        icon: '⬆️', color: '#66bb6a', bg: 'rgba(102,187,106,0.1)',
-        desc: 'We close the loop. What you built, why it works, and how to apply the M.A.P.P.E.R. framework to any project from here on. You leave with a complete bot and a new mental model.',
-        activities: ['M.A.P.P.E.R. debrief', 'Q&A', 'Next steps & resources']
-      }
+        id: 'mini-lecture', type: 'lecture', num: '05', time: '12:55 PM', duration: '15 min',
+        title: 'Mini-Lecture: Connecting the Dots', icon: '💡', color: '#ffd54f', bg: 'rgba(255,213,79,0.1)',
+        desc: 'You\'ve done M.A.P.P.E.R. three times. Patterns are locking in. We solidify the mental model — how this framework applies to any codebase, any AI agent, any project you touch from here.',
+        skills: ['Pattern recognition across the build sessions', 'M.A.P.P.E.R. as daily engineering practice', 'Live Q&A — what clicked, what didn\'t'],
+      },
+      {
+        id: 'build-4', type: 'build', num: '06', time: '1:10 PM', duration: '30 min',
+        title: 'Build: Frontend + Deploy', icon: '🚀', color: '#66bb6a', bg: 'rgba(102,187,106,0.1)',
+        desc: 'Ship it. Your choice of frontend — React (Vite), plain HTML/JS, or Python Streamlit. Wire up the prediction API. Deploy to a live URL. Final Preflight before you go.',
+        tasks: [
+          'Choose your stack: React (Vite) · Plain HTML/JS · Python Streamlit',
+          'Prompt Claude to scaffold the UI with your API contract as context',
+          'Wire the /predict endpoint to the frontend — show the prediction + confidence',
+          'Deploy: Vercel (React/HTML) · Railway (FastAPI) · Streamlit Cloud',
+          'Get a live URL — drop it in the chat',
+          'Final Production Preflight — every box checked before you close',
+        ]
+      },
+      {
+        id: 'debrief', type: 'debrief', num: '07', time: '1:40 PM', duration: '20 min',
+        title: 'Debrief + Cognitive Upgrade', icon: '⬆️', color: '#ef5350', bg: 'rgba(239,83,80,0.1)',
+        desc: 'You went from 3 Python files to a production-grade full-stack AI prediction app in 3.5 hours. Debrief. Internalize the framework. Then go apply it Monday morning.',
+        skills: ['What you actually built (portfolio recap)', 'M.A.P.P.E.R. as your daily loop', 'Resources, next steps, open Q&A'],
+      },
     ];
 
     function renderLocked(msUntil) {
@@ -422,91 +408,143 @@
       });
     }
 
+    const TYPE_LABELS = { intro:'Welcome', lecture:'Lecture', build:'Build', 'mini-lecture':'Mini-Lecture', debrief:'Debrief', break:'Break' };
+
+    function moduleCard(m) {
+      if (m.type === 'break') {
+        return `<div class="ws-module ws-module--break" style="--mod-color:${m.color};--mod-bg:${m.bg};">
+          <div class="ws-module__top">
+            <div class="ws-module__num">${m.icon}</div>
+            <div class="ws-module__meta">
+              <div class="ws-module__title-row"><span class="ws-module__title" style="color:#6a6a80;">${m.title}</span></div>
+              <div class="ws-module__time">${m.time}</div>
+            </div>
+            <div class="ws-module__right"><span class="ws-module__duration">${m.duration}</span></div>
+          </div>
+        </div>`;
+      }
+
+      const typeLabel = TYPE_LABELS[m.type] || m.type;
+      const storageKey = `ws-tasks-${m.id}`;
+      const savedTasks = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
+      let expandContent = `<p class="ws-module__desc">${m.desc}</p>`;
+
+      if (m.type === 'build' && m.tasks) {
+        expandContent += `<div class="ws-tasks">` +
+          m.tasks.map((t, i) => {
+            const done = !!savedTasks[i];
+            return `<div class="ws-task${done?' done':''}" onclick="toggleTask('${m.id}',${i},this)">
+              <div class="ws-task__box"><span class="ws-task__check">✓</span></div>
+              <span class="ws-task__text">${t}</span>
+            </div>`;
+          }).join('') + `</div>`;
+      }
+
+      if ((m.type === 'lecture' || m.type === 'mini-lecture' || m.type === 'debrief') && m.skills) {
+        expandContent += `<div class="ws-skills">` +
+          m.skills.map(s => `<span class="ws-skill">✦ ${s}</span>`).join('') + `</div>`;
+      }
+
+      if (m.link) {
+        expandContent += `<a href="${m.link}" class="ws-lecture-btn" style="--mod-color:${m.color};--mod-bg:${m.bg};">
+          Launch Interactive Lecture →
+        </a>`;
+      }
+
+      return `<div class="ws-module ws-module--${m.type}" id="mod-${m.id}" style="--mod-color:${m.color};--mod-bg:${m.bg};">
+        <div class="ws-module__top" onclick="toggleModule('${m.id}')">
+          <div class="ws-module__num">${m.num}</div>
+          <div class="ws-module__meta">
+            <div class="ws-module__title-row">
+              <span class="ws-module__title">${m.title}</span>
+              <span class="ws-module__type-badge">${typeLabel}</span>
+            </div>
+            <div class="ws-module__time">${m.time} · ${m.icon}</div>
+          </div>
+          <div class="ws-module__right">
+            <span class="ws-module__duration">${m.duration}</span>
+            <span class="ws-module__chevron">▶</span>
+          </div>
+        </div>
+        <div class="ws-module__body">${expandContent}</div>
+      </div>`;
+    }
+
+    function toggleModule(id) {
+      document.getElementById(`mod-${id}`).classList.toggle('expanded');
+    }
+
+    function toggleTask(moduleId, idx, el) {
+      el.classList.toggle('done');
+      const storageKey = `ws-tasks-${moduleId}`;
+      const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+      if (el.classList.contains('done')) saved[idx] = true;
+      else delete saved[idx];
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+      updateProgressBar();
+    }
+
+    function updateProgressBar() {
+      const buildModules = MODULES.filter(m => m.type === 'build');
+      let total = 0, done = 0;
+      buildModules.forEach(m => {
+        if (!m.tasks) return;
+        total += m.tasks.length;
+        const saved = JSON.parse(localStorage.getItem(`ws-tasks-${m.id}`) || '{}');
+        done += Object.keys(saved).length;
+      });
+      const pct = total ? (done / total) * 100 : 0;
+      const fill = document.getElementById('ws-progress-fill');
+      const count = document.getElementById('ws-progress-count');
+      if (fill) fill.style.width = pct + '%';
+      if (count) count.textContent = `${done} / ${total} tasks`;
+    }
+
     function renderUnlocked() {
       const now = new Date();
       const isPast = now >= WORKSHOP_DATE;
-      const badgeText = isPast ? '🔴 Live Now' : '🟡 Unlocks Today';
-      const badgeColor = isPast ? '#ef5350' : '#ffd54f';
-
-      const modulesHtml = MODULES.map(m => {
-        if (m.isBreak) {
-          return `
-            <div class="ws-module break-module" style="--mod-color:${m.color}; --mod-bg:${m.bg};">
-              <div class="ws-module__num" style="background:${m.bg}; color:${m.color};">${m.icon}</div>
-              <div class="ws-module__body">
-                <div class="ws-module__title" style="color: #6a6a80;">${m.title}</div>
-                <div class="ws-module__time">${m.time}</div>
-              </div>
-              <div class="ws-module__right">
-                <div class="ws-module__duration">${m.duration}</div>
-              </div>
-            </div>`;
-        }
-        return `
-          <div class="ws-module" style="--mod-color:${m.color}; --mod-bg:${m.bg};"
-               onclick="this.classList.toggle('expanded')">
-            <div class="ws-module__num" style="background:${m.bg}; color:${m.color};">${m.num}</div>
-            <div class="ws-module__body">
-              <div class="ws-module__title">${m.title}</div>
-              <div class="ws-module__time">${m.time}</div>
-            </div>
-            <div class="ws-module__right">
-              <div class="ws-module__duration">${m.duration}</div>
-              <span class="ws-module__icon">${m.icon}</span>
-            </div>
-            <div class="ws-module__expand">
-              <p>${m.desc}</p>
-              ${m.activities.length ? `
-                <div class="ws-module__activities">
-                  ${m.activities.map(a => `<span class="ws-module__activity">✦ ${a}</span>`).join('')}
-                </div>` : ''}
-            </div>
-          </div>`;
-      }).join('');
 
       document.getElementById('workshop-content').innerHTML = `
         <div class="ws-header">
-          <div class="ws-header__badge" style="background: rgba(102,187,106,0.12); border-color: rgba(102,187,106,0.25); color: #66bb6a;">
-            ✦ Unlocked
-          </div>
+          <div class="ws-header__badge">✦ ${isPast ? '🔴 Live Now' : 'Unlocked'}</div>
           <h2 class="ws-header__title">${WORKSHOP_TITLE}</h2>
-          <p class="ws-header__subtitle">
-            4 hours. One repo. You leave with a production-ready NBA AI prediction bot —
-            and a framework for building anything at this level.
-          </p>
+          <p class="ws-header__subtitle">4 hours. 3 files → full-stack AI prediction app. You leave with a working bot and a framework you'll use every day.</p>
           <div class="ws-header__meta">
-            <span class="ws-header__meta-item">📅 <strong>${WORKSHOP_DATE.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</strong></span>
+            <span class="ws-header__meta-item">📅 <strong>${WORKSHOP_DATE.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}</strong></span>
             <span class="ws-header__meta-item">⏱ <strong>4 Hours</strong></span>
-            <span class="ws-header__meta-item">🔧 <strong>M.A.P.P.E.R. Framework</strong></span>
+            <span class="ws-header__meta-item">🔧 <strong>M.A.P.P.E.R.</strong></span>
             <span class="ws-header__meta-item">🏀 <strong>NBA Prediction Bot</strong></span>
           </div>
         </div>
 
-        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #6a6a80; margin-bottom: 1rem;">
-          Session Schedule
-        </p>
+        <div class="ws-progress-bar">
+          <span class="ws-progress-bar__label">Build progress</span>
+          <div class="ws-progress-bar__track"><div class="ws-progress-bar__fill" id="ws-progress-fill"></div></div>
+          <span class="ws-progress-bar__count" id="ws-progress-count">0 / 0 tasks</span>
+        </div>
 
-        <div class="ws-modules">${modulesHtml}</div>
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#6a6a80;margin-bottom:0.875rem;">Session Schedule</p>
+
+        <div class="ws-timeline">
+          <div class="ws-modules">${MODULES.map(moduleCard).join('')}</div>
+        </div>
 
         <div class="ws-repo-card">
           <div class="ws-repo-card__icon">📦</div>
           <div class="ws-repo-card__body">
-            <div class="ws-repo-card__title">Demo Repository — LLM Sports Betting</div>
-            <div class="ws-repo-card__desc">
-              The starting repo we'll transform into a full-stack production app.
-              3 files in. Full-stack out. Clone it, explore it with your Architecture Mapping Template.
-            </div>
+            <div class="ws-repo-card__title">Starting Repo — LLM_Sports_Betting</div>
+            <div class="ws-repo-card__desc">3 files. Clone it before the workshop. Open main.py first. Use your Architecture Mapping Template to map it before you touch anything.</div>
           </div>
-          <a href="https://github.com/gneeraj2001/LLM_Sports_betting" target="_blank" rel="noopener" class="ws-repo-card__link">
-            View Repo →
-          </a>
-        </div>
-      `;
+          <a href="https://github.com/gneeraj2001/LLM_Sports_betting" target="_blank" rel="noopener" class="ws-repo-card__link">Clone Repo →</a>
+        </div>`;
+
+      updateProgressBar();
 
       anime({
         targets: '.ws-module',
-        opacity: [0, 1], translateX: [-16, 0],
-        delay: anime.stagger(60), easing: 'easeOutCubic', duration: 350
+        opacity: [0, 1], translateY: [12, 0],
+        delay: anime.stagger(55), easing: 'easeOutCubic', duration: 350
       });
     }
 
