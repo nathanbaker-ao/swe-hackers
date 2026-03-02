@@ -271,25 +271,25 @@
         title: 'Build: Map the Repo + Frame the Problem', icon: '🗺️', color: '#4db6ac', bg: 'rgba(77,182,172,0.1)',
         desc: 'Open the demo repo. Map it with Claude. Use the Architecture Mapping Template. Frame the problem before writing a single line — this is where most engineers skip and pay for it later.',
         tasks: [
-          'Clone github.com/gneeraj2001/LLM_Sports_Betting',
-          'Open main.py → trace the call graph outward',
-          'Fill Architecture Mapping Template: entry points, contracts, data flow',
-          'Ask Claude to explain each function in plain English',
-          'Define the prediction problem: what do we predict, with what data?',
-          'Run the Blast Radius Checklist on your first planned change',
+          'Fork + clone gneeraj2001/LLM_Sports_Betting — 3 files: nba_bot.py, requirements.txt, README.md',
+          'Open nba_bot.py → find the 3 classes: ScrapeSportsbookreview, OddsCache, MLBBot',
+          'Trace the entry point: if __name__ == \'__main__\' → MLBBot.run() → process_game() — this is your anchor',
+          'Spot the critical gap: fetch_today_games() returns hardcoded data — circle it, that\'s target #1',
+          'Fill Architecture Mapping Template — data flow: fetch_today_games() → construct_query() → LLM API → JSON output file',
+          'Open Blast Radius Checklist — scope the upgrade: add real games API + split nba_bot.py into modules',
         ]
       },
       {
         id: 'build-2', type: 'build', num: '03', time: '11:20 AM', duration: '45 min',
         title: 'Build: API Server + Data Layer', icon: '⚙️', color: '#ff8a65', bg: 'rgba(255,138,101,0.1)',
-        desc: 'Design the API contract first. Then load the architecture map and prompt Claude to scaffold a FastAPI server. Fork every output — verify it matches the ask before accepting.',
+        desc: 'Design the API contract first. Then load your architecture map and prompt Claude to scaffold a FastAPI server. Fork every output — verify it matches the ask before accepting anything.',
         tasks: [
-          'Design API contract: endpoints, request/response shapes (write it first)',
-          'Use Prompt Framework Template — load architecture context before prompting',
-          'Prompt Claude Code: scaffold FastAPI server around existing predictor logic',
-          'Fork check: does the diff match exactly what you asked — nothing more?',
-          'Run the API locally, test all endpoints with curl or Postman',
-          'Production Preflight before your first commit',
+          'Create project layout: backend/app.py, backend/data/fetcher.py, backend/data/scraper.py',
+          'Replace fetch_today_games() — wire The Odds API (ODDS_API_KEY from .env) for live NBA games + current lines',
+          'Move ScrapeSportsbookreview → backend/data/scraper.py — keep it as its own module, same logic',
+          'Use Prompt Framework Template with architecture context → prompt Claude to scaffold FastAPI: GET /games/today, POST /predict, GET /predictions',
+          'Fork check: every file Claude touched — does the diff match exactly what you asked, nothing more?',
+          'pip install fastapi uvicorn httpx → update requirements.txt → test with uvicorn backend.app:app --reload',
         ]
       },
       {
@@ -301,12 +301,12 @@
         title: 'Build: Intelligence Layer + Claude Predictions', icon: '🧠', color: '#7986cb', bg: 'rgba(121,134,203,0.1)',
         desc: 'Integrate the Anthropic SDK. Engineer a structured prediction prompt — game data, player stats, odds → typed output with confidence score. Iterate until the predictions make sense.',
         tasks: [
-          'pip install anthropic — add to requirements.txt',
-          'Design the prediction prompt with Prompt Framework Template',
-          'Add Pydantic model: Prediction(winner, confidence, reasoning, data_sources)',
-          'Wire Claude API into predictor.py — replace raw LLM call with structured output',
-          'Test with a real upcoming NBA game, check the confidence score',
-          'Iterate the prompt — tune until reasoning is coherent',
+          'pip install anthropic → replace AsyncAskNewsSDK import in MLBBot — this is the core swap',
+          'Refactor construct_query() → build_prediction_prompt(game, odds) — keep the 17 evaluation criteria, make them explicit in the prompt',
+          'Create backend/predictor.py — add Pydantic model: Prediction(winner, confidence, reasoning, key_factors)',
+          'Wire anthropic.Anthropic().messages.create() in predictor.py — replace the AskNews SDK call with direct Claude API',
+          'Hook up POST /predict → calls predictor.predict(game) → returns Prediction model as JSON',
+          'Test with a real upcoming NBA game → check confidence score + reasoning — iterate the prompt until it\'s coherent',
         ]
       },
       {
@@ -320,12 +320,12 @@
         title: 'Build: Frontend + Deploy', icon: '🚀', color: '#66bb6a', bg: 'rgba(102,187,106,0.1)',
         desc: 'Ship it. Your choice of frontend — React (Vite), plain HTML/JS, or Python Streamlit. Wire up the prediction API. Deploy to a live URL. Final Preflight before you go.',
         tasks: [
-          'Choose your stack: React (Vite) · Plain HTML/JS · Python Streamlit',
-          'Prompt Claude to scaffold the UI with your API contract as context',
-          'Wire the /predict endpoint to the frontend — show the prediction + confidence',
-          'Deploy: Vercel (React/HTML) · Railway (FastAPI) · Streamlit Cloud',
-          'Get a live URL — drop it in the chat',
-          'Final Production Preflight — every box checked before you close',
+          'Pick your stack and commit to it: React (Vite) · plain HTML/JS · Python Streamlit',
+          'Load your API contract into Prompt Framework Template → prompt Claude to scaffold the full UI in one shot',
+          'Build the dashboard: today\'s games list → "Get Pick" button → prediction card with confidence bar + key factors',
+          'Wire fetch(\'/api/predict\', { method: \'POST\', body: JSON.stringify(game) }) to your backend — test end-to-end',
+          'Deploy: frontend → Vercel · backend → Railway or Render · full Streamlit → Streamlit Cloud',
+          'Run Production Preflight — every required box checked → drop your live URL in the Discord',
         ]
       },
       {
@@ -534,7 +534,7 @@
           <div class="ws-repo-card__icon">📦</div>
           <div class="ws-repo-card__body">
             <div class="ws-repo-card__title">Starting Repo — LLM_Sports_Betting</div>
-            <div class="ws-repo-card__desc">3 files. Clone it before the workshop. Open main.py first. Use your Architecture Mapping Template to map it before you touch anything.</div>
+            <div class="ws-repo-card__desc">3 files: nba_bot.py, requirements.txt, README.md. Clone it before the workshop. Open nba_bot.py first — map the 3 classes with your Architecture Mapping Template before touching anything.</div>
           </div>
           <a href="https://github.com/gneeraj2001/LLM_Sports_betting" target="_blank" rel="noopener" class="ws-repo-card__link">Clone Repo →</a>
         </div>`;
